@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/test-style.css">
+    <style>
+        .button {
+            width: 90px;
+            height: 40px;
+            border-radius: 30px;
+            background-color: rgb(153, 153, 153);
+            transition: all 0.3s;
+            margin-top: 30px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            line-height: 30px;
+            text-align: center;
+            font-size: 20px;
+            border: none;
+        }
+
+        .button:hover {
+            background-color: rgb(236, 236, 236);
+            box-shadow: 0px 5px 10px rgb(144, 144, 144);
+            margin-top: 25px;
+        }
+
+        .test-box {
+            width: 0px;
+            height: 0px;
+            background-color: rgb(231, 231, 231);
+            border-radius: 20px;
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            z-index: -2;
+
+        }
+
+        .button:hover .test-box {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test-box">
+
+    </div>
+    <div class="button">
+        Button
+
+    </div>
+</body>
+
+</html>
