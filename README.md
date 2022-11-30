@@ -1,2 +1,4 @@
-# trialrepository
-The first repository I've ever created on Github.
+# Hi.
+Welcome to the real world!
+It sucks.
+You're gonna love it.
