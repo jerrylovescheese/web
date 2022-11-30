@@ -6,59 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>欢迎</title>
-    <link rel="stylesheet" href="./static/css/style.css">
-    <link rel="stylesheet" href="./static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
     <style>
         body {
             margin: 0;
         }
 
-        #banner-1 {
+        .header {
             width: 100%;
-            height: 50vw;
-            border-radius: 0;
-            position: relative;
-            left: 0;
-            top: -40px;
-            background-image: url(./static/img/色彩实验_画板\ 1.png);
-            background-size: cover;
-            position: relative;
-        }
-
-        #banner-1:hover{
-            box-shadow: none !important;
-            margin-top: 120px !important;
-            top: -40px !important;
-        }
-
-        #banner-2 {
-            background-image: url(./static/img/前景混搭.png);
-            background-size: cover;
-            background-position: 0px -100px;
-            margin-top: 10px;
-        }
-
-        .banner-info {
-            color: white;
-        }
-
-        #banner-1 > .banner-info{
-            font-size: 50px;
-            text-align: left;
-            line-height: 50px;
-            padding-left: 30px;
-            margin-top: 0px;
-            top: 10vw;
-        }
-
-        #banner-1 > .banner-info-sub{
+            height: 35px;
+            background-color: rgba(245, 245, 245, 0.5);
+            backdrop-filter: blur(12px);
+            border-bottom: solid 1px rgb(210, 210, 210);
+            position: sticky;
+            top: 80px;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            text-align: left;
-            color: white;
-            padding-left: 30px;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 35px;
+            padding-left: 20px;
+        }
+
+        #studio-1 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             position: relative;
-            top: 10vw;
-            margin: 0;
+            top: 30px;
+            left: 20px;
+            font-size: 90px;
+            font-weight: bold;
+        }
+
+        #studio-2 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -71,8 +54,8 @@
                     <li class="top-bar-buttons"><i class="fas fa-stream"></i></li>
                 </a>
                 <a href="javascript:;" id="link-2">
-                    <li class="top-bar-buttons"><img src="./static/img/江源工作室 未来logo.png" alt="logo"
-                            style="width: 50px;"></li>
+                    <li class="top-bar-buttons"><img src="/static/img/江源工作室 未来logo.png" alt="logo" style="width: 50px;">
+                    </li>
                 </a>
                 <a href="javascript:;" id="link-3">
                     <li class="top-bar-buttons"><i class="fas fa-search"></i></li>
@@ -91,13 +74,12 @@
             <div id="time"></div>
         </div>
     </div>
-    <div class="banner" id="banner-1">
-        <p class="banner-info">新世界，<br>很精彩。</p>
-        <p class="banner-info-sub">欢迎来到江源工作室的官方网站。</p>
-    </div>
-    <div class="banner" id="banner-2">
-        <p class="banner-info">2023年准备工作 ></p>
-    </div>
+
+    <div class="header">Studio</div>
+
+    <p id="studio-1">Where dreams<br>come true.</p>
+    <p id="studio-2">This is just studio that tries to turn dreams into realities. Sometimes I fail. Sometimes I
+        succeed.</p>
 
     <br><br><br><br><br><br><br><br><br>
 
