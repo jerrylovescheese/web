@@ -1,5 +1,11 @@
+/* love from jerry */
+
 body {
     background-color: #f0f0f0;
+}
+
+.foundation {
+    overflow: hidden;
 }
 
 .top-bar {
@@ -25,6 +31,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 0 15px;
+    overflow: hidden;
 }
 
 .top-bar-buttons {
