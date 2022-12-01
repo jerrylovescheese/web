@@ -5,60 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>欢迎</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./static/css/style.css">
     <link rel="stylesheet" href="./static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
     <style>
-        body {
-            margin: 0;
+        body{
+            background-image: radial-gradient(circle farthest-corner at 50% 0%, rgb(125, 196, 255), rgb(177, 82, 254), rgb(249, 108, 169));
+            background-repeat: no-repeat;
         }
 
-        #banner-1 {
-            width: 100%;
-            height: 50vw;
-            border-radius: 0;
+        .error-title{
             position: relative;
-            left: 0;
-            top: -40px;
-            background-image: url(./static/img/色彩实验_画板\ 1.png);
-            background-size: cover;
-            position: relative;
-        }
-
-        #banner-1:hover {
-            box-shadow: none !important;
-            margin-top: 120px !important;
-            top: -40px !important;
-        }
-
-        #banner-2 {
-            background-image: url(./static/img/前景混搭.png);
-            background-size: cover;
-            background-position: 0px -100px;
-            margin-top: 10px;
-        }
-
-        .banner-info {
-            color: white;
-        }
-
-        #banner-1>.banner-info {
-            font-size: 50px;
-            text-align: left;
-            line-height: 50px;
-            padding-left: 30px;
-            margin-top: 0px;
-            top: 10vw;
-        }
-
-        #banner-1>.banner-info-sub {
+            top: 60px;
+            left: 30px;
+            font-size: 90px;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            text-align: left;
+            font-weight: bold;
+            line-height: 90px;
             color: white;
-            padding-left: 30px;
+        }
+
+        .error-message{
             position: relative;
-            top: 10vw;
-            margin: 0;
+            left: 30px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 20px;
+            color: white;
         }
     </style>
 </head>
@@ -81,10 +53,10 @@
             <div class="menu">
                 <a href="/aluminum_studio.html"><button class="menu-buttons"
                         style="margin-left: 15px;">Studio</button></a>
-                <a href="/blankpage.html"><button class="menu-buttons">Postings</button></a>
-                <a href="/blankpage.html"><button class="menu-buttons">PBS</button></a>
-                <a href="/blankpage.html"><button class="menu-buttons">Design</button></a>
-                <a href="/blankpage.html"><button class="menu-buttons">About</button></a>
+                <button class="menu-buttons">Postings</button>
+                <button class="menu-buttons">PBS</button>
+                <button class="menu-buttons">Design</button>
+                <button class="menu-buttons">About</button>
                 <input class="search-box" placeholder="Search..."></input>
             </div>
         </div>
@@ -92,14 +64,15 @@
             <div id="time"></div>
         </div>
     </div>
-    <div class="banner" id="banner-1">
-        <p class="banner-info">新世界，<br>很精彩。</p>
-        <p class="banner-info-sub">欢迎来到江源工作室的官方网站。</p>
-    </div>
-    <div class="banner" id="banner-2">
-        <p class="banner-info">2023年准备工作 ></p>
-    </div>
 
+    <p class="error-title">
+        Oops... you've got the wrong number.
+    </p>
+    <p class="error-message">
+        This site is still under development. Be sure to check it out later, OK?
+    </p>
+
+    <br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br>
 
     <a href="#">
@@ -114,7 +87,6 @@
             <br>
         </div>
     </a>
-
     <script type="text/javascript">
         function time() {
             var vWeek, vWeek_s, vDay;
@@ -132,7 +104,6 @@
         };
         setInterval("time()", 1000);
     </script>
-
 </body>
 
 </html>
