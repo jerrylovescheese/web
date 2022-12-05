@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>欢迎</title>
     <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/style-phone.css">
     <link rel="stylesheet" href="./static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
     <style>
         body {
@@ -23,6 +24,7 @@
             background-image: url(./static/img/色彩实验_画板\ 1.png);
             background-size: cover;
             position: relative;
+            background-attachment: fixed;
         }
 
         #banner-1:hover {
@@ -79,10 +81,12 @@
             background-color: rgb(255, 255, 255);
             background-image: url(./static/img/1509729267christmas-png-ornament-ball-image.png);
             background-size: cover;
+            background-position: 0 200px;
             border-radius: 15px;
             margin: 0 auto;
             margin-top: 80px;
             color: white;
+            background-attachment: fixed;
         }
 
         #home-3 {
@@ -91,11 +95,17 @@
             font-weight: bold;
             padding-left: 20px;
             padding-top: 20px;
+            text-shadow: 0px 3px 5px #333;
         }
 
-        #home-4{
+        #home-4 {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             padding-left: 20px;
+            text-shadow: 0px 3px 5px #333;
+        }
+
+        .screen-size-prompt {
+            display: none;
         }
     </style>
 </head>
@@ -127,6 +137,21 @@
         </div>
         <div class="time-banner">
             <div id="time"></div>
+        </div>
+    </div>
+
+    <div class="screen-size-prompt">
+        <div class="prompt">
+            <p>Current development is taking user experiences on smaller screen sizes (phones, tablets) into
+                consideration.<br>
+                If you're viewing this website from a mobile device, I strongly suggest you switch to the computer and
+                go
+                to <a href="https://jerrylovescheese.github.io/web">jerrylovescheese.github.io/web</a>.<br>I apologize
+                for
+                any
+                inconvenience.<br><br>
+                正在开发适应手机和平板电脑尺寸的网页版本。强烈建议您使用计算机上的浏览器访问此网页。敬请谅解。
+            </p>
         </div>
     </div>
     <div class="banner" id="banner-1">
