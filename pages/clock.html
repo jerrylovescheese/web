@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/style-dark.css">
+    <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .header {
+            width: 100%;
+            height: 35px;
+            background-color: rgba(59, 59, 59, 0.5);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: solid 1px rgb(127, 127, 127);
+            position: relative;
+            top: 80px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 35px;
+            padding-left: 20px;
+            color: white;
+        }
+
+        .clock-container{
+            position: relative;
+            top: 120px;
+            left: 50px;
+        }
+
+        .clock {
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            background-color: #525252a6 !important;
+            backdrop-filter: blur(12px);
+            box-shadow: 20px 20px 60px #464646,
+                -20px -20px 60px #5e5e5e;
+            background: url(../static/img/clock-dark-mode.png);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: -1;
+        }
+
+        .clock::before {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            z-index: 10000;
+        }
+
+        .hour,
+        .min,
+        .sec {
+            position: absolute;
+        }
+
+        .hour,
+        .hr {
+            width: 300px;
+            height: 300px;
+        }
+
+        .min,
+        .mn {
+            width: 356.25px;
+            height: 356.25px;
+        }
+
+        .sec,
+        .sc {
+            width: 431.25px;
+            height: 431.25px;
+        }
+
+        .hr,
+        .mn,
+        .sc {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .hr::before {
+            content: "";
+            position: absolute;
+            width: 21px;
+            height: 150px;
+            background-color: #fff;
+            border-radius: 12px;
+            z-index: 11;
+        }
+
+        .mn::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 180px;
+            background-color: #fff;
+            border-radius: 12px;
+            z-index: 12;
+        }
+
+        .sc::before {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 210px;
+            background-color: #fff;
+            border-radius: 12px;
+            z-index: 13;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="foundation">
+        <div class="top-bar">
+            <div class="top-bar-wrapper">
+                <a href="javascript:;" id="link-1">
+                    <li class="top-bar-buttons"><i class="fas fa-stream"></i></li>
+                </a>
+                <a href="../index.html" id="link-2">
+                    <li class="top-bar-buttons"><img src="../static/img/江源工作室 白色logo.png" alt="logo"
+                            style="width: 50px;"></li>
+                </a>
+                <a href="javascript:;" id="link-3">
+                    <li class="top-bar-buttons"><i class="fas fa-search"></i></li>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="./aluminum_studio.html"><button class="menu-buttons"
+                        style="margin-left: 15px;">Studio</button></a>
+                <a href="../404.html"><button class="menu-buttons">Postings</button></a>
+                <a href="../404.html"><button class="menu-buttons">PBS</button></a>
+                <a href="../404.html"><button class="menu-buttons">Design</button></a>
+                <a href="../404.html"><button class="menu-buttons">About</button></a>
+                <input class="search-box" placeholder="Search..."></input>
+            </div>
+        </div>
+        <div class="time-banner">
+            <div id="time"></div>
+        </div>
+
+    </div>
+
+    <div class="header">Clock</div>
+
+    <div class="clock-container">
+        <div class="clock">
+            <div class="hour">
+                <div class="hr" id="hr"></div>
+            </div>
+            <div class="min">
+                <div class="mn" id="mn"></div>
+            </div>
+            <div class="sec">
+                <div class="sc" id="sc"></div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <a href="#">
+        <div class="return-to-top">
+            <i class="fas fa-chevron-up"></i>
+            <br>
+        </div>
+    </a>
+    <a href="./aluminum_base_set.html">
+        <div class="dark-mode">
+            <i class="fas fa-moon"></i>
+            <br>
+        </div>
+    </a>
+
+    <script type="text/javascript">
+        function time() {
+            var vWeek, vWeek_s, vDay;
+            vWeek = ["Sun. 日", "Mon. 一", "Tue. 二", "Wed. 三", "Thu. 四", "Fri. 五", "Sat. 六"];
+            var date = new Date();
+            year = date.getFullYear();
+            month = date.getMonth() + 1;
+            day = date.getDate();
+            hours = date.getHours();
+            minutes = date.getMinutes();
+            seconds = date.getSeconds();
+            vWeek_s = date.getDay();
+            document.getElementById("time").innerHTML = year + "/" + month + "/" + day + "" + "\t" + hours + ":" + minutes + ":" + seconds + "\t" + vWeek[vWeek_s];
+
+        };
+        setInterval("time()", 1000);
+    </script>
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>
