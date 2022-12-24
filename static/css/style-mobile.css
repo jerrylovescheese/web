@@ -25,12 +25,24 @@
         overflow: hidden;
     }
 
+    .top-bar:focus-within {
+        height: 80px;
+    }
+    
+    .top-bar:focus-within .menu {
+        top: 65px;
+    }
+    
+    .top-bar:focus-within .search-box {
+        visibility: hidden;
+    }
+
     .top-bar:focus {
         height: 360px;
     }
 
     .top-bar:focus .menu {
-        top: 35px;
+        top: 230px;
     }
 
     .top-bar:focus .search-box {
