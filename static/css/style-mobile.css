@@ -1,6 +1,6 @@
 /* love from jerry */
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1080px) {
     body {
         background-color: #f0f0f0;
     }
@@ -21,19 +21,19 @@
         left: 0px;
         top: 0px;
         z-index: 1;
-        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
         overflow: hidden;
     }
 
-    .top-bar:hover {
-        height: 560px;
+    .top-bar:focus {
+        height: 360px;
     }
 
-    .top-bar:hover .menu {
+    .top-bar:focus .menu {
         top: 35px;
     }
 
-    .top-bar:hover .search-box {
+    .top-bar:focus .search-box {
         visibility: visible;
     }
 
