@@ -26,23 +26,23 @@
     }
 
     .top-bar:focus-within {
-        height: 80px;
+        height: 160px;
     }
     
     .top-bar:focus-within .menu {
-        top: 65px;
+        top: 35px;
     }
     
     .top-bar:focus-within .search-box {
-        visibility: hidden;
+        visibility: visible;
     }
 
     .top-bar:focus {
-        height: 360px;
+        height: 160px;
     }
 
     .top-bar:focus .menu {
-        top: 230px;
+        top: 35px;
     }
 
     .top-bar:focus .search-box {
