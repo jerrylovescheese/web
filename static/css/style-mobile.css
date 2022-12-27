@@ -97,7 +97,7 @@
     }
 
     .menu-buttons {
-        width: 80px;
+        width: 90px;
         height: 40px;
         font-size: 15px;
         margin-left: 10px;
@@ -114,6 +114,7 @@
     }
 
     .search-box {
+        width: 95px;
         height: 37.5px;
         border-radius: 15px;
         border: 1px solid rgba(98, 98, 98, 0.5);
