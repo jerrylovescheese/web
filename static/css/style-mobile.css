@@ -15,7 +15,7 @@
         width: 100%;
         height: 80px;
         border-bottom: 2px solid rgb(225, 225, 225);
-        background-color: rgba(247, 247, 247, 0.75);
+        background-color: rgba(255, 255, 255, 0.89);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         list-style: none;
@@ -27,17 +27,28 @@
         overflow: hidden;
     }
 
+    /* legacy version
+.top-bar:focus-within {
+    height: 160px;
+}
+
+.top-bar:focus-within .menu {
+    top: 35px;
+}
+
+.top-bar:focus-within .search-box {
+    visibility: visible;
+}
+
+*/
+
     .top-bar:focus-within {
         height: 360px;
-        box-shadow: 0px 10px 20px #c9c9c9c2;
+        box-shadow: 0px 10px 20px #bababaf1;
     }
 
     .top-bar:focus-within .menu {
         top: 0px;
-    }
-
-    .top-bar:focus-within .search-box {
-        visibility: visible;
     }
 
     .top-bar-wrapper {
