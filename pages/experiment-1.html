@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .core {
+            position: fixed;
+            display: flex;
+            height: 100%;
+            align-items: center;
+        }
+
+        .app {
+            width: 75px;
+            height: 218.75px;
+            border-radius: 37.5px;
+            margin-left: 20px;
+            background-color: rgba(243, 243, 243, 0.151);
+            border: solid 1px rgb(239, 239, 239);
+            backdrop-filter: blur(12px);
+            box-shadow: 0px 0px 40px #6363632a;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            transition-delay: 0.2s;
+            overflow: hidden;
+            float: none;
+        }
+
+        .app:hover {
+            border-radius: 37.5px;
+            width: 200px;
+            height: 292.25px;
+            margin-left: 15px;
+            box-shadow: 0px 0px 40px #6363635d;
+        }
+
+        .button {
+            margin: 0 auto;
+            margin-top: 12.5px;
+            width: 56.25px;
+            height: 56.25px;
+            border-radius: 27.5px;
+            background: transparent;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            transition-delay: 0.2s;
+            text-align: left;
+            line-height: 56.25px;
+            overflow: hidden;
+        }
+
+        .app:hover .button {
+            width: 175px;
+        }
+
+        .button:hover {
+            background-color: #dfdfdf;
+        }
+
+        #button-2 {
+            background-color: transparent;
+            background-image: url(../static/img/江源工作室\ 未来logo.png);
+            background-size: 43px;
+            background-position: 6px;
+            background-repeat: no-repeat;
+        }
+
+        #button-2:hover {
+            background-color: #dfdfdf;
+        }
+
+        #button-3 {
+            margin-bottom: 10px;
+            background-color: transparent;
+        }
+
+        #button-3:hover {
+            background-color: #dfdfdf;
+        }
+
+        .app:hover #button-1 {
+            border-radius: 27.5px;
+            height: 130px;
+            background-color: #f3f3f3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="core">
+        <div class="app">
+            <div class="button" id="button-1"><i class="fas fa-stream"
+                    style="font-size: larger; padding-left: 19px;"></i><span
+                    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;">&emsp;
+                    菜单</span>
+                <p style="line-height: 15px; font-size: 15px; margin: 0; padding: 0;">&emsp;了解网络安全</p>
+                <p style="line-height: 15px; font-size: 15px; margin: 0; padding: 0; padding-top: 10px;">&emsp;关于我</p>
+            </div>
+            <div class="button" id="button-2"><span
+                    style="padding-left: 60px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;">江源工作室</span>
+            </div>
+            <div class="button" id="button-3"><i class="fas fa-search"
+                    style="font-size: larger; padding-left: 19px;"></i><span
+                    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;">&emsp;
+                    搜索</span></div>
+        </div>
+    </div>
+</body>
+
+</html>
