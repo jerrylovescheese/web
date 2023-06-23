@@ -1,4 +1,4 @@
-# Welcome to Jerry Conne's website.
+# Welcome to Jerry Cyan's website.
 Yep, that's my name. <br>
 I made up that surname, but it serves well.<br>
 <br>
