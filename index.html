@@ -112,6 +112,40 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             padding-left: 20px;
         }
+
+        .countdown-uni {
+            width: 200px;
+            height: 140px;
+            margin-left: 140px;
+            margin-right: 30px;
+            background-color: rgb(233, 233, 233);
+            border-radius: 20px;
+        }
+
+        .clock-uni {
+            display: flex;
+            justify-content: center;
+            margin-left: 140px;
+        }
+
+        #one,
+        #two,
+        #three,
+        #four {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 600;
+            font-size: 32px;
+            background: #ffffff;
+            border-radius: 5px;
+        }
+
+        #five,
+        #six,
+        #seven {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            font-size: 25px;
+        }
     </style>
 </head>
 
@@ -167,6 +201,30 @@
         <br>
     </div> -->
     <br>
+    <div class="clock-uni">
+        <span id="time"
+            style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+        </span>
+        <!-- <a id="full-screen-button" href="/pages/clock.html" style="color: black; text-decoration: none;">&emsp;<i
+                class="fas fa-expand">
+            </i><span class="prompt-box">&emsp;单击此处进入大时钟</span>
+        </a> -->
+        <div id="time"></div>
+    </div>
+    <br>
+    <div class="countdown-uni">
+        <div style="padding-left: 15px; padding-top: 10px;">
+            <span
+                style="font-size: 20px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">距离AP出分<br>还有</span>
+            <div id="remainTime"></div>
+            <br>
+            <span id="one"></span>&emsp13;
+            <span id="two"></span>&emsp13;
+            <span id="three"></span>&emsp13;
+            <span id="four"></span>
+        </div>
+    </div>
+    </div>
     <br>
     <p id="home-1" style="margin-top: 0;">网上冲浪的绝佳去处</p>
     <p id="home-2">这里有新潮的热词，时事的看法，青春的懵懂和江源工作室最新的动态。网站仍在搭建，更多内容，敬请期待。</p>
@@ -215,15 +273,14 @@
             seconds = date.getSeconds();
             vWeek_s = date.getDay();
             document.getElementById("time").innerHTML = year + "/" + month + "/" + day + "" + "\t" + hours + ":" + minutes + ":" + seconds + "\t" + vWeek[vWeek_s];
-
         };
         setInterval("time()", 1000);
         (function show() {
             //1.设置目的时间
             var oYear = 2023
-            var oMonth = 5
-            var oDay = 6
-            var oHour = 1
+            var oMonth = 6
+            var oDay = 5
+            var oHour = 0
             var oMinute = 0
             var oSecond = 0
             var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
