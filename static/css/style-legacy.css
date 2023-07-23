@@ -186,6 +186,12 @@
     padding-left: 20px;
 }
 
+#banner-3 {
+    position: relative;
+    height: 780px;
+    border-radius: 0px 0px 30px 30px !important;
+    overflow: hidden;
+}
 
 #banner-3:hover {
     box-shadow: none !important;
