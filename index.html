@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>欢迎</title>
     <link rel="stylesheet" href="./static/css/style.css">
-    <!-- <link rel="stylesheet" href="./static/css/style-mobile.css"> -->
     <link rel="stylesheet" href="./static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
     <style>
         body {
@@ -21,71 +20,14 @@
             overflow: hidden;
         }
 
-        /*
-        #banner-3:hover {
-            box-shadow: none !important;
-            margin-top: 120px !important;
-            top: -40px !important;
-        }
-
-        #banner-2 {
-            background-image: url(./static/img/前景混搭.png);
-            background-size: cover;
-            background-position: 0px -100px;
-            margin-top: 10px;
-        }
-
-        .banner-info {
-            color: rgb(0, 0, 0);
-        }
-
-        #banner-3>.banner-info,
-        #remainTime {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 80px;
-            text-align: left;
-            line-height: 80px;
-            padding-left: 30px;
-            margin-top: 0px;
-            top: 10vw;
-        }
-
-        #banner-3>.banner-info-sub {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            text-align: left;
-            color: white;
-            padding-left: 30px;
-            position: relative;
-            top: 10vw;
-            margin: 0;
-        } */
-
-        /* .banner-customized-1 {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 40px;
-            margin-top: -80px;
-            /* margin-left: 30px;
-            margin-right: 30px;
-            line-height: 40px;
-        } 
-
-        /* .banner-info-customized-1 {
-            font-weight: bold;
-            font-size: 40px;
-        } */
-
         #home-1 {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 30px;
             font-weight: bold;
-            margin-left: 140px;
-            margin-right: 30px;
         }
 
         #home-2 {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin-left: 140px;
-            margin-right: 30px;
         }
 
         .box-1 {
@@ -100,27 +42,16 @@
             color: white;
         }
 
-        #home-3 {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 23px;
-            font-weight: bold;
-            padding-left: 20px;
-            padding-top: 20px;
-        }
-
-        #home-4 {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            padding-left: 20px;
-        }
-
         .countdown-uni {
             width: 200px;
             height: 170px;
             margin-left: 140px;
             margin-right: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
             background: radial-gradient(circle at 50% 0%, rgb(202, 136, 243), rgb(255, 255, 255) 70%);
-            border: 1px solid rgb(219, 219, 219);
-            border-radius: 20px;
+            border: 1px solid rgb(192, 192, 192);
+            border-radius: 15px;
             transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
             color: black;
         }
@@ -136,36 +67,26 @@
             margin-left: 140px;
         }
 
-        #one,
-        #two,
-        #three,
-        #four {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: 600;
-            font-size: 28px;
-            background: #ffffff;
-            border-radius: 5px;
-        }
-
-        #five,
-        #six,
-        #seven {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: 400;
-            font-size: 25px;
-        }
-
-        .warning{
+        .warning {
             width: fit-content;
             height: fit-content;
-            padding: 20px;
+            padding: 10px;
             margin-left: 140px;
             margin-right: 30px;
             background: #ffedc7;
-            border-radius: 20px;
+            border-radius: 15px;
             border: 2px #ffbf34 solid;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
 
+        .container {
+            width: fit-content;
+            height: fit-content;
+            border-radius: 15px;
+            border: solid 1px rgb(192, 192, 192);
+            margin-left: 140px;
+            margin-right: 30px;
+            padding: 20px;
         }
     </style>
 </head>
@@ -194,81 +115,43 @@
             </a>
         </div>
     </div>
-    <!-- <div class="banner" id="banner-1">
-        <p class="banner-info">新世界，<br>很精彩。</p>
-        <p class="banner-info-sub">欢迎来到李江源的官方网站。</p>
-    </div> -->
-    <!-- <div class="banner-customized-1" id="banner-3" style="background-image: url(./static/img/wwdc-p1-large_2x.png); 
-        background-size: 90%; 
-        background-position: center; 
-        background-repeat: no-repeat; 
-        background-color: black; 
-        border-radius: 20px; 
-        color: white; ">
-        <p style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: 40px;
-        position: absolute;
-        bottom: 30px;
-        left: 50px;">WWDC23 is</p>
-        <div id="remainTime" style="position: absolute; bottom: 30px; left: 50px; font-weight: bold;"><span
-                id="one"></span> days
-            <span id="two"></span> hours
-            <span id="three"></span> minutes
-            <span id="four"></span> seconds
-            away.
-        </div>
-        <br>
-        <p class="banner-info-customized-1" style="font-size: 20px; line-height: 25px;">2月12日</p>
-        <br>
-    </div> -->
     <br>
     <div class="clock-uni">
         <span id="time"
             style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
         </span>
-        <!-- <a id="full-screen-button" href="/pages/clock.html" style="color: black; text-decoration: none;">&emsp;<i
+        <a id="full-screen-button" href="/pages/clock.html" style="color: black; text-decoration: none;">&emsp;<i
                 class="fas fa-expand">
             </i><span class="prompt-box">&emsp;单击此处进入大时钟</span>
-        </a> -->
+        </a>
         <div id="time"></div>
     </div>
     <br>
-    <div class="warning"><span style="font-weight: bold; color: #825900;"><i class="fas fa-warning"></i>&emsp;警告</span><br>此网页不含JS脚本，仅承担信息展示功能。</div>
-    <!-- <div class="countdown-uni">
+    <div class="warning"><span style="font-weight: bold; color: #825900;"><i
+                class="fas fa-warning"></i>&emsp;警告</span>&emsp;&emsp;此网页不含 JS 脚本，仅承担信息展示功能。</div>
+    <div class="countdown-uni">
         <a href="./pages/countdown_poster.html">
             <div style="padding-left: 15px; padding-top: 10px; color: black; text-decoration: none;">
                 <span
-                    style="font-size: 20px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-decoration: none;">距离
-                    Speak Now (Taylor's Version) <br>发布还有</span>
-                <div id="remainTime"></div>
-                <br>
-                <span id="one"></span>&emsp13;
-                <span id="two"></span>&emsp13;
-                <span id="three"></span>&emsp13;
-                <span id="four"></span>
+                    style="font-size: 20px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-decoration: none;">元素等待处理</span>
+
             </div>
         </a>
-    </div> -->
-
-    <br>
-    <p id="home-1" style="margin-top: 0;">网上冲浪的绝佳去处</p>
-    <p id="home-2">这里有新潮的热词，时事的看法，青春的懵懂和江源工作室最新的动态。网站仍在搭建，更多内容，敬请期待。</p>
-    <p id="home-1">等一下......</p>
-    <p id="home-2">如果您在使用移动设备查看此网页，目前建议您转到计算机上打开它。对于移动设备尺寸的适配即将完成，造成的不便敬请谅解。</p>
-    <p id="home-1">集思广益行千里</p>
-    <p id="home-2">查看<a href="./pages/dev_cal.html">网页开发日历</a>看看现在我在做什么。欢迎帮忙一起搭建！</p>
-    <p id="home-1">主页如何使用？</p>
-    <p id="home-2">
-        这个页面是主页。主页的上部是一个操作区，可以按下那三个杠来显示分页面。分页面目前无内容，敬请期待。右边的放大镜是搜索功能。搜索功能暂不可用。向下滑动您便会看到许多盒子。它们暂时被放在了这里来呈现最新动态。换句话说，它们稍后会被放到"Postings"里变得更加正式。
-    </p>
-    <p id="home-1">为什么网址这么长？</p>
-    <p id="home-2">因为我没钱买域名😅。这个网页使用了GitHub的服务器，所以就相当于致谢。<br><br>话休絮烦，咱们开始吧。</p>
-
-    <!-- <div class="box-1">
-        <p id="home-3">盒子 1: All I Want For Christmas Is ___?</p>
-        <p id="home-4">圣诞节就要来咯！虽然哪都去不了，但是，歌还是可以听的（doge</p>
-        <audio src="./static/audio/All I Want For Christmas Is You.m4a" controls style="padding-left: 20px;"></audio>
-    </div> -->
+    </div>
+    <div class="container">
+        <p id="home-1" style="margin-top: 0;">网上冲浪的绝佳去处</p>
+        <p id="home-2">这里有新潮的热词，时事的看法，青春的懵懂和江源工作室最新的动态。网站仍在搭建，更多内容，敬请期待。</p>
+        <p id="home-1">等一下......</p>
+        <p id="home-2">如果您在使用移动设备查看此网页，目前建议您转到计算机上打开它。对于移动设备尺寸的适配即将完成，造成的不便敬请谅解。</p>
+        <p id="home-1">集思广益行千里</p>
+        <p id="home-2">查看<a href="./pages/dev_cal.html">网页开发日历</a>看看现在我在做什么。欢迎帮忙一起搭建！</p>
+        <p id="home-1">主页如何使用？</p>
+        <p id="home-2">
+            这个页面是主页。主页的上部是一个操作区，可以按下那三个杠来显示分页面。分页面目前无内容，敬请期待。右边的放大镜是搜索功能。搜索功能暂不可用。向下滑动您便会看到许多盒子。它们暂时被放在了这里来呈现最新动态。换句话说，它们稍后会被放到"Postings"里变得更加正式。
+        </p>
+        <p id="home-1">为什么网址这么长？</p>
+        <p id="home-2">因为我没钱买域名😅。这个网页使用了GitHub的服务器，所以就相当于致谢。<br><br>话休絮烦，咱们开始吧。</p>
+    </div>
 
     <br><br><br><br><br><br><br><br><br>
 
