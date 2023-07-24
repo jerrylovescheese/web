@@ -116,19 +116,19 @@
             overflow: hidden;
         }
 
-        .music-recommendation-list > .widgets-small-special{
+        .music-recommendation-list>.widgets-small-special {
             color: #00000000;
             transition: all 0.2s;
             transition-delay: 0.2s;
         }
 
-        .music-recommendation-list:hover{
-            width: 700px;
+        .music-recommendation-list:hover {
+            height: 260px;
             transform: translateY(-10px);
             box-shadow: 0px 10px 20px rgba(206, 150, 255, 0.651);
         }
 
-        .music-recommendation-list:hover .widgets-small-special{
+        .music-recommendation-list:hover .widgets-small-special {
             color: #000000;
         }
     </style>
@@ -180,7 +180,13 @@
     </div>
     <div class="music-recommendation-list">
         听点啥好？My picks: <br>
-        <span class="widgets-small-special">Cruel Summer - Taylor Swift / Perfect Places - Lorde / august - Taylor Swift</span>
+        <span class="widgets-small-special">
+            <ol>
+                <li>Cruel Summer - Taylor Swift</li>
+                <li>Perfect Places - Lorde</li>
+                <li>august - Taylor Swift</li>
+            </ol>
+        </span>
     </div>
     <div class="container">
         <p id="home-1" style="margin-top: 0;">网上冲浪的绝佳去处</p>
