@@ -49,6 +49,11 @@
         color: rgb(255, 255, 255, 0.401) !important;
         /* transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s; */
     }
+
+    .header {
+        background-color: rgba(70, 70, 70, 0.5) !important;
+        border-bottom: solid 1px rgb(70, 70, 70) !important;
+    }
 }
 
 html,
