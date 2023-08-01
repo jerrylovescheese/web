@@ -9,15 +9,57 @@
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
     <style>
-        iframe{
-            margin-left: 140px;
-            width: 80% !important;
+        .head {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 9;
+        }
+
+        .box-1 {
+            width: 50px;
+            height: 50px;
+            background-color: #f2f2f265;
+            border-radius: 50px;
+            margin: 0 auto;
+            margin-top: 20px;
+            box-shadow: 0px 10px 20px rgba(128, 128, 128, 0.729);
+            transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            backdrop-filter: blur(12px);
+            overflow: hidden;
+            position: fixed;
+        }
+
+        .box-1:hover {
+            width: 210px;
+        }
+
+        .box-1:hover .banner {
+            left: 60px;
+        }
+
+        .logo {
+            background-image: url(../static/img/江源工作室\ 未来logo.png);
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            display: inline-block;
+        }
+
+        .banner {
+            position: relative;
+            left: 70px;
+            bottom: 40px;
+            width: 150px;
+            height: 50px;
+            font-weight: bold;
+            transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
     </style>
 </head>
 
 <body>
-    <div class="core">
+    <!-- <div class="core">
         <div class="app">
             <div class="button" id="button-1"><i class="fas fa-stream"
                     style="font-size: larger; padding-left: 19px;"></i><span
@@ -39,6 +81,15 @@
                         搜索</span></div>
             </a>
         </div>
+    </div> -->
+
+    <div class="head">
+        <div class="box-1">
+            <div class="logo"></div>
+            <div class="banner">江源工作室作品 <a href="https://jerrylovescheese.github.io/web/"
+                    style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-decoration: none;">→</a>
+            </div>
+        </div>
     </div>
 
     <div class="header">&emsp;调查问卷</div>
@@ -48,7 +99,8 @@
     <p id="dev-cal-2">示例文本<br>想帮忙？有想法或建议？欢迎给<a
             href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p> -->
 
-            <script type='text/javascript' src='https://www.wjx.cn/handler/jqemed.ashx?activity=hnzOjIp&width=750&source=iframe'></script>
+    <script type='text/javascript'
+        src='https://www.wjx.cn/handler/jqemed.ashx?activity=hnzOjIp&width=750&source=iframe'></script>
 
     <a href="#">
         <div class="return-to-top">
