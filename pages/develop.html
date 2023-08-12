@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>开发者和更新日志</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="core">
+        <div class="app">
+            <div class="button" id="button-1"><i class="fas fa-stream"
+                    style="font-size: larger; padding-left: 19px;"></i><span
+                    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;">&emsp;
+                    菜单</span>
+                <p style="line-height: 15px; font-size: 15px; margin: 0; padding: 0;">&emsp;了解网络安全</p>
+                <p style="line-height: 15px; font-size: 15px; margin: 0; padding: 0; padding-top: 10px;">&emsp;<a
+                        href="./aluminum_studio.html" style="text-decoration: none; color: black;">关于我</a></p>
+            </div>
+            <a href="https://jerrylovescheese.github.io/web" style="text-decoration: none; color: black;">
+                <div class="button" id="button-2"><span
+                        style="padding-left: 60px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;">江源工作室</span>
+                </div>
+            </a>
+            <a href="./search.html" style="text-decoration: none; color: black;">
+                <div class="button" id="button-3"><i class="fas fa-search"
+                        style="font-size: larger; padding-left: 19px;"></i><span
+                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;">&emsp;
+                        搜索</span></div>
+            </a>
+        </div>
+    </div>
+
+    <div class="header">&emsp;开发者和更新日志</div>
+
+    <p id="dev-cal-1">开发者和更新日志</p>
+    <p id="update">这个页面上一次更新于2023年8月12日</p>
+    <p id="dev-cal-2">查看此列表以了解最新的开发动态和未来可能会有的功能。<br>想帮忙？有想法或建议？欢迎给<a
+            href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br>以下按重要性顺序排序。</p>
+
+    <ol
+        style="margin-left: 140px;
+        margin-right: 30px;
+        line-height: 27px;
+        font-size: 18px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+        <li>Postings中的博客系统</li>
+        <li>关于页面</li>
+        <!-- <li>Studio页面</li>
+        <li>Design页面</li>
+        <li>PBS页面</li> -->
+        <li>结构优化（合并同类项）</li>
+        <li>搜索引擎</li>
+    </ol>
+
+    <p id="dev-cal-2">即将到来的功能：</p>
+    <ul
+        style="margin-left: 140px;
+        margin-right: 30px;
+        line-height: 27px;
+        font-size: 18px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+        <li>发帖</li>
+        <li>搜索</li>
+        <li>......</li>
+    </ul>
+
+    <p id="dev-cal-2" style="font-weight: bold; font-size: larger;">网页更新日志</p>
+    <p>
+    <ul
+        style="margin-left: 140px;
+            margin-right: 30px;
+            line-height: 27px;
+            font-size: 18px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+        2023年8月11日
+        <li>更新了主页小组件布局</li><br>
+        2023年8月1日
+        <li>添加了调查页</li><br>
+        2023年7月30日
+        <li>增加了倒计时</li><br>
+        2023年7月28日
+        <li>喜报：深色模式来了！将设备调至深色模式既可体验，欢迎报告问题！</li>
+        <li>时钟上新</li>
+        <li>加入了前往我的公众号的链接</li>
+        <li>加入了“听点什么？”模块</li>
+    </ul>
+    </p>
+
+    <br><br><br><br><br><br><br><br><br>
+
+    <a href="#">
+        <div class="return-to-top">
+            <i class="fas fa-chevron-up"></i> 回到顶部
+        </div>
+    </a>
+    <a href="../404.html">
+        <div class="en-us">
+            EN <span style="font-weight: normal;">Switch to English</span>
+        </div>
+    </a>
+
+    <script type="text/javascript">
+        function time() {
+            var vWeek, vWeek_s, vDay;
+            vWeek = ["Sun. 日", "Mon. 一", "Tue. 二", "Wed. 三", "Thu. 四", "Fri. 五", "Sat. 六"];
+            var date = new Date();
+            year = date.getFullYear();
+            month = date.getMonth() + 1;
+            day = date.getDate();
+            hours = date.getHours();
+            minutes = date.getMinutes();
+            seconds = date.getSeconds();
+            vWeek_s = date.getDay();
+            document.getElementById("time").innerHTML = year + "/" + month + "/" + day + "" + "\t" + hours + ":" + minutes + ":" + seconds + "\t" + vWeek[vWeek_s];
+
+        };
+        setInterval("time()", 1000);
+    </script>
+
+</body>
+
+</html>

@@ -3,17 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light dark">
-    <title>网页开发日历</title>
+    <title>公众号</title>
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
-    <style>
-        body {
-            margin: 0;
-        }
-    </style>
 </head>
 
 <body>
@@ -41,40 +34,15 @@
         </div>
     </div>
 
-    <div class="header">&emsp;网页开发日历</div>
+    <div class="header">&emsp;公众号</div>
 
-    <p id="dev-cal-1">集思广益行千里</p>
-    <p id="update">这个页面上一次更新于2023年6月23日</p>
-    <p id="dev-cal-2">查看此列表以了解最新的开发动态和未来可能会有的功能。<br>想帮忙？有想法或建议？欢迎给<a
-            href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br>以下按重要性顺序排序。</p>
+    <p id="dev-cal-1">公众号</p>
+    <p id="update">这个页面上一次更新于2023年8月12日</p>
+    <p id="dev-cal-2">扫描下方二维码以关注我的公众号江源圈。<br><br><img src="../static/img/Official Account (Medium).bmp" alt="" style="width: 400px; border-radius: 10px;"><br><br>想帮忙？有想法或建议？欢迎给<a
+            href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
 
-    <ol
-        style="margin-left: 140px;
-        margin-right: 30px;
-        line-height: 27px;
-        font-size: 18px;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-        <li>Postings中的博客系统</li>
-        <li>关于页面</li>
-        <!-- <li>Studio页面</li>
-        <li>Design页面</li>
-        <li>PBS页面</li> -->
-        <li>结构优化（合并同类项）</li>
-        <li>搜索引擎</li>
-    </ol>
 
-    <p id="dev-cal-2">即将到来的功能：</p>
-    <ul
-        style="margin-left: 140px;
-        margin-right: 30px;
-        line-height: 27px;
-        font-size: 18px;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-        <li>发帖</li>
-        <li>搜索</li>
-        <li>......</li>
-    </ul>
-
+    <br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br>
 
     <a href="#">
@@ -87,25 +55,6 @@
             EN <span style="font-weight: normal;">Switch to English</span>
         </div>
     </a>
-
-    <script type="text/javascript">
-        function time() {
-            var vWeek, vWeek_s, vDay;
-            vWeek = ["Sun. 日", "Mon. 一", "Tue. 二", "Wed. 三", "Thu. 四", "Fri. 五", "Sat. 六"];
-            var date = new Date();
-            year = date.getFullYear();
-            month = date.getMonth() + 1;
-            day = date.getDate();
-            hours = date.getHours();
-            minutes = date.getMinutes();
-            seconds = date.getSeconds();
-            vWeek_s = date.getDay();
-            document.getElementById("time").innerHTML = year + "/" + month + "/" + day + "" + "\t" + hours + ":" + minutes + ":" + seconds + "\t" + vWeek[vWeek_s];
-
-        };
-        setInterval("time()", 1000);
-    </script>
-
 </body>
 
 </html>
