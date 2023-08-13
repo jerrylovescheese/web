@@ -94,7 +94,7 @@ a {
     -webkit-backdrop-filter: blur(12px);
     -moz-backdrop-filter: blur(12px);
     box-shadow: 0px 0px 40px #63636361;
-    transition: all 0.4s cubic-bezier(0.68, -0.14, 0.27, 1.14);
+    transition: all 0.4s cubic-bezier(0.68, -0.125, 0.27, 1.125);
     transition-delay: 0.2s;
     overflow: hidden;
     float: none;
