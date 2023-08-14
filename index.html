@@ -135,18 +135,16 @@
         .music-recommendation-list {
             width: auto;
             height: fit-content;
-            background: linear-gradient(45deg, rgb(140, 217, 255), rgb(255, 130, 190));
+            background: linear-gradient(to right,#095b7f,#b606f7);
             border-radius: 15px;
-            border: #007dbb solid 2px;
+            border: rgb(61, 70, 153) solid 2px;
             transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-            color: black;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-weight: bold;
             font-size: 16px;
             padding: 10px;
             overflow: hidden;
             margin-bottom: 20px;
-            overflow: hidden;
         }
 
         #music-list-details {
@@ -161,7 +159,7 @@
 
         .music-recommendation-list:hover {
             transform: translateY(-10px);
-            box-shadow: 0px 10px 20px #8bd8ffa2;
+            box-shadow: 0px 10px 20px #a952ffa2;
         }
 
         .promote-account {
@@ -268,8 +266,9 @@
             </a>
         </div>
         <div class="music-recommendation-list">
-            <i class="fas fa-headphones"></i>&emsp;听点啥好？ <i class="fas fa-chevron-down"></i><br>
-            <div id="music-list-details"><span style="font-size: 16px;
+            <a href="./pages/music.html" style="color: #ffffff;"><i class="fas fa-headphones"></i>&emsp;听点啥好？ 前往新的音乐页面 <i
+                    class="fas fa-chevron-right"></i></a><br>
+            <!-- <div id="music-list-details"><span style="font-size: 16px;
             font-weight: normal;"><br>My picks:</span>
                 <span>
                     <ol>
@@ -279,7 +278,7 @@
                         <li>What Was I Made For? - Billie Eilish</li>
                     </ol>
                 </span>
-            </div>
+            </div> -->
         </div>
     </div>
 
