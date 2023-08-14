@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>欢迎</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .time-banner {
+            width: 100%;
+            height: 20px;
+            position: fixed;
+            left: 0;
+            top: 45px;
+            padding: 5px 0;
+            z-index: 2;
+            text-align: center;
+        }
+
+        @media(prefers-color-scheme: dark) {
+            #full-screen-button:hover .prompt-box {
+                display: inline;
+                color: rgb(255, 255, 255) !important;
+                /* transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s; */
+            }
+        }
+
+        .prompt-box {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            color: #f0f0f000;
+            font-size: 15px;
+            display: none;
+        }
+
+        #full-screen-button:hover .prompt-box {
+            display: inline;
+            color: black;
+            /* transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s; */
+        }
+
+        #home-1 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #home-2 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .box-1 {
+            width: 90%;
+            height: 300px;
+            background-color: rgb(255, 255, 255);
+            background-image: url(./static/img/1509729267christmas-png-ornament-ball-image.png);
+            background-size: cover;
+            border-radius: 15px;
+            margin: 0 auto;
+            margin-top: 80px;
+            color: white;
+        }
+
+        .widgets {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-left: 140px;
+            margin-right: 30px;
+        }
+
+        .countdown-uni {
+            width: auto;
+            height: fit-content;
+            background: linear-gradient(135deg, #6089a9, #bcc0c5);
+            border: #415a6d solid 2px;
+            border-radius: 15px;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            color: black;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .countdown-uni:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px #7b96aa;
+        }
+
+        .widgets-small-special {
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        .clock-uni {
+            display: flex;
+            justify-content: center;
+            margin-left: 140px;
+        }
+
+        .warning {
+            width: auto;
+            height: fit-content;
+            padding: 10px;
+            margin-left: 140px;
+            margin-right: 30px;
+            background: #ffedc7;
+            border-radius: 15px;
+            border: 2px #ffbf34 solid;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 16px;
+            color: black;
+        }
+
+        .container {
+            width: auto;
+            height: fit-content;
+            border-radius: 15px;
+            border: solid 1px rgb(192, 192, 192);
+            margin-left: 140px;
+            margin-right: 30px;
+            padding: 20px;
+        }
+
+        .music-recommendation-list {
+            width: auto;
+            height: fit-content;
+            background: linear-gradient(to right,#095b7f,#b606f7);
+            border-radius: 15px;
+            border: rgb(61, 70, 153) solid 2px;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        #music-list-details {
+            height: 0px;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            transition-delay: 0.3s;
+        }
+
+        .music-recommendation-list:hover #music-list-details {
+            height: 160px;
+        }
+
+        .music-recommendation-list:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px #a952ffa2;
+        }
+
+        .promote-account {
+            width: auto;
+            height: fit-content;
+            background-color: #07c160;
+            border: #007e3d solid 2px;
+            border-radius: 15px;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            color: black;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 20px;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        .promote-account:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px #07c1617a;
+        }
+
+        .survey {
+            width: auto;
+            height: fit-content;
+            border-radius: 15px;
+            border: 2px #6d9c00 solid;
+            background-color: #c1e867;
+            padding: 10px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .survey:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px #c1e867e4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="core">
+        <div class="app">
+            <div class="button" id="button-1"><i class="fas fa-stream"
+                    style="font-size: larger; padding-left: 19px;"></i>
+                <ul id="button-1-item-list">
+                    <span
+                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;">&emsp;
+                        菜单</span>
+                    <br><br>
+                    <li><a href="pages/aluminum_studio.html">关于我</a></li>
+                    <li><a href="pages/clock.html">时间大厅</a></li>
+                    <li><a href="pages/official_account.html">公众号</a></li>
+                    <li><a href="pages/develop.html">开发者</a></li>
+                    <li><a href="pages/survey.html">调查</a></li>
+                </ul>
+            </div>
+            <a href="https://jerrylovescheese.github.io/web" style="text-decoration: none; color: black;">
+                <div class="button" id="button-2"><span
+                        style="padding-left: 60px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;">江源工作室</span>
+                </div>
+            </a>
+            <a href="pages/search.html" style="text-decoration: none; color: black;">
+                <div class="button" id="button-3"><i class="fas fa-search"
+                        style="font-size: larger; padding-left: 19px;"></i><span
+                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;">&emsp;
+                        搜索</span></div>
+            </a>
+        </div>
+    </div>
+
+    <br>
+    <div class="clock-uni">
+        <span id="time"
+            style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+        </span>
+        <a id="full-screen-button" href="./pages/clock.html" style="color: black; text-decoration: none;">&emsp;<i
+                class="fas fa-expand">
+            </i><span class="prompt-box">&emsp;单击此处进入大时钟</span>
+        </a>
+        <div id="time"></div>
+    </div>
+    <br>
+    <div class="warning"><span style="font-weight: bold; color: #825900;"><i
+                class="fas fa-warning"></i>&emsp;提示</span>&emsp;&emsp;此网页不含 JS 脚本，仅承担信息展示功能。</div>
+
+    <div class="widgets">
+        <div class="survey"><i class="fas fa-paper-plane"></i>&emsp;<a href="./pages/survey.html">填问卷 <span
+                    style="text-align: right;"><i class="fas fa-chevron-right"></i></span></a></div>
+
+        <div class="promote-account"><a href="./pages/official_account.html"><i class="fas fa-newspaper"></i>&emsp;我的公众号
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+
+        <div class="countdown-uni"><a href="./pages/clock.html" style="text-decoration: none;">
+                <span style="color: #d1d6d0;"><i class="fas fa-clock"></i>&emsp;距离《1989 (Taylor's Version)》发布还有 <i
+                        class="fas fa-chevron-right"></i></span>
+            </a>
+        </div>
+        <div class="music-recommendation-list">
+            <a href="./pages/music.html" style="color: #ffffff;"><i class="fas fa-headphones"></i>&emsp;听点啥好？ 前往新的音乐页面 <i
+                    class="fas fa-chevron-right"></i></a><br>
+            <!-- <div id="music-list-details"><span style="font-size: 16px;
+            font-weight: normal;"><br>My picks:</span>
+                <span>
+                    <ol>
+                        <li>Cruel Summer - Taylor Swift</li>
+                        <li>Perfect Places - Lorde</li>
+                        <li>august - Taylor Swift</li>
+                        <li>What Was I Made For? - Billie Eilish</li>
+                    </ol>
+                </span>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="container">
+        <p id="home-1" style="margin-top: 0;">网上冲浪的绝佳去处</p>
+        <p id="home-2">这里有新潮的热词，时事的看法，青春的懵懂和江源工作室最新的动态。网站仍在搭建，更多内容，敬请期待。</p>
+        <p id="home-1">帮个忙！</p>
+        <p id="home-2"><a href="./pages/survey.html">客官驻足敝舍，感激不尽，能否再填一个问卷？要不了多久！<i class="fas fa-chevron-right"></i></a>
+        </p>
+
+        <p id="home-1">等一下......</p>
+        <p id="home-2">如果您在使用移动设备查看此网页，目前建议您转到计算机上打开它。对于移动设备尺寸的适配即将完成，造成的不便敬请谅解。</p>
+        <p id="home-1">开发者和更新日志</p>
+        <p id="home-2">查看<a style="color: rgb(85, 164, 255);" href="./pages/develop.html">网页开发日历和更新日志</a>。</p>
+        <p id="home-1">主页如何使用？</p>
+        <p id="home-2">
+            这个页面是主页。主页的左侧是一个操作区，可以按下那三个杠来显示分页面。分页面目前无内容，敬请期待。下边的放大镜是搜索功能。搜索功能暂不可用。
+        </p>
+        <p id="home-1">为什么网址这么长？</p>
+        <p id="home-2">因为我没钱买域名😅。这个网页使用了GitHub的服务器，所以就相当于致谢。<br><br>话休絮烦，咱们开始吧。</p>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br>
+
+    <a href="#">
+        <div class="return-to-top">
+            <i class="fas fa-chevron-up"></i> 回到顶部
+        </div>
+    </a>
+    <a href="./404.html">
+        <div class="en-us">
+            EN <span style="font-weight: normal;">Switch to English</span>
+        </div>
+    </a>
+
+    <script type="text/javascript">
+        function time() {
+            var vWeek, vWeek_s, vDay;
+            vWeek = ["Sun. 日", "Mon. 一", "Tue. 二", "Wed. 三", "Thu. 四", "Fri. 五", "Sat. 六"];
+            var date = new Date();
+            year = date.getFullYear();
+            month = date.getMonth() + 1;
+            day = date.getDate();
+            hours = date.getHours();
+            minutes = date.getMinutes();
+            seconds = date.getSeconds();
+            vWeek_s = date.getDay();
+            document.getElementById("time").innerHTML = year + "/" + month + "/" + day + "" + "\t" + hours + ":" + minutes + ":" + seconds + "\t" + vWeek[vWeek_s];
+        };
+        setInterval("time()", 1000);
+        (function show() {
+            //1.设置目的时间
+            var oYear = 2023
+            var oMonth = 6
+            var oDay = 7
+            var oHour = 12
+            var oMinute = 0
+            var oSecond = 0
+            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
+            // console.log(dateFormat(funtureDate))
+            //2.设置定时器
+            setInterval(function () {
+                //3.获取现在的时间
+                var presentDate = new Date();
+                //4.获取时间戳
+                var funtureTime = funtureDate.getTime();
+                var presenTime = presentDate.getTime();
+                //5.获取剩余的时间戳
+                var allTime = funtureTime - presenTime;
+                //6.把毫秒转换为秒
+                var allSecond = parseInt(allTime / 1000);
+                //7.获取剩余多少天
+                var day = size(parseInt(allSecond / 3600 / 24));
+                //8.获取剩余多少小时
+                var hour = size(parseInt(allSecond / 3600 % 24));
+                //9.获取剩余多少分钟
+                var minute = size(parseInt(allSecond / 60 % 60));
+                //10.获取剩余多少秒
+                var second = size(parseInt(allSecond % 60));
+                //11.注入：
+                document.getElementById('one').innerHTML = day;
+                document.getElementById('two').innerHTML = hour;
+                document.getElementById('three').innerHTML = minute;
+                document.getElementById('four').innerHTML = second;
+            }, 1000);
+            //如果数>=10,则在前面补0
+            function size(num) {
+                return num < 10 & num >= 0 ? '0' + num : num;
+            }
+        })()
+        //格式化日期格式 2
+        function dateFormat(data) {
+            var date = new Date(data);
+            var YY = date.getFullYear() + '-';
+            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+            return YY + MM + DD;
+        }
+    </script>
+
+</body>
+
+</html>
