@@ -1,3 +1,4 @@
+// The game is on
 (function (window, document, undefined) {
     var Include39485748323 = function () { }
     Include39485748323.prototype = {
