@@ -7,15 +7,18 @@
     <title>引用实验</title>
     <!--import引入-->
     <link rel="import" href="./layout/header.html" id="page1" />
-    <link rel="import" href="./layout/header.html" id="page2" />
+    <link rel="import" href="./layout/footer.html" id="page2" />
 </head>
 
 <body>
     <!--注意顺序-->
     <!--import在头部引入，里面是啥就是啥-->
-    <script type="text/javascript">document.write(page1.import.body.innerHTML);
-    </script>hello world！<!--本页面写入内容-->
-    <script type="text/javascript">document.write(page2.import.body.innerHTML);
+    <script type="text/javascript">
+        document.write(page1.import.body.innerHTML);
+    </script>
+    hello world！<!--本页面写入内容-->
+    <script type="text/javascript">
+        document.write(page2.import.body.innerHTML);
     </script>
 </body>
 
