@@ -5,21 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>引用实验</title>
-    <!--import引入-->
-    <link rel="import" href="./layout/header.html" id="page1" />
-    <link rel="import" href="./layout/footer.html" id="page2" />
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
 </head>
 
 <body>
-    <!--注意顺序-->
-    <!--import在头部引入，里面是啥就是啥-->
-    <script type="text/javascript">
-        document.write(page1.import.body.innerHTML);
-    </script>
-    hello world！<!--本页面写入内容-->
-    <script type="text/javascript">
-        document.write(page2.import.body.innerHTML);
-    </script>
+    <include src="./layout/layout.html"></include>
+    <script src="../static/js/include.js"></script>
+    <div class="header">&emsp;空页</div>
+
+    <p id="dev-cal-1">空页</p>
+    <p id="update">这个页面上一次更新于202x年xx月xx日</p>
+    <p id="dev-cal-2">示例文本<br>想帮忙？有想法或建议？欢迎给<a
+            href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
+    
 </body>
 
 </html>
