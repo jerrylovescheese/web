@@ -308,11 +308,6 @@ a {
     /*让子元素横向居中(声明flex后有效)*/
     justify-content: center;
     /*让子元素垂直居中(声明flex后有效)*/
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(255, 255, 255);
     /*设置背景颜色为黑色，并给0.5透明度*/
-}
-
-.fa-3x>i {
-    height: 5%;
-    width: 5%;
 }
