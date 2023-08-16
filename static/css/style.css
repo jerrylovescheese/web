@@ -80,7 +80,7 @@ a {
     display: flex;
     height: 100%;
     align-items: center;
-    z-index: 99999;
+    z-index: 999999;
 }
 
 .app {
@@ -300,9 +300,9 @@ a {
     /*高度是相对屏幕高度的100%*/
     width: 100%;
     /*宽度是相对屏幕宽度的100%*/
-    z-index: 1;
+    z-index: 5;
     /*设置元素优先级为1级*/
-    display: flex;
+    display: none;
     /*设置元素隐藏*/
     align-items: center;
     /*让子元素横向居中(声明flex后有效)*/
