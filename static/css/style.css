@@ -138,6 +138,14 @@ a {
     line-height: 27px;
 }
 
+#button-1-item-list>li>a {
+    transition: all 0.2s;
+}
+
+#button-1-item-list>li>a:hover {
+    color: rgb(128, 128, 128) !important;
+}
+
 .app:hover .button {
     width: 275px;
 }

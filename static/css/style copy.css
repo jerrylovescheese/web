@@ -80,7 +80,7 @@ a {
     display: flex;
     height: 100%;
     align-items: center;
-    z-index: 99999;
+    z-index: 999999;
 }
 
 .app {
@@ -136,6 +136,14 @@ a {
 
 #button-1-item-list>li {
     line-height: 27px;
+}
+
+#button-1-item-list>li>a {
+    transition: all 0.2s;
+}
+
+#button-1-item-list>li>a:hover {
+    color: rgb(128, 128, 128) !important;
 }
 
 .app:hover .button {
@@ -300,7 +308,7 @@ a {
     /*高度是相对屏幕高度的100%*/
     width: 100%;
     /*宽度是相对屏幕宽度的100%*/
-    z-index: 1;
+    z-index: 5;
     /*设置元素优先级为1级*/
     display: flex;
     /*设置元素隐藏*/
