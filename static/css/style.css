@@ -302,7 +302,7 @@ a {
     /*宽度是相对屏幕宽度的100%*/
     z-index: 5;
     /*设置元素优先级为1级*/
-    display: none;
+    display: flex;
     /*设置元素隐藏*/
     align-items: center;
     /*让子元素横向居中(声明flex后有效)*/
