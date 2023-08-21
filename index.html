@@ -94,6 +94,22 @@
             margin-right: 30px;
         }
 
+        .inline-countdown {
+            width: auto;
+            height: fit-content;
+            background: linear-gradient(315deg, #f7931f, rgb(255, 44, 118));
+            border: #b70600 solid 2px;
+            border-radius: 15px;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
         .countdown-uni {
             width: auto;
             height: fit-content;
@@ -285,8 +301,20 @@
                 class="fas fa-warning"></i>&emsp;提示</span>&emsp;&emsp;此为静态网页，仅承担信息展示功能。</div>
 
     <div class="widgets">
+
+        <div class="inline-countdown">
+            <i class="fas fa-school"></i>&emsp;距离开学还有
+            <div id="remainTime" style="display: inline;">
+                <span id="one"></span> 天
+                <span id="two"></span> 时
+                <span id="three"></span> 分
+                <span id="four"></span> 秒
+            </div>
+        </div>
+
         <div class="survey"><i class="fas fa-paper-plane"></i>&emsp;<a href="./pages/survey.html">填问卷 <span
-                    style="text-align: right;"><i class="fas fa-chevron-right"></i></span></a></div>
+                    style="text-align: right;"><i class="fas fa-chevron-right"></i></span></a>
+        </div>
 
         <div class="promote-account"><a href="./pages/official_account.html"><i class="fas fa-newspaper"></i>&emsp;我的公众号
                 <i class="fas fa-chevron-right"></i>
@@ -298,6 +326,7 @@
                         class="fas fa-chevron-right"></i></span>
             </a>
         </div>
+
         <div class="music-recommendation-list">
             <a href="./pages/music.html" style="color: #ffffff;"><i class="fas fa-headphones"></i>&emsp;听点啥好？ 前往新的音乐页面
                 <i class="fas fa-chevron-right"></i></a><br>
@@ -354,9 +383,9 @@
         (function show() {
             //1.设置目的时间
             var oYear = 2023
-            var oMonth = 6
-            var oDay = 7
-            var oHour = 12
+            var oMonth = 8
+            var oDay = 1
+            var oHour = 10
             var oMinute = 0
             var oSecond = 0
             var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
