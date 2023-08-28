@@ -199,7 +199,7 @@ a {
 }
 
 .app:focus-within #return {
-    color: black;
+    color: rgb(213, 0, 0);
 }
 
 .header {
