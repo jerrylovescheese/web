@@ -192,6 +192,16 @@ a {
     color: black;
 }
 
+#return {
+    color: #ffffff00;
+    transition: all 0.2s;
+    transition-delay: 0.4s;
+}
+
+.app:focus-within #return {
+    color: black;
+}
+
 .header {
     width: 100%;
     height: 35px;
