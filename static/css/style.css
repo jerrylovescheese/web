@@ -100,7 +100,7 @@ a {
     float: none;
 }
 
-.app:hover {
+.app:focus-within {
     border-radius: 37.5px;
     width: 300px;
     height: 407.25px;
@@ -153,7 +153,7 @@ a {
     color: rgb(128, 128, 128) !important;
 }
 
-.app:hover .button {
+.app:focus-within .button {
     width: 275px;
 }
 
@@ -182,13 +182,13 @@ a {
     background-color: #dfdfdf;
 }
 
-.app:hover #button-1 {
+.app:focus-within #button-1 {
     border-radius: 27.5px;
     height: 245px;
     background-color: #d2d2d2;
 }
 
-.app:hover #button-1-item-list {
+.app:focus-within #button-1-item-list {
     color: black;
 }
 
