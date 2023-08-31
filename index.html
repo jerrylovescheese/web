@@ -10,20 +10,12 @@
     <link rel="stylesheet" href="./static/css/style.css">
     <link rel="stylesheet" href="./static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
     <link rel="shortcut icon" href="./Aug-18-2023-Favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-        }
-
-        .time-banner {
-            width: 100%;
-            height: 20px;
-            position: fixed;
-            left: 0;
-            top: 45px;
-            padding: 5px 0;
-            z-index: 2;
-            text-align: center;
         }
 
         @media(prefers-color-scheme: dark) {
@@ -40,8 +32,22 @@
             }
         }
 
+        .normal-container {
+            visibility: hidden;
+        }
+
+        #event-1 {
+            font-family: 'Noto Serif SC', serif;
+            margin-left: 140px;
+            margin-top: 140px;
+            font-size: 120px;
+            line-height: 140px;
+            margin-bottom: 10px;
+            text-shadow: 0px 10px 20px #2464a0;
+        }
+
         .prompt-box {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Noto Serif SC', serif;
             font-weight: bold;
             color: #f0f0f000;
             font-size: 15px;
@@ -55,13 +61,13 @@
         }
 
         #home-1 {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Noto Serif SC', serif;
             font-size: 30px;
             font-weight: bold;
         }
 
         #home-2 {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Noto Serif SC', serif;
         }
 
         .box-1 {
@@ -102,7 +108,7 @@
             border-radius: 15px;
             transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
             color: white;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Noto Serif SC', serif;
             font-weight: bold;
             font-size: 16px;
             padding: 10px;
@@ -118,7 +124,7 @@
             border-radius: 15px;
             transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
             color: black;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Noto Serif SC', serif;
             font-weight: bold;
             font-size: 16px;
             padding: 10px;
@@ -151,7 +157,7 @@
             background: #ffedc7;
             border-radius: 15px;
             border: 2px #ffbf34 solid;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Noto Serif SC', serif;
             font-size: 16px;
             color: black;
         }
@@ -163,7 +169,7 @@
             border: solid 2px #949494;
             border-radius: 15px;
             color: rgb(0, 0, 0);
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Noto Serif SC', serif;
             font-size: 16px;
             font-weight: bold;
             white-space: nowrap;
@@ -209,7 +215,7 @@
             border-radius: 15px;
             border: rgb(61, 70, 153) solid 2px;
             transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Noto Serif SC', serif;
             font-weight: bold;
             font-size: 16px;
             padding: 10px;
@@ -240,7 +246,7 @@
             border-radius: 15px;
             transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
             color: black;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Noto Serif SC', serif;
             font-weight: bold;
             font-size: 16px;
             margin-bottom: 20px;
@@ -260,7 +266,7 @@
             border: 2px #6d9c00 solid;
             background-color: #c1e867;
             padding: 10px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Noto Serif SC', serif;
             font-weight: bold;
             font-size: 16px;
             overflow: hidden;
@@ -280,8 +286,7 @@
     <script src="./static/js/include.js"></script>
     <br>
     <div class="clock-uni">
-        <span id="time"
-            style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+        <span id="time" style="font-family: 'Noto Serif SC', serif;">
         </span>
         <a id="full-screen-button" href="./pages/clock.html" style="color: black; text-decoration: none;">&emsp;<i
                 class="fas fa-expand">
@@ -289,48 +294,61 @@
         </a>
         <div id="time"></div>
     </div>
-    <br>
-    <div class="marquee">
-        <p>列车即将进站。请小心列车与站台之间的空隙。本次列车去往北安河及沿途各站。The train is arriving. Please mind the gap between the train and the
-            platform. This train stops service at Beianhe. 下一站达官营。乘客可换乘地铁 7 号线。Next station: Daguanying. Interchange
-            station for line 7. 换乘车站，乘客较多，请提前做好下车准备。Please be
-            ready to exit as the platform is very busy. 达官营。Daguanying. [有意在此处投放信息，欢迎联系: jerrylovesapple@icloud.com.]
-        </p>
+    <h1 id="event-1">你好，新生活。</h1>
+    <div id="remainTime"
+        style="font-size: 40px; margin-left: 140px; text-align: left; text-shadow: 0px 10px 20px #2464a0;">
+        距离开学还有
+        <span id="one"></span> 天
+        <span id="two"></span> 时
+        <span id="three"></span> 分
+        <span id="four"></span> 秒。
     </div>
-    <div class="warning"><span style="font-weight: bold; color: #825900;"><i
-                class="fas fa-warning"></i>&emsp;提示</span>&emsp;&emsp;此为静态网页，仅承担信息展示功能。</div>
+    <div class="normal-container">
+        <br>
+        <div class="marquee">
+            <p>列车即将进站。请小心列车与站台之间的空隙。本次列车去往北安河及沿途各站。The train is arriving. Please mind the gap between the train and the
+                platform. This train stops service at Beianhe. 下一站达官营。乘客可换乘地铁 7 号线。Next station: Daguanying. Interchange
+                station for line 7. 换乘车站，乘客较多，请提前做好下车准备。Please be
+                ready to exit as the platform is very busy. 达官营。Daguanying. [有意在此处投放信息，欢迎联系:
+                jerrylovesapple@icloud.com.]
+            </p>
+        </div>
+        <div class="warning"><span style="font-weight: bold; color: #825900;"><i
+                    class="fas fa-warning"></i>&emsp;提示</span>&emsp;&emsp;此为静态网页，仅承担信息展示功能。</div>
 
-    <div class="widgets">
+        <div class="widgets">
 
-        <div class="inline-countdown">
-            <i class="fas fa-school"></i>&emsp;距离开学还有
-            <div id="remainTime" style="font-size: 30px; text-align: center;">
-                <span id="one"></span> 天
-                <span id="two"></span> 时
-                <span id="three"></span> 分
-                <span id="four"></span> 秒
+            <div class="inline-countdown">
+                <i class="fas fa-school"></i>&emsp;距离开学还有
+                <!-- <div id="remainTime" style="font-size: 30px; text-align: center;">
+                    <span id="one"></span> 天
+                    <span id="two"></span> 时
+                    <span id="three"></span> 分
+                    <span id="four"></span> 秒
+                </div> -->
             </div>
-        </div>
 
-        <div class="survey"><i class="fas fa-paper-plane"></i>&emsp;<a href="./pages/survey.html">填问卷 <span
-                    style="text-align: right;"><i class="fas fa-chevron-right"></i></span></a>
-        </div>
+            <div class="survey"><i class="fas fa-paper-plane"></i>&emsp;<a href="./pages/survey.html">填问卷 <span
+                        style="text-align: right;"><i class="fas fa-chevron-right"></i></span></a>
+            </div>
 
-        <div class="promote-account"><a href="./pages/official_account.html"><i class="fas fa-newspaper"></i>&emsp;我的公众号
-                <i class="fas fa-chevron-right"></i>
-            </a>
-        </div>
+            <div class="promote-account"><a href="./pages/official_account.html"><i
+                        class="fas fa-newspaper"></i>&emsp;我的公众号
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
 
-        <div class="countdown-uni"><a href="./pages/clock.html" style="text-decoration: none;">
-                <span style="color: #d1d6d0;"><i class="fas fa-clock"></i>&emsp;距离《1989 (Taylor's Version)》发布还有 <i
-                        class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
+            <div class="countdown-uni"><a href="./pages/clock.html" style="text-decoration: none;">
+                    <span style="color: #d1d6d0;"><i class="fas fa-clock"></i>&emsp;距离《1989 (Taylor's Version)》发布还有 <i
+                            class="fas fa-chevron-right"></i></span>
+                </a>
+            </div>
 
-        <div class="music-recommendation-list">
-            <a href="./pages/music.html" style="color: #ffffff;"><i class="fas fa-headphones"></i>&emsp;听点啥好？ 前往新的音乐页面
-                <i class="fas fa-chevron-right"></i></a><br>
-            <!-- <div id="music-list-details"><span style="font-size: 16px;
+            <div class="music-recommendation-list">
+                <a href="./pages/music.html" style="color: #ffffff;"><i class="fas fa-headphones"></i>&emsp;听点啥好？
+                    前往新的音乐页面
+                    <i class="fas fa-chevron-right"></i></a><br>
+                <!-- <div id="music-list-details"><span style="font-size: 16px;
             font-weight: normal;"><br>My picks:</span>
                 <span>
                     <ol>
@@ -341,30 +359,37 @@
                     </ol>
                 </span>
             </div> -->
+            </div>
+        </div>
+
+        <div class="container">
+            <p id="home-1" style="margin-top: 0;">网上冲浪的绝佳去处</p>
+            <p id="home-2">这里有新潮的热词，时事的看法，青春的懵懂和江源工作室最新的动态。网站仍在搭建，更多内容，敬请期待。</p>
+            <p id="home-1">帮个忙！</p>
+            <p id="home-2"><a href="./pages/survey.html">客官驻足敝舍，感激不尽，能否再填一个问卷？要不了多久！<i
+                        class="fas fa-chevron-right"></i></a>
+            </p>
+
+            <p id="home-1">等一下......</p>
+            <p id="home-2">如果您在使用移动设备查看此网页，目前建议您转到计算机上打开它。对于移动设备尺寸的适配即将完成，造成的不便敬请谅解。</p>
+            <p id="home-1">开发者和更新日志</p>
+            <p id="home-2">查看<a style="color: rgb(85, 164, 255);" href="./pages/develop.html">网页开发日历和更新日志</a>。</p>
+            <p id="home-1">主页如何使用？</p>
+            <p id="home-2">
+                这个页面是主页。主页的左侧是一个操作区，可以按下那三个杠来显示分页面。分页面目前无内容，敬请期待。下边的放大镜是搜索功能。搜索功能暂不可用。
+            </p>
+            <p id="home-1">为什么网址这么长？</p>
+            <p id="home-2">因为我没钱买域名😅。这个网页使用了GitHub的服务器，所以就相当于致谢。<br><br>话休絮烦，咱们开始吧。</p>
         </div>
     </div>
 
-    <div class="container">
-        <p id="home-1" style="margin-top: 0;">网上冲浪的绝佳去处</p>
-        <p id="home-2">这里有新潮的热词，时事的看法，青春的懵懂和江源工作室最新的动态。网站仍在搭建，更多内容，敬请期待。</p>
-        <p id="home-1">帮个忙！</p>
-        <p id="home-2"><a href="./pages/survey.html">客官驻足敝舍，感激不尽，能否再填一个问卷？要不了多久！<i class="fas fa-chevron-right"></i></a>
-        </p>
-
-        <p id="home-1">等一下......</p>
-        <p id="home-2">如果您在使用移动设备查看此网页，目前建议您转到计算机上打开它。对于移动设备尺寸的适配即将完成，造成的不便敬请谅解。</p>
-        <p id="home-1">开发者和更新日志</p>
-        <p id="home-2">查看<a style="color: rgb(85, 164, 255);" href="./pages/develop.html">网页开发日历和更新日志</a>。</p>
-        <p id="home-1">主页如何使用？</p>
-        <p id="home-2">
-            这个页面是主页。主页的左侧是一个操作区，可以按下那三个杠来显示分页面。分页面目前无内容，敬请期待。下边的放大镜是搜索功能。搜索功能暂不可用。
-        </p>
-        <p id="home-1">为什么网址这么长？</p>
-        <p id="home-2">因为我没钱买域名😅。这个网页使用了GitHub的服务器，所以就相当于致谢。<br><br>话休絮烦，咱们开始吧。</p>
-    </div>
-
-    <br><br><br><br><br><br><br><br><br>
-
+    <p style="
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 15px;
+	font-weight: bolder;
+	text-align: center;">版权所有 © 2019-2023 aluminum.studio <a id="my-page"
+            href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">江源工作室</a></p>
+    <br><br><br><br>
     <script type="text/javascript">
         function time() {
             var vWeek, vWeek_s, vDay;
