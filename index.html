@@ -97,7 +97,8 @@
             .clock-uni,
             .container,
             .warning,
-            #dev-pause {
+            #dev-pause,
+            .apple-img-box {
                 margin-left: 30px !important;
             }
         }
@@ -286,6 +287,24 @@
             transform: translateY(-5px);
             box-shadow: 0px 10px 20px #c1e867e4;
         }
+
+        .apple-img-box {
+            width: auto;
+            height: 700px;
+            aspect-ratio: 1552/921;
+            background-image: url(./static/img/截屏2023-09-04\ 21.52.04大.png);
+            background-size: cover;
+            margin: 0 auto;
+            margin-left: 140px;
+            margin-right: 30px;
+        }
+
+        #remainTime {
+            font-size: 30px;
+            font-family: 'Noto Serif SC', serif;
+            text-align: center;
+            text-shadow: 0px 10px 20px #000;
+        }
     </style>
 </head>
 
@@ -311,7 +330,15 @@
         <span id="three"></span> 分
         <span id="four"></span> 秒。
     </div> -->
-    <p id="dev-pause">网页暂停开放。恢复时间待定。<br>Site is closed. Be back soon.</p>
+    <!-- <p id="dev-pause">网页暂停开放。恢复时间待定。<br>Site is closed. Be back soon.</p> -->
+    <div class="apple-img-box"></div>
+    <div id="remainTime">
+        距离 Apple 秋季特别活动还有&emsp;<b>
+            <span id="one"></span> 天
+            <span id="two"></span> 时
+            <span id="three"></span> 分
+            <span id="four"></span> 秒</b>
+    </div>
     <div class="normal-container">
         <br>
         <div class="marquee">
@@ -326,16 +353,6 @@
                     class="fas fa-warning"></i>&emsp;提示</span>&emsp;&emsp;此为静态网页，仅承担信息展示功能。</div>
 
         <div class="widgets">
-
-            <div class="inline-countdown">
-                <i class="fas fa-school"></i>&emsp;距离开学还有
-                <!-- <div id="remainTime" style="font-size: 30px; text-align: center;">
-                    <span id="one"></span> 天
-                    <span id="two"></span> 时
-                    <span id="three"></span> 分
-                    <span id="four"></span> 秒
-                </div> -->
-            </div>
 
             <div class="survey"><i class="fas fa-paper-plane"></i>&emsp;<a href="./pages/survey.html">填问卷 <span
                         style="text-align: right;"><i class="fas fa-chevron-right"></i></span></a>
@@ -418,8 +435,8 @@
             //1.设置目的时间
             var oYear = 2023
             var oMonth = 8
-            var oDay = 1
-            var oHour = 10
+            var oDay = 13
+            var oHour = 1
             var oMinute = 0
             var oSecond = 0
             var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
