@@ -62,6 +62,10 @@
     .app:focus-within #button-1-item-list {
         color: white !important;
     }
+
+    #button-1 {
+        border: solid 1px #828282 !important;
+    }
 }
 
 html,
@@ -85,7 +89,7 @@ a {
 
 .app {
     width: 75px;
-    height: 218.75px;
+    height: 212.5px;
     border-radius: 37.5px;
     margin-left: 20px;
     background-color: rgba(243, 243, 243, 0.887);
@@ -94,23 +98,41 @@ a {
     -webkit-backdrop-filter: blur(12px);
     -moz-backdrop-filter: blur(12px);
     box-shadow: 0px 0px 40px #63636361;
-    transition: all 0.4s cubic-bezier(0.68, -0.125, 0.27, 1.125);
+    transition: all 0.45s cubic-bezier(0.68, -0.125, 0.27, 1.125);
     transition-delay: 0.2s;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     float: none;
 }
 
 .app:focus-within {
     border-radius: 37.5px;
     width: 300px;
-    height: 407.25px;
+    height: 90%;
     margin-left: 25px;
     box-shadow: 0px 0px 40px #63636392;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    height: 5px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #f1f1f100;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #888;
+}
+
 .button {
     margin: 0 auto;
-    margin-top: 12.5px;
+    margin-top: 10px;
     width: 56.25px;
     height: 56.25px;
     border-radius: 27.5px;
@@ -119,11 +141,14 @@ a {
     transition-delay: 0.2s;
     text-align: left;
     line-height: 56.25px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     position: relative;
 }
 
 .list-container {
+    overflow-x: hidden;
+    overflow-y: scroll;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -146,7 +171,13 @@ a {
 }
 
 .list-container>ul>li {
-    line-height: 27px;
+    display: block;
+    position: relative;
+    left: -25px;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    border-radius: 50px;
 }
 
 .list-container>ul>li>a {
@@ -163,6 +194,13 @@ a {
 
 .button:hover {
     background-color: #dfdfdf;
+}
+
+#button-1 {
+    border: 1px solid #ffffff00;
+    transition: all 0.35s;
+    transition-delay: 0.3s;
+    background-color: #e3e3e38c;
 }
 
 #button-2 {
@@ -188,8 +226,8 @@ a {
 
 .app:focus-within #button-1 {
     border-radius: 27.5px;
-    height: 245px;
-    background-color: #d2d2d2;
+    height: 76.5%;
+    border: 1px solid #d2d2d2;
 }
 
 .app:focus-within #button-1-item-list {
