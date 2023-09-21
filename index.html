@@ -22,7 +22,7 @@
             content: "";
             position: absolute;
             inset: -0.625px;
-            background: linear-gradient(30deg, rgba(0, 0, 0, 0)20%, rgba(194, 129, 255, 0.8), rgb(54, 178, 255, 0.8));
+            background: linear-gradient(30deg, rgba(0, 0, 0, 0)20%, rgba(255, 209, 129, 0.8), rgba(99, 139, 198, 0.8));
             filter: blur(2.5em);
             z-index: -1;
         }
@@ -351,14 +351,19 @@
             padding: 30px;
             font-weight: bold;
             margin-bottom: 20px;
-            box-shadow: 0px 10px 20px rgba(73, 0, 152, 0.5);
         }
 
-        #whatsapp-2 {
+        #whatsapp-1 {
+            box-shadow: 0px 10px 20px rgba(152, 73, 0, 0.5);
+        }
+
+        #whatsapp-1 {
             aspect-ratio: 600/53;
-            border-radius: 15px;
             background-color: #fff;
-            border: solid 1px rgb(192, 192, 192);
+            background-image: url(./static/img/Sep\ 17\ 2023\ 运动会_画板\ 1.png);
+            background-position: center;
+            background-size: cover;
+            color: #fff;
         }
 
         #whatsapp-3 {
@@ -430,8 +435,15 @@
     <include src="./pages/layout/layout_for_index.html"></include>
     <script src="./static/js/include.js"></script>
     <!-- <p id="dev-pause">网页暂停开放。恢复时间待定。<br>Site is closed. Be back soon.</p> -->
+
     <div class="whatsapp" id="whatsapp-1">
-        Hello.
+        <span style="font-weight: lighter;">二附广播电视总台《2023年运动联欢晚会》</span><br>将于
+        <div id="remainTime" style="display: inline;">
+            <div id="one" style="display: inline;"></div> 天
+            <div id="two" style="display: inline;"></div> 时
+            <div id="three" style="display: inline;"></div> 分
+            <div id="four" style="display: inline;"></div> 秒
+        </div>后直播。
     </div>
     <br>
     <div class="clock-uni">
@@ -737,8 +749,8 @@
             //1.设置目的时间
             var oYear = 2023
             var oMonth = 8
-            var oDay = 13
-            var oHour = 1
+            var oDay = 28
+            var oHour = 8
             var oMinute = 0
             var oSecond = 0
             var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
