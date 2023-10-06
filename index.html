@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -22,7 +25,7 @@
             content: "";
             position: absolute;
             inset: -0.625px;
-            background: linear-gradient(30deg, rgba(0, 0, 0, 0)20%, rgba(185, 0, 0, 0.545), rgba(0, 56, 139, 0.867));
+            background: linear-gradient(30deg, rgba(0, 0, 0, 0)20%, rgba(28, 141, 255, 0.537), rgba(0, 56, 139, 0.867));
             filter: blur(2.5em);
             z-index: -1;
         }
@@ -198,7 +201,7 @@
         .clock-uni {
             display: flex;
             justify-content: center;
-            margin-top: 190px;
+            margin-top: 260px;
         }
 
         .warning {
@@ -357,12 +360,11 @@
             left: 0;
             right: 0;
             top: 0;
-            font-size: 7vw;
-        }
-
-        #whatsapp-1 {
-            height: 130px;
-            background-image: linear-gradient(9deg, rgba(255, 255, 255, 0.434), rgba(250, 125, 30, 0.553), rgb(243, 0, 45));
+            height: 190px;
+            background-image: linear-gradient(9deg, rgba(255, 255, 255, 0.434), rgba(30, 103, 250, 0.553), rgba(0, 94, 201, 0.557));
+            background-image: url(./static/img/Taylor-Swift.webp);
+            background-size: cover;
+            background-position: 0 -60px;
             color: #fff;
             transition: all 0.3s;
         }
@@ -430,7 +432,18 @@
             background-color: #adadad7f;
         }
 
+        #remainTime {
+            display: inline;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: normal;
+            font-size: 25px;
+            position: relative;
+        }
+
         #header {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            font-size: 3vw;
             transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
             position: relative;
             top: 0px;
@@ -445,13 +458,13 @@
     <!-- <p id="dev-pause">网页暂停开放。恢复时间待定。<br>Site is closed. Be back soon.</p> -->
 
     <div class="whatsapp" id="whatsapp-1">
-        <span style="font-weight: 1300; font-family: 'Noto Serif SC', serif;" id="header">祖国，生日快乐。🇨🇳</span>
-        <!-- <div id="remainTime" style="display: inline;">
-            <div id="one" style="display: inline;"></div> 天
-            <div id="two" style="display: inline;"></div> 时
-            <div id="three" style="display: inline;"></div> 分
-            <div id="four" style="display: inline;"></div> 秒
-        </div> -->
+        <span id="header">Baby we're the new romantics. <br></span>
+        <div id="remainTime">1989 (Taylor's Version) will be out in
+            <div id="one" style="display: inline;"></div> days
+            <div id="two" style="display: inline;"></div> hours
+            <div id="three" style="display: inline;"></div> minutes
+            <div id="four" style="display: inline;"></div> seconds
+        </div>
     </div>
     <br>
     <div class="clock-uni">
@@ -667,7 +680,7 @@
     <div class="normal-container">
         <br>
         <div class="marquee">
-            <p>莫听穿林打叶声 一蓑烟雨任平生 畅音阁里终一叙 六百年一粟 沧海一梦
+            <p>I guess October is now officially "Swiftober" now.
             </p>
         </div>
         <div class="warning"><span style="font-weight: bold; color: #825900;"><i
@@ -743,23 +756,27 @@
 
         function scrollFunction() {
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                document.getElementById("whatsapp-1").style.height = "60px";
+                document.getElementById("whatsapp-1").style.height = "100px";
                 document.getElementById("header").style.fontSize = "3vw";
                 document.getElementById("whatsapp-1").style.padding = "0px";
-                document.getElementById("whatsapp-1").style.boxShadow = "0px 5px 10px darkred";
+                document.getElementById("whatsapp-1").style.boxShadow = "0px 5px 10px darkblue";
                 document.getElementById("whatsapp-1").style.backgroundImage = "linear-gradient(9deg, rgba(255, 255, 255), rgb(255, 255, 255))";
-                document.getElementById("header").style.top = "-40px";
+                document.getElementById("header").style.top = "0px";
                 document.getElementById("header").style.left = "20px";
                 document.getElementById("header").style.color = "black";
+                document.getElementById("remainTime").style.color = "black";
+                document.getElementById("remainTime").style.left = "20px";
             } else {
-                document.getElementById("whatsapp-1").style.height = "130px";
-                document.getElementById("header").style.fontSize = "7vw";
+                document.getElementById("whatsapp-1").style.height = "190px";
+                document.getElementById("header").style.fontSize = "3vw";
                 document.getElementById("whatsapp-1").style.padding = "30px";
                 document.getElementById("whatsapp-1").style.boxShadow = "none";
-                document.getElementById("whatsapp-1").style.backgroundImage = "linear-gradient(9deg, rgba(255, 255, 255, 0.434), rgba(250, 125, 30, 0.553), rgb(243, 0, 45))";
+                document.getElementById("whatsapp-1").style.backgroundImage = "url(./static/img/Taylor-Swift.webp)";
                 document.getElementById("header").style.top = "0px";
                 document.getElementById("header").style.left = "0px";
                 document.getElementById("header").style.color = "white";
+                document.getElementById("remainTime").style.color = "white";
+                document.getElementById("remainTime").style.left = "0px";
             }
         }
 
@@ -780,9 +797,9 @@
         (function show() {
             //1.设置目的时间
             var oYear = 2023
-            var oMonth = 8
+            var oMonth = 9
             var oDay = 28
-            var oHour = 8
+            var oHour = 12
             var oMinute = 0
             var oSecond = 0
             var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
