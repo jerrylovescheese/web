@@ -367,6 +367,7 @@
             background-position: 0 -60px;
             color: #fff;
             transition: all 0.3s;
+            z-index: 1;
         }
 
         #whatsapp-3 {
@@ -377,6 +378,7 @@
         }
 
         #class-schedule {
+            display: none;
             width: auto;
             margin-top: 30px;
             margin-right: 30px;
@@ -443,7 +445,7 @@
         #header {
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
-            font-size: 3vw;
+            font-size: 30px;
             transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
             position: relative;
             top: 0px;
@@ -459,11 +461,11 @@
 
     <div class="whatsapp" id="whatsapp-1">
         <span id="header">Baby we're the new romantics. <br></span>
-        <div id="remainTime">1989 (Taylor's Version) will be out in
+        <div id="remainTime"><i>1989 (Taylor's Version)</i> will be out in
             <div id="one" style="display: inline;"></div> days
             <div id="two" style="display: inline;"></div> hours
             <div id="three" style="display: inline;"></div> minutes
-            <div id="four" style="display: inline;"></div> seconds
+            <div id="four" style="display: inline;"></div> seconds.
         </div>
     </div>
     <br>
@@ -756,27 +758,23 @@
 
         function scrollFunction() {
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                document.getElementById("whatsapp-1").style.height = "100px";
-                document.getElementById("header").style.fontSize = "3vw";
-                document.getElementById("whatsapp-1").style.padding = "0px";
+                document.getElementById("whatsapp-1").style.height = "fit-content";
+                document.getElementById("header").style.fontSize = "20px";
+                document.getElementById("whatsapp-1").style.padding = "20px";
                 document.getElementById("whatsapp-1").style.boxShadow = "0px 5px 10px darkblue";
                 document.getElementById("whatsapp-1").style.backgroundImage = "linear-gradient(9deg, rgba(255, 255, 255), rgb(255, 255, 255))";
-                document.getElementById("header").style.top = "0px";
-                document.getElementById("header").style.left = "20px";
                 document.getElementById("header").style.color = "black";
                 document.getElementById("remainTime").style.color = "black";
-                document.getElementById("remainTime").style.left = "20px";
+                document.getElementById("remainTime").style.fontSize = "20px";
             } else {
                 document.getElementById("whatsapp-1").style.height = "190px";
-                document.getElementById("header").style.fontSize = "3vw";
+                document.getElementById("header").style.fontSize = "30px";
                 document.getElementById("whatsapp-1").style.padding = "30px";
                 document.getElementById("whatsapp-1").style.boxShadow = "none";
                 document.getElementById("whatsapp-1").style.backgroundImage = "url(./static/img/Taylor-Swift.webp)";
-                document.getElementById("header").style.top = "0px";
-                document.getElementById("header").style.left = "0px";
                 document.getElementById("header").style.color = "white";
                 document.getElementById("remainTime").style.color = "white";
-                document.getElementById("remainTime").style.left = "0px";
+                document.getElementById("remainTime").style.fontSize = "25px";
             }
         }
 
