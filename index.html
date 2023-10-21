@@ -16,458 +16,25 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
         rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-        }
+    <link rel="stylesheet" href="./static/css/index.css">
 
-        body::after {
-            content: "";
-            position: absolute;
-            inset: -0.625px;
-            background: linear-gradient(30deg, rgba(0, 0, 0, 0)20%, rgba(28, 141, 255, 0.537), rgba(0, 56, 139, 0.867));
-            filter: blur(2.5em);
-            z-index: -1;
-        }
-
-        @media(prefers-color-scheme: dark) {
-            #full-screen-button:hover .prompt-box {
-                display: inline;
-                color: rgb(255, 255, 255) !important;
-                /* transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s; */
-            }
-
-            .marquee {
-                background-color: #000000 !important;
-                border: solid 2px #585858 !important;
-                color: #ff2020 !important;
-            }
-
-            table,
-            td {
-                border: solid 1px white !important;
-            }
-
-            #set-1 {
-                background-color: #8282827f !important;
-            }
-
-            #set-2 {
-                background-color: #5e5e5e7f !important;
-            }
-
-            #set-3 {
-                background-color: #4a4a4a7f !important;
-            }
-
-            #set-4 {
-                background-color: #3232327f !important;
-            }
-
-            #set-5 {
-                background-color: #2a2a2a7f !important;
-            }
-        }
-
-        @media(prefers-color-scheme: light) {
-            #whatsapp-1 {
-                border: none !important;
-            }
-        }
-
-        .normal-container {
-            visibility: visible;
-        }
-
-        #event-1 {
-            font-family: 'Noto Serif SC', serif;
-            margin-left: 120px;
-            margin-top: 140px;
-            font-size: 120px;
-            line-height: 140px;
-            margin-bottom: 10px;
-            text-shadow: 0px 10px 20px #2464a0;
-        }
-
-        #dev-pause {
-            font-family: 'Noto Serif SC', serif;
-            font-weight: bold;
-            text-align: center;
-            margin-top: 200px;
-            font-size: 25px;
-        }
-
-        .prompt-box {
-            font-family: 'Noto Serif SC', serif;
-            font-weight: bold;
-            color: #f0f0f000;
-            font-size: 15px;
-            display: none;
-        }
-
-        #full-screen-button:hover .prompt-box {
-            display: inline;
-            color: black;
-            /* transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s; */
-        }
-
-        #home-1 {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 30px;
-            font-weight: bold;
-        }
-
-        #home-2 {
-            font-family: 'Noto Serif SC', serif;
-        }
-
-        .box-1 {
-            width: 90%;
-            height: 300px;
-            background-color: rgb(255, 255, 255);
-            background-image: url(./static/img/1509729267christmas-png-ornament-ball-image.png);
-            background-size: cover;
-            border-radius: 15px;
-            margin: 0 auto;
-            margin-top: 80px;
-            color: white;
-        }
-
-        @media (max-width: 425px) {
-
-            .widgets,
-            .marquee,
-            .clock-uni,
-            .container,
-            .warning,
-            #dev-pause,
-            .apple-img-box,
-            #whatsapp-1,
-            #class-schedule {
-                margin-left: 30px !important;
-            }
-        }
-
-        .widgets {
-            padding-top: 20px;
-            padding-bottom: 20px;
-            margin-left: 120px;
-            margin-right: 30px;
-            display: none;
-        }
-
-        .inline-countdown {
-            width: auto;
-            height: fit-content;
-            background: linear-gradient(315deg, #f7931f, rgb(255, 44, 118));
-            border: #b70600 solid 2px;
-            border-radius: 15px;
-            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-            color: white;
-            font-family: 'Noto Serif SC', serif;
-            font-weight: bold;
-            font-size: 16px;
-            padding: 10px;
-            margin-bottom: 20px;
-            overflow: hidden;
-        }
-
-        .countdown-uni {
-            width: auto;
-            height: fit-content;
-            background: linear-gradient(135deg, #6089a9, #bcc0c5);
-            border: #415a6d solid 2px;
-            border-radius: 15px;
-            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-            color: black;
-            font-family: 'Noto Serif SC', serif;
-            font-weight: bold;
-            font-size: 16px;
-            padding: 10px;
-            margin-bottom: 20px;
-            overflow: hidden;
-        }
-
-        .countdown-uni:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 20px #7b96aa;
-        }
-
-        .widgets-small-special {
-            font-size: 20px;
-            font-weight: normal;
-        }
-
-        .clock-uni {
-            display: flex;
-            justify-content: center;
-            margin-top: 260px;
-        }
-
-        .warning {
-            width: auto;
-            height: fit-content;
-            padding: 10px;
-            margin-left: 120px;
-            margin-right: 30px;
-            background: #ffedc7;
-            border-radius: 15px;
-            border: 2px #ffbf34 solid;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 16px;
-            color: black;
-        }
-
-        .marquee {
-            width: auto;
-            height: fit-content;
-            background-color: rgb(255, 255, 255);
-            border: solid 2px #949494;
-            border-radius: 15px;
-            color: rgb(0, 0, 0);
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 16px;
-            font-weight: bold;
-            white-space: nowrap;
-            overflow: hidden;
-            box-sizing: border-box;
-            margin-left: 120px;
-            margin-right: 30px;
-            margin-bottom: 20px;
-            padding: 10px;
-        }
-
-        .marquee p {
-            display: inline-block;
-            padding-left: 100%;
-            animation: marquee 35s linear infinite;
-            margin: 0;
-        }
-
-        @keyframes marquee {
-            0% {
-                transform: translate(0, 0);
-            }
-
-            100% {
-                transform: translate(-100%, 0);
-            }
-        }
-
-        .container {
-            width: auto;
-            height: fit-content;
-            border-radius: 15px;
-            border: solid 1px rgb(192, 192, 192);
-            margin-left: 120px;
-            margin-right: 30px;
-            margin-top: 20px;
-            padding: 20px;
-            display: none;
-        }
-
-        .music-recommendation-list {
-            width: auto;
-            height: fit-content;
-            background: linear-gradient(to right, #095b7f, #b606f7);
-            border-radius: 15px;
-            border: rgb(61, 70, 153) solid 2px;
-            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-            font-family: 'Noto Serif SC', serif;
-            font-weight: bold;
-            font-size: 16px;
-            padding: 10px;
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-
-        #music-list-details {
-            height: 0px;
-            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-            transition-delay: 0.3s;
-        }
-
-        .music-recommendation-list:hover #music-list-details {
-            height: 160px;
-        }
-
-        .music-recommendation-list:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 20px #a952ffa2;
-        }
-
-        .promote-account {
-            width: auto;
-            height: fit-content;
-            background-color: #07c160;
-            border: #007e3d solid 2px;
-            border-radius: 15px;
-            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-            color: black;
-            font-family: 'Noto Serif SC', serif;
-            font-weight: bold;
-            font-size: 16px;
-            margin-bottom: 20px;
-            padding: 10px;
-            overflow: hidden;
-        }
-
-        .promote-account:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 20px #07c1617a;
-        }
-
-        .survey {
-            width: auto;
-            height: fit-content;
-            border-radius: 15px;
-            border: 2px #6d9c00 solid;
-            background-color: #c1e867;
-            padding: 10px;
-            font-family: 'Noto Serif SC', serif;
-            font-weight: bold;
-            font-size: 16px;
-            overflow: hidden;
-            margin-bottom: 20px;
-            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-        }
-
-        .survey:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 20px #c1e867e4;
-        }
-
-        .whatsapp {
-            width: auto;
-            height: fit-content;
-            margin-left: 120px;
-            margin-right: 30px;
-            border: solid 1px grey;
-            border-top: none;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            overflow: hidden;
-            font-size: 30px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            text-align: left;
-            padding: 30px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        #whatsapp-1 {
-            /* box-shadow: 0px 5px 10px rgba(96, 0, 2, 0.779); */
-            position: fixed;
-            left: 0;
-            right: 0;
-            top: 0;
-            background-image: linear-gradient(9deg, rgba(255, 255, 255, 0.434), rgba(30, 103, 250, 0.553), rgba(0, 94, 201, 0.557));
-            background-image: url(./static/img/td-po.webp);
-            background-size: cover;
-            aspect-ratio: 16/8.6;
-            color: #fff;
-            transition: all 0.3s;
-            z-index: 1;
-            border-bottom-left-radius: 30px;
-            border-bottom-right-radius: 30px;
-        }
-
-        #whatsapp-3 {
-            aspect-ratio: 600/53;
-            border-radius: 15px;
-            background-color: #000000;
-            border: solid 1px rgb(192, 192, 192);
-        }
-
-        #class-schedule {
-            display: none;
-            width: auto;
-            margin-top: 30px;
-            margin-right: 30px;
-            border: solid 1px #e6e6e6;
-            border-radius: 15px;
-            margin-left: 120px;
-            padding: 30px;
-            overflow-x: scroll;
-            overflow-y: hidden;
-            background-color: rgba(255, 255, 255, 0.27);
-        }
-
-        table,
-        td {
-            border: solid 1px black;
-            font-family: 'Noto Serif SC', serif;
-            border-collapse: collapse;
-        }
-
-        th {
-            padding: 10px;
-        }
-
-        td {
-            padding: 5px;
-        }
-
-        #set-1,
-        #set-2,
-        #set-3,
-        #set-4,
-        #set-5 {
-            font-weight: bold;
-        }
-
-        #set-1 {
-            background-color: #ececec7f;
-        }
-
-        #set-2 {
-            background-color: #dfdfdf7f;
-        }
-
-        #set-3 {
-            background-color: #cccccc7f;
-        }
-
-        #set-4 {
-            background-color: #bebebe7f;
-        }
-
-        #set-5 {
-            background-color: #adadad7f;
-        }
-
-        #remainTime {
-            display: inline;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: normal;
-            font-size: 25px;
-            position: relative;
-        }
-
-        #header {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
-            font-size: 30px;
-            transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-            position: relative;
-            top: 0px;
-        }
-    </style>
-    <script src="./static/js/include.js"></script>
 </head>
 
 <body>
+    <script src="./static/js/include.js"></script>
     <include src="./pages/layout/layout_for_index.html"></include>
 
     <!-- <p id="dev-pause">网页暂停开放。恢复时间待定。<br>Site is closed. Be back soon.</p> -->
 
     <div class="whatsapp" id="whatsapp-1">
-        <span id="header">Baby we're the new romantics. <br></span>
-        <div id="remainTime"><i>1989 (Taylor's Version)</i> will be out in
-            <div id="one" style="display: inline;"></div> days
-            <div id="two" style="display: inline;"></div> hours
-            <div id="three" style="display: inline;"></div> minutes
-            <div id="four" style="display: inline;"></div> seconds.
+        <div id="inner">
+            <span id="header">Baby we're the new romantics. <br></span>
+            <div id="remainTime"><i>1989 (Taylor's Version)</i> will be out in
+                <div id="one" style="display: inline;"></div> days
+                <div id="two" style="display: inline;"></div> hours
+                <div id="three" style="display: inline;"></div> minutes
+                <div id="four" style="display: inline;"></div> seconds.
+            </div>
         </div>
     </div>
     <br>
@@ -480,6 +47,7 @@
         </a>
         <div id="time"></div>
     </div>
+
     <div id="class-schedule">
         <table>
             <thead>
@@ -746,6 +314,37 @@
             <p id="home-2">因为我没钱买域名😅。这个网页使用了GitHub的服务器，所以就相当于致谢。<br><br>话休絮烦，咱们开始吧。</p>
         </div>
     </div>
+    <div class="favorites">
+        <div id="six-favorite-things">
+            六大爱好
+        </div>
+        <div class="favorite-things" id="apple">苹果
+            <a href="https://www.apple.com">
+                <div class="go-button" id="go-button-1"><i class="fas fa-arrow-right"></i></div>
+            </a>
+        </div>
+        <div class="favorite-things" id="taylor">霉霉
+            <a href="https://www.taylorswift.com">
+                <div class="go-button" id="go-button-2"><i class="fas fa-arrow-right"></i></div>
+            </a>
+        </div>
+        <div class="favorite-things" id="friends">老友记
+            <a href="https://www.friendstheexperience.com/">
+                <div class="go-button" id="go-button-3"><i class="fas fa-arrow-right"></i></div>
+            </a>
+        </div>
+        <div class="favorite-things" id="lalaland">爱乐之城
+            <a href="https://www.imdb.com/title/tt3783958/">
+                <div class="go-button" id="go-button-4"><i class="fas fa-arrow-right"></i></div>
+            </a>
+        </div>
+        <div class="favorite-things" id="food">吃的
+            <div class="go-button" id="go-button-5"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="favorite-things" id="uiuxdesign">交互设计
+            <div class="go-button" id="go-button-6"><i class="fas fa-arrow-right"></i></div>
+        </div>
+    </div>
     <br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br>
@@ -758,31 +357,31 @@
     <br><br><br><br>
     <script type="text/javascript">
         // When the user scrolls down 50px from the top of the document, resize the header's font size
-        window.onscroll = function () { scrollFunction() };
+        // window.onscroll = function () { scrollFunction() };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                document.getElementById("whatsapp-1").style.height = "fit-content";
-                document.getElementById("header").style.fontSize = "20px";
-                document.getElementById("whatsapp-1").style.padding = "20px";
-                document.getElementById("whatsapp-1").style.boxShadow = "0px 5px 10px darkblue";
-                document.getElementById("whatsapp-1").style.backgroundImage = "linear-gradient(9deg, rgba(255, 255, 255), rgb(255, 255, 255))";
-                document.getElementById("header").style.color = "black";
-                document.getElementById("remainTime").style.color = "black";
-                document.getElementById("remainTime").style.fontSize = "20px";
-                document.getElementById("whatsapp-1").style.aspectRatio = "unset";
-            } else {
-                document.getElementById("whatsapp-1").style.height = "auto";
-                document.getElementById("header").style.fontSize = "30px";
-                document.getElementById("whatsapp-1").style.padding = "30px";
-                document.getElementById("whatsapp-1").style.boxShadow = "none";
-                document.getElementById("whatsapp-1").style.backgroundImage = "url(./static/img/td-po.webp)";
-                document.getElementById("header").style.color = "white";
-                document.getElementById("remainTime").style.color = "white";
-                document.getElementById("remainTime").style.fontSize = "25px";
-                document.getElementById("whatsapp-1").style.aspectRatio = "16/8.6";
-            }
-        }
+        // function scrollFunction() {
+        //     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        //         document.getElementById("whatsapp-1").style.height = "fit-content";
+        //         document.getElementById("header").style.fontSize = "20px";
+        //         document.getElementById("inner").style.padding = "20px";
+        //         document.getElementById("whatsapp-1").style.boxShadow = "0px 5px 10px darkblue";
+        //         document.getElementById("whatsapp-1").style.backgroundImage = "linear-gradient(9deg, rgba(255, 255, 255), rgb(255, 255, 255))";
+        //         document.getElementById("header").style.color = "black";
+        //         document.getElementById("remainTime").style.color = "black";
+        //         document.getElementById("remainTime").style.fontSize = "20px";
+        //         document.getElementById("whatsapp-1").style.aspectRatio = "unset";
+        //     } else {
+        //         document.getElementById("whatsapp-1").style.height = "auto";
+        //         document.getElementById("header").style.fontSize = "30px";
+        //         document.getElementById("inner").style.padding = "20px";
+        //         document.getElementById("whatsapp-1").style.boxShadow = "none";
+        //         document.getElementById("whatsapp-1").style.backgroundImage = "url(./static/img/td-po.webp)";
+        //         document.getElementById("header").style.color = "white";
+        //         document.getElementById("remainTime").style.color = "white";
+        //         document.getElementById("remainTime").style.fontSize = "25px";
+        //         document.getElementById("whatsapp-1").style.aspectRatio = "16/9";
+        //     }
+        // }
 
         function time() {
             var vWeek, vWeek_s, vDay;
