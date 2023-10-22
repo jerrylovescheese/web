@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Swiftiepedia（bushi</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
+    <link rel="shortcut icon" href="../Aug-18-2023-Favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        @media (max-width: 425px) {
+
+            #dev-cal-1,
+            #update,
+            #dev-cal-2,
+            #taylor-swift-album-list,
+            .taylor-swift-album {
+                margin-left: 30px !important;
+                margin-right: 30px !important;
+            }
+        }
+
+        .header {
+            z-index: 1;
+        }
+
+        #taylor-swift-album-list {
+            margin-left: 120px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-family: 'Noto Serif SC', serif;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .taylor-swift-album {
+            position: relative;
+            width: auto;
+            margin-left: 120px;
+            margin-right: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            font-size: 30px;
+            font-family: 'Noto Serif SC', serif;
+            text-align: left;
+            padding: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        #midnights {
+            background-image: linear-gradient(to right, rgb(94, 108, 141), rgb(137, 168, 186));
+        }
+
+        #evermore {
+            background-image: linear-gradient(to right, rgb(158, 96, 73), rgb(215, 142, 95));
+        }
+
+        #folklore {
+            background-image: linear-gradient(to right, rgb(209, 209, 209), rgb(165, 165, 165));
+        }
+
+        #lover {
+            background-image: linear-gradient(to right, rgb(242, 173, 196), rgb(138, 57, 90));
+        }
+
+        #reputation {
+            background-color: #666666;
+        }
+
+        #ts1989 {
+            background-image: linear-gradient(to right, rgb(114, 180, 241), rgb(201, 206, 213));
+        }
+
+        #red {
+            background-color: rgb(207, 59, 71);
+        }
+
+        #speak-now {
+            background-image: linear-gradient(to right, rgb(119, 63, 122), rgb(142, 96, 146));
+        }
+
+        #fearless {
+            background-image: linear-gradient(to left, rgb(226, 171, 75), rgb(90, 63, 36));
+        }
+
+        #taylor-swift {
+            background-image: linear-gradient(to right, rgb(71, 158, 201), rgb(115, 192, 123));
+        }
+
+        .go-button {
+            position: absolute;
+            right: 20px;
+            top: 0 !important;
+            bottom: 0 !important;
+            width: auto;
+            height: auto;
+            aspect-ratio: 1/1;
+            margin: 20px;
+            margin-right: 0px !important;
+            border-radius: 5px;
+            background-color: #fff;
+            display: inline-block;
+            text-align: center;
+            font-size: 40px;
+            transition: all 0.3s;
+        }
+
+        .go-button:hover {
+            transform: translateX(5px);
+        }
+
+        #go-button-1 {
+            color: rgb(137, 168, 186);
+        }
+
+        #go-button-2 {
+            color: rgb(215, 142, 95);
+        }
+
+        #go-button-3 {
+            color: #7f7f7f;
+        }
+
+        #go-button-4 {
+            color: rgb(138, 57, 90);
+        }
+
+        #go-button-5 {
+            color: #666666;
+        }
+
+        #go-button-6 {
+            color: rgb(201, 206, 213);
+        }
+
+        #go-button-7 {
+            color: rgb(207, 59, 71);
+        }
+
+        #go-button-8 {
+            color: rgb(142, 96, 146);
+        }
+
+        #go-button-9 {
+            color: rgb(226, 171, 75);
+        }
+
+        #go-button-10 {
+            color: rgb(115, 192, 123);
+        }
+
+        #midnights:hover #go-button-1 {
+            background-color: #fff;
+            color: rgb(137, 168, 186);
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
+        }
+
+        #evermore:hover #go-button-2 {
+            background-color: #fff;
+            color: rgb(215, 142, 95);
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
+        }
+
+        #folklore:hover #go-button-3 {
+            background-color: #fff;
+            color: #7f7f7f;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
+        }
+
+        #lover:hover #go-button-4 {
+            background-color: #fff;
+            color: rgb(138, 57, 90);
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
+        }
+
+        #reputation:hover #go-button-5 {
+            background-color: #fff;
+            color: #666666;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
+        }
+
+        #ts1989:hover #go-button-6 {
+            background-color: #fff;
+            color: rgb(201, 206, 213);
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
+        }
+
+        #red:hover #go-button-7 {
+            background-color: #fff;
+            color: rgb(207, 59, 71);
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
+        }
+
+        #speak-now:hover #go-button-8 {
+            background-color: #fff;
+            color: rgb(142, 96, 146);
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
+        }
+
+        #fearless:hover #go-button-9 {
+            background-color: #fff;
+            color: rgb(226, 171, 75);
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
+        }
+
+        #taylor-swift:hover #go-button-10 {
+            background-color: #fff;
+            color: rgb(115, 192, 123);
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
+        }
+    </style>
+</head>
+
+<body>
+    <include src="./layout/layout.html"></include>
+    <script src="../static/js/include.js"></script>
+
+    <div class="header">&emsp;Swiftiepedia</div>
+
+    <p id="dev-cal-1">Swiftiepedia</p>
+    <p id="update">这个页面上一次更新于2023年10月22日<br></p>
+    <div class="favorites">
+        <div id="taylor-swift-album-list">
+            泰勒·斯威夫特专辑列表
+        </div>
+        <div class="taylor-swift-album" id="midnights">Midnights
+            <a href="https://www.apple.com">
+                <div class="go-button" id="go-button-1"><i class="fas fa-arrow-right"></i></div>
+            </a>
+        </div>
+        <div class="taylor-swift-album" id="evermore">evermore
+            <a href="https://www.taylorswift.com">
+                <div class="go-button" id="go-button-2"><i class="fas fa-arrow-right"></i></div>
+            </a>
+        </div>
+        <div class="taylor-swift-album" id="folklore">folklore
+            <a href="https://www.friendstheexperience.com/">
+                <div class="go-button" id="go-button-3"><i class="fas fa-arrow-right"></i></div>
+            </a>
+        </div>
+        <div class="taylor-swift-album" id="lover">Lover
+            <a href="https://www.imdb.com/title/tt3783958/">
+                <div class="go-button" id="go-button-4"><i class="fas fa-arrow-right"></i></div>
+            </a>
+        </div>
+        <div class="taylor-swift-album" id="reputation">reputation
+            <div class="go-button" id="go-button-5"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="taylor-swift-album" id="ts1989">1989 (Taylor's Version)
+            <a href="https://developer.apple.com/design/human-interface-guidelines/">
+                <div class="go-button" id="go-button-6"><i class="fas fa-arrow-right"></i></div>
+            </a>
+        </div>
+        <div class="taylor-swift-album" id="red">Red (Taylor's Version)
+            <div class="go-button" id="go-button-7"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="taylor-swift-album" id="speak-now">Speak Now (Taylor's Version)
+            <div class="go-button" id="go-button-8"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="taylor-swift-album" id="fearless">Fearless (Taylor's Version)
+            <div class="go-button" id="go-button-9"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="taylor-swift-album" id="taylor-swift">Taylor Swift
+            <div class="go-button" id="go-button-10"><i class="fas fa-arrow-right"></i></div>
+        </div>
+    </div>
+    <p id="dev-cal-2"><br>想帮忙？有想法或建议？欢迎给<a
+            href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
+
+
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+
+    <p style="
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 15px;
+	font-weight: bolder;
+	text-align: center;">版权所有 © 2019-2023 aluminum.studio <a id="my-page"
+            href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">江源工作室</a></p>
+    <br><br><br><br>
+</body>
+
+</html>
