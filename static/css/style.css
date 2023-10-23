@@ -257,6 +257,7 @@ a {
     background-color: rgba(245, 245, 245, 0.5);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
     border-bottom: solid 1px rgb(210, 210, 210);
     position: sticky;
     top: 0;
@@ -274,6 +275,7 @@ a {
     border: solid 1px rgb(239, 239, 239);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
     position: fixed;
     bottom: 20px;
     left: auto;
@@ -302,6 +304,7 @@ a {
     border: solid 1px rgb(239, 239, 239);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
     position: fixed;
     bottom: 20px;
     left: auto;
@@ -331,6 +334,7 @@ a {
     background-color: rgba(245, 245, 245, 0.5);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
     border-bottom: solid 1px rgb(210, 210, 210);
     position: fixed;
     top: 0;
@@ -403,6 +407,8 @@ a {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border-bottom: 2px solid #e0e0e0;
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
     white-space: nowrap;
     z-index: 19;
 }
