@@ -411,7 +411,6 @@ a {
     -moz-backdrop-filter: blur(12px);
     white-space: nowrap;
     z-index: 19;
-    margin: 0 !important;
 }
 
 .quick-link {
