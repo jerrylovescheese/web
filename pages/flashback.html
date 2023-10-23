@@ -30,6 +30,10 @@
             background-image: url(../static/img/Weixin\ Image_20230821163300.jpg);
             background-size: cover;
         }
+
+        .header {
+            z-index: 21;
+        }
     </style>
 </head>
 
@@ -37,7 +41,14 @@
     <include src="./layout/layout.html"></include>
     <script src="../static/js/include.js"></script>
 
-    <div class="header">&emsp;采光间</div>
+    <div class="header">&emsp;<a href="../index.html"><i class="fas fa-chevron-left"></i>&emsp14;&emsp14;&emsp14;回到上一页</a>
+    </div>
+
+    <div id="quick-links">
+        <b>ON THIS PAGE:</b>
+        &emsp;
+        老照片
+    </div>
 
     <p id="dev-cal-1">采光间</p>
     <p id="dev-cal-2" style="font-size: larger; font-weight: bold;">西外南路6号</p>

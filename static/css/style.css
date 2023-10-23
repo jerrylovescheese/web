@@ -66,6 +66,11 @@
     #button-1 {
         border: solid 1px #828282 !important;
     }
+
+    #quick-links {
+        background-color: rgba(42, 42, 42, 0.5) !important;
+        border-bottom: solid 1px rgb(82, 82, 82) !important;
+    }
 }
 
 html,
@@ -83,6 +88,8 @@ a {
     position: fixed;
     display: flex;
     height: 100%;
+    top: 0 !important;
+    bottom: 0 !important;
     align-items: center;
     z-index: 20;
 }
@@ -115,7 +122,7 @@ a {
 
 ::-webkit-scrollbar {
     width: 0px;
-    height: 5px;
+    height: 0px;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0);
 }
@@ -325,7 +332,7 @@ a {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: solid 1px rgb(210, 210, 210);
-    position: sticky;
+    position: fixed;
     top: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
@@ -380,4 +387,35 @@ a {
     background-color: rgb(255, 255, 255);
     /*设置背景颜色为黑色，并给0.5透明度*/
     font-size: 50px;
+}
+
+#quick-links {
+    width: 100%;
+    height: 25px;
+    position: fixed;
+    top: 36px;
+    padding: 10px;
+    background-color: #f4f4f498;
+    line-height: 25px;
+    z-index: 21;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-bottom: 2px solid #e0e0e0;
+    backdrop-filter: blur(12px);
+    white-space: nowrap;
+    z-index: 19;
+}
+
+.quick-link {
+    border-radius: 20px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid 1px gray;
+    transition: all 0.3s;
+}
+
+.quick-link:hover {
+    background-color: #b4b4b4;
 }
