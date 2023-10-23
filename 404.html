@@ -9,9 +9,29 @@
     <link rel="stylesheet" href="./static/css/style.css">
     <link rel="stylesheet" href="./static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
     <link rel="shortcut icon" href="./Aug-18-2023-Favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
     <style>
         body {
             margin: 0;
+        }
+
+        .header {
+            z-index: 21;
+        }
+
+        @media (max-width: 425px) {
+
+            #dev-cal-1,
+            #update,
+            #dev-cal-2 {
+                margin-left: 30px !important;
+                margin-right: 30px !important;
+            }
         }
     </style>
 </head>
@@ -19,12 +39,20 @@
 <body>
     <include src="./pages/layout/layout_for_index.html"></include>
     <script src="./static/js/include.js"></script>
-    <script src="./static/js/loader.js"></script>
-    <div class="header">&emsp;啊哦……</div>
 
-    <p id="dev-cal-1">我还在开发。</p>
+    <div class="header">&emsp;<a href="./index.html"><i
+                class="fas fa-chevron-left"></i>&emsp14;&emsp14;&emsp14;回到上一页</a>
+    </div>
+
+    <div id="quick-links">
+        <b>ON THIS PAGE:</b>
+        &emsp;
+        错误 - 您该回去啦。
+    </div>
+
+    <p id="dev-cal-1">404 - 页面不存在</p>
     <p id="update">这个页面上一次更新于2023年8月15日</p>
-    <p id="dev-cal-2">您进入了不存在的页面。请按下浏览器的返回按钮以返回。<br>想帮忙？有想法或建议？欢迎给<a
+    <p id="dev-cal-2">您进入了不存在的页面。请按下左上角的返回按钮以返回。<br>想帮忙？有想法或建议？欢迎给<a
             href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
 
 
