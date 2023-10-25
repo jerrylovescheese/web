@@ -45,6 +45,12 @@
             font-weight: bold;
             font-size: 25px !important;
         }
+
+        @media (prefers-color-scheme: light) {
+            .lyrics-light-special {
+                filter: saturate(2.5);
+            }
+        }
     </style>
 </head>
 
@@ -76,7 +82,7 @@
         sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
         src="https://embed.music.apple.com/cn/album/cruel-summer/1468058165?i=1468058171"></iframe>
     <p id="dev-cal-2" style="font-weight: bold; font-size: 20px;">热烈庆祝时隔五年《Cruel Summer》登顶公告牌单曲榜榜首！ - 2023年10月24日</p>
-    <p id="dev-cal-2">
+    <p id="dev-cal-2" class="lyrics-light-special">
         (Yeah, yeah, yeah, yeah)<br>
         <br>
         <span style="color: #F5B8AE;">
