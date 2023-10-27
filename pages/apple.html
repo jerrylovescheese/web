@@ -55,6 +55,7 @@
             border-top: solid 1px black;
             border-bottom: solid 1px black;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0 auto;
         }
 
         td {
@@ -72,6 +73,19 @@
             overflow-x: scroll;
             overflow-y: hidden;
             border-radius: 15px;
+        }
+
+        .event-on-focus {
+            box-shadow: 0px 10px 20px rgb(61, 130, 247);
+            border-radius: 15px;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .event-on-focus:hover {
+            box-shadow: none;
+            border-top: solid 1px black;
+            border-radius: unset;
         }
     </style>
 </head>
@@ -130,7 +144,18 @@
                     <td rowspan="3">2023</td>
                     <td>October 30</td>
                     <td>Scary fast.</td>
-                    <td><a href="https://www.apple.com/events"><i>Pending</i></a></td>
+                    <td class="event-on-focus">
+                        <i>Pending</i><br>
+                        <b>
+                            Starts in
+                            <div id="remainTime">
+                                <span id="one"></span> d
+                                <span id="two"></span> hr
+                                <span id="three"></span> min
+                                <span id="four"></span> sec
+                            </div>
+                        </b>
+                    </td>
                     <td>This will be the first time Apple host a special event at night. <br>这是 Apple 历史上第一次在下午举行特别活动。
                     </td>
                 </tr>
@@ -197,6 +222,7 @@
                         macOS 13 Ventura<br>
                         watchOS 9 <br>
                     </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>March 8</td>
@@ -208,6 +234,7 @@
                         Mac Studio <br>
                         Studio Display <br>
                     </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td rowspan="4">2021</td>
@@ -221,6 +248,7 @@
                         14-inch MacBook Pro <br>
                         16-inch MacBook Pro <br>
                     </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>September 14</td>
@@ -234,6 +262,7 @@
                         iPhone 13 Pro<br>
                         iPhone 13 Pro Max<br>
                     </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>June 7</td>
@@ -247,6 +276,7 @@
                     </td>
                     <td>Arguably the most boring WWDC in the history of WWDC. This is also the first time I stayed up
                         late to watch the livestream.</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>March 20</td>
@@ -271,6 +301,7 @@
                         Mac mini with M1 <br>
                     </td>
                     <td>The first Apple Silicon for Mac. <br>Apple 首次推出为 Mac 自研的芯片。</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>October 13</td>
@@ -856,6 +887,56 @@
 	text-align: center;">版权所有 © 2019-2023 aluminum.studio <a id="my-page"
             href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">江源工作室</a></p>
     <br><br><br><br>
+    <script type="text/javascript">
+        (function show() {
+            //1.设置目的时间
+            var oYear = 2023
+            var oMonth = 9
+            var oDay = 31
+            var oHour = 8
+            var oMinute = 0
+            var oSecond = 0
+            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
+            // console.log(dateFormat(funtureDate))
+            //2.设置定时器
+            setInterval(function () {
+                //3.获取现在的时间
+                var presentDate = new Date();
+                //4.获取时间戳
+                var funtureTime = funtureDate.getTime();
+                var presenTime = presentDate.getTime();
+                //5.获取剩余的时间戳
+                var allTime = funtureTime - presenTime;
+                //6.把毫秒转换为秒
+                var allSecond = parseInt(allTime / 1000);
+                //7.获取剩余多少天
+                var day = size(parseInt(allSecond / 3600 / 24));
+                //8.获取剩余多少小时
+                var hour = size(parseInt(allSecond / 3600 % 24));
+                //9.获取剩余多少分钟
+                var minute = size(parseInt(allSecond / 60 % 60));
+                //10.获取剩余多少秒
+                var second = size(parseInt(allSecond % 60));
+                //11.注入：
+                document.getElementById('one').innerHTML = day;
+                document.getElementById('two').innerHTML = hour;
+                document.getElementById('three').innerHTML = minute;
+                document.getElementById('four').innerHTML = second;
+            }, 1000);
+            //如果数>=10,则在前面补0
+            function size(num) {
+                return num < 10 & num >= 0 ? '0' + num : num;
+            }
+        })()
+        //格式化日期格式 2
+        function dateFormat(data) {
+            var date = new Date(data);
+            var YY = date.getFullYear() + '-';
+            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+            return YY + MM + DD;
+        }
+    </script>
 </body>
 
 </html>
