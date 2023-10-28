@@ -428,16 +428,16 @@ td {
     background-color: #adadad7f;
 }
 
-#remainTime {
+#alt-text {
     display: inline;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Serif SC', serif;
     font-weight: normal;
     font-size: 25px;
     position: relative;
 }
 
 #header {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Serif SC', serif;
     font-weight: bold;
     font-size: 30px;
     transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
