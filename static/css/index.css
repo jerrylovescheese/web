@@ -340,10 +340,7 @@ body::after {
 }
 
 #whatsapp-1 {
-    background-image: url(https://www.apple.com/newsroom/images/2023/10/event/Apple-Fall-event-202310.jpg.branding-large_2x.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: linear-gradient(9deg, rgba(255, 255, 255, 0.4), rgba(30, 103, 250, 0.4), rgba(0, 94, 201, 0.4));
     aspect-ratio: 600/100;
     color: #fff;
     transition: all 0.3s;
@@ -366,6 +363,7 @@ body::after {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    color: #fff;
     border: solid 1px rgb(192, 192, 192);
     padding: 0 !important;
 }
@@ -433,6 +431,7 @@ td {
     font-weight: normal;
     font-size: 25px;
     position: relative;
+    color: #fff;
 }
 
 .home-header {
@@ -442,6 +441,7 @@ td {
     transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
     position: relative;
     top: 0px;
+    color: #fff;
 }
 
 #six-favorite-things {
