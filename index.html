@@ -10,9 +10,8 @@
     <link rel="stylesheet" href="./static/css/style.css">
     <link rel="stylesheet" href="./static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
     <link rel="shortcut icon" href="./Aug-18-2023-Favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/85fad98aba7b0c34791b663ebc88cb42?family=DS-Digital-Bold"
+        rel="stylesheet">
     <link rel="stylesheet" href="./static/css/index.css">
 
 </head>
@@ -24,6 +23,15 @@
     <!-- <p id="dev-pause">网页暂停开放。恢复时间待定。<br>Site is closed. Be back soon.</p> -->
 
     <div id="homeboard"></div>
+
+    <div id="clock-position-wrapper">
+        <div class="clock-uni">
+            <div id="clock-components">
+                <span id="datetime"></span>
+                <div id="digital-clock"> </div>
+            </div>
+        </div>
+    </div>
 
     <div id="class-schedule">
         <table>
@@ -241,16 +249,6 @@
             </div>
         </div>
 
-        <div class="clock-uni">
-            <span id="time" style="font-family: 'Noto Serif SC', serif;">
-            </span>
-            <a id="full-screen-button" href="./pages/clock.html" style="color: black; text-decoration: none;">&emsp;<i
-                    class="fas fa-expand">
-                </i><span class="prompt-box">&emsp;单击此处进入大时钟</span>
-            </a>
-            <div id="time"></div>
-        </div>
-
         <div class="whatsapp" id="whatsapp-2">
             <div class="home-inner">
                 <div class="home-header">
@@ -384,20 +382,66 @@
             href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">江源工作室</a></p>
     <br><br><br><br>
     <script type="text/javascript">
-        function time() {
-            var vWeek, vWeek_s, vDay;
-            vWeek = ["Sun. 日", "Mon. 一", "Tue. 二", "Wed. 三", "Thu. 四", "Fri. 五", "Sat. 六"];
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = (("0" + (dt.getMonth() + 1)).slice(-2)) + "/" + (("0" + dt.getDate()).slice(-2)) + "/" + (dt.getFullYear()) + " ";
+
+        function Time() {
+
+            // Creating object of the Date class
             var date = new Date();
-            year = date.getFullYear();
-            month = date.getMonth() + 1;
-            day = date.getDate();
-            hours = date.getHours();
-            minutes = date.getMinutes();
-            seconds = date.getSeconds();
-            vWeek_s = date.getDay();
-            document.getElementById("time").innerHTML = year + "/" + month + "/" + day + "" + "\t" + hours + ":" + minutes + ":" + seconds + "\t" + vWeek[vWeek_s];
-        };
-        setInterval("time()", 1000);
+
+            // Get current hour
+            var hour = date.getHours();
+            // Get current minute
+            var minute = date.getMinutes();
+            // Get current second
+            var second = date.getSeconds();
+
+            // Variable to store AM / PM
+            var period = "";
+
+            // Assigning AM / PM according to the current hour
+            if (hour >= 12) {
+                period = "PM";
+            } else {
+                period = "AM";
+            }
+
+            // Converting the hour in 12-hour format
+            if (hour == 0) {
+                hour = 12;
+            } else {
+                if (hour > 12) {
+                    hour = hour - 12;
+                }
+            }
+
+            // Updating hour, minute, and second
+            // if they are less than 10
+            hour = update(hour);
+            minute = update(minute);
+            second = update(second);
+
+            // Adding time elements to the div
+            document.getElementById("digital-clock").innerText = hour + ":" + minute + ":" + second + " " + period;
+
+            // Set Timer to 1 sec (1000 ms)
+            setTimeout(Time, 1000);
+        }
+
+        // Function to update time elements if they are less than 10
+        // Append 0 before time elements if they are less than 10
+        function update(t) {
+            if (t < 10) {
+                return "0" + t;
+            }
+            else {
+                return t;
+            }
+        }
+
+        Time();
+
         (function show() {
             //1.设置目的时间
             var oYear = 2023
