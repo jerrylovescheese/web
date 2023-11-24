@@ -80,7 +80,7 @@ body {
     font-size: 100px;
     font-weight: bold;
     color: white;
-    display: none;
+    text-align: center;
 }
 
 .normal-container {
@@ -250,6 +250,7 @@ body {
     text-align: unset;
     padding-left: 20px;
     padding-top: 20px;
+    border-radius: 40px;
 }
 
 #digital-clock {
@@ -413,9 +414,12 @@ body {
 #whatsapp-0 {
     width: 100vw;
     height: 100vh;
-    background-image: url(../img/homeboard.webp);
+    background-color: rgb(190, 52, 85);
     background-position: center;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #whatsapp-1 {
