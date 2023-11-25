@@ -15,10 +15,6 @@
             margin: 0;
         }
 
-        .header {
-            z-index: 21;
-        }
-
         @media (max-width: 425px) {
 
             #dev-cal-1,
@@ -38,15 +34,17 @@
     <include src="./layout/layout.html"></include>
     <script src="../static/js/include.js"></script>
 
-    <div class="header">&emsp;<a href="../index.html"><i class="fas fa-chevron-left"></i>&emsp14;&emsp14;&emsp14;回到上一页</a>
-    </div>
-
-    <div id="quick-links">
-        <b>ON THIS PAGE:</b>
-        &emsp;
-        <span id="quick-link-1" class="quick-link"><a href="#title-0">Beta</a></span>
-        &emsp13;
-        <span id="quick-link-2" class="quick-link"><a href="#title-1">网页更新日志</a></span>
+    <div id="header-unit">
+        <div class="header">&emsp;<a href="../index.html"><i
+                    class="fas fa-chevron-left"></i>&emsp14;&emsp14;&emsp14;回到上一页</a>
+        </div>
+        <div id="quick-links">
+            <b>ON THIS PAGE:</b>
+            &emsp;
+            <span id="quick-link-1" class="quick-link"><a href="#title-0">Beta</a></span>
+            &emsp13;
+            <span id="quick-link-2" class="quick-link"><a href="#title-1">网页更新日志</a></span>
+        </div>
     </div>
 
     <p id="dev-cal-1">开发者和更新日志</p>
