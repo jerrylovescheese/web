@@ -294,7 +294,6 @@ body {
     margin-right: 30px;
     margin-top: 20px;
     padding: 20px;
-    display: none;
 }
 
 .music-recommendation-list {
@@ -559,7 +558,7 @@ td {
     background-color: #fff;
     display: inline-block;
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     transition: all 0.3s;
 }
 
