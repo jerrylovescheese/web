@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>欢迎</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
+    <link rel="shortcut icon" href="../Aug-18-2023-Favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <script src="../static/js/include.js"></script>
+    <include src="../pages/layout/layout_for_index_en.html"></include>
+
+    <!-- <p id="dev-pause">网页暂停开放。恢复时间待定。<br>Site is closed. Be back soon.</p> -->
+
+    <div id="clock-position-wrapper">
+        <div class="clock-uni">
+            <div id="clock-components" tabindex="0">
+                <span id="datetime"></span>
+                <div id="digital-clock"> </div>
+                <!-- <iframe
+                    src="https://free.timeanddate.com/clock/i94hqs67/n33/szw110/szh110/hocfff/hbw0/cf100/hgr0/fas20/facfff/fdi86/mqc000/mqs2/mql3/mqw4/mqd70/mhc000/mhs2/mhl3/mhw4/mhd70/mmv0/hhs3/hms3/hsc00f"
+                    frameborder="0" width="110" height="110"></iframe> -->
+            </div>
+        </div>
+    </div>
+
+    <div id="class-schedule">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="11" style="font-size: larger;">Class Schedule for Year 12 高三课表</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td colspan="2">周一</td>
+                    <td colspan="2">周二</td>
+                    <td colspan="2">周三</td>
+                    <td colspan="2">周四</td>
+                    <td colspan="2">周五</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">8.-9.30</td>
+                    <td id="set-1">线性代数</td>
+                    <td>公用教室1</td>
+                    <td id="set-2">英美文学</td>
+                    <td>公用教室1</td>
+                    <td id="set-3">AP化学</td>
+                    <td>公用教室1</td>
+                    <td id="set-4">AP心理学</td>
+                    <td>公用教室1</td>
+                    <td id="set-5">有机化学</td>
+                    <td>公用教室1</td>
+                </tr>
+                <tr>
+                    <td id="set-1">AP微积分</td>
+                    <td>公用教室2</td>
+                    <td id="set-2">AP语言与写作</td>
+                    <td>公用教室2</td>
+                    <td id="set-3">AP物理C电磁学</td>
+                    <td>公用教室2</td>
+                    <td id="set-4">AP计算机科学A</td>
+                    <td>公用教室2</td>
+                    <td id="set-5">AP物理2</td>
+                    <td>公用教室2</td>
+                </tr>
+                <tr>
+                    <td id="set-1">AP统计学</td>
+                    <td>公用教室3</td>
+                    <td id="set-2">AP英语文学与写作</td>
+                    <td>公用教室3</td>
+                    <td id="set-3">中国文化1</td>
+                    <td>公用教室3</td>
+                    <td id="set-4">中国文化2</td>
+                    <td>公用教室3</td>
+                    <td id="set-5">仪器分析工程实践</td>
+                    <td>公用教室4</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="set-5">中国文化3</td>
+                    <td>公用教室3</td>
+                </tr>
+                <tr>
+                    <td rowspan="1">9.40-10.20</td>
+                    <td colspan="10" style="font-weight: bold;">Phys Ed 体育</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">10.30-12.</td>
+                    <td id="set-4">AP心理学</td>
+                    <td>公用教室1</td>
+                    <td id="set-1">线性代数</td>
+                    <td>公用教室1</td>
+                    <td id="set-5">有机化学</td>
+                    <td>公用教室1</td>
+                    <td id="set-3">AP化学</td>
+                    <td>公用教室1</td>
+                    <td id="set-2">英美文学</td>
+                    <td>公用教室1</td>
+                </tr>
+                <tr>
+                    <td id="set-4">AP计算机科学A</td>
+                    <td>公用教室2</td>
+                    <td id="set-1">AP微积分</td>
+                    <td>公用教室2</td>
+                    <td id="set-5">AP物理2</td>
+                    <td>公用教室2</td>
+                    <td id="set-3">AP物理C电磁学</td>
+                    <td>公用教室2</td>
+                    <td id="set-2">AP语言与写作</td>
+                    <td>公用教室2</td>
+                </tr>
+                <tr>
+                    <td id="set-4">中国文化2</td>
+                    <td>公用教室3</td>
+                    <td id="set-1">AP统计学</td>
+                    <td>公用教室3</td>
+                    <td id="set-5">仪器分析工程实践</td>
+                    <td>公用教室4</td>
+                    <td id="set-3">中国文化1</td>
+                    <td>公用教室3</td>
+                    <td id="set-2">AP英语文学与写作</td>
+                    <td>公用教室3</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="set-5">中国文化3</td>
+                    <td>公用教室3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>12.-1.</td>
+                    <td colspan="10">Lunch 午餐</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">1.-2.30</td>
+                    <td id="set-2">英美文学</td>
+                    <td>公用教室1</td>
+                    <td id="set-3">AP化学</td>
+                    <td>公用教室1</td>
+                    <td id="set-4">AP心理学</td>
+                    <td>公用教室1</td>
+                    <td id="set-5">有机化学</td>
+                    <td>公用教室1</td>
+                    <td id="set-1">线性代数</td>
+                    <td>公用教室1</td>
+                </tr>
+                <tr>
+                    <td id="set-2">AP语言与写作</td>
+                    <td>公用教室2</td>
+                    <td id="set-3">AP物理C电磁学</td>
+                    <td>公用教室2</td>
+                    <td id="set-4">AP计算机科学A</td>
+                    <td>公用教室2</td>
+                    <td id="set-5">AP物理2</td>
+                    <td>公用教室2</td>
+                    <td id="set-1">AP微积分</td>
+                    <td>公用教室2</td>
+                </tr>
+                <tr>
+                    <td id="set-2">AP英语文学与写作</td>
+                    <td>公用教室3</td>
+                    <td id="set-3">艺术1</td>
+                    <td>公用教室3</td>
+                    <td id="set-4">艺术2</td>
+                    <td>公用教室3</td>
+                    <td id="set-5">仪器分析工程实践</td>
+                    <td>公用教室4</td>
+                    <td id="set-1">AP统计学</td>
+                    <td>公用教室3</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="set-5">艺术3</td>
+                    <td>公用教室3</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td rowspan="3">2.40-4.10</td>
+                    <td id="set-1">West Culture</td>
+                    <td>公用教室1</td>
+                    <td id="set-2">实用英语写作</td>
+                    <td>公用教室2</td>
+                    <td id="set-3">实用英语口语</td>
+                    <td>公用教室3</td>
+                    <td id="set-4">希腊神话</td>
+                    <td>公用教室1</td>
+                </tr>
+                <tr>
+                    <td id="set-1">法语基础</td>
+                    <td>公用教室2</td>
+                    <td id="set-2">苏轼诗词赏析</td>
+                    <td>公用教室3</td>
+                    <td id="set-3">烹饪3</td>
+                    <td>食堂</td>
+                    <td id="set-4">多元微积分</td>
+                    <td>公用教室2</td>
+                </tr>
+                <tr>
+                    <td id="set-1">烹饪1</td>
+                    <td>食堂</td>
+                    <td id="set-2">烹饪2</td>
+                    <td>食堂</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="normal-container">
+        <div id="homeboard">
+            <div id="homeboard-text">
+                The ideal internet.<br><a href="https://jerryly.top/en/index-en.html">jerryly.top</a>.<br>
+                <span id="homeboard-text-small">网上冲浪的绝佳去处</span>
+            </div>
+        </div>
+        <br><br><br><br>
+        <!-- <div class="marquee">
+            <p>《1989 (Taylor's Version)》闪亮登场！
+            </p>
+        </div> -->
+
+        <div class="warning"><span style="font-weight: bold; color: #825900;"><i
+                    class="fas fa-warning"></i>&emsp;Alert</span>&emsp;&emsp;This website is static. <a
+                href="https://www.wix.com/blog/static-vs-dynamic-website">Learn more.</a></div>
+
+        <div class="widgets">
+
+            <div class="survey"><i class="fas fa-paper-plane"></i>&emsp;<a href="../pages/survey.html">填问卷 <span
+                        style="text-align: right;"><i class="fas fa-chevron-right"></i></span></a>
+            </div>
+
+            <div class="promote-account"><a href="../pages/official_account.html"><i
+                        class="fas fa-newspaper"></i>&emsp;我的公众号
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+
+            <div class="countdown-uni"><a href="../pages/clock.html" style="text-decoration: none;">
+                    <span style="color: #d1d6d0;"><i class="fas fa-clock"></i>&emsp;距离《1989 (Taylor's Version)》发布还有 <i
+                            class="fas fa-chevron-right"></i></span>
+                </a>
+            </div>
+
+            <div class="music-recommendation-list">
+                <a href="../pages/music.html" style="color: #ffffff;"><i class="fas fa-headphones"></i>&emsp;听点啥好？
+                    前往新的音乐页面
+                    <i class="fas fa-chevron-right"></i></a><br>
+                <!-- <div id="music-list-details"><span style="font-size: 16px;
+            font-weight: normal;"><br>My picks:</span>
+                <span>
+                    <ol>
+                        <li>Cruel Summer - Taylor Swift</li>
+                        <li>Perfect Places - Lorde</li>
+                        <li>august - Taylor Swift</li>
+                        <li>What Was I Made For? - Billie Eilish</li>
+                    </ol>
+                </span>
+            </div> -->
+            </div>
+        </div>
+
+        <div class="favorites">
+            <div id="six-favorite-things">
+                My six favorite things
+            </div>
+            <div class="favorite-things" id="apple">Apple
+                <a href="../pages/apple.html">
+                    <div class="go-button" id="go-button-1"><i class="fas fa-arrow-right"></i></div>
+                </a>
+            </div>
+            <div class="favorite-things" id="taylor">Taylor Swift
+                <a href="../pages/taylorswift.html">
+                    <div class="go-button" id="go-button-2"><i class="fas fa-arrow-right"></i></div>
+                </a>
+            </div>
+            <div class="favorite-things" id="friends"><i>Friends</i>
+                <a href="../pages/friends.html">
+                    <div class="go-button" id="go-button-3"><i class="fas fa-arrow-right"></i></div>
+                </a>
+            </div>
+            <div class="favorite-things" id="lalaland">La La Land
+                <a href="https://www.imdb.com/title/tt3783958/">
+                    <div class="go-button" id="go-button-4"><i class="fas fa-arrow-right"></i></div>
+                </a>
+            </div>
+            <div class="favorite-things" id="food">Food
+                <div class="go-button" id="go-button-5"><i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="favorite-things" id="uiuxdesign">UI Design
+                <a href="https://developer.apple.com/design/human-interface-guidelines/">
+                    <div class="go-button" id="go-button-6"><i class="fas fa-arrow-right"></i></div>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <p id="home-1" style="margin-top: 0;"><a href="https://jerryly.top/en/index-en.html">jerryly.top</a>, The
+                ideal internet.</p>
+            <p id="home-2">A website that sounds new, looks different, and feels intuitive. Made by Jiangyuan (Jerry)
+                Li.</p>
+            <p id="home-1">View Release Notes</p>
+            <p id="home-2">View <a style="color: rgb(85, 164, 255);" href="../pages/develop.html">Release Notes and
+                    developer's log</a>.</p>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <p style="
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 15px;
+	font-weight: bolder;
+	text-align: center;">Copyright © 2019-2023 <a id="my-page"
+            href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">al.studio</a></p>
+    <br><br><br><br>
+    <script type="text/javascript">
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = (("0" + (dt.getMonth() + 1)).slice(-2)) + "/" + (("0" + dt.getDate()).slice(-2)) + "/" + (dt.getFullYear()) + " ";
+
+        function Time() {
+
+            // Creating object of the Date class
+            var date = new Date();
+
+            // Get current hour
+            var hour = date.getHours();
+            // Get current minute
+            var minute = date.getMinutes();
+            // Get current second
+            var second = date.getSeconds();
+
+            // Variable to store AM / PM
+            var period = "";
+
+            // Assigning AM / PM according to the current hour
+            if (hour >= 12) {
+                period = "PM";
+            } else {
+                period = "AM";
+            }
+
+            // Converting the hour in 12-hour format
+            if (hour == 0) {
+                hour = 12;
+            } else {
+                if (hour > 12) {
+                    hour = hour - 12;
+                }
+            }
+
+            // Updating hour, minute, and second
+            // if they are less than 10
+            hour = update(hour);
+            minute = update(minute);
+            second = update(second);
+
+            // Adding time elements to the div
+            document.getElementById("digital-clock").innerText = hour + ":" + minute + ":" + second + " " + period;
+
+            // Set Timer to 1 sec (1000 ms)
+            setTimeout(Time, 1000);
+        }
+
+        // Function to update time elements if they are less than 10
+        // Append 0 before time elements if they are less than 10
+        function update(t) {
+            if (t < 10) {
+                return "0" + t;
+            }
+            else {
+                return t;
+            }
+        }
+
+        Time();
+
+        (function show() {
+            //1.设置目的时间
+            var oYear = 2023
+            var oMonth = 11
+            var oDay = 24
+            var oHour = 0
+            var oMinute = 0
+            var oSecond = 0
+            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
+            // console.log(dateFormat(funtureDate))
+            //2.设置定时器
+            setInterval(function () {
+                //3.获取现在的时间
+                var presentDate = new Date();
+                //4.获取时间戳
+                var funtureTime = funtureDate.getTime();
+                var presenTime = presentDate.getTime();
+                //5.获取剩余的时间戳
+                var allTime = funtureTime - presenTime;
+                //6.把毫秒转换为秒
+                var allSecond = parseInt(allTime / 1000);
+                //7.获取剩余多少天
+                var day = size(parseInt(allSecond / 3600 / 24));
+                //8.获取剩余多少小时
+                var hour = size(parseInt(allSecond / 3600 % 24));
+                //9.获取剩余多少分钟
+                var minute = size(parseInt(allSecond / 60 % 60));
+                //10.获取剩余多少秒
+                var second = size(parseInt(allSecond % 60));
+                //11.注入：
+                document.getElementById('one').innerHTML = day;
+                document.getElementById('two').innerHTML = hour;
+                document.getElementById('three').innerHTML = minute;
+                document.getElementById('four').innerHTML = second;
+            }, 1000);
+            //如果数>=10,则在前面补0
+            function size(num) {
+                return num < 10 & num >= 0 ? '0' + num : num;
+            }
+        })()
+        //格式化日期格式 2
+        function dateFormat(data) {
+            var date = new Date(data);
+            var YY = date.getFullYear() + '-';
+            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+            return YY + MM + DD;
+        }
+    </script>
+
+
+</body>
+
+</html>
