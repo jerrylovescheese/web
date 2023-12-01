@@ -8,8 +8,9 @@ body::after {
     content: "";
     position: absolute;
     inset: -0.625px;
-    background: linear-gradient(180deg, #b21a32, #e87394, #d9969d);
+    background: linear-gradient(180deg, #b21a32, #d9969d);
     filter: blur(5em);
+    -webkit-filter: blur(5em);
     z-index: -1;
 }
 
@@ -65,7 +66,8 @@ body::after {
         border-color: rgba(255, 255, 255, 0.7) !important;
     }
 
-    #homeboard-text>a {
+    #homeboard-text>a,
+    #homeboard-text-small-2>a {
         color: #fff !important;
     }
 }
@@ -90,8 +92,13 @@ body::after {
     text-align: center;
 }
 
-#homeboard-text-small {
+#homeboard-text-small-1 {
     font-size: 40px;
+}
+
+#homeboard-text-small-2 {
+    font-size: 30px;
+    font-weight: normal;
 }
 
 #event-1 {
@@ -586,10 +593,12 @@ td {
     margin-right: 0px !important;
     border-radius: 5px;
     background-color: #fff;
-    display: inline-block;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .go-button:hover {
