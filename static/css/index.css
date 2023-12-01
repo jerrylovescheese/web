@@ -8,7 +8,7 @@ body::after {
     content: "";
     position: absolute;
     inset: -0.625px;
-    background: linear-gradient(0deg, rgba(255, 148, 33), rgba(28, 141, 255, 0.537), rgba(0, 56, 139, 0.867));
+    background: linear-gradient(180deg, #b21a32, #e87394, #d9969d);
     filter: blur(5em);
     z-index: -1;
 }
@@ -64,6 +64,10 @@ body::after {
         color: black !important;
         border-color: rgba(255, 255, 255, 0.7) !important;
     }
+
+    #homeboard-text>a {
+        color: #fff !important;
+    }
 }
 
 .normal-container {
@@ -79,10 +83,10 @@ body::after {
 }
 
 #homeboard-text {
-    color: black;
-    font-family: 'Space Mono', sans-serif;
+    color: white;
+    font-family: 'Inter', sans-serif;
     font-size: 60px;
-    font-weight: normal;
+    font-weight: bold;
     text-align: center;
 }
 
