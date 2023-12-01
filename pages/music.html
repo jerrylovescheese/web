@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
     <link rel="shortcut icon" href="../Aug-18-2023-Favicon.ico" type="image/x-icon">
     <style>
+        body::after {
+            content: "";
+            position: absolute;
+            inset: -0.625px;
+            background: linear-gradient(180deg, #b21a32, #d9969d);
+            filter: blur(5em);
+            -webkit-filter: blur(5em);
+            z-index: -1;
+        }
+
         .music-song-title {
             margin-left: 120px;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -63,58 +73,14 @@
     <p id="dev-cal-1">音乐</p>
     <p id="update">这个页面上一次更新于2023年10月23日</p>
     <br>
-    <p class="subtitle">热门播放列表</p>
+    <p class="subtitle">圣诞列表</p>
     <ol>
-        <li class="music-song-title" id="1">Used To Be Young, 国际流行</li>
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175"
-            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/cn/album/used-to-be-young/1702776418?i=1702776420"></iframe>
-        <li class="music-song-title" id="1">Cruel Summer, 国际流行</li>
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175"
-            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/cn/album/cruel-summer/1468058165?i=1468058171"></iframe>
-        <li class="music-song-title" id="1">Last Night, 乡村</li>
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175"
-            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/cn/album/last-night/1667990565?i=1667990774"></iframe>
-        <li class="music-song-title" id="1">Dance The Night, 舞曲/流行</li>
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175"
-            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/cn/album/dance-the-night/1689238301?i=1689238922"></iframe>
-        <li class="music-song-title" id="1">Flowers, 国际流行</li>
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175"
-            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/cn/album/flowers/1663973555?i=1663973562"></iframe>
-        <li class="music-song-title" id="1">What Was I Made For? , 国际流行</li>
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175"
-            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/cn/album/what-was-i-made-for-from-the-motion-picture-barbie/1696819852?i=1696819855"></iframe>
-        <li class="music-song-title" id="1">Anti-Hero, 国际流行</li>
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175"
-            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/cn/album/anti-hero/1689089710?i=1689090227"></iframe>
-        <li class="music-song-title" id="1">New Romantics, 国际流行</li>
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175"
-            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/cn/album/new-romantics/1445881848?i=1445882771"></iframe>
-        <li class="music-song-title" id="1">Blank Space, 国际流行</li>
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175"
-            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/cn/album/blank-space/1445881848?i=1445882174"></iframe>
-        <li class="music-song-title" id="1">Style, 国际流行</li>
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175"
-            style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/cn/album/style/1445881848?i=1445882179"></iframe>
+        <li class="music-song-title" id="1">All I Want for Christmas Is You</li>
+        <li class="music-song-title" id="2">Rockin' Around the Christmas Tree</li>
+        <li class="music-song-title" id="3">Last Christmas</li>
+        <li class="music-song-title" id="4">Santa Tell Me</li>
+        <li class="music-song-title" id="5">Santa, Can't You Hear Me</li>
+        <li class="music-song-title" id="6">Underneath the Tree</li>
     </ol>
     <p id="dev-cal-2">想帮忙？有想法或建议？欢迎给<a href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br>
     </p>
