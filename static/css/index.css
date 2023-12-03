@@ -8,10 +8,42 @@ body::after {
     content: "";
     position: absolute;
     inset: -0.625px;
-    background: linear-gradient(180deg, #b21a32, #d9969d);
-    filter: blur(5em);
-    -webkit-filter: blur(5em);
+    animation: gradient-canvas 40s ease-in-out 0s infinite alternate;
     z-index: -1;
+}
+
+@keyframes gradient-canvas {
+    0% {
+        background-color: #9b1b32;
+    }
+
+    14% {
+        background-color: #ff3622;
+    }
+
+    28% {
+        background-color: #e79e47;
+    }
+
+    42% {
+        background-color: #d7bd91;
+    }
+
+    56% {
+        background-color: #dea689;
+    }
+
+    70% {
+        background-color: #7fa257;
+    }
+
+    84% {
+        background-color: #3b5948;
+    }
+
+    100% {
+        background-color: #5f3835;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
