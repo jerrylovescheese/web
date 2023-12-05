@@ -145,7 +145,7 @@ body::after {
     animation: gradient-canvas 40s ease-in-out 0s infinite alternate;
     filter: brightness(0.95);
     position: absolute;
-    bottom: 0;
+    top: 93vh;
 }
 
 #countdown-2024 {
