@@ -110,7 +110,7 @@ body::after {
 
 #homeboard {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,6 +119,8 @@ body::after {
 }
 
 #homeboard-text {
+    height: 80vh;
+    margin-top: 20vh;
     color: white;
     font-family: 'Inter', sans-serif;
     font-size: 60px;
