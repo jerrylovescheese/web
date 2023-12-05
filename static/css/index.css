@@ -93,7 +93,7 @@ body::after {
     }
 
     #clock-components {
-        background-color: rgba(255, 255, 255) !important;
+        background-color: rgba(255, 255, 255, 0.75) !important;
         color: black !important;
         border-color: rgba(255, 255, 255, 0.7) !important;
     }
@@ -141,15 +141,18 @@ body::after {
     width: 100%;
     height: 7vh;
     animation: gradient-canvas 40s ease-in-out 0s infinite alternate;
-    filter: brightness(1.5);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
-    font-size: 2.5vh;
-    font-weight: bold;
-    line-height: 7vh;
-    text-shadow: 0px 5px 10px black;
+    filter: brightness(0.95);
     position: absolute;
     bottom: 0;
+}
+
+#countdown-2024 {
+    font-family: monospace;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 7vh;
+    color: white;
 }
 
 #event-1 {
@@ -214,9 +217,16 @@ body::after {
         font-size: 45px;
     }
 
-    #homeboard-text-small-1,
-    #homeboard-text-small-2 {
+    #homeboard-text-small-1 {
         font-size: 30px;
+    }
+
+    #homeboard-text-small-2 {
+        font-size: 16px;
+    }
+
+    #year-2024 {
+        height: 14vh;
     }
 }
 
@@ -294,16 +304,19 @@ body::after {
 #clock-components {
     width: 264px;
     height: 44px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
     transition: all 0.35s cubic-bezier(0.39, -0.09, 0, 1.13) 0s;
     padding-top: 5px;
     line-height: 44px;
     border-radius: 50px;
     font-family: 'Digital-7 Mono Mono';
     font-size: 24px;
-    background-color: rgba(0, 0, 0);
+    background-color: rgba(86, 86, 86, 0.75);
     color: #ff1c1c;
     text-align: center;
-    border: 2px solid rgba(0, 0, 0, 0.7);
+    border: 4px solid rgba(0, 0, 0, 0.7);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
         0 2px 2px rgba(0, 0, 0, 0.11),
         0 4px 4px rgba(0, 0, 0, 0.11),
@@ -727,14 +740,15 @@ td {
 
 #remainTime {
     display: inline-block;
-    font-weight: normal;
-    font-size: 3vh;
+    font-weight: bold;
+    font-size: 17px;
 }
 
 #one,
 #two,
 #three,
 #four {
+    font-size: 17px;
     display: block;
     background-color: #ffffff2f;
     backdrop-filter: blur(12px);
@@ -747,7 +761,8 @@ td {
     border-radius: 10px;
     border: rgb(255, 255, 255) solid 3px;
     line-height: 40px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    text-align: center;
+    font-family: monospace;
 }
 
 iframe {
