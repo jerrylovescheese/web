@@ -773,9 +773,8 @@ td {
     padding-right: 7px;
     border-radius: 10px;
     border: rgb(255, 255, 255) solid 3px;
-    line-height: 40px;
     text-align: center;
-    font-family: monospace;
+    font-family: 'MonaspaceArgon-Bold', monospace;
 }
 
 iframe {
