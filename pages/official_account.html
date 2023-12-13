@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <title>公众号</title>
+    <title>社交媒体</title>
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
     <link rel="shortcut icon" href="../Aug-18-2023-Favicon.ico" type="image/x-icon">
@@ -18,6 +18,33 @@
                 margin-left: 30px !important;
                 margin-right: 30px !important;
             }
+        }
+
+        .official-account-buttons-bucket {
+            display: flex;
+        }
+
+        .official-account-social-media {
+            border: none;
+            padding: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 15px;
+            margin-right: 15px;
+            font-size: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .official-account-social-media:focus-within {
+            filter: brightness(0.7);
+        }
+
+        #official-account-social-media-twitter {
+            background-color: rgb(76, 158, 234);
+        }
+
+        #official-account-social-media-github {
+            background-color: rgb(46, 46, 46);
         }
     </style>
 </head>
@@ -32,17 +59,33 @@
         </div>
         <div id="quick-links">
             <b>ON THIS PAGE:</b>
-            &emsp;
+            &emsp13;
             欢迎关注我的公众号！
         </div>
     </div>
 
-    <p id="dev-cal-1">公众号</p>
+    <p id="dev-cal-1">社交媒体</p>
     <p id="update">这个页面上一次更新于2023年10月23日</p>
+    <p id="dev-cal-2" class="official-account-buttons-bucket">
+        <button class="official-account-social-media" id="official-account-social-media-twitter">
+            <a href="https://www.twiiter.com/@jerrylovestweet"><span class="official-account-brand-logo">
+                    <i class="fa-brands fa-twitter"></i>
+                </span>
+                &emsp;在 Twitter 上找到我
+            </a>
+        </button>
+        <button class="official-account-social-media" id="official-account-social-media-github">
+            <a href="https://github.com/jerrylovescheese"><span class="official-account-brand-logo">
+                    <i class="fa-brands fa-github"></i>
+                </span>
+                &emsp;在 GitHub 上找到我
+            </a>
+        </button>
+    </p>
+
     <p id="dev-cal-2">扫描下方二维码以关注我的公众号江源圈。<br><br><img src="../static/img/Official Account (Medium).bmp" alt=""
             style="width: 400px; border-radius: 10px;"><br><br>想帮忙？有想法或建议？欢迎给<a
             href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
-
 
     <br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br>

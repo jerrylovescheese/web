@@ -102,6 +102,10 @@ body::after {
     #homeboard-text-small-2>a {
         color: #fff !important;
     }
+
+    .go-button {
+        color: #fff !important;
+    }
 }
 
 .normal-container {
@@ -202,7 +206,7 @@ body::after {
     color: white;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
 
     .widgets,
     .marquee,
@@ -220,8 +224,13 @@ body::after {
         margin-left: 30px !important;
     }
 
+    #homeboard {
+        height: 100vh;
+    }
+
     #homeboard-text {
         font-size: 45px;
+        margin-top: 0;
     }
 
     #homeboard-text-small-1 {
@@ -233,7 +242,14 @@ body::after {
     }
 
     #year-2024 {
-        height: 14vh;
+        height: 15vh;
+        border-radius: 0;
+        position: absolute;
+        bottom: 0;
+    }
+
+    #countdown-2024 {
+        line-height: 35px;
     }
 }
 
@@ -644,27 +660,39 @@ td {
 }
 
 #apple {
-    background-color: #FF00C0;
+    /* background-color: #FF00C0; */
+    border: rgb(245, 193, 158) solid 3px;
+    color: rgb(245, 193, 158);
 }
 
 #taylor {
-    background-color: #9600FF;
+    /* background-color: #9600FF; */
+    border: rgb(245, 193, 158) solid 3px;
+    color: rgb(245, 193, 158);
 }
 
 #friends {
-    background-color: #4900FF;
+    /* background-color: #4900FF; */
+    border: rgb(245, 193, 158) solid 3px;
+    color: rgb(245, 193, 158);
 }
 
 #lalaland {
-    background-color: #00B8FF;
+    /* background-color: #00B8FF; */
+    border: rgb(245, 193, 158) solid 3px;
+    color: rgb(245, 193, 158);
 }
 
 #food {
-    background-color: #00FFF9;
+    /* background-color: #00FFF9; */
+    border: rgb(245, 193, 158) solid 3px;
+    color: rgb(245, 193, 158);
 }
 
 #uiuxdesign {
-    background-color: #00FFA4;
+    /* background-color: #00FFA4; */
+    border: rgb(245, 193, 158) solid 3px;
+    color: rgb(245, 193, 158);
 }
 
 .go-button {
@@ -678,7 +706,8 @@ td {
     margin: 20px;
     margin-right: 0px !important;
     border-radius: 5px;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: rgb(245, 193, 158);
     text-align: center;
     font-size: 40px;
     transition: all 0.3s;
@@ -692,63 +721,75 @@ td {
 }
 
 #go-button-1 {
-    color: #FF00C0;
+    /* color: #FF00C0; */
+    color: black;
 }
 
 #go-button-2 {
-    color: #9600FF;
+    /* color: #9600FF; */
+    color: black;
 }
 
 #go-button-3 {
-    color: #4900FF;
+    /* color: #4900FF; */
+    color: black;
 }
 
 #go-button-4 {
-    color: #00B8FF;
+    /* color: #00B8FF; */
+    color: black;
 }
 
 #go-button-5 {
-    color: #00FFF9;
+    /* color: #00FFF9; */
+    color: black;
 }
 
 #go-button-6 {
-    color: #00FFA4;
+    /* color: #00FFA4; */
+    color: black;
 }
 
 #apple:hover #go-button-1 {
-    background-color: #fff;
-    color: #FF00C0;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
+    /* background-color: #fff; */
+    /* color: #FF00C0; */
+    color: #000;
+    transform: scale(1.15);
 }
 
 #taylor:hover #go-button-2 {
-    background-color: #fff;
-    color: #9600FF;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
+    /* background-color: #fff;
+    color: #9600FF; */
+    color: #000;
+    transform: scale(1.15);
 }
 
 #friends:hover #go-button-3 {
-    background-color: #fff;
-    color: #4900FF;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
+    /* background-color: #fff;
+    color: #4900FF; */
+    color: #000;
+    transform: scale(1.15);
 }
 
 #lalaland:hover #go-button-4 {
-    background-color: #fff;
-    color: #00B8FF;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
+    /* background-color: #fff;
+    color: #00B8FF; */
+    color: #000;
+    transform: scale(1.15);
 }
 
 #food:hover #go-button-5 {
-    background-color: #fff;
-    color: #00FFF9;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
+    /* background-color: #fff;
+    color: #00FFF9; */
+    color: #000;
+    transform: scale(1.15);
 }
 
 #uiuxdesign:hover #go-button-6 {
-    background-color: #fff;
-    color: #00FFA4;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
+    /* background-color: #fff;
+    color: #00FFA4; */
+    color: #000;
+    transform: scale(1.15);
 }
 
 #remainTime {
