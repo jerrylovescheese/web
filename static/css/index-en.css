@@ -85,6 +85,18 @@ body {
     .warning>a {
         color: #000 !important;
     }
+
+    #homeboard {
+        background-color: #595959 !important;
+    }
+
+    #home-slide-en-1 {
+        background-color: #3d3d3d !important;
+    }
+
+    #home-slide-en-2 {
+        background-color: #2e2e2e !important;
+    }
 }
 
 @media(prefers-color-scheme: light) {
