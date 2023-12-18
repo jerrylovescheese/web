@@ -128,7 +128,7 @@ body::after {
 
 #homeboard-text {
     height: 100%;
-    margin-top: 20%;
+    margin-top: 20px;
     color: white;
     font-family: 'Inter', sans-serif;
     font-size: 60px;
@@ -149,7 +149,7 @@ body::after {
 
 #home-float-note {
     width: 100%;
-    height: 15vh;
+    height: 18vh;
     background-image: linear-gradient(45deg, rgba(193, 154, 0, 0.5), rgba(0, 159, 222, 0.5), rgba(206, 0, 34, 0.5));
     z-index: 2;
     display: flex;
@@ -178,7 +178,7 @@ body::after {
     -moz-backdrop-filter: blur(12px);
     filter: brightness(0.95);
     position: absolute;
-    bottom: 10vh;
+    bottom: 12vh;
 }
 
 #countdown-2024 {
