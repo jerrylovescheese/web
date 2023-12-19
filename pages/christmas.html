@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>圣诞 🎄</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
+    <link rel="shortcut icon" href="../Aug-18-2023-Favicon.ico" type="image/x-icon">
+    <style>
+        #christmas-y {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: -webkit-gradient(linear, left top, right top, color-stop(7%, #f26573), color-stop(#ffa15d), color-stop(#FFD493), color-stop(80%, #FFEDBE), to(#FFF7E0));
+            background: -webkit-linear-gradient(left, #f26573 7%, #ffa15d, #FFD493, #FFEDBE 80%, #FFF7E0);
+            background: linear-gradient(90deg, #f26573 7%, #ffa15d, #FFD493, #FFEDBE 80%, #FFF7E0);
+            background-repeat: no-repeat;
+        }
+
+        #christmas-y:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: -webkit-radial-gradient(50% 100%, circle, #D1F0BC 25%, rgba(209, 240, 188, 0) 55%), -webkit-radial-gradient(at bottom left, #FAF9FD 10%, rgba(250, 249, 253, 0) 30%), -webkit-radial-gradient(at bottom right, #FBFEFA 25%, rgba(251, 254, 250, 0) 40%);
+            background: radial-gradient(circle at 50% 100%, #D1F0BC 25%, rgba(209, 240, 188, 0) 55%), radial-gradient(at bottom left, #FAF9FD 10%, rgba(250, 249, 253, 0) 30%), radial-gradient(at bottom right, #FBFEFA 25%, rgba(251, 254, 250, 0) 40%);
+        }
+
+        .christmas-title {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .music-song-title {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 18px;
+            margin-left: 120px;
+            margin-right: 30px;
+            font-weight: bold;
+        }
+
+        .christmas-songs-lyrics {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-size: 18px;
+            margin-left: 120px;
+            margin-right: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #remainTime {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 18px;
+            margin-left: 120px;
+            margin-right: 30px;
+        }
+
+        #one,
+        #two,
+        #three,
+        #four {
+            background-color: #0000002f;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            -moz-backdrop-filter: blur(12px);
+            color: rgb(0, 0, 0);
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 10px;
+            border: rgb(0, 0, 0) solid 3px;
+            line-height: 40px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', monospace !important;
+            font-weight: bold;
+        }
+
+        iframe {
+            margin-left: 120px;
+            margin-right: 30px;
+            border-radius: 15px;
+        }
+
+        @media (max-width: 425px) {
+
+            #dev-cal-1,
+            #update,
+            #dev-cal-2,
+            .music-song-title,
+            .christmas-songs-lyrics,
+            #remainTime,
+            iframe {
+                margin-left: 30px !important;
+                margin-right: 30px !important;
+            }
+
+            #dev-cal-1 {
+                font-size: 70px;
+                margin-top: 125px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <include src="./layout/layout.html"></include>
+    <script src="../static/js/include.js"></script>
+
+    <div id="header-unit">
+        <div class="header">&emsp;<a href="../index.html"><i
+                    class="fas fa-chevron-left"></i>&emsp14;&emsp14;&emsp14;回到上一页</a>
+        </div>
+        <div id="quick-links">
+            <b>ON THIS PAGE:</b>
+            &emsp;
+            <span id="quick-link-1" class="quick-link"><a href="#title-0">百科</a></span>
+            &emsp13;
+            <span id="quick-link-2" class="quick-link"><a href="#title-1">音乐</a></span>
+            &emsp13;
+            <span id="quick-link-2" class="quick-link"><a href="#title-2">SNL</a></span>
+            &emsp13;
+            <span id="quick-link-2" class="quick-link"><a href="#title-3">我和圣诞</a></span>
+        </div>
+    </div>
+
+    <p id="dev-cal-1">Christmas 🎄</p>
+    <p id="update">这个页面上一次更新于2023年12月19日</p>
+
+    <div id="christmas-y"></div>
+
+    <p id="dev-cal-2"><span class="christmas-title" id="title-0">百科</span></p>
+    <div id="remainTime">
+        <div id="one" style="display: inline;"></div> days
+        <div id="two" style="display: inline;"></div> hours
+        <div id="three" style="display: inline;"></div> minutes
+        <div id="four" style="display: inline;"></div> seconds until Christmas 2023!
+    </div>
+    <p id="dev-cal-2"><span class="christmas-title" id="title-1">音乐</span></p>
+    <p id="dev-cal-2">圣诞不能没有音乐，就像西方不能没有耶路撒冷，后面忘了。
+    <ol>
+        <li class="music-song-title" id="1">All I Want for Christmas Is You</li>
+        <div class="christmas-songs-lyrics">
+            I don't want a lot for Christmas<br>
+            There is just one thing I need<br>
+            I don't care about the presents<br>
+            Underneath the Christmas tree<br>
+            <br>
+            I just want you for my own<br>
+            More than you could ever know<br>
+            Make my wish come true<br>
+            All I want for Christmas is you, yeah<br>
+            <br>
+            I don't want a lot for Christmas<br>
+            There is just one thing I need<br>
+            And I don't care about the presents<br>
+            Underneath the Christmas tree<br>
+            <br>
+            I don't need to hang my stocking<br>
+            There upon the fireplace<br>
+            Santa Claus won't make me happy<br>
+            With a toy on Christmas Day<br>
+            <br>
+            I just want you for my own<br>
+            More than you could ever know<br>
+            Make my wish come true<br>
+            All I want for Christmas is you<br>
+            You, baby<br>
+            <br>
+            Oh, I won't ask for much this Christmas<br>
+            I won't even wish for snow<br>
+            And I'm just gonna keep on waiting<br>
+            Underneath the mistletoe<br>
+            <br>
+            I won't make a list and send it<br>
+            To the North Pole for Saint Nick<br>
+            I won't even stay awake to<br>
+            Hear those magic reindeer click<br>
+            <br>
+            'Cause I just want you here tonight<br>
+            Holding on to me so tight<br>
+            What more can I do?<br>
+            Baby, all I want for Christmas is you<br>
+            You, baby<br>
+            <br>
+            Oh, all the lights are shining so brightly everywhere<br>
+            And the sound of children's laughter fills the air<br>
+            <br>
+            And everyone is singing<br>
+            I hear those sleigh bells ringing<br>
+            Santa, won't you bring me the one I really need?<br>
+            Won't you please bring my baby to me?<br>
+            <br>
+            Oh, I don't want a lot for Christmas<br>
+            This is all I'm asking for<br>
+            I just wanna see my baby<br>
+            Standing right outside my door<br>
+            <br>
+            Oh, I just want you for my own<br>
+            More than you could ever know<br>
+            Make my wish come true<br>
+            Baby, all I want for Christmas is you<br>
+            You, baby<br>
+            <br>
+            All I want for Christmas is you, baby <i>[repeat with ad-libs until fade]</i>
+        </div>
+        <li class="music-song-title" id="2">Rockin' Around the Christmas Tree</li>
+        <div class="christmas-songs-lyrics">
+            Rockin' around the Christmas tree<br>
+            At the Christmas party hop<br>
+            Mistletoe hung where you can see<br>
+            Every couple tries to stop<br>
+            <br>
+            Rockin' around the Christmas tree<br>
+            Let the Christmas spirit ring<br>
+            Later we'll have some pumpkin pie<br>
+            And we'll do some caroling<br>
+            <br>
+            You will get a sentimental feeling<br>
+            When you hear<br>
+            Voices singing let's be jolly<br>
+            Deck the halls with boughs of holly<br>
+            <br>
+            Rockin' around the Christmas tree<br>
+            Have a happy holiday<br>
+            Everyone dancing merrily<br>
+            In the new old-fashioned way<br>
+            <br>
+            You will get a sentimental feeling<br>
+            When you hear<br>
+            Voices singing let's be jolly<br>
+            Deck the halls with boughs of holly<br>
+            <br>
+            Rockin' around the Christmas tree<br>
+            Have a happy holiday<br>
+            Everyone dancing merrily<br>
+            In the new old fashioned way
+        </div>
+        <li class="music-song-title" id="3">Last Christmas</li>
+        <div class="christmas-songs-lyrics">
+            Happy Christmas<br>
+            <br>
+            Last Christmas<br>
+            I gave you my heart<br>
+            But the very next day you gave it away<br>
+            This year<br>
+            To save me from tears<br>
+            I'll give it to someone special<br>
+            <br>
+            Last Christmas<br>
+            I gave you my heart<br>
+            But the very next day you gave it away<br>
+            This year<br>
+            To save me from tears<br>
+            I'll give it to someone special<br>
+            <br>
+            Once bitten and twice shy<br>
+            I keep my distance<br>
+            But you still catch my eye<br>
+            Tell me, baby<br>
+            Do you recognize me?<br>
+            Well, it's been a year<br>
+            It doesn't surprise me<br>
+            <br>
+            Merry Christmas<br>
+            <br>
+            I wrapped it up and sent it<br>
+            With a note saying "I love you"<br>
+            I meant it<br>
+            Now I know what a fool I've been<br>
+            But if you kissed me now<br>
+            I know you'd fool me again<br>
+            <br>
+            Last Christmas<br>
+            I gave you my heart<br>
+            But the very next day you gave it away<br>
+            This year<br>
+            To save me from tears<br>
+            I'll give it to someone special<br>
+            <br>
+            Last Christmas<br>
+            I gave you my heart<br>
+            But the very next day you gave it away<br>
+            This year<br>
+            To save me from tears<br>
+            I'll give it to someone special<br>
+            <br>
+            Oh, oh, baby<br>
+            <br>
+            A crowded room<br>
+            Friends with tired eyes<br>
+            I'm hiding from you<br>
+            And your soul of ice<br>
+            My god, I thought you were someone to rely on<br>
+            Me? I guess I was a shoulder to cry on<br>
+            <br>
+            A face on a lover with a fire in his heart<br>
+            A man under cover, but you tore me apart<br>
+            Now I've found a real love. You'll never fool me again<br>
+            <br>
+            Last Christmas<br>
+            I gave you my heart<br>
+            But the very next day you gave it away<br>
+            This year<br>
+            To save me from tears<br>
+            I'll give it to someone special<br>
+            <br>
+            Last Christmas<br>
+            I gave you my heart<br>
+            But the very next day you gave it away<br>
+            This year<br>
+            To save me from tears<br>
+            I'll give it to someone special<br>
+            <br>
+            A face on a lover with a fire in his heart<br>
+            I gave you my heart<br>
+            A man under cover, but you tore him apart<br>
+            Maybe next year I'll give it to someone—<br>
+            I'll give it to someone special<br>
+            <br>
+            Special<br>
+            Someone<br>
+            Someone<br>
+            I'll give it to someone—<br>
+            I'll give it to someone special<br>
+            <br>
+            Who give me something in return<br>
+            I'll give it to someone—<br>
+            Hold my heart and watch it burn<br>
+            I'll give it to someone—<br>
+            <br>
+            I'll give it to someone—<br>
+            I'll give it to someone special<br>
+            <br>
+            I thought you were here to stay<br>
+            How could you love me for a day<br>
+            I thought you were someone special<br>
+            <br>
+            Gave you my heart<br>
+            <br>
+            I'll give it to someone—<br>
+            I'll give it to someone—<br>
+            <br>
+            Last Christmas<br>
+            I gave you my heart<br>
+            You gave it away<br>
+            <br>
+            I'll give it to someone—<br>
+            I'll give it to someone—
+        </div>
+        <li class="music-song-title" id="4">Santa Tell Me</li>
+        <div class="christmas-songs-lyrics">
+            Santa, tell me if you're really there<br>
+            Don't make me fall in love again if he won't be here<br>
+            Next year<br>
+            Santa, tell me if he really cares<br>
+            'Cause I can't give it all away if he won't be here<br>
+            Next year<br>
+            <br>
+            Feeling Christmas all around<br>
+            And I'm tryna play it cool<br>
+            But it's hard to focus when I see him walking 'cross the room<br>
+            "Let It Snow" is blasting out<br>
+            But I won't get in the mood<br>
+            I'm avoiding every mistletoe until I know<br>
+            It's true love that he thinks of<br>
+            So next Christmas<br>
+            I'm not all alone, boy<br>
+            <br>
+            Santa, tell me if you're really there<br>
+            Don't make me fall in love again if he won't be here<br>
+            Next year<br>
+            Santa, tell me if he really cares<br>
+            'Cause I can't give it all away if he won't be here<br>
+            Next year<br>
+            <br>
+            I've been down this road before<br>
+            Fell in love on Christmas night<br>
+            But on New Year's Day I woke up and he wasn't by my side<br>
+            Now I need someone to hold<br>
+            Be my fire in the cold<br>
+            But it's hard to tell if this is just a fling<br>
+            Or if it's true love that he thinks of<br>
+            So next Christmas<br>
+            I'm not all alone, boy<br>
+            <br>
+            Santa, tell me if you're really there<br>
+            Don't make me fall in love again if he won't be here<br>
+            Next year<br>
+            Santa, tell me if he really cares<br>
+            'Cause I can't give it all away if he won't be here<br>
+            Next year<br>
+            <br>
+            Oh, I wanna have him beside me like oh-oh-oh<br>
+            On the 25th by the fireplace, oh-oh-oh<br>
+            But I don't want a new broken heart<br>
+            This year I've got to be smart<br>
+            <br>
+            Oh, baby<br>
+            (Santa tell me)<br>
+            If ya won't be<br>
+            (Santa tell me)<br>
+            If ya won't be here!<br>
+            (Santa tell me)<br>
+            <br>
+            Santa, tell me if you're really there (Santa tell me)<br>
+            (If you're really there)<br>
+            Don't make me fall in love again if he won't be here<br>
+            Next year (He won't be here next year)<br>
+            Santa, tell me if he really cares (Tell me)<br>
+            (Tell me babe)<br>
+            'Cause I can't give it all away if he won't be here<br>
+            Next year (He won't be here next year)<br>
+            <br>
+            Santa, tell me if you're really there (Tell me)<br>
+            (Tell me baby)<br>
+            Don't make me fall in love again if he won't be here<br>
+            Next year (If he won't be, if he won't be here)<br>
+            Santa, tell me if he really cares (Tell me)<br>
+            (Do you care)<br>
+            'Cause I can't give it all away if he won't be here (He won't be here next year)<br>
+            Next year
+        </div>
+        <li class="music-song-title" id="5">Santa, Can't You Hear Me</li>
+        <li class="music-song-title" id="6">Underneath the Tree</li>
+    </ol>
+    </p>
+    <p id="dev-cal-2"><span class="christmas-title" id="title-2">SNL</span></p>
+    <p id="dev-cal-2">
+        今年的圣诞SNL真的太赞了😭Kate主持，monologue Rudolph和Kristen居然回来了，还有相当地狱的交换段子，碧梨的《Have Yourself A Merry Little
+        Christmas》太好听了。
+    </p>
+    <iframe src="//player.bilibili.com/player.html?aid=877486630&bvid=BV1DN4y1b717&cid=1370523355&p=1" scrolling="no"
+        border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <p id="dev-cal-2"><span class="christmas-title" id="title-3">我和圣诞</span></p>
+    <p id="dev-cal-2">
+        我印象中的几次圣诞：<br>第一次是大概一年级吧，住在爷爷奶奶家，然后平安夜醒来之后爸爸让我找礼物。他说，礼物藏在这个房间的某个角落，你需要找到它。过了一会我找到了，是一盒子饼干。那个盒子还挺大的，比较高，然后是圆口的，尽管能记起这些细节但还是想不起来牌子是啥。
+        <br>第二次是在二年级，我们小学给每个人发了一个苹果。很正式的！那个苹果是装在一个漂亮的小盒子里的，以至于我一直不舍得吃。
+        <br>后来，懂的都懂，都没啦😅。
+        <br>上了高一终于才听到圣诞神曲《All I Want For Christmas Is
+        You》。相见恨晚啊！除了中国《恭喜发财》的喜庆欢快，歌曲的旋律真的给人一种暖心的感觉，圣诞节的团聚，相恋，愿望，好像都像小女孩火柴里的世界，成真了。我给爸爸听他也说这比《恭喜发财》好多了。
+        <br>如果你去年这个时候来过这个网站，你应该还记得当时的圣诞庆祝是我在主页放了个小盒子，里面有牛姐牌播放器（bushi
+        <br>那今年就更隆重了，你看，都单弄一个网页出来给圣诞啦。
+    </p>
+
+    <p id="dev-cal-2"><br>想帮忙？有想法或建议？欢迎给<a
+            href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
+
+
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+
+    <p style="
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 15px;
+	font-weight: bolder;
+	text-align: center;">版权所有 © 2019-2023 aluminum.studio <a id="my-page"
+            href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">江源工作室</a></p>
+    <br><br><br><br>
+
+    <script>
+        (function show() {
+            //1.设置目的时间
+            var oYear = 2023
+            var oMonth = 11
+            var oDay = 24
+            var oHour = 0
+            var oMinute = 0
+            var oSecond = 0
+            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
+            // console.log(dateFormat(funtureDate))
+            //2.设置定时器
+            setInterval(function () {
+                //3.获取现在的时间
+                var presentDate = new Date();
+                //4.获取时间戳
+                var funtureTime = funtureDate.getTime();
+                var presenTime = presentDate.getTime();
+                //5.获取剩余的时间戳
+                var allTime = funtureTime - presenTime;
+                //6.把毫秒转换为秒
+                var allSecond = parseInt(allTime / 1000);
+                //7.获取剩余多少天
+                var day = size(parseInt(allSecond / 3600 / 24));
+                //8.获取剩余多少小时
+                var hour = size(parseInt(allSecond / 3600 % 24));
+                //9.获取剩余多少分钟
+                var minute = size(parseInt(allSecond / 60 % 60));
+                //10.获取剩余多少秒
+                var second = size(parseInt(allSecond % 60));
+                //11.注入：
+                document.getElementById('one').innerHTML = day;
+                document.getElementById('two').innerHTML = hour;
+                document.getElementById('three').innerHTML = minute;
+                document.getElementById('four').innerHTML = second;
+            }, 1000);
+            //如果数>=10,则在前面补0
+            function size(num) {
+                return num < 10 & num >= 0 ? '0' + num : num;
+            }
+        })()
+        //格式化日期格式 2
+        function dateFormat(data) {
+            var date = new Date(data);
+            var YY = date.getFullYear() + '-';
+            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+            return YY + MM + DD;
+        }
+    </script>
+</body>
+
+</html>
