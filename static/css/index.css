@@ -424,7 +424,7 @@ body::after {
     margin-top: 100px;
     border-radius: 25px;
     background-color: rgb(230, 230, 230);
-    background-image: url(../img/Jul\ 23\ 2023\ the\ clock\ for\ website_画板\ 1_画板\ 1.png);
+    background-image: url(../img/clock-bg.webp);
     background-position: center;
     background-size: 120%;
     display: flex;
