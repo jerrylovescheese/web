@@ -29,9 +29,21 @@
             <div id="clock-components" tabindex="0">
                 <span id="datetime"></span>
                 <div id="digital-clock"> </div>
-                <!-- <iframe
-                    src="https://free.timeanddate.com/clock/i94hqs67/n33/szw110/szh110/hocfff/hbw0/cf100/hgr0/fas20/facfff/fdi86/mqc000/mqs2/mql3/mqw4/mqd70/mhc000/mhs2/mhl3/mhw4/mhd70/mmv0/hhs3/hms3/hsc00f"
-                    frameborder="0" width="110" height="110"></iframe> -->
+                <div id="real-clock">
+                    <div class="clock-container">
+                        <div class="clock">
+                            <div class="hour">
+                                <div class="hr" id="hr"></div>
+                            </div>
+                            <div class="min">
+                                <div class="mn" id="mn"></div>
+                            </div>
+                            <div class="sec">
+                                <div class="sc" id="sc"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -477,8 +489,7 @@
             return YY + MM + DD;
         }
     </script>
-
-
+    <script src="./static/js/clock-script.js"></script>
 </body>
 
 </html>
