@@ -389,7 +389,7 @@ body::after {
 
 #clock-components:focus {
     width: 500px;
-    height: 300px;
+    height: 290px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     font-size: 35px;
@@ -399,11 +399,122 @@ body::after {
     padding-left: 20px;
     padding-top: 20px;
     border-radius: 40px;
+    position: relative;
+}
+
+#clock-components:focus .clock-container {
+    width: 270px;
+    height: 270px;
 }
 
 #digital-clock {
     display: inline-block;
     width: 140px;
+}
+
+.clock-container {
+    position: absolute;
+    overflow: hidden;
+    right: 20px;
+    bottom: 20px;
+    width: 0px;
+    height: 0px;
+    transition: all 0.2s;
+    margin-left: 140px;
+    margin-top: 100px;
+    border-radius: 25px;
+    background-color: rgb(230, 230, 230);
+    background-image: url(../img/Jul\ 23\ 2023\ the\ clock\ for\ website_画板\ 1_画板\ 1.png);
+    background-position: center;
+    background-size: 120%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.clock::before {
+    content: "";
+    position: absolute;
+    width: 10.8px;
+    height: 10.8px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.hour,
+.min,
+.sec {
+    position: absolute;
+}
+
+.hour,
+.hr {
+    width: 108px;
+    height: 108px;
+}
+
+.min,
+.mn {
+    width: 128.25px;
+    height: 128.25px;
+}
+
+.sec,
+.sc {
+    width: 155.25px;
+    height: 155.25px;
+}
+
+.hr,
+.mn,
+.sc {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr::before {
+    content: "";
+    position: absolute;
+    width: 7.56px;
+    height: 54px;
+    background-color: #000000;
+    box-shadow: 0px 0px 20px grey;
+    border-radius: 12px;
+    z-index: 2;
+}
+
+.mn::before {
+    content: "";
+    position: absolute;
+    width: 5.4px;
+    height: 64.8px;
+    background-color: #000000;
+    box-shadow: 0px 0px 20px grey;
+    border-radius: 12px;
+    z-index: 3;
+}
+
+.sc::before {
+    content: "";
+    position: absolute;
+    width: 4.32px;
+    height: 75.6px;
+    background-color: #000000;
+    box-shadow: 0px 0px 20px grey;
+    border-radius: 12px;
+    z-index: 4;
 }
 
 .warning {
