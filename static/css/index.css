@@ -403,8 +403,7 @@ body::after {
 }
 
 #clock-components:focus .clock-container {
-    width: 270px;
-    height: 270px;
+    scale: 100%;
 }
 
 #digital-clock {
@@ -417,8 +416,8 @@ body::after {
     overflow: hidden;
     right: 20px;
     bottom: 20px;
-    width: 0px;
-    height: 0px;
+    width: 270px;
+    height: 270px;
     transition: all 0.2s;
     margin-left: 140px;
     margin-top: 100px;
@@ -430,6 +429,7 @@ body::after {
     display: flex;
     justify-content: center;
     align-items: center;
+    scale: 0%;
 }
 
 .clock {
