@@ -8,8 +8,45 @@ body::after {
     content: "";
     position: absolute;
     inset: -0.625px;
-    /* animation: gradient-canvas 40s ease-in-out 0s infinite alternate; */
+    animation: gradient-canvas 40s ease-in-out 0s infinite alternate;
     z-index: -1;
+}
+
+.app {
+    animation: welcome-animation-1 0.5s ease-in-out 0s 1;
+}
+
+#toolkit,
+.clock-uni {
+    animation: welcome-animation-2 0.5s ease-in-out 0s 1;
+}
+
+@keyframes welcome-animation-1 {
+    0% {
+        scale: 0%;
+    }
+
+    50% {
+        scale: 90%;
+    }
+
+    100% {
+        scale: 85%;
+    }
+}
+
+@keyframes welcome-animation-2 {
+    0% {
+        scale: 0%;
+    }
+
+    50% {
+        scale: 105%;
+    }
+
+    100% {
+        scale: 100%;
+    }
 }
 
 @keyframes gradient-canvas {
@@ -142,24 +179,23 @@ body::after {
 
 #homeboard-text {
     height: 100%;
-    /* color: white; */
-    font-family: 'Noto Serif SC', serif;
+    color: white;
+    font-family: 'Noto Serif', serif;
     font-size: 100px;
     font-weight: bold;
-    font-weight: bold;
+    font-style: italic;
     text-align: center;
     margin-left: 30px;
     margin-right: 30px;
     display: flex;
     flex-direction: column;
-    letter-spacing: 40px;
     justify-content: center;
     align-items: center;
-    animation: text-color-change 8s ease-in-out 0s infinite alternate;
 }
 
 #homeboard-text-small-1 {
     font-size: 40px;
+    font-style: normal;
 }
 
 #homeboard-text-small-2 {
