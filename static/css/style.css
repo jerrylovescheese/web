@@ -32,7 +32,7 @@
     }
 
     #button-2 {
-        background-image: url(../img/江源工作室\ 白色logo.png) !important;
+        background-image: url(../img/home-button-dark.webp) !important;
     }
 
     .button:focus-within {
@@ -226,7 +226,7 @@ a:hover {
 
 #button-2 {
     background-color: transparent;
-    background-image: url(../img/江源工作室\ 未来logo.png);
+    background-image: url(../img/home-button-light.webp);
     background-size: 43px;
     background-position: 6px;
     background-repeat: no-repeat;
