@@ -13,8 +13,12 @@
     }
 
     #app {
-        background-color: rgba(59, 59, 59, 0.887) !important;
-        border: solid 1px rgba(69, 69, 69, 0.658) !important;
+        background-color: rgba(80, 80, 80, 0.25) !important;
+        border: solid 1px rgba(100, 100, 100, 0.25) !important;
+    }
+
+    #app:focus-within {
+        background-color: rgba(80, 80, 80, 0.85) !important;
     }
 
     #button-2,
@@ -63,6 +67,11 @@
 
     #site-map:focus {
         background-color: rgba(0, 0, 0, 0.45) !important;
+    }
+
+    #toolkit,
+    #site-map {
+        background-color: rgba(80, 80, 80, 0.25) !important;
     }
 
     #toolkit:focus-within {
@@ -221,6 +230,10 @@ a:hover {
     text-align: left;
 }
 
+#hamburger-text {
+    height: 56.25px;
+}
+
 #app:focus-within #hamburger-text {
     width: 275px;
     height: 56.25px;
@@ -261,7 +274,6 @@ a:hover {
 }
 
 .list-container {
-    margin-top: 30px;
     display: flex;
     justify-content: start;
     align-items: start;
