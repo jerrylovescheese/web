@@ -26,34 +26,6 @@
     font-weight: 300;
 }
 
-@keyframes welcome-animation-1 {
-    0% {
-        scale: 0%;
-    }
-
-    50% {
-        scale: 90%;
-    }
-
-    100% {
-        scale: 85%;
-    }
-}
-
-@keyframes welcome-animation-2 {
-    0% {
-        scale: 0%;
-    }
-
-    50% {
-        scale: 105%;
-    }
-
-    100% {
-        scale: 100%;
-    }
-}
-
 @keyframes gradient-canvas {
     0% {
         background-color: #F5C19E;
