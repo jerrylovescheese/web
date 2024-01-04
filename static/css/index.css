@@ -235,15 +235,6 @@ body {
     z-index: -1;
 } */
 
-.app {
-    animation: welcome-animation-1 0.5s ease-in-out 0s 1;
-}
-
-#toolkit,
-.clock-uni {
-    animation: welcome-animation-2 0.5s ease-in-out 0s 1;
-}
-
 .normal-container {
     visibility: visible;
 }
