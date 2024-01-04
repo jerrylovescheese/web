@@ -21,6 +21,13 @@
 }
 
 @font-face {
+    font-family: 'Recursive Sans';
+    src: url(../fonts/RecursiveMonoCslSt-Bold.woff2) format('woff2-variations');
+    src: url(../fonts/RecursiveMonoCslSt-Bold.woff2) format('woff2-variations');
+    font-weight: 300 1000;
+}
+
+@font-face {
     font-family: 'Libre Baskerville';
     src: url(../fonts/Libre-Baskerville.woff) format('woff2-variations');
     font-weight: 300;
@@ -243,12 +250,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 130px;
+    font-size: 330px;
     font-weight: bold;
     text-align: center;
     /* animation: gradient-canvas 10s ease-in-out 0s infinite alternate; */
-    font-family: 'Recursive', Courier, monospace;
-    background-color: #F5C19E;
+    font-family: 'Recursive Sans', Courier, monospace;
+    background-image: linear-gradient(#F5DA9D, #F5CF9D, #F5C19E, #F5B19D, #F5A19D);
     color: #ffffff;
 }
 
