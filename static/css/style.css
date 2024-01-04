@@ -130,6 +130,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 #app {
@@ -355,11 +356,11 @@ a:hover {
     }
 
     50% {
-        scale: 90%;
+        scale: 105%;
     }
 
     100% {
-        scale: 85%;
+        scale: 100%;
     }
 }
 
