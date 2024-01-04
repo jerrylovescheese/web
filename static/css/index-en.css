@@ -425,20 +425,16 @@ body {
     transition: all 0.35s cubic-bezier(0.39, -0.09, 0, 1.13) 0s;
     padding-top: 5px;
     line-height: 44px;
+    text-shadow: 0px 4px 8px rgb(148, 0, 0);
+    color: #ff1c1c;
+    border: 2px solid rgba(255, 255, 255, 1);
     border-radius: 50px;
     font-family: 'Digital-7 Mono Mono';
     font-size: 24px;
-    background-color: rgba(86, 86, 86, 0.75);
-    color: #ff1c1c;
-    text-align: center;
-    border: 4px solid rgba(0, 0, 0, 0.7);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
-        0 2px 2px rgba(0, 0, 0, 0.11),
-        0 4px 4px rgba(0, 0, 0, 0.11),
-        0 8px 8px rgba(0, 0, 0, 0.11),
-        0 16px 16px rgba(0, 0, 0, 0.11),
-        0 32px 32px rgba(0, 0, 0, 0.11);
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #clock-components:focus {
@@ -447,8 +443,18 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     font-size: 35px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgba(86, 86, 86, 0.75);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+        0 2px 2px rgba(0, 0, 0, 0.11),
+        0 4px 4px rgba(0, 0, 0, 0.11),
+        0 8px 8px rgba(0, 0, 0, 0.11),
+        0 16px 16px rgba(0, 0, 0, 0.11),
+        0 32px 32px rgba(0, 0, 0, 0.11);
     display: flex;
     flex-direction: column;
+    justify-content: start;
+    align-items: start;
     text-align: unset;
     padding-left: 20px;
     padding-top: 20px;
@@ -461,7 +467,12 @@ body {
 }
 
 #digital-clock {
+    margin-left: 10px;
     display: inline-block;
+}
+
+#clock-components:focus #digital-clock {
+    margin-left: 0;
     width: 140px;
 }
 
