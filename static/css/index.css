@@ -104,11 +104,8 @@
     }
 
     #clock-components {
-        border-color: rgba(0, 0, 0, 1) !important;
-    }
-
-    #clock-components:focus {
-        background-color: rgba(0, 0, 0, 0.75) !important;
+        background-color: rgba(255, 255, 255, 0.75) !important;
+        border-color: rgba(255, 255, 255, 0.7) !important;
     }
 
     #homeboard-text>a,
@@ -422,6 +419,7 @@ body {
 #clock-components {
     width: 264px;
     height: 44px;
+    background-color: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     -moz-backdrop-filter: blur(12px);
@@ -430,7 +428,7 @@ body {
     line-height: 44px;
     text-shadow: 0px 4px 8px rgb(148, 0, 0);
     color: #ff1c1c;
-    border: 2px solid rgba(255, 255, 255, 1);
+    border: 2px solid rgba(34, 34, 34, 0.7);
     border-radius: 50px;
     font-family: 'Digital-7 Mono Mono';
     font-size: 24px;
