@@ -21,34 +21,6 @@ body {
     animation: welcome-animation-2 0.5s ease-in-out 0s 1;
 }
 
-@keyframes welcome-animation-1 {
-    0% {
-        scale: 0%;
-    }
-
-    50% {
-        scale: 90%;
-    }
-
-    100% {
-        scale: 85%;
-    }
-}
-
-@keyframes welcome-animation-2 {
-    0% {
-        scale: 0%;
-    }
-
-    50% {
-        scale: 105%;
-    }
-
-    100% {
-        scale: 100%;
-    }
-}
-
 @keyframes gradient-canvas {
     0% {
         background-color: #9b1b32;
@@ -143,7 +115,6 @@ body {
 
     #clock-components {
         background-color: rgba(255, 255, 255, 0.75) !important;
-        color: black !important;
         border-color: rgba(255, 255, 255, 0.7) !important;
     }
 
@@ -419,6 +390,7 @@ body {
 #clock-components {
     width: 264px;
     height: 44px;
+    background-color: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     -moz-backdrop-filter: blur(12px);
@@ -427,7 +399,7 @@ body {
     line-height: 44px;
     text-shadow: 0px 4px 8px rgb(148, 0, 0);
     color: #ff1c1c;
-    border: 2px solid rgba(255, 255, 255, 1);
+    border: 2px solid rgba(34, 34, 34, 0.7);
     border-radius: 50px;
     font-family: 'Digital-7 Mono Mono';
     font-size: 24px;
