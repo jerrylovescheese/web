@@ -8,6 +8,7 @@
     <title>圣诞 🎄</title>
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
+    <script src="../static/js/include.js"></script>
     <link rel="shortcut icon" href="../Aug-18-2023-Favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -136,7 +137,6 @@
 
 <body>
     <include src="./layout/layout.html"></include>
-    <script src="../static/js/include.js"></script>
 
     <div id="header-unit">
         <div class="header">&emsp;<a href="../index.html"><i
@@ -498,57 +498,6 @@
 	text-align: center;">版权所有 © 2019-2023 aluminum.studio <a id="my-page"
             href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">江源工作室</a></p>
     <br><br><br><br>
-
-    <script>
-        (function show() {
-            //1.设置目的时间
-            var oYear = 2023
-            var oMonth = 11
-            var oDay = 24
-            var oHour = 0
-            var oMinute = 0
-            var oSecond = 0
-            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
-            // console.log(dateFormat(funtureDate))
-            //2.设置定时器
-            setInterval(function () {
-                //3.获取现在的时间
-                var presentDate = new Date();
-                //4.获取时间戳
-                var funtureTime = funtureDate.getTime();
-                var presenTime = presentDate.getTime();
-                //5.获取剩余的时间戳
-                var allTime = funtureTime - presenTime;
-                //6.把毫秒转换为秒
-                var allSecond = parseInt(allTime / 1000);
-                //7.获取剩余多少天
-                var day = size(parseInt(allSecond / 3600 / 24));
-                //8.获取剩余多少小时
-                var hour = size(parseInt(allSecond / 3600 % 24));
-                //9.获取剩余多少分钟
-                var minute = size(parseInt(allSecond / 60 % 60));
-                //10.获取剩余多少秒
-                var second = size(parseInt(allSecond % 60));
-                //11.注入：
-                document.getElementById('one').innerHTML = day;
-                document.getElementById('two').innerHTML = hour;
-                document.getElementById('three').innerHTML = minute;
-                document.getElementById('four').innerHTML = second;
-            }, 1000);
-            //如果数>=10,则在前面补0
-            function size(num) {
-                return num < 10 & num >= 0 ? '0' + num : num;
-            }
-        })()
-        //格式化日期格式 2
-        function dateFormat(data) {
-            var date = new Date(data);
-            var YY = date.getFullYear() + '-';
-            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
-            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
-            return YY + MM + DD;
-        }
-    </script>
 </body>
 
 </html>
