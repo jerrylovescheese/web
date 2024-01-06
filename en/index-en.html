@@ -10,6 +10,147 @@
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
     <script src="../static/js/include.js"></script>
+    <script type="text/javascript">
+        // When the user scrolls down 50px from the top of the document, resize the header's font size
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("homeboard").style.height = "30vh";
+                document.getElementById("homeboard-text").style.fontSize = "25px";
+                document.getElementById("homeboard-text").style.display = "flex";
+                document.getElementById("homeboard-text").style.flexDirection = "row";
+                document.getElementById("homeboard-text").style.position = "absolute";
+                document.getElementById("homeboard-text").style.fontWeight = "normal";
+                document.getElementById("homeboard-text").style.bottom = "20px";
+                document.getElementById("homeboard-text").style.marginLeft = "120px";
+                document.getElementById("homeboard").style.justifyContent = "unset";
+                document.getElementById("homeboard-text-small-2").style.display = "none";
+                document.getElementById("homeboard-text-small-3").style.marginLeft = "10px";
+            } else {
+                document.getElementById("homeboard").style.height = "100vh";
+                document.getElementById("homeboard-text").style.fontSize = "60px";
+                document.getElementById("homeboard-text").style.display = "flex";
+                document.getElementById("homeboard-text").style.flexDirection = "column";
+                document.getElementById("homeboard-text").style.position = "relative";
+                document.getElementById("homeboard-text").style.fontWeight = "bold";
+                document.getElementById("homeboard-text").style.marginLeft = "0px";
+                document.getElementById("homeboard-text").style.bottom = "unset";
+                document.getElementById("homeboard").style.justifyContent = "center";
+                document.getElementById("homeboard-text-small-2").style.display = "inline";
+                document.getElementById("homeboard-text-small-3").style.marginLeft = "0px";
+            }
+        }
+
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = (("0" + (dt.getMonth() + 1)).slice(-2)) + "/" + (("0" + dt.getDate()).slice(-2)) + "/" + (dt.getFullYear()) + " ";
+
+        function Time() {
+
+            // Creating object of the Date class
+            var date = new Date();
+
+            // Get current hour
+            var hour = date.getHours();
+            // Get current minute
+            var minute = date.getMinutes();
+            // Get current second
+            var second = date.getSeconds();
+
+            // Variable to store AM / PM
+            var period = "";
+
+            // Assigning AM / PM according to the current hour
+            if (hour >= 12) {
+                period = "PM";
+            } else {
+                period = "AM";
+            }
+
+            // Converting the hour in 12-hour format
+            if (hour == 0) {
+                hour = 12;
+            } else {
+                if (hour > 12) {
+                    hour = hour - 12;
+                }
+            }
+
+            // Updating hour, minute, and second
+            // if they are less than 10
+            hour = update(hour);
+            minute = update(minute);
+            second = update(second);
+
+            // Adding time elements to the div
+            document.getElementById("digital-clock").innerText = hour + ":" + minute + ":" + second + " " + period;
+
+            // Set Timer to 1 sec (1000 ms)
+            setTimeout(Time, 1000);
+        }
+
+        // Function to update time elements if they are less than 10
+        // Append 0 before time elements if they are less than 10
+        function update(t) {
+            if (t < 10) {
+                return "0" + t;
+            }
+            else {
+                return t;
+            }
+        }
+
+        Time();
+
+        (function show() {
+            //1.设置目的时间
+            var oYear = 2023
+            var oMonth = 11
+            var oDay = 24
+            var oHour = 0
+            var oMinute = 0
+            var oSecond = 0
+            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
+            // console.log(dateFormat(funtureDate))
+            //2.设置定时器
+            setInterval(function () {
+                //3.获取现在的时间
+                var presentDate = new Date();
+                //4.获取时间戳
+                var funtureTime = funtureDate.getTime();
+                var presenTime = presentDate.getTime();
+                //5.获取剩余的时间戳
+                var allTime = funtureTime - presenTime;
+                //6.把毫秒转换为秒
+                var allSecond = parseInt(allTime / 1000);
+                //7.获取剩余多少天
+                var day = size(parseInt(allSecond / 3600 / 24));
+                //8.获取剩余多少小时
+                var hour = size(parseInt(allSecond / 3600 % 24));
+                //9.获取剩余多少分钟
+                var minute = size(parseInt(allSecond / 60 % 60));
+                //10.获取剩余多少秒
+                var second = size(parseInt(allSecond % 60));
+                //11.注入：
+                document.getElementById('one').innerHTML = day;
+                document.getElementById('two').innerHTML = hour;
+                document.getElementById('three').innerHTML = minute;
+                document.getElementById('four').innerHTML = second;
+            }, 1000);
+            //如果数>=10,则在前面补0
+            function size(num) {
+                return num < 10 & num >= 0 ? '0' + num : num;
+            }
+        })()
+        //格式化日期格式 2
+        function dateFormat(data) {
+            var date = new Date(data);
+            var YY = date.getFullYear() + '-';
+            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+            return YY + MM + DD;
+        }
+    </script>
+    <script src="../static/js/clock-script.js"></script>
     <link rel="shortcut icon" href="../Aug-18-2023-Favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../static/css/index-en.css">
     <link rel="preconnect" href="https://rsms.me/">
@@ -167,147 +308,6 @@
 	text-align: center;">Copyright © 2019-2023 <a id="my-page"
             href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">al.studio</a></p>
     <br><br><br><br>
-    <script type="text/javascript">
-        // When the user scrolls down 50px from the top of the document, resize the header's font size
-        window.onscroll = function () { scrollFunction() };
-        function scrollFunction() {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                document.getElementById("homeboard").style.height = "30vh";
-                document.getElementById("homeboard-text").style.fontSize = "25px";
-                document.getElementById("homeboard-text").style.display = "flex";
-                document.getElementById("homeboard-text").style.flexDirection = "row";
-                document.getElementById("homeboard-text").style.position = "absolute";
-                document.getElementById("homeboard-text").style.fontWeight = "normal";
-                document.getElementById("homeboard-text").style.bottom = "20px";
-                document.getElementById("homeboard-text").style.marginLeft = "120px";
-                document.getElementById("homeboard").style.justifyContent = "unset";
-                document.getElementById("homeboard-text-small-2").style.display = "none";
-                document.getElementById("homeboard-text-small-3").style.marginLeft = "10px";
-            } else {
-                document.getElementById("homeboard").style.height = "100vh";
-                document.getElementById("homeboard-text").style.fontSize = "60px";
-                document.getElementById("homeboard-text").style.display = "flex";
-                document.getElementById("homeboard-text").style.flexDirection = "column";
-                document.getElementById("homeboard-text").style.position = "relative";
-                document.getElementById("homeboard-text").style.fontWeight = "bold";
-                document.getElementById("homeboard-text").style.marginLeft = "0px";
-                document.getElementById("homeboard-text").style.bottom = "unset";
-                document.getElementById("homeboard").style.justifyContent = "center";
-                document.getElementById("homeboard-text-small-2").style.display = "inline";
-                document.getElementById("homeboard-text-small-3").style.marginLeft = "0px";
-            }
-        }
-
-        var dt = new Date();
-        document.getElementById("datetime").innerHTML = (("0" + (dt.getMonth() + 1)).slice(-2)) + "/" + (("0" + dt.getDate()).slice(-2)) + "/" + (dt.getFullYear()) + " ";
-
-        function Time() {
-
-            // Creating object of the Date class
-            var date = new Date();
-
-            // Get current hour
-            var hour = date.getHours();
-            // Get current minute
-            var minute = date.getMinutes();
-            // Get current second
-            var second = date.getSeconds();
-
-            // Variable to store AM / PM
-            var period = "";
-
-            // Assigning AM / PM according to the current hour
-            if (hour >= 12) {
-                period = "PM";
-            } else {
-                period = "AM";
-            }
-
-            // Converting the hour in 12-hour format
-            if (hour == 0) {
-                hour = 12;
-            } else {
-                if (hour > 12) {
-                    hour = hour - 12;
-                }
-            }
-
-            // Updating hour, minute, and second
-            // if they are less than 10
-            hour = update(hour);
-            minute = update(minute);
-            second = update(second);
-
-            // Adding time elements to the div
-            document.getElementById("digital-clock").innerText = hour + ":" + minute + ":" + second + " " + period;
-
-            // Set Timer to 1 sec (1000 ms)
-            setTimeout(Time, 1000);
-        }
-
-        // Function to update time elements if they are less than 10
-        // Append 0 before time elements if they are less than 10
-        function update(t) {
-            if (t < 10) {
-                return "0" + t;
-            }
-            else {
-                return t;
-            }
-        }
-
-        Time();
-
-        (function show() {
-            //1.设置目的时间
-            var oYear = 2023
-            var oMonth = 11
-            var oDay = 24
-            var oHour = 0
-            var oMinute = 0
-            var oSecond = 0
-            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
-            // console.log(dateFormat(funtureDate))
-            //2.设置定时器
-            setInterval(function () {
-                //3.获取现在的时间
-                var presentDate = new Date();
-                //4.获取时间戳
-                var funtureTime = funtureDate.getTime();
-                var presenTime = presentDate.getTime();
-                //5.获取剩余的时间戳
-                var allTime = funtureTime - presenTime;
-                //6.把毫秒转换为秒
-                var allSecond = parseInt(allTime / 1000);
-                //7.获取剩余多少天
-                var day = size(parseInt(allSecond / 3600 / 24));
-                //8.获取剩余多少小时
-                var hour = size(parseInt(allSecond / 3600 % 24));
-                //9.获取剩余多少分钟
-                var minute = size(parseInt(allSecond / 60 % 60));
-                //10.获取剩余多少秒
-                var second = size(parseInt(allSecond % 60));
-                //11.注入：
-                document.getElementById('one').innerHTML = day;
-                document.getElementById('two').innerHTML = hour;
-                document.getElementById('three').innerHTML = minute;
-                document.getElementById('four').innerHTML = second;
-            }, 1000);
-            //如果数>=10,则在前面补0
-            function size(num) {
-                return num < 10 & num >= 0 ? '0' + num : num;
-            }
-        })()
-        //格式化日期格式 2
-        function dateFormat(data) {
-            var date = new Date(data);
-            var YY = date.getFullYear() + '-';
-            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
-            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
-            return YY + MM + DD;
-        }
-    </script>
-    <script src="../static/js/clock-script.js"></script>
 </body>
 
 </html>
