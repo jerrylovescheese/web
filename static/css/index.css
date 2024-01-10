@@ -333,7 +333,8 @@ body {
 
 #suspended-notice-text {
     text-align: center;
-    font-size: 70px;
+    font-size: 100px;
+    margin: 10px;
 }
 
 #suspended-notice-info {
