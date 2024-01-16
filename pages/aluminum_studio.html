@@ -21,7 +21,8 @@
             #dev-cal-1,
             #dev-cal-2,
             .box,
-            #update {
+            #update,
+            .box-aluminum-studio {
                 margin-left: 30px !important;
                 margin-right: 30px !important;
             }
@@ -32,14 +33,45 @@
             }
         }
 
+        @media (prefers-color-scheme: dark) {
+            #my-favorite-things {
+                border-top: solid 1px rgb(255, 255, 255) !important;
+                border-bottom: solid 1px rgb(255, 255, 255) !important;
+            }
+
+            th,
+            td {
+                border-bottom: solid 1px rgb(255, 255, 255) !important;
+            }
+        }
+
         .subtitle {
             font-weight: bold;
             font-size: 25px !important;
         }
 
-        #my-favorite-things {
-            margin-left: 120px;
+        .box-aluminum-studio {
+            width: auto;
+            margin-top: 30px;
             margin-right: 30px;
+            border: solid 1px #dddddd;
+            margin-left: 120px;
+            padding: 30px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            border-radius: 15px;
+        }
+
+        #box-aluminum-studio-2 {
+            padding: 10px;
+        }
+
+        #box-aluminum-studio-2>p#dev-cal-2 {
+            margin-left: 30px;
+        }
+
+        #my-favorite-things {
+            margin: 0 auto;
             border-top: solid 1px black;
             border-bottom: solid 1px black;
             font-size: 18px;
@@ -49,7 +81,7 @@
         th,
         td {
             border-bottom: solid 1px black;
-            padding: 3px;
+            padding: 5px;
         }
 
         .halt-label {
@@ -98,128 +130,140 @@
         <br>我是由我的热爱构成的粒子。我和这个世界上其他八十亿个粒子的不同在于我的吸附性很弱。由于共同语言的缺乏和对孤独的习惯，我很容易在见到粒子群后短暂的吸附于其中，随后又脱落，慢速的浮动。
         <br>虽然你看到了<a href="../index.html">主页</a>里我的六大爱好，但一个完整的爱好列表可能会长成这个样子：
     </p>
-    <table id="my-favorite-things">
-        <thead>
-            <tr>
-                <th colspan="2">A complete list of my favorite things - you know, the way Maria sings it</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td rowspan="2">
-                    <b>技术</b>
-                </td>
-                <td>
-                    苹果 Apple
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    交互设计 UX
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="3">
-                    <b>国际流行音乐</b>
-                </td>
-                <td>
-                    Taylor Swift
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Ed Sheeran
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    ...
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="4">
-                    <b>音乐剧</b>
-                </td>
-                <td>
-                    爱乐之城 La La Land
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    雨中曲 Singin' in the Rain
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    音乐之声 The Sound of Music
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    ...
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="3">
-                    <b>喜剧</b>
-                </td>
-                <td>
-                    相声
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    情景喜剧 Sit-coms
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    脱口秀 Stand-ups
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <b>吃的</b>
-                </td>
-                <td>
-                    炒饭
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="2">
-                    <b>大型广播活动</b>
-                </td>
-                <td>
-                    各种晚会
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    美国的部分颁奖典礼
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <p id="dev-cal-2">也向新老朋友们介绍几个劝退标签：
-        <br><br>
-        <span class="halt-label">
-            <i class="fas fa-ban"></i>&emsp;对任何暴力实行一级禁令
-        </span><br>
-        即不接受枪支、非自然流血、大规模灾难与毁坏出现在任何范围内，包括但不限于文艺作品。
-        <br>
-        <span class="halt-label">
-            <i class="fas fa-ban"></i>&emsp;请不要和我讨论电子游戏和动漫
-        </span><br>
-        你会对我的无知感到震撼，因为我没有碰过除了滚动的天空、跳舞的线和钢琴块以外的任何游戏，而六岁起我就对动画片失去兴趣了。（不相信？Wait till you find that 我不会玩植物大战僵尸。）（In case
-        you're nosy, 这与家庭教育毫无关系。是我单纯对虚拟世界不感兴趣。）
-        <br>
-        <span class="halt-label">
-            <i class="fas fa-rainbow"></i>&emsp;支持进步的思潮
-        </span><br>
-        支持平权主义、LGBT权利。
-        <br>
-        <br>好了，不多写了 - GitHub又卡了。
-    </p>
+    <div class="box-aluminum-studio">
+        <table id="my-favorite-things">
+            <thead>
+                <tr>
+                    <th colspan="2">A complete list of my favorite things - you know, the way Maria sings it</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">
+                        <b>技术</b>
+                    </td>
+                    <td>
+                        苹果 Apple
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        交互设计 UX
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="3">
+                        <b>国际流行音乐</b>
+                    </td>
+                    <td>
+                        Taylor Swift
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ed Sheeran
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ...
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="4">
+                        <b>音乐剧</b>
+                    </td>
+                    <td>
+                        爱乐之城 La La Land
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        雨中曲 Singin' in the Rain
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        音乐之声 The Sound of Music
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ...
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="3">
+                        <b>喜剧</b>
+                    </td>
+                    <td>
+                        相声
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        情景喜剧 Sit-coms
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        脱口秀 Stand-ups
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>吃的</b>
+                    </td>
+                    <td>
+                        炒饭
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        <b>大型广播活动</b>
+                    </td>
+                    <td>
+                        各种晚会
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        美国的部分颁奖典礼
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p id="dev-cal-2">也向新老朋友们介绍几个劝退标签：</p>
+
+    <div class="box-aluminum-studio" id="box-aluminum-studio-2">
+        <p id="dev-cal-2">
+            <span class="halt-label">
+                <i class="fas fa-ban"></i>&emsp;对任何暴力实行一级禁令
+            </span><br>
+            即不接受枪支、非自然流血、大规模灾难与毁坏出现在任何范围内，包括但不限于文艺作品。
+        </p>
+    </div>
+    <div class="box-aluminum-studio" id="box-aluminum-studio-2">
+        <p id="dev-cal-2">
+            <span class="halt-label">
+                <i class="fas fa-ban"></i>&emsp;请不要和我讨论电子游戏和动漫
+            </span><br>
+            你会对我的无知感到震撼，因为我没有碰过除了滚动的天空、跳舞的线和钢琴块以外的任何游戏，而六岁起我就对动画片失去兴趣了。（不相信？Wait till you find that 我不会玩植物大战僵尸。）（In case
+            you're nosy, 这与家庭教育毫无关系。是我单纯对虚拟世界不感兴趣。）
+        </p>
+    </div>
+    <div class="box-aluminum-studio" id="box-aluminum-studio-2">
+        <p id="dev-cal-2">
+            <span class="halt-label">
+                <i class="fas fa-rainbow"></i>&emsp;支持进步的思潮
+            </span><br>
+            支持平权主义、LGBT权利。
+        </p>
+    </div>
+
+    <p id="dev-cal-2">好了，不多写了 - GitHub又卡了。</p>
 
     <p id="dev-cal-2" style="font-size: 15px;">想帮忙？有想法或建议？欢迎给<a
             href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br>
