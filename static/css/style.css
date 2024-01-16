@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Source Han Sans';
-    src: url(../fonts/SourceHanSansSC-VF.otf.woff2) format('woff2-variations');
+    src: url(../fonts/Source\ Han\ Sans\ CN\ Regular.woff2) format('woff2-variations');
 }
 
 @media (prefers-color-scheme: dark) {
