@@ -135,8 +135,15 @@ a:hover {
 }
 
 @font-face {
-    font-family: 'Source Han Sans VF';
+    font-family: 'Source Han Sans';
     src: url(../fonts/SourceHanSansCN-Regular-min.woff2) format('woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Source Han Sans';
+    src: url(../fonts/SourceHanSansCN-Bold-min.woff2) format('woff2');
+    font-weight: bold;
 }
 
 #bar-navi {
@@ -222,7 +229,7 @@ a:hover {
     position: relative;
     text-align: center;
     position: relative;
-    font-family: 'Inter', 'Source Han Sans VF', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #button-2,
@@ -286,7 +293,7 @@ a:hover {
     align-items: start;
     overflow-x: hidden;
     overflow-y: scroll;
-    font-family: 'Inter', 'Source Han Sans VF', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #button-1-item-list {
@@ -422,7 +429,7 @@ a:hover {
     -moz-backdrop-filter: blur(12px);
     overflow: hidden;
     transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
-    font-family: 'Inter', 'Source Han Sans VF', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #toolkit:focus-within {
@@ -462,7 +469,7 @@ a:hover {
     color: rgb(0, 0, 0);
     line-height: 40px;
     font-weight: bold;
-    font-family: 'Inter', 'Source Han Sans VF', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -481,7 +488,7 @@ a:hover {
     -webkit-backdrop-filter: blur(12px);
     -moz-backdrop-filter: blur(12px);
     transition: all 0.5s cubic-bezier(1, 0, 0, 1);
-    font-family: 'Inter', 'Source Han Sans VF', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -527,7 +534,7 @@ a:hover {
     -moz-backdrop-filter: blur(12px);
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    font-family: 'Inter', 'Source Han Sans VF', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #close-button-container:hover #close-all {
@@ -560,7 +567,7 @@ a:hover {
 }
 
 #map-title {
-    font-family: 'Inter', 'Source Han Sans VF', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 40px;
     font-weight: bold;
 }
@@ -594,7 +601,7 @@ a:hover {
     -webkit-backdrop-filter: blur(12px);
     -moz-backdrop-filter: blur(12px);
     border: solid 1px #cbcbcb;
-    font-family: 'Source Han Sans VF', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
     font-weight: 600;
     line-height: 35px;
@@ -604,7 +611,7 @@ a:hover {
 }
 
 #dev-cal-1 {
-    font-family: 'Source Han Sans VF', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 90px;
     font-weight: bold;
     margin-left: 120px;
@@ -612,7 +619,7 @@ a:hover {
 }
 
 #dev-cal-2 {
-    font-family: 'Source Han Sans VF', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;
     z-index: -1;
     margin-left: 120px;
@@ -620,7 +627,7 @@ a:hover {
 }
 
 #update {
-    font-family: 'Source Han Sans VF', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 20px;
     color: rgba(0, 0, 0, 0.401);
     margin-left: 120px;
@@ -658,7 +665,7 @@ a:hover {
     line-height: 25px;
     overflow-x: scroll;
     overflow-y: hidden;
-    font-family: 'Source Han Sans VF', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border: 1px solid #cacaca;
     border-top: none;
     backdrop-filter: blur(12px);
@@ -730,13 +737,13 @@ a:hover {
     color: rgb(0, 0, 0);
     line-height: 40px;
     font-weight: bold;
-    font-family: 'Source Han Sans VF', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #copyright-info {
-    font-family: 'Source Han Sans VF', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
     font-weight: bolder;
     text-align: center;
