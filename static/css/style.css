@@ -110,7 +110,7 @@
 
     .loader-wrapper {
         background-color: #141414af !important;
-        color: #fff;
+        color: #fff !important;
     }
 }
 
@@ -655,7 +655,6 @@ a:hover {
     align-items: center;
     color: black;
     font-size: 100px;
-    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 #loader-prompt {
