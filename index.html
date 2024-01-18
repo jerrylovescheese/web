@@ -9,6 +9,7 @@
     <title>欢迎</title>
     <link rel="stylesheet" href="./static/css/style.css">
     <link rel="stylesheet" href="./static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
+    <script src="./static/js/jquery-3.7.1.js"></script>
     <script src="./static/js/include.js"></script>
     <script type="text/javascript">
         (function show() {
@@ -59,6 +60,11 @@
             var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
             return YY + MM + DD;
         }
+    </script>
+    <script>
+        $(window).on("load", function () {
+            $(".loader-wrapper").fadeOut("slow");
+        });
     </script>
     <script src="./static/js/clock-script.js"></script>
     <link rel="shortcut icon" href="./Aug-18-2023-Favicon.ico" type="image/x-icon">
