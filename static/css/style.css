@@ -107,6 +107,11 @@
         border: solid 1px #707070 !important;
         border-top: none !important;
     }
+
+    .loader-wrapper {
+        background-color: #141414af !important;
+        color: #fff;
+    }
 }
 
 html,
@@ -637,16 +642,20 @@ a:hover {
 .loader-wrapper {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: #e9e9e9;
+    background-color: #e9e9e9af;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: black;
     font-size: 100px;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 #loader-prompt {
