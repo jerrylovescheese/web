@@ -656,6 +656,7 @@ a:hover {
     color: black;
     font-size: 100px;
     text-align: center;
+    z-index: 15;
 }
 
 #loader-prompt {
