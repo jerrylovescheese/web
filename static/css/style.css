@@ -53,7 +53,8 @@
     }
 
     #close-all {
-        background-color: rgba(80, 80, 80) !important;
+        background-color: rgba(80, 80, 80, 0.5) !important;
+        border: solid 1px #707070 !important;
     }
 
     #close-all:hover {
@@ -68,6 +69,7 @@
     #toolkit,
     #site-map {
         background-color: rgba(80, 80, 80, 0.25) !important;
+        border: solid 1px #707070 !important;
     }
 
     #toolkit:focus-within {
@@ -423,6 +425,7 @@ a:hover {
     font-size: 17px;
     width: 40px;
     height: 40px;
+    border: 1px solid #cacaca;
     background-color: rgba(237, 237, 237, 0.25);
     border-radius: 30px;
     backdrop-filter: blur(12px);
@@ -483,6 +486,7 @@ a:hover {
     font-size: 17px;
     width: 40px;
     height: 40px;
+    border: 1px solid #cacaca;
     background-color: rgba(237, 237, 237, 0.25);
     border-radius: 30px;
     backdrop-filter: blur(12px);
@@ -528,6 +532,7 @@ a:hover {
     font-size: 20px;
     width: 40px;
     height: 10px;
+    border: 1px solid #cacaca;
     background-color: rgba(237, 237, 237, 0.25);
     border-radius: 30px;
     backdrop-filter: blur(12px);
@@ -590,8 +595,7 @@ a:hover {
     right: 15px;
     left: 105px;
     width: auto;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
+    border-radius: 15px;
     z-index: 1;
 }
 
@@ -607,8 +611,8 @@ a:hover {
     font-weight: 600;
     line-height: 35px;
     padding-left: 0px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 #dev-cal-1 {
@@ -674,8 +678,8 @@ a:hover {
     -webkit-backdrop-filter: blur(12px);
     -moz-backdrop-filter: blur(12px);
     white-space: nowrap;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .quick-link {
