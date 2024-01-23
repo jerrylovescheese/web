@@ -110,6 +110,10 @@
         background-color: #141414af !important;
         color: #fff !important;
     }
+
+    .pages-container {
+        border-color: #575757 !important;
+    }
 }
 
 html,
