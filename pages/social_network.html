@@ -19,7 +19,8 @@
 
             #dev-cal-1,
             #update,
-            #dev-cal-2 {
+            #dev-cal-2,
+            #official-account-img {
                 margin-left: 30px !important;
                 margin-right: 30px !important;
             }
@@ -28,13 +29,30 @@
                 font-size: 70px;
                 margin-top: 125px;
             }
+
+            .button-text {
+                display: none;
+            }
+
+            #official-account-img {
+                width: auto !important;
+            }
+        }
+
+        button {
+            color: #ffffff;
         }
 
         .official-account-buttons-bucket {
             display: flex;
         }
 
+        .official-account-buttons-bucket>a:hover {
+            text-decoration: none;
+        }
+
         .official-account-social-media {
+            height: 60px;
             border: none;
             padding: 5px;
             padding-left: 15px;
@@ -42,19 +60,67 @@
             border-radius: 15px;
             margin-right: 15px;
             font-size: 20px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            transition: all 0.2s;
         }
 
-        .official-account-social-media:focus-within {
-            filter: brightness(0.7);
+        .official-account-social-media:hover {
+            box-shadow: none !important;
+            transform: translateY(3px);
+        }
+
+        .official-account-brand-logo {
+            font-size: 30px;
         }
 
         #official-account-social-media-twitter {
             background-color: rgb(76, 158, 234);
+            border: rgb(155, 196, 235) solid 2px;
+            box-shadow: 0 1px 1px rgba(76, 158, 234, 0.11),
+                0 2px 2px rgba(76, 158, 234, 0.11),
+                0 4px 4px rgba(76, 158, 234, 0.11),
+                0 8px 8px rgba(76, 158, 234, 0.11);
+        }
+
+        #official-account-social-media-facebook {
+            background-color: rgb(24, 119, 242);
+            border: rgb(84, 152, 242) solid 2px;
+            box-shadow: 0 1px 1px rgba(24, 119, 242, 0.11),
+                0 2px 2px rgba(24, 119, 242, 0.11),
+                0 4px 4px rgba(24, 119, 242, 0.11),
+                0 8px 8px rgba(24, 119, 242, 0.11);
         }
 
         #official-account-social-media-github {
             background-color: rgb(46, 46, 46);
+            border: rgb(141, 141, 141) solid 2px;
+            box-shadow: 0 1px 1px rgba(46, 46, 46, 0.11),
+                0 2px 2px rgba(46, 46, 46, 0.11),
+                0 4px 4px rgba(46, 46, 46, 0.11),
+                0 8px 8px rgba(46, 46, 46, 0.11);
+        }
+
+        #official-account-social-media-tiktok {
+            background-color: rgb(46, 46, 46);
+            border: rgb(141, 141, 141) solid 2px;
+            box-shadow: 0 1px 1px rgba(46, 46, 46, 0.11),
+                0 2px 2px rgba(46, 46, 46, 0.11),
+                0 4px 4px rgba(46, 46, 46, 0.11),
+                0 8px 8px rgba(46, 46, 46, 0.11);
+        }
+
+        #official-account-img {
+            width: 400px;
+            height: auto;
+            aspect-ratio: 683/249;
+            margin-left: 120px;
+            margin-right: 30px;
+            border-radius: 15px;
+            background-image: url(../static/img/Official-Account-_Medium_.webp);
+            background-size: cover;
         }
     </style>
 </head>
@@ -73,28 +139,58 @@
         </div>
     </div>
 
-    <p id="dev-cal-1">社交媒体</p>
-    <p id="update">这个页面上一次更新于2023年10月23日</p>
-    <p id="dev-cal-2" class="official-account-buttons-bucket">
-        <button class="official-account-social-media" id="official-account-social-media-twitter">
-            <a href="https://www.twiiter.com/@jerrylovestweet"><span class="official-account-brand-logo">
-                    <i class="fa-brands fa-twitter"></i>
-                </span>
-                &emsp;在 Twitter 上找到我
-            </a>
-        </button>
-        <button class="official-account-social-media" id="official-account-social-media-github">
-            <a href="https://github.com/jerrylovescheese"><span class="official-account-brand-logo">
-                    <i class="fa-brands fa-github"></i>
-                </span>
-                &emsp;在 GitHub 上找到我
-            </a>
-        </button>
-    </p>
+    <div id="glass">
+        <div id="exhibit-1"></div>
+        <div id="exhibit-info"><a href="./aluminum_studio.html"><i class="fas fa-arrow-right"></i>
+                &emsp;前往关于我页面了解更多。</a></div>
+    </div>
 
-    <p id="dev-cal-2">扫描下方二维码以关注我的公众号江源圈。<br><br><img src="../static/img/Official Account (Medium).bmp" alt=""
-            style="width: 400px; border-radius: 10px;"><br><br>想帮忙？有想法或建议？欢迎给<a
-            href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
+    <div id="outside-glass">
+        <p id="dev-cal-1">社交媒体</p>
+        <p id="update">这个页面上一次更新于2023年10月23日</p>
+        <p id="dev-cal-2" class="official-account-buttons-bucket">
+            <a href="https://www.twiiter.com/@jerrylovestweet">
+                <button class="official-account-social-media" id="official-account-social-media-twitter">
+                    <span class="official-account-brand-logo">
+                        <i class="fa-brands fa-twitter"></i>
+                    </span>
+                    <span class="button-text">&emsp;Twitter</span>
+                </button>
+            </a>
+            <a href="https://www.facebook.com/jerrylovescheese3">
+                <button class="official-account-social-media" id="official-account-social-media-facebook">
+                    <span class="official-account-brand-logo">
+                        <i class="fa-brands fa-facebook"></i>
+                    </span>
+                    <span class="button-text">&emsp;Facebook</span>
+                </button>
+            </a>
+            <a href="https://github.com/jerrylovescheese"><button class="official-account-social-media"
+                    id="official-account-social-media-github">
+                    <span class="official-account-brand-logo">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+                    <span class="button-text">&emsp;GitHub</span>
+                </button>
+            </a>
+            <a href="https://www.tiktok.com/@jerrylovescheese3"><button class="official-account-social-media"
+                    id="official-account-social-media-tiktok">
+                    <span class="official-account-brand-logo">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </span>
+                    <span class="button-text">&emsp;TikTok</span>
+                </button>
+            </a>
+        </p>
+
+
+        <p id="dev-cal-2">扫描下方二维码以关注我的公众号江源圈。</p>
+        <div id="official-account-img"></div>
+        <p id="dev-cal-2">
+            想帮忙？有想法或建议？欢迎给
+            <a href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br>
+        </p>
+    </div>
 
     <br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br>
