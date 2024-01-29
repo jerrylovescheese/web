@@ -19,7 +19,8 @@
 
             #dev-cal-1,
             #update,
-            #dev-cal-2 {
+            #dev-cal-2,
+            .image {
                 margin-left: 30px !important;
                 margin-right: 30px !important;
             }
@@ -41,10 +42,44 @@
             background-image: url(../static/img/homemade_giftcard_img_1.webp);
             background-size: cover;
         }
+
+        .image {
+            margin-left: 120px;
+            margin-right: 30px;
+            width: auto;
+            border-radius: 10px;
+            background-size: cover;
+            margin-bottom: 10px;
+        }
+
+        #image-1 {
+            background-image: url(../static/img/Screenshot-2024-01-29-210913.webp);
+            aspect-ratio: 2735/1823;
+        }
+
+        #image-2 {
+            background-image: url(../static/img/Weixin-Image_20240129214221.webp);
+            aspect-ratio: 2735/1823;
+        }
+
+        #image-3 {
+            background-image: url(../static/img/Weixin-Image_20240129214238.webp);
+            aspect-ratio: 2735/1823;
+        }
+
+        #image-4 {
+            background-image: url(../static/img/Weixin-Image_20240129214242.webp);
+            aspect-ratio: 1242/1007;
+        }
     </style>
 </head>
 
 <body>
+    <div class="loader-wrapper">
+        <i class="fa-solid fa-spinner fa-spin"></i>
+        <span id="loader-prompt"><br>准备元素中。<br>Preparing elements.</span>
+    </div>
+
     <include src="./layout/layout.html"></include>
 
     <div id="header-unit">
@@ -57,6 +92,8 @@
             <span id="quick-link-1" class="quick-link"><a href="#title-0">什么是手写祝福</a></span>
             &emsp13;
             <span id="quick-link-2" class="quick-link"><a href="#title-1">今年的发放安排</a></span>
+            &emsp13;
+            <span id="quick-link-2" class="quick-link"><a href="#title-2">往届回顾</a></span>
         </div>
     </div>
 
@@ -79,10 +116,22 @@
             很多时候一个照片发过去，人家会不会打开都是未知。而且每一年工作量都越来越大：从2021年的200人，2022年的300人，2023年的将近400人，到2024年的458人，每一年我都把起始日期往前挪，结果还是会出现大年初一还在写的情况。<br>
             但只要有空，我一定会写 - 我的脑子告诉我，一笔一画地写祝福的时候才叫过年。
         </p>
-        <p id="dev-cal-2"><span class="subtitle" id="title-1">今年的发放安排</span></p>
         <p id="dev-cal-2">
-            敬请期待
+            <span class="subtitle" id="title-1">今年的发放安排</span>
         </p>
+        <ul id="dev-cal-2">
+            <li>1月30日起，部分幸运好友将收到抢鲜版手写祝福</li>
+            <li>1月31日起至2月24日止，将按照姓氏拼音字母顺序进行制作与发放</li>
+            <li>部分好友将收到幸运福袋</li>
+            <li>时间仓促，工作量大，若有疏漏敬请谅解指正</li>
+        </ul>
+        <p id="dev-cal-2">
+            <span class="subtitle" id="title-2">往届回顾</span>
+        </p>
+        <div class="image" id="image-1"></div>
+        <div class="image" id="image-2"></div>
+        <div class="image" id="image-3"></div>
+        <div class="image" id="image-4"></div>
         <p id="dev-cal-2"><br>想帮忙？有想法或建议？欢迎给<a
                 href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
     </div>
