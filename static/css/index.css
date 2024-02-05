@@ -74,12 +74,52 @@
     td {
         border: solid 1px white !important;
     }
+
+    #textbgc-1 {
+        background-color: transparent !important;
+        color: rgb(217, 255, 182);
+    }
+
+    #textbgc-2 {
+        background-color: transparent !important;
+        color: rgb(182, 255, 248);
+    }
+
+    #textbgc-3 {
+        background-color: transparent !important;
+        color: rgb(182, 206, 255);
+    }
+
+    #textbgc-1>#canvas-link-list>li>a {
+        color: rgb(231, 255, 209) !important;
+    }
+
+    #textbgc-2>#canvas-link-list>li>a {
+        color: rgb(207, 255, 250) !important;
+    }
+
+    #textbgc-3>#canvas-link-list>li>a {
+        color: rgb(206, 222, 255) !important;
+    }
 }
 
 @media(prefers-color-scheme: light) {
     #clock-components {
         background-color: rgba(255, 255, 255, 0.75) !important;
         border-color: rgba(255, 255, 255, 0.7) !important;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    #canvas-1-text,
+    #canvas-2-text {
+        line-height: unset !important;
+        font-size: 40px !important;
+    }
+
+    #canvas-3-text {
+        font-size: 80px !important;
     }
 }
 
