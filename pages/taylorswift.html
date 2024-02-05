@@ -25,6 +25,13 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: 'Big Caslon FB';
+            src: url(../static/fonts/BigCaslonFB-Regular.woff2) format('woff2-variations');
+            src: url(../static/fonts/BigCaslonFB-Bold.woff2) format('woff2-variations');
+            font-weight: 300 1000;
+        }
+
         @media (max-width: 425px) {
 
             #dev-cal-1,
@@ -67,6 +74,23 @@
             color: white;
             white-space: nowrap;
             z-index: -1;
+        }
+
+        #ttpd {
+            background-color: #eceae6;
+            color: #000;
+            font-family: 'Big Caslon FB';
+            font-weight: bold;
+            letter-spacing: 2.5px;
+        }
+
+        #ttpd-text {
+            position: absolute;
+            right: 20px;
+            line-height: 60px;
+            letter-spacing: normal;
+            font-weight: normal;
+            font-size: smaller;
         }
 
         #midnights {
@@ -259,6 +283,11 @@
         <div id="taylor-swift-album-list">
             泰勒·斯威夫特专辑列表
         </div>
+        <a href="https://taylorswift.com">
+            <div class="taylor-swift-album" id="ttpd">THE TORTURED POETS DEPARTMENT
+                <span id="ttpd-text">available April 19</span>
+            </div>
+        </a>
         <a href="./subpages/midnights.html">
             <div class="taylor-swift-album" id="midnights">Midnights
                 <div class="go-button" id="go-button-1"><i class="fas fa-arrow-right"></i></div>
