@@ -35,9 +35,14 @@
 
 @font-face {
     font-family: 'Big Caslon FB';
-    src: url(../fonts/BigCaslonFB-Regular.woff2) format('woff2-variations');
-    src: url(../fonts/BigCaslonFB-Bold.woff2) format('woff2-variations');
-    font-weight: 300 1000;
+    src: url(../../static/fonts/BigCaslonFB-Regular.woff2) format('woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Big Caslon FB';
+    src: url(../../static/fonts/BigCaslonFB-Bold.woff2) format('woff2');
+    font-weight: 1000;
 }
 
 @keyframes gradient-canvas {
