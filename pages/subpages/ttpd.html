@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>The Tortured Poets Department</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
+    <script src="../../static/js/jquery-3.7.1.js"></script>
+    <script src="../../static/js/include.js"></script>
+    <script type="text/javascript">
+        (function show() {
+            //1.设置目的时间
+            var oYear = 2024
+            var oMonth = 3
+            var oDay = 19
+            var oHour = 12
+            var oMinute = 0
+            var oSecond = 0
+            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
+            // console.log(dateFormat(funtureDate))
+            //2.设置定时器
+            setInterval(function () {
+                //3.获取现在的时间
+                var presentDate = new Date();
+                //4.获取时间戳
+                var funtureTime = funtureDate.getTime();
+                var presenTime = presentDate.getTime();
+                //5.获取剩余的时间戳
+                var allTime = funtureTime - presenTime;
+                //6.把毫秒转换为秒
+                var allSecond = parseInt(allTime / 1000);
+                //7.获取剩余多少天
+                var day = size(parseInt(allSecond / 3600 / 24));
+                //8.获取剩余多少小时
+                var hour = size(parseInt(allSecond / 3600 % 24));
+                //9.获取剩余多少分钟
+                var minute = size(parseInt(allSecond / 60 % 60));
+                //10.获取剩余多少秒
+                var second = size(parseInt(allSecond % 60));
+                //11.注入：
+                document.getElementById('one').innerHTML = day;
+                document.getElementById('two').innerHTML = hour;
+                document.getElementById('three').innerHTML = minute;
+                document.getElementById('four').innerHTML = second;
+            }, 1000);
+            //如果数>=10,则在前面补0
+            function size(num) {
+                return num < 10 & num >= 0 ? '0' + num : num;
+            }
+        })()
+        //格式化日期格式 2
+        function dateFormat(data) {
+            var date = new Date(data);
+            var YY = date.getFullYear() + '-';
+            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+            return YY + MM + DD;
+        }
+        function time() {
+            var vWeek, vWeek_s, vDay;
+            vWeek = ["Sun. 日", "Mon. 一", "Tue. 二", "Wed. 三", "Thu. 四", "Fri. 五", "Sat. 六"];
+            var date = new Date();
+            year = date.getFullYear();
+            month = date.getMonth() + 1;
+            day = date.getDate();
+            hours = date.getHours();
+            minutes = date.getMinutes();
+            seconds = date.getSeconds();
+            vWeek_s = date.getDay();
+            document.getElementById("time").innerHTML = year + "/" + month + "/" + day + "" + "\t" + hours + ":" + minutes + ":" + seconds + "\t" + vWeek[vWeek_s];
+
+        };
+        setInterval("time()", 1000);
+    </script>
+    <link rel="shortcut icon" href="../../Aug-18-2023-Favicon.ico" type="image/x-icon">
+    <script src="../../static/js/loader.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <style>
+        @font-face {
+            font-family: 'Big Caslon FB';
+            src: url(../../static/fonts/BigCaslonFB-Regular.woff2) format('woff2');
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: 'Big Caslon FB';
+            src: url(../../static/fonts/BigCaslonFB-Bold.woff2) format('woff2');
+            font-weight: 1000;
+        }
+
+        @font-face {
+            font-family: 'Big Caslon FB';
+            src: url(../../static/fonts/BigCaslonFB-Italic.woff2) format('woff2');
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        @media (max-width: 425px) {
+
+            #dev-cal-1,
+            #update,
+            #dev-cal-2,
+            iframe,
+            .pages-container,
+            #en-warn {
+                margin-left: 30px !important;
+                margin-right: 30px !important;
+            }
+
+            #dev-cal-1 {
+                font-size: 70px;
+                margin-top: 125px;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+
+            #subpages-backdrop,
+            .pages-container,
+            #en-warn {
+                background-color: unset !important;
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+
+            #one,
+            #two,
+            #three,
+            #four {
+                border-color: black !important;
+            }
+        }
+
+        @font-face {
+            font-family: 'Recursive';
+            src: url('../../static/fonts/RecursiveMonoLnrSt-Regular.woff2') format('woff2-variations');
+            src: url(../../static/fonts/RecursiveMonoLnrSt-Bold.woff2) format('woff2-variations');
+            font-weight: 300 1000;
+        }
+
+        #subpages-backdrop {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #eceae6;
+            z-index: -1;
+        }
+
+        #glass {
+            background-color: #eceae6;
+        }
+
+        iframe {
+            margin-left: 30px;
+        }
+
+        #dev-cal-1 {
+            font-family: 'Big Caslon FB', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            letter-spacing: 5px;
+            font-size: 70px;
+        }
+
+        #dev-cal-2 {
+            font-family: 'Big Caslon FB', 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 28px;
+        }
+
+        .track-title {
+            font-weight: bold;
+            font-size: 25px !important;
+        }
+
+        #dev-cal-2 {
+            z-index: -1;
+        }
+
+        #en-warn {
+            background-color: #fff;
+        }
+
+        #countdown-1 {
+            margin-left: 30px;
+            margin-right: 30px;
+            font-size: 18px;
+        }
+
+        #remainTime {
+            font-weight: normal;
+            margin: 18px;
+            margin-left: 0;
+            font-family: 'Big Caslon FB', 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #one,
+        #two,
+        #three,
+        #four {
+            display: inline-block;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border: rgb(255, 255, 255) solid 3px;
+            line-height: 30px;
+            font-family: 'Recursive', monospace;
+        }
+
+        .pages-container {
+            padding: 0 !important;
+            background-color: #fff;
+        }
+
+        .pages-container>#dev-cal-2 {
+            margin-left: 30px !important;
+        }
+
+        .image {
+            margin-left: 30px;
+            margin-right: 30px;
+            width: auto;
+            border-radius: 10px;
+            background-size: cover;
+            margin-bottom: 30px;
+        }
+
+        #image-1 {
+            background-image: url(../../static/img/IMG_7163.webp);
+            aspect-ratio: 1/1;
+        }
+
+        #image-2 {
+            background-image: url(../../static/img/IMG_7187.webp);
+            aspect-ratio: 1/1;
+        }
+    </style>
+</head>
+
+<body>
+    <include src="../layout/layout_for_subpages.html"></include>
+
+    <div id="header-unit">
+        <div class="header">&emsp;<a href=""><i class="fas fa-chevron-left"></i>&emsp14;&emsp14;&emsp14;返回上一页</a>
+        </div>
+
+        <div id="quick-links">
+            <b>ON THIS PAGE:</b>
+            &emsp;
+            <span id="quick-link-1" class="quick-link"><a href="#track-0">Release countdown</a></span>
+            &emsp13;
+            <span id="quick-link-2" class="quick-link"><a href="#track-1">News</a></span>
+            &emsp13;
+            &emsp13;
+        </div>
+    </div>
+
+    <div id="glass">
+        <div id="exhibit-info"><a href="https://taylorswift.com"><i class="fas fa-arrow-right"></i>
+                &emsp;For more, visit taylorswift.com</a></div>
+    </div>
+
+    <div id="outside-glass">
+        <p id="dev-cal-1">THE TORTURED POETS DEPARTMENT</p>
+        <p id="update">这个页面上一次更新于2024年2月6日<br><br></p>
+
+        <div id="subpages-backdrop"></div>
+
+        <div id="en-warn">
+            <span id="en-warn-text"><i class="fas fa-warning"></i>&emsp;此网页仅提供英文版本。&emsp;This website is available in
+                English only.</span>
+        </div>
+        <p id="dev-cal-2" class="track-title"><span id="track-0">Release countdown</span></p>
+        <div class="pages-container">
+            <div id="countdown-1">
+                <div id="remainTime">
+                    <div id="one"></div>&emsp13;days&emsp13;
+                    <div id="two"></div>&emsp13;hours&emsp13;
+                    <div id="three"></div>&emsp13;minutes&emsp13;
+                    <div id="four"></div>&emsp13;seconds till <i>The Tortured Poets
+                        Department</i>
+                    releases.
+                </div>
+            </div>
+        </div>
+        <p id="dev-cal-2" class="track-title"><span id="track-1">News & Reactions</span></p>
+        <div class="pages-container">
+            <p id="dev-cal-2">
+                WHAT THE FUCK??? - me when I first saw the announcement on a Bilibili video
+            </p>
+            <blockquote class="twitter-tweet">
+                <p lang="en" dir="ltr">All’s fair in love and poetry... New album THE TORTURED POETS DEPARTMENT. Out
+                    April 19 🤍<a href="https://t.co/WdrCmvLHyA">https://t.co/WdrCmvLHyA</a><br><br>📷: Beth Garrabrant
+                    <a href="https://t.co/CCPhmSZ2UD">pic.twitter.com/CCPhmSZ2UD</a>
+                </p>&mdash; Taylor Swift
+                (@taylorswift13) <a
+                    href="https://twitter.com/taylorswift13/status/1754332182401691704?ref_src=twsrc%5Etfw">February 5,
+                    2024</a>
+            </blockquote>
+            <p id="dev-cal-2">
+                I actually posted my initial reaction -
+            </p>
+            <blockquote class="twitter-tweet">
+                <p lang="en" dir="ltr">WHAT THE FUCK</p>&mdash; Jerry Cyan (@jerrylovestweet) <a
+                    href="https://twitter.com/jerrylovestweet/status/1754332876613816400?ref_src=twsrc%5Etfw">February
+                    5, 2024</a>
+            </blockquote>
+            <blockquote class="twitter-tweet">
+                <p lang="es" dir="ltr">April 19 🤍<a href="https://t.co/WdrCmvLHyA">https://t.co/WdrCmvLHyA</a> <a
+                        href="https://t.co/1qSQqzYgEf">pic.twitter.com/1qSQqzYgEf</a></p>&mdash; Taylor Swift
+                (@taylorswift13) <a
+                    href="https://twitter.com/taylorswift13/status/1754682668149514425?ref_src=twsrc%5Etfw">February 6,
+                    2024</a>
+            </blockquote>
+            <p id="dev-cal-2">and the way she released all the track titles at once... HELP I'M NOT OK
+                <br>I was like girl we've been waiting for <i>Midnights</i> results at the #66thGrammys NOT THIS
+                <br>and who were CLOWNING SO HARD on reputation (Taylor's Version) all this time? ALL OF US?!?!?
+                <br>anyways here are the pictures
+            </p>
+            <div class="image" id="image-1"></div>
+            <div class="image" id="image-2"></div>
+            <p id="dev-cal-2">I'd LOVE to hear news and your reactions!! Send them to me via <a
+                    href="https://twitter.com/jerrylovestweet">Twitter</a>.</p>
+        </div>
+
+        <p id="dev-cal-2"><br>想帮忙？有想法或建议？欢迎给<a
+                href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
+    </div>
+
+
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+
+    <p id="copyright-info">版权所有 © aluminum.studio <a id="my-page"
+            href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">江源工作室</a></p>
+    <br><br><br><br>
+</body>
+
+</html>

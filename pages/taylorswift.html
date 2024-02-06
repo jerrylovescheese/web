@@ -27,9 +27,14 @@
     <style>
         @font-face {
             font-family: 'Big Caslon FB';
-            src: url(../static/fonts/BigCaslonFB-Regular.woff2) format('woff2-variations');
-            src: url(../static/fonts/BigCaslonFB-Bold.woff2) format('woff2-variations');
-            font-weight: 300 1000;
+            src: url(../../static/fonts/BigCaslonFB-Regular.woff2) format('woff2');
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: 'Big Caslon FB';
+            src: url(../../static/fonts/BigCaslonFB-Bold.woff2) format('woff2');
+            font-weight: 1000;
         }
 
         @media (max-width: 425px) {
@@ -37,8 +42,10 @@
             #dev-cal-1,
             #update,
             #dev-cal-2,
+            .pages-container,
             #taylor-swift-album-list,
-            .taylor-swift-album {
+            .taylor-swift-album,
+            #en-warn {
                 margin-left: 30px !important;
                 margin-right: 30px !important;
             }
@@ -47,219 +54,164 @@
                 font-size: 70px;
                 margin-top: 125px;
             }
+
+            .album {
+                width: 250px !important;
+                height: 250px !important;
+            }
+
+            .album-title {
+                font-size: 18px !important;
+            }
         }
 
-        #taylor-swift-album-list {
-            margin-left: 120px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            font-family: 'Noto Serif SC', serif;
-            font-weight: bold;
-            font-size: 30px;
-            z-index: -1;
+        @media (prefers-color-scheme: dark) {
+
+            #pages-backdrop,
+            .pages-container,
+            #en-warn {
+                background-color: unset !important;
+            }
         }
 
-        .taylor-swift-album {
-            position: relative;
-            width: auto;
-            margin-left: 120px;
-            margin-right: 30px;
-            border-radius: 15px;
-            overflow: hidden;
-            font-size: 30px;
-            font-family: "Neue Haas Grotesk Text Pro 55 Roman", sans-serif;
-            text-align: left;
-            padding: 30px;
-            margin-bottom: 20px;
-            color: white;
-            white-space: nowrap;
-            z-index: -1;
-        }
-
-        #ttpd {
+        #pages-backdrop {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
             background-color: #eceae6;
-            color: #000;
-            font-family: 'Big Caslon FB';
+            z-index: -1;
+        }
+
+        .subtitle {
             font-weight: bold;
+            font-size: 25px !important;
+        }
+
+        .breaking {
+            color: #cc0700;
+        }
+
+        .pages-container {
+            padding: 0 !important;
+            background-color: #fff;
+        }
+
+        #en-warn {
+            background-color: #fff;
+        }
+
+        .pages-container>#dev-cal-2 {
+            margin-left: 30px !important;
+        }
+
+        #album-shelf {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .album {
+            width: 300px;
+            height: 300px;
+            aspect-ratio: 1/1;
+            border-radius: 10px;
+            margin-left: 30px;
+            margin-bottom: 30px;
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+                0 2px 2px rgba(0, 0, 0, 0.11),
+                0 4px 4px rgba(0, 0, 0, 0.11),
+                0 8px 8px rgba(0, 0, 0, 0.11);
+            transition: all 0.25s;
+            overflow: hidden;
+        }
+
+        .album:hover {
+            transform: scale(102.5%);
+            background-size: 105%;
+            box-shadow: none;
+        }
+
+        .album:active {
+            transform: scale(97.5%);
+            background-size: 105%;
+            box-shadow: none;
+        }
+
+        #album-11 {
+            background-image: url(../static/img/IMG_7163.webp);
+        }
+
+        #album-10 {
+            background-image: url(../static/img/592x592bb.webp);
+        }
+
+        #album-9 {
+            background-image: url(../static/img/592x592bb\ \(1\).webp);
+        }
+
+        #album-8 {
+            background-image: url(../static/img/592x592bb\ \(2\).webp);
+        }
+
+        #album-7 {
+            background-image: url(../static/img/592x592bb\ \(3\).webp);
+        }
+
+        #album-6 {
+            background-image: url(../static/img/592x592bb\ \(4\).webp);
+        }
+
+        #album-5 {
+            background-image: url(../static/img/592x592bb\ \(5\).webp);
+        }
+
+        #album-4 {
+            background-image: url(../static/img/592x592bb\ \(6\).webp);
+        }
+
+        #album-3 {
+            background-image: url(../static/img/592x592bb\ \(7\).webp);
+        }
+
+        #album-2 {
+            background-image: url(../static/img/592x592bb\ \(8\).webp);
+        }
+
+        #album-1 {
+            background-image: url(../static/img/592x592bb\ \(9\).webp);
+        }
+
+        .album-title {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 32px;
+            font-weight: bold;
+            color: #fff;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            margin-left: 5px;
+            margin-right: 10px;
+            text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        #album-title-11 {
+            font-family: 'Big Caslon FB', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             letter-spacing: 2.5px;
         }
 
-        #ttpd-text {
-            position: absolute;
-            right: 20px;
-            line-height: 60px;
-            letter-spacing: normal;
-            font-weight: normal;
-            font-size: smaller;
+        #album-title-10 {
+            font-family: 'Neue Haas Grotesk Text Pro 55 Roman', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
-        #midnights {
-            background-image: linear-gradient(to right, rgb(94, 108, 141), rgb(137, 168, 186));
-        }
-
-        #evermore {
-            background-image: linear-gradient(to right, rgb(158, 96, 73), rgb(215, 142, 95));
-            font-family: 'IM Fell DW Pica', serif;
+        #album-title-9,
+        #album-title-8 {
+            font-family: 'IM Fell DW Pica', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-style: italic;
-        }
-
-        #folklore {
-            background-image: linear-gradient(to right, rgb(209, 209, 209), rgb(165, 165, 165));
-            font-family: 'IM Fell DW Pica', serif;
-            font-style: italic;
-        }
-
-        #lover {
-            background-image: linear-gradient(to right, rgb(242, 173, 196), rgb(138, 57, 90));
-        }
-
-        #reputation {
-            background-color: #666666;
-        }
-
-        #ts1989 {
-            background-image: linear-gradient(to right, rgb(114, 180, 241), rgb(201, 206, 213));
-        }
-
-        #red {
-            background-color: rgb(207, 59, 71);
-        }
-
-        #speak-now {
-            background-image: linear-gradient(to right, rgb(119, 63, 122), rgb(142, 96, 146));
-        }
-
-        #fearless {
-            background-image: linear-gradient(to left, rgb(226, 171, 75), rgb(90, 63, 36));
-        }
-
-        #taylor-swift {
-            background-image: linear-gradient(to right, rgb(71, 158, 201), rgb(115, 192, 123));
-        }
-
-        .go-button {
-            position: absolute;
-            right: 20px;
-            top: 0 !important;
-            bottom: 0 !important;
-            width: auto;
-            height: auto;
-            aspect-ratio: 1/1;
-            margin: 20px;
-            margin-right: 0px !important;
-            border-radius: 5px;
-            background-color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            font-size: 40px;
-            line-height: 60px;
-            transition: all 0.3s;
-        }
-
-        .go-button:hover {
-            transform: translateX(5px);
-        }
-
-        #go-button-1 {
-            color: rgb(137, 168, 186);
-        }
-
-        #go-button-2 {
-            color: rgb(215, 142, 95);
-        }
-
-        #go-button-3 {
-            color: #7f7f7f;
-        }
-
-        #go-button-4 {
-            color: rgb(138, 57, 90);
-        }
-
-        #go-button-5 {
-            color: #666666;
-        }
-
-        #go-button-6 {
-            color: rgb(201, 206, 213);
-        }
-
-        #go-button-7 {
-            color: rgb(207, 59, 71);
-        }
-
-        #go-button-8 {
-            color: rgb(142, 96, 146);
-        }
-
-        #go-button-9 {
-            color: rgb(226, 171, 75);
-        }
-
-        #go-button-10 {
-            color: rgb(115, 192, 123);
-        }
-
-        #midnights:hover #go-button-1 {
-            background-color: #fff;
-            color: rgb(137, 168, 186);
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
-        }
-
-        #evermore:hover #go-button-2 {
-            background-color: #fff;
-            color: rgb(215, 142, 95);
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
-        }
-
-        #folklore:hover #go-button-3 {
-            background-color: #fff;
-            color: #7f7f7f;
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
-        }
-
-        #lover:hover #go-button-4 {
-            background-color: #fff;
-            color: rgb(138, 57, 90);
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
-        }
-
-        #reputation:hover #go-button-5 {
-            background-color: #fff;
-            color: #666666;
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
-        }
-
-        #ts1989:hover #go-button-6 {
-            background-color: #fff;
-            color: rgb(201, 206, 213);
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
-        }
-
-        #red:hover #go-button-7 {
-            background-color: #fff;
-            color: rgb(207, 59, 71);
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
-        }
-
-        #speak-now:hover #go-button-8 {
-            background-color: #fff;
-            color: rgb(142, 96, 146);
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
-        }
-
-        #fearless:hover #go-button-9 {
-            background-color: #fff;
-            color: rgb(226, 171, 75);
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
-        }
-
-        #taylor-swift:hover #go-button-10 {
-            background-color: #fff;
-            color: rgb(115, 192, 123);
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.631);
         }
     </style>
 </head>
@@ -273,62 +225,85 @@
         </div>
         <div id="quick-links">
             <b>ON THIS PAGE:</b>
-            &emsp; Everything about Taylor Swift
+            &emsp;
+            <span id="quick-link-1" class="quick-link"><a href="#title-0">News</a></span>
+            &emsp13;
+            <span id="quick-link-2" class="quick-link"><a href="#title-1">Albums</a></span>
         </div>
     </div>
 
     <p id="dev-cal-1">Swiftiepedia</p>
-    <p id="update">这个页面上一次更新于2023年10月23日</p>
-    <div class="favorites">
-        <div id="taylor-swift-album-list">
-            泰勒·斯威夫特专辑列表
-        </div>
-        <a href="https://taylorswift.com">
-            <div class="taylor-swift-album" id="ttpd">THE TORTURED POETS DEPARTMENT
-                <span id="ttpd-text">available April 19</span>
+    <p id="update">这个页面上一次更新于2024年2月6日</p>
+
+    <div id="pages-backdrop"></div>
+
+    <br>
+    <div id="en-warn">
+        <span id="en-warn-text"><i class="fas fa-warning"></i>&emsp;此网页仅提供英文版本。&emsp;This website is available in
+            English only.</span>
+    </div>
+    <p id="dev-cal-2"><span class="subtitle" id="title-0">News</span></p>
+    <div class="pages-container">
+        <p id="dev-cal-2">
+            <span class="breaking"><b><i class="fas fa-circle-exclamation"></i>&emsp;BREAKING:</b> Taylor Swift wins
+                Album of the Year for the FOURTH time at the 66th Grammys for <i>Midnights</i></span><br>
+            <span class="breaking"><b><i class="fas fa-circle-exclamation"></i>&emsp;BREAKING:</b> Taylor Swift becomes
+                the first artist ever to win Grammys Album of the Year 4 times</span><br>
+            <span class="breaking"><b><i class="fas fa-circle-exclamation"></i>&emsp;BREAKING:</b> Taylor Swift
+                announces new album during her Best Pop Vocal Album Grammys Awards acceptance speech</span><br>
+            <span class="breaking"><b><i class="fas fa-circle-exclamation"></i>&emsp;BREAKING:</b> Taylor Swift
+                announces new album <i>The Tortured Poets Department</i> with release date April 19</span><br>
+            <span class="breaking"><b><i class="fas fa-circle-exclamation"></i>&emsp;BREAKING:</b> Taylor Swift
+                announces new album <i>The Tortured Poets Department</i> tracklist</span>
+        </p>
+    </div>
+    <p id="dev-cal-2"><span class="subtitle" id="title-1">Albums</span></p>
+    <div class="pages-container">
+        <div id="album-shelf">
+            <div class="album" id="album-11">
+                <span class="album-title" id="album-title-11">THE TORTURED POETS DEPARTMENT <i
+                        class="fas fa-arrow-right"></i></span>
             </div>
-        </a>
-        <a href="./subpages/midnights.html">
-            <div class="taylor-swift-album" id="midnights">Midnights
-                <div class="go-button" id="go-button-1"><i class="fas fa-arrow-right"></i></div>
-            </div>
-        </a>
-        <div class="taylor-swift-album" id="evermore">evermore
-            <a href="">
-                <div class="go-button" id="go-button-2"><i class="fas fa-arrow-right"></i></div>
+            <a href="./subpages/midnights.html">
+                <div class="album" id="album-10">
+                    <span class="album-title" id="album-title-10">Midnights <i class="fas fa-arrow-right"></i></span>
+                </div>
             </a>
-        </div>
-        <div class="taylor-swift-album" id="folklore">folklore
-            <a href="">
-                <div class="go-button" id="go-button-3"><i class="fas fa-arrow-right"></i></div>
+            <div class="album" id="album-9">
+                <span class="album-title" id="album-title-9">evermore</span>
+            </div>
+            <div class="album" id="album-8">
+                <span class="album-title" id="album-title-8">folklore</span>
+            </div>
+            <a href="./subpages/lover.html">
+                <div class="album" id="album-7">
+                    <span class="album-title" id="album-title-7">Lover <i class="fas fa-arrow-right"></i></span>
+                </div>
             </a>
-        </div>
-        <a href="./subpages/lover.html">
-            <div class="taylor-swift-album" id="lover">Lover
-                <div class="go-button" id="go-button-4"><i class="fas fa-arrow-right"></i></div>
+            <div class="album" id="album-6">
+                <span class="album-title" id="album-title-6">reputation</span>
             </div>
-        </a>
-        <div class="taylor-swift-album" id="reputation">reputation
-            <div class="go-button" id="go-button-5"><i class="fas fa-arrow-right"></i></div>
-        </div>
-        <a href="./subpages/1989tv.html">
-            <div class="taylor-swift-album" id="ts1989">1989 (Taylor's Version)
-                <div class="go-button" id="go-button-6"><i class="fas fa-arrow-right"></i></div>
+            <a href="./subpages/1989tv.html">
+                <div class="album" id="album-5">
+                    <span class="album-title" id="album-title-5">1989 (Taylor's Version) <i
+                            class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+            <div class="album" id="album-4">
+                <span class="album-title" id="album-title-4">Red (Taylor's Version)</span>
             </div>
-        </a>
-        <div class="taylor-swift-album" id="red">Red (Taylor's Version)
-            <div class="go-button" id="go-button-7"><i class="fas fa-arrow-right"></i></div>
-        </div>
-        <div class="taylor-swift-album" id="speak-now">Speak Now (Taylor's Version)
-            <div class="go-button" id="go-button-8"><i class="fas fa-arrow-right"></i></div>
-        </div>
-        <div class="taylor-swift-album" id="fearless">Fearless (Taylor's Version)
-            <div class="go-button" id="go-button-9"><i class="fas fa-arrow-right"></i></div>
-        </div>
-        <div class="taylor-swift-album" id="taylor-swift">Taylor Swift
-            <div class="go-button" id="go-button-10"><i class="fas fa-arrow-right"></i></div>
+            <div class="album" id="album-3">
+                <span class="album-title" id="album-title-3">Speak Now (Taylor's Version)</span>
+            </div>
+            <div class="album" id="album-2">
+                <span class="album-title" id="album-title-2">Fearless (Taylor's Version)</span>
+            </div>
+            <div class="album" id="album-1">
+                <span class="album-title" id="album-title-1">Taylor Swift</span>
+            </div>
         </div>
     </div>
+
     <p id="dev-cal-2"><br>想帮忙？有想法或建议？欢迎给<a
             href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
 
