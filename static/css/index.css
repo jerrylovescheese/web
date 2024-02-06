@@ -237,7 +237,7 @@ body {
     background-color: rgb(230, 230, 230);
     background-image: url(../img/clock-bg.webp);
     background-position: center;
-    background-size: 100%;
+    background-size: 120%;
     border-radius: 50px;
     display: flex;
     justify-content: center;
