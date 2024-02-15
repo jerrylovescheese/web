@@ -71,7 +71,8 @@
             #update,
             #dev-cal-2,
             .list-pages,
-            .pages-container {
+            .pages-container,
+            .apple-product-button {
                 margin-left: 30px !important;
                 margin-right: 30px !important;
             }
@@ -96,6 +97,11 @@
 
         #pages-container-0 {
             padding: 0 !important;
+        }
+
+        #pages-container-1 {
+            display: flex;
+            flex-wrap: wrap;
         }
 
         .subtitle-pages {
@@ -148,6 +154,62 @@
             font-weight: bold;
             font-size: 25px !important;
         }
+
+        .apple-product-button {
+            width: 250px;
+            height: 250px;
+            aspect-ratio: 1/1;
+            border-radius: 10px;
+            position: relative;
+            margin-right: 30px;
+            background-position: center;
+            background-size: 105%;
+            transition: all 0.25s;
+            overflow: hidden;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+                0 2px 2px rgba(0, 0, 0, 0.11),
+                0 4px 4px rgba(0, 0, 0, 0.11),
+                0 8px 8px rgba(0, 0, 0, 0.11);
+        }
+
+        .apple-product-button:hover {
+            transform: scale(102.5%);
+            background-size: 110%;
+            box-shadow: none;
+        }
+
+        .apple-product-button:active {
+            transform: scale(97.5%);
+            background-size: 110%;
+            box-shadow: none;
+        }
+
+        .apple-product-button-text {
+            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 25px;
+            font-weight: bold;
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: #fff;
+            text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        #mac {
+            background-image: url(../static/img/mac.webp);
+        }
+
+        #iphone {
+            background-image: url(../static/img/iphone.webp);
+        }
+
+        #ipad {
+            background-image: url(../static/img/ipad.webp);
+        }
+
+        #vision {
+            background-image: url(../static/img/vision.webp);
+        }
     </style>
 </head>
 
@@ -163,20 +225,9 @@
             &emsp;
             <span id="quick-link-1" class="quick-link"><a href="#title-0">News</a></span>
             &emsp13;
-            <b>Events</b> &emsp13;
-            <span id="quick-link-1" class="quick-link"><a href="#title-1">Apple Special Events List</a></span>
+            <span id="quick-link-1" class="quick-link"><a href="#title-1">Products</a></span>
             &emsp13;
-            <b>Mac</b> &emsp13;
-            <span id="quick-link-2" class="quick-link"><a href="#title-2">Mac Lineup</a></span>
-            &emsp13;
-            <span id="quick-link-3" class="quick-link"><a href="#title-3">macOS Versions List</a></span>
-            &emsp13;
-            <b>iPhone</b> &emsp13;
-            <span id="quick-link-4" class="quick-link"><a href="#title-4">iPhone Lineup</a></span>
-            &emsp13;
-            <span id="quick-link-5" class="quick-link"><a href="#title-5">iPhone Models List</a></span>
-            &emsp13;
-            <span id="quick-link-6" class="quick-link"><a href="#title-6">iOS Versions List</a></span>
+            <span id="quick-link-1" class="quick-link"><a href="#title-2">Apple Special Events List</a></span>
             &emsp13;
             &emsp13;
         </div>
@@ -195,8 +246,27 @@
             <span><i class="fas fa-newspaper"></i>&emsp;Apple Vision Pro was finally released</span>
         </p>
     </div>
+    <p id="dev-cal-2"><span class="subtitle" id="title-1">🎁&emsp;Products</span></p>
+    <div class="pages-container" id="pages-container-1">
+        <a href="./subpages/mac.html">
+            <div class="apple-product-button" id="mac">
+                <span class="apple-product-button-text">Mac <i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+        <a href="./subpages/iphone.html">
+            <div class="apple-product-button" id="iphone">
+                <span class="apple-product-button-text">iPhone <i class="fas fa-arrow-right"></i></span>
+            </div>
+        </a>
+        <div class="apple-product-button" id="ipad">
+            <span class="apple-product-button-text">iPad <i class="fas fa-arrow-right"></i></span>
+        </div>
+        <div class="apple-product-button" id="vision">
+            <span class="apple-product-button-text">Vision <i class="fas fa-arrow-right"></i></span>
+        </div>
+    </div>
     <p id="dev-cal-2" class="subtitle-pages">📢&emsp;Events</p>
-    <p id="dev-cal-2"><span id="title-1">Apple Special Events (formerly Apple Keynotes)</span></p>
+    <p id="dev-cal-2"><span id="title-2">Apple Special Events (formerly Apple Keynotes)</span></p>
     <div class="pages-container">
         <table>
             <thead>
@@ -413,513 +483,6 @@
         </table>
     </div>
 
-    <p id="dev-cal-2" class="subtitle-pages">💻&emsp;Mac</p>
-    <p id="dev-cal-2"><span id="title-2">Mac Lineup</span></p>
-    <p id="dev-cal-2">
-    <ul class="list-pages">
-        <li>MacBook Air</li>
-        <li>MacBook Pro</li>
-        <li>Mac mini</li>
-        <li>Mac Studio</li>
-        <li>iMac</li>
-        <li>Mac Pro</li>
-        <li>Displays</li>
-    </ul>
-    </p>
-    <p id="dev-cal-2"><span id="title-3">macOS Versions List</span></p>
-    <div class="pages-container">
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="3" style="padding: 9px;">
-                        macOS Versions List
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Released Year</td>
-                    <td>No.</td>
-                    <td>Name</td>
-                </tr>
-                <tr>
-                    <td>2023</td>
-                    <td>macOS 14</td>
-                    <td>macOS Sonoma</td>
-                </tr>
-                <tr>
-                    <td>2022</td>
-                    <td>macOS 13</td>
-                    <td>macOS Ventura</td>
-                </tr>
-                <tr>
-                    <td>2021</td>
-                    <td>macOS 12</td>
-                    <td>macOS Monterey</td>
-                </tr>
-                <tr>
-                    <td>2020</td>
-                    <td>macOS 11</td>
-                    <td>macOS Big Sur</td>
-                </tr>
-                <tr>
-                    <td>2019</td>
-                    <td>macOS 10.15</td>
-                    <td>macOS Catalina</td>
-                </tr>
-                <tr>
-                    <td>2018</td>
-                    <td>macOS 10.14</td>
-                    <td>macOS Mojave</td>
-                </tr>
-                <tr>
-                    <td>2017</td>
-                    <td>macOS 10.13</td>
-                    <td>macOS High Sierra</td>
-                </tr>
-                <tr>
-                    <td>2016</td>
-                    <td>macOS 10.12</td>
-                    <td>macOS Sierra</td>
-                </tr>
-                <tr>
-                    <td>2015</td>
-                    <td>OS X 10.11</td>
-                    <td>OS X El Capitan</td>
-                </tr>
-                <tr>
-                    <td>2014</td>
-                    <td>OS X 10.10</td>
-                    <td>OS X Yosemite</td>
-                </tr>
-                <tr>
-                    <td>2013</td>
-                    <td>OS X 10.9</td>
-                    <td>OS X Mavericks</td>
-                </tr>
-                <tr>
-                    <td>2012</td>
-                    <td>OS X 10.8</td>
-                    <td>OS X Mountain Lion</td>
-                </tr>
-                <tr>
-                    <td>2011</td>
-                    <td>OS X 10.7</td>
-                    <td>OS X Lion</td>
-                </tr>
-                <tr>
-                    <td>2009</td>
-                    <td>OS X 10.6</td>
-                    <td>OS X Snow Leopard</td>
-                </tr>
-                <tr>
-                    <td>2007</td>
-                    <td>OS X 10.5</td>
-                    <td>OS X Leopard</td>
-                </tr>
-                <tr>
-                    <td>2005</td>
-                    <td>OS X 10.4</td>
-                    <td>OS X Tiger</td>
-                </tr>
-                <tr>
-                    <td>2003</td>
-                    <td>OS X 10.3</td>
-                    <td>OS X Panther</td>
-                </tr>
-                <tr>
-                    <td>2002</td>
-                    <td>OS X 10.2</td>
-                    <td>OS X Jaguar</td>
-                </tr>
-                <tr>
-                    <td>2001</td>
-                    <td>OS X 10.1</td>
-                    <td>OS X Puma</td>
-                </tr>
-                <tr>
-                    <td>2001</td>
-                    <td>OS X 10.0</td>
-                    <td>OS X (Cheetah)</td>
-                </tr>
-                <tr>
-                    <td>1999</td>
-                    <td colspan="2">Mac OS 9</td>
-                </tr>
-                <tr>
-                    <td>1997</td>
-                    <td colspan="2">Mac OS 8</td>
-                </tr>
-                <tr>
-                    <td>1991</td>
-                    <td colspan="2">System 7</td>
-                </tr>
-                <tr>
-                    <td>1988</td>
-                    <td colspan="2">System 6</td>
-                </tr>
-                <tr>
-                    <td>1987</td>
-                    <td colspan="2">System 5*</td>
-                </tr>
-                <tr>
-                    <td>1987</td>
-                    <td colspan="2">System 4</td>
-                </tr>
-                <tr>
-                    <td>1986</td>
-                    <td colspan="2">System 3</td>
-                </tr>
-                <tr>
-                    <td>1985</td>
-                    <td colspan="2">System 2</td>
-                </tr>
-                <tr>
-                    <td>1984</td>
-                    <td colspan="2">System 1</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="3">
-                        *"System 5" is the name of a software bundle, not the software "System" itself.
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
-
-    <p id="dev-cal-2" class="subtitle-pages">📱&emsp;iPhone</p>
-    <p id="dev-cal-2"><span id="title-4">iPhone Lineup</span></p>
-    <p id="dev-cal-2">
-    <ul class="list-pages">
-        <li>iPhone 15</li>
-        <li>iPhone 15 Plus</li>
-        <li>iPhone 15 Pro</li>
-        <li>iPhone 15 Pro Max</li>
-        <li>iPhone 14</li>
-        <li>iPhone 14 Plus</li>
-        <li>iPhone 13</li>
-        <li>iPhone SE 3</li>
-    </ul>
-    </p>
-    <p id="dev-cal-2"><span id="title-5">iPhone Models List</span></p>
-    <div class="pages-container">
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="4" style="padding: 9px;">
-                        iPhone Models List
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Released</td>
-                    <td>No.</td>
-                    <td>Slogan</td>
-                    <td>宣传语*</td>
-                </tr>
-                <tr>
-                    <td rowspan="4">2023/09/12</td>
-                    <td>iPhone 15 Pro Max</td>
-                    <td rowspan="2">Titanium. So strong. So light. So Pro.</td>
-                    <td rowspan="2">钛金属，坚固轻盈，Pro 得真材实料。</td>
-                </tr>
-                <tr>
-                    <td>iPhone 15 Pro</td>
-                </tr>
-                <tr>
-                    <td>iPhone 15 Plus</td>
-                    <td rowspan="2">New camera. New design. Newphoria.</td>
-                    <td rowspan="2">新主摄，新设计，开新超开心。</td>
-                </tr>
-                <tr>
-                    <td>iPhone 15</td>
-                </tr>
-                <tr>
-                    <td rowspan="4">2022/09/07</td>
-                    <td>iPhone 14 Pro Max</td>
-                    <td rowspan="2">Pro. Beyond.</td>
-                    <td rowspan="2">强力出圈</td>
-                </tr>
-                <tr>
-                    <td>iPhone 14 Pro</td>
-                </tr>
-                <tr>
-                    <td>iPhone 14 Plus</td>
-                    <td rowspan="2">Wonderfull.</td>
-                    <td rowspan="2">玩大，玩超大。</td>
-                </tr>
-                <tr>
-                    <td>iPhone 14</td>
-                </tr>
-                <tr>
-                    <td>2022/03/08</td>
-                    <td>iPhone SE (3rd generation)</td>
-                    <td>Love the power. Love the price.</td>
-                    <td>重磅实力，轻松入手。</td>
-                </tr>
-                <tr>
-                    <td rowspan="4">2021/09/14</td>
-                    <td>iPhone 13 Pro Max</td>
-                    <td rowspan="2">Oh. So. Pro.</td>
-                    <td rowspan="2">强得很</td>
-                </tr>
-                <tr>
-                    <td>iPhone 13 Pro</td>
-                </tr>
-                <tr>
-                    <td>iPhone 13</td>
-                    <td rowspan="2">Your new superpower.</td>
-                    <td rowspan="2">解锁超能力</td>
-                </tr>
-                <tr>
-                    <td>iPhone 13 mini</td>
-                </tr>
-                <tr>
-                    <td rowspan="4">2020/10/13</td>
-                    <td>iPhone 12 Pro Max</td>
-                    <td rowspan="2">It's a leap year.</td>
-                    <td rowspan="2">自我再飞跃</td>
-                </tr>
-                <tr>
-                    <td>iPhone 12 Pro</td>
-                </tr>
-                <tr>
-                    <td>iPhone 12</td>
-                    <td rowspan="2">Blast past fast.</td>
-                    <td rowspan="2">一拍，即合。</td>
-                </tr>
-                <tr>
-                    <td>iPhone 12 mini</td>
-                </tr>
-                <tr>
-                    <td>2020/04/15</td>
-                    <td>iPhone SE (2nd generation)</td>
-                    <td>Lots to love. Less to spend.</td>
-                    <td>称心称手，超值入手。</td>
-                </tr>
-                <tr>
-                    <td rowspan="3">2019/09/10</td>
-                    <td>iPhone 11 Pro Max</td>
-                    <td rowspan="2">Pro Cameras. Pro Display. Pro Performance.</td>
-                    <td rowspan="2">Pro 如其名。</td>
-                </tr>
-                <tr>
-                    <td>iPhone 11 Pro</td>
-                </tr>
-                <tr>
-                    <td>iPhone 11</td>
-                    <td>Just the right amount of everything.</td>
-                    <td>一切都刚刚好。</td>
-                </tr>
-                <tr>
-                    <td rowspan="3">2018/09/12</td>
-                    <td>iPhone XR</td>
-                    <td>Brilliant. In every way.</td>
-                    <td>哪一面都是亮点</td>
-                </tr>
-                <tr>
-                    <td>iPhone Xs Max</td>
-                    <td rowspan="2">Welcome to the big screens.</td>
-                    <td rowspan="2">大屏幕上见</td>
-                </tr>
-                <tr>
-                    <td>iPhone Xs</td>
-                </tr>
-                <tr>
-                    <td rowspan="3">2017/09/12</td>
-                    <td>iPhone X</td>
-                    <td>Say hello to the future.</td>
-                    <td>hello，未来。</td>
-                </tr>
-                <tr>
-                    <td>iPhone 8 Plus</td>
-                    <td rowspan="2">A new generation of iPhone</td>
-                    <td rowspan="2">新一代 iPhone</td>
-                </tr>
-                <tr>
-                    <td>iPhone 8</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">2016/09/07</td>
-                    <td>iPhone 7 Plus</td>
-                    <td rowspan="2">This is 7.</td>
-                    <td rowspan="2">7，在此。</td>
-                </tr>
-                <tr>
-                    <td>iPhone 7</td>
-                </tr>
-                <tr>
-                    <td>2016/03/21</td>
-                    <td>iPhone SE (1st generation)</td>
-                    <td>A big step for small.</td>
-                    <td>一小步的一大步</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">2015/09/09</td>
-                    <td>iPhone 6s Plus</td>
-                    <td rowspan="2">The only thing that's changed is everything.</td>
-                    <td rowspan="2">唯一的不同，是处处都不同。</td>
-                </tr>
-                <tr>
-                    <td>iPhone 6s</td>
-
-                </tr>
-                <tr>
-                    <td rowspan="2">2014/09/09</td>
-                    <td>iPhone 6 Plus</td>
-                    <td rowspan="2">Bigger than bigger.</td>
-                    <td rowspan="2">比更大还更大 <br>（后更为“岂止于大”）</td>
-                </tr>
-                <tr>
-                    <td>iPhone 6</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">2013/09/10</td>
-                    <td>iPhone 5s</td>
-                    <td>You're more powerful than you think. </td>
-                    <td>最超越、空前的手机</td>
-                </tr>
-                <tr>
-                    <td>iPhone 5c</td>
-                    <td>For the colorful</td>
-                    <td>生来多彩</td>
-                </tr>
-                <tr>
-                    <td>2012/09/12</td>
-                    <td>iPhone 5</td>
-                    <td>The biggest thing to happen to iPhone since iPhone.</td>
-                    <td>有史以来改变最大的 iPhone。</td>
-                </tr>
-                <tr>
-                    <td>2011/10/04</td>
-                    <td>iPhone 4s</td>
-                    <td>The most amazing iPhone yet</td>
-                    <td>出色的iPhone，如今更出色</td>
-                </tr>
-                <tr>
-                    <td>2010/06/07</td>
-                    <td>iPhone 4</td>
-                    <td>This changes everything. Again.</td>
-                    <td>再一次，改变一切。</td>
-                </tr>
-                <tr>
-                    <td>2009/06/08</td>
-                    <td>iPhone 3GS</td>
-                    <td>The fastest, smartest phone yet.</td>
-                    <td>N/A**</td>
-                </tr>
-                <tr>
-                    <td>2008/06/09</td>
-                    <td>iPhone 3G</td>
-                    <td>The iPhone you have been waiting for.</td>
-                    <td>N/A</td>
-                </tr>
-                <tr>
-                    <td>2007/01/09</td>
-                    <td>iPhone</td>
-                    <td>Apple reinvents the phone.</td>
-                    <td>N/A</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="4">*部分标点可能不正确，敬请指正。</td>
-                </tr>
-                <tr>
-                    <td colspan="4" style="border: none;">**从 iPhone 3GS 起，iPhone 正式进入中国市场。</td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
-    <p id="dev-cal-2"><span id="title-6">iOS Versions List</span></p>
-    <div class="pages-container">
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="2" style="padding: 9px;">
-                        iOS Versions List
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Released Year</td>
-                    <td>No.</td>
-                </tr>
-                <tr>
-                    <td>2023</td>
-                    <td>iOS 17</td>
-                </tr>
-                <tr>
-                    <td>2022</td>
-                    <td>iOS 16</td>
-                </tr>
-                <tr>
-                    <td>2021</td>
-                    <td>iOS 15</td>
-                </tr>
-                <tr>
-                    <td>2020</td>
-                    <td>iOS 14</td>
-                </tr>
-                <tr>
-                    <td>2019</td>
-                    <td>iOS 13</td>
-                </tr>
-                <tr>
-                    <td>2018</td>
-                    <td>iOS 12</td>
-                </tr>
-                <tr>
-                    <td>2017</td>
-                    <td>iOS 11</td>
-                </tr>
-                <tr>
-                    <td>2016</td>
-                    <td>iOS 10</td>
-                </tr>
-                <tr>
-                    <td>2015</td>
-                    <td>iOS 9</td>
-                </tr>
-                <tr>
-                    <td>2014</td>
-                    <td>iOS 8</td>
-                </tr>
-                <tr>
-                    <td>2013</td>
-                    <td>iOS 7</td>
-                </tr>
-                <tr>
-                    <td>2012</td>
-                    <td>iOS 6</td>
-                </tr>
-                <tr>
-                    <td>2011</td>
-                    <td>iOS 5</td>
-                </tr>
-                <tr>
-                    <td>2010</td>
-                    <td>iOS 4</td>
-                </tr>
-                <tr>
-                    <td>2009</td>
-                    <td>iPhone OS 3</td>
-                </tr>
-                <tr>
-                    <td>2008</td>
-                    <td>iPhone OS 2</td>
-                </tr>
-                <tr>
-                    <td>2007</td>
-                    <td>iPhone OS 1</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 
     <p id="dev-cal-2"><br>想帮忙？有想法或建议？欢迎给<a
             href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
