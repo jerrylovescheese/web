@@ -83,7 +83,19 @@
         }
 
         #dev-cal-1 {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .breaking {
+            color: #cc0700;
+        }
+
+        .pages-container>#dev-cal-2 {
+            margin-left: 30px !important;
+        }
+
+        #pages-container-0 {
+            padding: 0 !important;
         }
 
         .subtitle-pages {
@@ -93,7 +105,7 @@
 
         .list-pages {
             margin-left: 120px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -110,7 +122,7 @@
         table {
             border-top: solid 1px black;
             border-bottom: solid 1px black;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             margin: 0 auto;
         }
 
@@ -131,6 +143,11 @@
             border-top: solid 1px black;
             border-radius: unset;
         }
+
+        .subtitle {
+            font-weight: bold;
+            font-size: 25px !important;
+        }
     </style>
 </head>
 
@@ -144,20 +161,22 @@
         <div id="quick-links">
             <b>ON THIS PAGE:</b>
             &emsp;
+            <span id="quick-link-1" class="quick-link"><a href="#title-0">News</a></span>
+            &emsp13;
             <b>Events</b> &emsp13;
-            <span id="quick-link-1" class="quick-link"><a href="#title-0">Apple Special Events List</a></span>
+            <span id="quick-link-1" class="quick-link"><a href="#title-1">Apple Special Events List</a></span>
             &emsp13;
             <b>Mac</b> &emsp13;
-            <span id="quick-link-2" class="quick-link"><a href="#title-1">Mac Lineup</a></span>
+            <span id="quick-link-2" class="quick-link"><a href="#title-2">Mac Lineup</a></span>
             &emsp13;
-            <span id="quick-link-3" class="quick-link"><a href="#title-2">macOS Versions List</a></span>
+            <span id="quick-link-3" class="quick-link"><a href="#title-3">macOS Versions List</a></span>
             &emsp13;
             <b>iPhone</b> &emsp13;
-            <span id="quick-link-4" class="quick-link"><a href="#title-3">iPhone Lineup</a></span>
+            <span id="quick-link-4" class="quick-link"><a href="#title-4">iPhone Lineup</a></span>
             &emsp13;
-            <span id="quick-link-5" class="quick-link"><a href="#title-4">iPhone Models List</a></span>
+            <span id="quick-link-5" class="quick-link"><a href="#title-5">iPhone Models List</a></span>
             &emsp13;
-            <span id="quick-link-6" class="quick-link"><a href="#title-5">iOS Versions List</a></span>
+            <span id="quick-link-6" class="quick-link"><a href="#title-6">iOS Versions List</a></span>
             &emsp13;
             &emsp13;
         </div>
@@ -170,8 +189,14 @@
         <span id="en-warn-text"><i class="fas fa-warning"></i>&emsp;此网页仅提供英文版本。&emsp;This website is available in
             English only.</span>
     </div>
-    <p id="dev-cal-2" class="subtitle-pages">Events</p>
-    <p id="dev-cal-2"><span id="title-0">Apple Special Events (formerly Apple Keynotes)</span></p>
+    <p id="dev-cal-2"><span class="subtitle" id="title-0">📰&emsp;News</span></p>
+    <div class="pages-container" id="pages-container-0">
+        <p id="dev-cal-2">
+            <span><i class="fas fa-newspaper"></i>&emsp;Apple Vision Pro was finally released</span>
+        </p>
+    </div>
+    <p id="dev-cal-2" class="subtitle-pages">📢&emsp;Events</p>
+    <p id="dev-cal-2"><span id="title-1">Apple Special Events (formerly Apple Keynotes)</span></p>
     <div class="pages-container">
         <table>
             <thead>
@@ -388,8 +413,8 @@
         </table>
     </div>
 
-    <p id="dev-cal-2" class="subtitle-pages">Mac</p>
-    <p id="dev-cal-2"><span id="title-1">Mac Lineup</span></p>
+    <p id="dev-cal-2" class="subtitle-pages">💻&emsp;Mac</p>
+    <p id="dev-cal-2"><span id="title-2">Mac Lineup</span></p>
     <p id="dev-cal-2">
     <ul class="list-pages">
         <li>MacBook Air</li>
@@ -401,7 +426,7 @@
         <li>Displays</li>
     </ul>
     </p>
-    <p id="dev-cal-2"><span id="title-2">macOS Versions List</span></p>
+    <p id="dev-cal-2"><span id="title-3">macOS Versions List</span></p>
     <div class="pages-container">
         <table>
             <thead>
@@ -564,8 +589,8 @@
         </table>
     </div>
 
-    <p id="dev-cal-2" class="subtitle-pages">iPhone</p>
-    <p id="dev-cal-2"><span id="title-3">iPhone Lineup</span></p>
+    <p id="dev-cal-2" class="subtitle-pages">📱&emsp;iPhone</p>
+    <p id="dev-cal-2"><span id="title-4">iPhone Lineup</span></p>
     <p id="dev-cal-2">
     <ul class="list-pages">
         <li>iPhone 15</li>
@@ -578,7 +603,7 @@
         <li>iPhone SE 3</li>
     </ul>
     </p>
-    <p id="dev-cal-2"><span id="title-4">iPhone Models List</span></p>
+    <p id="dev-cal-2"><span id="title-5">iPhone Models List</span></p>
     <div class="pages-container">
         <table>
             <thead>
@@ -809,7 +834,7 @@
             </tfoot>
         </table>
     </div>
-    <p id="dev-cal-2"><span id="title-5">iOS Versions List</span></p>
+    <p id="dev-cal-2"><span id="title-6">iOS Versions List</span></p>
     <div class="pages-container">
         <table>
             <thead>
