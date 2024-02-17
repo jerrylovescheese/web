@@ -141,21 +141,12 @@
         font-size: 40px !important;
     }
 
+    #remainTime {
+        line-height: 45px;
+    }
+
     #canvas-3-text {
         font-size: 80px !important;
-    }
-
-    #remainTime,
-    #one,
-    #two,
-    #three,
-    #four {
-        font-size: 16px !important;
-        color: #e90000 !important;
-    }
-
-    #remainTime {
-        margin-left: 0 !important;
     }
 
     #canvas-3-text {
@@ -168,24 +159,18 @@ body {
 }
 
 #remainTime {
-    display: inline-block;
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: 10px;
+    display: inline;
 }
 
 #one,
 #two,
 #three,
 #four {
-    font-weight: bold;
-    font-size: 20px;
     display: inline;
     /* background-color: #b9362a2f;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     -moz-backdrop-filter: blur(12px); */
-    color: #ffffff;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
@@ -350,14 +335,6 @@ body {
     overflow: hidden;
 }
 
-#canvas-1 {
-    background-image: url(../img/immersion-2.webp);
-}
-
-#canvas-2 {
-    background-image: url(../img/IMG_7163.webp);
-}
-
 .canvas-text {
     font-family: 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 100px;
@@ -375,6 +352,10 @@ body {
 
 #canvas-1-text {
     background-color: #ff445ab1;
+}
+
+#canvas-4-text {
+    font-size: 40px;
 }
 
 .canvas-text-small {
