@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <style>
-        @media (max-width: 425px) {
+        @media (max-width: 430px) {
 
             #dev-cal-1,
             #update,
@@ -32,15 +32,11 @@
                 font-size: 70px;
                 margin-top: 125px;
             }
-        }
 
-        body::after {
-            content: "";
-            position: absolute;
-            inset: -0.625px;
-            /* background: linear-gradient(30deg, rgba(0, 0, 0, 0)20%, rgb(137, 168, 186), rgb(94, 108, 141)); */
-            filter: blur(2.5em);
-            z-index: -1;
+            #mac-head-slide {
+                background-size: cover !important;
+                animation: none !important;
+            }
         }
 
         iframe {
@@ -50,6 +46,55 @@
         .track-title {
             font-weight: bold;
             font-size: 25px !important;
+        }
+
+        #mac-head-slide {
+            width: 100vw;
+            height: 100vh;
+            background-image: url(../../static/img/mac-bg.webp);
+            background-size: 110%;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: background-zoom 2s ease-in-out 0s 1;
+        }
+
+        #mac-head-slide::after {
+            content: "";
+            position: absolute;
+            inset: -25px 0px;
+            background-image: url(../../static/img/mac-bg.webp);
+            background-position: center;
+            background-size: cover;
+            filter: blur(2.5em);
+            z-index: -1;
+        }
+
+        @keyframes background-zoom {
+            0% {
+                background-size: 100%;
+            }
+
+            100% {
+                background-size: 110%;
+            }
+        }
+
+        #mac-head-slide-logo {
+            width: 40vw;
+            height: 40vh;
+            background-image: url(../../static/img/mac.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            font-size: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         #dev-cal-2 {
@@ -140,6 +185,12 @@
             &emsp13;
         </div>
     </div>
+
+    <div id="mac-head-slide">
+        <div id="mac-head-slide-logo">
+        </div>
+    </div>
+    <br>
 
     <p id="dev-cal-1">Mac</p>
     <p id="update">这个页面上一次更新于2023年2月14日<br><br></p>
