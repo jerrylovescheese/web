@@ -113,6 +113,14 @@
         background-color: rgba(255, 255, 255, 0.75) !important;
         border-color: rgba(255, 255, 255, 0.7) !important;
     }
+
+    #canvas-4 {
+        background-image: radial-gradient(circle at left, rgba(0, 255, 183, 0.55) 0, white 50%) !important;
+    }
+
+    #canvas-4-text {
+        color: #000 !important;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -352,6 +360,11 @@ body {
 
 #canvas-1-text {
     background-color: #ff445ab1;
+}
+
+#canvas-4 {
+    /* 在容器中心的渐变，从红色开始，变成蓝色，最后变成绿色 */
+    background-image: radial-gradient(circle at left, rgba(0, 255, 183, 0.55) 0, rgb(0, 0, 0) 50%);
 }
 
 #canvas-4-text {
