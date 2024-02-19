@@ -8,121 +8,46 @@
     <title>调查问卷</title>
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
+    <script src="../static/js/jquery-3.7.1.js"></script>
+    <script src="../static/js/include.js"></script>
     <link rel="shortcut icon" href="../Aug-18-2023-Favicon.ico" type="image/x-icon">
-    <style>
-        .head {
-            display: flex;
-            justify-content: center;
-            position: relative;
-            z-index: 9;
-        }
-
-        .box-1 {
-            width: 50px;
-            height: 50px;
-            background-color: #f2f2f265;
-            border-radius: 50px;
-            margin: 0 auto;
-            margin-top: 20px;
-            box-shadow: 0px 10px 20px rgba(128, 128, 128, 0.729);
-            transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            overflow: hidden;
-            position: fixed;
-        }
-
-        .box-1:hover {
-            width: 210px;
-        }
-
-        .box-1:hover .banner {
-            left: 60px;
-        }
-
-        .logo {
-            background-image: url(../static/img/江源工作室\ 未来logo.png);
-            width: 50px;
-            height: 50px;
-            background-size: contain;
-            display: inline-block;
-        }
-
-        .banner {
-            position: relative;
-            left: 70px;
-            bottom: 40px;
-            width: 150px;
-            height: 50px;
-            color: black;
-            font-weight: bold;
-            transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-        }
-    </style>
+    <script src="../static/js/loader.js"></script>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 </head>
 
 <body>
-    <!-- <div class="core">
-        <div class="app">
-            <div class="button" id="button-1"><i class="fas fa-stream"
-                    style="font-size: larger; padding-left: 19px;"></i>
-                <ul id="button-1-item-list">
-                    <span
-                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;">&emsp;
-                        菜单</span>
-                    <br><br>
-                    <li><a href="./aluminum_studio.html">关于我</a></li>
-                    <li><a href="./clock.html">时间大厅</a></li>
-                    <li><a href="./official_account.html">公众号</a></li>
-                    <li><a href="./develop.html">开发者</a></li>
-                    <li><a href="./survey.html">调查</a></li>
-                </ul>
-            </div>
-            <a href="https://jerrylovescheese.github.io/web" style="text-decoration: none; color: black;">
-                <div class="button" id="button-2"><span
-                        style="padding-left: 60px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;">江源工作室</span>
-                </div>
-            </a>
-            <a href="./search.html" style="text-decoration: none; color: black;">
-                <div class="button" id="button-3"><i class="fas fa-search"
-                        style="font-size: larger; padding-left: 19px;"></i><span
-                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;">&emsp;
-                        搜索</span></div>
-            </a>
-        </div>
-    </div> -->
+    <include src="./layout/layout.html"></include>
 
-    <div class="head">
-        <div class="box-1">
-            <a href="https://jerrylovescheese.github.io/web/"
-                style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-decoration: none; color: black;">
-                <div class="logo"></div>
-                <div class="banner">江源工作室作品 <i class="fas fa-chevron-right"></i>
-                </div>
-            </a>
+    <div id="header-unit">
+        <div class="header">&emsp;<a href="../index.html"><i
+                    class="fas fa-chevron-left"></i>&emsp14;&emsp14;&emsp14;回到上一页</a>
+        </div>
+        <div id="quick-links">
+            <b>ON THIS PAGE:</b>
+            <span id="quick-link-1" class="quick-link">调查问卷及数据收集网站</span>
         </div>
     </div>
 
-    <div class="header">&emsp;调查问卷</div>
+    <div id="content-unit">
 
-    <!-- <p id="dev-cal-1">空页</p>
-    <p id="update">这个页面上一次更新于202x年xx月xx日</p>
-    <p id="dev-cal-2">示例文本<br>想帮忙？有想法或建议？欢迎给<a
-            href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p> -->
+        <p id="dev-cal-1">调查问卷</p>
+        <p id="update">这个页面上一次更新于202x年xx月xx日</p>
 
-    <script type='text/javascript'
-        src='https://www.wjx.cn/handler/jqemed.ashx?activity=hnzOjIp&width=750&source=iframe'></script>
+        <p id="dev-cal-2">感谢参与！</p>
+        <p id="dev-cal-2">当有新调查问卷公布时，我会在这里展示。</p>
 
-    <a href="#">
-        <div class="return-to-top">
-            <i class="fas fa-chevron-up"></i> 回到顶部
-        </div>
-    </a>
-    <a href="../404.html">
-        <div class="en-us">
-            EN <span style="font-weight: normal;">Switch to English</span>
-        </div>
-    </a>
+        <p id="dev-cal-2"><br>想帮忙？有想法或建议？欢迎给<a
+                href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
+
+
+        <br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br>
+
+        <p id="copyright-info">版权所有 © aluminum.studio <a id="my-page"
+                href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">江源工作室</a></p>
+        <br><br><br><br>
+    </div>
 
 </body>
 

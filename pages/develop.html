@@ -45,6 +45,12 @@
             transform: translateY(3px);
         }
 
+        @media (prefers-color-scheme: dark) {
+            #fork-tool {
+                background-color: rgb(0, 0, 0) !important;
+            }
+        }
+
         @media (max-width: 425px) {
 
             #dev-cal-1,
@@ -53,7 +59,8 @@
             ol,
             #update-log-list,
             #pending-features,
-            #github-toolkit {
+            #github-toolkit,
+            #en-warn {
                 margin-left: 30px !important;
                 margin-right: 30px !important;
             }
@@ -75,22 +82,24 @@
         </div>
         <div id="quick-links">
             <b>ON THIS PAGE:</b>
-            &emsp;
             <span id="quick-link-1" class="quick-link"><a href="#title-0">Beta</a></span>
-            &emsp13;
             <span id="quick-link-2" class="quick-link"><a href="#title-1">网页更新日志</a></span>
         </div>
     </div>
 
-    <p id="dev-cal-1">开发者和更新日志</p>
-    <p id="dev-cal-2" style="font-weight: bold; font-size: larger;"><span id="title-0">Beta</span></p>
-    <p id="dev-cal-2">查看此列表以了解最新的开发动态和未来可能会有的功能。<br>欢迎帮忙一起搭建！<br>想帮忙？有想法或建议？欢迎给<a
-            href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br>以下按重要性顺序排序。</p>
-
-    <div id="github-toolkit">
-        <a href="https://github.com/jerrylovescheese/web"><button id="fork-tool">去这个网站的 repository</button></a>
-    </div>
-    <!-- <ol
+    <div id="content-unit">
+        <p id="dev-cal-1">开发者和更新日志</p>
+        <p id="dev-cal-2" style="font-weight: bold; font-size: larger;"><span id="title-0">Beta</span></p>
+        <p id="dev-cal-2">查看此列表以了解最新的开发动态和未来可能会有的功能。<br>欢迎帮忙一起搭建！<br>想帮忙？有想法或建议？欢迎给<a
+                href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br>以下按重要性顺序排序。</p>
+        <div id="en-warn">
+            <span id="en-warn-text"><i class="fas fa-warning"></i>&emsp;此网页可能无法及时反应网站更新，请以实际为准。</span>
+        </div>
+        <br>
+        <div id="github-toolkit">
+            <a href="https://github.com/jerrylovescheese/web"><button id="fork-tool">去这个网站的 repository</button></a>
+        </div>
+        <!-- <ol
         style="margin-left: 140px;
         margin-right: 30px;
         line-height: 27px;
@@ -117,61 +126,61 @@
         <li>......</li>
     </ul> -->
 
-    <p id="dev-cal-2" style="font-weight: bold; font-size: larger;"><span id="title-1">网页更新日志</span></p>
-    <p>
-    <ul id="update-log-list"
-        style="margin-left: 140px;
+        <p id="dev-cal-2" style="font-weight: bold; font-size: larger;"><span id="title-1">网页更新日志</span></p>
+        <p>
+        <ul id="update-log-list"
+            style="margin-left: 140px;
             margin-right: 30px;
             line-height: 27px;
             font-size: 18px;
             font-family: 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-        2023年11月28日
-        <li>更新了主页布局</li>
-        <li>导航器在桌面端悬浮</li><br>
-        2023年10月25日
-        <li>新增页面“Apple 苹果”</li><br>
-        2023年10月23日
-        <li>新增页面“Swiftiepedia”</li>
-        <li>新增返回按钮及页面导航器</li><br>
-        2023年10月22日
-        <li>优化主页面，增加置顶模式</li>
-        <li>新建“六大爱好”</li><br>
-        2023年9月16日
-        <li>优化主页布局与色彩方案，添加/移除了#AppleEvent</li><br>
-        2023年8月31日
-        <li>主页启用新的外部衬线字体 - 此为测试样式，可能于未来禁用。</li><br>
-        2023年8月21日
-        <li>新增页面“采光间”</li><br>
-        2023年8月17日
-        <li>整活：主页添加滚动字幕</li>
-        <li>适配移动端（初步）</li><br>
-        2023年8月15日
-        <li>载入史册！解决了静态网页复写问题</li><br>
-        2023年8月13日
-        <li>微调了导航栏展开大小和内容</li><br>
-        2023年8月11日
-        <li>更新了主页小组件布局</li><br>
-        2023年8月1日
-        <li>添加了调查页</li><br>
-        2023年7月30日
-        <li>增加了倒计时</li><br>
-        2023年7月28日
-        <li>喜报：深色模式来了！将设备调至深色模式既可体验，欢迎报告问题！</li>
-        <li>时钟上新</li>
-        <li>加入了前往我的公众号的链接</li>
-        <li>加入了“听点什么？”模块</li>
-    </ul>
-    </p>
+            2023年11月28日
+            <li>更新了主页布局</li>
+            <li>导航器在桌面端悬浮</li><br>
+            2023年10月25日
+            <li>新增页面“Apple 苹果”</li><br>
+            2023年10月23日
+            <li>新增页面“Swiftiepedia”</li>
+            <li>新增返回按钮及页面导航器</li><br>
+            2023年10月22日
+            <li>优化主页面，增加置顶模式</li>
+            <li>新建“六大爱好”</li><br>
+            2023年9月16日
+            <li>优化主页布局与色彩方案，添加/移除了#AppleEvent</li><br>
+            2023年8月31日
+            <li>主页启用新的外部衬线字体 - 此为测试样式，可能于未来禁用。</li><br>
+            2023年8月21日
+            <li>新增页面“采光间”</li><br>
+            2023年8月17日
+            <li>整活：主页添加滚动字幕</li>
+            <li>适配移动端（初步）</li><br>
+            2023年8月15日
+            <li>载入史册！解决了静态网页复写问题</li><br>
+            2023年8月13日
+            <li>微调了导航栏展开大小和内容</li><br>
+            2023年8月11日
+            <li>更新了主页小组件布局</li><br>
+            2023年8月1日
+            <li>添加了调查页</li><br>
+            2023年7月30日
+            <li>增加了倒计时</li><br>
+            2023年7月28日
+            <li>喜报：深色模式来了！将设备调至深色模式既可体验，欢迎报告问题！</li>
+            <li>时钟上新</li>
+            <li>加入了前往我的公众号的链接</li>
+            <li>加入了“听点什么？”模块</li>
+        </ul>
+        </p>
 
-    <!-- <a href="./experiment-2.html">
+        <!-- <a href="./experiment-2.html">
         <p id="dev-cal-2">网页复写实验室</p>
     </a> -->
 
-    <br><br><br><br><br><br><br><br><br>
-    <p id="copyright-info">版权所有 © aluminum.studio <a id="my-page"
-            href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">江源工作室</a></p>
-    <br><br><br><br>
-
+        <br><br><br><br><br><br><br><br><br>
+        <p id="copyright-info">版权所有 © aluminum.studio <a id="my-page"
+                href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">江源工作室</a></p>
+        <br><br><br><br>
+    </div>
     <script type="text/javascript">
         function time() {
             var vWeek, vWeek_s, vDay;

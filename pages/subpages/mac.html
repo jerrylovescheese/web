@@ -39,8 +39,11 @@
             }
         }
 
-        iframe {
-            margin-left: 120px;
+        #header-unit {
+            background: transparent !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            -moz-backdrop-filter: blur(12px);
         }
 
         .track-title {
@@ -174,15 +177,10 @@
 
         <div id="quick-links">
             <b>ON THIS PAGE:</b>
-            &emsp;
-            <span id="quick-link-2" class="quick-link"><a href="#title-0">Mac News</a></span>
-            &emsp13;
-            <a href="#title-1"><b>Lineup</b></a> &emsp13;
+            <span id="quick-link-1" class="quick-link"><a href="#title-0">Mac News</a></span>
+            <span id="quick-link-1" class="quick-link"><a href="#title-1"><b>Lineup</b></a></span>
             <span id="quick-link-2" class="quick-link"><a href="#title-2">MacBook Air</a></span>
-            &emsp13;
             <span id="quick-link-3" class="quick-link"><a href="#title-3">macOS Versions List</a></span>
-            &emsp13;
-            &emsp13;
         </div>
     </div>
 
@@ -192,209 +190,213 @@
     </div>
     <br>
 
-    <p id="dev-cal-1">Mac</p>
-    <p id="update">这个页面上一次更新于2023年2月14日<br><br></p>
+    <div id="content-unit">
+        <p id="dev-cal-1">Mac</p>
+        <p id="update">这个页面上一次更新于2023年2月14日<br><br></p>
 
-    <div id="en-warn">
-        <span id="en-warn-text"><i class="fas fa-warning"></i>&emsp;此网页仅提供英文版本。&emsp;This website is available in
-            English only.</span>
-    </div>
-    <p id="dev-cal-2">
-        The Mac, short for Macintosh (its official name until 1999), is a family of personal computers designed and
-        marketed by Apple Inc. The name Macintosh is a reference to a type of apple called McIntosh. The product lineup
-        includes the MacBook Air and MacBook Pro laptops, and the iMac, Mac Mini, Mac Studio, and Mac Pro desktops. Macs
-        are sold with the macOS operating system.
-    </p>
-    <p id="dev-cal-2"><span class="subtitle-pages" id="title-0">Mac News</span></p>
-    <div class="pages-container" id="pages-container-0">
+        <div id="en-warn">
+            <span id="en-warn-text"><i class="fas fa-warning"></i>&emsp;此网页仅提供英文版本。&emsp;This website is available in
+                English only.</span>
+        </div>
         <p id="dev-cal-2">
-            <span><i class="fas fa-newspaper"></i>&emsp;Mac turned 40 this year!</span>
+            The Mac, short for Macintosh (its official name until 1999), is a family of personal computers designed and
+            marketed by Apple Inc. The name Macintosh is a reference to a type of apple called McIntosh. The product
+            lineup
+            includes the MacBook Air and MacBook Pro laptops, and the iMac, Mac Mini, Mac Studio, and Mac Pro desktops.
+            Macs
+            are sold with the macOS operating system.
         </p>
+        <p id="dev-cal-2"><span class="subtitle-pages" id="title-0">Mac News</span></p>
+        <div class="pages-container" id="pages-container-0">
+            <p id="dev-cal-2">
+                <span><i class="fas fa-newspaper"></i>&emsp;Mac turned 40 this year!</span>
+            </p>
+        </div>
+        <p id="dev-cal-2"><span class="subtitle-pages" id="title-1">Mac Lineup</span></p>
+        <ul class="list-pages">
+            <li><a href="#title-2">MacBook Air</a></li>
+            <li>MacBook Pro</li>
+            <li>Mac mini</li>
+            <li>Mac Studio</li>
+            <li>iMac</li>
+            <li>Mac Pro</li>
+            <li>Displays</li>
+        </ul>
+        <p id="dev-cal-2"><span class="subtitle-pages" id="title-2">MacBook Air</span></p>
+        <p id="dev-cal-2"><span class="subtitle-pages" id="title-3">macOS Versions List</span></p>
+        <div class="pages-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="3" style="padding: 9px;">
+                            macOS Versions List
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Released Year</td>
+                        <td>No.</td>
+                        <td>Name</td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>macOS 14</td>
+                        <td>macOS Sonoma</td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>macOS 13</td>
+                        <td>macOS Ventura</td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>macOS 12</td>
+                        <td>macOS Monterey</td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>macOS 11</td>
+                        <td>macOS Big Sur</td>
+                    </tr>
+                    <tr>
+                        <td>2019</td>
+                        <td>macOS 10.15</td>
+                        <td>macOS Catalina</td>
+                    </tr>
+                    <tr>
+                        <td>2018</td>
+                        <td>macOS 10.14</td>
+                        <td>macOS Mojave</td>
+                    </tr>
+                    <tr>
+                        <td>2017</td>
+                        <td>macOS 10.13</td>
+                        <td>macOS High Sierra</td>
+                    </tr>
+                    <tr>
+                        <td>2016</td>
+                        <td>macOS 10.12</td>
+                        <td>macOS Sierra</td>
+                    </tr>
+                    <tr>
+                        <td>2015</td>
+                        <td>OS X 10.11</td>
+                        <td>OS X El Capitan</td>
+                    </tr>
+                    <tr>
+                        <td>2014</td>
+                        <td>OS X 10.10</td>
+                        <td>OS X Yosemite</td>
+                    </tr>
+                    <tr>
+                        <td>2013</td>
+                        <td>OS X 10.9</td>
+                        <td>OS X Mavericks</td>
+                    </tr>
+                    <tr>
+                        <td>2012</td>
+                        <td>OS X 10.8</td>
+                        <td>OS X Mountain Lion</td>
+                    </tr>
+                    <tr>
+                        <td>2011</td>
+                        <td>OS X 10.7</td>
+                        <td>OS X Lion</td>
+                    </tr>
+                    <tr>
+                        <td>2009</td>
+                        <td>OS X 10.6</td>
+                        <td>OS X Snow Leopard</td>
+                    </tr>
+                    <tr>
+                        <td>2007</td>
+                        <td>OS X 10.5</td>
+                        <td>OS X Leopard</td>
+                    </tr>
+                    <tr>
+                        <td>2005</td>
+                        <td>OS X 10.4</td>
+                        <td>OS X Tiger</td>
+                    </tr>
+                    <tr>
+                        <td>2003</td>
+                        <td>OS X 10.3</td>
+                        <td>OS X Panther</td>
+                    </tr>
+                    <tr>
+                        <td>2002</td>
+                        <td>OS X 10.2</td>
+                        <td>OS X Jaguar</td>
+                    </tr>
+                    <tr>
+                        <td>2001</td>
+                        <td>OS X 10.1</td>
+                        <td>OS X Puma</td>
+                    </tr>
+                    <tr>
+                        <td>2001</td>
+                        <td>OS X 10.0</td>
+                        <td>OS X (Cheetah)</td>
+                    </tr>
+                    <tr>
+                        <td>1999</td>
+                        <td colspan="2">Mac OS 9</td>
+                    </tr>
+                    <tr>
+                        <td>1997</td>
+                        <td colspan="2">Mac OS 8</td>
+                    </tr>
+                    <tr>
+                        <td>1991</td>
+                        <td colspan="2">System 7</td>
+                    </tr>
+                    <tr>
+                        <td>1988</td>
+                        <td colspan="2">System 6</td>
+                    </tr>
+                    <tr>
+                        <td>1987</td>
+                        <td colspan="2">System 5*</td>
+                    </tr>
+                    <tr>
+                        <td>1987</td>
+                        <td colspan="2">System 4</td>
+                    </tr>
+                    <tr>
+                        <td>1986</td>
+                        <td colspan="2">System 3</td>
+                    </tr>
+                    <tr>
+                        <td>1985</td>
+                        <td colspan="2">System 2</td>
+                    </tr>
+                    <tr>
+                        <td>1984</td>
+                        <td colspan="2">System 1</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">
+                            *"System 5" is the name of a software bundle, not the software "System" itself.
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <p id="dev-cal-2"><br>想帮忙？有想法或建议？欢迎给<a
+                href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
+
+
+        <br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br>
+
+        <p id="copyright-info">版权所有 © aluminum.studio <a id="my-page"
+                href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">江源工作室</a></p>
+        <br><br><br><br>
     </div>
-    <p id="dev-cal-2"><span class="subtitle-pages" id="title-1">Mac Lineup</span></p>
-    <ul class="list-pages">
-        <li><a href="#title-2">MacBook Air</a></li>
-        <li>MacBook Pro</li>
-        <li>Mac mini</li>
-        <li>Mac Studio</li>
-        <li>iMac</li>
-        <li>Mac Pro</li>
-        <li>Displays</li>
-    </ul>
-    <p id="dev-cal-2"><span class="subtitle-pages" id="title-2">MacBook Air</span></p>
-    <p id="dev-cal-2"><span class="subtitle-pages" id="title-3">macOS Versions List</span></p>
-    <div class="pages-container">
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="3" style="padding: 9px;">
-                        macOS Versions List
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Released Year</td>
-                    <td>No.</td>
-                    <td>Name</td>
-                </tr>
-                <tr>
-                    <td>2023</td>
-                    <td>macOS 14</td>
-                    <td>macOS Sonoma</td>
-                </tr>
-                <tr>
-                    <td>2022</td>
-                    <td>macOS 13</td>
-                    <td>macOS Ventura</td>
-                </tr>
-                <tr>
-                    <td>2021</td>
-                    <td>macOS 12</td>
-                    <td>macOS Monterey</td>
-                </tr>
-                <tr>
-                    <td>2020</td>
-                    <td>macOS 11</td>
-                    <td>macOS Big Sur</td>
-                </tr>
-                <tr>
-                    <td>2019</td>
-                    <td>macOS 10.15</td>
-                    <td>macOS Catalina</td>
-                </tr>
-                <tr>
-                    <td>2018</td>
-                    <td>macOS 10.14</td>
-                    <td>macOS Mojave</td>
-                </tr>
-                <tr>
-                    <td>2017</td>
-                    <td>macOS 10.13</td>
-                    <td>macOS High Sierra</td>
-                </tr>
-                <tr>
-                    <td>2016</td>
-                    <td>macOS 10.12</td>
-                    <td>macOS Sierra</td>
-                </tr>
-                <tr>
-                    <td>2015</td>
-                    <td>OS X 10.11</td>
-                    <td>OS X El Capitan</td>
-                </tr>
-                <tr>
-                    <td>2014</td>
-                    <td>OS X 10.10</td>
-                    <td>OS X Yosemite</td>
-                </tr>
-                <tr>
-                    <td>2013</td>
-                    <td>OS X 10.9</td>
-                    <td>OS X Mavericks</td>
-                </tr>
-                <tr>
-                    <td>2012</td>
-                    <td>OS X 10.8</td>
-                    <td>OS X Mountain Lion</td>
-                </tr>
-                <tr>
-                    <td>2011</td>
-                    <td>OS X 10.7</td>
-                    <td>OS X Lion</td>
-                </tr>
-                <tr>
-                    <td>2009</td>
-                    <td>OS X 10.6</td>
-                    <td>OS X Snow Leopard</td>
-                </tr>
-                <tr>
-                    <td>2007</td>
-                    <td>OS X 10.5</td>
-                    <td>OS X Leopard</td>
-                </tr>
-                <tr>
-                    <td>2005</td>
-                    <td>OS X 10.4</td>
-                    <td>OS X Tiger</td>
-                </tr>
-                <tr>
-                    <td>2003</td>
-                    <td>OS X 10.3</td>
-                    <td>OS X Panther</td>
-                </tr>
-                <tr>
-                    <td>2002</td>
-                    <td>OS X 10.2</td>
-                    <td>OS X Jaguar</td>
-                </tr>
-                <tr>
-                    <td>2001</td>
-                    <td>OS X 10.1</td>
-                    <td>OS X Puma</td>
-                </tr>
-                <tr>
-                    <td>2001</td>
-                    <td>OS X 10.0</td>
-                    <td>OS X (Cheetah)</td>
-                </tr>
-                <tr>
-                    <td>1999</td>
-                    <td colspan="2">Mac OS 9</td>
-                </tr>
-                <tr>
-                    <td>1997</td>
-                    <td colspan="2">Mac OS 8</td>
-                </tr>
-                <tr>
-                    <td>1991</td>
-                    <td colspan="2">System 7</td>
-                </tr>
-                <tr>
-                    <td>1988</td>
-                    <td colspan="2">System 6</td>
-                </tr>
-                <tr>
-                    <td>1987</td>
-                    <td colspan="2">System 5*</td>
-                </tr>
-                <tr>
-                    <td>1987</td>
-                    <td colspan="2">System 4</td>
-                </tr>
-                <tr>
-                    <td>1986</td>
-                    <td colspan="2">System 3</td>
-                </tr>
-                <tr>
-                    <td>1985</td>
-                    <td colspan="2">System 2</td>
-                </tr>
-                <tr>
-                    <td>1984</td>
-                    <td colspan="2">System 1</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="3">
-                        *"System 5" is the name of a software bundle, not the software "System" itself.
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
-
-    <p id="dev-cal-2"><br>想帮忙？有想法或建议？欢迎给<a
-            href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
-
-
-    <br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br>
-
-    <p id="copyright-info">版权所有 © aluminum.studio <a id="my-page"
-            href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">江源工作室</a></p>
-    <br><br><br><br>
 </body>
 
 </html>
