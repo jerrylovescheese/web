@@ -25,7 +25,8 @@
             input,
             #update,
             #dev-cal-2,
-            #___gcse_0 {
+            #___gcse_0,
+            #en-warn {
                 margin-left: 30px !important;
                 margin-right: 30px !important;
             }
@@ -45,6 +46,11 @@
 </head>
 
 <body>
+    <div class="loader-wrapper">
+        <i class="fa-solid fa-spinner fa-spin"></i>
+        <span id="loader-prompt"><br>准备元素中。<br>Preparing elements.</span>
+    </div>
+
     <include src="./layout/layout.html"></include>
 
     <div id="header-unit">
@@ -53,26 +59,33 @@
         </div>
         <div id="quick-links">
             <b>ON THIS PAGE:</b>
-            &emsp;
-            Search function is under development. Thank you for your patience.
+            <span class="quick-link" id="quick-link-1">Search function is under development. Thank you for your
+                patience.</span>
         </div>
     </div>
 
-    <script async src="https://cse.google.com/cse.js?cx=937dfeddf7f7a43f9">
-    </script>
-    <div class="gcse-search"></div>
-    <br><br><br>
+    <div id="content-unit">
+        <br><br><br>
+        <script async src="https://cse.google.com/cse.js?cx=937dfeddf7f7a43f9">
+        </script>
+        <div class="gcse-search"></div>
+        <br><br><br>
 
-    <p id="update">这个页面上一次更新于2023年10月23日</p>
-    <p id="dev-cal-2"><br>想帮忙？有想法或建议？欢迎给<a
-            href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
+        <div id="en-warn">
+            <span id="en-warn-text"><i class="fas fa-warning"></i>&emsp;此网页使用了谷歌搜索引擎插件，可能无法在某些地区成功加载。</span>
+        </div>
+        <br>
+        <p id="update">这个页面上一次更新于2023年10月23日</p>
+        <p id="dev-cal-2"><br>想帮忙？有想法或建议？欢迎给<a
+                href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
 
 
-    <br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br>
 
-    <p id="copyright-info">版权所有 © aluminum.studio <a id="my-page"
-            href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">江源工作室</a></p>
-    <br><br><br><br>
+        <p id="copyright-info">版权所有 © aluminum.studio <a id="my-page"
+                href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">江源工作室</a></p>
+        <br><br><br><br>
+    </div>
 </body>
 
 </html>
