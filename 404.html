@@ -8,6 +8,8 @@
     <title>Error...</title>
     <link rel="stylesheet" href="./static/css/style.css">
     <link rel="stylesheet" href="./static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
+    <script src="./static/js/jquery-3.7.1.js"></script>
+    <script src="./static/js/include.js"></script>
     <link rel="shortcut icon" href="./Aug-18-2023-Favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +40,6 @@
 
 <body>
     <include src="./pages/layout/layout_for_index.html"></include>
-    <script src="./static/js/include.js"></script>
 
     <div id="header-unit">
         <div class="header">&emsp;<a href="./index.html"><i
@@ -46,19 +47,24 @@
         </div>
         <div id="quick-links">
             <b>ON THIS PAGE:</b>
-            &emsp;
-            错误 - 您该回去啦。
+            <span class="quick-link" id="quick-link-1">错误 - 您该回去啦。</span>
         </div>
     </div>
 
-    <p id="dev-cal-1">404 - 页面不存在</p>
-    <p id="update">这个页面上一次更新于2023年8月15日</p>
-    <p id="dev-cal-2">您进入了不存在的页面。请按下左上角的返回按钮以返回。<br>想帮忙？有想法或建议？欢迎给<a
-            href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
+    <div id="content-unit">
+        <p id="dev-cal-1"><i class="fas fa-triangle-exclamation"></i> 404</p>
+        <p id="update">这个页面上一次更新于2024年2月20日</p>
+        <p id="dev-cal-2">您进入了不存在的页面。请按下左上角的返回按钮以返回。<br>想帮忙？有想法或建议？欢迎给<a
+                href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a>发一封邮件。<br></p>
 
 
-    <br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br>
+
+        <p id="copyright-info">版权所有 © aluminum.studio <a id="my-page"
+                href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">江源工作室</a></p>
+        <br><br><br><br>
+    </div>
 </body>
 
 </html>
