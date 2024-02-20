@@ -22,14 +22,25 @@
             font-weight: bold;
         }
 
-        .subtitle {
+        .music-subtitle {
             margin-left: 120px;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 30px;
             font-weight: lighter;
         }
 
-        iframe {
+        #music-light {
+            width: 100vw;
+            height: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-image: radial-gradient(circle at top right, rgba(0, 255, 162, 0.55) 0%, rgba(0, 0, 0, 0) 30%);
+            z-index: -1;
+        }
+
+        iframe,
+        #audio-1 {
             margin-top: 10px;
             margin-bottom: 10px;
             margin-left: 120px;
@@ -42,7 +53,8 @@
             #dev-cal-2,
             .music-song-title,
             .subtitle,
-            iframe {
+            iframe,
+            #audio-1 {
                 margin-left: 30px !important;
                 margin-right: 30px !important;
             }
@@ -64,7 +76,7 @@
         </div>
         <div id="quick-links">
             <b>ON THIS PAGE:</b>
-            <span class="quick-link" id="quick-link-1">Songs that are definitely worth a listen.</span>
+            <span id="quick-link-1" class="quick-link"><a href="#title-0">上春山</a></span>
         </div>
     </div>
 
@@ -72,7 +84,82 @@
         <p id="dev-cal-1">音乐</p>
         <p id="update">这个页面上一次更新于2024年2月20日</p>
         <br>
-        <!-- <p class="subtitle">圣诞列表</p>
+        <div id="music-light"></div>
+        <p id="dev-cal-2"><span class="subtitle" id="title-0">上春山</span></p>
+        <audio src="../static/audio/歌曲：上春山.mp4" controls id="audio-1"></audio>
+        <p id="dev-cal-2">
+            歌曲：上春山 (Live) - 魏晨/魏大勋/白敬亭
+            <br>
+            词：玉镯儿
+            <br>
+            曲：张超
+            <br>
+            编曲：潘安昕
+            <br>
+            <br>
+            二月天杨柳醉春烟
+            <br>
+            三月三来山青草漫漫
+            <br>
+            最美是人间四月的天
+            <br>
+            一江春水绿如蓝
+            <br>
+            春色闹人那不得眠
+            <br>
+            春雨涨满池塘唤睡莲
+            <br>
+            春花儿开遍呢喃的燕
+            <br>
+            春风得意正少年
+            <br>
+            我上春山约你来见
+            <br>
+            我攒了一年万千思念
+            <br>
+            今天原是平常一天
+            <br>
+            因为遇见你而不平凡
+            <br>
+            <br>
+            山上儿童那放纸鸢
+            <br>
+            山下游人纷纷追画船
+            <br>
+            东风拂人面落花作簪
+            <br>
+            踏遍春山不思还
+            <br>
+            我上春山约你来见
+            <br>
+            我攒了一年万千思念
+            <br>
+            今天原是平常一天
+            <br>
+            因为遇见你而不平凡
+            <br>
+            <br>
+            我上春山约你来见
+            <br>
+            我攒了一年万千思念
+            <br>
+            今天原是平常一天
+            <br>
+            因为遇见你而不平凡
+            <br>
+            我上春山约你来见
+            <br>
+            看花人只觉春光太短
+            <br>
+            与你相约一生春天
+            <br>
+            灿烂的笑啊 似今年
+            <br>
+            灿烂的笑啊 似今年
+            <br>
+            似今年
+        </p>
+        <!-- <p class="music-subtitle">圣诞列表</p>
         <ol>
             <li class="music-song-title" id="1">All I Want for Christmas Is You</li>
             <li class="music-song-title" id="2">Rockin' Around the Christmas Tree</li>
