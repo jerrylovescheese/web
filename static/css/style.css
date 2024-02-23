@@ -726,7 +726,7 @@ a:hover {
 
 @media (max-width: 768px) {
     #core {
-        z-index: unset !important;
+        z-index: 28 !important;
     }
 
     #core:focus-within {
@@ -747,6 +747,7 @@ a:hover {
         -webkit-backdrop-filter: blur(12px);
         -moz-backdrop-filter: blur(12px);
         border: solid 1px #cbcbcb;
+        z-index: 29;
     }
 
     .header {
