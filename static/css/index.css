@@ -336,6 +336,7 @@ body {
     height: 100vh;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -355,6 +356,8 @@ body {
     -moz-backdrop-filter: blur(12px);
     border-radius: 15px;
     padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-right: 30px;
 }
 
@@ -362,8 +365,11 @@ body {
     background-color: #ff445ab1;
 }
 
+#canvas-2 {
+    background-image: url(../img/lantern-festival.webp);
+}
+
 #canvas-4 {
-    /* 在容器中心的渐变，从红色开始，变成蓝色，最后变成绿色 */
     background-image: radial-gradient(circle at left, rgba(0, 255, 183, 0.55) 0, rgb(0, 0, 0) 50%);
 }
 
