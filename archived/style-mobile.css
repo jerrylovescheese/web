@@ -15,7 +15,7 @@
         display: flex;
         height: 100%;
         align-items: center;
-        z-index: 99999;
+        z-index: 30;
     }
 
     .app {
