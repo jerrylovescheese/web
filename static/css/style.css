@@ -25,39 +25,28 @@
         background-image: url(../img/home-button-dark.webp) !important;
     }
 
+    .app-element-pop-ups.active,
+    .app-element-pop-ups-3.active {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+
     .en-us,
     .return-to-top,
-    #find-me {
+    #find-me,
+    #home-button,
+    #app-element-container>a,
+    .app-elements>a,
+    .tool-elements>a,
+    #dev-cal-1>a,
+    #header-unit>div>a,
+    #header-unit>div>span>a,
+    .loader-wrapper {
         color: white !important;
     }
 
-    #close-all {
-        background-color: rgba(80, 80, 80, 0.5) !important;
-        border: solid 1px #707070 !important;
-    }
-
-    #close-all:hover {
-        background-color: rgba(255, 255, 255, 0) !important;
-        border: white solid 2px !important;
-    }
-
-    #site-map:focus {
-        background-color: rgba(0, 0, 0, 0.45) !important;
-    }
-
-    #toolkit,
-    #site-map {
-        background-color: rgba(80, 80, 80, 0.25) !important;
-        border: solid 1px #707070 !important;
-    }
-
-    #toolkit:focus-within {
-        background-color: rgb(67, 67, 67) !important;
-        border-color: rgb(110, 110, 110) !important;
-    }
-
-    #dev-cal-1>a {
-        color: #ffffff !important;
+    .separator {
+        background-color: #575757 !important;
     }
 
     #update {
@@ -66,19 +55,8 @@
         /* transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s; */
     }
 
-    #button-1-item-list {
-        color: rgba(255, 255, 255, 0) !important;
-    }
-
-    #app:focus-within #button-1-item-list {
-        color: white !important;
-    }
-
-    #app:focus-within #button-1 {
-        border: solid 1px #828282 !important;
-    }
-
-    #header-unit {
+    #header-unit,
+    #tool {
         background-color: #000 !important;
     }
 
@@ -91,19 +69,14 @@
         border-right: solid 1px #707070 !important;
     }
 
-    #header-unit>div>a,
-    #header-unit>div>span>a {
-        color: #ffffff !important;
-    }
-
     .loader-wrapper {
         background-color: #141414af !important;
-        color: #fff !important;
     }
 
     #en-warn,
     .pages-container,
-    #app-element-2 {
+    #app-element-2,
+    #tool {
         border-color: #575757 !important;
     }
 
@@ -145,17 +118,6 @@ a:hover {
     text-decoration: underline;
 }
 
-#core {
-    width: 100vw;
-    height: 75px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    z-index: 30;
-}
-
 @font-face {
     font-family: 'Source Han Sans';
     src: url(../fonts/SourceHanSansCN-Regular-min.woff2) format('woff2');
@@ -168,6 +130,30 @@ a:hover {
     font-weight: bold;
 }
 
+#core {
+    width: 100vw;
+    height: 109px;
+    /* 数据通过计算得到 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    z-index: 30;
+}
+
+#core-backdrop {
+    width: 100vw;
+    height: 77px;
+    /* 数据通过计算得到 */
+    transition: all 0.35s cubic-bezier(1, 0, 0, 1);
+    transition-delay: 0.2s;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
+    position: relative;
+}
+
 #bar-wrapper {
     width: auto;
     height: 60px;
@@ -177,16 +163,12 @@ a:hover {
     position: fixed;
     left: 0;
     right: 0;
-    display: flex;
     overflow: hidden;
     border-radius: 15px;
     background-color: rgba(237, 237, 237, 0.25);
     transition: all 0.35s cubic-bezier(1, 0, 0, 1);
     transition-delay: 0.2s;
-    backdrop-filter: blur(12px);
     border: solid 1px #dddddd;
-    -webkit-backdrop-filter: blur(12px);
-    -moz-backdrop-filter: blur(12px);
 }
 
 #app {
@@ -195,19 +177,11 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
     animation: welcome-animation-1 0.5s ease-in-out 0s 1;
 }
 
-#app::-webkit-scrollbar,
-.button::-webkit-scrollbar,
-#site-map::-webkit-scrollbar {
+.app-element-pop-ups-3::-webkit-scrollbar {
     width: 0 !important;
-}
-
-#bar-wrapper:focus-within {
-    height: 300px;
-    z-index: 29;
 }
 
 #app-element-container {
@@ -217,30 +191,166 @@ a:hover {
     align-items: center;
 }
 
+#app-element-container>a,
+.app-elements>a,
+.tool-elements>a {
+    color: #000;
+}
+
 .app-elements {
     border-radius: 10px;
+    height: 42px;
+    transition: background-color 0.2s;
+    margin-right: 5px;
+}
+
+.app-element-pop-ups {
+    height: 0px;
+    background-color: transparent;
+    color: transparent;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 67px;
+    /* 数据通过计算得到 */
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.app-element-pop-ups.active {
+    height: 40px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+        0 2px 2px rgba(0, 0, 0, 0.11),
+        0 4px 4px rgba(0, 0, 0, 0.11),
+        0 8px 8px rgba(0, 0, 0, 0.11);
+}
+
+.app-element-pop-ups-3.active {
+    width: 260px;
+    height: 505px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+        0 2px 2px rgba(0, 0, 0, 0.11),
+        0 4px 4px rgba(0, 0, 0, 0.11),
+        0 8px 8px rgba(0, 0, 0, 0.11);
+}
+
+#app-element-pop-ups-1 {
+    /* 数据通过计算得到 */
+    left: 268.28px;
+}
+
+#app-element-pop-ups-2 {
+    /* 数据通过计算得到 */
+    left: 367.97px;
+}
+
+.app-element-pop-ups-3 {
+    height: 0;
+    background-color: transparent;
+    color: transparent;
+    border-radius: 15px;
+    position: absolute;
+    right: 77px;
+    top: 25px;
+    /* 数据通过计算得到 */
+    transition: all cubic-bezier(1, 0, 0, 1) 0.4s;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    white-space: nowrap;
+    box-shadow: none;
+}
+
+#app-element-pop-up-label-3 {
+    display: block;
+    font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+#app-site-list {
+    list-style: none;
+    padding: 20px;
+    padding-top: 0;
+    margin: 0;
+}
+
+#app-site-list>a>li {
+    font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.app-element-pop-ups>a {
+    height: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 30px;
+    border-radius: 5px;
+    font-family: 'Souce Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+}
+
+#app-element-pop-up-label-1 {
+    margin-left: 5px;
+}
+
+#app-element-pop-up-label-2 {
+    margin-right: 5px;
+}
+
+.app-elements:hover,
+.tool-elements:hover,
+.app-element-pop-ups>a:hover {
+    background-color: #cacaca7a;
+}
+
+#home-button {
+    width: fit-content;
     height: 42px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    margin-left: 9px;
     transition: background-color 0.2s;
-    margin-right: 10px;
 }
 
-.app-elements:hover {
+#home-button:hover {
     background-color: #cacaca7a;
+}
+
+#home-button>.app-elements {
+    margin-right: 0;
+}
+
+#home-button>.app-elements:hover {
+    background-color: transparent;
+}
+
+#home-button>.app-element-label {
+    padding-left: 0;
+    font-weight: 100;
 }
 
 .separator {
     width: 1px;
     height: 18px;
-    background-color: gray;
-    margin-right: 10px;
+    background-color: #dddddd;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #app-element-1 {
     width: 75.6px;
-    margin-left: 9px;
     background-image: url(../img/home-button-light.webp);
     background-size: cover;
 }
@@ -249,70 +359,18 @@ a:hover {
     width: 42px;
     margin-right: 9px;
     border: solid 1px #dddddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .app-element-label {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
     padding: 10px;
     font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
-}
-
-#site-map {
-    display: none;
-    z-index: 9;
-    font-size: 17px;
-    width: 44px;
-    height: 44px;
-    border: 1px solid #cacaca;
-    background-color: rgba(237, 237, 237, 0.25);
-    border-radius: 10px;
-    margin-top: 9px;
-    margin-right: 9px;
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-
-.site-indicator {
-    line-height: 40px;
-    text-align: center;
-}
-
-#site-map:focus #site-indicator {
-    display: none;
-}
-
-#site-map:focus {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    right: 0px;
-    bottom: 0px;
-    background-color: rgba(255, 255, 255, 0.45);
-    border: none !important;
-    border-radius: 0px;
-    z-index: 1;
-}
-
-#map-text {
-    padding: 120px;
-}
-
-#map-title {
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 40px;
-    font-weight: bold;
-}
-
-#map-link-list {
-    list-style: none;
-    font-size: 18px;
-    display: inline;
-}
-
-#map-link-list>a {
-    display: block;
-    padding-top: 5px;
 }
 
 @keyframes welcome-animation-1 {
@@ -343,120 +401,40 @@ a:hover {
     }
 }
 
-#toolkit,
-#close-all,
-#site-map {
-    animation: welcome-animation-2 0.5s ease-in-out 0s 1;
-}
-
-#toolkit {
+#tool {
+    height: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: solid 1px #dddddd;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 9;
-    font-size: 17px;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #cacaca;
-    background-color: rgba(237, 237, 237, 0.25);
-    border-radius: 30px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    -moz-backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
     overflow: hidden;
-    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#toolkit:focus-within {
-    width: 220px;
-    height: 120px;
+.tool-elements {
+    border-radius: 5px;
+    height: 30px;
+    line-height: 30px;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.tool-element-label {
     padding: 10px;
-    padding-left: 15px;
-    background-color: rgba(243, 243, 243, 0.887);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    -moz-backdrop-filter: blur(12px);
-    border: solid 1px rgb(239, 239, 239);
-    box-shadow: 0px 2px 2px hsl(0deg 0% 50% / 0.2),
-        0px 4px 4px hsl(0deg 0% 0% / 0.2),
-        0px 8px 8px hsl(0deg 0% 0% / 0.2),
-        0px 16px 16px hsl(0deg 0% 0% / 0.2),
-        0px 32px 32px hsl(0deg 0% 0% / 0.2);
+    font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#toolkit:focus-within #toolkit-indicator {
-    text-align: left;
-    display: none;
+#return-to-top {
+    margin-left: 5px;
 }
 
-.return-to-top {
-    font-size: 18px;
-    margin-right: 20px;
-    color: rgb(0, 0, 0);
-    line-height: 40px;
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.en-us {
-    font-size: 18px;
-    margin-right: 30px;
-    color: rgb(0, 0, 0);
-    line-height: 40px;
-    font-weight: bold;
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-#close-button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#close-all {
-    position: fixed;
-    bottom: 35px;
-    z-index: 9;
-    font-size: 20px;
-    width: 40px;
-    height: 10px;
-    border: 1px solid #cacaca;
-    background-color: rgba(237, 237, 237, 0.25);
-    border-radius: 30px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    -moz-backdrop-filter: blur(12px);
-    overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-#close-button-container:hover #close-all {
-    width: 140px;
-    height: 40px;
-    bottom: 20px;
-    background-color: rgba(0, 0, 0, 0);
-    border: rgb(0, 0, 0) solid 2px;
-}
-
-#close-all:hover #indicator-label {
-    display: inline-block;
-}
-
-#close-all:hover #close-indicator {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#indicator-label {
-    font-weight: bold;
-    line-height: 40px;
-    font-size: 15px;
-    display: none;
+#connect {
+    margin-right: 5px;
 }
 
 #content-unit {
