@@ -284,10 +284,6 @@ body {
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
     }
-
-    #app {
-        animation: unset;
-    }
 }
 
 @media (max-width: 430px) {
