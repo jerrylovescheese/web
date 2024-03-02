@@ -281,6 +281,8 @@ body {
 @media (max-width: 768px) {
     #bar-wrapper {
         margin-right: 15px !important;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
     }
 
     #app {
