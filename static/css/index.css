@@ -225,7 +225,6 @@ body {
     width: 270px;
     height: 270px;
     position: fixed;
-    top: -70px;
     right: -70px;
     scale: 30%;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;

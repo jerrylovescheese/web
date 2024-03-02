@@ -16,6 +16,10 @@ body {
     animation: welcome-animation-1 0.5s ease-in-out 0s 1;
 }
 
+.app-element-pop-ups-3.active {
+    width: 337.81px !important;
+}
+
 #toolkit,
 .clock-uni {
     animation: welcome-animation-2 0.5s ease-in-out 0s 1;
