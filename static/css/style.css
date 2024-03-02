@@ -413,6 +413,7 @@ a:hover {
     display: flex;
     align-items: center;
     overflow: hidden;
+    z-index: 20;
 }
 
 .tool-elements {
