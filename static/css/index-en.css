@@ -274,6 +274,16 @@ body {
     color: white;
 }
 
+@media (max-width: 768px) {
+    #bar-wrapper {
+        margin-right: 15px !important;
+    }
+
+    #app {
+        animation: unset;
+    }
+}
+
 @media (max-width: 430px) {
 
     .widgets,

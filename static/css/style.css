@@ -230,8 +230,9 @@ a:hover {
 }
 
 .app-element-pop-ups-3.active {
-    width: 260px;
+    width: 337.81px;
     height: 505px;
+    /* 数据通过计算得到 */
     background-color: white;
     color: black;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
@@ -338,7 +339,7 @@ a:hover {
 
 #home-button>.app-element-label {
     padding-left: 0;
-    font-weight: 100;
+    font-weight: normal;
 }
 
 .separator {
