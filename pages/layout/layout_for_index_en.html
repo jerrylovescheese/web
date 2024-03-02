@@ -2,120 +2,173 @@
 <html lang="en">
 
 <head>
-
+    <script>
+        $(function () {
+            $("#app-element-2").click(function () {
+                $(".app-element-pop-ups-3").toggleClass("active");
+            });
+        });
+        $(function () {
+            $("#app-element-4").click(function () {
+                $("#app-element-pop-ups-1").toggleClass("active");
+            });
+        });
+        $(function () {
+            $("#app-element-5").click(function () {
+                $("#app-element-pop-ups-2").toggleClass("active");
+            });
+        });
+    </script>
 </head>
 
 <body>
     <div id="core">
-        <div id="bar-wrapper">
-            <div id="app" tabindex="1">
-                <div id="app-element-container">
-                    <a href="jerryly.top">
-                        <div class="app-elements" id="app-element-1"></div>
+        <div id="core-backdrop" tabindex="1">
+            <div id="bar-wrapper" tabindex="1">
+                <div id="app">
+                    <div id="app-element-container">
+                        <a id="home-button" href="jerryly.top">
+                            <div class="app-elements" id="app-element-1"></div>
+                            <span class="app-element-label">'s site</span>
+                        </a>
+                        <div class="separator"></div>
+                        <div class="app-elements" id="app-element-3">
+                            <a href="pages/aluminum_studio.html">
+                                <span class="app-element-label">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    &emsp13;&emsp13;About
+                                </span>
+                            </a>
+                        </div>
+                        <div class="app-elements" id="app-element-4">
+                            <span class="app-element-label">
+                                <i class="fa-solid fa-heart"></i>
+                                &emsp13;&emsp13;Interests
+                            </span>
+                        </div>
+                        <div class="app-elements" id="app-element-5">
+                            <span class="app-element-label">
+                                <i class="fa-solid fa-newspaper"></i>
+                                &emsp13;&emsp13;Collectives
+                            </span>
+                        </div>
+                        <div class="app-elements" id="app-element-6">
+                            <a href="pages/clock.html">
+                                <span class="app-element-label">
+                                    <i class="fa-solid fa-clock"></i>
+                                    &emsp13;&emsp13;Clocks
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="app-elements" id="app-element-2">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="app-element-pop-ups" id="app-element-pop-ups-1">
+                <a href="pages/apple.html" id="app-element-pop-up-label-1">
+                    <span class="app-element-pop-up-label">
+                        <i class="fa-brands fa-apple"></i>&emsp13;&emsp13;Apple
+                    </span>
+                </a>
+                <div class="separator"></div>
+                <a href="pages/taylorswift.html" id="app-element-pop-up-label-2">
+                    <span class="app-element-pop-up-label">
+                        <i class="fas fa-microphone"></i>&emsp13;&emsp13;Taylor Swift
+                    </span>
+                </a>
+            </div>
+            <div class="app-element-pop-ups" id="app-element-pop-ups-2">
+                <a href="pages/classical_ch.html" id="app-element-pop-up-label-1">
+                    <span class="app-element-pop-up-label">
+                        <i class="fas fa-pen"></i>&emsp13;&emsp13;Classical Chinese, Junior High
+                    </span>
+                </a>
+                <div class="separator"></div>
+                <a href="pages/classical_ch_sh.html" id="app-element-pop-up-label-2">
+                    <span class="app-element-pop-up-label">
+                        <i class="fas fa-pen"></i>&emsp13;&emsp13;Classical Chinese, Senior High
+                    </span>
+                </a>
+            </div>
+            <div class="app-element-pop-ups-3">
+                <span id="app-element-pop-up-label-3"><i class="fa-solid fa-map-location-dot"></i>&emsp13;&emsp13;All
+                    Pages</span>
+                <ul id="app-site-list">
+                    <a href="pages/aluminum_studio.html">
+                        <li>About</li>
                     </a>
-                    <div class="separator"></div>
-                    <div class="app-elements" id="app-element-3">
-                        <a href="pages/aluminum_studio.html"><span class="app-element-label">About</span></a>
-                    </div>
-                    <div class="app-elements" id="app-element-4">
-                        <span class="app-element-label">Interest</span>
-                    </div>
-                    <div class="app-elements" id="app-element-5">
-                        <span class="app-element-label">Collectives</span>
-                    </div>
-                    <div class="app-elements" id="app-element-6">
-                        <a href="pages/clock.html"><span class="app-element-label">Clocks</span></a>
-                    </div>
-                </div>
-                <div class="app-elements" id="app-element-2">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+                    <a href="pages/apple.html">
+                        <li>Apple</li>
+                    </a>
+                    <a href="pages/christmas.html">
+                        <li>Christmas</li>
+                    </a>
+                    <a href="pages/classical_ch_sh.html">
+                        <li>Classical Chinese, Senior High</li>
+                    </a>
+                    <a href="pages/classical_ch.html">
+                        <li>Classical Chinese, Junior High</li>
+                    </a>
+                    <a href="pages/clock.html">
+                        <li>Clocks</li>
+                    </a>
+                    <a href="pages/develop.html">
+                        <li>Development</li>
+                    </a>
+                    <a href="pages/friends.html">
+                        <li><i>Friends</i></li>
+                    </a>
+                    <a href="pages/homemade_giftcard.html">
+                        <li>Homemade Giftcards</li>
+                    </a>
+                    <a href="pages/music.html">
+                        <li>Music</li>
+                    </a>
+                    <a href="pages/search.html">
+                        <li>Search</li>
+                    </a>
+                    <a href="pages/social_network.html">
+                        <li>Social Network</li>
+                    </a>
+                    <a href="pages/survey.html">
+                        <li>Survey</li>
+                    </a>
+                </ul>
             </div>
-        </div>
-    </div>
-
-    <div id="close-button-container" tabindex="0">
-        <div id="close-all">
-            <div class="site-indicator" id="close-indicator">
-                <i class="fas fa-close"></i><span id="indicator-label">&emsp;Close All</span>
-            </div>
-        </div>
-    </div>
-
-    <div id="site-map" tabindex="0">
-        <div class="site-indicator" id="site-indicator">
-            <i class="fas fa-map"></i>
-        </div>
-        <div id="map-text">
-            <div id="map-title"><i class="fas fa-map-pin"></i>&emsp;jerryly.top Site Map</div>
-            <ul id="map-link-list">
-                <a href="pages/aluminum_studio.html">
-                    <li>About</li>
-                </a>
-                <a href="pages/apple.html">
-                    <li>Apple</li>
-                </a>
-                <a href="pages/christmas.html">
-                    <li>Christmas Special</li>
-                </a>
-                <a href="pages/clock.html">
-                    <li>CLocks</li>
-                </a>
-                <a href="pages/develop.html">
-                    <li>Developer</li>
-                </a>
-                <a href="pages/flashback.html">
-                    <li>Flashback</li>
-                </a>
-                <a href="pages/friends.html">
-                    <li>Friends</li>
-                </a>
-                <a href="pages/homemade_giftcard.html">
-                    <li>Homemade Giftcard Special
-                    </li>
-                </a>
-                <a href="pages/music.html">
-                    <li>Music</li>
-                </a>
-                <a href="pages/search.html">
-                    <li>Search</li>
-                </a>
-                <a href="pages/social_network.html">
-                    <li>Social Media</li>
-                </a>
-                <a href="pages/survey.html">
-                    <li>Surveys</li>
-                </a>
-                <a href="pages/taylorswift.html">
-                    <li>Taylor Swift</li>
-                </a>
-            </ul>
-        </div>
-    </div>
-
-    <div id="toolkit" tabindex="0">
-        <div class="site-indicator" id="toolkit-indicator">
-            <i class="fas fa-ellipsis-v"></i>
-        </div>
-        <a href="#">
-            <div class="return-to-top">
-                <i class="fas fa-chevron-up"></i>&emsp;Back to top
-            </div>
-        </a>
-        <a href="../../en/index-en.html">
-            <div class="en-us">
-                CN <span style="font-weight: normal;">&emsp14;中文</span>
-            </div>
-        </a>
-        <div id="find-me">
-            <a href="https://www.twitter.com/@jerrylovestweet"><i class="fa-brands fa-twitter"></i></a>&emsp;<a
-                href="https://github.com/jerrylovescheese"><i class="fa-brands fa-github"></i></a>
         </div>
     </div>
 
     <div class="loader-wrapper">
         <i class="fa-solid fa-spinner fa-spin"></i>
         <span id="loader-prompt"><br>Preparing elements...</span>
+    </div>
+
+    <div id="tool">
+        <div class="tool-elements" id="return-to-top">
+            <a href="#">
+                <span class="tool-element-label">
+                    <i class="fas fa-arrow-up"></i>&emsp13;Go to top
+                </span>
+            </a>
+        </div>
+        <div class="separator"></div>
+        <div class="tool-elements" id="language">
+            <a href="./en/index-en.html">
+                <span class="tool-element-label">
+                    <i class="fas fa-language"></i>&emsp13;中文
+                </span>
+            </a>
+        </div>
+        <div class="separator"></div>
+        <div class="tool-elements" id="connect">
+            <a href="pages/social_network.html">
+                <span class="tool-element-label">
+                    <i class="fas fa-rss"></i>&emsp13;Connect
+                </span>
+            </a>
+        </div>
     </div>
 </body>
 
