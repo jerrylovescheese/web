@@ -21,6 +21,10 @@
         fill: white;
     }
 
+    .app-element-label {
+        animation: app-elements-fade-in-dark 1s ease-in-out 0s 1 !important;
+    }
+
     #app-element-1 {
         background-image: url(../img/home-button-dark.webp) !important;
     }
@@ -177,7 +181,6 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: welcome-animation-1 0.5s ease-in-out 0s 1;
 }
 
 .app-element-pop-ups-3::-webkit-scrollbar {
@@ -372,33 +375,26 @@ a:hover {
     padding: 10px;
     font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
+    animation: app-elements-fade-in 1s ease-in-out 0s 1;
 }
 
-@keyframes welcome-animation-1 {
+@keyframes app-elements-fade-in {
     0% {
-        scale: 0%;
-    }
-
-    50% {
-        scale: 105%;
+        color: transparent;
     }
 
     100% {
-        scale: 100%;
+        color: #000;
     }
 }
 
-@keyframes welcome-animation-2 {
+@keyframes app-elements-fade-in-dark {
     0% {
-        scale: 0%;
-    }
-
-    50% {
-        scale: 105%;
+        color: transparent;
     }
 
     100% {
-        scale: 100%;
+        color: #ffffff;
     }
 }
 
@@ -563,10 +559,6 @@ a:hover {
     #bar-wrapper:focus-within {
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
-    }
-
-    #app {
-        animation: unset;
     }
 
     #app-element-3,
