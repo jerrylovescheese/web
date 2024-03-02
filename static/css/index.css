@@ -235,7 +235,7 @@ body {
 
 #real-clock:focus-within {
     scale: 100%;
-    top: 20px;
+    top: 100px;
     right: 20px;
 }
 
