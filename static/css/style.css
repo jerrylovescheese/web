@@ -45,7 +45,9 @@
     #dev-cal-1>a,
     #header-unit>div>a,
     #header-unit>div>span>a,
-    .loader-wrapper {
+    .loader-wrapper,
+    .app-element-pop-ups.active>a,
+    .app-element-pop-ups-3.active ul#app-site-list>a {
         color: white !important;
     }
 
@@ -230,6 +232,17 @@ a:hover {
         0 2px 2px rgba(0, 0, 0, 0.11),
         0 4px 4px rgba(0, 0, 0, 0.11),
         0 8px 8px rgba(0, 0, 0, 0.11);
+}
+
+.app-element-pop-ups>a,
+ul#app-site-list>a {
+    color: transparent;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+}
+
+.app-element-pop-ups.active>a,
+.app-element-pop-ups-3.active ul#app-site-list>a {
+    color: #000;
 }
 
 .app-element-pop-ups-3.active {
