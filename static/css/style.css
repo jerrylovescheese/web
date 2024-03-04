@@ -394,20 +394,24 @@ ul#app-site-list>a {
 @keyframes app-elements-fade-in {
     0% {
         color: transparent;
+        transform: translateX(20px);
     }
 
     100% {
         color: #000;
+        transform: translateX(0px);
     }
 }
 
 @keyframes app-elements-fade-in-dark {
     0% {
         color: transparent;
+        transform: translateX(10px);
     }
 
     100% {
         color: #ffffff;
+        transform: translateX(0px);
     }
 }
 
