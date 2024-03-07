@@ -388,7 +388,7 @@ ul#app-site-list>a {
     padding: 10px;
     font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
-    animation: app-elements-fade-in 1s ease-in-out 0s 1;
+    animation: app-elements-fade-in 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1;
 }
 
 @keyframes app-elements-fade-in {
