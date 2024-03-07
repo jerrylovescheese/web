@@ -79,7 +79,7 @@
     }
 
     #home-page-news {
-        animation: app-elements-fade-in-dark 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1;
+        animation: app-elements-fade-in-dark 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1 !important;
     }
 
     table,
