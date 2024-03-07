@@ -12,6 +12,12 @@
     <script src="./static/js/jquery-3.7.1.js"></script>
     <script src="./static/js/include.js"></script>
     <script type="text/javascript">
+        $(function () {
+            $("#home-page-news-text-close").click(function () {
+                $("#home-page-news").toggleClass("active");
+            });
+        });
+
         (function show() {
             //1.设置目的时间
             var oYear = 2024
@@ -103,6 +109,12 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div id="home-page-news">
+        <span id="home-page-news-text"><i class="fas fa-circle-exclamation"></i>&emsp;<b>新闻</b>&emsp;我正在搭建 <a
+                href="https://www.mediawiki.org/wiki/MediaWiki">MediaWiki</a> 来汇编所有AP心理学中的名词，欢迎帮助。</span>
+        <span id="home-page-news-text-close"><i class="fas fa-close"></i></span>
     </div>
 
     <div class="canvas" id="canvas-3">
