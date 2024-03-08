@@ -12,65 +12,80 @@
     <script src="./static/js/jquery-3.7.1.js"></script>
     <script src="./static/js/include.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                var scroll = $(window).scrollTop();
-                if (scroll > 800) {
-                    $("#home-page-news").css("color", "black");
-                    $("#app-element-1").css("background-image", "url(./static/img/home-button-light.webp)");
-                    $("#app-element-2").css("color", "black");
-                    $(".app-element-label").css("color", "black");
-                }
+        // Check if the user's system or browser is in light mode
+        const lightModeQuery = window.matchMedia('(prefers-color-scheme: light)');
 
-                else {
-                    $("#home-page-news").css("color", "white");
-                    $("#app-element-1").css("background-image", "url(./static/img/home-button-dark.webp)");
-                    $("#app-element-2").css("color", "white");
-                    $(".app-element-label").css("color", "white");
-                }
+        // Function to run when light mode is detected
+        function runScriptInLightMode() {
+            $(document).ready(function () {
+                $(window).scroll(function () {
+                    var scroll = $(window).scrollTop();
+                    if (scroll > 800) {
+                        $("#home-page-news").css("color", "black");
+                        $("#app-element-1").css("background-image", "url(./static/img/home-button-light.webp)");
+                        $("#app-element-2").css("color", "black");
+                        $(".app-element-label").css("color", "black");
+                    }
+
+                    else {
+                        $("#home-page-news").css("color", "white");
+                        $("#app-element-1").css("background-image", "url(./static/img/home-button-dark.webp)");
+                        $("#app-element-2").css("color", "white");
+                        $(".app-element-label").css("color", "white");
+                    }
+                })
             })
-        })
+        }
 
-            (function show() {
-                //1.设置目的时间
-                var oYear = 2024
-                var oMonth = 1
-                var oDay = 25
-                var oHour = 13
-                var oMinute = 0
-                var oSecond = 0
-                var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
-                // console.log(dateFormat(funtureDate))
-                //2.设置定时器
-                setInterval(function () {
-                    //3.获取现在的时间
-                    var presentDate = new Date();
-                    //4.获取时间戳
-                    var funtureTime = funtureDate.getTime();
-                    var presenTime = presentDate.getTime();
-                    //5.获取剩余的时间戳
-                    var allTime = funtureTime - presenTime;
-                    //6.把毫秒转换为秒
-                    var allSecond = parseInt(allTime / 1000);
-                    //7.获取剩余多少天
-                    var day = size(parseInt(allSecond / 3600 / 24));
-                    //8.获取剩余多少小时
-                    var hour = size(parseInt(allSecond / 3600 % 24));
-                    //9.获取剩余多少分钟
-                    var minute = size(parseInt(allSecond / 60 % 60));
-                    //10.获取剩余多少秒
-                    var second = size(parseInt(allSecond % 60));
-                    //11.注入：
-                    document.getElementById('one').innerHTML = day;
-                    document.getElementById('two').innerHTML = hour;
-                    document.getElementById('three').innerHTML = minute;
-                    document.getElementById('four').innerHTML = second;
-                }, 1000);
-                //如果数>=10,则在前面补0
-                function size(num) {
-                    return num < 10 & num >= 0 ? '0' + num : num;
-                }
-            })()
+        // Check if light mode is enabled
+        if (lightModeQuery.matches) {
+            // Light mode is enabled
+            runScriptInLightMode();
+        } else {
+            // Light mode is not enabled
+            console.log('Light mode is not enabled');
+        }
+
+        (function show() {
+            //1.设置目的时间
+            var oYear = 2024
+            var oMonth = 1
+            var oDay = 25
+            var oHour = 13
+            var oMinute = 0
+            var oSecond = 0
+            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
+            // console.log(dateFormat(funtureDate))
+            //2.设置定时器
+            setInterval(function () {
+                //3.获取现在的时间
+                var presentDate = new Date();
+                //4.获取时间戳
+                var funtureTime = funtureDate.getTime();
+                var presenTime = presentDate.getTime();
+                //5.获取剩余的时间戳
+                var allTime = funtureTime - presenTime;
+                //6.把毫秒转换为秒
+                var allSecond = parseInt(allTime / 1000);
+                //7.获取剩余多少天
+                var day = size(parseInt(allSecond / 3600 / 24));
+                //8.获取剩余多少小时
+                var hour = size(parseInt(allSecond / 3600 % 24));
+                //9.获取剩余多少分钟
+                var minute = size(parseInt(allSecond / 60 % 60));
+                //10.获取剩余多少秒
+                var second = size(parseInt(allSecond % 60));
+                //11.注入：
+                document.getElementById('one').innerHTML = day;
+                document.getElementById('two').innerHTML = hour;
+                document.getElementById('three').innerHTML = minute;
+                document.getElementById('four').innerHTML = second;
+            }, 1000);
+            //如果数>=10,则在前面补0
+            function size(num) {
+                return num < 10 & num >= 0 ? '0' + num : num;
+            }
+        })()
         //格式化日期格式 2
         function dateFormat(data) {
             var date = new Date(data);
@@ -130,7 +145,8 @@
     </div>
 
     <div class="canvas" id="canvas-4">
-
+        <span class="canvas-text">祝妳节日快乐</span>
+        <span class="canvas-text-small">国际妇女节</span>
     </div>
 
     <div class="canvas" id="canvas-3">
