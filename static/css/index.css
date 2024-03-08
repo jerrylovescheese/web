@@ -355,6 +355,7 @@ body {
     padding-left: 15px;
     border-radius: 15px;
     border: solid 1px #dddddd;
+    color: #fff;
     animation: app-elements-fade-in 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1;
 }
 
@@ -414,7 +415,7 @@ body {
 }
 
 #canvas-4 {
-    background-image: radial-gradient(circle at left, rgba(0, 255, 183, 0.55) 0, rgb(0, 0, 0) 50%);
+    background-image: url(../img/Mar\ 8\ 2024\ IWD.webp) !important;
 }
 
 #canvas-4-text {
