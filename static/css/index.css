@@ -75,11 +75,11 @@
 
 @media (prefers-color-scheme: dark) {
     #home-page-news {
-        border-color: #575757 !important;
+        background-color: #0000001a !important;
     }
 
-    #home-page-news {
-        animation: app-elements-fade-in-dark 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1 !important;
+    #home-page-news-text {
+        animation: home-page-news-fade-in-dark 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1 !important;
     }
 
     table,
@@ -177,8 +177,45 @@
     }
 }
 
+@keyframes home-page-news-fade-in {
+    0% {
+        color: transparent;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        color: #000;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes home-page-news-fade-in-dark {
+    0% {
+        color: transparent;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        color: #ffffff;
+        transform: translateY(0px);
+    }
+}
+
 body {
     margin: 0;
+}
+
+#app-element-1 {
+    background-image: url(../img/home-button-dark.webp);
+    transition: all 0.2s;
+}
+
+#home-page-news,
+#app-element-2,
+.app-element-label {
+    transition: color 0.2s;
+    animation: app-elements-fade-in-dark 1.5s ease-in-out 0s 1;
+    color: #fff;
 }
 
 #remainTime {
@@ -348,19 +385,19 @@ body {
 
 #home-page-news {
     position: fixed;
-    top: 90px;
-    width: auto;
+    top: 75px;
+    width: fit-content;
     left: 30px;
     padding: 10px;
     padding-left: 15px;
-    border-radius: 15px;
-    border: solid 1px #dddddd;
-    color: #fff;
-    animation: app-elements-fade-in 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1;
-}
-
-#home-page-news.active {
-    display: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #ffffff1a;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
+    transition: color 0.2s;
+    animation: home-page-news-fade-in-dark 1.5s ease-in-out 0s 1;
 }
 
 #home-page-news-text {
