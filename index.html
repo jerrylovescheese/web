@@ -20,8 +20,9 @@
             $(document).ready(function () {
                 $(window).scroll(function () {
                     var scroll = $(window).scrollTop();
-                    if (scroll > 800) {
+                    if (scroll > 1600) {
                         $("#home-page-news").css("color", "black");
+                        $("#home-page-news").css("background-color", "rgba(231, 231, 231, 0.698)");
                         $("#app-element-1").css("background-image", "url(./static/img/home-button-light.webp)");
                         $("#app-element-2").css("color", "black");
                         $(".app-element-label").css("color", "black");
@@ -29,6 +30,7 @@
 
                     else {
                         $("#home-page-news").css("color", "white");
+                        $("#home-page-news").css("background-color", "#ffffff1a");
                         $("#app-element-1").css("background-image", "url(./static/img/home-button-dark.webp)");
                         $("#app-element-2").css("color", "white");
                         $(".app-element-label").css("color", "white");
@@ -145,8 +147,14 @@
     </div>
 
     <div class="canvas" id="canvas-4">
-        <span class="canvas-text">祝妳节日快乐</span>
-        <span class="canvas-text-small">国际妇女节</span>
+        <span class="canvas-text">eternal sunshine</span>
+        <a href="./pages/music.html"><span class="canvas-text-small">A妹新专上线 <i class="fas fa-arrow-right"></i></span>
+        </a>
+    </div>
+
+    <div class="canvas" id="canvas-5">
+        <span class="canvas-text">第96届奥斯卡</span>
+        <span class="canvas-text-small">下周一北京时间 07:00 - 10:00 看直播</span>
     </div>
 
     <div class="canvas" id="canvas-3">
