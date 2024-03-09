@@ -151,7 +151,7 @@
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
     #home-page-news {
         right: 30px;
@@ -449,16 +449,22 @@ body {
     margin-right: 30px;
 }
 
-#canvas-4 {
-    background-image: url(../img/Mar\ 8\ 2024\ IWD.webp) !important;
+#canvas-4,
+#canvas-5 {
+    background-image: url(../img/Eternal_Sunshine_Alternate_Cover_5.webp) !important;
     display: flex;
     justify-content: end;
     align-items: center;
     flex-direction: column;
 }
 
-#canvas-4>.canvas-text {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+#canvas-5 {
+    background-image: url(../img/96o_2560x1440_jimmyhostart_r2.webp) !important;
+}
+
+#canvas-4>.canvas-text,
+#canvas-5>.canvas-text {
+    font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-left: 0;
     margin-right: 0;
     font-size: 60px;
@@ -469,7 +475,9 @@ body {
         0 16px 64px rgba(0, 0, 0, 0.91);
 }
 
-#canvas-4>.canvas-text-small {
+#canvas-4>a>.canvas-text-small,
+#canvas-5>.canvas-text-small {
+    display: block;
     color: #fff;
     font-weight: normal;
     margin-left: 0;
@@ -494,11 +502,13 @@ body {
     color: #ffffff !important;
 }
 
-.canvas-text-small>a>i {
+.canvas-text-small>a>i,
+#canvas-4>a>span>i {
     transition: all 0.2s;
 }
 
-.canvas-text-small>a:hover i {
+.canvas-text-small>a:hover i,
+#canvas-4>a:hover i {
     transform: translateX(10px);
 }
 
