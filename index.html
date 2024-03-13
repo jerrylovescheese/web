@@ -12,48 +12,12 @@
     <script src="./static/js/jquery-3.7.1.js"></script>
     <script src="./static/js/include.js"></script>
     <script type="text/javascript">
-        // Check if the user's system or browser is in light mode
-        const lightModeQuery = window.matchMedia('(prefers-color-scheme: light)');
-
-        // Function to run when light mode is detected
-        function runScriptInLightMode() {
-            $(document).ready(function () {
-                $(window).scroll(function () {
-                    var scroll = $(window).scrollTop();
-                    if (scroll > 1600) {
-                        $("#home-page-news").css("color", "black");
-                        $("#home-page-news").css("background-color", "rgba(231, 231, 231, 0.698)");
-                        $("#app-element-1").css("background-image", "url(./static/img/home-button-light.webp)");
-                        $("#app-element-2").css("color", "black");
-                        $(".app-element-label").css("color", "black");
-                    }
-
-                    else {
-                        $("#home-page-news").css("color", "white");
-                        $("#home-page-news").css("background-color", "#ffffff1a");
-                        $("#app-element-1").css("background-image", "url(./static/img/home-button-dark.webp)");
-                        $("#app-element-2").css("color", "white");
-                        $(".app-element-label").css("color", "white");
-                    }
-                })
-            })
-        }
-
-        // Check if light mode is enabled
-        if (lightModeQuery.matches) {
-            // Light mode is enabled
-            runScriptInLightMode();
-        } else {
-            // Light mode is not enabled
-            console.log('Light mode is not enabled');
-        }
-
         (function show() {
             //1.设置目的时间
             var oYear = 2024
-            var oMonth = 1
-            var oDay = 25
-            var oHour = 13
+            var oMonth = 3
+            var oDay = 22
+            var oHour = 0
             var oMinute = 0
             var oSecond = 0
             var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
@@ -146,7 +110,7 @@
                 href="https://www.mediawiki.org/wiki/MediaWiki">MediaWiki</a> 来汇编所有AP心理学中的名词，欢迎帮助。</span>
     </div>
 
-    <div class="canvas" id="canvas-4">
+    <!-- <div class="canvas" id="canvas-4">
         <span class="canvas-text">eternal sunshine</span>
         <a href="./pages/music.html"><span class="canvas-text-small">A妹新专上线 <i class="fas fa-arrow-right"></i></span>
         </a>
@@ -155,7 +119,7 @@
     <div class="canvas" id="canvas-5">
         <span class="canvas-text">第96届奥斯卡</span>
         <span class="canvas-text-small">下周一北京时间 07:00 - 10:00 看直播</span>
-    </div>
+    </div> -->
 
     <div class="canvas" id="canvas-3">
         <div class="canvas-text" id="canvas-3-text">
@@ -180,6 +144,21 @@
                     <li><a href="./pages/develop.html">开发者 <i class="fas fa-arrow-right"></i></a></li>
                 </ul>
             </div>
+        </div>
+    </div>
+
+    <div class="canvas" id="canvas-4">
+        <div class="canvas-text" id="canvas-4-text">
+            <i class="fas fa-clock"></i><br><br>
+            <span class="canvas-text-small">距离期末考试 (可能的毕业) 还有</span><br><br><br>
+            <div id="remainTime">
+                <div id="one"></div> 天
+                <div id="two"></div> 时
+                <div id="three"></div> 分
+                <div id="four"></div> 秒。
+                <br><br><br>
+            </div>
+            <span class="canvas-text-small">期末考试时间预计为4月22日。</span><br>
         </div>
     </div>
 
