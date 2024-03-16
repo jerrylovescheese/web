@@ -29,14 +29,38 @@
             font-weight: lighter;
         }
 
+        @keyframes title-background-animation {
+            0% {
+                top: -35vh;
+            }
+
+            100% {
+                top: 0;
+            }
+        }
+
         #music-light {
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
+            width: 100%;
+            height: 30vh;
+            position: absolute;
             top: 0;
             left: 0;
-            background-image: radial-gradient(circle at top right, rgba(188, 143, 53, 0.55) 0%, rgba(0, 0, 0, 0) 30%);
             z-index: -1;
+            animation: title-background-animation 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1;
+            background: -webkit-gradient(linear, left top, right top, color-stop(7%, #65bcf2), color-stop(#5d88ff), color-stop(#5d88ff), color-stop(80%, #d0beff), to(#f0e0ff));
+            background: -webkit-linear-gradient(left, #65bcf2 7%, #5d88ff, #5d88ff, #d0beff 80%, #f0e0ff);
+            background: linear-gradient(90deg, #65bcf2 7%, #5d88ff, #5d88ff, #d0beff 80%, #f0e0ff);
+            background-repeat: no-repeat;
+        }
+
+        #music-light:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            filter: blur(1em);
+            background: -webkit-radial-gradient(50% 100%, circle, #7b00c21c 25%, rgba(217, 188, 240, 0.2) 55%), -webkit-radial-gradient(at bottom left, #cdbcff 10%, rgba(250, 249, 253, 0.2) 30%), -webkit-radial-gradient(at bottom right, #6a00c748 25%, rgba(252, 250, 254, 0) 40%);
+            background: radial-gradient(circle at 50% 100%, #7b00c21c 25%, rgba(215, 188, 240, 0.2) 55%), radial-gradient(at bottom left, #cdbcff 10%, rgba(250, 249, 253, 0.2) 30%), radial-gradient(at bottom right, #6a00c748 25%, rgba(252, 250, 254, 0) 40%);
         }
 
         iframe,
@@ -64,6 +88,12 @@
                 margin-top: 125px;
             }
         }
+
+        @media (max-width: 435px) {
+            #dev-cal-1>i {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -82,7 +112,7 @@
     </div>
 
     <div id="content-unit">
-        <p id="dev-cal-1">音乐</p>
+        <p id="dev-cal-1"><i class="fas fa-music"></i>&emsp13;&emsp13;音乐</p>
         <p id="update">这个页面上一次更新于2024年2月20日</p>
         <br>
         <div id="music-light"></div>

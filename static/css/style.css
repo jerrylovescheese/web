@@ -573,11 +573,6 @@ ul#app-site-list>a {
         border-bottom-right-radius: 0;
     }
 
-    #bar-wrapper:focus-within {
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-    }
-
     #app-element-3,
     #app-element-4,
     #app-element-5,
