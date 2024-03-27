@@ -568,7 +568,7 @@ ul#app-site-list>a {
 
 @media (max-width: 768px) {
     #bar-wrapper {
-        margin-right: 15px !important;
+        margin-right: 10px !important;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
