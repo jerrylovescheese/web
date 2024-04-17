@@ -186,7 +186,7 @@
 </head>
 
 <body>
-    <include src="./layout/layout.html"></include>
+    <include src="../layout/layout.html"></include>
     <div class="loader-wrapper">
         <i class="fa-solid fa-spinner fa-spin"></i>
         <span id="loader-prompt"><br>准备元素中。<br>Preparing elements.</span>
@@ -202,10 +202,9 @@
     <button id="toggleFullscreenBtn">
         <i class="fa-solid fa-expand"></i>&emsp;全屏 Go Fullscreen
     </button>
+    
+    <include src="../layout/footer.html"></include>
 
-    <p id="copyright-info">版权所有 © aluminum.studio <a id="my-page"
-            href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">江源工作室</a></p>
-    <br><br><br><br>
     <script>
         var dt = new Date();
         document.getElementById("datetime").innerHTML = (("0" + (dt.getMonth() + 1)).slice(-2)) + "/" + (("0" + dt.getDate()).slice(-2)) + "/" + (dt.getFullYear()) + " ";
