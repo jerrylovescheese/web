@@ -97,6 +97,14 @@
             font-style: italic;
         }
 
+        #copyright-info {
+            background-color: #e5e5e5;
+        }
+
+        #header-unit{
+            background-color: transparent !important;
+        }
+
         iframe {
             margin-left: 120px;
             margin-right: 30px;
@@ -106,6 +114,10 @@
         @media (prefers-color-scheme: dark) {
             #christmas-y {
                 filter: brightness(0.6);
+            }
+
+            #copyright-info {
+                background-color: #4e4e4e;
             }
 
             #one,
@@ -140,7 +152,7 @@
 </head>
 
 <body>
-    <include src="./layout/layout.html"></include>
+    <include src="../layout/layout.html"></include>
     <div class="loader-wrapper">
         <i class="fa-solid fa-spinner fa-spin"></i>
         <span id="loader-prompt"><br>准备元素中。<br>Preparing elements.</span>
@@ -498,11 +510,8 @@
 
         <br><br><br><br><br><br><br><br><br>
         <br><br><br><br><br><br><br><br><br>
-
-        <p id="copyright-info">版权所有 © aluminum.studio <a id="my-page"
-                href="http://jerrylovescheese.github.io/web/pages/aluminum_studio.html">江源工作室</a></p>
-        <br><br><br><br>
     </div>
+    <include src="../layout/footer.html"></include>
 </body>
 
 </html>
