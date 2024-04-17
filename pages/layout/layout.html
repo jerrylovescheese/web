@@ -1,170 +1,161 @@
-<!DOCTYPE html>
-<html lang="en">
+<script>
+    $(function () {
+        $("#app-element-2").click(function () {
+            $(".app-element-pop-ups-3").toggleClass("active");
+        });
+    });
+    $(function () {
+        $("#app-element-4").click(function () {
+            $("#app-element-pop-ups-1").toggleClass("active");
+        });
+    });
+    $(function () {
+        $("#app-element-5").click(function () {
+            $("#app-element-pop-ups-2").toggleClass("active");
+        });
+    });
+</script>
 
-<head>
-    <script>
-        $(function () {
-            $("#app-element-2").click(function () {
-                $(".app-element-pop-ups-3").toggleClass("active");
-            });
-        });
-        $(function () {
-            $("#app-element-4").click(function () {
-                $("#app-element-pop-ups-1").toggleClass("active");
-            });
-        });
-        $(function () {
-            $("#app-element-5").click(function () {
-                $("#app-element-pop-ups-2").toggleClass("active");
-            });
-        });
-    </script>
-</head>
-
-<body>
-    <header id="core">
-        <div id="core-backdrop" tabindex="1">
-            <div id="bar-wrapper" tabindex="1">
-                <div id="app">
-                    <div id="app-element-container">
-                        <a id="home-button" href="https://jerryly.top">
-                            <div class="app-elements" id="app-element-1"></div>
-                            <span class="app-element-label">的网站</span>
+<header id="core">
+    <div id="core-backdrop" tabindex="1">
+        <div id="bar-wrapper" tabindex="1">
+            <div id="app">
+                <div id="app-element-container">
+                    <a id="home-button" href="https://jerryly.top">
+                        <div class="app-elements" id="app-element-1"></div>
+                        <span class="app-element-label">的网站</span>
+                    </a>
+                    <div class="separator"></div>
+                    <div class="app-elements" id="app-element-3">
+                        <a href="./aluminum_studio.html">
+                            <span class="app-element-label">
+                                <i class="fa-solid fa-circle-info"></i>
+                                &emsp13;&emsp13;关于我
+                            </span>
                         </a>
-                        <div class="separator"></div>
-                        <div class="app-elements" id="app-element-3">
-                            <a href="./aluminum_studio.html">
-                                <span class="app-element-label">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    &emsp13;&emsp13;关于我
-                                </span>
-                            </a>
-                        </div>
-                        <div class="app-elements" id="app-element-4">
-                            <span class="app-element-label">
-                                <i class="fa-solid fa-heart"></i>
-                                &emsp13;&emsp13;爱好箱
-                            </span>
-                        </div>
-                        <div class="app-elements" id="app-element-5">
-                            <span class="app-element-label">
-                                <i class="fa-solid fa-newspaper"></i>
-                                &emsp13;&emsp13;整理箱
-                            </span>
-                        </div>
-                        <div class="app-elements" id="app-element-6">
-                            <a href="./clock.html">
-                                <span class="app-element-label">
-                                    <i class="fa-solid fa-clock"></i>
-                                    &emsp13;&emsp13;时间大厅
-                                </span>
-                            </a>
-                        </div>
                     </div>
-                    <div class="app-elements" id="app-element-2">
-                        <i class="fa-solid fa-bars"></i>
+                    <div class="app-elements" id="app-element-4">
+                        <span class="app-element-label">
+                            <i class="fa-solid fa-heart"></i>
+                            &emsp13;&emsp13;爱好箱
+                        </span>
+                    </div>
+                    <div class="app-elements" id="app-element-5">
+                        <span class="app-element-label">
+                            <i class="fa-solid fa-newspaper"></i>
+                            &emsp13;&emsp13;整理箱
+                        </span>
+                    </div>
+                    <div class="app-elements" id="app-element-6">
+                        <a href="./clock.html">
+                            <span class="app-element-label">
+                                <i class="fa-solid fa-clock"></i>
+                                &emsp13;&emsp13;时间大厅
+                            </span>
+                        </a>
                     </div>
                 </div>
-            </div>
-            <div class="app-element-pop-ups" id="app-element-pop-ups-1">
-                <a href="./apple.html" id="app-element-pop-up-label-1">
-                    <span class="app-element-pop-up-label">
-                        <i class="fa-brands fa-apple"></i>&emsp13;&emsp13;苹果
-                    </span>
-                </a>
-                <div class="separator"></div>
-                <a href="./taylorswift.html" id="app-element-pop-up-label-2">
-                    <span class="app-element-pop-up-label">
-                        <i class="fas fa-microphone"></i>&emsp13;&emsp13;霉霉
-                    </span>
-                </a>
-            </div>
-            <div class="app-element-pop-ups" id="app-element-pop-ups-2">
-                <a href="./classical_ch.html" id="app-element-pop-up-label-1">
-                    <span class="app-element-pop-up-label">
-                        <i class="fas fa-pen"></i>&emsp13;&emsp13;初中古文
-                    </span>
-                </a>
-                <div class="separator"></div>
-                <a href="./classical_ch_sh.html" id="app-element-pop-up-label-2">
-                    <span class="app-element-pop-up-label">
-                        <i class="fas fa-pen"></i>&emsp13;&emsp13;高中古文
-                    </span>
-                </a>
-            </div>
-            <div class="app-element-pop-ups-3">
-                <span id="app-element-pop-up-label-3"><i
-                        class="fa-solid fa-map-location-dot"></i>&emsp13;&emsp13;所有页面</span>
-                <ul id="app-site-list">
-                    <a href="./aluminum_studio.html">
-                        <li>关于我</li>
-                    </a>
-                    <a href="./apple.html">
-                        <li>苹果</li>
-                    </a>
-                    <a href="./christmas.html">
-                        <li>圣诞节</li>
-                    </a>
-                    <a href="./classical_ch_sh.html">
-                        <li>部编版高中语文古文合集</li>
-                    </a>
-                    <a href="./classical_ch.html">
-                        <li>部编版初中语文古文合集</li>
-                    </a>
-                    <a href="./clock.html">
-                        <li>时钟</li>
-                    </a>
-                    <a href="./develop.html">
-                        <li>开发者</li>
-                    </a>
-                    <a href="./friends.html">
-                        <li>老友记</li>
-                    </a>
-                    <a href="./homemade_giftcard.html">
-                        <li>手写祝福</li>
-                    </a>
-                    <a href="./music.html">
-                        <li>音乐</li>
-                    </a>
-                    <a href="./search.html">
-                        <li>搜索</li>
-                    </a>
-                    <a href="./social_network.html">
-                        <li>社交网络</li>
-                    </a>
-                    <a href="./survey.html">
-                        <li>调查</li>
-                    </a>
-                </ul>
+                <div class="app-elements" id="app-element-2">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
         </div>
-    </header>
-
-    <div id="tool">
-        <div class="tool-elements" id="return-to-top">
-            <a href="#">
-                <span class="tool-element-label">
-                    <i class="fas fa-arrow-up"></i>&emsp13;回顶部
+        <div class="app-element-pop-ups" id="app-element-pop-ups-1">
+            <a href="./apple.html" id="app-element-pop-up-label-1">
+                <span class="app-element-pop-up-label">
+                    <i class="fa-brands fa-apple"></i>&emsp13;&emsp13;苹果
+                </span>
+            </a>
+            <div class="separator"></div>
+            <a href="./taylorswift.html" id="app-element-pop-up-label-2">
+                <span class="app-element-pop-up-label">
+                    <i class="fas fa-microphone"></i>&emsp13;&emsp13;霉霉
                 </span>
             </a>
         </div>
-        <div class="separator"></div>
-        <div class="tool-elements" id="language">
-            <a href="../en/index-en.html">
-                <span class="tool-element-label">
-                    <i class="fas fa-language"></i>&emsp13;English
+        <div class="app-element-pop-ups" id="app-element-pop-ups-2">
+            <a href="./classical_ch.html" id="app-element-pop-up-label-1">
+                <span class="app-element-pop-up-label">
+                    <i class="fas fa-pen"></i>&emsp13;&emsp13;初中古文
+                </span>
+            </a>
+            <div class="separator"></div>
+            <a href="./classical_ch_sh.html" id="app-element-pop-up-label-2">
+                <span class="app-element-pop-up-label">
+                    <i class="fas fa-pen"></i>&emsp13;&emsp13;高中古文
                 </span>
             </a>
         </div>
-        <div class="separator"></div>
-        <div class="tool-elements" id="connect">
-            <a href="./social_network.html">
-                <span class="tool-element-label">
-                    <i class="fas fa-rss"></i>&emsp13;联系
-                </span>
-            </a>
+        <div class="app-element-pop-ups-3">
+            <span id="app-element-pop-up-label-3"><i
+                    class="fa-solid fa-map-location-dot"></i>&emsp13;&emsp13;所有页面</span>
+            <ul id="app-site-list">
+                <a href="./aluminum_studio.html">
+                    <li>关于我</li>
+                </a>
+                <a href="./apple.html">
+                    <li>苹果</li>
+                </a>
+                <a href="./christmas.html">
+                    <li>圣诞节</li>
+                </a>
+                <a href="./classical_ch_sh.html">
+                    <li>部编版高中语文古文合集</li>
+                </a>
+                <a href="./classical_ch.html">
+                    <li>部编版初中语文古文合集</li>
+                </a>
+                <a href="./clock.html">
+                    <li>时钟</li>
+                </a>
+                <a href="./develop.html">
+                    <li>开发者</li>
+                </a>
+                <a href="./friends.html">
+                    <li>老友记</li>
+                </a>
+                <a href="./homemade_giftcard.html">
+                    <li>手写祝福</li>
+                </a>
+                <a href="./music.html">
+                    <li>音乐</li>
+                </a>
+                <a href="./search.html">
+                    <li>搜索</li>
+                </a>
+                <a href="./social_network.html">
+                    <li>社交网络</li>
+                </a>
+                <a href="./survey.html">
+                    <li>调查</li>
+                </a>
+            </ul>
         </div>
     </div>
-</body>
+</header>
 
-</html>
+<div id="tool">
+    <div class="tool-elements" id="return-to-top">
+        <a href="#">
+            <span class="tool-element-label">
+                <i class="fas fa-arrow-up"></i>&emsp13;回顶部
+            </span>
+        </a>
+    </div>
+    <div class="separator"></div>
+    <div class="tool-elements" id="language">
+        <a href="../en/index-en.html">
+            <span class="tool-element-label">
+                <i class="fas fa-language"></i>&emsp13;English
+            </span>
+        </a>
+    </div>
+    <div class="separator"></div>
+    <div class="tool-elements" id="connect">
+        <a href="./social_network.html">
+            <span class="tool-element-label">
+                <i class="fas fa-rss"></i>&emsp13;联系
+            </span>
+        </a>
+    </div>
+</div>
