@@ -90,6 +90,11 @@
         background-color: #000 !important;
         border-left-color: #575757 !important;
     }
+
+    .crumb>a,
+    .crumb a::after {
+        color: #ffffffd4 !important;
+    }
 }
 
 html,
@@ -759,4 +764,33 @@ ul#app-site-list>a {
 .subtitle {
     font-weight: bold;
     font-size: 25px;
+}
+
+nav {
+    background-color: #f3f3f346;
+    padding: 1px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.crumbs ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.crumb {
+    display: inline-block;
+}
+
+.crumb>a {
+    color: #38383891;
+}
+
+.crumb a::after {
+    display: inline-block;
+    color: #38383891;
+    content: ' / ';
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
 }
