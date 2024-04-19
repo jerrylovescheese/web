@@ -66,6 +66,10 @@
         background-color: #000 !important;
     }
 
+    #header-collapse-button {
+        border-color: #707070 !important;
+    }
+
     #quick-links>b {
         color: rgba(255, 255, 255, 0.5) !important;
     }
@@ -503,7 +507,7 @@ ul#app-site-list>a {
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
-    border: solid 1px rgba(169, 169, 169, 0.75);
+    border: solid 1px #cbcbcb;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     -moz-backdrop-filter: blur(12px);
