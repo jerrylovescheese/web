@@ -14,6 +14,12 @@
             $("#app-element-pop-ups-2").toggleClass("active");
         });
     });
+    $(function () {
+        $("#header-collapse-button").click(function () {
+            $("#header-unit").toggleClass("active");
+            $("#content-unit").toggleClass("active");
+        });
+    });
 </script>
 
 <header id="core">
@@ -67,7 +73,7 @@
                 </span>
             </a>
             <div class="separator"></div>
-            <a href="..taylorswift.html" id="app-element-pop-up-label-2">
+            <a href="../taylorswift.html" id="app-element-pop-up-label-2">
                 <span class="app-element-pop-up-label">
                     <i class="fas fa-microphone"></i>&emsp13;&emsp13;霉霉
                 </span>
@@ -157,5 +163,11 @@
                 <i class="fas fa-rss"></i>&emsp13;联系
             </span>
         </a>
+    </div>
+</div>
+
+<div id="header-collapse">
+    <div id="header-collapse-button">
+        <i class="fa-solid fa-square-caret-left"></i>&emsp13;&emsp13;导航器
     </div>
 </div>
