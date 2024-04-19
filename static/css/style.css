@@ -646,6 +646,7 @@ ul#app-site-list>a {
         -moz-backdrop-filter: blur(12px);
         border: solid 1px #cbcbcb;
         border-top: none;
+        z-index: 3;
     }
 
     #header-collapse-button {
