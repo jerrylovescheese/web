@@ -136,6 +136,13 @@
             #four {
                 border-color: black !important;
             }
+
+            #ttpd-review {
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+                    0 2px 2px rgba(0, 0, 0, 0.11),
+                    0 4px 4px rgba(0, 0, 0, 0.11),
+                    0 8px 8px rgba(0, 0, 0, 0.11) !important;
+            }
         }
 
         @font-face {
@@ -264,6 +271,32 @@
         .breaking {
             color: #cc0700;
         }
+
+        #ttpd-review {
+            box-shadow: 0 1px 1px rgba(236, 234, 230, 0.41),
+                0 2px 2px rgba(236, 234, 230, 0.31),
+                0 4px 4px rgba(236, 234, 230, 0.21),
+                0 8px 8px rgba(236, 234, 230, 0.11);
+            transition: all 0.2s;
+        }
+
+        #ttpd-review>p>a {
+            color: unset;
+        }
+
+        #ttpd-review:hover {
+            box-shadow: none;
+        }
+
+        #ttpd-review:active {
+            scale: 95%;
+        }
+
+        #ttpd-review-title {
+            font-family: 'Big Caslon FB';
+            font-weight: bold;
+            font-size: 25px;
+        }
     </style>
 </head>
 
@@ -311,12 +344,42 @@
                     Yet</span><br>
                 <span class="breaking"><i class="fas fa-circle-exclamation"></i>&emsp;
                     Taylor Swift announces The Anthology edition of <i>The Tortured Poets Departmen</i>, completing
-                    the album with 31 songs</span>
+                    the album with a total of 31 songs</span>
             </p>
         </div>
 
         <p id="dev-cal-2" class="track-title"><span id="title-1">Reaction</span></p>
+        <div class="pages-container" id="ttpd-review">
+            <p id="dev-cal-2">
+                <i class="fas fa-quote-left"></i>&emsp;李江源 / 评《The Tortured Poets Department》
+                <br>
+            </p>
+            <p id="dev-cal-2">
+                <a
+                    href="https://mp.weixin.qq.com/s?__biz=MzU5NjAxNjI0NA==&mid=2247484555&idx=1&sn=71bb2cfacbe941e78a8c93f38b953351&chksm=fe686990c91fe08647a01b41cb54291478c9be8683b1cb990fea86a16813571690605cf100f4#rd">
+                    <span id="ttpd-review-title">
+                        In a Splendid Mix of Unembellished Lyricism, First-In-Class Writing, and Her Usual
+                        “Neo-Classical” Pop, Taylor Swift’s <i>The Tortured Poets Department</i> Is Her Most Authentic,
+                        Resonating Work Yet
+                    </span>
+                    <br>
+                    Read my review <i class="fas fa-arrow-right"></i>
+                </a>
+            </p>
+        </div>
         <div class="pages-container">
+            <p id="dev-cal-2">
+                <b><i class="fas fa-pen"></i>&emsp;曲目排名</b>
+            </p>
+            <ol id="dev-cal-2">
+                <li>I Can Do It With a Broken Heart</li>
+                <li>Fortnight (feat Post Malone)</li>
+                <li>The Tortured Poets Department</li>
+                <li>Guilty as Sin?</li>
+                <li>The Alchemy</li>
+                <li>Down Bad</li>
+                <li>But Daddy I Love Him</li>
+            </ol>
             <p id="dev-cal-2">
                 <b><i class="fas fa-pen"></i>&emsp;4月19日</b>
             </p>
@@ -340,15 +403,39 @@
                 tuned！
             </p>
             <p id="dev-cal-2">
-                <b><i class="fas fa-pen"></i>&emsp;曲目排名</b>
+                <b><i class="fas fa-pen"></i>&emsp;4月20日</b>
             </p>
-            <ol id="dev-cal-2">
-                <li>I Can Do It With a Broken Heart</li>
-                <li>Fortnight (feat Post Malone)</li>
-                <li>The Tortured Poets Department</li>
-                <li>But Daddy I Love Him</li>
-                <li>Down Bad</li>
-            </ol>
+            <p id="dev-cal-2">
+                可以先读读我写的专辑评价吗，链接附于<a href="#ttpd-review">上方</a>，说不定你会对专辑有新的理解。
+                <br>
+                今天去看了小红书、微博、B站的各种评论。好像逐渐理解了大家为什么觉得这张专辑不及预期。
+            </p>
+            <ul id="dev-cal-2">
+                <li><i>Fortnight</i> 之前有 AI 的版本，我去听了，只能说确实比原曲的 pop 含量更高一些；</li>
+                <li>好多人觉得专辑很多歌都被 Jack Antonoff 的合成器同质化了；</li>
+                <li>词太难懂了；</li>
+                <li>粉丝滤镜下评价专辑的好坏已经变成了引战。</li>
+            </ul>
+            <p id="dev-cal-2">
+                这四点我是这么理解的：
+            </p>
+            <ul id="dev-cal-2">
+                <li>我一直很讨厌泄曲，好好的神秘感全被这些人弄坏了。所以每个新专发布之前所有看着像泄曲的视频或者音频我一律屏蔽了。那个 AI 合成的我也没听，因为 B
+                    站从来没有给我推送过那个视频。<br>此外还有一点我跟大家很不一样的是：专辑发布之前我已经有四个月没怎么听霉霉的歌了。（我有 Apple Music
+                    月度听歌报告为证，欢迎私信）主要原因不是因为她的歌我不喜欢了（引战的可以走了）而是因为我忙着入 Lana Del Rey 的坑（我怎么才爱上打雷，相见恨晚）和听 Ariana Grande
+                    的新专。所以我就是没有抱着任何期待或者想法去听的。也没有拿这个专和她先前的专比较。<br>所以我听 <i>Fortnight</i>
+                    的时候感觉还是很惊艳的，一直跟着旋律在辅导室（也被同学们称为网吧）的椅子上一个人跟着节拍摇摆。
+                </li>
+                <li>其实我听完前两首的时候和大家是一样的，也开始担心同质化的问题了。但是我觉得这个真的不能怪 Jack - 逃跑车和残夏也是他制作的，但是从这张专里你绝对找不到逃跑车的味 - 十七年了，Taylor
+                    的风格变了这么多次，她可能就是想在这种“文艺 pop”的路上走下去。谁知道呢？说不定以后还会有新的风格。所以那些直接开始在评论区“十年老粉江郎才尽”的可以省省了。<br>但是我听
+                    <i>folklore</i> 和 <i>evermore</i> 的时候就挺开心的。我可能就是比较喜欢这种“诗”风的 Taylor 吧。
+                </li>
+                <li>这个专辑的名字里就有 “poet” 了，难免会用到文邹邹的词汇，比如 <i>Guilty as Sin?</i> 里的
+                    “tryst“，中文意思是“幽会”，意思就是秘密的约会。牛津词典甚至在这个词旁边表上了“文学性词（literary）”。如果真的觉得很晦涩，不妨试试第13首那个 <i>I Can Do It With
+                        a Broken Heart</i> 可能感觉会好些？</li>
+                <li>get 不到真的再正常不过了 - 我第一次听 reputation 的时候是眉头紧皱着听的，整整一年之后，了解 Taylor 的遭遇才 relate 到。为什么要强制别人 get
+                    到啊……？是粉丝就要喜欢吗？<br>我觉得虽然我现在是很喜欢 TTPD 的（因为它杰出的作词深得我心）但我也需要时间来证明这张专是不是真的企及了它概念的高度。</li>
+            </ul>
         </div>
 
         <p id="dev-cal-2" class="track-title"><span id="title-2">Tracklist</span></p>
