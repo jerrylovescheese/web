@@ -738,6 +738,9 @@ ul#app-site-list>a {
     text-align: center;
     padding: 30px;
     background-color: #e5e5e546;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
     z-index: 1;
     position: relative;
 }
