@@ -61,12 +61,8 @@
 
     #header-unit,
     #tool,
-    #header-collapse-button {
+    #header-collapse {
         background-color: #000 !important;
-    }
-
-    #header-collapse-button {
-        border-color: #707070 !important;
     }
 
     #quick-links>b {
@@ -86,7 +82,7 @@
     .pages-container,
     #app-element-2,
     #tool,
-    #header-collapse-button {
+    #header-collapse {
         border-color: #575757 !important;
     }
 
@@ -511,10 +507,10 @@ ul#app-site-list>a {
 }
 
 #header-collapse-button {
-    height: 25px;
-    margin: 2.5px;
+    height: 20px;
+    margin: 5px;
     transition: all 0.2s;
-    line-height: 25px;
+    line-height: 20px;
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 5px;
