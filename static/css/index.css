@@ -81,11 +81,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    #canvas-4 {
-        /* 在容器中心的渐变，从红色开始，变成蓝色，最后变成绿色 */
-        background-image: radial-gradient(circle at left, rgba(255, 191, 0, 0.55) 0, rgb(0, 0, 0) 50%) !important;
-    }
-
     #home-page-news-text {
         animation: home-page-news-fade-in-dark 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1 !important;
     }
@@ -476,13 +471,15 @@ body {
     margin-right: 30px;
 }
 
-#canvas-4 {
-    /* 在容器中心的渐变，从红色开始，变成蓝色，最后变成绿色 */
-    background-image: radial-gradient(circle at top, rgba(255, 191, 0, 0.55) 0, rgb(255, 255, 255) 50%);
+#canvas-4-text {
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
 }
 
-#canvas-4-text {
-    font-size: 50px;
+#canvas-4-text>.canvas-text-small {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .canvas-text-small {
