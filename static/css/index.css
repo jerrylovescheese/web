@@ -142,13 +142,6 @@
 }
 
 @media (max-width: 1024px) {
-
-    #canvas-1-text,
-    #canvas-2-text {
-        line-height: unset !important;
-        font-size: 40px !important;
-    }
-
     #canvas-3-text {
         font-size: 80px !important;
     }
@@ -161,12 +154,6 @@
 
     .canvas-text-small {
         margin-right: 30px !important;
-    }
-
-    #canvas-1-text,
-    #canvas-2-text {
-        line-height: unset !important;
-        font-size: 40px !important;
     }
 
     #remainTime {
@@ -469,6 +456,22 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     margin-right: 30px;
+}
+
+#canvas-1>span {
+    font-family: STSong, Songti, 'Source Han Sans', serif;
+    margin: 30px;
+    margin-top: 120px;
+    line-height: 32px;
+    font-size: 18px;
+    break-after: auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+#canvas-1-special {
+    font-family: serif;
+    font-weight: bold;
 }
 
 #canvas-4-text {
