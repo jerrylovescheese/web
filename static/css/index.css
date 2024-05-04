@@ -290,8 +290,8 @@ body {
 #suspended-notice {
     width: 100vw;
     height: 100vh;
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /* display: none; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
