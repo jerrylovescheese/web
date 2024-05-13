@@ -143,6 +143,11 @@
     #textbgc-3>#canvas-link-list>li>a {
         color: rgb(206, 222, 255) !important;
     }
+
+    #canvas-1 {
+        background-color: #000 !important;
+        color: white;
+    }
 }
 
 @media(prefers-color-scheme: light) {
