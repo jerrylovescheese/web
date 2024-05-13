@@ -29,8 +29,9 @@
 
 @font-face {
     font-family: 'Libre Baskerville';
-    src: url(../fonts/Libre-Baskerville.woff) format('woff2-variations');
-    font-weight: 300;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Baskerville BT Italic'), url('../fonts/BaskervilleBT.woff') format('woff');
 }
 
 @font-face {
@@ -50,6 +51,28 @@
     src: url(../../static/fonts/BigCaslonFB-BoldItalic.woff2) format('woff2');
     font-weight: 1000;
     font-style: italic;
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    font-style: italic;
+    font-weight: bold;
+    src: local('Baskerville BT Italic'), url('../fonts/BaskervilleBoldItalicBT.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Baskerville BT Bold'), url('../fonts/BaskervilleBoldBT.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    font-style: italic;
+    font-weight: normal;
+    src: local('Baskerville BT Bold'), url('../fonts/BaskervilleItalicBT.woff') format('woff');
 }
 
 @keyframes gradient-canvas {
@@ -290,8 +313,8 @@ body {
 #suspended-notice {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    /* display: none; */
+    /* display: flex; */
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -458,20 +481,25 @@ body {
     margin-right: 30px;
 }
 
+#canvas-1 {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
 #canvas-1>span {
-    font-family: STSong, Songti, 'Source Han Sans', serif;
+    font-family: 'Libre Baskerville', serif;
     margin: 30px;
     margin-top: 120px;
-    line-height: 32px;
-    font-size: 18px;
+    font-size: 38px;
     break-after: auto;
     text-align: center;
     overflow: hidden;
 }
 
 #canvas-1-special {
-    font-family: serif;
-    font-weight: bold;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 24px;
 }
 
 #canvas-4-text {
