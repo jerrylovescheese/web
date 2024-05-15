@@ -107,21 +107,38 @@
     <!-- <p id="dev-pause">网页暂停开放。恢复时间待定。<br>Site is closed. Be back soon.</p> -->
 
     <div class="normal-container">
-        <div id="homeboard">
+        <div class="canvas" id="canvas-1">
+            <span>
+                <p><i>Manchild</i><br></p>
+                <p id="canvas-1-special">My album of works<br>Out July 17</p>
+                <br>
+                <audio src="../static/audio/May 13 2024 3.mp3" controls controlsList="nodownload"></audio>
+            </span>
+            <div class="canvas-clicker">
+                <a href="#canvas-2">
+                    <div class="canvas-clicker-inside"><i class="fas fa-circle-chevron-down"></i>&emsp;1 of 2</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="canvas" id="canvas-2">
+            New ideas, line by line.
+            <span class="canvas-text">
+                The website that embraces minimalsitic CSS. Written from the ground up, line by line.
+            </span>
+            <div class="canvas-clicker">
+                <a href="#canvas-1">
+                    <div class="canvas-clicker-inside"><i class="fas fa-circle-chevron-up"></i>&emsp;2 of 2</div>
+                </a>
+            </div>
+        </div>
+        <!-- <div id="homeboard">
             <div id="homeboard-text">
                 The ideal internet.<br><a id="homeboard-text-small-3"
                     href="https://jerryly.top/en/index-en.html">jerryly.top</a>
                 <div id="homeboard-text-small-2"><i class="fas fa-caret-square-up"></i> scroll up for more</div>
             </div>
-        </div>
-        <div class="home-slide-en" id="home-slide-en-1">
-            <a href="../404.html"><span class="home-slide-en-text">Why cybersecurity matters to you <i
-                        class="fas fa-arrow-right"></i></span></a>
-        </div>
-        <div class="home-slide-en" id="home-slide-en-2">
-            <a href="../404.html"><span class="home-slide-en-text">Technology is magnifying inequalities <i
-                        class="fas fa-arrow-right"></i></span></a>
-        </div>
+        </div> -->
 
         <br><br>
 
@@ -210,14 +227,14 @@
             <p id="home-2">A website that sounds new, looks different, and feels intuitive. Made by Jiangyuan (Jerry)
                 Li.</p>
             <p id="home-1">View Release Notes</p>
-            <p id="home-2">View <a style="color: rgb(85, 164, 255);" href="../pages/develop.html">Release Notes and
+            <p id="home-2">View <a href="../pages/develop.html">Release Notes and
                     developer's log</a>.</p>
         </div>
     </div>
     <br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br>
-    
+
     <include src="../layout/footer.html"></include>
 
     <script src="../static/js/clock-script.js"></script>

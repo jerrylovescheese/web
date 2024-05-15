@@ -108,7 +108,8 @@
         animation: home-page-news-fade-in-dark 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1 !important;
     }
 
-    #canvas-5-text {
+    #canvas-5-text,
+    #canvas-7-text {
         color: #fff !important;
     }
 
