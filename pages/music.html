@@ -14,6 +14,13 @@
     <script src="../static/js/loader.js"></script>
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script>
+        $(function () {
+            $("#title-1").click(function () {
+                $("#song-1").toggleClass("active");
+            });
+        });
+    </script>
     <style>
         .music-song-title {
             margin-left: 120px;
@@ -46,7 +53,7 @@
             top: 0;
             left: 0;
             z-index: -1;
-            animation: title-background-animation 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1;
+            /* animation: title-background-animation 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1; */
             background: -webkit-gradient(linear, left top, right top, color-stop(7%, #65bcf2), color-stop(#5d88ff), color-stop(#5d88ff), color-stop(80%, #d0beff), to(#f0e0ff));
             background: -webkit-linear-gradient(left, #65bcf2 7%, #5d88ff, #5d88ff, #d0beff 80%, #f0e0ff);
             background: linear-gradient(90deg, #65bcf2 7%, #5d88ff, #5d88ff, #d0beff 80%, #f0e0ff);
@@ -58,16 +65,37 @@
             display: block;
             width: 100%;
             height: 100%;
-            filter: blur(1em);
             background: -webkit-radial-gradient(50% 100%, circle, #7b00c21c 25%, rgba(217, 188, 240, 0.2) 55%), -webkit-radial-gradient(at bottom left, #cdbcff 10%, rgba(250, 249, 253, 0.2) 30%), -webkit-radial-gradient(at bottom right, #6a00c748 25%, rgba(252, 250, 254, 0) 40%);
             background: radial-gradient(circle at 50% 100%, #7b00c21c 25%, rgba(215, 188, 240, 0.2) 55%), radial-gradient(at bottom left, #cdbcff 10%, rgba(250, 249, 253, 0.2) 30%), radial-gradient(at bottom right, #6a00c748 25%, rgba(252, 250, 254, 0) 40%);
+        }
+
+        #song-1 {
+            display: none;
+        }
+
+        #song-1.active {
+            display: block;
+        }
+
+        #song-2 {
+            aspect-ratio: 16/9;
+            background-image: url(../static/img/May-17-2024_画板-1.webp);
+            background-size: contain;
         }
 
         iframe,
         #audio-1 {
             margin-top: 10px;
             margin-bottom: 10px;
-            margin-left: 120px;
+        }
+
+        .pages-container>#dev-cal-2 {
+            margin-left: 0;
+        }
+
+        .music-emphasize {
+            font-size: 20px;
+            line-height: 24px;
         }
 
         @media (max-width: 425px) {
@@ -94,6 +122,10 @@
                 display: none;
             }
         }
+
+        #update {
+            padding-top: 20px;
+        }
     </style>
 </head>
 
@@ -110,133 +142,186 @@
         </div>
         <div id="quick-links">
             <b>ON THIS PAGE:</b>
-            <span id="quick-link-1" class="quick-link"><a href="#title-0">we can't be friends (wait for your
+            <span id="quick-link-1" class="quick-link"><a href="#title-0">HIT ME HARD AND SOFT</a></span>
+            <span id="quick-link-2" class="quick-link"><a href="#title-1">we can't be friends (wait for your
                     love)</a></span>
         </div>
     </div>
 
     <div id="content-unit">
         <p id="dev-cal-1"><i class="fas fa-music"></i>&emsp13;&emsp13;音乐</p>
-        <p id="update">这个页面上一次更新于2024年2月20日</p>
+        <p id="update">这个页面上一次更新于2024年5月17日</p>
         <br>
         <div id="music-light"></div>
-        <p id="dev-cal-2"><span class="subtitle" id="title-0">we can't be friends (wait for your love)</span></p>
-        <audio src="../static/audio/we can't be friends (wait for your love).mp3" controls id="audio-1"></audio>
+
         <p id="dev-cal-2">
-            [Verse 1]
-            <br>I didn't think you'd understand me
-            <br>没想过你会理解我
-            <br>How could you ever even try?
-            <br>你怎么做到的？
-            <br>I don't wanna tiptoe, but I don't wanna hide
-            <br>我不愿小心翼翼 不愿躲躲藏藏
-            <br>But I don't wanna feed this monstrous fire
-            <br>也不愿火上浇油
-            <br>Just wanna let this story die
-            <br>故事消逝之时
-            <br>And I'll be alright
-            <br>一切会好起来
-            <br>
-            <br>[Chorus]
-            <br>We can't be friends
-            <br>我们不能再做朋友
-            <br>But I'd like to just pretend
-            <br>但我还在假想和你握手
-            <br>You cling to your papers and pens
-            <br>你握着黑纸白字
-            <br>Wait until you like me again
-            <br>但我还在等你回头
-            <br>
-            <br>[Post-Chorus]
-            <br>Wait for your love
-            <br>等你回头
-            <br> My love, I'll wait for your love
-            <br>我在等你的爱
-            <br>
-            <br>[Verse 2]
-            <br>Me and my truth, we sit in silence
-            <br>我和真相静坐于黑暗中
-            <br>Mm
-            <br>Babygirl, it's just me and you
-            <br>宝贝 现在只有你我
-            <br>'Cause I don't wanna argue, but I don't wanna bite
-            <br>我不想争论 也不想沉默
-            <br>My tongue, yeah, I think I'd rather die
-            <br>我觉得还是死了算了
-            <br>You got me misunderstood
-            <br>你误解了我
-            <br>But at least I look this good
-            <br>但至少我过得还好
-            <br>
-            <br>[Chorus]
-            <br>We can't be friends
-            <br>我们不能再做朋友
-            <br>But I'd like to just pretend
-            <br>但我还在假想和你握手
-            <br>You cling to your papers and pens
-            <br>你握着黑纸白字
-            <br>Wait until you like me again
-            <br>但我还在等你回头
-            <br>
-            <br>[Post-Chorus]
-            <br>Wait for your love
-            <br>等你回头
-            <br>My love, I'll wait for your love
-            <br>我在等你的爱
-            <br>I'll wait for your love
-            <br>我会等你的爱
-            <br>My love, I'll wait for your love
-            <br>我会等你的爱
-            <br>
-            <br>[Bridge]
-            <br>Know that you made me
-            <br>我知道你让我的生活完整
-            <br>I don't like how you paint me, yet I'm still here hanging
-            <br>我不喜欢你画中的我 但我还是把画挂起
-            <br>Not what you made me
-            <br>我为自己活着
-            <br>It's somethin' like a daydream
-            <br>如梦如幻
-            <br>But I feel so seen in the night
-            <br>却走到哪里都被看穿
-            <br>So for now, it's only me
-            <br>所以我独自一人
-            <br>And maybe that's all I need
-            <br>也好像过得美满
-            <br>
-            <br>[Chorus]
-            <br>We can't be friends
-            <br>我们不能再做朋友
-            <br>But I'd like to just pretend
-            <br>但我还在假想和你握手
-            <br>You cling to your papers and pens
-            <br>你握着黑纸白字
-            <br>Wait until you like me again
-            <br>但我还在等你回头
-            <br>
-            <br>[Post-Chorus]
-            <br>Wait for your love
-            <br>等你回头
-            <br>My love, I'll wait for your love
-            <br>我在等你的爱
-            <br>I'll wait for your love
-            <br>我会等你的爱
-            <br>My love, I'll wait for your love
-            <br>我会等你的爱
-            <br>
-            <br>[Outro]
-            <br>I'll wait for your love
-            <br>我会等你的爱
-            <br>I'll wait for your love
-            <br>我会等你的爱
-            <br>I'll wait for your love
-            <br>我会等你的爱
-            <br>I'll wait for your love
-            <br>我会等你的爱
-            <br>I'll wait for your love
-            <br>我会等你的爱
-            <br><br>翻译：李江源，翻译归译者版权所有
+            <a href="./taylorswift.html">
+                Searching for Taylor? I devoted a whole page on her ;-) <i class="fas fa-arrow-right"></i>
+            </a>
         </p>
+        <div class="pages-container" id="song-2"></div>
+
+        <p id="dev-cal-2"><span class="subtitle" id="title-0">HIT ME HARD AND SOFT</span></p>
+        <div class="pages-container">
+            <p id="dev-cal-2">
+                <a href="https://mp.weixin.qq.com/s/HHTDPqXU3lDIjsebTd4q8A">Listen to my first listen reaction <i
+                        class="fas fa-arrow-right"></i></a>
+            </p>
+            <p id="dev-cal-2">
+                <b class="music-emphasize">Tracklist</b>
+                <br>I'm just gonna highlight my favorites here with a heart icon <i
+                    class="fas fa-heart-circle-plus"></i>
+            </p>
+            <ol id="dev-cal-2" class="music-emphasize">
+                <li>SKINNY <i class="fas fa-heart-circle-plus"></i></li>
+                <li>LUNCH <i class="fas fa-heart-circle-plus"></i></li>
+                <li>CHIHIRO <i class="fas fa-heart-circle-plus"></i></li>
+                <li>BIRDS OF A FEATHER <i class="fas fa-heart-circle-plus"></i></li>
+                <li>WILDFLOWER <i class="fas fa-heart-circle-plus"></i></li>
+                <li>THE GREATEST</li>
+                <li>L'AMOUR DE MA VIE <i class="fas fa-heart-circle-plus"></i></li>
+                <li>THE DINER</li>
+                <li>BITTERSUITE <i class="fas fa-heart-circle-plus"></i></li>
+                <li>BLUE</li>
+            </ol>
+            <p id="dev-cal-2">
+                Out of the 4 projects released this year that I listened to and loved (<i>Eternal Sunshine</i>, <i>The
+                    Tortured Poets Department</i>, <i>Radical Optimism</i>, <i>Hit Me Hard and Soft</i>) <i>Hit Me Hard
+                    and Soft</i> is arguably the most resonating one?
+            </p>
+            <p id="dev-cal-2">
+                Like don't get me wrong I'm still a swiftie but being a swiftie doesn't mean you have to listen to
+                Taylor's music all day and be constrained to the idea that her album is the best... Sorry y'all I guess
+                I need more time with TTPD
+            </p>
+        </div>
+
+        <p id="dev-cal-2">
+            <span class="subtitle" id="title-1">
+                <i class="fa-solid fa-caret-right"></i>&emsp;we can't be friends (wait for your love)
+            </span>
+        </p>
+        <p id="dev-cal-2">
+            <i>click the above title to expand</i>
+        </p>
+        <div class="pages-container" id="song-1"><audio
+                src="../static/audio/we can't be friends (wait for your love).mp3" controls id="audio-1"></audio>
+            <p id="dev-cal-2">
+                [Verse 1]
+                <br>I didn't think you'd understand me
+                <br>没想过你会理解我
+                <br>How could you ever even try?
+                <br>你怎么做到的？
+                <br>I don't wanna tiptoe, but I don't wanna hide
+                <br>我不愿小心翼翼 不愿躲躲藏藏
+                <br>But I don't wanna feed this monstrous fire
+                <br>也不愿火上浇油
+                <br>Just wanna let this story die
+                <br>故事消逝之时
+                <br>And I'll be alright
+                <br>一切会好起来
+                <br>
+                <br>[Chorus]
+                <br>We can't be friends
+                <br>我们不能再做朋友
+                <br>But I'd like to just pretend
+                <br>但我还在假想和你握手
+                <br>You cling to your papers and pens
+                <br>你握着黑纸白字
+                <br>Wait until you like me again
+                <br>但我还在等你回头
+                <br>
+                <br>[Post-Chorus]
+                <br>Wait for your love
+                <br>等你回头
+                <br> My love, I'll wait for your love
+                <br>我在等你的爱
+                <br>
+                <br>[Verse 2]
+                <br>Me and my truth, we sit in silence
+                <br>我和真相静坐于黑暗中
+                <br>Mm
+                <br>Babygirl, it's just me and you
+                <br>宝贝 现在只有你我
+                <br>'Cause I don't wanna argue, but I don't wanna bite
+                <br>我不想争论 也不想沉默
+                <br>My tongue, yeah, I think I'd rather die
+                <br>我觉得还是死了算了
+                <br>You got me misunderstood
+                <br>你误解了我
+                <br>But at least I look this good
+                <br>但至少我过得还好
+                <br>
+                <br>[Chorus]
+                <br>We can't be friends
+                <br>我们不能再做朋友
+                <br>But I'd like to just pretend
+                <br>但我还在假想和你握手
+                <br>You cling to your papers and pens
+                <br>你握着黑纸白字
+                <br>Wait until you like me again
+                <br>但我还在等你回头
+                <br>
+                <br>[Post-Chorus]
+                <br>Wait for your love
+                <br>等你回头
+                <br>My love, I'll wait for your love
+                <br>我在等你的爱
+                <br>I'll wait for your love
+                <br>我会等你的爱
+                <br>My love, I'll wait for your love
+                <br>我会等你的爱
+                <br>
+                <br>[Bridge]
+                <br>Know that you made me
+                <br>我知道你让我的生活完整
+                <br>I don't like how you paint me, yet I'm still here hanging
+                <br>我不喜欢你画中的我 但我还是把画挂起
+                <br>Not what you made me
+                <br>我为自己活着
+                <br>It's somethin' like a daydream
+                <br>如梦如幻
+                <br>But I feel so seen in the night
+                <br>却走到哪里都被看穿
+                <br>So for now, it's only me
+                <br>所以我独自一人
+                <br>And maybe that's all I need
+                <br>也好像过得美满
+                <br>
+                <br>[Chorus]
+                <br>We can't be friends
+                <br>我们不能再做朋友
+                <br>But I'd like to just pretend
+                <br>但我还在假想和你握手
+                <br>You cling to your papers and pens
+                <br>你握着黑纸白字
+                <br>Wait until you like me again
+                <br>但我还在等你回头
+                <br>
+                <br>[Post-Chorus]
+                <br>Wait for your love
+                <br>等你回头
+                <br>My love, I'll wait for your love
+                <br>我在等你的爱
+                <br>I'll wait for your love
+                <br>我会等你的爱
+                <br>My love, I'll wait for your love
+                <br>我会等你的爱
+                <br>
+                <br>[Outro]
+                <br>I'll wait for your love
+                <br>我会等你的爱
+                <br>I'll wait for your love
+                <br>我会等你的爱
+                <br>I'll wait for your love
+                <br>我会等你的爱
+                <br>I'll wait for your love
+                <br>我会等你的爱
+                <br>I'll wait for your love
+                <br>我会等你的爱
+                <br><br>翻译：李江源，翻译归译者版权所有
+            </p>
+        </div>
         <!-- <p class="music-subtitle">圣诞列表</p>
         <ol>
             <li class="music-song-title" id="1">All I Want for Christmas Is You</li>
