@@ -702,7 +702,7 @@ body {
 
 #canvas-9>#remainTime {
     position: absolute;
-    bottom: 10%;
+    bottom: 15%;
     color: #fff;
     font-size: 30px;
 }
