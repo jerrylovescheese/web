@@ -758,7 +758,7 @@ ul#app-site-list>a {
     padding: 30px;
     overflow-x: scroll;
     overflow-y: hidden;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 #glass {

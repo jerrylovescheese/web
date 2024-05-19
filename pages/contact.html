@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <title>社交媒体</title>
+    <title>联系方式</title>
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
     <script src="../static/js/jquery-3.7.1.js"></script>
@@ -15,110 +15,33 @@
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <style>
-        @media (max-width: 425px) {
-
-            #dev-cal-1,
-            #update,
-            #dev-cal-2,
-            #official-account-img {
-                margin-left: 30px !important;
-                margin-right: 30px !important;
-            }
-
-            #dev-cal-1 {
-                font-size: 70px;
-                margin-top: 125px;
-            }
-
-            .button-text {
-                display: none;
-            }
-
-            #official-account-img {
-                width: auto !important;
+        @media (max-width: 768px) {
+            #bar-wrapper {
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
             }
         }
 
-        button {
-            color: #ffffff;
+        #dev-cal-1 {
+            font-size: 50px;
+            text-align: center;
         }
 
-        .official-account-buttons-bucket>a {
-            display: block;
-            width: fit-content;
+        #update {
+            text-align: center;
         }
 
-        .official-account-buttons-bucket>a:hover {
-            text-decoration: none;
+        #content-unit {
+            margin-left: 0;
         }
 
-        .official-account-social-media {
-            height: 60px;
-            border: none;
-            padding: 5px;
-            padding-left: 15px;
-            padding-right: 15px;
-            border-radius: 15px;
-            margin-right: 15px;
-            font-size: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 10px;
-            font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            transition: all 0.2s;
+        .notice {
+            margin-left: 10%;
+            margin-right: 10%;
         }
 
-        .official-account-social-media:hover {
-            box-shadow: none !important;
-            transform: translateY(3px);
-        }
-
-        .official-account-brand-logo {
-            font-size: 30px;
-        }
-
-        #official-account-social-media-twitter {
-            background-color: rgb(76, 158, 234);
-            box-shadow: 0 1px 1px rgba(76, 158, 234, 0.11),
-                0 2px 2px rgba(76, 158, 234, 0.11),
-                0 4px 4px rgba(76, 158, 234, 0.11),
-                0 8px 8px rgba(76, 158, 234, 0.11);
-        }
-
-        #official-account-social-media-facebook {
-            background-color: rgb(24, 119, 242);
-            box-shadow: 0 1px 1px rgba(24, 119, 242, 0.11),
-                0 2px 2px rgba(24, 119, 242, 0.11),
-                0 4px 4px rgba(24, 119, 242, 0.11),
-                0 8px 8px rgba(24, 119, 242, 0.11);
-        }
-
-        #official-account-social-media-github {
-            background-color: rgb(46, 46, 46);
-            box-shadow: 0 1px 1px rgba(46, 46, 46, 0.11),
-                0 2px 2px rgba(46, 46, 46, 0.11),
-                0 4px 4px rgba(46, 46, 46, 0.11),
-                0 8px 8px rgba(46, 46, 46, 0.11);
-        }
-
-        #official-account-social-media-tiktok {
-            background-color: rgb(46, 46, 46);
-            box-shadow: 0 1px 1px rgba(46, 46, 46, 0.11),
-                0 2px 2px rgba(46, 46, 46, 0.11),
-                0 4px 4px rgba(46, 46, 46, 0.11),
-                0 8px 8px rgba(46, 46, 46, 0.11);
-        }
-
-        #official-account-img {
-            width: 400px;
-            height: auto;
-            aspect-ratio: 683/249;
-            margin-left: 120px;
-            margin-right: 30px;
-            border-radius: 15px;
-            background-image: url(../static/img/Official-Account-_Medium_.webp);
-            background-size: cover;
+        #contact-glyphs {
+            height: 1em;
         }
     </style>
 </head>
@@ -130,20 +53,57 @@
         <span id="loader-prompt"><br>准备元素中。<br>Preparing elements.</span>
     </div>
 
-    <div id="header-unit">
-        <div class="header">&emsp;<a href="../index.html"><i
-                    class="fas fa-chevron-left"></i>&emsp14;&emsp14;&emsp14;回到上一页</a>
-        </div>
-        <div id="quick-links">
-            <b>ON THIS PAGE:</b>
-            <span class="quick-link" id="quick-link-1">欢迎关注我的公众号！</span>
+    <div id="content-unit">
+
+        <p id="dev-cal-1">联系方式</p>
+        <div class="pages-container">
+            <p id="dev-cal-2">
+                <i class="fa-solid fa-envelope"></i>&emsp;<b>Mail</b>&emsp;jerrylovesapple@icloud.com
+            </p>
+            <p id="dev-cal-2">
+                <i class="fa-brands fa-twitter"></i>&emsp;<b>Twitter</b>&emsp;(yeah I'm never calling it X)
+                @jerrylovestweet
+            </p>
+            <p id="dev-cal-2">
+                <i class="fa-brands fa-facebook"></i>&emsp;<b>FaceBook</b>&emsp;@jerrylovescheese3
+            </p>
+            <p id="dev-cal-2">
+                <svg id="contact-glyphs" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M331.5 235.7c2.2 .9 4.2 1.9 6.3 2.8c29.2 14.1 50.6 35.2 61.8 61.4c15.7 36.5 17.2 95.8-30.3 143.2c-36.2 36.2-80.3 52.5-142.6 53h-.3c-70.2-.5-124.1-24.1-160.4-70.2c-32.3-41-48.9-98.1-49.5-169.6V256v-.2C17 184.3 33.6 127.2 65.9 86.2C102.2 40.1 156.2 16.5 226.4 16h.3c70.3 .5 124.9 24 162.3 69.9c18.4 22.7 32 50 40.6 81.7l-40.4 10.8c-7.1-25.8-17.8-47.8-32.2-65.4c-29.2-35.8-73-54.2-130.5-54.6c-57 .5-100.1 18.8-128.2 54.4C72.1 146.1 58.5 194.3 58 256c.5 61.7 14.1 109.9 40.3 143.3c28 35.6 71.2 53.9 128.2 54.4c51.4-.4 85.4-12.6 113.7-40.9c32.3-32.2 31.7-71.8 21.4-95.9c-6.1-14.2-17.1-26-31.9-34.9c-3.7 26.9-11.8 48.3-24.7 64.8c-17.1 21.8-41.4 33.6-72.7 35.3c-23.6 1.3-46.3-4.4-63.9-16c-20.8-13.8-33-34.8-34.3-59.3c-2.5-48.3 35.7-83 95.2-86.4c21.1-1.2 40.9-.3 59.2 2.8c-2.4-14.8-7.3-26.6-14.6-35.2c-10-11.7-25.6-17.7-46.2-17.8H227c-16.6 0-39 4.6-53.3 26.3l-34.4-23.6c19.2-29.1 50.3-45.1 87.8-45.1h.8c62.6 .4 99.9 39.5 103.7 107.7l-.2 .2zm-156 68.8c1.3 25.1 28.4 36.8 54.6 35.3c25.6-1.4 54.6-11.4 59.5-73.2c-13.2-2.9-27.8-4.4-43.4-4.4c-4.8 0-9.6 .1-14.4 .4c-42.9 2.4-57.2 23.2-56.2 41.8l-.1 .1z" />
+                </svg>&emsp;<b>Threads</b>&emsp;@jerrylovescheese3
+            </p>
+            <p id="dev-cal-2">
+                <i class="fa-brands fa-instagram"></i>&emsp;<b>Instagram</b>&emsp;@jerrylovescheese3
+            </p>
+            <p id="dev-cal-2">
+                <i class="fa-brands fa-tiktok"></i>&emsp;<b>TikTok</b>&emsp;@jerrylovescheese3
+            </p>
+            <p id="dev-cal-2">
+                <i class="fa-brands fa-weibo"></i>&emsp;<b>Weibo</b>&emsp;Lotus_Garden
+            </p>
+            <p id="dev-cal-2">
+                <i class="fa-brands fa-github"></i>&emsp;<b>GitHub</b>&emsp;jerrylovescheese
+            </p>
+            <p id="dev-cal-2">
+                <svg id="contact-glyphs" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3zM288 227.1C261.9 176.4 190.9 81.9 124.9 35.3C61.6-9.4 37.5-1.7 21.6 5.5C3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7c3.3-.5 6.6-.9 10-1.4c-3.3 .5-6.6 1-10 1.4C74.3 308.6-9.1 342.8 100.3 464.5C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4c102.4-103.4 28.1-156-65.8-169.9c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3c64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1z" />
+                </svg>&emsp;<b>Bluesky</b>&emsp;@jerryloves.bsky.social
+            </p>
+            <p id="dev-cal-2">
+                <i class="fa-brands fa-discord"></i>&emsp;<b>Discord</b>&emsp;jerrylovescheese
+            </p>
+            <p id="dev-cal-2">
+                <i class="fa-brands fa-reddit"></i>&emsp;<b>Reddit</b>&emsp;jerrylovescheese3
+            </p>
         </div>
     </div>
 
-    <div id="content-unit">
-
-        <br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
     </div>
     <include src="../layout/footer.html"></include>
 </body>
