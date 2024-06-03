@@ -255,6 +255,10 @@ body {
     margin: 0;
 }
 
+#bar-wrapper {
+    background-color: #f6f6f6;
+}
+
 /* #app-element-1 {
     background-image: url(../img/home-button-dark.webp);
     transition: all 0.2s;
@@ -688,8 +692,8 @@ body {
 }
 
 #canvas-9 {
-    background-image: url(../img/startframe-large_2x.jpg);
-    background-size: contain;
+    background-image: url(../img//endframe-large_2x.jpg);
+    background-size: 50%;
     background-color: #000;
 }
 
