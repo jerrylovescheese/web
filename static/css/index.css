@@ -710,3 +710,11 @@ body {
     color: #fff;
     font-size: 30px;
 }
+
+#canvas-9-text {
+    line-height: normal;
+    font-size: 40px;
+    position: absolute;
+    bottom: 80px;
+    text-align: center;
+}
