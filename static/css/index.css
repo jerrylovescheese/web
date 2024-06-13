@@ -697,13 +697,6 @@ body {
     background-color: #000;
 }
 
-#canvas-9>.canvas-text-small {
-    text-align: center;
-    position: absolute;
-    bottom: 25%;
-    color: #fff;
-}
-
 #canvas-9>#remainTime {
     position: absolute;
     bottom: 15%;
@@ -712,9 +705,13 @@ body {
 }
 
 #canvas-9-text {
-    line-height: normal;
+    line-height: 40px;
     font-size: 40px;
     position: absolute;
     bottom: 80px;
     text-align: center;
+}
+
+#canvas-9-text>.canvas-text-small {
+    line-height: 22px;
 }
