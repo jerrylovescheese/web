@@ -20,6 +20,11 @@
                 $("#dubdub-info-1").toggleClass("active");
             });
         });
+        $(function () {
+            $("#dubdub-ios").click(function () {
+                $("#dubdub-info-2").toggleClass("active");
+            });
+        });
     </script>
     <style>
         @media (max-width: 768px) {
@@ -52,11 +57,13 @@
             margin: 0;
         }
 
-        #dubdub-info-1 {
+        #dubdub-info-1,
+        #dubdub-info-2 {
             display: none;
         }
 
-        #dubdub-info-1.active {
+        #dubdub-info-1.active,
+        #dubdub-info-2.active {
             display: block;
             margin-top: 0px;
             border-top-left-radius: 0;
@@ -67,7 +74,7 @@
         }
 
         .dubdub-info-special {
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 20px;
             font-weight: bold;
         }
@@ -255,6 +262,34 @@
             <div id="dubdub-subbox">
                 <span class="dubdub-sub-box" id="dubdub-sub-box-ios">iOS 18</span>
             </div>
+        </div>
+        <div class="pages-container" id="dubdub-info-2">
+            <p class="dubdub-info-special" id="dubdub-info-special-1">App 图标新玩法</p>
+            <p id="dev-cal-2">
+                主屏幕上的 app 图标支持更多自定义方式 - 你可以把它们放在任何你想放的位置，并更改它们的颜色。
+            </p>
+            <p class="dubdub-info-special" id="dubdub-info-special-2">控制中心焕然一新</p>
+            <p id="dev-cal-2">
+                控制中心有了新样貌：你可以在首页固定你喜爱的控制，就像在主屏幕上固定你喜爱的小组件一样。你没听错，控制中心现在分页了 - 固定的控制、播放的音乐、家庭 app 里的控制和手机的常用开关，现在分成了四页。
+            </p>
+            <p class="dubdub-info-special" id="dubdub-info-special-2">操作按钮能干的更多了</p>
+            <p id="dev-cal-2">
+                控制中心 API 开放啦 - 开发者们可以自己加上自己 app 对应的控制，也可以将这些控制集成的 iPhone 15 Pro 系列的操作按钮。
+            </p>
+            <p class="dubdub-info-special" id="dubdub-info-special-2">App 可以上锁了</p>
+            <p id="dev-cal-2">
+                你的 app 可以上锁了 - 只需通过面容 ID 上锁/解锁你的秘密 app。你也可以在 App 资源库把 app 隐藏起来。隐藏的 app 同样需要你的解锁才能显示。
+            </p>
+            <p class="dubdub-info-special" id="dubdub-info-special-2">信息 app 有更新</p>
+            <ul id="dev-cal-2">
+                <li><b>点回功能支持更多回复了</b> - “HA HA”，“!!”之外，你可以用多达几百种方式表达自己的心绪。</li>
+                <li><b>定时发送</b> - 打算一会再发？没问题。只需要按左下角的加号，翻到第二页的“定时发送”功能即可。</li>
+                <li><b>文本框支持文字格式化了</b> - 除了常规的加粗、斜体、下划线，现在你还可以让字抖起来、缩起来、膨胀起来和飞起来。</li>
+            </ul>
+            <p class="dubdub-info-special" id="dubdub-info-special-2">Messages via satellite</p>
+            <p id="dev-cal-2">
+                你可以通过卫星信号发送短信。（中国大陆暂不支持）
+            </p>
         </div>
         <div class="dubdub-box" id="dubdub-ipados">
             <div id="dubdub-subbox">
