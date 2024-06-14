@@ -411,9 +411,13 @@ body {
         height: 26vh;
     }
 
+    .app-element-pop-ups-3 {
+        width: 290px !important;
+    }
+
     .app-element-pop-ups-3.active {
         width: 290px !important;
-        height: fit-content;
+        height: 563px !important;
     }
 
     #app-site-list>a>li {
