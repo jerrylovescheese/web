@@ -38,6 +38,32 @@
             }
         }
 
+        @media (max-width: 425px) {
+
+            #dubdub-info-1.active,
+            #dubdub-info-2.active {
+                position: relative;
+                top: -10px;
+            }
+
+            .dubdub-entries {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .dubdub-pictures {
+                width: 100% !important;
+            }
+
+            .dubdub-entries>div>.dubdub-info-special {
+                margin-left: 0px !important;
+            }
+
+            .dubdub-entries>div>#dev-cal-2 {
+                margin-left: 0px !important;
+            }
+        }
+
         @media (prefers-color-scheme: light) {
             #dubdub-subbox {
                 background-color: #fff !important;
@@ -104,7 +130,7 @@
             font-weight: bold;
         }
 
-        #dubdub-info-special-1 {
+        .dubdub-info-special {
             margin-top: 0;
         }
 
@@ -116,10 +142,79 @@
             margin-left: 0;
         }
 
+        .dubdub-entries {
+            display: flex;
+        }
+
+        .dubdub-entries>.dubdub-entry-text {
+            width: 95vw;
+        }
+
+        .dubdub-entries>div>.dubdub-info-special {
+            margin-left: 30px;
+        }
+
         #dubdub-quote {
             font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 20px;
             font-weight: bold;
+        }
+
+        .dubdub-pictures {
+            aspect-ratio: 16/9;
+            width: 25vw;
+            border-radius: 10px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-bottom: 10px;
+        }
+
+        #dubdub-pic-1 {
+            background-image: url(../../static/img/IMG_9031.webp);
+        }
+
+        #dubdub-pic-2 {
+            background-image: url(../../static/img/videoframe_1067609.webp);
+        }
+
+        #dubdub-pic-3 {
+            background-image: url(../../static/img/videoframe_1096552.webp);
+        }
+
+        #dubdub-pic-4 {
+            background-image: url(../../static/img/videoframe_1175453.webp);
+        }
+
+        #dubdub-pic-5 {
+            background-image: url(../../static/img/videoframe_1303593.webp);
+        }
+
+        #dubdub-pic-6 {
+            background-image: url(../../static/img/videoframe_1349629.webp);
+        }
+
+        #dubdub-pic-7 {
+            background-image: url(../../static/img/videoframe_1380607.webp);
+        }
+
+        #dubdub-pic-8 {
+            background-image: url(../../static/img/videoframe_1474751.webp);
+        }
+
+        #dubdub-pic-9 {
+            background-image: url(../../static/img/videoframe_1522525.webp);
+        }
+
+        #dubdub-pic-10 {
+            background-image: url(../../static/img/videoframe_1535790.webp);
+        }
+
+        #dubdub-pic-11 {
+            background-image: url(../../static/img/videoframe_1564377.webp);
+        }
+
+        #dubdub-pic-12 {
+            background-image: url(../../static/img/videoframe_1798679.webp);
         }
 
         #dubdub-special-style-1 {
@@ -291,36 +386,116 @@
             </div>
         </div>
         <div class="pages-container" id="dubdub-info-2">
-            <p class="dubdub-info-special" id="dubdub-info-special-1">App 图标新玩法</p>
-            <p id="dev-cal-2">
-                主屏幕上的 app 图标支持更多自定义方式 - 你可以把它们放在任何你想放的位置，并更改它们的颜色。
-            </p>
-            <p class="dubdub-info-special" id="dubdub-info-special-2">控制中心焕然一新</p>
-            <p id="dev-cal-2">
-                控制中心有了新样貌：你可以在首页固定你喜爱的控制，就像在主屏幕上固定你喜爱的小组件一样。你没听错，控制中心现在分页了 - 固定的控制、播放的音乐、家庭 app 里的控制和手机的常用开关，现在分成了四页。
-            </p>
-            <p class="dubdub-info-special" id="dubdub-info-special-2">操作按钮能干的更多了</p>
-            <p id="dev-cal-2">
-                控制中心 API 开放啦 - 开发者们可以自己加上自己 app 对应的控制，也可以将这些控制集成的 iPhone 15 Pro 系列的操作按钮。
-            </p>
-            <p class="dubdub-info-special" id="dubdub-info-special-2">App 可以上锁了</p>
-            <p id="dev-cal-2">
-                你的 app 可以上锁了 - 只需通过面容 ID 上锁/解锁你的秘密 app。你也可以在 App 资源库把 app 隐藏起来。隐藏的 app 同样需要你的解锁才能显示。
-            </p>
-            <p class="dubdub-info-special" id="dubdub-info-special-2">信息 app 有更新</p>
-            <ul id="dev-cal-2">
-                <li><b>点回功能支持更多回复了</b> - “HA HA”，“!!”之外，你可以用多达几百种方式表达自己的心绪。</li>
-                <li><b>定时发送</b> - 打算一会再发？没问题。只需要按左下角的加号，翻到第二页的“定时发送”功能即可。</li>
-                <li><b>文本框支持文字格式化了</b> - 除了常规的加粗、斜体、下划线，现在你还可以让字抖起来、缩起来、膨胀起来和飞起来。</li>
-            </ul>
-            <p class="dubdub-info-special" id="dubdub-info-special-2">Messages via satellite</p>
-            <p id="dev-cal-2">
-                你可以通过卫星信号发送短信。（中国大陆暂不支持）
-            </p>
-            <p class="dubdub-info-special" id="dubdub-info-special-2">邮件不再拥挤了</p>
-            <p id="dev-cal-2">
-                邮件 app 支持邮件分类，这样来自各大报刊和各种杂七杂八的销售部门的邮件都可以为重要信息让路了。这些邮件可以在搜索栏下面的按钮里获取。
-            </p>
+            <div class="dubdub-entries" id="dubdub-entry-1">
+                <div class="dubdub-pictures" id="dubdub-pic-1"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-1">App 图标新玩法</p>
+                    <p id="dev-cal-2">
+                        主屏幕上的 app 图标支持更多自定义方式 - 你可以把它们放在任何你想放的位置，并更改它们的颜色。
+                    </p>
+                </div>
+            </div>
+            <div class="dubdub-entries" id="dubdub-entry-2">
+                <div class="dubdub-pictures" id="dubdub-pic-2"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-2">控制中心焕然一新</p>
+                    <p id="dev-cal-2">
+                        控制中心有了新样貌：你可以在首页固定你喜爱的控制，就像在主屏幕上固定你喜爱的小组件一样。你没听错，控制中心现在分页了 - 固定的控制、播放的音乐、家庭 app
+                        里的控制和手机的常用开关，现在分成了四页。
+                    </p>
+                </div>
+            </div>
+            <div class="dubdub-entries" id="dubdub-entry-3">
+                <div class="dubdub-pictures" id="dubdub-pic-3"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-3">操作按钮能干的更多了</p>
+                    <p id="dev-cal-2">
+                        控制中心 API 开放啦 - 开发者们可以自己加上自己 app 对应的控制，也可以将这些控制集成的 iPhone 15 Pro 系列的操作按钮。
+                    </p>
+                </div>
+            </div>
+            <div class="dubdub-entries" id="dubdub-entry-4">
+                <div class="dubdub-pictures" id="dubdub-pic-4"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-4">App 可以上锁了</p>
+                    <p id="dev-cal-2">
+                        你的 app 可以上锁了 - 只需通过面容 ID 上锁/解锁你的秘密 app。你也可以在 App 资源库把 app 隐藏起来。隐藏的 app 同样需要你的解锁才能显示。
+                    </p>
+                </div>
+            </div>
+            <div class="dubdub-entries" id="dubdub-entry-5">
+                <div class="dubdub-pictures" id="dubdub-pic-5"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-5">信息 app 有更新</p>
+                    <ul id="dev-cal-2">
+                        <li><b>点回功能支持更多回复了</b> - “HA HA”，“!!”之外，你可以用多达几百种方式表达自己的心绪。</li>
+                        <li><b>定时发送</b> - 打算一会再发？没问题。只需要按左下角的加号，翻到第二页的“定时发送”功能即可。</li>
+                        <li><b>文本框支持文字格式化了</b> - 除了常规的加粗、斜体、下划线，现在你还可以让字抖起来、缩起来、膨胀起来和飞起来。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dubdub-entries" id="dubdub-entry-6">
+                <div class="dubdub-pictures" id="dubdub-pic-6"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-6">Messages via satellite</p>
+                    <p id="dev-cal-2">
+                        你可以通过卫星信号发送短信。（中国大陆暂不支持）
+                    </p>
+                </div>
+            </div>
+            <div class="dubdub-entries" id="dubdub-entry-7">
+                <div class="dubdub-pictures" id="dubdub-pic-7"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-7">邮件不再拥挤了</p>
+                    <p id="dev-cal-2">
+                        邮件 app 支持邮件分类，这样来自各大报刊和各种杂七杂八的销售部门的邮件都可以为重要信息让路了。这些邮件可以在搜索栏下面的按钮里获取。
+                    </p>
+                </div>
+            </div>
+            <div class="dubdub-entries" id="dubdub-entry-8">
+                <div class="dubdub-pictures" id="dubdub-pic-8"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-8">地图 app</p>
+                    <p id="dev-cal-2">
+                        地图能显示等高线地形图和登山指南了（仅限美国）。
+                    </p>
+                </div>
+            </div>
+            <div class="dubdub-entries" id="dubdub-entry-9">
+                <div class="dubdub-pictures" id="dubdub-pic-9"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-9">钱包 app</p>
+                    <ul id="dev-cal-2">
+                        <li>如果你使用 Apple Cash 服务，Tap to Cash （轻点转账）可以让你通过将对方的手机和你的手机靠近以转账。</li>
+                        <li>卡券界面更多彩了。</li>
+                        <li>你可以在卡券详情页看到更多相关信息。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dubdub-entries" id="dubdub-entry-10">
+                <div class="dubdub-pictures" id="dubdub-pic-10"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-10">日记 app</p>
+                    <p id="dev-cal-2">
+                        日记 app 新增添加心情，应用内搜索等功能。
+                    </p>
+                </div>
+            </div>
+            <div class="dubdub-entries" id="dubdub-entry-11">
+                <div class="dubdub-pictures" id="dubdub-pic-11"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-11">游戏模式</p>
+                    <p id="dev-cal-2">游戏模式将后台应用进程休眠并增加蓝牙连接稳定性以提升游戏体验。</p>
+                </div>
+            </div>
+            <div class="dubdub-entries" id="dubdub-entry-12">
+                <div class="dubdub-pictures" id="dubdub-pic-12"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-12">照片 app</p>
+                    <p id="dev-cal-2">照片 app 迎来史上最大更新，曾经 dock
+                        栏的“为你推荐”、“照片”、“相册”和“搜索”全部整合成一长页呈现于眼前。你可以点击不同的小组来查看照片详情，也可以通过轻点副标题查看相似的相册，还可以在页面底部个性化你的照片卡片。</p>
+                </div>
+            </div>
         </div>
         <div class="dubdub-box" id="dubdub-ipados">
             <div id="dubdub-subbox">
