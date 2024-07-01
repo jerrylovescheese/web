@@ -314,7 +314,6 @@ body {
 #two,
 #three,
 #four {
-    display: inline;
     /* background-color: #b9362a2f;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -325,7 +324,7 @@ body {
     border-radius: 15px;
     /* border: #b9362a solid 3px; */
     text-align: center;
-    font-family: 'Recursive', Courier, monospace;
+    /* font-family: 'Recursive', Courier, monospace; */
 }
 
 #suspended-notice {
@@ -687,26 +686,18 @@ body {
     text-align: center;
 }
 
-#canvas-9 {
-    background-image: url(../img/pride_2024.webp);
-    background-color: #000;
-}
-
 #canvas-9>#remainTime {
-    position: absolute;
-    bottom: 15%;
-    color: #fff;
-    font-size: 30px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #canvas-9-text {
-    line-height: 40px;
-    font-size: 40px;
-    position: absolute;
-    bottom: 80px;
+    font-size: 30px;
     text-align: center;
-}
-
-#canvas-9-text>.canvas-text-small {
-    line-height: 22px;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: lighter;
+    color: unset;
 }
