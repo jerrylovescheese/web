@@ -1,161 +1,203 @@
 <script>
     $(function () {
-        $("#app-element-2").click(function () {
-            $(".app-element-pop-ups-3").toggleClass("active");
+        $("#d-button-1").hover(function () {
+            $("#d-button-alt-1").toggleClass("active");
         });
     });
     $(function () {
-        $("#app-element-4").click(function () {
-            $("#app-element-pop-ups-1").toggleClass("active");
+        $("#d-button-2").hover(function () {
+            $("#d-button-alt-2").toggleClass("active");
         });
     });
     $(function () {
-        $("#app-element-5").click(function () {
-            $("#app-element-pop-ups-2").toggleClass("active");
+        $("#d-button-3").hover(function () {
+            $("#d-button-alt-3").toggleClass("active");
+        });
+    });
+    $(function () {
+        $("#d-button-4").hover(function () {
+            $("#d-button-alt-4").toggleClass("active");
+        });
+    });
+    $(function () {
+        $("#d-button-5").hover(function () {
+            $("#d-button-alt-5").toggleClass("active");
+        });
+    });
+    $(function () {
+        $("#d-button-6").hover(function () {
+            $("#d-button-alt-6").toggleClass("active");
+        });
+    });
+    $(function () {
+        $("#d-button-7").hover(function () {
+            $("#d-button-alt-7").toggleClass("active");
+        });
+    });
+    $(function () {
+        $("#d-button-8").hover(function () {
+            $("#d-button-alt-8").toggleClass("active");
+        });
+    });
+    $(function () {
+        $("#d-button-8").click(function () {
+            $("#doors-wall").toggleClass("active");
         });
     });
 </script>
 
-<header id="core">
-    <div id="core-backdrop" tabindex="1">
-        <div id="bar-wrapper" tabindex="1">
-            <div id="app">
-                <div id="app-element-container">
-                    <a id="home-button" href="https://jerryly.top">
-                        <div class="app-elements" id="app-element-1"></div>
-                        <span class="app-element-label">'s site</span>
-                    </a>
-                    <div class="separator"></div>
-                    <div class="app-elements" id="app-element-3">
-                        <a href="./aluminum_studio.html">
-                            <span class="app-element-label">
-                                <i class="fa-solid fa-circle-info"></i>
-                                &emsp13;&emsp13;About
-                            </span>
-                        </a>
-                    </div>
-                    <div class="app-elements" id="app-element-4">
-                        <span class="app-element-label">
-                            <i class="fa-solid fa-heart"></i>
-                            &emsp13;&emsp13;Interests
-                        </span>
-                    </div>
-                    <div class="app-elements" id="app-element-5">
-                        <span class="app-element-label">
-                            <i class="fa-solid fa-newspaper"></i>
-                            &emsp13;&emsp13;Collectives
-                        </span>
-                    </div>
-                    <div class="app-elements" id="app-element-6">
-                        <a href="./clock.html">
-                            <span class="app-element-label">
-                                <i class="fa-solid fa-clock"></i>
-                                &emsp13;&emsp13;Clocks
-                            </span>
-                        </a>
-                    </div>
+<header id="door">
+    <div id="doors">
+        <div class="doors" id="door-1">
+            <a href="./aluminum_studio.html">
+                <div class="d-button" id="d-button-1"></div>
+            </a>
+            <a href="./clock.html">
+                <div class="d-button" id="d-button-2">
+                    <i class="fas fa-clock"></i>
                 </div>
-                <div class="app-elements" id="app-element-2">
-                    <i class="fa-solid fa-bars"></i>
+            </a>
+            <a href="./aluminum_studio.html">
+                <div class="d-button" id="d-button-3">
+                    <i class="fas fa-info"></i>
                 </div>
+            </a>
+            <a href="./apple.html">
+                <div class="d-button" id="d-button-4">
+                    <i class="fa-brands fa-apple"></i>
+                </div>
+            </a>
+            <a href="./music.html">
+                <div class="d-button" id="d-button-5">
+                    <i class="fas fa-music"></i>
+                </div>
+            </a>
+        </div>
+        <div class="doors" id="door-2">
+            <a href="./contact.html">
+                <div class="d-button" id="d-button-6">
+                    <i class="fa-solid fa-message"></i>
+                </div>
+            </a>
+            <a href="#">
+                <div class="d-button" id="d-button-7">
+                    <i class="fa-solid fa-chevron-up"></i>
+                </div>
+            </a>
+            <div class="d-button" id="d-button-8">
+                <span id="d-button-8-label">
+                    <i class="fa-solid fa-circle-chevron-right"></i>
+                </span>
             </div>
         </div>
-        <div class="app-element-pop-ups" id="app-element-pop-ups-1">
-            <a href="./apple.html" id="app-element-pop-up-label-1">
-                <span class="app-element-pop-up-label">
-                    <i class="fa-brands fa-apple"></i>&emsp13;&emsp13;Apple
-                </span>
-            </a>
-            <div class="separator"></div>
-            <a href="./taylorswift.html" id="app-element-pop-up-label-2">
-                <span class="app-element-pop-up-label">
-                    <i class="fas fa-microphone"></i>&emsp13;&emsp13;Taylor Swift
-                </span>
-            </a>
-        </div>
-        <div class="app-element-pop-ups" id="app-element-pop-ups-2">
-            <a href="./classical_ch.html" id="app-element-pop-up-label-1">
-                <span class="app-element-pop-up-label">
-                    <i class="fas fa-pen"></i>&emsp13;&emsp13;Classical Chinese, Junior High
-                </span>
-            </a>
-            <div class="separator"></div>
-            <a href="./classical_ch_sh.html" id="app-element-pop-up-label-2">
-                <span class="app-element-pop-up-label">
-                    <i class="fas fa-pen"></i>&emsp13;&emsp13;Classical Chinese, Senior High
-                </span>
-            </a>
-        </div>
-        <div class="app-element-pop-ups-3">
-            <span id="app-element-pop-up-label-3"><i class="fa-solid fa-map-location-dot"></i>&emsp13;&emsp13;All
-                Pages</span>
-            <ul id="app-site-list">
-                <a href="./aluminum_studio.html">
-                    <li>About</li>
-                </a>
+    </div>
+    <div id="doors-alt">
+        <div class="d-button-alt" id="d-button-alt-1">Home</div>
+        <div class="d-button-alt" id="d-button-alt-2">Clock</div>
+        <div class="d-button-alt" id="d-button-alt-3">About</div>
+        <div class="d-button-alt" id="d-button-alt-4">Apple</div>
+        <div class="d-button-alt" id="d-button-alt-5">Music</div>
+        <div class="d-button-alt" id="d-button-alt-6">Contacts</div>
+        <div class="d-button-alt" id="d-button-alt-7">Go to top</div>
+        <div class="d-button-alt" id="d-button-alt-8">Expand</div>
+    </div>
+    <div id="doors-wall">
+        <div id="doors-wall-head">网站地图</div>
+        <div id="doors-wall-grid">
+            <div class="d-wall-sec" id="d-wall-sec-1">
                 <a href="./apple.html">
-                    <li>Apple</li>
+                    <span class="d-wall-sec-text">苹果</span>
                 </a>
-                <a href="./christmas.html">
-                    <li>Christmas</li>
-                </a>
-                <a href="./classical_ch_sh.html">
-                    <li>Classical Chinese, Senior High</li>
-                </a>
-                <a href="./classical_ch.html">
-                    <li>Classical Chinese, Junior High</li>
-                </a>
-                <a href="./clock.html">
-                    <li>Clocks</li>
-                </a>
-                <a href="./develop.html">
-                    <li>Development</li>
-                </a>
-                <a href="./friends.html">
-                    <li><i>Friends</i></li>
-                </a>
-                <a href="./homemade_giftcard.html">
-                    <li>Homemade Giftcards</li>
-                </a>
+                <ul>
+                    <a href="./subpages/dubdub.html">
+                        <li>WWDC</li>
+                    </a>
+                    <a href="./subpages/iphone.html">
+                        <li>iPhone</li>
+                    </a>
+                    <a href="./subpages/iphone.html">
+                        <li>iPad</li>
+                    </a>
+                    <a href="./subpages/mac.html">
+                        <li>Mac</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="d-wall-sec" id="d-wall-sec-2">
                 <a href="./music.html">
-                    <li>Music</li>
+                    <span class="d-wall-sec-text">音乐</span>
                 </a>
-                <a href="./search.html">
-                    <li>Search</li>
-                </a>
-                <a href="./contact.html">
-                    <li>Social Network</li>
-                </a>
-                <a href="./survey.html">
-                    <li>Survey</li>
-                </a>
-            </ul>
+                <ul>
+                    <a href="./subpages/1989tv.html">
+                        <li>1989 (Taylor's Version)</li>
+                    </a>
+                    <a href="./subpages/lover.html">
+                        <li>Lover</li>
+                    </a>
+                    <a href="./subpages/midnights.html">
+                        <li>Midnights</li>
+                    </a>
+                    <a href="./subpages/ttpd.html">
+                        <li>The Tortured Poets Department</li>
+                    </a>
+                    <a href="./subpages/taylorswift.html">
+                        <li>Taylor Swift</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="d-wall-sec" id="d-wall-sec-3">
+                <span class="d-wall-sec-text">其他</span>
+                <ul>
+                    <a href="./aluminum_studio.html">
+                        <li>关于</li>
+                    </a>
+                    <a href="./christmas.html">
+                        <li>圣诞</li>
+                    </a>
+                    <a href="./classical_ch_sh.html">
+                        <li>部编版高中语文古文</li>
+                    </a>
+                    <a href="./classical_ch.html">
+                        <li>部编版初中语文古文</li>
+                    </a>
+                    <a href="./clock.html">
+                        <li>时钟</li>
+                    </a>
+                    <a href="./contact.html">
+                        <li>联系</li>
+                    </a>
+                    <a href="./develop.html">
+                        <li>开发与实验室</li>
+                    </a>
+                    <a href="./flashback.html">
+                        <li>采光间</li>
+                    </a>
+                    <a href="./friends.html">
+                        <li>老友记</li>
+                    </a>
+                    <a href="./homemade_giftcard.html">
+                        <li>手写祝福</li>
+                    </a>
+                    <a href="./music.html">
+                        <li>音乐</li>
+                    </a>
+                    <a href="./noticeboard.html">
+                        <li>笔记板</li>
+                    </a>
+                    <a href="./search.html">
+                        <li>搜索</li>
+                    </a>
+                    <a href="./survey.html">
+                        <li>调查问卷</li>
+                    </a>
+                </ul>
+            </div>
         </div>
     </div>
 </header>
 
-<div id="tool">
-    <div class="tool-elements" id="return-to-top">
-        <a href="#">
-            <span class="tool-element-label">
-                <i class="fas fa-arrow-up"></i>&emsp13;Go to top
-            </span>
-        </a>
-    </div>
-    <div class="separator"></div>
-    <div class="tool-elements" id="language">
-        <a href="../index.html">
-            <span class="tool-element-label">
-                <i class="fas fa-language"></i>&emsp13;中文
-            </span>
-        </a>
-    </div>
-    <div class="separator"></div>
-    <div class="tool-elements" id="connect">
-        <a href="./contact.html">
-            <span class="tool-element-label">
-                <i class="fas fa-rss"></i>&emsp13;Connect
-            </span>
-        </a>
+<div id="header-collapse">
+    <div id="header-collapse-button">
+        <i class="fa-solid fa-square-caret-left"></i>&emsp13;&emsp13;导航器
     </div>
 </div>
