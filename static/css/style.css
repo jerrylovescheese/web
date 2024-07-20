@@ -483,19 +483,18 @@ nav {
 
     #header-unit {
         right: 0;
-        top: 75px;
+        top: 70px;
         display: unset;
         width: auto;
         margin-left: 10px;
         margin-right: 10px;
-        height: 82px;
+        height: 69px;
         border-radius: 10px;
         background-color: rgba(245, 245, 245, 0.5);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         -moz-backdrop-filter: blur(12px);
         border: solid 1px #cbcbcb;
-        border-top: none;
         z-index: 3;
     }
 
@@ -504,19 +503,16 @@ nav {
     }
 
     .header {
-        border-bottom: solid 1px rgb(210, 210, 210);
         width: 100%;
-        height: 35px;
-        line-height: 35px;
+        height: 24px;
         font-weight: bold;
-        font-size: 20px !important;
+        font-size: 15px !important;
         margin-left: 0 !important;
     }
 
     #quick-links {
-        height: 25px;
+        height: 20px;
         padding: 10px;
-        top: 36px;
         width: auto;
         margin-left: 0 !important;
         margin-right: 0 !important;
@@ -528,6 +524,7 @@ nav {
 
     #quick-links>b {
         padding: unset;
+        font-size: 15px;
     }
 
     .quick-link {
@@ -539,6 +536,7 @@ nav {
         border: solid 1px gray;
         transition: all 0.3s;
         margin-right: 5px;
+        font-size: 15px;
     }
 
     #quick-link-1 {
