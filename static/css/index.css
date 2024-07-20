@@ -764,10 +764,20 @@ body {
     color: unset;
 }
 
+#canvas-10 {
+    background-image: url(../img/5-years.webp);
+    justify-content: end;
+    align-items: start;
+}
+
 #canvas-10>.canvas-text {
-    font-family: 'ITC Franklin Condensed';
+    font-family: 'Noto Serif SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    padding-left: 0;
 }
 
 #canvas-10>.canvas-text-small {
-    font-family: 'ITC Franklin Compact';
+    font-family: 'Noto Serif SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: left;
+    padding-bottom: 20vh;
 }
