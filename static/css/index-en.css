@@ -1,62 +1,16 @@
 /* hello */
 
-body {
-    margin: 0;
+#door-2 {
+    width: 220px;
 }
 
-/* body::after {
-    content: "";
-    position: absolute;
-    inset: -0.625px;
-    animation: gradient-canvas 40s ease-in-out 0s infinite alternate;
-    z-index: -1;
-} */
-
-.app {
-    animation: welcome-animation-1 0.5s ease-in-out 0s 1;
+#doors-alt {
+    width: 473.5px;
 }
 
-.app-element-pop-ups-3.active {
-    width: 337.81px !important;
-}
-
-#toolkit,
-.clock-uni {
-    animation: welcome-animation-2 0.5s ease-in-out 0s 1;
-}
-
-@keyframes gradient-canvas {
-    0% {
-        background-color: #9b1b32;
-    }
-
-    14% {
-        background-color: #ff3622;
-    }
-
-    28% {
-        background-color: #e79e47;
-    }
-
-    42% {
-        background-color: #d7bd91;
-    }
-
-    56% {
-        background-color: #dea689;
-    }
-
-    70% {
-        background-color: #7fa257;
-    }
-
-    84% {
-        background-color: #3b5948;
-    }
-
-    100% {
-        background-color: #5f3835;
-    }
+#d-button-alt-10.active {
+    height: 24px;
+    left: 435.5px;
 }
 
 @media (prefers-color-scheme: dark) {
