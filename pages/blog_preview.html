@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>template_no_navibar</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
+    <script src="../static/js/jquery-3.7.1.js"></script>
+    <script src="../static/js/include.js"></script>
+    <link rel="shortcut icon" href="../Aug-18-2023-Favicon.ico" type="image/x-icon">
+    <script src="../static/js/loader.js"></script>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <style>
+        @media (max-width: 768px) {
+            #bar-wrapper {
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            iframe {
+                border-color: #575757 !important;
+            }
+        }
+
+        #dev-cal-1 {
+            font-size: 50px;
+            text-align: center;
+        }
+
+        #update {
+            text-align: center;
+        }
+
+        #content-unit {
+            margin-left: 0;
+        }
+
+        iframe {
+            margin-left: 10vw;
+            margin-right: 10vw;
+            width: 80vw;
+            height: 80vh;
+            border-radius: 10px;
+            border: solid 1px #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <include src="../layout/layout.html"></include>
+    <div class="loader-wrapper">
+        <i class="fa-solid fa-spinner fa-spin"></i>
+        <span id="loader-prompt"><br>准备元素中。<br>Preparing elements.</span>
+    </div>
+
+    <div id="content-unit">
+
+        <p id="dev-cal-1">博客预览</p>
+        <iframe src="https://blog.jerryly.top" frameborder="0"></iframe>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    </div>
+    <include src="../layout/footer.html"></include>
+</body>
+
+</html>
