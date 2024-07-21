@@ -40,8 +40,24 @@
         });
     });
     $(function () {
-        $("#d-button-8").click(function () {
+        $("#d-button-9").hover(function () {
+            $("#d-button-alt-9").toggleClass("active");
+        });
+    });
+    $(function () {
+        $("#d-button-10").hover(function () {
+            $("#d-button-alt-10").toggleClass("active");
+        });
+    });
+    $(function () {
+        $("#d-button-9").click(function () {
             $("#doors-wall").toggleClass("active");
+        });
+    });
+    $(function () {
+        $("#header-collapse-button").click(function () {
+            $("#header-unit").toggleClass("active");
+            $("#content-unit").toggleClass("active");
         });
     });
 </script>
@@ -52,43 +68,51 @@
             <a href="https://jerryly.top">
                 <div class="d-button" id="d-button-1"></div>
             </a>
-            <a href="./clock.html">
+            <a href="../pages/clock.html">
                 <div class="d-button" id="d-button-2">
                     <i class="fas fa-clock"></i>
                 </div>
             </a>
-            <a href="./aluminum_studio.html">
+            <a href="../pages/aluminum_studio.html">
                 <div class="d-button" id="d-button-3">
                     <i class="fas fa-info"></i>
                 </div>
             </a>
-            <a href="./apple.html">
+            <a href="../pages/apple.html">
                 <div class="d-button" id="d-button-4">
                     <i class="fa-brands fa-apple"></i>
                 </div>
             </a>
-            <a href="./music.html">
+            <a href="../pages/music.html">
                 <div class="d-button" id="d-button-5">
                     <i class="fas fa-music"></i>
                 </div>
             </a>
         </div>
         <div class="doors" id="door-2">
-            <a href="./contact.html">
+            <a href="https://blog.jerryly.top">
                 <div class="d-button" id="d-button-6">
+                    <i class="fa-solid fa-scroll"></i>
+                </div>
+            </a>
+            <a href="../pages/contact.html">
+                <div class="d-button" id="d-button-7">
                     <i class="fa-solid fa-message"></i>
                 </div>
             </a>
             <a href="#">
-                <div class="d-button" id="d-button-7">
+                <div class="d-button" id="d-button-8">
                     <i class="fa-solid fa-chevron-up"></i>
                 </div>
             </a>
-            <div class="d-button" id="d-button-8">
-                <span id="d-button-8-label">
-                    <i class="fa-solid fa-circle-chevron-right"></i>
-                </span>
+            <div class="d-button" id="d-button-9">
+                <i class="fa-solid fa-square-plus"></i>
             </div>
+            <a href="../index.html">
+                <div class="d-button" id="d-button-10">
+                    <i class="fa-solid fa-language"></i>
+                </div>
+            </a>
         </div>
     </div>
     <div id="doors-alt">
@@ -97,50 +121,52 @@
         <div class="d-button-alt" id="d-button-alt-3">About</div>
         <div class="d-button-alt" id="d-button-alt-4">Apple</div>
         <div class="d-button-alt" id="d-button-alt-5">Music</div>
-        <div class="d-button-alt" id="d-button-alt-6">Contacts</div>
-        <div class="d-button-alt" id="d-button-alt-7">Go to top</div>
-        <div class="d-button-alt" id="d-button-alt-8">Expand</div>
+        <div class="d-button-alt" id="d-button-alt-6">Blog</div>
+        <div class="d-button-alt" id="d-button-alt-7">Contacts</div>
+        <div class="d-button-alt" id="d-button-alt-8">Go to top</div>
+        <div class="d-button-alt" id="d-button-alt-9">Expand</div>
+        <div class="d-button-alt" id="d-button-alt-10">中文</div>
     </div>
     <div id="doors-wall">
         <div id="doors-wall-head">网站地图</div>
         <div id="doors-wall-grid">
             <div class="d-wall-sec" id="d-wall-sec-1">
-                <a href="./apple.html">
+                <a href="../pages/apple.html">
                     <span class="d-wall-sec-text">苹果</span>
                 </a>
                 <ul>
-                    <a href="./subpages/dubdub.html">
+                    <a href="../pages/sub../pages/dubdub.html">
                         <li>WWDC</li>
                     </a>
-                    <a href="./subpages/iphone.html">
+                    <a href="../pages/sub../pages/iphone.html">
                         <li>iPhone</li>
                     </a>
-                    <a href="./subpages/iphone.html">
+                    <a href="../pages/sub../pages/iphone.html">
                         <li>iPad</li>
                     </a>
-                    <a href="./subpages/mac.html">
+                    <a href="../pages/sub../pages/mac.html">
                         <li>Mac</li>
                     </a>
                 </ul>
             </div>
             <div class="d-wall-sec" id="d-wall-sec-2">
-                <a href="./music.html">
+                <a href="../pages/music.html">
                     <span class="d-wall-sec-text">音乐</span>
                 </a>
                 <ul>
-                    <a href="./subpages/1989tv.html">
+                    <a href="../pages/sub../pages/1989tv.html">
                         <li>1989 (Taylor's Version)</li>
                     </a>
-                    <a href="./subpages/lover.html">
+                    <a href="../pages/sub../pages/lover.html">
                         <li>Lover</li>
                     </a>
-                    <a href="./subpages/midnights.html">
+                    <a href="../pages/sub../pages/midnights.html">
                         <li>Midnights</li>
                     </a>
-                    <a href="./subpages/ttpd.html">
+                    <a href="../pages/sub../pages/ttpd.html">
                         <li>The Tortured Poets Department</li>
                     </a>
-                    <a href="./subpages/taylorswift.html">
+                    <a href="../pages/sub../pages/taylorswift.html">
                         <li>Taylor Swift</li>
                     </a>
                 </ul>
@@ -148,50 +174,53 @@
             <div class="d-wall-sec" id="d-wall-sec-3">
                 <span class="d-wall-sec-text">其他</span>
                 <ul>
-                    <a href="./aluminum_studio.html">
+                    <a href="../pages/aluminum_studio.html">
                         <li>关于</li>
                     </a>
-                    <a href="./christmas.html">
+                    <a href="../pages/christmas.html">
                         <li>圣诞</li>
                     </a>
-                    <a href="./classical_ch_sh.html">
+                    <a href="../pages/classical_ch_sh.html">
                         <li>部编版高中语文古文</li>
                     </a>
-                    <a href="./classical_ch.html">
+                    <a href="../pages/classical_ch.html">
                         <li>部编版初中语文古文</li>
                     </a>
-                    <a href="./clock.html">
+                    <a href="../pages/clock.html">
                         <li>时钟</li>
                     </a>
-                    <a href="./contact.html">
+                    <a href="../pages/contact.html">
                         <li>联系</li>
                     </a>
-                    <a href="./develop.html">
+                    <a href="../pages/develop.html">
                         <li>开发与实验室</li>
                     </a>
-                    <a href="./flashback.html">
+                    <a href="../pages/flashback.html">
                         <li>采光间</li>
                     </a>
-                    <a href="./friends.html">
+                    <a href="../pages/friends.html">
                         <li>老友记</li>
                     </a>
-                    <a href="./homemade_giftcard.html">
+                    <a href="../pages/homemade_giftcard.html">
                         <li>手写祝福</li>
                     </a>
-                    <a href="./music.html">
+                    <a href="../pages/music.html">
                         <li>音乐</li>
                     </a>
-                    <a href="./noticeboard.html">
+                    <a href="../pages/noticeboard.html">
                         <li>笔记板</li>
                     </a>
-                    <a href="./search.html">
+                    <a href="../pages/search.html">
                         <li>搜索</li>
                     </a>
-                    <a href="./survey.html">
+                    <a href="../pages/survey.html">
                         <li>调查问卷</li>
                     </a>
                 </ul>
             </div>
+        </div>
+        <div id="d-wall-mark">
+            <span id="d-wall-mark-small">Ⓒ</span>&emsp13;2019 - 2024 aluminum.studio
         </div>
     </div>
 </header>
