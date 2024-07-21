@@ -774,10 +774,12 @@ body {
     font-family: 'Noto Serif SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 40px;
     padding-left: 0;
+    color: #fff;
 }
 
 #canvas-10>.canvas-text-small {
     font-family: 'Noto Serif SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: left;
     padding-bottom: 20vh;
+    color: #fff;
 }
