@@ -335,6 +335,9 @@
 }
 
 @media (max-width: 430px) {
+    #d-button-10 {
+        display: none;
+    }
 
     .widgets,
     .marquee,
