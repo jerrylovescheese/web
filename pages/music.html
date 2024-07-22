@@ -14,232 +14,69 @@
     <script src="../static/js/loader.js"></script>
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <script>
-        $(function () {
-            $("#title-1").click(function () {
-                $("#song-1").toggleClass("active");
-            });
-        });
-        $(function () {
-            $("#music-player-trigger").click(function () {
-                $("#music-player-backdrop").toggleClass("active");
-                $("#music-player").toggleClass("active");
-            });
-        });
-    </script>
     <style>
-        .music-song-title {
-            margin-left: 120px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .music-subtitle {
-            margin-left: 120px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 30px;
-            font-weight: lighter;
-        }
-
-        #music-light {
-            width: 100%;
-            height: 30vh;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            background: -webkit-gradient(linear, left top, right top, color-stop(7%, #65bcf2), color-stop(#5d88ff), color-stop(#5d88ff), color-stop(80%, #d0beff), to(#f0e0ff));
-            background: -webkit-linear-gradient(left, #65bcf2 7%, #5d88ff, #5d88ff, #d0beff 80%, #f0e0ff);
-            background: linear-gradient(90deg, #65bcf2 7%, #5d88ff, #5d88ff, #d0beff 80%, #f0e0ff);
-            background-repeat: no-repeat;
-        }
-
-        #music-light:before {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 100%;
-            background: -webkit-radial-gradient(50% 100%, circle, #7b00c21c 25%, rgba(217, 188, 240, 0.2) 55%), -webkit-radial-gradient(at bottom left, #cdbcff 10%, rgba(250, 249, 253, 0.2) 30%), -webkit-radial-gradient(at bottom right, #6a00c748 25%, rgba(252, 250, 254, 0) 40%);
-            background: radial-gradient(circle at 50% 100%, #7b00c21c 25%, rgba(215, 188, 240, 0.2) 55%), radial-gradient(at bottom left, #cdbcff 10%, rgba(250, 249, 253, 0.2) 30%), radial-gradient(at bottom right, #6a00c748 25%, rgba(252, 250, 254, 0) 40%);
-        }
-
-        #song-1 {
-            display: none;
-        }
-
-        #song-1.active {
-            display: block;
-        }
-
-        #song-2 {
-            aspect-ratio: 16/9;
-            background-image: url(../static/img/May-17-2024_画板-1.webp);
-            background-size: contain;
-        }
-
-        iframe,
-        #audio-1 {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        .pages-container>#dev-cal-2 {
-            margin-left: 0;
-        }
-
-        .music-emphasize {
-            font-size: 20px;
-            line-height: 24px;
-        }
-
-        @media (max-width: 425px) {
-
-            #dev-cal-1,
-            #update,
-            #dev-cal-2,
-            .music-song-title,
-            .subtitle,
-            iframe,
-            #audio-1 {
-                margin-left: 30px !important;
-                margin-right: 30px !important;
-            }
-
-            #dev-cal-1 {
-                font-size: 70px;
-                margin-top: 125px;
+        @media (max-width: 768px) {
+            #bar-wrapper {
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
             }
         }
 
-        @media (max-width: 435px) {
-            #dev-cal-1>i {
-                display: none;
+        @media (prefers-color-scheme: dark) {
+            table#dev-cal-2 {
+                border-top-color: white;
+                border-bottom-color: white;
             }
 
-            #music-player-trigger {
-                display: none;
+            table#dev-cal-2 td {
+                border-bottom-color: white;
             }
+        }
 
-            #music-player-backdrop {
-                display: none !important;
-            }
+        #dev-cal-1 {
+            font-size: 50px;
+            text-align: center;
         }
 
         #update {
-            padding-top: 20px;
+            text-align: center;
         }
 
-        #music-player-trigger {
-            width: 40px;
-            height: 40px;
-            position: fixed;
-            top: 130px;
-            right: 20px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
-            z-index: 1;
-            color: #fff;
-            background-image: linear-gradient(150deg, #042940, #005C53, #9FC131, #DBF227, #D6D58E);
-            background-size: 100% 700%;
-            animation: animateBg 6s infinite alternate-reverse linear;
-            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.11),
-                0 20px 20px rgba(0, 0, 0, 0.11),
-                0 40px 40px rgba(0, 0, 0, 0.11),
-                0 80px 80px rgba(0, 0, 0, 0.11);
+        #content-unit {
+            margin-left: 0;
         }
 
-        @keyframes animateBg {
-            0% {
-                background-position: 0 0;
-            }
-
-            100% {
-                background-position: 0 100%;
-            }
+        #dev-cal-2 {
+            margin-top: 0;
+            margin-left: 0;
         }
 
-        #music-player-backdrop {
-            display: none;
-        }
-
-        #music-player-backdrop.active {
+        #music-light {
             width: 100vw;
             height: 100vh;
             position: fixed;
             top: 0;
-            left: 0px;
-            background-color: #47474798;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            -moz-backdrop-filter: blur(12px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
+            left: 0;
+            background-color: rgb(138, 207, 0);
+            z-index: -1;
         }
 
-        #music-player {
-            display: none;
+        table#dev-cal-2 {
+            border-top: solid 1px black;
+            border-bottom: solid 1px black;
+            width: 100%;
+            overflow: scroll;
         }
 
-        #music-player.active {
-            display: block;
-            position: relative;
-            background-color: #000;
-            width: 800px;
-            height: 400px;
-            border-radius: 10px;
-            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.11),
-                0 20px 20px rgba(0, 0, 0, 0.11),
-                0 40px 40px rgba(0, 0, 0, 0.11),
-                0 80px 80px rgba(0, 0, 0, 0.11);
-            overflow: hidden;
+        table#dev-cal-2 th,
+        td {
+            border-bottom: solid 1px black;
+            padding: 5px;
+            padding-right: 30px;
         }
 
-        #music-player-controls {
-            position: absolute;
-            left: 400px;
-            bottom: 30px;
-            color: #fff;
-            font-size: 30px;
-            line-height: 20px;
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-
-        #music-player-controls>audio {
-            border-radius: 10px;
-        }
-
-        #music-player-x {
-            position: absolute;
-            right: 0;
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 50px;
-            color: #fff;
-        }
-
-        #music-player-album-cover {
-            position: absolute;
-            left: 30px;
-            top: 30px;
-            width: 340px;
-            height: 340px;
-            background-image: url(../static/img/BRAT.webp);
-            background-size: cover;
-            border-radius: 5px;
-            box-shadow: 0 10px 10px rgba(139, 207, 0, 0.11),
-                0 20px 20px rgba(139, 207, 0, 0.11),
-                0 40px 40px rgba(139, 207, 0, 0.11),
-                0 80px 80px rgba(139, 207, 0, 0.11);
+        #music-song-col {
+            font-style: italic;
         }
     </style>
 </head>
@@ -251,219 +88,466 @@
         <span id="loader-prompt"><br>准备元素中。<br>Preparing elements.</span>
     </div>
 
-    <div id="header-unit">
-        <div class="header">&emsp;<a href="../index.html"><i
-                    class="fas fa-chevron-left"></i>&emsp14;&emsp14;&emsp14;回到上一页</a>
-        </div>
-        <div id="quick-links">
-            <b>ON THIS PAGE:</b>
-            <span id="quick-link-1" class="quick-link"><a href="#title-0">HIT ME HARD AND SOFT</a></span>
-            <span id="quick-link-2" class="quick-link"><a href="#title-1">we can't be friends (wait for your
-                    love)</a></span>
-        </div>
-    </div>
-
     <div id="content-unit">
-        <p id="dev-cal-1"><i class="fas fa-music"></i>&emsp13;&emsp13;音乐</p>
-        <p id="update">这个页面上一次更新于2024年5月17日</p>
-        <br>
+
+        <p id="dev-cal-1">Music</p>
         <div id="music-light"></div>
-
-
-        <div href="#" id="music-player-trigger">
-            <i class="fas fa-music"></i>
-        </div>
-        <div id="music-player-backdrop">
-            <div id="music-player">
-                <div id="music-player-album-cover"></div>
-                <div id="music-player-controls">
-                    <p><b>360</b></p>
-                    <p>Charli xcx - BRAT</p>
-                    <audio src="../static/audio/360.m4a" controls controlsList="nodownload"></audio>
-                </div>
-            </div>
-        </div>
-        <p id="dev-cal-2">
-            <a href="./taylorswift.html">
-                Searching for Taylor? I devoted a whole page to her ;-) <i class="fas fa-arrow-right"></i>
-            </a>
-        </p>
-        <div class="pages-container" id="song-2"></div>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-0">HIT ME HARD AND SOFT</span></p>
         <div class="pages-container">
-            <p id="dev-cal-2">
-                <a href="https://mp.weixin.qq.com/s/HHTDPqXU3lDIjsebTd4q8A">Listen to my first listen reaction <i
-                        class="fas fa-arrow-right"></i></a>
-            </p>
-            <p id="dev-cal-2">
-                <b class="music-emphasize">Tracklist</b>
-                <br>I'm just gonna highlight my favorites here with a heart icon <i
-                    class="fas fa-heart-circle-plus"></i>
-            </p>
-            <ol id="dev-cal-2" class="music-emphasize">
-                <li>SKINNY <i class="fas fa-heart-circle-plus"></i></li>
-                <li>LUNCH <i class="fas fa-heart-circle-plus"></i></li>
-                <li>CHIHIRO <i class="fas fa-heart-circle-plus"></i></li>
-                <li>BIRDS OF A FEATHER <i class="fas fa-heart-circle-plus"></i></li>
-                <li>WILDFLOWER <i class="fas fa-heart-circle-plus"></i></li>
-                <li>THE GREATEST</li>
-                <li>L'AMOUR DE MA VIE <i class="fas fa-heart-circle-plus"></i></li>
-                <li>THE DINER</li>
-                <li>BITTERSUITE <i class="fas fa-heart-circle-plus"></i></li>
-                <li>BLUE</li>
-            </ol>
-            <p id="dev-cal-2">
-                Out of the 4 projects released this year that I listened to and loved (<i>Eternal Sunshine</i>, <i>The
-                    Tortured Poets Department</i>, <i>Radical Optimism</i>, <i>Hit Me Hard and Soft</i>) <i>Hit Me Hard
-                    and Soft</i> is arguably the most resonating one?
-            </p>
-            <p id="dev-cal-2">
-                Like don't get me wrong I'm still a swiftie but being a swiftie doesn't mean you have to listen to
-                Taylor's music all day and be constrained to the idea that her album is the best... Sorry y'all I guess
-                I need more time with TTPD
-            </p>
+            <p id="dev-cal-2">Page contains a log of the songs I'm currently listening to</p>
+            <table id="dev-cal-2">
+                <thead>
+                    <tr>
+                        <th colspan="6">Last Updated on Jul 22 2024</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Type
+                        </td>
+                        <td>
+                            Name
+                        </td>
+                        <td>
+                            Artist
+                        </td>
+                        <td>
+                            Album
+                        </td>
+                        <td>
+                            Genre
+                        </td>
+                        <td>
+                            Year
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Single
+                        </td>
+                        <td id="music-song-col">
+                            Good Luck, Babe!
+                        </td>
+                        <td id="music-artist-col">
+                            Chappell Roan
+                        </td>
+                        <td id="music-song-col">
+                            &emsp;
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2024
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Album
+                        </td>
+                        <td id="music-song-col">
+                            BRAT
+                        </td>
+                        <td id="music-artist-col">
+                            Charli xcx
+                        </td>
+                        <td id="music-song-col">
+                            BRAT
+                        </td>
+                        <td>
+                            Dance Pop
+                        </td>
+                        <td>
+                            2024
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Album
+                        </td>
+                        <td id="music-song-col">
+                            Norman Fucking Rockwell!
+                        </td>
+                        <td id="music-artist-col">
+                            Lana Del Rey
+                        </td>
+                        <td id="music-song-col">
+                            Norman Fucking Rockwell!
+                        </td>
+                        <td>
+                            Alternative Pop
+                        </td>
+                        <td>
+                            2019
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Song
+                        </td>
+                        <td id="music-song-col">
+                            Violets for Roses
+                        </td>
+                        <td id="music-artist-col">
+                            Lana Del Rey
+                        </td>
+                        <td id="music-song-col">
+                            Blue Banisters
+                        </td>
+                        <td>
+                            Alternative Pop
+                        </td>
+                        <td>
+                            2021
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Song
+                        </td>
+                        <td id="music-song-col">
+                            Hard Feelings/Loveless
+                        </td>
+                        <td id="music-artist-col">
+                            Lorde
+                        </td>
+                        <td id="music-song-col">
+                            Melodrama
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2017
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Album
+                        </td>
+                        <td id="music-song-col">
+                            Melodrama
+                        </td>
+                        <td id="music-artist-col">
+                            Lorde
+                        </td>
+                        <td id="music-song-col">
+                            Melodrama
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2017
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Album
+                        </td>
+                        <td id="music-song-col">
+                            THE TORTURED POETS DEPARTMENT
+                        </td>
+                        <td id="music-artist-col">
+                            Taylor Swift
+                        </td>
+                        <td id="music-song-col">
+                            THE TORTURED POETS DEPARTMENT
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2024
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Album
+                        </td>
+                        <td id="music-song-col">
+                            eternal sunshine
+                        </td>
+                        <td id="music-artist-col">
+                            Ariana Grande
+                        </td>
+                        <td id="music-song-col">
+                            eternal sunshine
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2024
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Album
+                        </td>
+                        <td id="music-song-col">
+                            HIT ME HARD AND SOFT
+                        </td>
+                        <td id="music-artist-col">
+                            Billie Eilish
+                        </td>
+                        <td id="music-song-col">
+                            HIT ME HARD AND SOFT
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2024
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Album
+                        </td>
+                        <td id="music-song-col">
+                            Desire, I Want to Turn Into You
+                        </td>
+                        <td id="music-artist-col">
+                            Caroline Polachek
+                        </td>
+                        <td id="music-song-col">
+                            Desire, I Want to Turn Into You
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2023
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Song
+                        </td>
+                        <td id="music-song-col">
+                            Supercut
+                        </td>
+                        <td id="music-artist-col">
+                            Lorde
+                        </td>
+                        <td id="music-song-col">
+                            Melodrama
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2017
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Song
+                        </td>
+                        <td id="music-song-col">
+                            借
+                        </td>
+                        <td id="music-artist-col">
+                            毛不易
+                        </td>
+                        <td id="music-song-col">
+                            平凡的一天
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2018
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Song
+                        </td>
+                        <td id="music-song-col">
+                            一荤一素
+                        </td>
+                        <td id="music-artist-col">
+                            毛不易
+                        </td>
+                        <td id="music-song-col">
+                            平凡的一天
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2018
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Song
+                        </td>
+                        <td id="music-song-col">
+                            海上日记
+                        </td>
+                        <td id="music-artist-col">
+                            毛不易
+                        </td>
+                        <td id="music-song-col">
+                            幼鸟指南
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2021
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Song
+                        </td>
+                        <td id="music-song-col">
+                            旅行家说
+                        </td>
+                        <td id="music-artist-col">
+                            毛不易
+                        </td>
+                        <td id="music-song-col">
+                            幼鸟指南
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2021
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Song
+                        </td>
+                        <td id="music-song-col">
+                            若有缘由
+                        </td>
+                        <td id="music-artist-col">
+                            毛不易
+                        </td>
+                        <td id="music-song-col">
+                            幼鸟指南
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2021
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Song
+                        </td>
+                        <td id="music-song-col">
+                            二零三
+                        </td>
+                        <td id="music-artist-col">
+                            毛不易
+                        </td>
+                        <td id="music-song-col">
+                            小王
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2019
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Song
+                        </td>
+                        <td id="music-song-col">
+                            一程山路
+                        </td>
+                        <td id="music-artist-col">
+                            毛不易
+                        </td>
+                        <td id="music-song-col">
+                            小王
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2019
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Song
+                        </td>
+                        <td id="music-song-col">
+                            小王
+                        </td>
+                        <td id="music-artist-col">
+                            毛不易
+                        </td>
+                        <td id="music-song-col">
+                            小王
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2019
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Song
+                        </td>
+                        <td id="music-song-col">
+                            东北民谣
+                        </td>
+                        <td id="music-artist-col">
+                            毛不易
+                        </td>
+                        <td id="music-song-col">
+                            小王
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2019
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Song
+                        </td>
+                        <td id="music-song-col">
+                            呓语
+                        </td>
+                        <td id="music-artist-col">
+                            毛不易
+                        </td>
+                        <td id="music-song-col">
+                            小王
+                        </td>
+                        <td>
+                            Pop
+                        </td>
+                        <td>
+                            2019
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
-        <p id="dev-cal-2">
-            <span class="subtitle" id="title-1">
-                <i class="fa-solid fa-caret-right"></i>&emsp;we can't be friends (wait for your love)
-            </span>
-        </p>
-        <p id="dev-cal-2">
-            <i>click the above title to expand</i>
-        </p>
-        <div class="pages-container" id="song-1"><audio
-                src="../static/audio/we can't be friends (wait for your love).mp3" controls id="audio-1"></audio>
-            <p id="dev-cal-2">
-                [Verse 1]
-                <br>I didn't think you'd understand me
-                <br>没想过你会理解我
-                <br>How could you ever even try?
-                <br>你怎么做到的？
-                <br>I don't wanna tiptoe, but I don't wanna hide
-                <br>我不愿小心翼翼 不愿躲躲藏藏
-                <br>But I don't wanna feed this monstrous fire
-                <br>也不愿火上浇油
-                <br>Just wanna let this story die
-                <br>故事消逝之时
-                <br>And I'll be alright
-                <br>一切会好起来
-                <br>
-                <br>[Chorus]
-                <br>We can't be friends
-                <br>我们不能再做朋友
-                <br>But I'd like to just pretend
-                <br>但我还在假想和你握手
-                <br>You cling to your papers and pens
-                <br>你握着黑纸白字
-                <br>Wait until you like me again
-                <br>但我还在等你回头
-                <br>
-                <br>[Post-Chorus]
-                <br>Wait for your love
-                <br>等你回头
-                <br> My love, I'll wait for your love
-                <br>我在等你的爱
-                <br>
-                <br>[Verse 2]
-                <br>Me and my truth, we sit in silence
-                <br>我和真相静坐于黑暗中
-                <br>Mm
-                <br>Babygirl, it's just me and you
-                <br>宝贝 现在只有你我
-                <br>'Cause I don't wanna argue, but I don't wanna bite
-                <br>我不想争论 也不想沉默
-                <br>My tongue, yeah, I think I'd rather die
-                <br>我觉得还是死了算了
-                <br>You got me misunderstood
-                <br>你误解了我
-                <br>But at least I look this good
-                <br>但至少我过得还好
-                <br>
-                <br>[Chorus]
-                <br>We can't be friends
-                <br>我们不能再做朋友
-                <br>But I'd like to just pretend
-                <br>但我还在假想和你握手
-                <br>You cling to your papers and pens
-                <br>你握着黑纸白字
-                <br>Wait until you like me again
-                <br>但我还在等你回头
-                <br>
-                <br>[Post-Chorus]
-                <br>Wait for your love
-                <br>等你回头
-                <br>My love, I'll wait for your love
-                <br>我在等你的爱
-                <br>I'll wait for your love
-                <br>我会等你的爱
-                <br>My love, I'll wait for your love
-                <br>我会等你的爱
-                <br>
-                <br>[Bridge]
-                <br>Know that you made me
-                <br>我知道你让我的生活完整
-                <br>I don't like how you paint me, yet I'm still here hanging
-                <br>我不喜欢你画中的我 但我还是把画挂起
-                <br>Not what you made me
-                <br>我为自己活着
-                <br>It's somethin' like a daydream
-                <br>如梦如幻
-                <br>But I feel so seen in the night
-                <br>却走到哪里都被看穿
-                <br>So for now, it's only me
-                <br>所以我独自一人
-                <br>And maybe that's all I need
-                <br>也好像过得美满
-                <br>
-                <br>[Chorus]
-                <br>We can't be friends
-                <br>我们不能再做朋友
-                <br>But I'd like to just pretend
-                <br>但我还在假想和你握手
-                <br>You cling to your papers and pens
-                <br>你握着黑纸白字
-                <br>Wait until you like me again
-                <br>但我还在等你回头
-                <br>
-                <br>[Post-Chorus]
-                <br>Wait for your love
-                <br>等你回头
-                <br>My love, I'll wait for your love
-                <br>我在等你的爱
-                <br>I'll wait for your love
-                <br>我会等你的爱
-                <br>My love, I'll wait for your love
-                <br>我会等你的爱
-                <br>
-                <br>[Outro]
-                <br>I'll wait for your love
-                <br>我会等你的爱
-                <br>I'll wait for your love
-                <br>我会等你的爱
-                <br>I'll wait for your love
-                <br>我会等你的爱
-                <br>I'll wait for your love
-                <br>我会等你的爱
-                <br>I'll wait for your love
-                <br>我会等你的爱
-                <br><br>翻译：李江源，翻译归译者版权所有
-            </p>
-        </div>
-        <!-- <p class="music-subtitle">圣诞列表</p>
-        <ol>
-            <li class="music-song-title" id="1">All I Want for Christmas Is You</li>
-            <li class="music-song-title" id="2">Rockin' Around the Christmas Tree</li>
-            <li class="music-song-title" id="3">Last Christmas</li>
-            <li class="music-song-title" id="4">Santa Tell Me</li>
-            <li class="music-song-title" id="5">Santa, Can't You Hear Me</li>
-            <li class="music-song-title" id="6">Underneath the Tree</li>
-        </ol> -->
-
-        <br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br>
     </div>
+
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
     <include src="../layout/footer.html"></include>
 </body>
 
