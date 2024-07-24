@@ -395,7 +395,6 @@ body {
     z-index: 30;
     position: relative;
     overflow: hidden;
-    line-height: 15px;
 }
 
 #copyright-info>p>a {
