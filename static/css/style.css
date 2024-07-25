@@ -67,6 +67,7 @@ body {
 }
 
 #d-button-9 {
+    margin-top: 6.5px;
     color: #45C4B0;
     border: solid 1px #45C4B0;
     transition: all 0.2s;
