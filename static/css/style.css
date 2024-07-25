@@ -172,9 +172,9 @@ body {
     transition: all 0.5s cubic-bezier(1, 0, 0, 1);
 }
 
-#doors-wall::after {
+#doors-wall::before {
     content: '';
-    width: 100%;
+    width: 100vw;
     height: 20vh;
     position: absolute;
     left: 0;
@@ -186,6 +186,10 @@ body {
 #doors-wall.active {
     height: 100vh;
     background-color: #f6f6f6;
+}
+
+#doors-wall.active::before {
+    position: fixed;
 }
 
 #doors-wall-head {
