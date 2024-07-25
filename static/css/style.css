@@ -699,7 +699,7 @@ nav {
         background-color: #3e3e3e;
     }
 
-    #doors-wall::after {
+    #doors-wall::before {
         background-image: linear-gradient(#015958, #3e3e3e, #3e3e3e00);
     }
 
