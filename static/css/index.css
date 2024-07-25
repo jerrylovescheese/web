@@ -388,6 +388,7 @@
 #remainTime {
     margin-top: 1em;
     font-size: 28px;
+    word-break: break-all;
 }
 
 #one,
@@ -820,6 +821,10 @@
     text-align: left;
     padding-bottom: 20vh;
     color: #fff;
+}
+
+#canvas-11 {
+    background-color: rgb(200, 186, 128);
 }
 
 #canvas-11>svg {
