@@ -324,7 +324,7 @@
 }
 
 #door-2 {
-    width: 220px;
+    width: 222px;
 }
 
 #doors-alt {
@@ -832,6 +832,8 @@
 
 #canvas-11 .canvas-text {
     font-size: 30px;
+    line-height: normal;
+    word-break: keep-all;
     font-family: 'Space Grotesk', 'Helvetica', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: normal;
 }
