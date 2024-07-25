@@ -365,7 +365,7 @@
 }
 
 #namecard>a {
-    color: white;
+    color: unset;
 }
 
 #namecard>a:hover {
