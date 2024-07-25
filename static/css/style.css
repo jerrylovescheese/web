@@ -80,7 +80,7 @@ body {
 
 #door-2 {
     margin-left: 10px;
-    width: 177.5px;
+    width: 178.5px;
 }
 
 /* #door-3 {
@@ -610,7 +610,7 @@ nav {
 @media (max-width: 430px) {
 
     #door-2 {
-        width: 92.5px !important;
+        width: 93.5px !important;
     }
 
     #d-button-6,
