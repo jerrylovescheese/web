@@ -692,6 +692,10 @@ nav {
         background-color: #4d4d4d;
     }
 
+    #doors-wall {
+        background-color: #3e3e3e;
+    }
+
     #doors-wall.active {
         background-color: #3e3e3e;
     }
