@@ -868,3 +868,8 @@
     background-position: center bottom;
     filter: blur(1em);
 }
+
+#canvas-13 {
+    background-image: url(../img/Aug-7-2024_画板-1.webp);
+    background-size: cover;
+}
