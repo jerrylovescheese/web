@@ -843,7 +843,8 @@
     font-weight: normal;
 }
 
-#canvas-11 a {
+#canvas-11 a,
+#canvas-13 a {
     color: unset;
 }
 
