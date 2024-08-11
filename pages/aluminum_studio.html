@@ -62,6 +62,25 @@
             margin-left: 30px;
         }
 
+        .pages-container>#dev-cal-2 {
+            margin-left: 0;
+            margin-top: 0;
+        }
+
+        #alu-stu-namecard {
+            padding-bottom: 15px;
+        }
+
+        #alu-stu-name {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .fa-terminal,
+        .fa-language {
+            font-size: smaller;
+        }
+
         #my-favorite-things {
             margin: 0 auto;
             border-top: solid 1px black;
@@ -78,58 +97,6 @@
 
         .halt-label {
             font-weight: bold;
-        }
-
-        #about-namecard {
-            width: 600px;
-            height: 200px;
-            aspect-ratio: 3/1;
-            border-radius: 15px;
-            margin-left: 30px;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
-                0 2px 2px rgba(0, 0, 0, 0.11),
-                0 4px 4px rgba(0, 0, 0, 0.11),
-                0 8px 8px rgba(0, 0, 0, 0.11);
-            overflow: hidden;
-            background-image: url(../static/img/pfp.webp);
-            background-size: cover;
-            background-position: 0 -150px;
-        }
-
-        #about-namecard-text {
-            display: block;
-            padding: 10px;
-            padding-left: 15px;
-            color: #fff;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
-                0 2px 2px rgba(0, 0, 0, 0.11),
-                0 4px 4px rgba(0, 0, 0, 0.11),
-                0 8px 8px rgba(0, 0, 0, 0.11),
-                0 16px 32px rgba(0, 0, 0, 0.51);
-            font-size: 25px;
-            font-weight: bold;
-            font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-
-        #about-namecard-text-small {
-            padding-left: 30px;
-            color: #fff;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
-                0 2px 2px rgba(0, 0, 0, 0.11),
-                0 4px 4px rgba(0, 0, 0, 0.11),
-                0 8px 8px rgba(0, 0, 0, 0.11),
-                0 16px 32px rgba(0, 0, 0, 0.51);
-            font-size: 18px;
-            font-weight: normal;
-            font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-
-        #about-namecard-text-small>a {
-            padding-left: 30px;
-            color: #fff;
-            font-size: 18px;
-            font-weight: normal;
-            font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
     </style>
 </head>
@@ -160,18 +127,23 @@
         <p id="update">这个页面上一次更新于2024年3月17日</p>
 
         <p id="dev-cal-2" class="subtitle"><span id="subtitle-1">名片</span></p>
-        <div id="about-namecard">
-            <span id="about-namecard-text"><i class="fa-solid fa-user"></i>&emsp13;&emsp13;李江源 Jerry Li</span>
-            <span id="about-namecard-text-small">
-                <i class="fas fa-person"></i>
-                &emsp;&emsp13;男 高三学生<br>
-                <a href="mailto:jerrylovesapple@icloud.com">
-                    <i class="fas fa-envelope"></i>
-                    &emsp;jerrylovesapple@icloud.com
-                </a><br>
-            </span>
-            <span id="about-namecard-text-small"><i class="fas fa-school"></i>
-                &emsp13;&emsp13;北京师范大学第二附属中学国际部</span>
+        <div class="pages-container" id="alu-stu-namecard">
+            <p id="dev-cal-2"><span id="alu-stu-name">Jiangyuan Li (Jerry Cyan)</span></p>
+            <p id="dev-cal-2">un garçon, 18</p>
+            <p id="dev-cal-2"><i class="fa-solid fa-briefcase"></i>&emsp;<b>Job</b>&emsp;Full-time student</p>
+            <p id="dev-cal-2"><i class="fa-solid fa-building-columns"></i>&emsp;<b>Previously at</b>&emsp;The Second
+                High School attached to Beijing Normal University</p>
+            <p id="dev-cal-2"><i class="fa-solid fa-building-columns"></i>&emsp;<b>Currently at</b>&emsp;University of
+                Virginia</p>
+            <p id="dev-cal-2"><i class="fa-solid fa-envelope"></i>&emsp;<b>Mailto</b>&emsp;<a
+                    href="mailto:jerrylovesapple@icloud.com">jerrylovesapple@icloud.com</a></p>
+            <p id="dev-cal-2"><i class="fa-solid fa-language"></i>&emsp;<b>Available in</b>&emsp;Simplified Chinese
+                简体中文, English (US)</p>
+            <p id="dev-cal-2"><i class="fa-solid fa-terminal"></i>&emsp;<b>Works
+                    with</b>&emsp;<i class="fa-brands fa-python"></i>&emsp13;Python, <i
+                    class="fa-brands fa-java"></i>&emsp13;Java, <i class="fa-brands fa-html5"></i>&emsp13;HTML, <i
+                    class="fa-brands fa-css3"></i>&emsp13;CSS</p>
+            <p id="dev-cal-2"><i class="fa-solid fa-book-open-reader"></i>&emsp;<b>Learning</b>&emsp;French</p>
         </div>
         <p id="dev-cal-2" class="subtitle"><span id="subtitle-2">为什么2024年了，我还要一行一行的写静态网页</span></p>
         <p id="dev-cal-2">
