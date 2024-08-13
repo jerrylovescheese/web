@@ -62,7 +62,7 @@ body {
 #d-button-1 {
     aspect-ratio: 9/5;
     width: fit-content;
-    background-image: url(../img/home-button-light.webp);
+    background-image: url(../img/home-button-light.svg);
     background-size: contain;
 }
 
@@ -684,7 +684,8 @@ nav {
     }
 
     #d-button-1 {
-        background-image: url(../img/home-button-dark.webp);
+        background-image: url(../img/home-button-dark.svg);
+        fill: white;
     }
 
     .d-button-alt {
