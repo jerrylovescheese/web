@@ -874,3 +874,11 @@
     background-image: url(../img/Aug-7-2024_画板-1.webp);
     background-size: cover;
 }
+
+#canvas-14>.canvas-text {
+    font-size: 35px;
+    font-family: 'Libre Franklin', 'Source Han Sans', sans-serif;
+    font-weight: bold;
+    line-height: normal;
+    text-align: center;
+}
