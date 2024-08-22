@@ -68,14 +68,14 @@ body {
 
 #d-button-9 {
     margin-top: 7px;
-    color: rgb(243, 109, 38);
-    border: solid 1px rgb(243, 109, 38);
+    color: rgb(35, 45, 75);
+    border: solid 1px rgb(35, 45, 75);
     transition: all 0.2s;
 }
 
 #d-button-9:hover {
     color: unset;
-    background-color: rgb(243, 109, 38);
+    background-color: rgb(35, 45, 75);
 }
 
 #door-2 {
@@ -185,7 +185,7 @@ body {
     left: 0;
     top: 0;
     z-index: -1;
-    background-image: linear-gradient(rgb(243, 109, 38), #f6f6f6, #f6f6f600);
+    background-image: linear-gradient(rgb(35, 45, 75), #f6f6f6, #f6f6f600);
 }
 
 #doors-wall.active {
@@ -669,6 +669,9 @@ nav {
         fill: white;
     }
 
+    a {
+        color: hsl(225, 36%, 72%) !important;
+    }
 
     .doors {
         background-color: #3e3e3e;
@@ -688,6 +691,15 @@ nav {
         fill: white;
     }
 
+    #d-button-9 {
+        border-color: hsl(225, 36%, 72%);
+        color: hsl(225, 36%, 72%);
+    }
+
+    #d-button-9:hover {
+        background-color: hsl(225, 36%, 72%);
+    }
+
     .d-button-alt {
         background-color: #4d4d4d;
     }
@@ -701,7 +713,7 @@ nav {
     }
 
     #doors-wall::before {
-        background-image: linear-gradient(rgb(243, 109, 38), #21212100);
+        background-image: linear-gradient(rgb(35, 45, 75), #21212100);
     }
 
     #d-wall-mark {
@@ -793,7 +805,7 @@ nav {
 
 a {
     text-decoration: none;
-    color: rgb(243, 109, 38);
+    color: rgb(35, 45, 75);
 }
 
 a:hover {
