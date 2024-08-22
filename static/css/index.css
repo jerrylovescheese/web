@@ -843,11 +843,6 @@
     font-weight: normal;
 }
 
-#canvas-11 a,
-#canvas-13 a {
-    color: unset;
-}
-
 #canvas-12 {
     overflow: hidden;
 }
@@ -875,10 +870,16 @@
     background-size: cover;
 }
 
-#canvas-14>.canvas-text {
+#canvas-14>.canvas-text,
+#canvas-15>.canvas-text {
     font-size: 35px;
     font-family: 'Libre Franklin', 'Source Han Sans', sans-serif;
     font-weight: bold;
     line-height: normal;
     text-align: center;
+    color: #E57200;
+}
+
+#canvas-15 {
+    background-image: url(../img/IMG_4357.webp);
 }
