@@ -4,430 +4,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab Environment</title>
-    <script src="../static/js/jquery-3.7.1.js"></script>
+    <title>Experiments</title>
     <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
+    <script src="../static/js/jquery-3.7.1.js"></script>
     <script>
         $(function () {
-            $("#d-button-1").hover(function () {
-                $("#d-button-alt-1").toggleClass("active");
-            });
-        });
-        $(function () {
-            $("#d-button-2").hover(function () {
-                $("#d-button-alt-2").toggleClass("active");
-            });
-        });
-        $(function () {
-            $("#d-button-3").hover(function () {
-                $("#d-button-alt-3").toggleClass("active");
-            });
-        });
-        $(function () {
-            $("#d-button-4").hover(function () {
-                $("#d-button-alt-4").toggleClass("active");
-            });
-        });
-        $(function () {
-            $("#d-button-5").hover(function () {
-                $("#d-button-alt-5").toggleClass("active");
-            });
-        });
-        $(function () {
-            $("#d-button-6").hover(function () {
-                $("#d-button-alt-6").toggleClass("active");
-            });
-        });
-        $(function () {
-            $("#d-button-7").hover(function () {
-                $("#d-button-alt-7").toggleClass("active");
-            });
-        });
-        $(function () {
-            $("#d-button-8").hover(function () {
-                $("#d-button-alt-8").toggleClass("active");
-            });
-        });
-        $(function () {
-            $("#d-button-8").click(function () {
-                $("#doors-wall").toggleClass("active");
+            $("#btc-4").click(function () {
+                $("#butter").toggleClass("active");
+                $("#cup").toggleClass("active");
             });
         });
     </script>
     <style>
-        body {
-            margin: 0;
-        }
-
-        #door {
-            padding: 10px;
+        #buttercup {
             position: fixed;
-            left: 0;
             top: 0;
+            left: 0;
             right: 0;
-        }
-
-        #doors {
-            display: flex;
-            overflow: hidden;
-        }
-
-        .doors {
-            height: 50px;
-            background-color: #f6f6f6;
-            border-radius: 10px;
-            display: flex;
-            z-index: 1;
-            overflow: hidden;
-        }
-
-        #door-1 {
-            width: 248px;
-        }
-
-        .d-button {
-            width: 35px;
-            height: 35px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: bold;
-            margin-top: 7.5px;
-            margin-left: 7.5px;
-            border-radius: 5px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .d-button:hover {
-            background-color: #e2e2e2;
+        #butter {
+            width: 100vw;
+            height: 0;
+            background-color: rgb(35, 45, 75);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
 
-        #d-button-1 {
-            aspect-ratio: 9/5;
-            width: fit-content;
-            background-image: url(../static/img/home-button-light.webp);
-            background-size: contain;
+        #butter.active {
+            height: 90vh;
         }
 
-        #d-button-8-label {
-            transform: rotate(45deg);
-        }
-
-        #door-2 {
-            margin-left: 10px;
-            width: 135px;
-        }
-
-        /* #door-3 {
-            margin-left: 10px;
-            flex: 1;
-        } */
-
-        #doors-alt {
-            width: 393px;
-            height: 24px;
+        #cup {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
             display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        #cup.active {
+            top: 90vh;
+        }
+
+        #btc-lights {
+            width: 100%;
+            height: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+        }
+
+        #btcs {
             position: relative;
+        }
+
+        .btc-o {
+            height: 50px;
+            background-color: rgb(35, 45, 75);
+            border-radius: 0 0 10px 10px;
+        }
+
+        #btc-circles {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #btc-o-1 {
+            width: 217px;
+        }
+
+        .btc-o::before,
+        .btc-o::after,
+        .btc-o .btc-circles::before,
+        .btc-o .btc-circles::after {
+            content: "";
+            position: absolute;
+            top: 0;
+        }
+
+        .btc-o::before,
+        .btc-o::after {
+            background-color: rgb(35, 45, 75);
+            width: 10px;
+            height: 10px;
+            left: -10px;
             z-index: 1;
         }
 
-        .d-button-alt {
-            width: fit-content;
-            height: 0;
-            overflow: hidden;
-            border-radius: 5px;
-            background-color: #fff;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
-                0 2px 2px rgba(0, 0, 0, 0.11),
-                0 4px 4px rgba(0, 0, 0, 0.11),
-                0 8px 8px rgba(0, 0, 0, 0.11);
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 14px;
-            line-height: 24px;
-            padding-left: 5px;
-            padding-right: 5px;
+        .btc-o::after {
+            left: unset;
+            right: -10px;
+        }
+
+        .btc-o .btc-circles::before,
+        .btc-o .btc-circles::after {
+            background-color: #ffffff;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            z-index: 2;
+            left: -20px;
+            top: 0px;
+        }
+
+        .btc-o .btc-circles::after {
+            left: unset;
+            right: -20px;
+        }
+
+        .btc {
+            width: 40px;
+            height: 40px;
             position: absolute;
+            bottom: 5px;
+            left: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            color: white;
         }
 
-        #d-button-alt-1.active {
-            height: 24px;
-            left: 14.88px;
+        #btc-1 {
+            width: 72px;
+            background-image: url(../static/img/home-button-dark.svg);
+            background-size: cover;
         }
 
-        #d-button-alt-2.active {
-            height: 24px;
-            left: 72.74px;
+        #btc-2 {
+            margin-left: 77px;
         }
 
-        #d-button-alt-3.active {
-            height: 24px;
-            left: 113.595px;
+        #btc-3 {
+            margin-left: 122px;
         }
 
-        #d-button-alt-4.active {
-            height: 24px;
-            left: 156.845px;
+        #btc-4 {
+            margin-left: 167px;
         }
 
-        #d-button-alt-5.active {
-            height: 24px;
-            left: 198.86px;
-        }
-
-        #d-button-alt-6.active {
-            height: 24px;
-            left: 248.84px;
-        }
-
-        #d-button-alt-7.active {
-            height: 24px;
-            left: 291.75px;
-        }
-
-        #d-button-alt-8.active {
-            height: 24px;
-            left: 339.09px;
-        }
-
-        #doors-wall {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 0;
-            background-color: transparent;
-            overflow-x: hidden;
-            overflow-y: scroll;
-            transition: all 0.5s cubic-bezier(1, 0, 0, 1);
-        }
-
-        #doors-wall.active {
-            height: 100vh;
-            background-color: #f6f6f6;
-        }
-
-        #doors-wall-head {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 25px;
-            font-weight: bold;
-            margin-left: 30px;
-            margin-top: 70px;
-        }
-
-        #doors-wall-grid {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin-left: 30px;
-            margin-right: 30px;
-            margin-top: 15px;
-            display: grid;
-            grid-template-columns: 1fr 2fr 3fr;
-        }
-
-        .d-wall-sec>ul {
-            list-style: none;
-            margin-left: 0;
-            padding-left: 0;
-        }
-
-        .d-wall-sec>ul>a>li {
-            margin-bottom: 5px;
-        }
-
-        .d-wall-sec-text {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 18px;
-        }
-
-        #d-wall-sec-3>ul {
-            display: grid;
-            grid-template-columns: 2fr 2fr;
-        }
-
-        @media (max-width: 768px) {
-            #door-3 {
-                display: none !important;
-            }
-        }
-
-        @media (max-width: 768px) {
-
-            #door-2 {
-                width: 92.5px !important;
-            }
-
-            #d-button-6 {
-                display: none;
-            }
-
-            #doors-alt {
-                display: none;
-            }
-
-            #door-3 {
-                display: none !important;
-            }
-
-            #doors-wall-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            #d-wall-sec-3>ul {
-                display: block;
-            }
+        .btc:hover {
+            background-color: hsl(225, 36%, 62%);
         }
     </style>
 </head>
 
 <body>
-    <header id="door">
-        <div id="doors">
-            <div class="doors" id="door-1">
-                <a href="./aluminum_studio.html">
-                    <div class="d-button" id="d-button-1"></div>
-                </a>
-                <a href="./clock.html">
-                    <div class="d-button" id="d-button-2">
-                        <i class="fas fa-clock"></i>
+    <div id="buttercup">
+        <div id="butter">
+
+        </div>
+        <div id="cup">
+            <div id="btc-lights"></div>
+            <div id="btcs">
+                <div class="btc-o" id="btc-o-1">
+                    <div class="btc-circles">
+                        <div class="btc" id="btc-1"></div>
+                        <div class="btc" id="btc-2">
+                            <i class="fas fa-info"></i>
+                        </div>
+                        <div class="btc" id="btc-3">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <div class="btc" id="btc-4">
+                            <i class="fa-regular fa-square-plus"></i>
+                        </div>
                     </div>
-                </a>
-                <a href="./aluminum_studio.html">
-                    <div class="d-button" id="d-button-3">
-                        <i class="fas fa-info"></i>
-                    </div>
-                </a>
-                <a href="./apple.html">
-                    <div class="d-button" id="d-button-4">
-                        <i class="fa-brands fa-apple"></i>
-                    </div>
-                </a>
-                <a href="./music.html">
-                    <div class="d-button" id="d-button-5">
-                        <i class="fas fa-music"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="doors" id="door-2">
-                <a href="./contact.html">
-                    <div class="d-button" id="d-button-6">
-                        <i class="fa-solid fa-message"></i>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="d-button" id="d-button-7">
-                        <i class="fa-solid fa-chevron-up"></i>
-                    </div>
-                </a>
-                <div class="d-button" id="d-button-8">
-                    <span id="d-button-8-label">
-                        <i class="fa-solid fa-circle-chevron-right"></i>
-                    </span>
                 </div>
             </div>
         </div>
-        <div id="doors-alt">
-            <div class="d-button-alt" id="d-button-alt-1">Home</div>
-            <div class="d-button-alt" id="d-button-alt-2">Clock</div>
-            <div class="d-button-alt" id="d-button-alt-3">About</div>
-            <div class="d-button-alt" id="d-button-alt-4">Apple</div>
-            <div class="d-button-alt" id="d-button-alt-5">Music</div>
-            <div class="d-button-alt" id="d-button-alt-6">Contacts</div>
-            <div class="d-button-alt" id="d-button-alt-7">Go to top</div>
-            <div class="d-button-alt" id="d-button-alt-8">Expand</div>
-        </div>
-        <div id="doors-wall">
-            <div id="doors-wall-head">网站地图</div>
-            <div id="doors-wall-grid">
-                <div class="d-wall-sec" id="d-wall-sec-1">
-                    <a href="./apple.html">
-                        <span class="d-wall-sec-text">苹果</span>
-                    </a>
-                    <ul>
-                        <a href="./subpages/dubdub.html">
-                            <li>WWDC</li>
-                        </a>
-                        <a href="./subpages/iphone.html">
-                            <li>iPhone</li>
-                        </a>
-                        <a href="./subpages/iphone.html">
-                            <li>iPad</li>
-                        </a>
-                        <a href="./subpages/mac.html">
-                            <li>Mac</li>
-                        </a>
-                    </ul>
-                </div>
-                <div class="d-wall-sec" id="d-wall-sec-2">
-                    <a href="./music.html">
-                        <span class="d-wall-sec-text">音乐</span>
-                    </a>
-                    <ul>
-                        <a href="./subpages/1989tv.html">
-                            <li>1989 (Taylor's Version)</li>
-                        </a>
-                        <a href="./subpages/lover.html">
-                            <li>Lover</li>
-                        </a>
-                        <a href="./subpages/midnights.html">
-                            <li>Midnights</li>
-                        </a>
-                        <a href="./subpages/ttpd.html">
-                            <li>The Tortured Poets Department</li>
-                        </a>
-                        <a href="./subpages/taylorswift.html">
-                            <li>Taylor Swift</li>
-                        </a>
-                    </ul>
-                </div>
-                <div class="d-wall-sec" id="d-wall-sec-3">
-                    <span class="d-wall-sec-text">其他</span>
-                    <ul>
-                        <a href="./aluminum_studio.html">
-                            <li>关于</li>
-                        </a>
-                        <a href="./christmas.html">
-                            <li>圣诞</li>
-                        </a>
-                        <a href="./classical_ch_sh.html">
-                            <li>部编版高中语文古文</li>
-                        </a>
-                        <a href="./classical_ch.html">
-                            <li>部编版初中语文古文</li>
-                        </a>
-                        <a href="./clock.html">
-                            <li>时钟</li>
-                        </a>
-                        <a href="./contact.html">
-                            <li>联系</li>
-                        </a>
-                        <a href="./develop.html">
-                            <li>开发与实验室</li>
-                        </a>
-                        <a href="./flashback.html">
-                            <li>采光间</li>
-                        </a>
-                        <a href="./friends.html">
-                            <li>老友记</li>
-                        </a>
-                        <a href="./homemade_giftcard.html">
-                            <li>手写祝福</li>
-                        </a>
-                        <a href="./music.html">
-                            <li>音乐</li>
-                        </a>
-                        <a href="./noticeboard.html">
-                            <li>笔记板</li>
-                        </a>
-                        <a href="./search.html">
-                            <li>搜索</li>
-                        </a>
-                        <a href="./survey.html">
-                            <li>调查问卷</li>
-                        </a>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam sequi quibusdam, laboriosam quidem excepturi
+        aut tempore, similique, eos quam nulla nobis placeat. Exercitationem quo fugit sapiente ex consequatur culpa?
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam sequi quibusdam, laboriosam quidem excepturi
+        aut tempore, similique, eos quam nulla nobis placeat. Exercitationem quo fugit sapiente ex consequatur culpa?
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam sequi quibusdam, laboriosam quidem excepturi
+        aut tempore, similique, eos quam nulla nobis placeat. Exercitationem quo fugit sapiente ex consequatur culpa?
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam sequi quibusdam, laboriosam quidem excepturi
+        aut tempore, similique, eos quam nulla nobis placeat. Exercitationem quo fugit sapiente ex consequatur culpa?
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam sequi quibusdam, laboriosam quidem excepturi
+        aut tempore, similique, eos quam nulla nobis placeat. Exercitationem quo fugit sapiente ex consequatur culpa?
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam sequi quibusdam, laboriosam quidem excepturi
+        aut tempore, similique, eos quam nulla nobis placeat. Exercitationem quo fugit sapiente ex consequatur culpa?
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam sequi quibusdam, laboriosam quidem excepturi
+        aut tempore, similique, eos quam nulla nobis placeat. Exercitationem quo fugit sapiente ex consequatur culpa?
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam sequi quibusdam, laboriosam quidem excepturi
+        aut tempore, similique, eos quam nulla nobis placeat. Exercitationem quo fugit sapiente ex consequatur culpa?
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam sequi quibusdam, laboriosam quidem excepturi
+        aut tempore, similique, eos quam nulla nobis placeat. Exercitationem quo fugit sapiente ex consequatur culpa?
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam sequi quibusdam, laboriosam quidem excepturi
+        aut tempore, similique, eos quam nulla nobis placeat. Exercitationem quo fugit sapiente ex consequatur culpa?
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam sequi quibusdam, laboriosam quidem excepturi
+        aut tempore, similique, eos quam nulla nobis placeat. Exercitationem quo fugit sapiente ex consequatur culpa?
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsam sequi quibusdam, laboriosam quidem excepturi
+        aut tempore, similique, eos quam nulla nobis placeat. Exercitationem quo fugit sapiente ex consequatur culpa?
+    </p>
+
 </body>
 
 </html>
