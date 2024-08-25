@@ -880,6 +880,14 @@
     color: #E57200;
 }
 
-#canvas-15 {
-    background-image: url(../img/IMG_4357.webp);
+#canvas-15>.canvas-text {
+    font-family: 'Charter', serif;
 }
+
+#canvas-15>.canvas-text>a {
+    color: #E57200 !important;
+}
+
+/* #canvas-15 {
+    background-image: url(../img/IMG_4357.webp);
+} */
