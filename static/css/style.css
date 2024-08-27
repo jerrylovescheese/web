@@ -634,6 +634,9 @@ nav {
 
     #butter {
         background-color: #333333c8;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        -moz-backdrop-filter: blur(12px);
     }
 
     .btc {
