@@ -317,25 +317,6 @@
     }
 }
 
-@media (max-width: 430px) {
-    #d-button-10 {
-        display: none;
-    }
-}
-
-#door-2 {
-    width: 222px;
-}
-
-#doors-alt {
-    width: 481.865px;
-}
-
-#d-button-alt-10.active {
-    height: 24px;
-    left: 426.135px;
-}
-
 #namecard {
     position: absolute;
     top: 100px;
@@ -880,12 +861,16 @@
     color: #E57200;
 }
 
+#canvas-15 {
+    background-color: #E57200;
+}
+
 #canvas-15>.canvas-text {
     font-family: 'Charter', serif;
 }
 
 #canvas-15>.canvas-text>a {
-    color: #E57200 !important;
+    color: #ffffff !important;
 }
 
 /* #canvas-15 {
