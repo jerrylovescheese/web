@@ -27,7 +27,10 @@ body {
 #butter {
     width: 100vw;
     height: 0;
-    background-color: #eee;
+    background-color: #eeeeeec8;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
     position: absolute;
     top: 0;
     left: 0;
@@ -111,6 +114,16 @@ body {
     right: -10px;
 }
 
+#cup.active .btc-o::before,
+#cup.active .btc-o::after {
+    background-image: none;
+}
+
+#cup.active .btc-o {
+    background-color: #eee;
+    border-radius: 10px;
+}
+
 .btc {
     width: 40px;
     height: 40px;
@@ -122,6 +135,7 @@ body {
     align-items: center;
     border-radius: 5px;
     color: black;
+    animation: app-elements-fade-in 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1;
 }
 
 #btc-1 {
@@ -155,7 +169,7 @@ body {
     font-size: 35px;
     font-weight: bold;
     margin-left: 30px;
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 #doors-wall-grid {
@@ -566,24 +580,6 @@ nav {
 }
 
 @media (max-width: 430px) {
-
-    #door-2 {
-        width: 93.5px !important;
-    }
-
-    #d-button-6,
-    #d-button-7 {
-        display: none;
-    }
-
-    #doors-alt {
-        display: none;
-    }
-
-    #door-3 {
-        display: none !important;
-    }
-
     #doors-wall-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -636,8 +632,13 @@ nav {
         background-color: #333333;
     }
 
+    #butter {
+        background-color: #333333c8;
+    }
+
     .btc {
         color: #fff;
+        animation: app-elements-fade-in-dark 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1;
     }
 
     .btc-o::before,
@@ -647,6 +648,10 @@ nav {
 
     .btc-o::after {
         background-image: url(../img/corner_b_dark.svg);
+    }
+
+    #cup.active .btc-o {
+        background-color: #666;
     }
 
     #btc-1 {
