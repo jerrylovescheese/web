@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrow-up-right-from-square-solid-light</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow-up-right-from-square-solid" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M320,0 C302.3,0 288,14.3 288,32 C288,49.7 302.3,64 320,64 L402.7,64 L201.4,265.4 C188.9,277.9 188.9,298.2 201.4,310.7 C213.9,323.2 234.2,323.2 246.7,310.7 L448,109.3 L448,192 C448,209.7 462.3,224 480,224 C497.7,224 512,209.7 512,192 L512,32 C512,14.3 497.7,0 480,0 L320,0 Z M80,32 C35.8,32 0,67.8 0,112 L0,432 C0,476.2 35.8,512 80,512 L400,512 C444.2,512 480,476.2 480,432 L480,320 C480,302.3 465.7,288 448,288 C430.3,288 416,302.3 416,320 L416,432 C416,440.8 408.8,448 400,448 L80,448 C71.2,448 64,440.8 64,432 L64,112 C64,103.2 71.2,96 80,96 L192,96 C209.7,96 224,81.7 224,64 C224,46.3 209.7,32 192,32 L80,32 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

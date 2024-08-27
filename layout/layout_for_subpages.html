@@ -1,141 +1,21 @@
 <script>
     $(function () {
-        $("#d-button-1").hover(function () {
-            $("#d-button-alt-1").toggleClass("active");
+        $("#btc-4").click(function () {
+            $("#butter").toggleClass("active");
+            $("#cup").toggleClass("active");
         });
     });
-    $(function () {
-        $("#d-button-2").hover(function () {
-            $("#d-button-alt-2").toggleClass("active");
-        });
-    });
-    $(function () {
-        $("#d-button-3").hover(function () {
-            $("#d-button-alt-3").toggleClass("active");
-        });
-    });
-    $(function () {
-        $("#d-button-4").hover(function () {
-            $("#d-button-alt-4").toggleClass("active");
-        });
-    });
-    $(function () {
-        $("#d-button-5").hover(function () {
-            $("#d-button-alt-5").toggleClass("active");
-        });
-    });
-    $(function () {
-        $("#d-button-6").hover(function () {
-            $("#d-button-alt-6").toggleClass("active");
-        });
-    });
-    $(function () {
-        $("#d-button-7").hover(function () {
-            $("#d-button-alt-7").toggleClass("active");
-        });
-    });
-    $(function () {
-        $("#d-button-8").hover(function () {
-            $("#d-button-alt-8").toggleClass("active");
-        });
-    });
-    $(function () {
-        $("#d-button-9").hover(function () {
-            $("#d-button-alt-9").toggleClass("active");
-        });
-    });
-    $(function () {
-        $("#d-button-9").click(function () {
-            $("#doors-wall").toggleClass("active");
-        });
-    });
+
     $(function () {
         $("#header-collapse-button").click(function () {
             $("#header-unit").toggleClass("active");
             $("#content-unit").toggleClass("active");
         });
     });
-    // scroll style specification
-    $(document).ready(function () {
-        let lastScrollTop = 0;
-
-        $(window).on('scroll', function () {
-            const header = $('#door-2');
-            const currentScrollTop = $(this).scrollTop();
-
-            if (currentScrollTop > lastScrollTop) {
-                // Scrolling down
-                header.addClass('scrolled');
-            } else {
-                // Scrolling up
-                header.removeClass('scrolled');
-            }
-
-            lastScrollTop = currentScrollTop;
-        });
-    });
 </script>
 
-<header id="door">
-    <div id="doors">
-        <div class="doors" id="door-1">
-            <a href="https://jerryly.top">
-                <div class="d-button" id="d-button-1"></div>
-            </a>
-            <a href="../clock.html">
-                <div class="d-button" id="d-button-2">
-                    <i class="fas fa-clock"></i>
-                </div>
-            </a>
-            <a href="../aluminum_studio.html">
-                <div class="d-button" id="d-button-3">
-                    <i class="fas fa-info"></i>
-                </div>
-            </a>
-            <a href="../apple.html">
-                <div class="d-button" id="d-button-4">
-                    <i class="fa-brands fa-apple"></i>
-                </div>
-            </a>
-            <a href="../music.html">
-                <div class="d-button" id="d-button-5">
-                    <i class="fas fa-music"></i>
-                </div>
-            </a>
-        </div>
-        <div class="doors" id="door-2">
-            <a href="https://blog.jerryly.top">
-                <div class="d-button" id="d-button-6">
-                    <i class="fa-solid fa-scroll"></i>
-                </div>
-            </a>
-            <a href="../contact.html">
-                <div class="d-button" id="d-button-7">
-                    <i class="fa-solid fa-message"></i>
-                </div>
-            </a>
-            <a href="#">
-                <div class="d-button" id="d-button-8">
-                    <i class="fa-solid fa-chevron-up"></i>
-                </div>
-            </a>
-            <div class="d-button" id="d-button-9">
-                <i class="fa-solid fa-square-plus"></i>
-            </div>
-        </div>
-    </div>
-    <div id="doors-alt">
-        <div class="d-button-alt" id="d-button-alt-1">Home</div>
-        <div class="d-button-alt" id="d-button-alt-2">Clock</div>
-        <div class="d-button-alt" id="d-button-alt-3">About</div>
-        <div class="d-button-alt" id="d-button-alt-4">Apple</div>
-        <div class="d-button-alt" id="d-button-alt-5">Music</div>
-        <div class="d-button-alt" id="d-button-alt-6">Blog</div>
-        <div class="d-button-alt" id="d-button-alt-7">Contacts</div>
-        <div class="d-button-alt" id="d-button-alt-8">Go to top</div>
-        <div class="d-button-alt" id="d-button-alt-9">Expand</div>
-    </div>
-    <div id="doors-wall">
+<header id="buttercup">
+    <div id="butter">
         <div id="doors-wall-head">网站地图</div>
         <div id="doors-wall-grid">
             <div class="d-wall-sec" id="d-wall-sec-1">
@@ -235,6 +115,30 @@
         </div>
         <div id="d-wall-mark">
             <span id="d-wall-mark-small">Ⓒ</span>&emsp13;2019 - 2024 aluminum.studio
+        </div>
+    </div>
+    <div id="cup">
+        <div id="btcs">
+            <div class="btc-o" id="btc-o-1">
+                <div class="btc-circles">
+                    <a href="https://jerryly.top">
+                        <div class="btc" id="btc-1"></div>
+                    </a>
+                    <a href="../aluminum_studio.html">
+                        <div class="btc" id="btc-2">
+                            <i class="fas fa-info"></i>
+                        </div>
+                    </a>
+                    <a href="../clock.html">
+                        <div class="btc" id="btc-3">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                    </a>
+                    <div class="btc" id="btc-4">
+                        <i class="fa-regular fa-square-plus"></i>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </header>

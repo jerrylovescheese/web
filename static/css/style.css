@@ -13,179 +13,137 @@ body {
     margin: 0;
 }
 
-#door {
-    padding: 10px;
+#buttercup {
     position: fixed;
-    left: 0;
     top: 0;
+    left: 0;
     right: 0;
-    z-index: 30;
-}
-
-#doors {
-    display: flex;
-    overflow: hidden;
-}
-
-.doors {
-    height: 50px;
-    background-color: #f6f6f6;
-    border-radius: 10px;
-    display: flex;
-    z-index: 30;
-    overflow: hidden;
-}
-
-#door-1 {
-    width: 248px;
-}
-
-.d-button {
-    width: 35px;
-    height: 35px;
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-    margin-top: 7.5px;
-    margin-left: 7.5px;
-    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: app-elements-fade-in 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1;
-    color: rgb(0, 0, 0);
-}
-
-.d-button:hover {
-    background-color: #e2e2e2;
-}
-
-#d-button-1 {
-    aspect-ratio: 9/5;
-    width: fit-content;
-    background-image: url(../img/home-button-light.svg);
-    background-size: contain;
-}
-
-#d-button-9 {
-    margin-top: 7px;
-    color: rgb(35, 45, 75);
-    border: solid 1px rgb(35, 45, 75);
-    transition: all 0.2s;
-}
-
-#d-button-9:hover {
-    color: unset;
-    background-color: rgb(35, 45, 75);
-}
-
-#door-2 {
-    margin-left: 10px;
-    width: 178.5px;
-    transition: all 0.2s;
-}
-
-.scrolled {
-    height: 0;
-}
-
-/* #door-3 {
-    margin-left: 10px;
-    flex: 1;
-} */
-
-#doors-alt {
-    width: 440.24px;
-    height: 24px;
-    display: flex;
-    position: relative;
     z-index: 30;
 }
 
-.d-button-alt {
-    width: fit-content;
-    height: 0;
-    overflow: hidden;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
-        0 2px 2px rgba(0, 0, 0, 0.11),
-        0 4px 4px rgba(0, 0, 0, 0.11),
-        0 8px 8px rgba(0, 0, 0, 0.11);
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 14px;
-    line-height: 24px;
-    padding-left: 5px;
-    padding-right: 5px;
-    position: absolute;
-    white-space: nowrap;
-}
-
-#d-button-alt-1.active {
-    height: 24px;
-    left: 14.88px;
-}
-
-#d-button-alt-2.active {
-    height: 24px;
-    left: 72.74px;
-}
-
-#d-button-alt-3.active {
-    height: 24px;
-    left: 113.595px;
-}
-
-#d-button-alt-4.active {
-    height: 24px;
-    left: 156.845px;
-}
-
-#d-button-alt-5.active {
-    height: 24px;
-    left: 198.86px;
-}
-
-#d-button-alt-6.active {
-    height: 24px;
-    left: 263.235px;
-}
-
-#d-button-alt-7.active {
-    height: 24px;
-    left: 291.75px;
-}
-
-#d-button-alt-8.active {
-    height: 24px;
-    left: 332.515px;
-}
-
-#d-button-alt-9.active {
-    height: 24px;
-    left: 381.76px;
-}
-
-#doors-wall {
-    position: fixed;
-    top: 0;
-    left: 0;
+#butter {
     width: 100vw;
     height: 0;
-    background-color: #f6f6f6;
+    background-color: #eee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
     overflow-x: hidden;
     overflow-y: scroll;
-    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
 }
 
-#doors-wall::before {
-    content: '';
-    width: 100vw;
-    height: 20vh;
+#butter.active {
+    height: 100vh;
+}
+
+#butter a {
+    color: unset;
+    text-decoration: none;
+}
+
+#butter a:hover {
+    text-decoration: underline;
+}
+
+#cup {
     position: absolute;
-    left: 0;
     top: 0;
-    z-index: -1;
-    background-image: linear-gradient(rgb(35, 45, 75), #f6f6f6, #f6f6f600);
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#cup.active {
+    top: 90vh;
+}
+
+#btcs {
+    position: relative;
+}
+
+.btc-o {
+    height: 50px;
+    background-color: #eee;
+    border-radius: 0 0 10px 10px;
+}
+
+#btc-circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btc-o-1 {
+    width: 217px;
+}
+
+.btc-o::before,
+.btc-o::after,
+.btc-o .btc-circles::before,
+.btc-o .btc-circles::after {
+    content: "";
+    position: absolute;
+    top: 0;
+}
+
+.btc-o::before,
+.btc-o::after {
+    background-image: url(../img/corner_a.svg);
+    background-size: contain;
+    width: 10px;
+    height: 10px;
+    left: -10px;
+    z-index: 1;
+}
+
+.btc-o::after {
+    background-image: url(../img/corner_b.svg);
+    background-size: contain;
+    left: unset;
+    right: -10px;
+}
+
+.btc {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: black;
+}
+
+#btc-1 {
+    width: 72px;
+    background-image: url(../img/home-button-light.svg);
+    background-size: cover;
+}
+
+#btc-2 {
+    margin-left: 77px;
+}
+
+#btc-3 {
+    margin-left: 122px;
+}
+
+#btc-4 {
+    margin-left: 167px;
+}
+
+.btc:hover {
+    background-color: hsl(0, 0%, 83%);
 }
 
 #doors-wall.active {
@@ -673,47 +631,30 @@ nav {
         color: hsl(225, 36%, 72%) !important;
     }
 
-    .doors {
-        background-color: #3e3e3e;
+    #butter,
+    .btc-o {
+        background-color: #333333;
     }
 
-    .d-button {
-        animation: app-elements-fade-in-dark 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1;
+    .btc {
         color: #fff;
     }
 
-    .d-button:hover {
-        background-color: #686868;
+    .btc-o::before,
+    .btc-o::after {
+        background-image: url(../img/corner_a_dark.svg);
     }
 
-    #d-button-1 {
+    .btc-o::after {
+        background-image: url(../img/corner_b_dark.svg);
+    }
+
+    #btc-1 {
         background-image: url(../img/home-button-dark.svg);
-        fill: white;
     }
 
-    #d-button-9 {
-        border-color: hsl(225, 36%, 72%);
-        color: hsl(225, 36%, 72%);
-    }
-
-    #d-button-9:hover {
-        background-color: hsl(225, 36%, 72%);
-    }
-
-    .d-button-alt {
-        background-color: #4d4d4d;
-    }
-
-    #doors-wall {
-        background-color: #212121;
-    }
-
-    #doors-wall.active {
-        background-color: #212121;
-    }
-
-    #doors-wall::before {
-        background-image: linear-gradient(rgb(35, 45, 75), #21212100);
+    .btc:hover {
+        background-color: hsl(0, 0%, 53%);
     }
 
     #d-wall-mark {
