@@ -292,6 +292,23 @@
     }
 }
 
+@media (max-width: 430px) {
+    .canvas {
+        height: fit-content !important;
+    }
+
+    .canvas-text {
+        padding-top: 60px;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .canvas-text-small {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
 @keyframes home-page-news-fade-in {
     0% {
         color: transparent;
@@ -549,340 +566,32 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
     overflow: hidden;
     position: relative;
-}
-
-.canvas-text {
-    font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 100px;
-    font-weight: bold;
-    margin-left: 30px;
-    line-height: 20px;
-    border-radius: 15px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-right: 30px;
-}
-
-#canvas-1 {
     display: flex;
-    justify-content: center;
-    background-color: #fff;
-}
-
-#canvas-1>span {
-    font-family: 'Libre Baskerville', serif;
-    margin: 30px;
-    margin-top: 120px;
-    font-size: 38px;
-    break-after: auto;
-    text-align: center;
-    overflow: hidden;
-}
-
-#canvas-1-special {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 24px;
-}
-
-.canvas-1-button {
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 15px;
-    padding: 10px;
-    border-radius: 30px;
-    border: solid 1px #dddddd;
-    background-color: transparent;
-}
-
-.canvas-1-button:hover {
-    background: rgba(136, 136, 136, 0.35);
-}
-
-#canvas-4-text {
-    width: 100%;
-    font-size: 50px;
-    text-align: center;
-}
-
-#canvas-4-text>.canvas-text-small {
-    font-size: 18px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.canvas-text-small {
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 22px;
-    font-weight: normal;
-    letter-spacing: normal !important;
-    white-space: wrap;
-    word-break: break-all;
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
-    text-align: center;
-}
-
-.canvas-text-small>a>i,
-#canvas-4>a>span>i {
-    transition: all 0.2s;
-}
-
-.canvas-text-small>a:hover i,
-#canvas-4>a:hover i {
-    transform: translateX(10px);
-}
-
-#canvas-3 {
-    justify-content: center;
-}
-
-#canvas-3-text {
-    color: #000;
-    line-height: normal;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-#textbgc-1 {
-    background-color: rgba(217, 255, 182, 0.5);
-}
-
-#textbgc-2 {
-    background-color: rgba(182, 255, 248, 0.5);
-}
-
-#textbgc-3 {
-    background-color: rgba(182, 206, 255, 0.5);
-}
-
-.textbgc:focus-within {
-    height: 412px;
-}
-
-.textbgc {
-    overflow: hidden;
-    height: 140px;
-    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
-    border-radius: 25px;
-    margin-right: 30px;
-}
-
-#canvas-link-list {
-    list-style: none;
-    font-size: 22px;
-    font-weight: normal;
-}
-
-#textbgc-1>#canvas-link-list>li>a {
-    color: rgb(116, 137, 97);
-}
-
-#textbgc-2>#canvas-link-list>li>a {
-    color: rgb(127, 180, 175);
-}
-
-#textbgc-3>#canvas-link-list>li>a {
-    color: rgb(126, 143, 177);
-}
-
-.textbgc>#canvas-link-list>li>a>i {
-    transition: all 0.2s;
-}
-
-.textbgc>#canvas-link-list>li>a:hover i {
-    transform: translateX(10px);
-}
-
-.canvas-clicker {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    right: 50%;
-}
-
-.canvas-clicker-inside {
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: #e1e1e14b;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    -moz-backdrop-filter: blur(12px);
-    border-radius: 25px;
-    white-space: nowrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 14px;
-    font-weight: normal;
-}
-
-#canvas-5-text {
-    word-break: break-all;
-    color: #000;
-}
-
-#canvas-5-text>a {
-    color: #45C4B0;
-}
-
-#canvas-6 {
-    background-image: radial-gradient(circle at top left, #eeedeb 0, #625548 40%, rgba(255, 255, 255, 0) 90%);
-}
-
-#canvas-6-text {
-    font-family: 'Big Caslon FB', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-left: 30px;
-    font-size: 65px;
-    line-height: 68px;
-}
-
-#canvas-6-text>.canvas-text-small {
-    font-family: 'Big Caslon FB', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-#canvas-7,
-#canvas-8,
-#canvas-9 {
-    justify-content: center;
     flex-direction: column;
-}
-
-#canvas-7-text {
-    color: #000;
-    font-size: 50px;
-    line-height: normal;
-    text-align: center;
-}
-
-#canvas-8 {
-    background-image: url(../img/May-17-2024_画板-1.webp);
-    background-size: contain;
-}
-
-#canvas-8-text {
-    font-size: 50px;
-    line-height: normal;
-    text-align: center;
-}
-
-#canvas-9>#remainTime {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 50px;
-    display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-#canvas-9-text {
-    font-size: 30px;
-    text-align: center;
-    font-family: 'Libre Baskerville', serif;
-    font-weight: lighter;
-    color: unset;
-}
-
-#canvas-10 {
-    background-image: url(../img/5-years.webp);
-    justify-content: end;
     align-items: start;
 }
 
-#canvas-10>.canvas-text {
-    font-family: 'Noto Serif SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 40px;
-    padding-left: 0;
-    color: #fff;
+.canvas-text {
+    font-family: 'Space Grotesk', 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-#canvas-10>.canvas-text-small {
-    font-family: 'Noto Serif SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: left;
-    padding-bottom: 20vh;
-    color: #fff;
+.canvas-text b {
+    color: #e57200;
 }
 
-#canvas-11 {
-    background-color: rgb(200, 186, 128);
+.canvas-text-small {
+    font-family: 'Space Grotesk', 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-#canvas-11>svg {
-    height: 20%;
+.canvas-text-small-last {
+    text-align: right;
 }
-
-#canvas-11>.canvas-text-small {
-    font-family: 'Space Grotesk', 'Helvetica', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-#canvas-11 .canvas-text {
-    font-size: 30px;
-    line-height: normal;
-    word-break: keep-all;
-    font-family: 'Space Grotesk', 'Helvetica', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: normal;
-}
-
-#canvas-12 {
-    overflow: hidden;
-}
-
-#canvas-12>.canvas-text {
-    font-size: 35px;
-    font-family: 'Space Grotesk', 'Helvetica', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-    position: absolute;
-    line-height: normal;
-    text-align: center;
-}
-
-#canvas-12-img {
-    width: 120%;
-    height: 120%;
-    background-image: url(../img/592x592bb\ \(2\).webp);
-    background-size: cover;
-    background-position: center bottom;
-    filter: blur(1em);
-}
-
-#canvas-13 {
-    background-image: url(../img/Aug-7-2024_画板-1.webp);
-    background-size: cover;
-}
-
-#canvas-14>.canvas-text,
-#canvas-15>.canvas-text {
-    font-size: 35px;
-    font-family: 'Libre Franklin', 'Source Han Sans', sans-serif;
-    font-weight: bold;
-    line-height: normal;
-    text-align: center;
-    color: #E57200;
-}
-
-#canvas-15 {
-    background-color: #E57200;
-}
-
-#canvas-15>.canvas-text {
-    font-family: 'Charter', serif;
-}
-
-#canvas-15>.canvas-text>a {
-    color: #ffffff !important;
-}
-
-/* #canvas-15 {
-    background-image: url(../img/IMG_4357.webp);
-} */
