@@ -12,6 +12,26 @@
             $("#content-unit").toggleClass("active");
         });
     });
+    $(function () {
+        $("#btc-1").hover(function () {
+            $("#cup-label-1").toggleClass("active");
+        });
+    });
+    $(function () {
+        $("#btc-2").hover(function () {
+            $("#cup-label-2").toggleClass("active");
+        });
+    });
+    $(function () {
+        $("#btc-3").hover(function () {
+            $("#cup-label-3").toggleClass("active");
+        });
+    });
+    $(function () {
+        $("#btc-4").hover(function () {
+            $("#cup-label-4").toggleClass("active");
+        });
+    });
 </script>
 
 <header id="buttercup">
@@ -139,6 +159,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="cup-labels">
+            <div class="cup-label" id="cup-label-1">Home</div>
+            <div class="cup-label" id="cup-label-2">About</div>
+            <div class="cup-label" id="cup-label-3">Clock</div>
+            <div class="cup-label" id="cup-label-4">More</div>
         </div>
     </div>
 </header>
