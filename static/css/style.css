@@ -85,7 +85,7 @@ body {
 }
 
 #btc-o-1 {
-    width: 217px;
+    width: 307px;
 }
 
 .btc-o::before,
@@ -156,6 +156,14 @@ body {
     margin-left: 167px;
 }
 
+#btc-5 {
+    margin-left: 212px;
+}
+
+#btc-6 {
+    margin-left: 257px;
+}
+
 .btc:hover {
     background-color: hsl(0, 0%, 83%);
 }
@@ -219,7 +227,7 @@ body {
 }
 
 #cup-labels {
-    width: 217px;
+    width: 307px;
     height: 30px;
     position: absolute;
     top: 50px;
@@ -237,6 +245,7 @@ body {
     line-height: 25px;
     background-color: hsl(0, 0%, 96%);
     display: none;
+    text-wrap: nowrap;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
         0 2px 2px rgba(0, 0, 0, 0.11),
         0 4px 4px rgba(0, 0, 0, 0.11),
@@ -245,7 +254,7 @@ body {
 
 #cup-label-1.active {
     display: block;
-    margin-left: 9.66px;
+    margin-left: 10.66px;
 }
 
 #cup-label-2.active {
@@ -261,6 +270,16 @@ body {
 #cup-label-4.active {
     display: block;
     margin-left: 164.45px;
+}
+
+#cup-label-5.active {
+    display: block;
+    margin-left: 195.02px;
+}
+
+#cup-label-6.active {
+    display: block;
+    margin-left: 244.78px;
 }
 
 /* loader style */

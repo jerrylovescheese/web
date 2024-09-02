@@ -35,6 +35,16 @@
                 $("#cup-label-4").toggleClass("active");
             });
         });
+        $(function () {
+            $("#btc-5").hover(function () {
+                $("#cup-label-5").toggleClass("active");
+            });
+        });
+        $(function () {
+            $("#btc-6").hover(function () {
+                $("#cup-label-6").toggleClass("active");
+            });
+        });
     </script>
     <style>
         #buttercup {
@@ -85,7 +95,7 @@
         }
 
         #cup.active {
-            top: 90vh;
+            top: 85vh;
         }
 
         #btcs {
@@ -105,7 +115,7 @@
         }
 
         #btc-o-1 {
-            width: 217px;
+            width: 307px;
         }
 
         .btc-o::before,
@@ -163,6 +173,14 @@
 
         #btc-4 {
             margin-left: 167px;
+        }
+
+        #btc-5 {
+            margin-left: 212px;
+        }
+
+        #btc-6 {
+            margin-left: 257px;
         }
 
         .btc:hover {
@@ -228,7 +246,7 @@
         }
 
         #cup-labels {
-            width: 217px;
+            width: 307px;
             height: 30px;
             position: absolute;
             top: 50px;
@@ -246,6 +264,7 @@
             line-height: 25px;
             background-color: hsl(0, 0%, 96%);
             display: none;
+            text-wrap: nowrap;
             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
                 0 2px 2px rgba(0, 0, 0, 0.11),
                 0 4px 4px rgba(0, 0, 0, 0.11),
@@ -254,7 +273,7 @@
 
         #cup-label-1.active {
             display: block;
-            margin-left: 9.66px;
+            margin-left: 10.66px;
         }
 
         #cup-label-2.active {
@@ -270,6 +289,16 @@
         #cup-label-4.active {
             display: block;
             margin-left: 164.45px;
+        }
+
+        #cup-label-5.active {
+            display: block;
+            margin-left: 195.02px;
+        }
+
+        #cup-label-6.active {
+            display: block;
+            margin-left: 244.78px;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -472,6 +501,12 @@
                         <div class="btc" id="btc-4">
                             <i class="fa-regular fa-square-plus"></i>
                         </div>
+                        <div class="btc" id="btc-5">
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </div>
+                        <div class="btc" id="btc-6">
+                            <i class="fa-solid fa-rss"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -480,6 +515,8 @@
                 <div class="cup-label" id="cup-label-2">About</div>
                 <div class="cup-label" id="cup-label-3">Clock</div>
                 <div class="cup-label" id="cup-label-4">More</div>
+                <div class="cup-label" id="cup-label-5">Go to top</div>
+                <div class="cup-label" id="cup-label-6">Contact</div>
             </div>
         </div>
     </header>
