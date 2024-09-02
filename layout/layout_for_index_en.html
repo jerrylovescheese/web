@@ -5,13 +5,6 @@
             $("#cup").toggleClass("active");
         });
     });
-
-    $(function () {
-        $("#header-collapse-button").click(function () {
-            $("#header-unit").toggleClass("active");
-            $("#content-unit").toggleClass("active");
-        });
-    });
     $(function () {
         $("#btc-1").hover(function () {
             $("#cup-label-1").toggleClass("active");
@@ -30,6 +23,16 @@
     $(function () {
         $("#btc-4").hover(function () {
             $("#cup-label-4").toggleClass("active");
+        });
+    });
+    $(function () {
+        $("#btc-5").hover(function () {
+            $("#cup-label-5").toggleClass("active");
+        });
+    });
+    $(function () {
+        $("#btc-6").hover(function () {
+            $("#cup-label-6").toggleClass("active");
         });
     });
 </script>
@@ -149,13 +152,19 @@
                             <i class="fas fa-info"></i>
                         </div>
                     </a>
-                    <a href=".../pages/pages/clock.html">
+                    <a href="../pages/clock.html">
                         <div class="btc" id="btc-3">
                             <i class="fa-regular fa-clock"></i>
                         </div>
                     </a>
                     <div class="btc" id="btc-4">
                         <i class="fa-regular fa-square-plus"></i>
+                    </div>
+                    <div class="btc" id="btc-5">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                    <div class="btc" id="btc-6">
+                        <i class="fa-solid fa-rss"></i>
                     </div>
                 </div>
             </div>
@@ -165,6 +174,8 @@
             <div class="cup-label" id="cup-label-2">About</div>
             <div class="cup-label" id="cup-label-3">Clock</div>
             <div class="cup-label" id="cup-label-4">More</div>
+            <div class="cup-label" id="cup-label-5">Go to top</div>
+            <div class="cup-label" id="cup-label-6">Contact</div>
         </div>
     </div>
 </header>
