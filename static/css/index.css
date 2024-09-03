@@ -344,6 +344,13 @@
         margin-right: 30px !important;
     }
 
+    #canvas-2-text {
+        position: sticky !important;
+        width: 70% !important;
+        left: 30px !important;
+        text-align: left !important;
+    }
+
     #canvas-3-text {
         font-size: 80px !important;
         margin-left: 30px !important;
@@ -369,6 +376,12 @@
     #canvas-6-text {
         margin-right: 30px !important;
         word-break: break-all;
+    }
+}
+
+@media (max-height: 430px) {
+    #canvas-2-text {
+        display: none;
     }
 }
 
@@ -667,9 +680,11 @@
 
 #canvas-2-text {
     position: sticky;
-    left: 30px;
+    left: 0;
+    width: 100%;
     padding: 0;
     font-weight: bold;
+    text-align: center;
 }
 
 #canvas-2 .canvas-text-small {
@@ -744,7 +759,6 @@
 }
 
 #canvas-2-inbox-4 {
-    margin-right: 20px;
     color: rgb(242, 0, 89);
     border-color: rgba(242, 0, 89, 0.6);
 }
@@ -752,6 +766,56 @@
 #canvas-2-inbox-4:hover,
 #canvas-2-inbox-4:focus {
     background-color: rgba(242, 0, 89, 0.6);
+}
+
+#canvas-2-inbox-5 {
+    width: 222px;
+    height: 282px;
+    border: none;
+    background-image: linear-gradient(57deg, rgba(0, 255, 242), rgba(54, 0, 233));
+    margin-right: 30px;
+    padding: 0;
+}
+
+#canvas-2-inbox-5:focus {
+    width: 360px;
+}
+
+#canvas-2-inbox-5-in {
+    width: 220px;
+    height: 280px;
+    margin-left: 1px;
+    margin-top: 1px;
+    border-radius: 9px;
+    background-color: #fff;
+    transition: all 0.2s;
+}
+
+#canvas-2-i-5-i {
+    display: block;
+    padding-left: 20px;
+    padding-top: 20px;
+    background-image: linear-gradient(57deg, rgba(0, 255, 242), rgba(54, 0, 233));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#canvas-2-inbox-5 .canvas-2-inbox-t {
+    transition: all 0.2s;
+}
+
+#canvas-2-inbox-5:hover #canvas-2-inbox-5-in,
+#canvas-2-inbox-5:focus #canvas-2-inbox-5-in {
+    background-color: transparent;
+}
+
+#canvas-2-inbox-5:hover .canvas-2-inbox-t,
+#canvas-2-inbox-5:focus .canvas-2-inbox-t {
+    color: white;
+}
+
+#canvas-2-inbox-5:focus .canvas-2-inbox-in {
+    color: white;
 }
 
 .canvas-2-inbox-in {
