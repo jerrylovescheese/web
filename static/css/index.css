@@ -274,6 +274,34 @@
     #canvas-4-text {
         color: #000 !important;
     }
+
+    #canvas-2-inbox-1:hover,
+    #canvas-2-inbox-1:focus {
+        background-color: rgba(255, 204, 0, 0.3) !important;
+    }
+
+    #canvas-2-inbox-2:hover,
+    #canvas-2-inbox-2:focus {
+        background-color: rgba(0, 117, 242, 0.3) !important;
+    }
+
+    #canvas-2-inbox-3:hover,
+    #canvas-2-inbox-3:focus {
+        background-color: rgba(153, 242, 0, 0.3) !important;
+    }
+
+    #canvas-2-inbox-4:hover,
+    #canvas-2-inbox-4:focus {
+        background-color: rgba(242, 0, 89, 0.3) !important;
+    }
+
+    #canvas-2-inbox-1 {
+        color: hsl(48, 100%, 45%) !important;
+    }
+
+    #canvas-2-inbox-3 {
+        color: hsl(82, 100%, 37%) !important;
+    }
 }
 
 @media (max-width: 768px) {
