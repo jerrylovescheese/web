@@ -625,6 +625,7 @@
     font-size: 17px;
     padding-left: 30px;
     padding-right: 30px;
+    text-align: justify;
 }
 
 .canvas-text-small-last {
@@ -658,7 +659,6 @@
     margin-top: 30px;
     margin-left: 20px;
     transition: all 0.2s;
-    transition-delay: 0.2s;
     position: relative;
     overflow: hidden;
 }
@@ -690,7 +690,8 @@
     border-color: rgba(255, 204, 0, 0.6);
 }
 
-#canvas-2-inbox-1:hover {
+#canvas-2-inbox-1:hover,
+#canvas-2-inbox-1:focus {
     background-color: rgba(255, 204, 0, 0.6);
 }
 
@@ -699,7 +700,8 @@
     border-color: rgba(0, 117, 242, 0.6);
 }
 
-#canvas-2-inbox-2:hover {
+#canvas-2-inbox-2:hover,
+#canvas-2-inbox-2:focus {
     background-color: rgba(0, 117, 242, 0.6);
 }
 
@@ -708,7 +710,8 @@
     border-color: rgba(153, 242, 0, 0.6);
 }
 
-#canvas-2-inbox-3:hover {
+#canvas-2-inbox-3:hover,
+#canvas-2-inbox-3:focus {
     background-color: rgba(153, 242, 0, 0.6);
 }
 
@@ -718,17 +721,19 @@
     border-color: rgba(242, 0, 89, 0.6);
 }
 
-#canvas-2-inbox-4:hover {
+#canvas-2-inbox-4:hover,
+#canvas-2-inbox-4:focus {
     background-color: rgba(242, 0, 89, 0.6);
 }
 
 .canvas-2-inbox-in {
-    display: none;
     width: 180px;
     position: absolute;
     right: 20px;
     bottom: 20px;
     text-align: right;
+    color: transparent;
+    transition: all 0.2s;
 }
 
 .canvas-2-inbox-in a {
@@ -736,5 +741,5 @@
 }
 
 .canvas-2-inbox:focus .canvas-2-inbox-in {
-    display: block;
+    color: unset;
 }
