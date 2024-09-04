@@ -263,6 +263,15 @@
     .canvas-2-inbox:hover .canvas-2-inbox-t {
         color: white !important;
     }
+
+    #canvas-2-inbox-5-in {
+        background-color: black !important;
+    }
+
+    #canvas-2-inbox-5:hover #canvas-2-inbox-5-in,
+    #canvas-2-inbox-5:focus #canvas-2-inbox-5-in {
+        background-color: transparent !important;
+    }
 }
 
 @media(prefers-color-scheme: light) {
@@ -701,7 +710,7 @@
     padding: 20px;
     margin-top: 30px;
     margin-left: 20px;
-    transition: all 0.2s;
+    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
     position: relative;
     overflow: hidden;
 }
@@ -788,7 +797,7 @@
     margin-top: 1px;
     border-radius: 9px;
     background-color: #fff;
-    transition: all 0.2s;
+    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #canvas-2-i-5-i {
