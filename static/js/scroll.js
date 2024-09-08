@@ -1,18 +1,19 @@
 $(document).ready(function () {
-    let lastScrollTop = 0;
+    var vh = $(window).height(); // Get 1vh in pixels
 
-    $(window).on('scroll', function () {
-        const header = $('#door-2');
-        const currentScrollTop = $(this).scrollTop();
-
-        if (currentScrollTop > lastScrollTop) {
-            // Scrolling down
-            header.addClass('scrolled');
+    $(window).on("scroll", function () {
+        if ($(this).scrollTop() >= vh) {
+            $(".btc").removeClass("new-style");
         } else {
-            // Scrolling up
-            header.removeClass('scrolled');
+            $(".btc").addClass("new-style");
         }
+    });
 
-        lastScrollTop = currentScrollTop;
+    $(window).on("scroll", function () {
+        if ($(this).scrollTop() >= vh) {
+            $("#btc-1").removeClass("new-style");
+        } else {
+            $("#btc-1").addClass("new-style");
+        }
     });
 });
