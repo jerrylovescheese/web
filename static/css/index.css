@@ -418,6 +418,33 @@
     }
 }
 
+.btc {
+    transition: all 0.2s;
+    animation: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+        0 2px 2px rgba(0, 0, 0, 0.11),
+        0 4px 4px rgba(0, 0, 0, 0.11),
+        0 8px 8px rgba(0, 0, 0, 0.11);
+}
+
+.btc.new-style {
+    color: #fff;
+}
+
+#btc-1.new-style {
+    background-image: url(../img/home-button-dark.svg);
+}
+
+#btc-o-1 {
+    background: transparent;
+    transition: all 0.2s;
+}
+
+.btc-o::before,
+.btc-o::after {
+    background: transparent;
+}
+
 #namecard {
     position: absolute;
     top: 100px;
@@ -455,29 +482,6 @@
     100% {
         transform: translateX(-110%);
     }
-}
-
-.btc {
-    transition: all 0.2s;
-    animation: none;
-}
-
-.btc.new-style {
-    color: #fff;
-}
-
-#btc-1.new-style {
-    background-image: url(../img/home-button-dark.svg);
-}
-
-#btc-o-1 {
-    background: transparent;
-    transition: all 0.2s;
-}
-
-.btc-o::before,
-.btc-o::after {
-    background: transparent;
 }
 
 #namecard>a {
