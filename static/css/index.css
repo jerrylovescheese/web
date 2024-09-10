@@ -427,13 +427,17 @@
         0 8px 8px rgba(0, 0, 0, 0.11);
 }
 
-.btc.new-style {
+/* .btc.new-style {
     color: #fff;
+} */
+
+#btc-1 {
+    filter: drop-shadow(0px 5px 5px rgba(36, 36, 36, 0.5));
 }
 
-#btc-1.new-style {
+/* #btc-1.new-style {
     background-image: url(../img/home-button-dark.svg);
-}
+} */
 
 #btc-o-1 {
     background: transparent;
@@ -883,9 +887,18 @@
 }
 
 #canvas-3 {
-    background-image: url(../img/GlowtimeMac\ \(1\).webp);
-    background-size: cover;
-    color: #fff;
+    background-image: url(../img/IMG_5121.webp);
+    background-size: contain;
+    background-color: #fff;
+    background-position: 0 center;
+    color: black;
+}
+
+#canvas-3-text {
+    width: 90%;
+    text-align: right;
+    font-weight: bold;
+    font-size: 25px !important;
 }
 
 #canvas-3 .canvas-text-small {

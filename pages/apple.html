@@ -5,302 +5,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#EEEEEE" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#333333" media="(prefers-color-scheme: dark)">
-    <title>Apple 苹果</title>
+    <title>9:41</title>
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
     <script src="../static/js/jquery-3.7.1.js"></script>
     <script src="../static/js/include.js"></script>
-    <script type="text/javascript">
-        (function show() {
-            //1.设置目的时间
-            var oYear = 2024
-            var oMonth = 8
-            var oDay = 9
-            var oHour = 13
-            var oMinute = 0
-            var oSecond = 0
-            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
-            // console.log(dateFormat(funtureDate))
-            //2.设置定时器
-            setInterval(function () {
-                //3.获取现在的时间
-                var presentDate = new Date();
-                //4.获取时间戳
-                var funtureTime = funtureDate.getTime();
-                var presenTime = presentDate.getTime();
-                //5.获取剩余的时间戳
-                var allTime = funtureTime - presenTime;
-                //6.把毫秒转换为秒
-                var allSecond = parseInt(allTime / 1000);
-                //7.获取剩余多少天
-                var day = size(parseInt(allSecond / 3600 / 24));
-                //8.获取剩余多少小时
-                var hour = size(parseInt(allSecond / 3600 % 24));
-                //9.获取剩余多少分钟
-                var minute = size(parseInt(allSecond / 60 % 60));
-                //10.获取剩余多少秒
-                var second = size(parseInt(allSecond % 60));
-                //11.注入：
-                document.getElementById('one').innerHTML = day;
-                document.getElementById('two').innerHTML = hour;
-                document.getElementById('three').innerHTML = minute;
-                document.getElementById('four').innerHTML = second;
-            }, 1000);
-            //如果数>=10,则在前面补0
-            function size(num) {
-                return num < 10 & num >= 0 ? '0' + num : num;
-            }
-        })()
-        //格式化日期格式 2
-        function dateFormat(data) {
-            var date = new Date(data);
-            var YY = date.getFullYear() + '-';
-            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
-            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
-            return YY + MM + DD;
-        }
-    </script>
     <link rel="shortcut icon" href="../Aug-18-2023-Favicon.ico" type="image/x-icon">
     <script src="../static/js/loader.js"></script>
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
     <style>
-        @media (max-width: 425px) {
-
-            #dev-cal-1,
-            #update,
-            #dev-cal-2,
-            .list-pages,
-            .pages-container,
-            .apple-product-button,
-            #en-warn {
-                margin-left: 30px !important;
-                margin-right: 30px !important;
+        @media (max-width: 768px) {
+            #bar-wrapper {
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
             }
-
-            #dev-cal-1 {
-                font-size: 70px;
-                margin-top: 125px;
-            }
-
-            .apple-product-button {
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            #header-unit {
-                background-color: rgba(42, 42, 42, 0.5);
-                border-color: #575757;
-            }
-
-            .pages-container {
-                border-color: #575757;
-            }
-        }
-
-        body {
-            background-color: #000;
-        }
-
-        #copyright-info {
-            background-color: #dedede;
-        }
-
-        #header-unit b,
-        #header-unit a {
-            color: #ffffff !important;
-        }
-
-        #apple-event {
-            width: 100%;
-            height: 100vh;
-            background-color: #000;
-            background-image: url(../static/img/Image.webp);
-            background-size: contain;
-            background-position: center center;
-            background-repeat: no-repeat;
-        }
-
-        #dev-cal-1 {
-            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            color: #ffffff;
-        }
-
-        #content-unit #dev-cal-2 {
-            color: #fff;
-        }
-
-        #content-unit span {
-            color: #fff;
-        }
-
-        .breaking {
-            color: #cc0700;
-        }
-
-        .pages-container>#dev-cal-2 {
-            margin-left: 30px !important;
-        }
-
-        #pages-container-0 {
-            padding: 0 !important;
-        }
-
-        #pages-container-1 {
-            display: flex;
-            flex-wrap: wrap;
-            padding-bottom: 0;
-        }
-
-        .subtitle-pages {
-            font-weight: bold;
-            font-size: 25px !important;
-        }
-
-        .list-pages {
-            margin-left: 120px;
-            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
         @media (prefers-color-scheme: dark) {
-            table {
-                border-top-color: white !important;
+            td {
+                border-right-color: white !important;
                 border-bottom-color: white !important;
             }
 
-            td {
-                border-top-color: white !important;
+            .apple-image-box {
+                border-color: #575757;
             }
         }
 
-        @media (prefers-color-scheme: light) {
-            /* .apple-product-button-text {
-                color: #000 !important;
+        @media (max-width: 430px) {
+            .apple-box {
+                flex-direction: column;
             }
 
-            #mac {
-                background-image: url(../static/img/mac-dark.png) !important;
+            .apple-image-box {
+                width: 55% !important;
             }
-
-            #iphone {
-                background-image: url(../static/img/iphone-dark.png) !important;
-            }
-
-            #ipad {
-                background-image: url(../static/img/ipad-dark.png) !important;
-            }
-
-            #vision {
-                background-image: url(../static/img/visionpro-dark.png) !important;
-            } */
         }
 
-        table {
-            border-top: solid 1px white;
-            border-bottom: solid 1px white;
-            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin: 0 auto;
-        }
-
-        td {
-            border-top: solid 1px white;
-            padding: 5px;
-            color: white;
-        }
-
-        .event-on-focus {
-            box-shadow: 0 1px 1px rgba(61, 130, 247, 0.91),
-                0 2px 2px rgba(61, 130, 247, 0.81),
-                0 4px 4px rgba(61, 130, 247, 0.11),
-                0 8px 8px rgba(61, 130, 247, 0.11);
-            border-radius: 10px;
-            border: none;
-            transition: all 0.3s;
-            padding: 10px;
-        }
-
-        .event-on-focus:hover {
-            box-shadow: none;
-            border-top: solid 1px white;
-            border-radius: unset;
+        #dev-cal-1 {
+            font-size: 50px;
+            text-align: center;
         }
 
         .subtitle {
-            font-weight: bold;
-            font-size: 25px !important;
-            color: white;
+            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
         }
 
-        .apple-product-button {
-            width: 250px;
-            height: 250px;
+        #update {
+            text-align: center;
+        }
+
+        #content-unit {
+            margin-left: 0;
+        }
+
+        .apple-box {
+            display: flex;
+        }
+
+        .apple-image-box {
+            width: 30%;
             aspect-ratio: 1/1;
-            border-radius: 10px;
-            border: rgba(128, 128, 128, 0.5) solid 1px;
-            position: relative;
-            margin-right: 30px;
-            margin-bottom: 30px;
+            background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            transition: all 0.25s;
-            overflow: hidden;
+            border: solid 1px #ddd;
+            border-radius: 10px;
+            margin-left: 30px;
+            background-color: white;
         }
 
-        .apple-product-button:hover {
-            transform: scale(102.5%);
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
-                0 2px 2px rgba(0, 0, 0, 0.11),
-                0 4px 4px rgba(0, 0, 0, 0.11),
-                0 8px 8px rgba(0, 0, 0, 0.11);
+        #apple-image-box-1 {
+            background-image: url(../static/img/Apple-iPhone-16-Pro-hero-240909.jpg);
         }
 
-        .apple-product-button:active {
-            transform: scale(97.5%);
+        #apple-image-box-2 {
+            background-image: url(../static/img/Apple-iPhone-16-hero-240909.jpg);
         }
 
-        .apple-product-button-text {
+        .apple-text-box {
             font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 25px;
-            font-weight: bold;
-            position: absolute;
-            bottom: 15px;
-            left: 15px;
-            color: #fff;
+            margin-left: 20px;
         }
 
-        #mac {
-            background-image: url(../static/img/mac.png);
-            background-size: 70%;
+        .apple-text-box .subtitle {
+            font-size: 20px !important;
+            text-align: left;
         }
 
-        #iphone {
-            background-image: url(../static/img/iphone.png);
-            background-size: 30%;
+        table {
+            width: 100%;
+            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
-        #ipad {
-            background-image: url(../static/img/ipad.png);
-            background-size: 35%;
-        }
-
-        #vision {
-            background-image: url(../static/img/visionpro.png);
-            background-size: 60%;
-        }
-
-        #one,
-        #two,
-        #three,
-        #four {
-            font-family: 'Space Mono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        td {
+            border-right: solid 1px black;
+            border-bottom: solid 1px black;
+            border-bottom-right-radius: 10px;
+            padding: 10px;
         }
     </style>
 </head>
@@ -312,79 +116,99 @@
         <span id="loader-prompt"><br>准备元素中。<br>Preparing elements.</span>
     </div>
 
-
-    <div id="header-unit">
-        <div class="header">&emsp;<a href="../index.html"><i
-                    class="fas fa-chevron-left"></i>&emsp14;&emsp14;&emsp14;回到上一页</a>
-        </div>
-        <div id="quick-links">
-            <b>ON THIS PAGE:</b>
-            <span id="quick-link-1" class="quick-link"><a href="#title-0">News</a></span>
-            <span id="quick-link-2" class="quick-link"><a href="#title-1">Products</a></span>
-            <span id="quick-link-3" class="quick-link"><a href="#title-2">Apple Special Events List</a></span>
-        </div>
-    </div>
-
     <div id="content-unit">
-        <div id="apple-event"></div>
 
         <p id="dev-cal-1">9:41</p>
-        <p id="update">这个页面上一次更新于2024年2月20日</p>
-
-        <div id="en-warn">
-            <span id="en-warn-text"><i class="fas fa-warning"></i>&emsp;此网页仅提供英文版本。&emsp;This website is available in
-                English only.</span>
-        </div>
-        <p id="dev-cal-2"><span class="subtitle" id="title-0">📰&emsp;News</span></p>
-        <div class="pages-container" id="pages-container-0">
-            <p id="dev-cal-2">
-                <span>
-                    <i class="fas fa-newspaper"></i>
-                    &emsp;May 16 2024 - Apple announces new accessibility features including Eye Tracking, Music
-                    Haptics, and Vocal Shortcuts
-                </span>
-            </p>
-            <p id="dev-cal-2">
-                <span>
-                    <i class="fas fa-newspaper"></i>
-                    &emsp;Jun 10 2024 - Apple unveils software update on iOS, iPadOS, watchOS, macOS, tvOS, and visionOS
-                    at WWDC24
-                </span>
-            </p>
-            <p id="dev-cal-2">
-                <span>
-                    <i class="fas fa-newspaper"></i>
-                    &emsp;Jun 10 2024 - Apple unveils Apple Intelligence, Apple's new chapter in AI
-                </span>
-            </p>
-            <p id="dev-cal-2">
-                <i class="fas fa-arrow-right"></i>&emsp;check out <a href="./subpages/dubdub.html">my WWDC page for
-                    more.</a>
-            </p>
-        </div>
-        <p id="dev-cal-2"><span class="subtitle" id="title-1">🔧&emsp;Products</span></p>
-        <div class="pages-container" id="pages-container-1">
-            <a href="./subpages/mac.html">
-                <div class="apple-product-button" id="mac">
-                    <span class="apple-product-button-text">Mac <i class="fas fa-arrow-right"></i></span>
-                </div>
-            </a>
-            <a href="./subpages/iphone.html">
-                <div class="apple-product-button" id="iphone">
-                    <span class="apple-product-button-text">iPhone <i class="fas fa-arrow-right"></i></span>
-                </div>
-            </a>
-            <a href="./subpages/ipad.html">
-                <div class="apple-product-button" id="ipad">
-                    <span class="apple-product-button-text">iPad <i class="fas fa-arrow-right"></i></span>
-                </div>
-            </a>
-            <div class="apple-product-button" id="vision">
-                <span class="apple-product-button-text">Vision <i class="fas fa-arrow-right"></i></span>
+        <p class="subtitle">发布了什么？我们慢点说。</p>
+        <div class="apple-box">
+            <div class="apple-image-box" id="apple-image-box-1">
+            </div>
+            <div class="apple-text-box" id="dev-cal-2">
+                <p class="subtitle">iPhone 16 Pro</p>
+                <b>亮点</b>
+                <ul>
+                    <li>全新的沙漠钛合金配色</li>
+                    <li>A18 Pro 芯片 - 智能手机中最快的芯片</li>
+                    <li>拍照按钮加持，拍照更快捷</li>
+                    <li>扬声器与录音功能提升</li>
+                    <li>影院级 4K120 慢动作</li>
+                    <li>空间摄影支持拍摄可在 Apple Vision Pro 中查看的 3D 照片与视频</li>
+                    <li>120 Hz ProMotion</li>
+                    <li>iPhone 16 Pro Max 搭载 iPhone 史上最长续航</li>
+                    <li>新的超瓷晶面板加持，屏幕更坚固</li>
+                    <li>Apple Intelligence (明年预计登陆中国大陆)</li>
+                </ul>
+                <b>价格</b>
+                <ul>
+                    <li>iPhone 16 Pro, 128 GB: RMB 7,999, $999</li>
+                    <li>iPhone 16 Pro, 256 GB: RMB 8,999, $1,099</li>
+                    <li>iPhone 16 Pro, 512 GB: RMB 10,999, $1,299</li>
+                    <li>iPhone 16 Pro, 1 TB: RMB 12,999, $1,499</li>
+                    <li>iPhone 16 Pro Max, 256 GB: RMB 9,999, $1,199</li>
+                    <li>iPhone 16 Pro Max, 512 GB: RMB 11,999, $1,399</li>
+                    <li>iPhone 16 Pro Max, 1 TB: RMB 12,999, $1,599</li>
+                </ul>
+                <b>购买建议</b>
+                <ul>
+                    <li>iPhone 15 Pro 的用户：如果不需要 Apple Intelligence 不建议更新</li>
+                    <li>iPhone 14 Pro 及更早机型的用户：可以考虑更新</li>
+                </ul>
             </div>
         </div>
-        <p id="dev-cal-2" class="subtitle-pages">📢&emsp;Events</p>
-        <p id="dev-cal-2"><span id="title-2">Apple Special Events (formerly Apple Keynotes)</span></p>
+        <br>
+        <div class="apple-box">
+            <div class="apple-image-box" id="apple-image-box-2">
+            </div>
+            <div class="apple-text-box" id="dev-cal-2">
+                <p class="subtitle">iPhone 16</p>
+                <b>亮点</b>
+                <ul>
+                    <li>蓝绿粉黑白，浓烈的色彩（去年没墨了他们今年给打印机换新墨盒了）</li>
+                    <li>A18 芯片 - 终于不挤牙膏了？</li>
+                    <li>拍照按钮加持，拍照更快捷</li>
+                    <li>新的双摄系统将三年前就已经推出的微距摄影技术下放，还有24MP</li>
+                    <li>操作按钮登场</li>
+                    <li>空间摄影支持拍摄可在 Apple Vision Pro 中查看的 3D 照片与视频</li>
+                    <li>新的超瓷晶面板加持，屏幕更坚固</li>
+                    <li>Apple Intelligence (明年预计登陆中国大陆)</li>
+                </ul>
+                <b>价格</b>
+                <ul>
+                    <li>iPhone 16, 128 GB: RMB 5,999, $799</li>
+                    <li>iPhone 16, 256 GB: RMB 6,999, $899</li>
+                    <li>iPhone 16, 512 GB: RMB 8,999, $1,099</li>
+                    <li>iPhone 16 Plus, 128 GB: RMB 6,999, $899</li>
+                    <li>iPhone 16 Plus, 256 GB: RMB 7,999, $999</li>
+                    <li>iPhone 16 Plus, 512 GB: RMB 9,999, $1,199</li>
+                </ul>
+                <b>购买建议</b>
+                <ul>
+                    <li>iPhone 14 及更早机型的用户：建议更新，今年基础版机型的升级力度其实是比 Pro 要大的</li>
+                    <li>iPhone 15 的用户：如果不需要 Apple Intelligence 不建议更新</li>
+                </ul>
+            </div>
+        </div>
+        <p class="subtitle">选哪个合适？</p>
+        <p id="dev-cal-2">
+            从去年开始苹果终于对普通数字系列有点诚意了。我觉得如果没必要或者不想费钱 iPhone 16 & iPhone 16 Plus 完全够用了。
+        </p>
+        <p id="dev-cal-2">
+            另外不要购买过高的存储容量 - 很多东西都可以被清理掉，并且 iCloud 云盘 24 个月算下来肯定比加一千块钱买 128 GB 存储容量实惠。
+        </p>
+        <p id="dev-cal-2">
+            个人观点。以上图像来自<a href="https://apple.com/newsroom">Apple Newsroom</a>。归 Apple Inc. 版权所有。
+        </p>
+        <p class="subtitle">多久换一次手机比较好？</p>
+        <p id="dev-cal-2">
+            苹果年年发新的，看起来好像在挤牙膏，实际上只是在割韭菜。技术迷、有钱没地方花的或者专业爱好者可能会每年都更新。
+        </p>
+        <p id="dev-cal-2">
+            但是人家年年发不代表我们要年年买啊！iPhone 的耐用程度，一般三到四年换一次是比较合适的。
+        </p>
+        <p id="dev-cal-2">
+            个人观点。
+        </p>
+        <p class="subtitle">Apple 特别活动（线上）总表（英文）</p>
         <div class="pages-container">
             <table>
                 <thead>
@@ -407,17 +231,19 @@
                         <td>September 9</td>
                         <td><b>It's Glowtime.</b></td>
                         <td>
-                            <div id="remainTime">
-                                <span id="one"></span> days
-                                <span id="two"></span> hours
-                                <span id="three"></span> minutes
-                                <span id="four"></span> seconds until live stream.
-                            </div>
+                            Apple Watch Series 10<br>
+                            Apple Watch Ultra 2 in Black Titanium<br>
+                            AirPods Max (USB-C)<br>
+                            AirPods Pro 2<br>
+                            AirPods 4<br>
+                            iPhone 16<br>
+                            iPhone 16 Plus<br>
+                            iPhone 16 Pro<br>
+                            iPhone 16 Pro Max<br>
                         </td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>2024</td>
                         <td>June 11</td>
                         <td><b>WWDC24</b></td>
                         <td>
@@ -460,7 +286,8 @@
                             16-inch MacBook Pro with M3 Pro / M3 Max <br>
                             24-inch iMac with M3 <br>
                         </td>
-                        <td>This will be the first time Apple host a special event at night. This is also the first time
+                        <td>This will be the first time Apple host a special event at night. This is also the first
+                            time
                             Apple shot the entire event on iPhone.<br>
                             这是 Apple 历史上第一次在下午举行特别活动。这也是 Apple 第一次使用 iPhone 拍摄整场活动。
                         </td>
@@ -495,7 +322,8 @@
                             tvOS 17<br>
                             visionOS 1<br>
                         </td>
-                        <td>This is the first time Apple introduced a new product line since 2016, and its first step in
+                        <td>This is the first time Apple introduced a new product line since 2016, and its first
+                            step in
                             spatial computing as well.
                             <br>这是自 2016 年以来 Apple 首次推出全新产品线，也是其在空间计算领域迈出的第一步。
                         </td>
@@ -580,10 +408,10 @@
                             macOS 12 Monterey <br>
                             watchOS 8 <br>
                         </td>
-                        <td>Arguably the most boring WWDC in the history of WWDC. This is also the first time I stayed
+                        <td>Arguably the most boring WWDC in the history of WWDC. This is also the first time I
+                            stayed
                             up
                             late to watch the livestream.</td>
-                        <td></td>
                     </tr>
                     <tr>
                         <td>March 20</td>
@@ -608,7 +436,6 @@
                             Mac mini with M1 <br>
                         </td>
                         <td>The first Apple Silicon for Mac. <br>Apple 首次推出为 Mac 自研的芯片。</td>
-                        <td></td>
                     </tr>
                     <tr>
                         <td>October 13</td>
@@ -649,10 +476,10 @@
                 </tbody>
             </table>
         </div>
-
-        <br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br>
     </div>
+
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
     <include src="../layout/footer.html"></include>
 </body>
 
