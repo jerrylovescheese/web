@@ -910,3 +910,13 @@
         0 4px 4px rgba(0, 0, 0, 0.11),
         0 8px 8px rgba(0, 0, 0, 0.11);
 }
+
+#canvas-4 {
+    align-items: center;
+}
+
+#canvas-4 iframe {
+    max-width: 80% !important;
+    max-height: 80%;
+    margin: 10px;
+}
