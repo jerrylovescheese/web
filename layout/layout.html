@@ -1,185 +1,107 @@
 <script>
     $(function () {
-        $("#btc-4").click(function () {
-            $("#butter").toggleClass("active");
+        $("#b-more").click(function () {
             $("#cup").toggleClass("active");
+            $("#basic").toggleClass("active");
         });
     });
     $(function () {
-        $("#btc-1").hover(function () {
-            $("#cup-label-1").toggleClass("active");
-        });
-    });
-    $(function () {
-        $("#btc-2").hover(function () {
-            $("#cup-label-2").toggleClass("active");
-        });
-    });
-    $(function () {
-        $("#btc-3").hover(function () {
-            $("#cup-label-3").toggleClass("active");
-        });
-    });
-    $(function () {
-        $("#btc-4").hover(function () {
-            $("#cup-label-4").toggleClass("active");
-        });
-    });
-    $(function () {
-        $("#btc-5").hover(function () {
-            $("#cup-label-5").toggleClass("active");
-        });
-    });
-    $(function () {
-        $("#btc-6").hover(function () {
-            $("#cup-label-6").toggleClass("active");
+        $("#header-collapse-button").click(function () {
+            $("#header-unit").toggleClass("active");
+            $("#content-unit").toggleClass("active");
         });
     });
 </script>
 
-<header id="buttercup">
-    <div id="butter">
-        <div id="doors-wall-head">网站地图</div>
-        <div id="doors-wall-grid">
-            <div class="d-wall-sec" id="d-wall-sec-1">
-                <a href="./apple.html">
-                    <span class="d-wall-sec-text">苹果</span>
-                </a>
-                <ul>
-                    <a href="./subpages/dubdub.html">
-                        <li>WWDC</li>
-                    </a>
-                    <a href="./subpages/iphone.html">
-                        <li>iPhone</li>
-                    </a>
-                    <a href="./subpages/iphone.html">
-                        <li>iPad</li>
-                    </a>
-                    <a href="./subpages/mac.html">
-                        <li>Mac</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="d-wall-sec" id="d-wall-sec-2">
-                <a href="./music.html">
-                    <span class="d-wall-sec-text">音乐</span>
-                </a>
-                <ul>
-                    <a href="./subpages/1989tv.html">
-                        <li>1989 (Taylor's Version)</li>
-                    </a>
-                    <a href="./subpages/lover.html">
-                        <li>Lover</li>
-                    </a>
-                    <a href="./subpages/midnights.html">
-                        <li>Midnights</li>
-                    </a>
-                    <a href="./subpages/ttpd.html">
-                        <li>The Tortured Poets Department</li>
-                    </a>
-                    <a href="./subpages/taylorswift.html">
-                        <li>Taylor Swift</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="d-wall-sec" id="d-wall-sec-3">
-                <span class="d-wall-sec-text">其他</span>
-                <ul>
-                    <a href="./aluminum_studio.html">
-                        <li>关于</li>
-                    </a>
-                    <a href="./blog_preview.html">
-                        <li>博客预览</li>
-                    </a>
-                    <a href="./christmas.html">
-                        <li>圣诞</li>
-                    </a>
-                    <a href="./classical_ch_sh.html">
-                        <li>部编版高中语文古文</li>
-                    </a>
-                    <a href="./classical_ch.html">
-                        <li>部编版初中语文古文</li>
-                    </a>
-                    <a href="./clock.html">
-                        <li>时钟</li>
-                    </a>
-                    <a href="./contact.html">
-                        <li>联系</li>
-                    </a>
-                    <a href="./develop.html">
-                        <li>开发与实验室</li>
-                    </a>
-                    <a href="./flashback.html">
-                        <li>采光间</li>
-                    </a>
-                    <a href="./friends.html">
-                        <li>老友记</li>
-                    </a>
-                    <a href="./gallery.html">
-                        <li>作品</li>
-                    </a>
-                    <a href="./homemade_giftcard.html">
-                        <li>手写祝福</li>
-                    </a>
-                    <a href="./music.html">
-                        <li>音乐</li>
-                    </a>
-                    <a href="./noticeboard.html">
-                        <li>笔记板</li>
-                    </a>
-                    <a href="./search.html">
-                        <li>搜索</li>
-                    </a>
-                    <a href="./survey.html">
-                        <li>调查问卷</li>
-                    </a>
-                </ul>
-            </div>
-        </div>
-        <div id="d-wall-mark">
-            <span id="d-wall-mark-small">Ⓒ</span>&emsp13;2019 - 2024 aluminum.studio
-        </div>
+<header id="basic">
+    <div id="basic-text-container">
+        <div id="b-info"></div>
+        <div id="b-more">more</div>
+        <div id="b-more"><a href="#">to top</a></div>
+        <div id="b-more"><a href="./clock.html">clock</a></div>
+        <div id="b-more"><a href="./aluminum_studio.html">about</a></div>
     </div>
     <div id="cup">
-        <div id="btcs">
-            <div class="btc-o" id="btc-o-1">
-                <div class="btc-circles">
-                    <a href="https://jerryly.top">
-                        <div class="btc" id="btc-1"></div>
-                    </a>
-                    <a href="./aluminum_studio.html">
-                        <div class="btc" id="btc-2">
-                            <i class="fas fa-info"></i>
-                        </div>
-                    </a>
-                    <a href="./clock.html">
-                        <div class="btc" id="btc-3">
-                            <i class="fa-regular fa-clock"></i>
-                        </div>
-                    </a>
-                    <div class="btc" id="btc-4">
-                        <i class="fa-regular fa-square-plus"></i>
-                    </div>
-                    <a href="#">
-                        <div class="btc" id="btc-5">
-                            <i class="fa-solid fa-chevron-up"></i>
-                        </div>
-                    </a>
-                    <a href="./contact.html">
-                        <div class="btc" id="btc-6">
-                            <i class="fa-solid fa-rss"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div id="cup-labels">
-            <div class="cup-label" id="cup-label-1">Home</div>
-            <div class="cup-label" id="cup-label-2">About</div>
-            <div class="cup-label" id="cup-label-3">Clock</div>
-            <div class="cup-label" id="cup-label-4">More</div>
-            <div class="cup-label" id="cup-label-5">Go to top</div>
-            <div class="cup-label" id="cup-label-6">Contact</div>
+        <div id="water">
+            <a href="./apple.html">
+                <span id="water-head">9:41</span>
+            </a>
+            <ul id="water-list">
+                <a href="./develop.html">
+                    <li>Developer</li>
+                </a>
+                <a href="./subpages/mac.html">
+                    <li>Mac</li>
+                </a>
+                <a href="./subpages/iphone.html">
+                    <li>iPhone</li>
+                </a>
+                <a href="./subpages/ipad.html">
+                    <li>iPad</li>
+                </a>
+                <a href="./subpages/dubdub.html">
+                    <li>WWDC</li>
+                </a>
+            </ul>
+            <a href="./music.html">
+                <span id="water-head">music</span>
+            </a>
+            <ul id="water-list">
+                <a href="./taylorswift.html">
+                    <li>Taylor Swift</li>
+                </a>
+                <a href="./subpages/1989tv.html">
+                    <li>1989 (Taylor's Version)</li>
+                </a>
+                <a href="./subpages/lover.html">
+                    <li>Lover</li>
+                </a>
+                <a href="./subpages/midnights.html">
+                    <li>Midnights</li>
+                </a>
+                <a href="./subpages/ttpd.html">
+                    <li>The Tortured Poets Department</li>
+                </a>
+            </ul>
+            <span id="water-head">other stuff</span>
+            <ul id="water-list">
+                <a href="./aluminum_studio.html">
+                    <li>About</li>
+                </a>
+                <a href="./blog_preview.html">
+                    <li>Blog</li>
+                </a>
+                <a href="./christmas.html">
+                    <li>Christmas (closed for now)</li>
+                </a>
+                <a href="./classical_ch_sh.html">
+                    <li>部编版高中语文古文合集</li>
+                </a>
+                <a href="./classical_ch.html">
+                    <li>部编版初中语文古文合集</li>
+                </a>
+                <a href="./clock.html">
+                    <li>Clock</li>
+                </a>
+                <a href="./contact.html">
+                    <li>Contact</li>
+                </a>
+                <a href="./friends.html">
+                    <li><i>Friends</i></li>
+                </a>
+                <a href="./gallery.html">
+                    <li>Gallery</li>
+                </a>
+                <a href="./noticeboard.html">
+                    <li>Noticeboard</li>
+                </a>
+                <a href="./search.html">
+                    <li>Search (deprecated)</li>
+                </a>
+                <a href="./survey.html">
+                    <li>Survey</li>
+                </a>
+            </ul>
         </div>
     </div>
 </header>
