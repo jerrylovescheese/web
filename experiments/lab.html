@@ -6,521 +6,247 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <title>Experiments</title>
-    <link rel="stylesheet" href="../static/iconfont library/fontawesome-free-6.1.2-web/css/all.css">
     <script src="../static/js/jquery-3.7.1.js"></script>
     <script>
         $(function () {
-            $("#btc-4").click(function () {
-                $("#butter").toggleClass("active");
+            $("#b-more").click(function () {
                 $("#cup").toggleClass("active");
-            });
-        });
-        $(function () {
-            $("#btc-1").hover(function () {
-                $("#cup-label-1").toggleClass("active");
-            });
-        });
-        $(function () {
-            $("#btc-2").hover(function () {
-                $("#cup-label-2").toggleClass("active");
-            });
-        });
-        $(function () {
-            $("#btc-3").hover(function () {
-                $("#cup-label-3").toggleClass("active");
-            });
-        });
-        $(function () {
-            $("#btc-4").hover(function () {
-                $("#cup-label-4").toggleClass("active");
-            });
-        });
-        $(function () {
-            $("#btc-5").hover(function () {
-                $("#cup-label-5").toggleClass("active");
-            });
-        });
-        $(function () {
-            $("#btc-6").hover(function () {
-                $("#cup-label-6").toggleClass("active");
+                $("#basic").toggleClass("active");
             });
         });
     </script>
     <style>
-        #buttercup {
+        @media (max-width: 430px) {
+            #water-list {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            #basic {
+                background-image: linear-gradient(rgba(118, 118, 118, 0.5), rgba(0, 0, 0, 0)) !important;
+            }
+
+            #basic.active {
+                background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)) !important;
+            }
+
+            #b-info {
+                background-image: url(../static/img/home-button-dark.svg) !important;
+            }
+
+            #b-more {
+                color: rgba(255, 255, 255, 0.5) !important;
+            }
+
+            #cup {
+                background-color: rgba(118, 118, 118, 0.5) !important;
+            }
+        }
+
+        #basic {
+            width: 100vw;
+            height: 30px;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-image: linear-gradient(rgba(238, 238, 238), rgba(238, 238, 238, 0));
             position: fixed;
             top: 0;
             left: 0;
-            right: 0;
+        }
+
+        #basic.active {
+            background-image: linear-gradient(rgb(225, 225, 225), rgba(238, 238, 238, 0));
+        }
+
+        #b-info {
+            height: 40px;
+            aspect-ratio: 9/5;
+            background-size: cover;
+            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            transition: all 0.2s;
+            background-image: url(../static/img/home-button-light.svg);
+        }
+
+        #b-more {
+            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-left: 20px;
+            font-weight: normal;
+            color: rgba(0, 0, 0, 0.5);
+            transition: all 0.2s;
+        }
+
+        #basic-text-container {
             display: flex;
-            justify-content: center;
+            justify-content: start;
             align-items: center;
+            transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+            position: relative;
+            z-index: 1;
         }
 
-        #butter {
-            width: 100vw;
-            height: 0;
-            background-color: #eee;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 0;
-            transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-            overflow-x: hidden;
-            overflow-y: scroll;
-        }
-
-        #butter.active {
-            height: 100vh;
-        }
-
-        #butter a {
+        #basic-text-container a {
             color: unset;
             text-decoration: none;
         }
 
-        #butter a:hover {
-            text-decoration: underline;
+        #basic:hover #basic-text-container {
+            margin-top: 5px;
         }
 
-        #cup {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+        #basic:hover #b-info {
+            height: 44px;
         }
 
-        #cup.active {
-            top: 85vh;
-        }
-
-        #btcs {
-            position: relative;
-        }
-
-        .btc-o {
-            height: 50px;
-            background-color: #eee;
-            border-radius: 0 0 10px 10px;
-        }
-
-        #btc-circles {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #btc-o-1 {
-            width: 307px;
-        }
-
-        .btc-o::before,
-        .btc-o::after,
-        .btc-o .btc-circles::before,
-        .btc-o .btc-circles::after {
-            content: "";
-            position: absolute;
-            top: 0;
-        }
-
-        .btc-o::before,
-        .btc-o::after {
-            background-image: url(../static/img/corner_a.svg);
-            background-size: contain;
-            width: 10px;
-            height: 10px;
-            left: -10px;
-            z-index: 1;
-        }
-
-        .btc-o::after {
-            background-image: url(../static/img/corner_b.svg);
-            background-size: contain;
-            left: unset;
-            right: -10px;
-        }
-
-        .btc {
-            width: 40px;
-            height: 40px;
-            position: absolute;
-            bottom: 5px;
-            left: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 5px;
-            color: black;
-        }
-
-        #btc-1 {
-            width: 72px;
-            background-image: url(../static/img/home-button-light.svg);
-            background-size: cover;
-        }
-
-        #btc-2 {
-            margin-left: 77px;
-        }
-
-        #btc-3 {
-            margin-left: 122px;
-        }
-
-        #btc-4 {
-            margin-left: 167px;
-        }
-
-        #btc-5 {
-            margin-left: 212px;
-        }
-
-        #btc-6 {
-            margin-left: 257px;
-        }
-
-        .btc:hover {
-            background-color: hsl(0, 0%, 83%);
-        }
-
-        #doors-wall.active {
-            height: 100vh;
-        }
-
-        #doors-wall-head {
-            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 35px;
-            font-weight: bold;
-            margin-left: 30px;
-            margin-top: 70px;
-        }
-
-        #doors-wall-grid {
-            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin-left: 30px;
-            margin-right: 30px;
-            margin-top: 15px;
-            display: grid;
-            grid-template-columns: 1fr 2fr 3fr;
-            column-gap: 15px;
-        }
-
-        .d-wall-sec>ul {
-            list-style: none;
-            margin-left: 0;
-            padding-left: 0;
-        }
-
-        .d-wall-sec>ul>a>li {
-            margin-bottom: 5px;
+        #basic:hover #b-more {
             font-size: 18px;
         }
 
-        .d-wall-sec-text {
-            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 22px;
+        #cup {
+            width: 100vw;
+            display: block;
+            background-color: rgba(247, 247, 247, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            height: 0;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            overflow-x: hidden;
+            overflow-y: scroll;
         }
 
-        #d-wall-sec-3>ul {
+        #cup.active {
+            height: 100vh;
+        }
+
+        #water {
+            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-top: 80px;
+            margin-left: 25px;
+            margin-right: 25px;
             display: grid;
-            grid-template-columns: 2fr 2fr;
+            grid-template-columns: 1fr 2fr;
         }
 
-        #d-wall-mark {
-            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 12px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            white-space: nowrap;
-            padding-bottom: 20px;
-            color: rgba(0, 0, 0, 0.5);
+        #water a {
+            color: unset;
+            text-decoration: none;
         }
 
-        #d-wall-mark-small {
-            font-size: 8px;
+        #water-head {
+            font-size: 40px;
+            font-weight: lighter;
         }
 
-        #cup-labels {
-            width: 307px;
-            height: 30px;
-            position: absolute;
-            top: 50px;
-            display: flex;
+        #water-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
         }
 
-        .cup-label {
-            width: fit-content;
-            padding: 0px 10px 0px 10px;
-            height: 25px;
-            position: absolute;
-            border-radius: 5px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 15px;
-            line-height: 25px;
-            background-color: hsl(0, 0%, 96%);
-            display: none;
-            text-wrap: nowrap;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
-                0 2px 2px rgba(0, 0, 0, 0.11),
-                0 4px 4px rgba(0, 0, 0, 0.11),
-                0 8px 8px rgba(0, 0, 0, 0.11);
-        }
-
-        #cup-label-1.active {
-            display: block;
-            margin-left: 10.66px;
-        }
-
-        #cup-label-2.active {
-            display: block;
-            margin-left: 71.39px;
-        }
-
-        #cup-label-3.active {
-            display: block;
-            margin-left: 117.62px;
-        }
-
-        #cup-label-4.active {
-            display: block;
-            margin-left: 164.45px;
-        }
-
-        #cup-label-5.active {
-            display: block;
-            margin-left: 195.02px;
-        }
-
-        #cup-label-6.active {
-            display: block;
-            margin-left: 244.78px;
-        }
-
-        @media (prefers-color-scheme: dark) {
-
-            #butter,
-            .btc-o {
-                background-color: #333333;
-            }
-
-            .btc {
-                color: #fff;
-            }
-
-            .btc-o::before,
-            .btc-o::after {
-                background-image: url(../static/img/corner_a_dark.svg);
-            }
-
-            .btc-o::after {
-                background-image: url(../static/img/corner_b_dark.svg);
-            }
-
-            #btc-1 {
-                background-image: url(../static/img/home-button-dark.svg);
-            }
-
-            .btc:hover {
-                background-color: hsl(0, 0%, 53%);
-            }
-
-            .cup-label {
-                background-color: #4d4d4d;
-            }
-        }
-
-        @media (max-width: 430px) {
-
-            #door-2 {
-                width: 93.5px !important;
-            }
-
-            #d-button-6,
-            #d-button-7 {
-                display: none;
-            }
-
-            #doors-alt {
-                display: none;
-            }
-
-            #door-3 {
-                display: none !important;
-            }
-
-            #doors-wall-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            #d-wall-sec-3>ul {
-                display: block;
-            }
-
-            @media (prefers-color-scheme: dark) {
-
-                #cup.active .btc-o::before,
-                #cup.active .btc-o::after {
-                    background-image: none;
-                }
-
-                #cup.active .btc-o {
-                    background-color: #666;
-                    border-radius: 10px;
-                }
-            }
+        #water-list li {
+            margin-top: 5px;
+            font-size: 18px;
         }
     </style>
 </head>
 
 <body>
-    <header id="buttercup">
-        <div id="butter">
-            <div id="doors-wall-head">网站地图</div>
-            <div id="doors-wall-grid">
-                <div class="d-wall-sec" id="d-wall-sec-1">
-                    <a href="./apple.html">
-                        <span class="d-wall-sec-text">苹果</span>
-                    </a>
-                    <ul>
-                        <a href="./subpages/dubdub.html">
-                            <li>WWDC</li>
-                        </a>
-                        <a href="./subpages/iphone.html">
-                            <li>iPhone</li>
-                        </a>
-                        <a href="./subpages/iphone.html">
-                            <li>iPad</li>
-                        </a>
-                        <a href="./subpages/mac.html">
-                            <li>Mac</li>
-                        </a>
-                    </ul>
-                </div>
-                <div class="d-wall-sec" id="d-wall-sec-2">
-                    <a href="./music.html">
-                        <span class="d-wall-sec-text">音乐</span>
-                    </a>
-                    <ul>
-                        <a href="./subpages/1989tv.html">
-                            <li>1989 (Taylor's Version)</li>
-                        </a>
-                        <a href="./subpages/lover.html">
-                            <li>Lover</li>
-                        </a>
-                        <a href="./subpages/midnights.html">
-                            <li>Midnights</li>
-                        </a>
-                        <a href="./subpages/ttpd.html">
-                            <li>The Tortured Poets Department</li>
-                        </a>
-                        <a href="./subpages/taylorswift.html">
-                            <li>Taylor Swift</li>
-                        </a>
-                    </ul>
-                </div>
-                <div class="d-wall-sec" id="d-wall-sec-3">
-                    <span class="d-wall-sec-text">其他</span>
-                    <ul>
-                        <a href="./aluminum_studio.html">
-                            <li>关于</li>
-                        </a>
-                        <a href="./blog_preview.html">
-                            <li>博客预览</li>
-                        </a>
-                        <a href="./christmas.html">
-                            <li>圣诞</li>
-                        </a>
-                        <a href="./classical_ch_sh.html">
-                            <li>部编版高中语文古文</li>
-                        </a>
-                        <a href="./classical_ch.html">
-                            <li>部编版初中语文古文</li>
-                        </a>
-                        <a href="./clock.html">
-                            <li>时钟</li>
-                        </a>
-                        <a href="./contact.html">
-                            <li>联系</li>
-                        </a>
-                        <a href="./develop.html">
-                            <li>开发与实验室</li>
-                        </a>
-                        <a href="./flashback.html">
-                            <li>采光间</li>
-                        </a>
-                        <a href="./friends.html">
-                            <li>老友记</li>
-                        </a>
-                        <a href="./gallery.html">
-                            <li>作品</li>
-                        </a>
-                        <a href="./homemade_giftcard.html">
-                            <li>手写祝福</li>
-                        </a>
-                        <a href="./music.html">
-                            <li>音乐</li>
-                        </a>
-                        <a href="./noticeboard.html">
-                            <li>笔记板</li>
-                        </a>
-                        <a href="./search.html">
-                            <li>搜索</li>
-                        </a>
-                        <a href="./survey.html">
-                            <li>调查问卷</li>
-                        </a>
-                    </ul>
-                </div>
-            </div>
-            <div id="d-wall-mark">
-                <span id="d-wall-mark-small">Ⓒ</span>&emsp13;2019 - 2024 aluminum.studio
-            </div>
+    <div id="basic">
+        <div id="basic-text-container">
+            <div id="b-info"></div>
+            <div id="b-more">more</div>
+            <div id="b-more"><a href="#">to top</a></div>
+            <div id="b-more"><a href="../pages/clock.html">clock</a></div>
+            <div id="b-more"><a href="../pages/aluminum_studio.html">about</a></div>
         </div>
         <div id="cup">
-            <div id="btcs">
-                <div class="btc-o" id="btc-o-1">
-                    <div class="btc-circles">
-                        <a href="https://jerryly.top">
-                            <div class="btc" id="btc-1"></div>
-                        </a>
-                        <a href="./aluminum_studio.html">
-                            <div class="btc" id="btc-2">
-                                <i class="fas fa-info"></i>
-                            </div>
-                        </a>
-                        <a href="./clock.html">
-                            <div class="btc" id="btc-3">
-                                <i class="fa-regular fa-clock"></i>
-                            </div>
-                        </a>
-                        <div class="btc" id="btc-4">
-                            <i class="fa-regular fa-square-plus"></i>
-                        </div>
-                        <div class="btc" id="btc-5">
-                            <i class="fa-solid fa-chevron-up"></i>
-                        </div>
-                        <div class="btc" id="btc-6">
-                            <i class="fa-solid fa-rss"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="cup-labels">
-                <div class="cup-label" id="cup-label-1">Home</div>
-                <div class="cup-label" id="cup-label-2">About</div>
-                <div class="cup-label" id="cup-label-3">Clock</div>
-                <div class="cup-label" id="cup-label-4">More</div>
-                <div class="cup-label" id="cup-label-5">Go to top</div>
-                <div class="cup-label" id="cup-label-6">Contact</div>
+            <div id="water">
+                <a href="../pages/apple.html">
+                    <span id="water-head">9:41</span>
+                </a>
+                <ul id="water-list">
+                    <a href="../pages/develop.html">
+                        <li>Developer</li>
+                    </a>
+                    <a href="../pages/subpages/mac.html">
+                        <li>Mac</li>
+                    </a>
+                    <a href="../pages/subpages/iphone.html">
+                        <li>iPhone</li>
+                    </a>
+                    <a href="../pages/subpages/ipad.html">
+                        <li>iPad</li>
+                    </a>
+                    <a href="../pages/subpages/dubdub.html">
+                        <li>WWDC</li>
+                    </a>
+                </ul>
+                <a href="../pages/music.html">
+                    <span id="water-head">music</span>
+                </a>
+                <ul id="water-list">
+                    <a href="../pages/taylorswift.html">
+                        <li>Taylor Swift</li>
+                    </a>
+                    <a href="../pages/subpages/1989tv.html">
+                        <li>1989 (Taylor's Version)</li>
+                    </a>
+                    <a href="../pages/subpages/lover.html">
+                        <li>Lover</li>
+                    </a>
+                    <a href="../pages/subpages/midnights.html">
+                        <li>Midnights</li>
+                    </a>
+                    <a href="../pages/subpages/ttpd.html">
+                        <li>The Tortured Poets Department</li>
+                    </a>
+                </ul>
+                <span id="water-head">other stuff</span>
+                <ul id="water-list">
+                    <a href="../pages/aluminum_studio.html">
+                        <li>About</li>
+                    </a>
+                    <a href="../pages/blog_preview.html">
+                        <li>Blog</li>
+                    </a>
+                    <a href="../pages/christmas.html">
+                        <li>Christmas (closed for now)</li>
+                    </a>
+                    <a href="../pages/classical_ch_sh.html">
+                        <li>部编版高中语文古文合集</li>
+                    </a>
+                    <a href="../pages/classical_ch.html">
+                        <li>部编版初中语文古文合集</li>
+                    </a>
+                    <a href="../pages/clock.html">
+                        <li>Clock</li>
+                    </a>
+                    <a href="../pages/contact.html">
+                        <li>Contact</li>
+                    </a>
+                    <a href="../pages/friends.html">
+                        <li><i>Friends</i></li>
+                    </a>
+                    <a href="../pages/gallery.html">
+                        <li>Gallery</li>
+                    </a>
+                    <a href="../pages/noticeboard.html">
+                        <li>Noticeboard</li>
+                    </a>
+                    <a href="../pages/search.html">
+                        <li>Search (deprecated)</li>
+                    </a>
+                    <a href="../pages/survey.html">
+                        <li>Survey</li>
+                    </a>
+                </ul>
             </div>
         </div>
-    </header>
-
+    </div>
 </body>
 
 </html>

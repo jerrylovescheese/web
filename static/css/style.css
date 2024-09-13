@@ -13,273 +13,118 @@ body {
     margin: 0;
 }
 
-#buttercup {
+#basic {
+    width: 100vw;
+    height: 50px;
+    background-image: linear-gradient(rgba(238, 238, 238), rgba(238, 238, 238, 0));
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 30;
 }
 
-#butter {
-    width: 100vw;
-    height: 0;
-    background-color: #eeeeeec8;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    -moz-backdrop-filter: blur(12px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-    overflow-x: hidden;
-    overflow-y: scroll;
+#basic.active {
+    background-image: linear-gradient(rgb(192, 192, 192), rgba(238, 238, 238, 0));
 }
 
-#butter.active {
-    height: 100vh;
+#b-info {
+    height: 40px;
+    aspect-ratio: 9/5;
+    background-size: cover;
+    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    transition: all 0.2s;
+    background-image: url(../img/home-button-light.svg);
 }
 
-#butter a {
+#b-more {
+    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 20px;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.5);
+    transition: all 0.2s;
+}
+
+#basic-text-container {
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(rgba(146, 146, 146, 0.1), rgba(238, 238, 238, 0));
+    padding-left: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: relative;
+    backdrop-filter: blur(3px);
+    z-index: 1;
+}
+
+#basic-text-container a {
     color: unset;
     text-decoration: none;
 }
 
-#butter a:hover {
-    text-decoration: underline;
+#basic:hover #basic-text-container {
+    padding-top: 5px;
 }
 
-#cup {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+#basic:hover #b-info {
+    height: 44px;
 }
 
-#cup.active {
-    top: 85vh;
-}
-
-#btcs {
-    position: relative;
-}
-
-.btc-o {
-    height: 50px;
-    background-color: #eee;
-    border-radius: 0 0 10px 10px;
-}
-
-#btc-circles {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#btc-o-1 {
-    width: 307px;
-}
-
-.btc-o::before,
-.btc-o::after,
-.btc-o .btc-circles::before,
-.btc-o .btc-circles::after {
-    content: "";
-    position: absolute;
-    top: 0;
-}
-
-.btc-o::before,
-.btc-o::after {
-    background-image: url(../img/corner_a.svg);
-    background-size: contain;
-    width: 10px;
-    height: 10px;
-    left: -10px;
-    z-index: 1;
-}
-
-.btc-o::after {
-    background-image: url(../img/corner_b.svg);
-    background-size: contain;
-    left: unset;
-    right: -10px;
-}
-
-#cup.active .btc-o::before,
-#cup.active .btc-o::after {
-    background-image: none;
-}
-
-#cup.active .btc-o {
-    background-color: #eee;
-    border-radius: 10px;
-}
-
-.btc {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    color: black;
-    animation: app-elements-fade-in 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1;
-}
-
-#btc-1 {
-    width: 72px;
-    background-image: url(../img/home-button-light.svg);
-    background-size: cover;
-}
-
-#btc-2 {
-    margin-left: 77px;
-}
-
-#btc-3 {
-    margin-left: 122px;
-}
-
-#btc-4 {
-    margin-left: 167px;
-}
-
-#btc-5 {
-    margin-left: 212px;
-}
-
-#btc-6 {
-    margin-left: 257px;
-}
-
-.btc:hover {
-    background-color: hsl(0, 0%, 83%);
-}
-
-#doors-wall.active {
-    height: 100vh;
-}
-
-#doors-wall-head {
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 35px;
-    font-weight: bold;
-    margin-left: 30px;
-    margin-top: 30px;
-}
-
-#doors-wall-grid {
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 15px;
-    display: grid;
-    grid-template-columns: 1fr 2fr 3fr;
-    column-gap: 15px;
-}
-
-.d-wall-sec>ul {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-}
-
-.d-wall-sec>ul>a>li {
-    margin-bottom: 5px;
+#basic:hover #b-more {
     font-size: 18px;
 }
 
-.d-wall-sec-text {
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 22px;
+#cup {
+    width: 100vw;
+    display: block;
+    background-color: rgba(247, 247, 247, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 0;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
-#d-wall-sec-3>ul {
+#cup.active {
+    height: 100vh;
+}
+
+#water {
+    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 80px;
+    margin-left: 25px;
+    margin-right: 25px;
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 1fr 2fr;
 }
 
-#d-wall-mark {
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    padding-bottom: 20px;
-    color: rgba(0, 0, 0, 0.5);
+#water a {
+    color: unset;
+    text-decoration: none;
 }
 
-#d-wall-mark-small {
-    font-size: 8px;
+#water-head {
+    font-size: 40px;
+    font-weight: lighter;
 }
 
-#cup-labels {
-    width: 307px;
-    height: 30px;
-    position: absolute;
-    top: 50px;
-    display: flex;
+#water-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.cup-label {
-    width: fit-content;
-    padding: 0px 10px 0px 10px;
-    height: 25px;
-    position: absolute;
-    border-radius: 5px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 15px;
-    line-height: 25px;
-    background-color: hsl(0, 0%, 96%);
-    display: none;
-    text-wrap: nowrap;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
-        0 2px 2px rgba(0, 0, 0, 0.11),
-        0 4px 4px rgba(0, 0, 0, 0.11),
-        0 8px 8px rgba(0, 0, 0, 0.11);
-}
-
-#cup-label-1.active {
-    display: block;
-    margin-left: 10.66px;
-}
-
-#cup-label-2.active {
-    display: block;
-    margin-left: 71.39px;
-}
-
-#cup-label-3.active {
-    display: block;
-    margin-left: 117.62px;
-}
-
-#cup-label-4.active {
-    display: block;
-    margin-left: 164.45px;
-}
-
-#cup-label-5.active {
-    display: block;
-    margin-left: 195.02px;
-}
-
-#cup-label-6.active {
-    display: block;
-    margin-left: 244.78px;
+#water-list li {
+    margin-top: 5px;
+    font-size: 18px;
 }
 
 /* loader style */
@@ -644,12 +489,8 @@ nav {
 }
 
 @media (max-width: 430px) {
-    #doors-wall-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    #d-wall-sec-3>ul {
-        display: block;
+    #water-list {
+        grid-template-columns: 1fr !important;
     }
 }
 
@@ -691,50 +532,24 @@ nav {
         color: hsl(225, 36%, 72%) !important;
     }
 
-    #butter,
-    .btc-o {
-        background-color: #333333;
+    #basic {
+        background-image: linear-gradient(rgba(118, 118, 118, 0.5), rgba(0, 0, 0, 0)) !important;
     }
 
-    #butter {
-        background-color: #333333c8;
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        -moz-backdrop-filter: blur(12px);
+    #basic.active {
+        background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)) !important;
     }
 
-    .btc {
-        color: #fff;
-        animation: app-elements-fade-in-dark 2s cubic-bezier(0.75, 0, 0, 1.05) 0s 1;
+    #b-info {
+        background-image: url(../static/img/home-button-dark.svg) !important;
     }
 
-    .btc-o::before,
-    .btc-o::after {
-        background-image: url(../img/corner_a_dark.svg);
+    #b-more {
+        color: rgba(255, 255, 255, 0.5) !important;
     }
 
-    .btc-o::after {
-        background-image: url(../img/corner_b_dark.svg);
-    }
-
-    #cup.active .btc-o {
-        background-color: #666;
-    }
-
-    #btc-1 {
-        background-image: url(../img/home-button-dark.svg);
-    }
-
-    .btc:hover {
-        background-color: hsl(0, 0%, 53%);
-    }
-
-    #d-wall-mark {
-        color: rgba(255, 255, 255, 0.5);
-    }
-
-    .cup-label {
-        background-color: #4d4d4d;
+    #cup {
+        background-color: rgba(118, 118, 118, 0.5) !important;
     }
 
     #copyright-info {
