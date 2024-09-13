@@ -21,7 +21,6 @@
             #update,
             #dev-cal-2,
             iframe,
-            .list-pages,
             .pages-container,
             #en-warn {
                 margin-left: 30px !important;
@@ -67,7 +66,7 @@
         #mac-head-slide {
             width: 100vw;
             height: 100vh;
-            background-image: url(../../static/img/iphone-bg-horizontal.webp);
+            background-image: url(../../static/img/iOS18-Pink.webp);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -80,7 +79,7 @@
             content: "";
             position: absolute;
             inset: -25px 0px;
-            background-image: url(../../static/img/iphone-bg-horizontal.webp);
+            background-image: url(../../static/img/iOS18-Pink.webp);
             background-position: center;
             background-size: cover;
             filter: blur(2.5em);
@@ -109,11 +108,6 @@
         .subtitle-pages {
             font-weight: bold;
             font-size: 25px !important;
-        }
-
-        .list-pages {
-            margin-left: 120px;
-            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -175,18 +169,18 @@
                 English only.</span>
         </div>
         <p id="dev-cal-2"><span class="subtitle-pages" id="title-0">Lineup</span></p>
-        <p id="dev-cal-2">
-        <ul class="list-pages">
+
+        <ul id="dev-cal-2">
+            <li>iPhone 16</li>
+            <li>iPhone 16 Plus</li>
+            <li>iPhone 16 Pro</li>
+            <li>iPhone 16 Pro Max</li>
             <li>iPhone 15</li>
             <li>iPhone 15 Plus</li>
-            <li>iPhone 15 Pro</li>
-            <li>iPhone 15 Pro Max</li>
             <li>iPhone 14</li>
-            <li>iPhone 14 Plus</li>
-            <li>iPhone 13</li>
             <li>iPhone SE 3</li>
         </ul>
-        </p>
+
         <p id="dev-cal-2"><span class="subtitle-pages" id="title-1">Models List</span></p>
         <div class="pages-container">
             <table>
@@ -203,6 +197,21 @@
                         <td>No.</td>
                         <td>Slogan</td>
                         <td>宣传语*</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">2024/09/09</td>
+                        <td>iPhone 16 Pro Max</td>
+                        <td rowspan="4">Hello, Apple Intelligence.</td>
+                        <td rowspan="4">无</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 16 Pro</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 16 Plus</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 16</td>
                     </tr>
                     <tr>
                         <td rowspan="4">2023/09/12</td>
@@ -432,6 +441,10 @@
                     <tr>
                         <td>Released Year</td>
                         <td>No.</td>
+                    </tr>
+                    <tr>
+                        <td>2024</td>
+                        <td>iOS 18</td>
                     </tr>
                     <tr>
                         <td>2023</td>
