@@ -511,6 +511,7 @@
 
 #remainTime {
     margin-top: 1em;
+    margin-left: 30px;
     font-size: 28px;
     word-break: break-all;
 }
@@ -720,6 +721,16 @@
 
 .canvas-text-small-last {
     text-align: right;
+}
+
+#canvas-clicker {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+        0 2px 2px rgba(0, 0, 0, 0.11),
+        0 4px 4px rgba(0, 0, 0, 0.11),
+        0 8px 8px rgba(0, 0, 0, 0.11);
 }
 
 #canvas-2 {
