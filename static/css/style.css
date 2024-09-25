@@ -655,3 +655,9 @@ a:hover {
     src: url(../fonts/SourceHanSansCN-Bold-min.woff2) format('woff2');
     font-weight: bold;
 }
+
+@-moz-document url-prefix() {
+    div {
+        scrollbar-width: none;
+    }
+}
