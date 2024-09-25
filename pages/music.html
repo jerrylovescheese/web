@@ -58,7 +58,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            background-color: rgb(138, 207, 0);
+            background-image: linear-gradient(160deg, rgb(178, 192, 192), rgb(72, 108, 125), rgb(28, 29, 32) 70%);
             z-index: -1;
         }
 
@@ -80,7 +80,28 @@
             font-style: italic;
         }
 
-        #music-emp {
+        #music-lyric-dis {
+            width: 100%;
+            height: 100vh;
+            margin-top: 100px;
+        }
+
+        #music-lyrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        svg {
+            max-height: 30px;
+        }
+
+        .music-lyric {
+            fill: white;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        /* #music-emp {
             color: rgb(200, 186, 128);
             text-shadow: 0 1px 1px rgba(143, 126, 61, 0.61),
                 0 2px 2px rgba(143, 126, 61, 0.41),
@@ -89,7 +110,7 @@
 
         #music-emp td {
             border-bottom-color: rgb(200, 186, 128);
-        }
+        } */
     </style>
 </head>
 
@@ -101,601 +122,646 @@
     </div>
 
     <div id="content-unit">
-
-        <p id="dev-cal-1">Music</p>
-        <!-- <div id="music-light"></div> -->
-        <div class="pages-container">
-            <p id="dev-cal-2">Page contains a log of the songs I'm currently listening to</p>
-            <table id="dev-cal-2">
-                <thead>
-                    <tr>
-                        <th colspan="6">Last Updated on Aug 2 2024</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            Type
-                        </td>
-                        <td>
-                            Name
-                        </td>
-                        <td>
-                            Artist
-                        </td>
-                        <td>
-                            Album
-                        </td>
-                        <td>
-                            Genre
-                        </td>
-                        <td>
-                            Year
-                        </td>
-                    </tr>
-                    <tr id="music-emp">
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            august
-                        </td>
-                        <td id="music-artist-col">
-                            Taylor Swift
-                        </td>
-                        <td id="music-song-col">
-                            folklore
-                        </td>
-                        <td>
-                            Alternative Pop
-                        </td>
-                        <td>
-                            2020
-                        </td>
-                    </tr>
-                    <tr id="music-emp">
-                        <td>
-                            Album
-                        </td>
-                        <td id="music-song-col">
-                            Only God Was Above Us
-                        </td>
-                        <td id="music-artist-col">
-                            Vampire Weekend
-                        </td>
-                        <td id="music-song-col">
-                            Only God Was Above Us
-                        </td>
-                        <td>
-                            Alternative Pop
-                        </td>
-                        <td>
-                            2024
-                        </td>
-                    </tr>
-                    <tr id="music-emp">
-                        <td>
-                            Album
-                        </td>
-                        <td id="music-song-col">
-                            The Rise and Fall of a Midwest Princess
-                        </td>
-                        <td id="music-artist-col">
-                            Chappell Roan
-                        </td>
-                        <td id="music-song-col">
-                            The Rise and Fall of a Midwest Princess
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2023
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            Femininomenon
-                        </td>
-                        <td id="music-artist-col">
-                            Chappell Roan
-                        </td>
-                        <td id="music-song-col">
-                            The Rise and Fall of a Midwest Princess
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2022
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            Super Graphic Ultra Modern Girl
-                        </td>
-                        <td id="music-artist-col">
-                            Chappell Roan
-                        </td>
-                        <td id="music-song-col">
-                            The Rise and Fall of a Midwest Princess
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2023
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            HOT TO GO!
-                        </td>
-                        <td id="music-artist-col">
-                            Chappell Roan
-                        </td>
-                        <td id="music-song-col">
-                            The Rise and Fall of a Midwest Princess
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2023
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Single
-                        </td>
-                        <td id="music-song-col">
-                            Good Luck, Babe!
-                        </td>
-                        <td id="music-artist-col">
-                            Chappell Roan
-                        </td>
-                        <td id="music-song-col">
-                            &emsp;
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2024
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Album
-                        </td>
-                        <td id="music-song-col">
-                            BRAT
-                        </td>
-                        <td id="music-artist-col">
-                            Charli xcx
-                        </td>
-                        <td id="music-song-col">
-                            BRAT
-                        </td>
-                        <td>
-                            Dance Pop
-                        </td>
-                        <td>
-                            2024
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Album
-                        </td>
-                        <td id="music-song-col">
-                            Norman Fucking Rockwell!
-                        </td>
-                        <td id="music-artist-col">
-                            Lana Del Rey
-                        </td>
-                        <td id="music-song-col">
-                            Norman Fucking Rockwell!
-                        </td>
-                        <td>
-                            Alternative Pop
-                        </td>
-                        <td>
-                            2019
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            Violets for Roses
-                        </td>
-                        <td id="music-artist-col">
-                            Lana Del Rey
-                        </td>
-                        <td id="music-song-col">
-                            Blue Banisters
-                        </td>
-                        <td>
-                            Alternative Pop
-                        </td>
-                        <td>
-                            2021
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            Hard Feelings/Loveless
-                        </td>
-                        <td id="music-artist-col">
-                            Lorde
-                        </td>
-                        <td id="music-song-col">
-                            Melodrama
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2017
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Album
-                        </td>
-                        <td id="music-song-col">
-                            Melodrama
-                        </td>
-                        <td id="music-artist-col">
-                            Lorde
-                        </td>
-                        <td id="music-song-col">
-                            Melodrama
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2017
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Album
-                        </td>
-                        <td id="music-song-col">
-                            THE TORTURED POETS DEPARTMENT
-                        </td>
-                        <td id="music-artist-col">
-                            Taylor Swift
-                        </td>
-                        <td id="music-song-col">
-                            THE TORTURED POETS DEPARTMENT
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2024
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Album
-                        </td>
-                        <td id="music-song-col">
-                            eternal sunshine
-                        </td>
-                        <td id="music-artist-col">
-                            Ariana Grande
-                        </td>
-                        <td id="music-song-col">
-                            eternal sunshine
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2024
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            we can't be friends (wait for your love)
-                        </td>
-                        <td id="music-artist-col">
-                            Ariana Grande
-                        </td>
-                        <td id="music-song-col">
-                            eternal sunshine
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2024
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Album
-                        </td>
-                        <td id="music-song-col">
-                            HIT ME HARD AND SOFT
-                        </td>
-                        <td id="music-artist-col">
-                            Billie Eilish
-                        </td>
-                        <td id="music-song-col">
-                            HIT ME HARD AND SOFT
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2024
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Album
-                        </td>
-                        <td id="music-song-col">
-                            Desire, I Want to Turn Into You
-                        </td>
-                        <td id="music-artist-col">
-                            Caroline Polachek
-                        </td>
-                        <td id="music-song-col">
-                            Desire, I Want to Turn Into You
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2023
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            Supercut
-                        </td>
-                        <td id="music-artist-col">
-                            Lorde
-                        </td>
-                        <td id="music-song-col">
-                            Melodrama
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2017
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            借
-                        </td>
-                        <td id="music-artist-col">
-                            毛不易
-                        </td>
-                        <td id="music-song-col">
-                            平凡的一天
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2018
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            一荤一素
-                        </td>
-                        <td id="music-artist-col">
-                            毛不易
-                        </td>
-                        <td id="music-song-col">
-                            平凡的一天
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2018
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            海上日记
-                        </td>
-                        <td id="music-artist-col">
-                            毛不易
-                        </td>
-                        <td id="music-song-col">
-                            幼鸟指南
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2021
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            旅行家说
-                        </td>
-                        <td id="music-artist-col">
-                            毛不易
-                        </td>
-                        <td id="music-song-col">
-                            幼鸟指南
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2021
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            若有缘由
-                        </td>
-                        <td id="music-artist-col">
-                            毛不易
-                        </td>
-                        <td id="music-song-col">
-                            幼鸟指南
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2021
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            二零三
-                        </td>
-                        <td id="music-artist-col">
-                            毛不易
-                        </td>
-                        <td id="music-song-col">
-                            小王
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2019
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            一程山路
-                        </td>
-                        <td id="music-artist-col">
-                            毛不易
-                        </td>
-                        <td id="music-song-col">
-                            小王
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2019
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            小王
-                        </td>
-                        <td id="music-artist-col">
-                            毛不易
-                        </td>
-                        <td id="music-song-col">
-                            小王
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2019
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            东北民谣
-                        </td>
-                        <td id="music-artist-col">
-                            毛不易
-                        </td>
-                        <td id="music-song-col">
-                            小王
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2019
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Song
-                        </td>
-                        <td id="music-song-col">
-                            呓语
-                        </td>
-                        <td id="music-artist-col">
-                            毛不易
-                        </td>
-                        <td id="music-song-col">
-                            小王
-                        </td>
-                        <td>
-                            Pop
-                        </td>
-                        <td>
-                            2019
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div id="music-light"></div>
+        <div id="music-lyric-dis">
+            <div id="music-lyrics">
+                <div class="music-lyric">
+                    <include src="../static/img/TheInnerVentureLyricsSVG/资源 46.svg"></include>
+                </div>
+                <div class="music-lyric">
+                    <include src="../static/img/TheInnerVentureLyricsSVG/资源 45.svg"></include>
+                </div>
+                <div class="music-lyric">
+                    <include src="../static/img/TheInnerVentureLyricsSVG/资源 44.svg"></include>
+                </div>
+                <div class="music-lyric">
+                    <include src="../static/img/TheInnerVentureLyricsSVG/资源 43.svg"></include>
+                </div>
+                <div class="music-lyric">
+                    <include src="../static/img/TheInnerVentureLyricsSVG/资源 42.svg"></include>
+                </div>
+                <div class="music-lyric">
+                    <include src="../static/img/TheInnerVentureLyricsSVG/资源 41.svg"></include>
+                </div>
+                <div class="music-lyric">
+                    <include src="../static/img/TheInnerVentureLyricsSVG/资源 40.svg"></include>
+                </div>
+                <div class="music-lyric">
+                    <include src="../static/img/TheInnerVentureLyricsSVG/资源 39.svg"></include>
+                </div>
+                <div class="music-lyric">
+                    <include src="../static/img/TheInnerVentureLyricsSVG/资源 38.svg"></include>
+                </div>
+                <div class="music-lyric">
+                    <include src="../static/img/TheInnerVentureLyricsSVG/资源 37.svg"></include>
+                </div>
+                <div class="music-lyric">
+                    <include src="../static/img/TheInnerVentureLyricsSVG/资源 36.svg"></include>
+                </div>
+                <div class="music-lyric">
+                    <include src="../static/img/TheInnerVentureLyricsSVG/资源 35.svg"></include>
+                </div>
+                <div class="music-lyric">
+                    <include src="../static/img/TheInnerVentureLyricsSVG/资源 34.svg"></include>
+                </div>
+                <div class="music-lyric">
+                    <include src="../static/img/TheInnerVentureLyricsSVG/资源 33.svg"></include>
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="pages-container">
+        <p id="dev-cal-2">Page contains a log of the songs I'm currently listening to</p>
+        <table id="dev-cal-2">
+            <thead>
+                <tr>
+                    <th colspan="6">Last Updated on Aug 2 2024</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Type
+                    </td>
+                    <td>
+                        Name
+                    </td>
+                    <td>
+                        Artist
+                    </td>
+                    <td>
+                        Album
+                    </td>
+                    <td>
+                        Genre
+                    </td>
+                    <td>
+                        Year
+                    </td>
+                </tr>
+                <tr id="music-emp">
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        august
+                    </td>
+                    <td id="music-artist-col">
+                        Taylor Swift
+                    </td>
+                    <td id="music-song-col">
+                        folklore
+                    </td>
+                    <td>
+                        Alternative Pop
+                    </td>
+                    <td>
+                        2020
+                    </td>
+                </tr>
+                <tr id="music-emp">
+                    <td>
+                        Album
+                    </td>
+                    <td id="music-song-col">
+                        Only God Was Above Us
+                    </td>
+                    <td id="music-artist-col">
+                        Vampire Weekend
+                    </td>
+                    <td id="music-song-col">
+                        Only God Was Above Us
+                    </td>
+                    <td>
+                        Alternative Pop
+                    </td>
+                    <td>
+                        2024
+                    </td>
+                </tr>
+                <tr id="music-emp">
+                    <td>
+                        Album
+                    </td>
+                    <td id="music-song-col">
+                        The Rise and Fall of a Midwest Princess
+                    </td>
+                    <td id="music-artist-col">
+                        Chappell Roan
+                    </td>
+                    <td id="music-song-col">
+                        The Rise and Fall of a Midwest Princess
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2023
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        Femininomenon
+                    </td>
+                    <td id="music-artist-col">
+                        Chappell Roan
+                    </td>
+                    <td id="music-song-col">
+                        The Rise and Fall of a Midwest Princess
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2022
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        Super Graphic Ultra Modern Girl
+                    </td>
+                    <td id="music-artist-col">
+                        Chappell Roan
+                    </td>
+                    <td id="music-song-col">
+                        The Rise and Fall of a Midwest Princess
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2023
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        HOT TO GO!
+                    </td>
+                    <td id="music-artist-col">
+                        Chappell Roan
+                    </td>
+                    <td id="music-song-col">
+                        The Rise and Fall of a Midwest Princess
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2023
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Single
+                    </td>
+                    <td id="music-song-col">
+                        Good Luck, Babe!
+                    </td>
+                    <td id="music-artist-col">
+                        Chappell Roan
+                    </td>
+                    <td id="music-song-col">
+                        &emsp;
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2024
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Album
+                    </td>
+                    <td id="music-song-col">
+                        BRAT
+                    </td>
+                    <td id="music-artist-col">
+                        Charli xcx
+                    </td>
+                    <td id="music-song-col">
+                        BRAT
+                    </td>
+                    <td>
+                        Dance Pop
+                    </td>
+                    <td>
+                        2024
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Album
+                    </td>
+                    <td id="music-song-col">
+                        Norman Fucking Rockwell!
+                    </td>
+                    <td id="music-artist-col">
+                        Lana Del Rey
+                    </td>
+                    <td id="music-song-col">
+                        Norman Fucking Rockwell!
+                    </td>
+                    <td>
+                        Alternative Pop
+                    </td>
+                    <td>
+                        2019
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        Violets for Roses
+                    </td>
+                    <td id="music-artist-col">
+                        Lana Del Rey
+                    </td>
+                    <td id="music-song-col">
+                        Blue Banisters
+                    </td>
+                    <td>
+                        Alternative Pop
+                    </td>
+                    <td>
+                        2021
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        Hard Feelings/Loveless
+                    </td>
+                    <td id="music-artist-col">
+                        Lorde
+                    </td>
+                    <td id="music-song-col">
+                        Melodrama
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2017
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Album
+                    </td>
+                    <td id="music-song-col">
+                        Melodrama
+                    </td>
+                    <td id="music-artist-col">
+                        Lorde
+                    </td>
+                    <td id="music-song-col">
+                        Melodrama
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2017
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Album
+                    </td>
+                    <td id="music-song-col">
+                        THE TORTURED POETS DEPARTMENT
+                    </td>
+                    <td id="music-artist-col">
+                        Taylor Swift
+                    </td>
+                    <td id="music-song-col">
+                        THE TORTURED POETS DEPARTMENT
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2024
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Album
+                    </td>
+                    <td id="music-song-col">
+                        eternal sunshine
+                    </td>
+                    <td id="music-artist-col">
+                        Ariana Grande
+                    </td>
+                    <td id="music-song-col">
+                        eternal sunshine
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2024
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        we can't be friends (wait for your love)
+                    </td>
+                    <td id="music-artist-col">
+                        Ariana Grande
+                    </td>
+                    <td id="music-song-col">
+                        eternal sunshine
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2024
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Album
+                    </td>
+                    <td id="music-song-col">
+                        HIT ME HARD AND SOFT
+                    </td>
+                    <td id="music-artist-col">
+                        Billie Eilish
+                    </td>
+                    <td id="music-song-col">
+                        HIT ME HARD AND SOFT
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2024
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Album
+                    </td>
+                    <td id="music-song-col">
+                        Desire, I Want to Turn Into You
+                    </td>
+                    <td id="music-artist-col">
+                        Caroline Polachek
+                    </td>
+                    <td id="music-song-col">
+                        Desire, I Want to Turn Into You
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2023
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        Supercut
+                    </td>
+                    <td id="music-artist-col">
+                        Lorde
+                    </td>
+                    <td id="music-song-col">
+                        Melodrama
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2017
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        借
+                    </td>
+                    <td id="music-artist-col">
+                        毛不易
+                    </td>
+                    <td id="music-song-col">
+                        平凡的一天
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2018
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        一荤一素
+                    </td>
+                    <td id="music-artist-col">
+                        毛不易
+                    </td>
+                    <td id="music-song-col">
+                        平凡的一天
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2018
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        海上日记
+                    </td>
+                    <td id="music-artist-col">
+                        毛不易
+                    </td>
+                    <td id="music-song-col">
+                        幼鸟指南
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2021
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        旅行家说
+                    </td>
+                    <td id="music-artist-col">
+                        毛不易
+                    </td>
+                    <td id="music-song-col">
+                        幼鸟指南
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2021
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        若有缘由
+                    </td>
+                    <td id="music-artist-col">
+                        毛不易
+                    </td>
+                    <td id="music-song-col">
+                        幼鸟指南
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2021
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        二零三
+                    </td>
+                    <td id="music-artist-col">
+                        毛不易
+                    </td>
+                    <td id="music-song-col">
+                        小王
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2019
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        一程山路
+                    </td>
+                    <td id="music-artist-col">
+                        毛不易
+                    </td>
+                    <td id="music-song-col">
+                        小王
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2019
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        小王
+                    </td>
+                    <td id="music-artist-col">
+                        毛不易
+                    </td>
+                    <td id="music-song-col">
+                        小王
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2019
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        东北民谣
+                    </td>
+                    <td id="music-artist-col">
+                        毛不易
+                    </td>
+                    <td id="music-song-col">
+                        小王
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2019
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Song
+                    </td>
+                    <td id="music-song-col">
+                        呓语
+                    </td>
+                    <td id="music-artist-col">
+                        毛不易
+                    </td>
+                    <td id="music-song-col">
+                        小王
+                    </td>
+                    <td>
+                        Pop
+                    </td>
+                    <td>
+                        2019
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     </div>
 
     <br><br><br><br><br><br><br><br><br>
