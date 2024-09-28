@@ -5,6 +5,13 @@
             $("#basic").toggleClass("active");
         });
     });
+    // Ensure the DOM is fully loaded before running the script
+    $(document).ready(function () {
+        // Get the title of the document
+        var title = $(document).attr("title");
+        // Display the title inside an element with id 'titleDisplay'
+        $("#titleDisplay").text(title);
+    });
 </script>
 
 <header id="basic">
@@ -16,6 +23,7 @@
         <div id="b-more"><a href="#">to top</a></div>
         <div id="b-more"><a href="../pages/clock.html">clock</a></div>
         <div id="b-more"><a href="../pages/aluminum_studio.html">about</a></div>
+        <div id="b-more"><b><span id="titleDisplay"></span></b></div>
     </div>
     <div id="cup">
         <div id="water">
