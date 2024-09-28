@@ -14,6 +14,13 @@
                 $("#basic").toggleClass("active");
             });
         });
+
+        window.onload = function () {
+            // Get the title of the document
+            var title = document.title;
+            // Display the title inside an element with id 'titleDisplay'
+            document.getElementById("titleDisplay").innerText = title;
+        }
     </script>
     <style>
         @media (max-width: 430px) {
@@ -46,18 +53,16 @@
 
         #basic {
             width: 100vw;
-            height: 30px;
-            padding: 10px;
-            padding-left: 20px;
-            padding-right: 20px;
+            height: 50px;
             background-image: linear-gradient(rgba(238, 238, 238), rgba(238, 238, 238, 0));
             position: fixed;
             top: 0;
             left: 0;
+            z-index: 30;
         }
 
         #basic.active {
-            background-image: linear-gradient(rgb(225, 225, 225), rgba(238, 238, 238, 0));
+            background-image: linear-gradient(rgb(192, 192, 192), rgba(238, 238, 238, 0));
         }
 
         #b-info {
@@ -67,7 +72,7 @@
             font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-weight: bold;
             transition: all 0.2s;
-            background-image: url(../static/img/home-button-light.svg);
+            background-image: url(../img/home-button-light.svg);
         }
 
         #b-more {
@@ -79,11 +84,16 @@
         }
 
         #basic-text-container {
+            width: 100%;
+            height: 50px;
+            background-image: linear-gradient(rgba(146, 146, 146, 0.1), rgba(238, 238, 238, 0));
+            padding-left: 20px;
             display: flex;
             justify-content: start;
             align-items: center;
             transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
             position: relative;
+            backdrop-filter: blur(3px);
             z-index: 1;
         }
 
@@ -93,7 +103,7 @@
         }
 
         #basic:hover #basic-text-container {
-            margin-top: 5px;
+            padding-top: 5px;
         }
 
         #basic:hover #b-info {
@@ -108,6 +118,9 @@
             width: 100vw;
             display: block;
             background-color: rgba(247, 247, 247, 0.5);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            -moz-backdrop-filter: blur(20px);
             position: fixed;
             top: 0;
             left: 0;
@@ -162,6 +175,7 @@
             <div id="b-more"><a href="#">to top</a></div>
             <div id="b-more"><a href="../pages/clock.html">clock</a></div>
             <div id="b-more"><a href="../pages/aluminum_studio.html">about</a></div>
+            <div id="b-more"><b><span id="titleDisplay"></span></b></div>
         </div>
         <div id="cup">
             <div id="water">
