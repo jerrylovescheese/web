@@ -492,6 +492,10 @@ nav {
     #water-list {
         grid-template-columns: 1fr !important;
     }
+
+    #b-more #titleDisplay {
+        display: none !important;
+    }
 }
 
 @keyframes app-elements-fade-in {
