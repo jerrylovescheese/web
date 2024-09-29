@@ -493,7 +493,7 @@ nav {
         grid-template-columns: 1fr !important;
     }
 
-    #b-more #titleDisplay {
+    #b-more b {
         display: none !important;
     }
 }
