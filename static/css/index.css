@@ -422,13 +422,17 @@
     }
 }
 
+#basic {
+    background-image: linear-gradient(rgba(255, 105, 105, 0.5), rgba(251, 251, 251, 0));
+}
+
 #namecard {
     position: absolute;
-    top: 100px;
+    top: 60px;
     left: 0;
     right: 0;
     display: flex;
-    justify-content: center;
+    justify-content: start;
 }
 
 #n-marquee {
