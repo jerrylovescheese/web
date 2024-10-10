@@ -3,17 +3,9 @@ $(document).ready(function () {
 
     $(window).on("scroll", function () {
         if ($(this).scrollTop() >= vh) {
-            $(".btc").removeClass("new-style");
+            $("#basic").removeClass("new-style");
         } else {
-            $(".btc").addClass("new-style");
-        }
-    });
-
-    $(window).on("scroll", function () {
-        if ($(this).scrollTop() >= vh) {
-            $("#btc-1").removeClass("new-style");
-        } else {
-            $("#btc-1").addClass("new-style");
+            $("#basic").addClass("new-style");
         }
     });
 });
