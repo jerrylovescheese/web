@@ -423,7 +423,11 @@
 }
 
 #basic {
-    background-image: linear-gradient(rgba(255, 105, 105, 0.5), rgba(251, 251, 251, 0));
+    background-image: linear-gradient(rgba(238, 238, 238, 0.5), rgba(251, 251, 251, 0));
+}
+
+#basic.new-style {
+    background-image: linear-gradient(rgba(229, 142, 61, 0.5), rgba(251, 251, 251, 0));
 }
 
 #namecard {
@@ -922,6 +926,6 @@
 }
 
 #canvas-5 {
-    background-image: url(../img/nationalday.webp);
+    background-image: url(../img/Aug-7-2024_画板-1.webp);
     background-size: cover;
 }
