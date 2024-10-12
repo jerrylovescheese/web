@@ -427,7 +427,7 @@
 }
 
 #basic.new-style {
-    background-image: linear-gradient(rgba(229, 142, 61, 0.5), rgba(251, 251, 251, 0));
+    background-image: linear-gradient(rgba(138, 207, 0, 0.5), rgba(251, 251, 251, 0)) !important;
 }
 
 #namecard {
@@ -810,6 +810,7 @@
 #canvas-2-inbox-4 {
     color: rgb(242, 0, 89);
     border-color: rgba(242, 0, 89, 0.6);
+    margin-right: 20px;
 }
 
 #canvas-2-inbox-4:hover,
@@ -927,5 +928,10 @@
 
 #canvas-5 {
     background-image: url(../img/Aug-7-2024_画板-1.webp);
+    background-size: cover;
+}
+
+#canvas-6 {
+    background-image: url(../img/Oct\ 11\ 2024_画板\ 1.png);
     background-size: cover;
 }

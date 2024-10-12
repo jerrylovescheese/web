@@ -411,6 +411,10 @@ nav {
 /* media query */
 
 @media (max-width: 768px) {
+    html {
+        scrollbar-color: unset !important;
+    }
+
     #door-3 {
         display: none !important;
     }
@@ -548,7 +552,7 @@ nav {
     }
 
     a {
-        color: hsl(225, 36%, 72%) !important;
+        color: #9AEBA3 !important;
     }
 
     #basic {
@@ -637,30 +641,53 @@ nav {
 
 /* special elements style */
 
+/* Make the scrollbar appear on top of the content */
+html {
+    scrollbar-width: thin;
+    /* For Firefox */
+    scrollbar-color: #888 transparent;
+    /* For Firefox */
+}
+
+body {
+    overflow: overlay;
+    /* For WebKit browsers, enables overlay scrollbars */
+}
+
+/* WebKit browsers: Scrollbar customization */
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 8px;
+    /* Make it thin */
     height: 0px;
-    border-radius: 10px;
-    background: rgba(224, 224, 224, 0.8);
+    /* For horizontal scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: #f1f1f100;
+    background: transparent;
+    /* Make track transparent */
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: #888;
+    background-color: #888;
+    /* Scrollbar color */
+    border-radius: 4px;
+    /* Round scrollbar edges */
 }
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Darker on hover */
+}
+
 
 a {
     text-decoration: none;
-    color: #E57200;
+    color: #13678A;
 }
 
 a:hover {
     text-decoration: underline;
+    color: hsl(198, 76%, 51%);
 }
 
 @font-face {
