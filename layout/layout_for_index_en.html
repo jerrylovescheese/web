@@ -1,8 +1,7 @@
 <script>
     $(function () {
-        $("#b-more").click(function () {
-            $("#cup").toggleClass("active");
-            $("#basic").toggleClass("active");
+        $("#b-close").click(function () {
+            $("#attic").toggleClass("collapse");
         });
     });
     // Ensure the DOM is fully loaded before running the script
@@ -14,88 +13,79 @@
     });
 </script>
 
-<header id="basic">
-    <div id="basic-text-container">
-        <a href="https://jerryly.top">
-            <div id="b-info"></div>
-        </a>
-        <div id="b-more"><b><i class="fas fa-chevron-right"></i>&emsp;<span id="titleDisplay"></span></b></div>
-        <div class="b-style"><a href="#">to top</a></div>
-        <div class="b-style"><a href="../pages/clock.html">clock</a></div>
-        <div class="b-style"><a href="../pages/aluminum_studio.html">about</a></div>
-    </div>
-    <div id="cup">
-        <div id="water">
-            <a href="../pages/apple.html">
-                <span id="water-head">9:41</span>
+<header id="attic">
+    <div id="b-close"><i class="fas fa-arrow-right"></i></div>
+    <a href="https://jerryly.top">
+        <div class="b-item-0"></div>
+    </a>
+    <div class="b-item-1"><span id="titleDisplay"></span></div>
+    <div id="attic-items">
+        <div class="b-item-2">things I love</div>
+        <div class="b-item">
+            <a href="../pages/apple.html">Apple</a>
+        </div>
+        <div class="b-item">
+            <a href="../pages/friends.html">Friends</a>
+        </div>
+        <div class="b-item">
+            <a href="../pages/music.html">Music</a>
+        </div>
+        <div class="b-item">
+            <a href="../pages/taylorswift.html">Swiftie</a>
+        </div>
+        <div class="b-item-2">festivity</div>
+        <div class="b-item">
+            <a href="../pages/christmas.html">Christmas</a>
+        </div>
+        <div class="b-item">
+            <a href="../pages/homemade_giftcard.html">Homemade Giftcard</a>
+        </div>
+        <div class="b-item-2">other stuff</div>
+        <div class="b-item">
+            <a href="../pages/aluminum_studio.html">About</a>
+        </div>
+        <div class="b-item">
+            <a href="https://blog.jerryly.top">
+                Blog&emsp13;&emsp13;
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
-            <ul id="water-list">
-                <a href="../pages/develop.html">
-                    <li>Developer</li>
-                </a>
-            </ul>
-            <a href="../pages/music.html">
-                <span id="water-head">music</span>
-            </a>
-            <ul id="water-list">
-                <a href="../pages/taylorswift.html">
-                    <li>Taylor Swift</li>
-                </a>
-                <a href="../pages/subpages/1989tv.html">
-                    <li>1989 (Taylor's Version)</li>
-                </a>
-                <a href="../pages/subpages/lover.html">
-                    <li>Lover</li>
-                </a>
-                <a href="../pages/subpages/midnights.html">
-                    <li>Midnights</li>
-                </a>
-                <a href="../pages/subpages/ttpd.html">
-                    <li>The Tortured Poets Department</li>
-                </a>
-                <a href="../pages/subpages/brat.html">
-                    <li>Brat and it's the same</li>
-                </a>
-            </ul>
-            <span id="water-head">other stuff</span>
-            <ul id="water-list">
-                <a href="../pages/aluminum_studio.html">
-                    <li>About</li>
-                </a>
-                <a href="../pages/blog_preview.html">
-                    <li>Blog</li>
-                </a>
-                <a href="../pages/christmas.html">
-                    <li>Christmas (closed for now)</li>
-                </a>
-                <a href="../pages/classical_ch_sh.html">
-                    <li>部编版高中语文古文合集</li>
-                </a>
-                <a href="../pages/classical_ch.html">
-                    <li>部编版初中语文古文合集</li>
-                </a>
-                <a href="../pages/clock.html">
-                    <li>Clock</li>
-                </a>
-                <a href="../pages/contact.html">
-                    <li>Contact</li>
-                </a>
-                <a href="../pages/friends.html">
-                    <li><i>Friends</i></li>
-                </a>
-                <a href="../pages/gallery.html">
-                    <li>Gallery</li>
-                </a>
-                <a href="../pages/noticeboard.html">
-                    <li>Noticeboard</li>
-                </a>
-                <a href="../pages/search.html">
-                    <li>Search (deprecated)</li>
-                </a>
-                <a href="../pages/survey.html">
-                    <li>Survey</li>
-                </a>
-            </ul>
+        </div>
+        <div class="b-item">
+            <a href="../pages/classical_ch_sh.html">Classical Chinese for Senior High</a>
+        </div>
+        <div class="b-item">
+            <a href="../pages/classical_ch.html">Classical Chinese for Junior High</a>
+        </div>
+        <div class="b-item">
+            <a href="../pages/clock.html">Clock</a>
+        </div>
+        <div class="b-item">
+            <a href="../pages/contact.html">Contact</a>
+        </div>
+        <div class="b-item">
+            <a href="../pages/develop.html">Develop</a>
+        </div>
+        <div class="b-item">
+            <a href="../pages/flashback.html">Rainbow Room</a>
+        </div>
+        <div class="b-item">
+            <a href="../pages/gallery.html">Gallery</a>
+        </div>
+        <div class="b-item">
+            <a href="../pages/noticeboard.html">Noticeboard</a>
+        </div>
+        <div class="b-item">
+            <a href="../pages/search.html">Search (deprecated)</a>
+        </div>
+        <div class="b-item">
+            <a href="../pages/survey.html">Survey</a>
         </div>
     </div>
 </header>
+<div id="back-to-top">
+    <a href="#">
+        <div id="back-button">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </a>
+</div>
