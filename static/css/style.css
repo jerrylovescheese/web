@@ -25,7 +25,7 @@ body {
     top: 10px;
     z-index: 40;
     border-radius: 15px;
-    background-color: rgba(238, 238, 238, 0.5);
+    background-color: rgba(238, 238, 238, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     -moz-backdrop-filter: blur(12px);
@@ -134,7 +134,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #919191;
-    transition: all 0.2s;
+    transition: all 0.2s cubic-bezier(0, 1, 0.5, 1.25);
 }
 
 #b-close:hover {
@@ -165,7 +165,7 @@ body {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    background-color: rgba(238, 238, 238, 0.5);
+    background-color: rgba(238, 238, 238, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     -moz-backdrop-filter: blur(12px);
@@ -445,7 +445,7 @@ nav {
 
     #attic,
     #back-to-top {
-        background-color: rgba(68, 68, 68, 0.5);
+        background-color: rgba(68, 68, 68, 0.85);
         border: solid 1px #444;
     }
 
