@@ -1,4 +1,9 @@
-/* designed by jerry */
+/* 
+ * Author: Jiangyuan Li
+ * Version: 7.0
+ */
+
+/* all styles */
 
 :root {
     color-scheme: light dark;
@@ -6,134 +11,187 @@
     color: black;
 }
 
-/* all styles */
-/* header style */
+/* header styles */
 
 body {
     margin: 0;
 }
 
-#basic {
-    width: 100vw;
-    height: 50px;
-    background-image: linear-gradient(rgba(238, 238, 238), rgba(238, 238, 238, 0));
+#attic {
+    width: 250px;
+    height: calc(100vh - 20px);
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 30;
+    left: 10px;
+    top: 10px;
+    z-index: 40;
+    border-radius: 15px;
+    background-color: rgba(238, 238, 238, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
+    border: solid 1px #eee;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    transition: all 0.3s cubic-bezier(0, 1, 0, 1.03);
 }
 
-#basic.active {
-    background-image: linear-gradient(rgb(192, 192, 192), rgba(238, 238, 238, 0));
+#attic>a {
+    display: block;
+    width: 75px;
+    transition: all 0.2s;
+    margin-left: 5px;
+    border-radius: 10px;
 }
 
-#b-info {
+#attic>a:hover {
+    background-color: rgba(192, 192, 192, 0.50);
+}
+
+#attic.collapse>a {
+    border-radius: 5px;
+}
+
+.b-item a,
+#back-to-top a {
+    color: unset !important;
+    text-decoration: none !important;
+    display: block;
+    width: 100%;
+}
+
+#attic.collapse {
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#attic-items {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding-bottom: 5px;
+}
+
+.b-item {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 18px;
+    padding-bottom: 5px;
+    color: rgba(0, 0, 0, 0.75);
+    transition: all 0.2s;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.b-item-0 {
     height: 40px;
     aspect-ratio: 9/5;
-    background-size: cover;
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-    transition: all 0.2s;
+    margin-top: 5px;
     background-image: url(../img/home-button-light.svg);
 }
 
-#b-more {
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-left: 20px;
-    font-weight: normal;
-    color: rgba(0, 0, 0, 0.5);
+.b-item-1 {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    padding-bottom: 5px;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-bottom: solid 1px #cfcfcf;
     transition: all 0.2s;
 }
 
-.b-style {
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-left: 20px;
-    font-weight: normal;
-    color: rgba(0, 0, 0, 0.5);
+.b-item-2 {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
     transition: all 0.2s;
 }
 
-#basic-text-container {
-    width: 100%;
-    height: 50px;
-    background-image: linear-gradient(rgba(146, 146, 146, 0.1), rgba(238, 238, 238, 0));
-    padding-left: 20px;
+#attic.collapse .b-item,
+#attic.collapse .b-item-1,
+#attic.collapse .b-item-2 {
+    color: transparent;
+}
+
+#b-close {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(213, 213, 213, 0.5);
+    border-radius: 20px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
-    position: relative;
-    backdrop-filter: blur(3px);
-    z-index: 1;
+    color: #919191;
+    transition: all 0.2s;
 }
 
-#basic-text-container a {
-    color: unset;
-    text-decoration: none;
+#b-close:hover {
+    padding: 5px;
+    top: 10px;
+    right: 5px;
+    background-color: rgba(192, 192, 192, 0.50);
 }
 
-#basic:hover #basic-text-container {
-    padding-top: 5px;
-}
-
-#basic:hover #b-info {
-    height: 44px;
-}
-
-#basic:hover #b-more,
-#basic:hover .b-style {
-    font-size: 17px;
-}
-
-#cup {
-    width: 100vw;
-    display: block;
-    background-color: rgba(247, 247, 247, 0.5);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    -moz-backdrop-filter: blur(20px);
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    height: 0;
-    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-
-#cup.active {
-    height: 100vh;
-}
-
-#water {
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-top: 80px;
-    margin-left: 25px;
-    margin-right: 25px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-}
-
-#water a {
-    color: unset;
-    text-decoration: none;
-}
-
-#water-head {
-    font-size: 40px;
-    font-weight: lighter;
-}
-
-#water-list {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-#water-list li {
+.b-item:hover {
+    background-color: rgba(192, 192, 192, 0.50);
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 5px;
     margin-top: 5px;
+}
+
+#titleDisplay {
+    display: block;
+    padding-top: 10px;
+    font-weight: bold;
     font-size: 18px;
+}
+
+#back-to-top {
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(238, 238, 238, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
+    border: solid 1px #eee;
+    border-radius: 5px;
+    color: #000;
+    z-index: 30;
+    transition: all 0.2s;
+}
+
+#back-button {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s;
+}
+
+#back-to-top:hover #back-button,
+#back-to-top:hover {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: rgba(192, 192, 192, 0.50);
 }
 
 /* loader style */
@@ -166,7 +224,7 @@ body {
 /* section style */
 
 #content-unit {
-    margin-left: 240px;
+    margin-left: 0px;
     transition: all 0.2s;
 }
 
@@ -176,21 +234,22 @@ body {
 
 #header-unit {
     position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 240px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow: hidden;
-    background-color: #fff;
-    transition: all 0.2s;
-}
-
-#header-unit.active {
-    width: 0;
+    left: 130px;
+    right: 0px;
+    top: 10px;
+    display: unset;
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(238, 238, 238, 0.5);
+    border: solid 1px #eee;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
+    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    z-index: 1;
 }
 
 #header-unit>div>a,
@@ -198,76 +257,48 @@ body {
     color: #000000;
 }
 
-#header-collapse {
-    position: fixed;
-    bottom: 20px;
-    left: 25px;
-    z-index: 2;
-    width: fit-content;
-    height: 30px;
-    border-radius: 10px;
-    border: solid 1px #dddddd;
-    background-color: #fff;
-    font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: normal;
-    font-size: 14px;
-    overflow: hidden;
-}
-
-#header-collapse-button {
-    height: 25px;
-    margin: 2.5px;
-    transition: all 0.2s;
-    line-height: 25px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 7.5px;
-}
-
-#header-collapse-button:hover {
-    background-color: #cacaca7a;
-}
-
-#header-collapse-button:active {
-    scale: 95%;
-    box-shadow: none;
-}
-
 .header {
-    width: 210px;
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 18px;
-    line-height: 30px;
-    padding-left: 0px;
-    margin-left: 30px;
-    border-right: solid 1px #cbcbcb;
+    width: 100%;
+    height: 24px;
+    font-weight: bold;
+    font-size: 15px !important;
+    margin-left: 0 !important;
+    display: none;
 }
 
 #quick-links {
-    width: 210px;
-    margin-left: 30px;
-    line-height: 25px;
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding-top: 10px;
-    border-right: solid 1px #cbcbcb;
-    white-space: wrap;
+    height: 50px;
+    width: calc(100vw - 150px);
+    padding: 0 !important;
+    padding-top: 12.5px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-right: none !important;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 #quick-links>b {
-    padding: 10px;
-    color: rgba(0, 0, 0, 0.5);
+    padding: unset;
+    padding-left: 10px;
+    font-size: 15px;
 }
 
 .quick-link {
-    padding: 10px;
-    padding-top: 0;
-    padding-bottom: 0;
-    width: fit-content;
-    display: block;
+    display: inline !important;
+    border-radius: 20px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid 1px gray;
+    transition: all 0.3s;
+    margin-right: 5px;
+    font-size: 15px;
 }
 
 #quick-link-1 {
-    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #dev-cal-1 {
@@ -408,31 +439,57 @@ nav {
     padding: 0 3px;
 }
 
-/* media query */
+/* media queries */
+
+@media (prefers-color-scheme: dark) {
+
+    #attic,
+    #back-to-top {
+        background-color: rgba(68, 68, 68, 0.5);
+        border: solid 1px #444;
+    }
+
+    .b-item,
+    .b-item-0,
+    .b-item-1,
+    .b-item-2,
+    #back-to-top {
+        color: #fff;
+    }
+
+    .b-item-1 {
+        border-bottom-color: rgba(145, 145, 145, 0.75);
+    }
+
+    .b-item-0 {
+        background-image: url(../img/home-button-dark.svg);
+    }
+
+    #b-close {
+        color: #eee;
+    }
+}
 
 @media (max-width: 768px) {
     html {
         scrollbar-color: unset !important;
     }
 
-    #door-3 {
-        display: none !important;
-    }
-
     #header-unit {
-        right: 0;
-        top: 50px;
+        left: 130px;
+        right: 0px;
+        top: 10px;
         display: unset;
         width: auto;
         margin-left: 10px;
         margin-right: 10px;
-        height: 69px;
+        height: 50px;
         border-radius: 10px;
-        background-color: rgba(245, 245, 245, 0.5);
+        background-color: rgba(238, 238, 238, 0.5);
+        border: solid 1px #eee;
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         -moz-backdrop-filter: blur(12px);
-        border: solid 1px #cbcbcb;
         z-index: 3;
     }
 
@@ -446,12 +503,14 @@ nav {
         font-weight: bold;
         font-size: 15px !important;
         margin-left: 0 !important;
+        display: none;
     }
 
     #quick-links {
-        height: 20px;
-        padding: 10px;
-        width: auto;
+        height: 50px;
+        width: calc(100vw - 150px);
+        padding: 0 !important;
+        padding-top: 12.5px !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
         border-right: none !important;
@@ -462,6 +521,7 @@ nav {
 
     #quick-links>b {
         padding: unset;
+        padding-left: 10px;
         font-size: 15px;
     }
 
@@ -501,46 +561,6 @@ nav {
     }
 }
 
-@media (max-width: 430px) {
-    #water-list {
-        grid-template-columns: 1fr !important;
-    }
-
-    #b-more #titleDisplay {
-        display: none !important;
-    }
-
-    #b-more b {
-        display: block;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-}
-
-@keyframes app-elements-fade-in {
-    0% {
-        color: transparent;
-        transform: translateX(20px);
-    }
-
-    100% {
-        color: #000;
-        transform: translateX(0px);
-    }
-}
-
-@keyframes app-elements-fade-in-dark {
-    0% {
-        color: transparent;
-        transform: translateX(10px);
-    }
-
-    100% {
-        color: #ffffff;
-        transform: translateX(0px);
-    }
-}
-
 @media (prefers-color-scheme: dark) {
     :root {
         background: black;
@@ -555,26 +575,6 @@ nav {
         color: #9AEBA3 !important;
     }
 
-    #basic {
-        background-image: linear-gradient(rgba(118, 118, 118, 0.5), rgba(0, 0, 0, 0)) !important;
-    }
-
-    #basic.active {
-        background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)) !important;
-    }
-
-    #b-info {
-        background-image: url(../img/home-button-dark.svg) !important;
-    }
-
-    #b-more {
-        color: rgba(255, 255, 255, 0.5) !important;
-    }
-
-    #cup {
-        background-color: rgba(118, 118, 118, 0.5) !important;
-    }
-
     #copyright-info {
         background-color: #3b3b3b8b;
     }
@@ -586,16 +586,12 @@ nav {
     #header-unit,
     #tool,
     #header-collapse {
-        background-color: #000 !important;
+        background-color: rgba(68, 68, 68, 0.5) !important;
+        border: solid 1px #444 !important;
     }
 
     #quick-links>b {
         color: rgba(255, 255, 255, 0.5) !important;
-    }
-
-    .header,
-    #quick-links {
-        border-right: solid 1px #707070 !important;
     }
 
     .loader-wrapper {
@@ -643,7 +639,7 @@ nav {
 
 /* Make the scrollbar appear on top of the content */
 html {
-    scrollbar-width: thin;
+    scrollbar-width: none;
     /* For Firefox */
     scrollbar-color: #888 transparent;
     /* For Firefox */

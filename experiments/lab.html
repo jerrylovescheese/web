@@ -5,247 +5,302 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <title>Experiments</title>
+    <title>Bienvenue</title>
     <script src="../static/js/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css">
     <script>
         $(function () {
-            $("#b-more").click(function () {
-                $("#cup").toggleClass("active");
-                $("#basic").toggleClass("active");
+            $("#b-close").click(function () {
+                $("#attic").toggleClass("collapse");
             });
+        });
+        // Ensure the DOM is fully loaded before running the script
+        $(document).ready(function () {
+            // Get the title of the document
+            var title = $(document).attr("title");
+            // Display the title inside an element with id 'titleDisplay'
+            $("#titleDisplay").text(title);
         });
     </script>
     <style>
-        @media (max-width: 430px) {
-            #water-list {
-                grid-template-columns: 1fr !important;
-            }
-        }
-
-        @media (prefers-color-scheme: dark) {
-            #basic {
-                background-image: linear-gradient(rgba(118, 118, 118, 0.5), rgba(0, 0, 0, 0)) !important;
-            }
-
-            #basic.active {
-                background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)) !important;
-            }
-
-            #b-info {
-                background-image: url(../static/img/home-button-dark.svg) !important;
-            }
-
-            #b-more {
-                color: rgba(255, 255, 255, 0.5) !important;
-            }
-
-            #cup {
-                background-color: rgba(118, 118, 118, 0.5) !important;
-            }
-        }
-
-        #basic {
-            width: 100vw;
-            height: 30px;
-            padding: 10px;
-            padding-left: 20px;
-            padding-right: 20px;
-            background-image: linear-gradient(rgba(238, 238, 238), rgba(238, 238, 238, 0));
+        #attic {
+            width: 250px;
+            height: calc(100vh - 20px);
             position: fixed;
-            top: 0;
-            left: 0;
+            left: 10px;
+            top: 10px;
+            border-radius: 15px;
+            background-color: rgba(238, 238, 238, 0.5);
+            backdrop-filter: blur(12px);
+            border: solid 1px #eee;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            transition: all 0.3s cubic-bezier(0, 1, 0, 1.03);
         }
 
-        #basic.active {
-            background-image: linear-gradient(rgb(225, 225, 225), rgba(238, 238, 238, 0));
+        #attic>a {
+            display: block;
+            width: 75px;
+            transition: all 0.2s;
+            margin-left: 5px;
+            border-radius: 10px;
         }
 
-        #b-info {
+        #attic>a:hover {
+            background-color: rgba(192, 192, 192, 0.50);
+        }
+
+        #attic.collapse>a {
+            border-radius: 5px;
+        }
+
+        .b-item a,
+        #back-to-top a {
+            color: unset;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+        }
+
+        #attic.collapse {
+            width: 120px;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        #attic-items {
+            overflow-x: hidden;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            padding-bottom: 5px;
+        }
+
+        .b-item {
+            width: calc(100% - 20px);
+            margin-left: 10px;
+            margin-top: 10px;
+            height: 18px;
+            padding-bottom: 5px;
+            color: rgba(0, 0, 0, 0.75);
+            transition: all 0.2s;
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .b-item-0 {
             height: 40px;
             aspect-ratio: 9/5;
-            background-size: cover;
-            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: bold;
-            transition: all 0.2s;
+            margin-top: 5px;
             background-image: url(../static/img/home-button-light.svg);
         }
 
-        #b-more {
-            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin-left: 20px;
-            font-weight: normal;
-            color: rgba(0, 0, 0, 0.5);
+        .b-item-1 {
+            width: calc(100% - 20px);
+            margin-left: 10px;
+            padding-bottom: 5px;
+            color: rgba(0, 0, 0, 0.75);
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-bottom: solid 1px #cfcfcf;
             transition: all 0.2s;
         }
 
-        #basic-text-container {
+        .b-item-2 {
+            width: calc(100% - 20px);
+            margin-left: 10px;
+            margin-top: 10px;
+            padding-bottom: 5px;
+            color: rgba(0, 0, 0, 0.75);
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        #attic.collapse .b-item,
+        #attic.collapse .b-item-1,
+        #attic.collapse .b-item-2 {
+            color: transparent;
+        }
+
+        #b-close {
+            width: 20px;
+            height: 20px;
+            background-color: rgba(213, 213, 213, 0.5);
+            border-radius: 20px;
+            position: absolute;
+            top: 15px;
+            right: 10px;
             display: flex;
-            justify-content: start;
+            justify-content: center;
             align-items: center;
-            transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
-            position: relative;
-            z-index: 1;
+            color: #919191;
+            transition: all 0.2s;
         }
 
-        #basic-text-container a {
-            color: unset;
-            text-decoration: none;
+        #b-close:hover {
+            padding: 5px;
+            top: 10px;
+            right: 5px;
+            background-color: rgba(192, 192, 192, 0.50);
         }
 
-        #basic:hover #basic-text-container {
+        .b-item:hover {
+            background-color: rgba(192, 192, 192, 0.50);
+            padding: 5px;
+            border-radius: 10px;
+            margin-left: 5px;
             margin-top: 5px;
         }
 
-        #basic:hover #b-info {
-            height: 44px;
-        }
-
-        #basic:hover #b-more {
-            font-size: 18px;
-        }
-
-        #cup {
-            width: 100vw;
+        #titleDisplay {
             display: block;
-            background-color: rgba(247, 247, 247, 0.5);
-            position: fixed;
-            top: 0;
-            left: 0;
-            overflow: hidden;
-            height: 0;
-            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-            overflow-x: hidden;
-            overflow-y: scroll;
-        }
-
-        #cup.active {
-            height: 100vh;
-        }
-
-        #water {
-            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin-top: 80px;
-            margin-left: 25px;
-            margin-right: 25px;
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-        }
-
-        #water a {
-            color: unset;
-            text-decoration: none;
-        }
-
-        #water-head {
-            font-size: 40px;
-            font-weight: lighter;
-        }
-
-        #water-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-
-        #water-list li {
-            margin-top: 5px;
+            padding-top: 10px;
+            font-weight: bold;
             font-size: 18px;
+        }
+
+        #back-to-top {
+            width: 20px;
+            height: 20px;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba(238, 238, 238, 0.5);
+            backdrop-filter: blur(12px);
+            border: solid 1px #eee;
+            border-radius: 5px;
+            color: #000;
+            transition: all 0.2s;
+        }
+
+        #back-button {
+            width: 20px;
+            height: 20px;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.1s;
+        }
+
+        #back-to-top:hover #back-button,
+        #back-to-top:hover {
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+            background-color: rgba(192, 192, 192, 0.50);
+        }
+
+        @media (prefers-color-scheme: dark) {
+
+            #attic,
+            #back-to-top {
+                background-color: rgba(68, 68, 68, 0.5);
+                border: solid 1px #444;
+            }
+
+            .b-item,
+            .b-item-0,
+            .b-item-1,
+            .b-item-2,
+            #back-to-top {
+                color: #fff;
+            }
+
+            .b-item-1 {
+                border-bottom-color: rgba(145, 145, 145, 0.75);
+            }
+
+            .b-item-0 {
+                background-image: url(../static/img/home-button-dark.svg);
+            }
+
+            #b-close {
+                color: #eee;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div id="basic">
-        <div id="basic-text-container">
-            <div id="b-info"></div>
-            <div id="b-more">more</div>
-            <div id="b-more"><a href="#">to top</a></div>
-            <div id="b-more"><a href="../pages/clock.html">clock</a></div>
-            <div id="b-more"><a href="../pages/aluminum_studio.html">about</a></div>
-        </div>
-        <div id="cup">
-            <div id="water">
-                <a href="../pages/apple.html">
-                    <span id="water-head">9:41</span>
+    <div id="attic">
+        <div id="b-close"><i class="fas fa-arrow-right"></i></div>
+        <a href="https://jerryly.top">
+            <div class="b-item-0"></div>
+        </a>
+        <div class="b-item-1"><span id="titleDisplay"></span></div>
+        <div id="attic-items">
+            <div class="b-item-2">things I love</div>
+            <div class="b-item">
+                <a href="../pages/apple.html">Apple</a>
+            </div>
+            <div class="b-item">
+                <a href="../pages/friends.html">Friends</a>
+            </div>
+            <div class="b-item">
+                <a href="../pages/music.html">Music</a>
+            </div>
+            <div class="b-item">
+                <a href="../pages/taylorswift.html">Swiftie</a>
+            </div>
+            <div class="b-item-2">festivity</div>
+            <div class="b-item">
+                <a href="../pages/christmas.html">Christmas</a>
+            </div>
+            <div class="b-item">
+                <a href="../pages/homemade_giftcard.html">Homemade Giftcard</a>
+            </div>
+            <div class="b-item-2">other stuff</div>
+            <div class="b-item">
+                <a href="../pages/aluminum_studio.html">About</a>
+            </div>
+            <div class="b-item">
+                <a href="https://blog.jerryly.top">
+                    Blog&emsp13;&emsp13;
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-                <ul id="water-list">
-                    <a href="../pages/develop.html">
-                        <li>Developer</li>
-                    </a>
-                    <a href="../pages/subpages/mac.html">
-                        <li>Mac</li>
-                    </a>
-                    <a href="../pages/subpages/iphone.html">
-                        <li>iPhone</li>
-                    </a>
-                    <a href="../pages/subpages/ipad.html">
-                        <li>iPad</li>
-                    </a>
-                    <a href="../pages/subpages/dubdub.html">
-                        <li>WWDC</li>
-                    </a>
-                </ul>
-                <a href="../pages/music.html">
-                    <span id="water-head">music</span>
-                </a>
-                <ul id="water-list">
-                    <a href="../pages/taylorswift.html">
-                        <li>Taylor Swift</li>
-                    </a>
-                    <a href="../pages/subpages/1989tv.html">
-                        <li>1989 (Taylor's Version)</li>
-                    </a>
-                    <a href="../pages/subpages/lover.html">
-                        <li>Lover</li>
-                    </a>
-                    <a href="../pages/subpages/midnights.html">
-                        <li>Midnights</li>
-                    </a>
-                    <a href="../pages/subpages/ttpd.html">
-                        <li>The Tortured Poets Department</li>
-                    </a>
-                </ul>
-                <span id="water-head">other stuff</span>
-                <ul id="water-list">
-                    <a href="../pages/aluminum_studio.html">
-                        <li>About</li>
-                    </a>
-                    <a href="../pages/blog_preview.html">
-                        <li>Blog</li>
-                    </a>
-                    <a href="../pages/christmas.html">
-                        <li>Christmas (closed for now)</li>
-                    </a>
-                    <a href="../pages/classical_ch_sh.html">
-                        <li>部编版高中语文古文合集</li>
-                    </a>
-                    <a href="../pages/classical_ch.html">
-                        <li>部编版初中语文古文合集</li>
-                    </a>
-                    <a href="../pages/clock.html">
-                        <li>Clock</li>
-                    </a>
-                    <a href="../pages/contact.html">
-                        <li>Contact</li>
-                    </a>
-                    <a href="../pages/friends.html">
-                        <li><i>Friends</i></li>
-                    </a>
-                    <a href="../pages/gallery.html">
-                        <li>Gallery</li>
-                    </a>
-                    <a href="../pages/noticeboard.html">
-                        <li>Noticeboard</li>
-                    </a>
-                    <a href="../pages/search.html">
-                        <li>Search (deprecated)</li>
-                    </a>
-                    <a href="../pages/survey.html">
-                        <li>Survey</li>
-                    </a>
-                </ul>
+            </div>
+            <div class="b-item">
+                <a href="../pages/classical_ch_sh.html">Classical Chinese for Senior High</a>
+            </div>
+            <div class="b-item">
+                <a href="../pages/classical_ch.html">Classical Chinese for Junior High</a>
+            </div>
+            <div class="b-item">
+                <a href="../pages/clock.html">Clock</a>
+            </div>
+            <div class="b-item">
+                <a href="../pages/contact.html">Contact</a>
+            </div>
+            <div class="b-item">
+                <a href="../pages/develop.html">Develop</a>
+            </div>
+            <div class="b-item">
+                <a href="../pages/flashback.html">Rainbow Room</a>
+            </div>
+            <div class="b-item">
+                <a href="../pages/gallery.html">Gallery</a>
+            </div>
+            <div class="b-item">
+                <a href="../pages/noticeboard.html">Noticeboard</a>
+            </div>
+            <div class="b-item">
+                <a href="../pages/search.html">Search (deprecated)</a>
+            </div>
+            <div class="b-item">
+                <a href="../pages/survey.html">Survey</a>
             </div>
         </div>
+    </div>
+    <div id="back-to-top">
+        <a href="#">
+            <div id="back-button">
+                <i class="fas fa-arrow-up"></i>
+            </div>
+        </a>
     </div>
 </body>
 
