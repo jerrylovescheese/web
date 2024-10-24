@@ -897,12 +897,15 @@
     background-size: cover;
 }
 
-#canvas-6-text {
-    font-family: 'Courier Prime', monospace;
+#canvas-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#canvas-6-text>span {
-    background-color: rgba(127, 255, 212, 0.5);
+#canvas-6-text {
+    font-family: 'Courier Prime', monospace;
+    font-size: 30px;
 }
 
 #namecard {
