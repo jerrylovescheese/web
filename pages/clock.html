@@ -82,19 +82,6 @@
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <style>
-        body {
-            margin: 0;
-            /* width: 100%;
-            height: auto;
-            background-image: linear-gradient(225deg, rgba(161, 0, 150, 0.5), rgba(207, 0, 59), rgba(255, 192, 203, 0.5));
-            position: absolute; */
-        }
-
-        #bar-wrapper {
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-        }
-
         @media (max-width: 425px) {
 
             #dev-cal-1,
@@ -127,33 +114,105 @@
             font-weight: 300 1000;
         }
 
-        #basic {
-            background-image: none;
-        }
-
-        #b-info {
-            background-image: url(../static/img/home-button-dark.svg);
-        }
-
-        #b-more {
-            color: white;
-        }
-
-        .b-style {
-            color: #222;
-        }
-
-        #header-collapse {
-            display: none;
-        }
-
-        #clock-plate {
-            background-color: #222;
+        .clock-plate {
             width: 100vw;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+        }
+
+        #clock-plate-2 {
+            background-color: #222;
+
+        }
+
+        #digital-clock-real {
+            width: 45vw;
+            aspect-ratio: 1/1;
+            background-image: url(../static/img/clock-bg.webp);
+            background-position: center;
+            background-size: 120%;
+            border-radius: 10px;
+        }
+
+        .clock {
+            width: 45vw;
+            aspect-ratio: 1/1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .clock::before {
+            content: "";
+            position: absolute;
+            width: 1.5vw;
+            height: 1.5vw;
+            background-color: rgb(0, 0, 0);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .hour,
+        .min,
+        .sec {
+            position: absolute;
+        }
+
+        .hour,
+        .hr {
+            width: 15vw;
+            height: 15vw;
+        }
+
+        .min,
+        .mn {
+            width: 17.81vw;
+            height: 17.81vw;
+        }
+
+        .sec,
+        .sc {
+            width: 21.56vw;
+            height: 21.56vw;
+        }
+
+        .hr,
+        .mn,
+        .sc {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+        }
+
+        .hr::before {
+            content: "";
+            position: absolute;
+            width: 1.05vw;
+            height: 7.5vw;
+            background-color: #000000;
+            z-index: 2;
+        }
+
+        .mn::before {
+            content: "";
+            position: absolute;
+            width: 0.75vw;
+            height: 9vw;
+            background-color: #000000;
+            z-index: 3;
+        }
+
+        .sc::before {
+            content: "";
+            position: absolute;
+            width: 0.6vw;
+            height: 10.5vw;
+            background-color: #000000;
+            z-index: 4;
         }
 
         #digital-clock-big {
@@ -173,21 +232,37 @@
 
         #toggleFullscreenBtn {
             position: absolute;
-            top: 110px;
-            right: 30px;
+            bottom: 40px;
+            right: 10px;
             padding: 8px;
-            border-radius: 10px;
+            border-radius: 5px;
             transition: all 0.2s;
             font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-weight: bold;
             transition: all 0.2s;
-            background-color: #4949499d;
-            border: solid 1px #ffffff00;
-            color: #fff;
+            background-color: rgba(238, 238, 238, 0.75);
+            border: solid 1px #eee;
+            font-size: 14px;
         }
 
-        #toggleFullscreenBtn:hover {
-            background-color: #6f6f6f;
+        #clock-clicker {
+            position: absolute;
+            bottom: 86px;
+            right: 10px;
+            padding: 8px;
+            border-radius: 5px;
+            transition: all 0.2s;
+            font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.2s;
+            background-color: rgba(238, 238, 238, 0.75);
+            border: solid 1px #eee;
+        }
+
+        #toggleFullscreenBtn:hover,
+        #clock-clicker:hover {
+            background-color: rgba(204, 204, 204, 0.75);
         }
     </style>
 </head>
@@ -198,11 +273,37 @@
         <i class="fa-solid fa-spinner fa-spin"></i>&emsp;<span id="loader-prompt">Preparing elements.</span>
     </div>
 
-    <div id="clock-plate">
+    <div class="clock-plate" id="clock-plate-1">
+        <div id="digital-clock-real">
+            <div class="clock">
+                <div class="hour">
+                    <div class="hr" id="hr"></div>
+                </div>
+                <div class="min">
+                    <div class="mn" id="mn"></div>
+                </div>
+                <div class="sec">
+                    <div class="sc" id="sc"></div>
+                </div>
+            </div>
+        </div>
+        <a href="#clock-plate-2">
+            <div id="clock-clicker">
+                <i class="fas fa-arrow-down"></i>&emsp;切换到数字时钟
+            </div>
+        </a>
+    </div>
+
+    <div class="clock-plate" id="clock-plate-2">
         <div id="digital-clock-big">
             <span id="datetime"></span>
             <div id="digital-clock"></div>
         </div>
+        <a href="#clock-plate-1">
+            <div id="clock-clicker">
+                <i class="fas fa-arrow-up"></i>&emsp;切换到模拟时钟
+            </div>
+        </a>
     </div>
 
     <button id="toggleFullscreenBtn">
@@ -307,6 +408,7 @@
             }
         });
     </script>
+    <script src="../static/js/clock-script.js"></script>
 </body>
 
 </html>
