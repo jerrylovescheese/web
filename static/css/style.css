@@ -446,12 +446,18 @@ nav {
         border: solid 1px #444;
     }
 
+    #attic.collapse .b-item,
+    #attic.collapse .b-item-1,
+    #attic.collapse .b-item-2 {
+        color: rgba(255, 255, 255, 0.75) !important;
+    }
+
     .b-item,
     .b-item-0,
     .b-item-1,
     .b-item-2,
     #back-to-top {
-        color: #fff;
+        color: transparent;
     }
 
     .b-item-1 {
@@ -592,7 +598,8 @@ nav {
     }
 
     .loader-wrapper {
-        background-color: #141414af !important;
+        background-color: #4d4d4d !important;
+        color: white !important;
     }
 
     #en-warn,
