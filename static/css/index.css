@@ -544,7 +544,7 @@
     background-color: rgb(230, 230, 230);
     background-image: url(../img/clock-bg.webp);
     background-position: center;
-    background-size: 145%;
+    background-size: 255%;
     border-radius: 270px;
     display: flex;
     justify-content: center;
