@@ -114,6 +114,21 @@
             font-weight: 300 1000;
         }
 
+        @media (prefers-color-scheme: dark) {
+
+            #clock-clicker,
+            #toggleFullscreenBtn {
+                background-color: rgba(68, 68, 68, 0.85) !important;
+                border: solid 1px #444 !important;
+                color: white !important;
+            }
+
+            #toggleFullscreenBtn:hover,
+            #clock-clicker:hover {
+                background-color: rgba(204, 204, 204, 0.75) !important;
+            }
+        }
+
         .clock-plate {
             width: 100vw;
             height: 100vh;
@@ -289,7 +304,7 @@
         </div>
         <a href="#clock-plate-2">
             <div id="clock-clicker">
-                <i class="fas fa-arrow-down"></i>&emsp;切换到数字时钟
+                <i class="fas fa-arrow-down"></i>&emsp;切换到数字时钟 Digital
             </div>
         </a>
     </div>
@@ -301,7 +316,7 @@
         </div>
         <a href="#clock-plate-1">
             <div id="clock-clicker">
-                <i class="fas fa-arrow-up"></i>&emsp;切换到模拟时钟
+                <i class="fas fa-arrow-up"></i>&emsp;切换到模拟时钟 Analog
             </div>
         </a>
     </div>
