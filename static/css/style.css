@@ -446,6 +446,10 @@ nav {
         border: solid 1px #444;
     }
 
+    #back-to-top {
+        color: #fff !important;
+    }
+
     #attic.collapse .b-item,
     #attic.collapse .b-item-1,
     #attic.collapse .b-item-2 {
