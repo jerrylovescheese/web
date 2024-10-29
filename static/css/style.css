@@ -577,6 +577,23 @@ nav {
 
 /* special elements style */
 
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    border-radius: 10px;
+    background: rgba(224, 224, 224, 0.8);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #f1f1f100;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #888;
+}
+
 /* Make the scrollbar appear on top of the content */
 html {
     scrollbar-width: none;
