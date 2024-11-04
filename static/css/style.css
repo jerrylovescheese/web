@@ -609,6 +609,7 @@ body {
 
 /* WebKit browsers: Scrollbar customization */
 ::-webkit-scrollbar {
+    display: none;
     width: 8px;
     /* Make it thin */
     height: 0px;
