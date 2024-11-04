@@ -347,6 +347,10 @@
     #canvas-2-inbox-3 {
         color: hsl(82, 100%, 37%) !important;
     }
+
+    #canvas-8 {
+        background-color: #fff !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -998,7 +1002,7 @@
     box-shadow: none;
 }
 
-#canvas-7{
+#canvas-7 {
     background-image: url(../img/IMG_7511.webp);
 }
 
@@ -1012,4 +1016,16 @@
     width: 100%;
     text-align: center;
     font-size: 20px;
+}
+
+#canvas-8 {
+    background-color: black !important;
+}
+
+#canvas-8 iframe {
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    border-radius: 10px;
+    border: solid 1px #eee;
 }
