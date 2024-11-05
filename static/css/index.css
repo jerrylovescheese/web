@@ -1032,7 +1032,7 @@
 }
 
 #canvas-8 {
-    background-color: #164FD7 !important;
+    background-image: linear-gradient(#164FD7, white 20%);
 }
 
 #canvas-8 .canvas-text {
@@ -1042,10 +1042,10 @@
 
 #canvas-8 .canvas-text,
 #canvas-8 .canvas-text-small {
-    width: 100%;
+    width: calc(100% - 60px);
     text-align: center;
     font-family: 'Libre Franklin', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #fff;
+    padding-left: 0px;
 }
 
 #canvas-8 .canvas-text-small {
