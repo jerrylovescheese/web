@@ -218,6 +218,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
+    .canvas {
+        border-bottom-color: #333 !important;
+    }
+
     @media (max-width: 768px) {
         .textbgc {
             margin-bottom: 20px;
@@ -429,6 +433,11 @@
 
     #n-marquee-2 {
         margin-right: 30px;
+    }
+
+    #canvas-7-text,
+    #canvas-7>.canvas-text-small {
+        margin-left: 0 !important;
     }
 }
 
@@ -656,6 +665,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    border-bottom: solid 1px #eee;
 }
 
 .canvas-text {
@@ -1018,16 +1028,30 @@
     text-align: center;
     font-size: 20px;
     padding-left: 0px;
+    color: #fff;
 }
 
 #canvas-8 {
-    background-color: black !important;
+    background-color: #164FD7 !important;
 }
 
-#canvas-8 iframe {
-    width: 80%;
-    height: 80%;
-    margin-left: 10%;
-    border-radius: 10px;
-    border: solid 1px #eee;
+#canvas-8 .canvas-text {
+    font-weight: bold;
+    font-size: 60px;
+}
+
+#canvas-8 .canvas-text,
+#canvas-8 .canvas-text-small {
+    width: 100%;
+    text-align: center;
+    font-family: 'Libre Franklin', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+}
+
+#canvas-8 .canvas-text-small {
+    font-size: 30px;
+}
+
+#canvas-8 a {
+    color: unset;
 }
