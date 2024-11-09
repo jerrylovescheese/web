@@ -455,6 +455,16 @@
     #canvas-8 button {
         margin-left: 30px !important;
     }
+
+    #namecard {
+        top: 70px !important;
+        left: 0px !important;
+    }
+
+    .n-marquee {
+        height: unset;
+        padding: 10px;
+    }
 }
 
 @media (max-height: 430px) {
@@ -469,8 +479,7 @@
     }
 
     #n-marquee-2 {
-        margin-left: 30px;
-        margin-right: 30px;
+        margin-right: 10px !important;
     }
 }
 
