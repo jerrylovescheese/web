@@ -41,7 +41,7 @@ body {
     width: 75px;
     transition: all 0.2s;
     margin-left: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 #attic>a:hover {
@@ -49,7 +49,7 @@ body {
 }
 
 #attic.collapse>a {
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .b-item a,

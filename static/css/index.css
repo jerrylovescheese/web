@@ -219,7 +219,7 @@
 
 @media (prefers-color-scheme: dark) {
     .canvas {
-        border-bottom-color: #333 !important;
+        border-color: #333 !important;
     }
 
     @media (max-width: 768px) {
@@ -383,10 +383,6 @@
 }
 
 @media (max-width: 768px) {
-    #canvas-1 {
-        height: fit-content;
-    }
-
     .canvas-text {
         padding-top: 60px;
         padding-left: 0 !important;
@@ -674,8 +670,8 @@
 }
 
 .canvas {
-    width: 100vw;
-    height: 100vh;
+    width: calc(100vw - 60px);
+    height: 80vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -685,7 +681,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    border-bottom: solid 1px #eee;
+    border-radius: 20px;
+    border: solid 1px #eee;
+    margin-bottom: 30px;
+    margin-left: 30px;
 }
 
 .canvas-text {
@@ -744,6 +743,10 @@
     padding-left: 10px;
     padding-right: 10px;
     height: 25px;
+}
+
+#canvas-1 {
+    height: fit-content;
 }
 
 #canvas-2 {
@@ -970,8 +973,8 @@
 
 #namecard {
     position: absolute;
-    top: 70px;
-    left: 0;
+    top: 10px;
+    left: 130px;
     right: 0;
     display: flex;
     justify-content: start;
@@ -979,10 +982,10 @@
 
 .n-marquee {
     width: fit-content;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 10px;
@@ -990,7 +993,7 @@
     backdrop-filter: blur(12px);
     border: solid 1px #eee;
     font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     transition: all 0.2s;
     overflow: hidden;
     margin-left: 10px;
@@ -1053,6 +1056,9 @@
 
 #canvas-8 {
     background-color: unset !important;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
 }
 
 #canvas-8 .canvas-text {
@@ -1071,22 +1077,4 @@
 #canvas-8 .canvas-text-small {
     margin-top: 5px;
     font-size: 20px;
-}
-
-#canvas-8 button {
-    margin-left: 60px;
-    margin-top: 10px;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    background-color: black;
-    border-radius: 8px;
-    border: solid 2px black;
-    color: #fff;
-    transition: all 0.2s;
-}
-
-#canvas-8 button:hover {
-    background-color: transparent;
-    color: black;
 }
