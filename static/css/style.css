@@ -233,7 +233,7 @@ body {
     position: fixed;
     left: 130px;
     top: 10px;
-    width: auto;
+    max-width: calc(100% - 150px);
     margin-left: 10px;
     margin-right: 10px;
     height: 50px;
@@ -264,7 +264,6 @@ body {
 
 #quick-links {
     height: 50px;
-    width: fit-content;
     margin-left: 0;
     margin-right: 0;
     border-right: none;
@@ -278,6 +277,7 @@ body {
 }
 
 #quick-links>b {
+    display: none;
     padding: unset;
     padding-left: 10px;
     font-size: 15px;
@@ -287,17 +287,45 @@ body {
     display: inline;
     height: 30px;
     display: flex;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     justify-content: center;
     align-items: center;
     border-left: solid 1px #ddd;
-    transition: all 0.3s;
+    transition: all 0.2s;
     font-size: 15px;
+}
+
+.quick-link:hover {
+    height: 50px;
+    background-color: #fff;
 }
 
 #quick-link-1 {
     margin-left: 10px;
+}
+
+/* Scrollable content container */
+.content {
+    height: 200vh;
+    /* Makes the page taller than the viewport for scrolling */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    /* Adjust height as needed */
+    width: 0%;
+    background-color: #ffffffca;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* Color of the scroll indicator */
+    z-index: -1;
 }
 
 #dev-cal-1 {
@@ -495,6 +523,14 @@ nav {
 
     #outside-glass {
         width: 100vw !important;
+    }
+
+    #header-unit {
+        right: 0px !important;
+    }
+
+    #quick-links {
+        width: unset !important;
     }
 
     @media (prefers-color-scheme: dark) {
