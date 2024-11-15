@@ -578,6 +578,10 @@ nav {
         color: rgba(255, 255, 255, 0.5) !important;
     }
 
+    .scroll-indicator {
+        background-color: #808080ca !important;
+    }
+
     .loader-wrapper {
         background-color: #4d4d4d !important;
         color: white !important;
