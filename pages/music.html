@@ -36,6 +36,10 @@
             td {
                 border-bottom-color: white !important;
             }
+
+            #music-image-1 {
+                border-color: #333;
+            }
         }
 
         #dev-cal-1 {
@@ -66,20 +70,16 @@
             z-index: -1;
         }
 
-        .pages-container {
-            color: white;
-        }
-
         table#dev-cal-2 {
-            border-top: solid 1px rgb(255, 255, 255);
-            border-bottom: solid 1px rgb(255, 255, 255);
+            border-top: solid 1px black;
+            border-bottom: solid 1px black;
             width: 100%;
             overflow: scroll;
         }
 
         table#dev-cal-2 th,
         td {
-            border-bottom: solid 1px rgb(255, 255, 255);
+            border-bottom: solid 1px black;
             padding: 5px;
             padding-right: 30px;
         }
@@ -135,9 +135,9 @@
             fill: rgb(178, 192, 192);
         }
 
-        #music-emp {
+        /* #music-emp {
             color: rgb(183, 222, 222);
-        }
+        } */
 
         #music-clicker {
             position: absolute;
@@ -147,6 +147,23 @@
                 0 2px 2px rgba(0, 0, 0, 0.11),
                 0 4px 4px rgba(0, 0, 0, 0.11),
                 0 8px 8px rgba(0, 0, 0, 0.11);
+        }
+
+        #music-image-c{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        #music-image-1 {
+            width: 300px;
+            background-image: url(../static/img/IMG_8106.jpg);
+            background-size: contain;
+            aspect-ratio: 1179/1852;
+            border-radius: 10px;
+            border: solid 1px #eee;
         }
     </style>
 </head>
@@ -158,7 +175,7 @@
     </div>
 
     <div id="content-unit">
-        <div id="music-light"></div>
+        <!-- <div id="music-light"></div>
         <div id="music-lyric-dis">
             <div id="music-lyrics">
                 <div class="music-lyric" id="music-lyric-1">
@@ -259,6 +276,9 @@
                 666 with a princess streak
                 I'm everywhere, I'm so Julia
             </div>
+        </div> -->
+        <div id="music-image-c">
+            <div id="music-image-1"></div>
         </div>
         <div class="pages-container">
             <p id="dev-cal-2">Page contains a log of the songs I'm currently listening to</p>

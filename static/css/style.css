@@ -232,7 +232,6 @@ body {
 #header-unit {
     position: fixed;
     left: 130px;
-    right: 0px;
     top: 10px;
     width: auto;
     margin-left: 10px;
@@ -255,7 +254,7 @@ body {
 }
 
 .header {
-    width: 100%;
+    width: fit-content;
     height: 24px;
     font-weight: bold;
     font-size: 15px;
@@ -265,7 +264,7 @@ body {
 
 #quick-links {
     height: 50px;
-    width: calc(100vw - 150px);
+    width: fit-content;
     margin-left: 0;
     margin-right: 0;
     border-right: none;
@@ -286,13 +285,14 @@ body {
 
 .quick-link {
     display: inline;
-    border-radius: 20px;
-    padding: 5px;
+    height: 30px;
+    display: flex;
     padding-left: 10px;
     padding-right: 10px;
-    border: solid 1px gray;
+    justify-content: center;
+    align-items: center;
+    border-left: solid 1px #ddd;
     transition: all 0.3s;
-    margin-right: 5px;
     font-size: 15px;
 }
 
@@ -532,6 +532,10 @@ nav {
     #header-collapse {
         background-color: rgba(68, 68, 68, 0.85) !important;
         border: solid 1px #444 !important;
+    }
+
+    .quick-link {
+        border-left-color: #555;
     }
 
     #quick-links>b {
