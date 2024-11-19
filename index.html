@@ -9,17 +9,15 @@
     <meta name="theme-color" content="#EEEEEE" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#333333" media="(prefers-color-scheme: dark)">
     <title>欢迎</title>
-    <link rel="stylesheet" href="./static/css/style.css">
-    <link rel="stylesheet" href="./static/fontawesome/css/all.css">
-    <script src="./static/js/jquery-3.7.1.js"></script>
     <script src="./static/js/include.js"></script>
+    <script src="./static/js/jquery-3.7.1.js"></script>
     <script type="text/javascript">
         (function show() {
             //1.设置目的时间
             var oYear = 2024
-            var oMonth = 8
-            var oDay = 16
-            var oHour = 12
+            var oMonth = 10
+            var oDay = 28
+            var oHour = 0
             var oMinute = 0
             var oSecond = 0
             var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
@@ -65,15 +63,15 @@
     </script>
     <script src="./static/js/loader.js"></script>
     <script src="./static/js/scroll.js"></script>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/fontawesome/css/all.css">
     <link rel="shortcut icon" href="./Aug-18-2023-Favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./static/css/index.css">
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/libre-franklin" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charter-webfont@4/charter.min.css" />
@@ -111,6 +109,28 @@
             </div>
         </div>
     </a>
+
+    <div class="canvas" id="canvas-9">
+        <div class="canvas-text" id="canvas-9-text">
+            It's <span>almost</span> time!
+        </div>
+        <div class="canvas-text-small" id="canvas-9-text-small">
+            Thanksgiving is in
+        </div>
+        <div id="remainTime">
+            <div id="one"></div> days
+            <div id="two"></div> hours
+            <div id="three"></div> minutes
+            <div id="four"></div> seconds
+        </div>
+        <a href="./pages/christmas.html" id="canvas-9-text-small">Get in the Christmas spirit <i
+                class="fas fa-arrow-right"></i></a>
+        <a href="#canvas-8">
+            <div id="canvas-clicker">
+                <i class="fas fa-arrow-down"></i>&emsp13;Next page
+            </div>
+        </a>
+    </div>
 
     <div class="canvas" id="canvas-8">
         <blockquote class="twitter-tweet">
@@ -260,7 +280,7 @@
                 Jerry, Sep 1 2024
             </p>
         </div>
-        <a href="#canvas-8">
+        <a href="#canvas-9">
             <div id="canvas-clicker">
                 <i class="fas fa-arrow-up"></i>&emsp13;Return to top
             </div>
