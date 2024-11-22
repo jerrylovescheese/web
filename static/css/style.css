@@ -298,7 +298,8 @@ body {
 
 .quick-link:hover {
     height: 50px;
-    background-color: #fff;
+    background-color: #ffffff;
+    border-radius: 10px;
 }
 
 #quick-link-1 {
@@ -576,6 +577,10 @@ nav {
 
     #quick-links>b {
         color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .quick-link:hover {
+        background-color: #727272 !important;
     }
 
     .scroll-indicator {
