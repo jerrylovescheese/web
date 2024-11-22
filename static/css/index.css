@@ -474,7 +474,7 @@
         display: none;
     }
 
-    #remainTime{
+    #remainTime {
         width: calc(100% - 60px) !important;
         margin-left: 30px;
     }
@@ -1149,4 +1149,15 @@
 
 #canvas-9-text span {
     text-decoration: line-through;
+}
+
+#canvas-10 {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    border-radius: 0px;
+    border: none;
+    background-image: url(../img/Nov\ 20\ 2024\ 2.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
