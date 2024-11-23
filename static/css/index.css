@@ -1015,7 +1015,7 @@
     margin-left: 10px;
 }
 
-.n-marquee:hover {
+.n-marquee:focus-within {
     width: fit-content;
     padding-left: 15px;
     padding-right: 15px;
@@ -1035,7 +1035,7 @@
     margin-bottom: 18px;
 }
 
-.n-marquee:hover i {
+.n-marquee:focus-within i {
     margin-left: unset;
     margin-top: unset;
     margin-bottom: unset;
@@ -1160,4 +1160,8 @@
     background-image: url(../img/Nov\ 20\ 2024\ 2.webp);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+#canvas-10 > div{
+    color: white !important;
 }
