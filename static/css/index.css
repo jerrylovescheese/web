@@ -218,7 +218,9 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .canvas {
+
+    .canvas,
+    .cards {
         border-color: #333 !important;
     }
 
@@ -705,6 +707,32 @@
     margin-left: 30px;
 }
 
+#cards-carousel {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-top: 30px;
+    width: calc(100% - 30px);
+}
+
+.cards {
+    width: calc(50vh - 60px);
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border-radius: 10px;
+    border: solid 1px #eee;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
 .canvas-text {
     font-family: 'Monaspace Neon', 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 25px;
@@ -1095,7 +1123,6 @@
     background-color: unset !important;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
 }
 
 #canvas-8 .canvas-text {
@@ -1152,16 +1179,11 @@
 }
 
 #canvas-10 {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    border-radius: 0px;
-    border: none;
     background-image: url(../img/Nov\ 20\ 2024\ 2.webp);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-#canvas-10 > div{
+#canvas-10>div {
     color: white !important;
 }
