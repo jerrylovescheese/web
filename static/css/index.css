@@ -706,6 +706,23 @@
     margin-left: 10px;
 }
 
+#christmas-ornament {
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    right: 20px;
+    top: 0;
+    background-image: url(../img/imgbin_christmas-ornament-christmas-decoration-christmas-lights-png.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.2s;
+    z-index: 1;
+}
+
+#christmas-ornament:hover {
+    transform: translateY(-10px);
+}
+
 #cards {
     overflow-x: scroll;
     overflow-y: hidden;
@@ -740,11 +757,11 @@
     transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.cards:hover{
+.cards:hover {
     background-size: 120%;
 }
 
-#canvas-5{
+#canvas-5 {
     margin-right: 0;
 }
 
