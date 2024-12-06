@@ -1235,3 +1235,18 @@
 #canvas-10>div {
     color: white !important;
 }
+
+/* 157, 121, 103 */
+
+#canvas-11 {
+    background-color: rgb(157, 121, 103);
+    border: none;
+    border-radius: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
