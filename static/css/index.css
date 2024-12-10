@@ -164,6 +164,20 @@
     src: local('Space Grotesk'), url('../fonts/SpaceGrotesk[wght].woff2') format('woff2');
 }
 
+@font-face {
+    font-family: 'Computer Modern Serif';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/CMU\ Serif\ Roman.woff2);
+}
+
+@font-face {
+    font-family: 'Computer Modern Serif';
+    font-style: italic;
+    font-weight: normal;
+    src: url(../fonts/CMU\ Serif\ Italic.woff2);
+}
+
 .courier-prime-regular {
     font-family: "Courier Prime", monospace;
     font-weight: 400;
@@ -1239,7 +1253,8 @@
 /* 157, 121, 103 */
 
 #canvas-11 {
-    background-color: rgb(157, 121, 103);
+    background-image: radial-gradient(circle at bottom left, #9D7967, #9E7168, #814245);
+    background-size: 100% 190%;
     border: none;
     border-radius: 0;
     width: 100vw;
@@ -1249,4 +1264,30 @@
     justify-content: center;
     align-items: center;
     color: white;
+    animation: animateBg 3s infinite alternate-reverse ease-in-out;
+}
+
+#canvas-11-text {
+    font-family: "Computer Modern Serif", serif;
+    font-style: italic;
+}
+
+#gradient-animation {
+    background-image: linear-gradient(150deg, #FCC3A6, #9D7967, #523F36);
+    background-size: 100% 200%;
+    height: 200px;
+    width: 200px;
+    margin-top: 1em;
+    border-radius: 10px;
+    animation: animateBg 6s infinite alternate linear;
+}
+
+@keyframes animateBg {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 100%;
+    }
 }
