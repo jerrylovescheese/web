@@ -495,15 +495,16 @@
 @media (max-width: 430px) {
 
     #remainTime {
-        width: calc(100% - 60px) !important;
+        width: 100%;
     }
 
-    /* #one,
+    #one,
     #two,
     #three,
     #four {
-        margin-bottom: 5px;
-    } */
+        font-size: 50px !important;
+        line-height: 40px !important;
+    }
 
     #n-marquee-1 {
         display: none;
@@ -559,24 +560,34 @@
 }
 
 #remainTime {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     font-size: 18px;
-    word-break: break-all;
-    width: calc(100% - 30px);
-    padding-left: 30px;
-    text-align: left;
-    font-family: 'Space Mono', Courier, monospace;
     color: rgb(255, 255, 255);
+}
+
+#days,
+#hours,
+#minutes,
+#seconds {
+    line-height: 70px;
+}
+
+#days,
+#hours,
+#minutes {
+    margin-right: 30px;
 }
 
 #one,
 #two,
 #three,
 #four {
-    display: inline-block;
+    white-space: space-evenly;
     border-radius: 10px;
     text-align: center;
-    font-family: 'Space Mono', Courier, monospace;
-    font-size: 18px;
+    font-size: 100px;
     color: rgb(255, 255, 255);
 }
 
@@ -1282,8 +1293,14 @@
 }
 
 #canvas-11-text {
-    font-family: "Computer Modern Serif", serif;
-    font-style: italic;
+    font-family: "Space Mono", 'Source Han Sans', monospace;
+    font-style: normal;
+    font-size: 18px;
+}
+
+#canvas-11-text>div {
+    padding-top: 10px;
+    text-align: center;
 }
 
 #gradient-animation {
