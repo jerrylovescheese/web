@@ -232,6 +232,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
+    #attic.collapse {
+        background-color: rgba(68, 68, 68, 0.85) !important;
+        border: solid 1px #444 !important;
+    }
 
     .canvas,
     .cards {
@@ -542,6 +546,16 @@
         color: #ffffff;
         transform: translateY(0px);
     }
+}
+
+#attic {
+    background-color: transparent;
+    border: none;
+}
+
+#attic.collapse {
+    background-color: rgba(238, 238, 238, 0.85);
+    border: solid 1px #eee;
 }
 
 #remainTime {
