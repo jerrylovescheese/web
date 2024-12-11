@@ -134,6 +134,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #919191;
+    transform: rotateZ(45deg);
     transition: all 0.2s cubic-bezier(0, 1, 0.5, 1.25);
 }
 
