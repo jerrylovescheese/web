@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>folklore</title>
+    <script src="../../static/js/include.js"></script>
+    <script src="../../static/js/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="../../static/js/search.js"></script>
+    <script src="../../static/js/progress.js"></script>
+    <script src="../../static/js/loader.js"></script>
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/fontawesome/css/all.css">
+    <link rel="shortcut icon" href="../../Aug-18-2023-Favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        #dev-cal-1,
+        #dev-cal-2 {
+            font-family: 'IM Fell DW Pica', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #dev-cal-1 {
+            font-style: italic;
+        }
+
+        #folklore-lights {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-image: linear-gradient(rgba(169, 169, 169, 0.75), white 30%);
+        }
+    </style>
+</head>
+
+<body>
+    <include src="../../layout/layout_for_subpages.html"></include>
+    <div class="loader-wrapper">
+        <i class="fa-solid fa-spinner fa-spin"></i>&emsp;<span id="loader-prompt">Preparing elements.</span>
+    </div>
+
+    <div id="header-unit">
+        <div class="header">&emsp;<a href=""><i class="fas fa-chevron-left"></i>&emsp14;&emsp14;&emsp14;返回上一页</a>
+        </div>
+
+        <div id="quick-links">
+            <b>ON THIS PAGE:</b>
+            <span id="quick-link-1" class="quick-link"><a href="#title-0">the 1</a></span>
+            <span id="quick-link-2" class="quick-link"><a href="#title-1">cardigan</a></span>
+            <span id="quick-link-3" class="quick-link"><a href="#title-2">the last great american dynasty</a></span>
+            <span id="quick-link-4" class="quick-link"><a href="#title-3">exile (feat. Bon Iver)</a></span>
+            <span id="quick-link-5" class="quick-link"><a href="#title-4">my tears ricochet</a></span>
+            <span id="quick-link-6" class="quick-link"><a href="#title-5">mirrorball</a></span>
+        </div>
+        <div class="scroll-indicator"></div>
+    </div>
+
+    <div id="content-unit">
+        <p id="dev-cal-1">folklore</p>
+        <p id="update">这个页面上一次更新于2024年12月13日<br><br></p>
+
+        <div id="folklore-lights"></div>
+
+        <p id="dev-cal-2"><span class="subtitle" id="title-0">the 1</span></p>
+        <p id="dev-cal-2">
+            I'm doing good, I'm on some new shit<br>
+            Been saying "yes" instead of "no"<br>
+            I thought I saw you at the bus stop, I didn't though<br>
+            <br>
+            I hit the ground running each night<br>
+            I hit the Sunday matinee<br>
+            You know the greatest films of all time were never made<br>
+            <br>
+            I guess you never know, never know<br>
+            And if you wanted me, you really should've showed<br>
+            And if you never bleed, you're never gonna grow<br>
+            And it's alright now<br>
+            <br>
+            But we were something, don't you think so?<br>
+            Roaring twenties, tossing pennies in the pool<br>
+            And if my wishes came true<br>
+            It would've been you<br>
+            In my defense, I have none<br>
+            For never leaving well enough alone<br>
+            But it would've been fun<br>
+            If you would've been the one<br>
+            <br>
+            I have this dream you're doing cool shit<br>
+            Having adventures on your own<br>
+            You meet some woman on the Internet and take her home<br>
+            We never painted by the numbers, baby<br>
+            But we were making it count<br>
+            You know the greatest loves of all time are over now<br>
+            <br>
+            I guess you never know, never know<br>
+            And it's another day, waking up alone<br>
+            <br>
+            But we were something, don't you think so?<br>
+            Roaring twenties, tossing pennies in the pool<br>
+            And if my wishes came true<br>
+            It would've been you<br>
+            In my defense, I have none<br>
+            For never leaving well enough alone<br>
+            But it would've been fun<br>
+            If you would've been the one<br>
+            <br>
+            Hey, yeah-yeah<br>
+            I persist and resist the temptation to ask you<br>
+            If one thing had been different<br>
+            Would everything be different today?<br>
+            <br>
+            We were something, don't you think so?<br>
+            Rosé flowing with your chosen family<br>
+            And it would've been sweet<br>
+            If it could've been me<br>
+            In my defense, I have none<br>
+            For digging up the grave another time<br>
+            But it would've been fun<br>
+            If you would've been the one
+        </p>
+
+        <p id="dev-cal-2"><span class="subtitle" id="title-1">cardigan</span></p>
+        <p id="dev-cal-2">
+            Vintage tee, brand new phone<br>
+            High heels on cobblestones<br>
+            When you are young, they assume you know nothing<br>
+            Sequin smile, black lipstick<br>
+            Sensual politics<br>
+            When you are young, they assume you know nothing<br>
+            <br>
+            But I knew you<br>
+            Dancing in your Levi's<br>
+            Drunk under a streetlight, I<br>
+            I knew you<br>
+            Hand under my sweatshirt<br>
+            Baby, kiss it better, I<br>
+            <br>
+            And when I felt like I was an old cardigan under someone's bed<br>
+            You put me on and said I was your favorite<br>
+            A friend to all is a friend to none<br>
+            Chase two girls, lose the one<br>
+            When you are young, they assume you know nothing<br>
+            <br>
+            But I knew you<br>
+            Playing hide-and-seek and<br>
+            Giving me your weekends<br>
+            I, I knew you<br>
+            Your heartbeat on the High Line<br>
+            Once in twenty lifetimes, I<br>
+            <br>
+            And when I felt like I was an old cardigan under someone's bed<br>
+            You put me on and said I was your favorite<br>
+            <br>
+            To kiss in cars and downtown bars<br>
+            Was all we needed<br>
+            You drew stars around my scars<br>
+            But now I'm bleeding<br>
+            <br>
+            'Cause I knew you<br>
+            Stepping on the last train<br>
+            Marked me like a bloodstain, I<br>
+            I knew you<br>
+            Tried to change the ending<br>
+            Peter losing Wendy<br>
+            I, I knew you<br>
+            Leaving like a father<br>
+            Running like water, I<br>
+            And when you are young, they assume you know nothing<br>
+            <br>
+            But I knew you'd linger like a tattoo kiss<br>
+            I knew you'd haunt all of my what-ifs<br>
+            The smell of smoke would hang around this long<br>
+            'Cause I knew everything when I was young<br>
+            I knew I'd curse you for the longest time<br>
+            Chasing shadows in the grocery line<br>
+            I knew you'd miss me once the thrill expired<br>
+            And you'd be standing in my front porch light<br>
+            And I knew you'd come back to me<br>
+            You'd come back to me<br>
+            And you'd come back to me<br>
+            And you'd come back<br>
+            <br>
+            And when I felt like I was an old cardigan under someone's bed<br>
+            You put me on and said I was your favorite
+        </p>
+
+        <p id="dev-cal-2"><span class="subtitle" id="title-2">the last great american dynasty</span></p>
+        <p id="dev-cal-2">
+            Rebekah rode up on the afternoon train, it was sunny<br>
+            Her saltbox house on the coast took her mind off St. Louis<br>
+            Bill was the heir to the Standard Oil name and money<br>
+            And the town said, "How did a middle-class divorcée do it?"<br>
+            <br>
+            The wedding was charming, if a little gauche<br>
+            There's only so far new money goes<br>
+            They picked out a home and called it "Holiday House"<br>
+            Their parties were tasteful, if a little loud<br>
+            The doctor had told him to settle down<br>
+            It must have been her fault his heart gave out<br>
+            <br>
+            And they said, "There goes the last great American dynasty<br>
+            Who knows, if she never showed up what could've been<br>
+            There goes the maddest woman this town has ever seen<br>
+            She had a marvelous time ruining everything."<br>
+            <br>
+            Rebekah gave up on the Rhode Island set forever<br>
+            Flew in all her Bitch Pack friends from the city<br>
+            Filled the pool with champagne and swam with the big names<br>
+            And blew through the money on the boys and the ballet<br>
+            And losing on card game bets with Dalí<br>
+            <br>
+            And they said, "There goes the last great American dynasty<br>
+            Who knows, if she never showed up, what could've been<br>
+            There goes the most shameless woman this town has ever seen<br>
+            She had a marvelous time ruining everything."<br>
+            <br>
+            They say she was seen on occasion<br>
+            Pacing the rocks staring out at the midnight sea<br>
+            And in a feud with her neighbor<br>
+            She stole his dog and dyed it key lime green<br>
+            Fifty years is a long time<br>
+            Holiday House sat quietly on that beach<br>
+            Free of women with madness<br>
+            Their men and bad habits, and then it was bought by me<br>
+            <br>
+            Who knows, if I never showed up what could've been<br>
+            There goes the loudest woman this town has ever seen<br>
+            I had a marvelous time ruining everything<br>
+            I had a marvelous time<br>
+            Ruining everything<br>
+            A marvelous time<br>
+            Ruining everything<br>
+            A marvelous time<br>
+            I had a marvelous time
+        </p>
+
+
+
+        <br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br>
+    </div>
+    <include src="../../layout/footer.html"></include>
+</body>
+
+</html>
