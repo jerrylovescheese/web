@@ -533,9 +533,13 @@ nav {
 
     #attic,
     #search-bar input,
-    #search-bar ul,
     #back-to-top {
         background-color: rgba(68, 68, 68, 0.85);
+        border: solid 1px #444;
+    }
+
+    #search-bar ul {
+        background-color: rgba(68, 68, 68);
         border: solid 1px #444;
     }
 
