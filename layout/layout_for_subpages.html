@@ -1,20 +1,22 @@
 <script>
-    $(function () {
-        $("#b-close").click(function () {
-            $("#attic").toggleClass("collapse");
-        });
+    $(document).ready(function () {
+        // Get the current hour
+        const currentHour = new Date().getHours();
+
+        // Determine the appropriate greeting
+        let greetingText = '';
+        if (currentHour >= 5 && currentHour < 12) {
+            greetingText = 'Good morning';
+        } else if (currentHour >= 12 && currentHour < 18) {
+            greetingText = 'Good afternoon';
+        } else {
+            greetingText = 'Good evening';
+        }
+
+        // Set the text content of the span element
+        $('#greeting-sentence').text(greetingText);
     });
-    $(function () {
-        $("#search-bar").click(function () {
-            $("#results").toggleClass("active");
-        });
-    });
-    $(function () {
-        $("#header-collapse-button").click(function () {
-            $("#header-unit").toggleClass("active");
-            $("#content-unit").toggleClass("active");
-        });
-    });
+
     // Ensure the DOM is fully loaded before running the script
     $(document).ready(function () {
         // Get the title of the document
@@ -22,79 +24,125 @@
         // Display the title inside an element with id 'titleDisplay'
         $("#titleDisplay").text(title);
     });
+
+    $(function () {
+        $("#top-link-1").click(function () {
+            $("#aerial").toggleClass("activeMap");
+            $("#top-link-1").toggleClass("active");
+            $("#map").toggleClass("active");
+        });
+    });
+
+    $(function () {
+        $("#top-link-2").click(function () {
+            $("#aerial").toggleClass("activeMe");
+            $("#top-link-2").toggleClass("active");
+            $("#me").toggleClass("active");
+        });
+    });
+
+    $(function () {
+        $("#top-link-4").click(function () {
+            $("#aerial").toggleClass("activeSearch");
+            $("#top-link-4").toggleClass("active");
+            $("#search-bar").toggleClass("active");
+        });
+    });
 </script>
 
 <header id="aerial">
-    <div id="attic">
-        <div id="b-close"><i class="fas fa-arrow-right"></i></div>
-        <a href="https://jerryly.top">
-            <div class="b-item-0"></div>
-        </a>
-        <div class="b-item-1"><span id="titleDisplay"></span></div>
-        <div id="attic-items">
-            <div class="b-item-2">things I love</div>
-            <div class="b-item">
-                <a href="../apple.html">Apple</a>
+    <div id="greet">
+        <span id="greeting-sentence"></span>, you're watching
+        <br><b><span id="titleDisplay"></span></b></span>
+    </div>
+    <div id="bar">
+        <div id="logo"></div>
+        <div id="top-links">
+            <div id="top-link-1" class="top-link">
+                <i class="fa-regular fa-map"></i>
             </div>
-            <div class="b-item">
-                <a href="../friends.html">Friends</a>
+            <div id="top-link-2" class="top-link">
+                <i class="fa-regular fa-user"></i>
             </div>
-            <div class="b-item">
-                <a href="../music.html">Music</a>
-            </div>
-            <div class="b-item">
-                <a href="../taylorswift.html">Swiftie</a>
-            </div>
-            <div class="b-item-2">festivity</div>
-            <div class="b-item">
-                <a href="../christmas.html">Christmas</a>
-            </div>
-            <div class="b-item">
-                <a href="../homemade_giftcard.html">Homemade Giftcard</a>
-            </div>
-            <div class="b-item-2">other stuff</div>
-            <div class="b-item">
-                <a href="../aluminum_studio.html">About</a>
-            </div>
-            <div class="b-item">
-                <a href="https://blog.jerryly.top">
-                    Blog&emsp13;&emsp13;
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-            </div>
-            <div class="b-item">
-                <a href="../classical_ch_sh.html">Classical Chinese for Senior High</a>
-            </div>
-            <div class="b-item">
-                <a href="../classical_ch.html">Classical Chinese for Junior High</a>
-            </div>
-            <div class="b-item">
-                <a href="../clock.html">Clock</a>
-            </div>
-            <div class="b-item">
-                <a href="../contact.html">Contact</a>
-            </div>
-            <div class="b-item">
-                <a href="../develop.html">Develop</a>
-            </div>
-            <div class="b-item">
-                <a href="../flashback.html">Rainbow Room</a>
-            </div>
-            <div class="b-item">
-                <a href="../gallery.html">Gallery</a>
-            </div>
-            <div class="b-item">
-                <a href="../noticeboard.html">Noticeboard</a>
-            </div>
-            <div class="b-item">
-                <a href="../search.html">Search (deprecated)</a>
-            </div>
-            <div class="b-item">
-                <a href="../survey.html">Survey</a>
+            <div id="top-link-4" class="top-link">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
         </div>
     </div>
+    <div id="map">
+        <div class="b-item-2">things I love</div>
+        <div class="b-item">
+            <a href="../apple.html">Apple</a>
+        </div>
+        <div class="b-item">
+            <a href="../friends.html">Friends</a>
+        </div>
+        <div class="b-item">
+            <a href="../music.html">Music</a>
+        </div>
+        <div class="b-item">
+            <a href="../taylorswift.html">Swiftie</a>
+        </div>
+        <div class="b-item-2">festivity</div>
+        <div class="b-item">
+            <a href="../christmas.html">Christmas</a>
+        </div>
+        <div class="b-item">
+            <a href="../homemade_giftcard.html">Homemade Giftcard</a>
+        </div>
+        <div class="b-item-2">other stuff</div>
+        <div class="b-item">
+            <a href="../aluminum_studio.html">About</a>
+        </div>
+        <div class="b-item">
+            <a href="https://blog.jerryly.top">
+                Blog&emsp13;&emsp13;
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+        <div class="b-item">
+            <a href="../classical_ch_sh.html">Classical Chinese for Senior High</a>
+        </div>
+        <div class="b-item">
+            <a href="../classical_ch.html">Classical Chinese for Junior High</a>
+        </div>
+        <div class="b-item">
+            <a href="../clock.html">Clock</a>
+        </div>
+        <div class="b-item">
+            <a href="../contact.html">Contact</a>
+        </div>
+        <div class="b-item">
+            <a href="../develop.html">Develop</a>
+        </div>
+        <div class="b-item">
+            <a href="../flashback.html">Rainbow Room</a>
+        </div>
+        <div class="b-item">
+            <a href="../gallery.html">Gallery</a>
+        </div>
+        <div class="b-item">
+            <a href="../noticeboard.html">Noticeboard</a>
+        </div>
+        <div class="b-item">
+            <a href="../search.html">Search (deprecated)</a>
+        </div>
+        <div class="b-item">
+            <a href="../survey.html">Survey</a>
+        </div>
+    </div>
+    <div id="me">
+        李江源 / Jerry Li
+        <div id="me-smaller">
+            A student at University of Virginia who loves CS but is being tortured by math
+        </div>
+        <div id="me-smaller-2">
+            learn more at <a href="../aluminum_studio.html">my about page</a>
+        </div>
+    </div>
     <div id="search-bar">
+        Search for anything (on this site, of course)
+        <br>
         <input type="text" id="search" placeholder="Search...">
         <ul id="results">
             Search function now in beta and for English (US) only!
