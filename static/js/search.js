@@ -25,7 +25,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                     results.forEach(result => {
                         const item = data.find(doc => doc.id === result.ref);
                         if (item) {
-                            resultsContainer.innerHTML += `<li><a href="${item.url}">${item.title}</a></li>`;
+                            resultsContainer.innerHTML += `<li><a href=".${item.url}">${item.title}</a></li>`;
                         }
                     });
 
