@@ -310,7 +310,7 @@ body {
     left: 15px;
     top: 105px;
     max-width: 302px;
-    height: 50px;
+    height: 30px;
     border-radius: 15px;
     background-color: rgba(238, 238, 238, 0.5);
     border: solid 1px #eee;
@@ -329,7 +329,7 @@ body {
 
 .header {
     width: fit-content;
-    height: 24px;
+    height: 14px;
     font-weight: bold;
     font-size: 15px;
     margin-left: 0;
@@ -337,7 +337,7 @@ body {
 }
 
 #quick-links {
-    height: 50px;
+    height: 30px;
     margin-left: 0;
     margin-right: 0;
     border-right: none;
@@ -367,17 +367,13 @@ body {
     align-items: center;
     border-left: solid 1px #ddd;
     transition: all 0.2s;
+    border-radius: 15px;
     font-size: 15px;
 }
 
 .quick-link:hover {
-    height: 50px;
+    height: 30px;
     background-color: #ffffff;
-    border-radius: 15px;
-}
-
-#quick-link-1 {
-    margin-left: 10px;
 }
 
 /* Scrollable content container */
@@ -394,7 +390,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: 50px;
+    height: 30px;
     /* Adjust height as needed */
     width: 0%;
     background-color: #ffffffca;
