@@ -1,8 +1,7 @@
 /* 
  * Author: Jiangyuan Li
- * Version: 7.1
+ * Version: 8.0
  */
-
 /* all styles */
 
 :root {
@@ -18,167 +17,187 @@ body {
 }
 
 #aerial {
-    width: 240px;
-    height: 50px;
+    width: fit-content;
+    height: 95px;
+    min-width: 292px;
+    max-width: 50vw;
     position: fixed;
-    left: 10px;
-    top: 10px;
+    top: 0;
+    left: 15px;
+    background-color: rgb(238, 238, 238);
+    border-left: solid 1px #eee;
+    border-bottom: solid 1px #eee;
+    border-right: solid 1px #eee;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0, 1, 0, 1.03);
     z-index: 50;
 }
 
-#attic {
-    width: 120px;
-    height: 50px;
-    position: fixed;
-    left: 10px;
-    top: 10px;
-    z-index: 40;
-    border-radius: 10px;
-    background-color: rgba(238, 238, 238, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    -moz-backdrop-filter: blur(12px);
-    border: solid 1px #eee;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    transition: all 0.3s cubic-bezier(0, 1, 0, 1.03);
-}
-
-#attic>a {
-    display: block;
-    width: 75px;
-    transition: all 0.2s;
-    margin-left: 5px;
-    border-radius: 5px;
-}
-
-#attic>a:hover {
-    background-color: rgba(192, 192, 192, 0.50);
-}
-
-#attic.collapse>a {
-    border-radius: 10px;
-}
-
-.b-item a,
-#back-to-top a {
-    color: unset !important;
-    text-decoration: none !important;
-    display: block;
-    width: 100%;
-}
-
-#attic.collapse {
-    width: 250px;
+#aerial.activeMap {
     height: calc(100vh - 20px);
-    border-radius: 15px;
 }
 
-#attic-items {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    padding-bottom: 5px;
+#aerial.activeMe {
+    height: 295px;
 }
 
-.b-item {
-    width: calc(100% - 20px);
+#aerial.activeSearch {
+    height: 375px;
+}
+
+#greet {
+    width: fit-content;
+    height: 45px;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 5px;
     margin-left: 10px;
-    margin-top: 10px;
-    height: 18px;
-    padding-bottom: 5px;
-    color: transparent;
-    transition: all 0.2s;
-    font-size: 14px;
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-right: 10px;
 }
 
-.b-item-0 {
+#bar {
+    display: flex;
+}
+
+#logo {
     height: 40px;
     aspect-ratio: 9/5;
-    margin-top: 5px;
     background-image: url(../img/home-button-light.svg);
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    border-radius: 10px;
 }
 
-.b-item-1 {
-    width: calc(100% - 20px);
-    margin-left: 10px;
-    padding-bottom: 5px;
-    color: transparent;
-    font-size: 14px;
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-bottom: solid 1px #cfcfcf;
-    transition: all 0.2s;
+#logo:hover,
+.top-link:hover {
+    background-color: #eaeaea;
 }
 
-.b-item-2 {
-    width: calc(100% - 20px);
-    margin-left: 10px;
-    margin-top: 10px;
-    padding-bottom: 5px;
-    color: transparent;
-    font-size: 14px;
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-    transition: all 0.2s;
-}
-
-#attic.collapse .b-item,
-#attic.collapse .b-item-1,
-#attic.collapse .b-item-2 {
-    color: rgba(0, 0, 0, 0.75);
-}
-
-#b-close {
-    width: 20px;
-    height: 20px;
-    background-color: rgba(213, 213, 213, 0.5);
-    border-radius: 20px;
-    position: absolute;
-    top: 15px;
-    right: 10px;
+#top-links {
+    width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #919191;
-    transform: rotateZ(45deg);
-    transition: all 0.2s cubic-bezier(0, 1, 0.5, 1.25);
+    position: absolute;
+    right: 5px;
 }
 
-#b-close:hover {
-    padding: 5px;
-    top: 10px;
-    right: 5px;
-    background-color: rgba(192, 192, 192, 0.50);
+.top-link {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-link.active {
+    background-color: #eaeaea;
+}
+
+#map {
+    height: 0;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    border-top: solid 1px #eee;
+    padding-top: 5px;
+    transition: all 0.2s;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#map.active {
+    height: calc(100vh - 105px);
+}
+
+.b-item-2 {
+    font-weight: bold;
+    font-style: 13px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.b-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    transition: all 0.2s;
 }
 
 .b-item:hover {
-    background-color: rgba(192, 192, 192, 0.50);
+    background-color: #eaeaea;
     padding: 5px;
-    border-radius: 10px;
-    margin-left: 5px;
-    margin-top: 5px;
 }
 
-#titleDisplay {
-    display: block;
-    padding-top: 10px;
+.b-item a {
+    color: unset;
+    text-decoration: none;
+}
+
+#me {
+    width: 292px;
+    height: 0;
+    margin-left: 10px;
+    margin-top: 5px;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
     font-weight: bold;
-    font-size: 18px;
+    transition: all 0.2s cubic-bezier(0, 1, 0, 1.03);
+    overflow: hidden;
+    position: relative;
+    color: gray;
+}
+
+#me-smaller,
+#me-smaller-2 {
+    font-weight: normal;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+#me-smaller-2 {
+    position: absolute;
+    bottom: 5px;
+}
+
+#me.active {
+    height: 180px;
+}
+
+#me a {
+    color: unset;
 }
 
 #search-bar {
-    width: 150px;
-    height: 50px;
-    margin-left: 130px;
-    font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 292px;
+    height: 0px;
+    margin-left: 10px;
+    color: gray;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+#search-bar.active {
+    height: 280px;
 }
 
 #search-bar input {
-    width: 130px;
-    height: 50px;
+    width: 272px;
+    height: 30px;
+    margin-top: 5px;
     padding: 0;
     padding-left: 10px;
     border-radius: 10px;
@@ -191,31 +210,16 @@ body {
 }
 
 #search-bar ul {
-    width: 200px;
+    width: 272px;
     height: fit-content;
     max-height: 200px;
-    padding: 10px;
+    padding: 0px;
     list-style: none;
     overflow-x: hidden;
     overflow-y: scroll;
     border-radius: 10px;
     margin-top: 9px;
     font-size: 15px;
-    border: solid 1px #eee;
-    background-color: white;
-    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-        0 2px 2px hsl(0deg 0% 0% / 0.075),
-        0 4px 4px hsl(0deg 0% 0% / 0.075),
-        0 8px 8px hsl(0deg 0% 0% / 0.075),
-        0 16px 16px hsl(0deg 0% 0% / 0.075);
-}
-
-#search-bar #results {
-    display: none;
-}
-
-#search-bar #results.active {
-    display: block;
 }
 
 #back-to-top {
@@ -290,13 +294,11 @@ body {
 
 #header-unit {
     position: fixed;
-    left: 130px;
-    top: 10px;
-    max-width: calc(100% - 300px);
-    margin-left: 160px;
-    margin-right: 10px;
+    left: 15px;
+    top: 105px;
+    max-width: 302px;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: rgba(238, 238, 238, 0.5);
     border: solid 1px #eee;
     backdrop-filter: blur(12px);
@@ -358,7 +360,7 @@ body {
 .quick-link:hover {
     height: 50px;
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 #quick-link-1 {
@@ -382,8 +384,8 @@ body {
     /* Adjust height as needed */
     width: 0%;
     background-color: #ffffffca;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     /* Color of the scroll indicator */
     z-index: -1;
 }
@@ -394,7 +396,7 @@ body {
     font-weight: bold;
     margin-left: 30px;
     margin-right: 30px;
-    margin-top: 120px;
+    margin-top: 160px;
 }
 
 #dev-cal-1>a {
@@ -530,51 +532,31 @@ nav {
 /* media queries */
 
 @media (prefers-color-scheme: dark) {
-
-    #attic,
-    #search-bar input,
-    #back-to-top {
-        background-color: rgba(68, 68, 68, 0.85);
-        border: solid 1px #444;
+    #aerial {
+        border-left-color: #333;
+        border-right-color: #333;
+        border-bottom-color: #333;
+        background-color: rgb(68, 68, 68);
     }
 
-    #search-bar ul {
-        background-color: rgba(68, 68, 68);
-        border: solid 1px #444;
+    #map {
+        border-top-color: #333;
     }
 
-    #back-to-top {
-        color: #fff !important;
-    }
-
-    #attic.collapse .b-item,
-    #attic.collapse .b-item-1,
-    #attic.collapse .b-item-2 {
-        color: rgba(255, 255, 255, 0.75) !important;
-    }
-
-    .b-item,
-    .b-item-0,
-    .b-item-1,
-    .b-item-2,
-    #back-to-top {
-        color: transparent;
-    }
-
-    .b-item-1 {
-        border-bottom-color: rgba(145, 145, 145, 0.75);
-    }
-
-    .b-item-0 {
+    #logo {
         background-image: url(../img/home-button-dark.svg);
     }
 
-    #b-close {
-        color: #eee;
+    #search-bar input {
+        border-color: #333;
     }
 
-    nav {
-        border-bottom-color: #333 !important;
+    .top-link.active,
+    .b-item:hover,
+    #logo:hover,
+    .top-link:hover,
+    #search-bar input {
+        background-color: #525252;
     }
 }
 
@@ -656,7 +638,7 @@ nav {
     }
 
     .quick-link:hover {
-        background-color: #727272 !important;
+        background-color: #979797 !important;
     }
 
     .scroll-indicator {
