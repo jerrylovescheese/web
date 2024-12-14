@@ -1,86 +1,109 @@
-// The game is on
-(function (window, document, undefined) {
-    var Include39485748323 = function () { }
-    Include39485748323.prototype = {
-        //倒序循环
-        forEach: function (array, callback) {
-            var size = array.length;
-            for (var i = size - 1; i >= 0; i--) {
-                callback.apply(array[i], [i]);
-            }
-        },
-        getFilePath: function () {
-            var curWwwPath = window.document.location.href;
-            var pathName = window.document.location.pathname;
-            var localhostPaht = curWwwPath.substring(0, curWwwPath.indexOf(pathName));
-            var projectName = pathName.substring(0, pathName.substr(1).lastIndexOf('/') + 1);
-            return localhostPaht + projectName;
-        },
-        //获取文件内容
-        getFileContent: function (url) {
-            var ie = navigator.userAgent.indexOf('MSIE') > 0;
-            var o = ie ? new ActiveXObject('Microsoft.XMLHTTP') : new XMLHttpRequest();
-            o.open('get', url, false);
-            o.send(null);
-            return o.responseText;
-        },
-        parseNode: function (content) {
-            var objE = document.createElement("div");
-            objE.innerHTML = content;
-            return objE.childNodes;
-        },
-        executeScript: function (content) {
-            var mac = /<script>([\s\S]*?)<\/script>/g;
-            var r = "";
-            while (r = mac.exec(content)) {
-                eval(r[1]);
-            }
-        },
-        getHtml: function (content) {
-            var mac = /<script>([\s\S]*?)<\/script>/g;
-            content.replace(mac, "");
-            return content;
-        },
-        getPrevCount: function (src) {
-            var mac = /\.\.\//g;
-            var count = 0;
-            while (mac.exec(src)) {
-                count++;
-            }
-            return count;
-        },
-        getRequestUrl: function (filePath, src) {
-            if (/http:\/\//g.test(src)) { return src; }
-            var prevCount = this.getPrevCount(src);
-            while (prevCount--) {
-                filePath = filePath.substring(0, filePath.substr(1).lastIndexOf('/') + 1);
-            }
-            return filePath + "/" + src.replace(/\.\.\//g, "");
-        },
-        replaceIncludeElements: function () {
-            var $this = this;
-            var filePath = $this.getFilePath();
-            var includeTals = document.getElementsByTagName("include");
-            this.forEach(includeTals, function () {
-                //拿到路径  
-                var src = this.getAttribute("src");
-                //拿到文件内容  
-                var content = $this.getFileContent($this.getRequestUrl(filePath, src));
-                //将文本转换成节点  
-                var parent = this.parentNode;
-                var includeNodes = $this.parseNode($this.getHtml(content));
-                var size = includeNodes.length;
-                for (var i = 0; i < size; i++) {
-                    parent.insertBefore(includeNodes[0], this);
-                }
-                //执行文本中的额javascript  
-                $this.executeScript(content);
-                parent.removeChild(this);
-                //替换元素 this.parentNode.replaceChild(includeNodes[1], this);  
-            })
+class IncludeManager {
+    constructor() {
+        this.init();
+    }
+
+    forEach(array, callback) {
+        const size = array.length;
+        for (let i = 0; i < size; i++) {
+            callback.apply(array[i], [i]);
         }
     }
-    window.onload = function () {
-        new Include39485748323().replaceIncludeElements();
+
+    getFilePath() {
+        const curWwwPath = window.document.location.href;
+        const pathName = window.document.location.pathname;
+        const localhostPath = curWwwPath.substring(0, curWwwPath.indexOf(pathName));
+        const projectName = pathName.substring(0, pathName.substr(1).lastIndexOf('/') + 1);
+        return localhostPath + projectName;
     }
-})(window, document)
+
+    getFileContent(url) {
+        return fetch(url).then((response) => {
+            if (!response.ok) {
+                throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
+            }
+            return response.text();
+        });
+    }
+
+    parseNode(content) {
+        const objE = document.createElement("div");
+        objE.innerHTML = content;
+        return objE.childNodes;
+    }
+
+    executeInlineScripts(content) {
+        const scriptRegex = /<script>([\s\S]*?)<\/script>/g;
+        let match;
+        while ((match = scriptRegex.exec(content))) {
+            try {
+                eval(match[1]);
+            } catch (error) {
+                console.error("Error executing script:", error);
+            }
+        }
+    }
+
+    getPrevCount(src) {
+        const mac = /\.\.\//g;
+        let count = 0;
+        while (mac.exec(src)) {
+            count++;
+        }
+        return count;
+    }
+
+    getRequestUrl(src) {
+        if (/http:\/\//g.test(src)) {
+            return src;
+        }
+
+        let filePath = this.getFilePath();
+        let prevCount = this.getPrevCount(src);
+
+        while (prevCount--) {
+            filePath = filePath.substring(0, filePath.substr(1).lastIndexOf('/') + 1);
+        }
+
+        return filePath + "/" + src.replace(/\.\.\//g, "");
+    }
+
+    async replaceIncludeElements() {
+        const includeTags = document.getElementsByTagName("include");
+        const tasks = Array.from(includeTags).map(async (tag) => {
+            const src = tag.getAttribute("src");
+            if (!src) {
+                console.warn("No src attribute found for include tag:", tag);
+                return;
+            }
+
+            try {
+                const content = await this.getFileContent(this.getRequestUrl(src));
+                const parent = tag.parentNode;
+                const tempDiv = document.createElement("div");
+                tempDiv.innerHTML = content;
+
+                while (tempDiv.firstChild) {
+                    parent.insertBefore(tempDiv.firstChild, tag);
+                }
+
+                this.executeInlineScripts(content);
+                parent.removeChild(tag);
+            } catch (error) {
+                console.error(`Error including ${src}:`, error);
+            }
+        });
+
+        await Promise.all(tasks);
+    }
+
+    init() {
+        document.addEventListener("DOMContentLoaded", () => {
+            this.replaceIncludeElements();
+        });
+    }
+}
+
+// Initialize the IncludeManager
+new IncludeManager();
