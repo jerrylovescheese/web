@@ -70,14 +70,15 @@
             border-left: solid 1px #eee;
             border-bottom: solid 1px #eee;
             border-right: solid 1px #eee;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            background-color: rgb(238, 238, 238);
             overflow: hidden;
             transition: all 0.35s cubic-bezier(0, 1, 0, 1.03);
         }
 
         #aerial.activeMap {
-            height: calc(100vh - 20px);
+            height: calc(100vh - 40px);
         }
 
         #aerial.activeMe {
@@ -110,12 +111,12 @@
             background-image: url(../static/img/home-button-light.svg);
             background-repeat: no-repeat;
             margin-left: 5px;
-            border-radius: 5px;
+            border-radius: 10px;
         }
 
         #logo:hover,
         .top-link:hover {
-            background-color: #eaeaea;
+            background-color: rgba(161, 161, 161, 0.25);
         }
 
         #top-links {
@@ -133,14 +134,14 @@
             margin-left: 5px;
             font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 18px;
-            border-radius: 5px;
+            border-radius: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .top-link.active {
-            background-color: #eaeaea;
+            background-color: rgba(161, 161, 161, 0.25);
         }
 
         #map {
@@ -149,8 +150,8 @@
             margin-left: 10px;
             margin-right: 10px;
             margin-top: 5px;
-            border-top: solid 1px #eee;
-            padding-top: 5px;
+            padding: 0;
+            border-top: solid 1px #d9d9d9;
             transition: all 0.2s;
             font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 14px;
@@ -159,7 +160,8 @@
         }
 
         #map.active {
-            height: calc(100vh - 105px);
+            height: calc(100vh - 155px);
+            padding-top: 5px;
         }
 
         .b-item-2 {
@@ -170,19 +172,23 @@
         }
 
         .b-item {
-            padding-top: 5px;
+            width: calc(100% - 20px);
+            margin-top: 10px;
+            height: 18px;
             padding-bottom: 5px;
-            margin-bottom: 5px;
-            border-radius: 5px;
             transition: all 0.2s;
+            font-size: 14px;
+            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
         .b-item:hover {
-            background-color: #eaeaea;
+            background-color: rgba(161, 161, 161, 0.25);
             padding: 5px;
+            border-radius: 10px;
+            margin-top: 5px;
         }
 
-        .b-item a {
+        #map a {
             color: unset;
             text-decoration: none;
         }
@@ -190,8 +196,8 @@
         #me {
             width: 292px;
             height: 0;
-            margin-left: 10px;
-            margin-top: 5px;
+            margin-left: 15px;
+            margin-top: 105px;
             font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 24px;
             font-weight: bold;
@@ -225,7 +231,9 @@
             width: 292px;
             height: 0px;
             margin-left: 10px;
-            color: gray;
+            position: absolute;
+            top: 105px;
+            left: 15px;
             font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 15px;
             overflow: hidden;
@@ -236,13 +244,13 @@
         }
 
         #search-bar input {
-            width: 272px;
+            width: 262px;
             height: 30px;
             margin-top: 5px;
             padding: 0;
             padding-left: 10px;
-            border-radius: 10px;
-            background-color: rgba(238, 238, 238, 0.85);
+            border-radius: 8px;
+            background-color: rgb(255, 255, 255);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             -moz-backdrop-filter: blur(12px);
@@ -263,11 +271,16 @@
             font-size: 15px;
         }
 
+        #search-bar ul::-webkit-scrollbar {
+            width: 0;
+        }
+
         @media (prefers-color-scheme: dark) {
             #aerial {
                 border-left-color: #333;
                 border-right-color: #333;
                 border-bottom-color: #333;
+                background-color: rgb(68, 68, 68);
             }
 
             #map {
@@ -316,83 +329,118 @@
         </div>
         <div id="map">
             <div class="b-item-2">things I love</div>
-            <div class="b-item">
-                <a href="./apple.html">Apple</a>
-            </div>
-            <div class="b-item">
-                <a href="./friends.html">Friends</a>
-            </div>
-            <div class="b-item">
-                <a href="./music.html">Music</a>
-            </div>
-            <div class="b-item">
-                <a href="./taylorswift.html">Swiftie</a>
-            </div>
+            <a href="./apple.html">
+                <div class="b-item">
+                    Apple
+                </div>
+            </a>
+            <a href="./friends.html">
+                <div class="b-item">
+                    Friends
+                </div>
+            </a>
+            <a href="./music.html">
+                <div class="b-item">
+                    Music
+                </div>
+            </a>
+            <a href="./taylorswift.html">
+                <div class="b-item">
+                    Swiftie
+                </div>
+            </a>
             <div class="b-item-2">festivity</div>
-            <div class="b-item">
-                <a href="./christmas.html">Christmas</a>
-            </div>
-            <div class="b-item">
-                <a href="./homemade_giftcard.html">Homemade Giftcard</a>
-            </div>
+            <a href="./christmas.html">
+                <div class="b-item">
+                    Christmas
+                </div>
+            </a>
+            <a href="./homemade_giftcard.html">
+                <div class="b-item">
+                    Homemade Giftcard
+                </div>
+            </a>
             <div class="b-item-2">other stuff</div>
-            <div class="b-item">
-                <a href="./aluminum_studio.html">About</a>
-            </div>
-            <div class="b-item">
-                <a href="https://blog.jerryly.top">
+            <a href="./aluminum_studio.html">
+                <div class="b-item">
+                    About
+                </div>
+            </a>
+            <a href="https://blog.jerryly.top">
+                <div class="b-item">
                     Blog&emsp13;&emsp13;
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-            </div>
-            <div class="b-item">
-                <a href="./classical_ch_sh.html">Classical Chinese for Senior High</a>
-            </div>
-            <div class="b-item">
-                <a href="./classical_ch.html">Classical Chinese for Junior High</a>
-            </div>
-            <div class="b-item">
-                <a href="./clock.html">Clock</a>
-            </div>
-            <div class="b-item">
-                <a href="./contact.html">Contact</a>
-            </div>
-            <div class="b-item">
-                <a href="./develop.html">Develop</a>
-            </div>
-            <div class="b-item">
-                <a href="./flashback.html">Rainbow Room</a>
-            </div>
-            <div class="b-item">
-                <a href="./gallery.html">Gallery</a>
-            </div>
-            <div class="b-item">
-                <a href="./noticeboard.html">Noticeboard</a>
-            </div>
-            <div class="b-item">
-                <a href="./search.html">Search (deprecated)</a>
-            </div>
-            <div class="b-item">
-                <a href="./survey.html">Survey</a>
-            </div>
+                </div>
+            </a>
+            <a href="./classical_ch_sh.html">
+                <div class="b-item">
+                    Classical Chinese for Senior High
+                </div>
+            </a>
+            <a href="./classical_ch.html">
+                <div class="b-item">
+                    Classical Chinese for Junior High
+                </div>
+            </a>
+            <a href="./clock.html">
+                <div class="b-item">
+                    Clock
+                </div>
+            </a>
+            <a href="./contact.html">
+                <div class="b-item">
+                    Contact
+                </div>
+            </a>
+            <a href="./develop.html">
+                <div class="b-item">
+                    Develop
+                </div>
+            </a>
+            <a href="./flashback.html">
+                <div class="b-item">
+                    Rainbow Room
+                </div>
+            </a>
+            <a href="./gallery.html">
+                <div class="b-item">
+                    Gallery
+                </div>
+            </a>
+            <a href="./noticeboard.html">
+                <div class="b-item">
+                    Noticeboard
+                </div>
+            </a>
+            <a href="./search.html">
+                <div class="b-item">
+                    Search (deprecated)
+                </div>
+            </a>
+            <a href="./survey.html">
+                <div class="b-item">
+                    Survey
+                </div>
+            </a>
         </div>
-        <div id="me">
-            李江源 / Jerry Li
-            <div id="me-smaller">
-                A student at University of Virginia who loves CS but is being tortured by math
-            </div>
-            <div id="me-smaller-2">
-                learn more at <a href="./aluminum_studio.html">my about page</a>
-            </div>
+    </div>
+    <div id="me">
+        李江源 / Jerry Li
+        <div id="me-smaller">
+            A student at University of Virginia who loves CS but is being tortured by math
         </div>
-        <div id="search-bar">
-            Search for anything (on this site, of course)
-            <br>
-            <input type="text" id="search" placeholder="Search...">
-            <ul id="results">
-                Search function now in beta and for English (US) only!
-            </ul>
+        <div id="me-smaller-2">
+            learn more at <a href="./aluminum_studio.html">my about page</a>
         </div>
+    </div>
+    <div id="search-bar">
+        Search for anything (on this site, of course)
+        <br>
+        <input type="text" id="search" placeholder="Search...">
+        <ul id="results">
+            Search function now in beta and for English (US) only! <br>Not working? <a href="./search.html">Try the
+                search page.</a>
+        </ul>
     </div>
 </body>
 
