@@ -373,7 +373,6 @@ body {
     padding-right: 15px;
     justify-content: center;
     align-items: center;
-    border-left: solid 1px #ddd;
     transition: all 0.2s;
     border-radius: 15px;
     font-size: 15px;
@@ -655,10 +654,6 @@ nav {
     #header-collapse {
         background-color: rgba(68, 68, 68, 0.85) !important;
         border: solid 1px #444 !important;
-    }
-
-    .quick-link {
-        border-left-color: #555;
     }
 
     #quick-links>b {
