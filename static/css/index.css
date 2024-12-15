@@ -232,9 +232,18 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    #attic.collapse {
-        background-color: rgba(68, 68, 68, 0.85) !important;
+
+    #aerial.activeMap,
+    #aerial.activeMe,
+    #aerial.activeSearch {
+        background-color: rgb(68, 68, 68) !important;
         border: solid 1px #444 !important;
+    }
+
+    #aerial.activeMap #logo,
+    #aerial.activeMe #logo,
+    #aerial.activeSearch #logo {
+        background-image: url(../img/home-button-dark.svg) !important;
     }
 
     .canvas,
@@ -351,14 +360,6 @@
 }
 
 @media (prefers-color-scheme: light) {
-    #attic.collapse #b-close {
-        color: #919191 !important;
-    }
-
-    #attic.collapse .b-item-0 {
-        background-image: url(../img/home-button-light.svg) !important;
-    }
-
     #clock-components {
         background-color: rgba(255, 255, 255, 0.75) !important;
         border-color: rgba(255, 255, 255, 0.7) !important;
@@ -571,7 +572,7 @@
 }
 
 #logo {
-    background-image: url(../img/home-button-dark.svg) !important;
+    background-image: url(../img/home-button-dark.svg);
 }
 
 .top-link {
@@ -581,14 +582,14 @@
 #aerial.activeMap,
 #aerial.activeMe,
 #aerial.activeSearch {
-    background-color: rgba(238, 238, 238);
+    background-color: rgb(238, 238, 238);
     border: solid 1px #eee;
 }
 
 #aerial.activeMap #logo,
 #aerial.activeMe #logo,
 #aerial.activeSearch #logo {
-    background-image: url(../img/home-button-light.svg) !important;
+    background-image: url(../img/home-button-light.svg);
 }
 
 #aerial.activeMap #greet,
