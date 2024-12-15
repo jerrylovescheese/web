@@ -1303,7 +1303,7 @@
 /* 157, 121, 103 */
 
 #canvas-11 {
-    background-image: radial-gradient(circle at bottom left, #9D7967, #9E7168, #814245);
+    background-image: radial-gradient(circle at top, #9E7168, rgb(245, 193, 158), rgb(172, 53, 75) 90%);
     background-size: 100% 190%;
     border: none;
     border-radius: 0;
