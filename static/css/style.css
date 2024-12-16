@@ -701,6 +701,10 @@ nav {
         color: white !important;
     }
 
+    nav {
+        border-bottom-color: #333;
+    }
+
     @media (max-width: 768px) {
 
         .header,
