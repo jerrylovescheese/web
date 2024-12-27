@@ -60,6 +60,20 @@
             var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
             return YY + MM + DD;
         }
+
+        $(function () {
+            $("#canvas-11-expansion").click(function () {
+                $("#canvas-11").toggleClass("active");
+                $("#one").toggleClass("active");
+                $("#two").toggleClass("active");
+                $("#three").toggleClass("active");
+                $("#four").toggleClass("active");
+                $("#days").toggleClass("active");
+                $("#hours").toggleClass("active");
+                $("#minutes").toggleClass("active");
+                $("#seconds").toggleClass("active");
+            });
+        });
     </script>
     <script src="./static/js/loader.js"></script>
     <script src="./static/js/scroll.js"></script>
@@ -131,6 +145,7 @@
         <div id="christmas-ornament"></div>
     </a>
     <div class="canvas" id="canvas-11">
+        <i class="fa-solid fa-chevron-up" id="canvas-11-expansion"></i>
         <div class="canvas-text" id="canvas-11-text">
             <div id="remainTime">
                 <div id="days">
@@ -147,6 +162,11 @@
                 </div>
             </div>
             <div>完全平方年 2025，我们来了</div>
+        </div>
+    </div>
+    <div class="canvas" id="canvas-12">
+        <div class="canvas-text" id="canvas-12-text">
+            but it's just a supercut of us
         </div>
     </div>
     <!-- <div id="cards">
