@@ -1384,9 +1384,10 @@
 
 #canvas-12 {
     width: 100vw;
-    height: 130vh;
+    height: 100vh;
     border: none;
     /* background-color: rgb(208, 96, 96); */
+    background-image: url(../img/Dec\ 31\ 2024.webp);
     border-radius: 0;
     margin-left: 0;
     margin-bottom: 0;
