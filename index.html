@@ -12,54 +12,54 @@
     <script src="./static/js/include.js"></script>
     <script src="./static/js/jquery-3.7.1.js"></script>
     <script type="text/javascript">
-        (function show() {
-            //1.设置目的时间
-            var oYear = 2025
-            var oMonth = 0
-            var oDay = 1
-            var oHour = 0
-            var oMinute = 0
-            var oSecond = 0
-            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
-            // console.log(dateFormat(funtureDate))
-            //2.设置定时器
-            setInterval(function () {
-                //3.获取现在的时间
-                var presentDate = new Date();
-                //4.获取时间戳
-                var funtureTime = funtureDate.getTime();
-                var presenTime = presentDate.getTime();
-                //5.获取剩余的时间戳
-                var allTime = funtureTime - presenTime;
-                //6.把毫秒转换为秒
-                var allSecond = parseInt(allTime / 1000);
-                //7.获取剩余多少天
-                var day = size(parseInt(allSecond / 3600 / 24));
-                //8.获取剩余多少小时
-                var hour = size(parseInt(allSecond / 3600 % 24));
-                //9.获取剩余多少分钟
-                var minute = size(parseInt(allSecond / 60 % 60));
-                //10.获取剩余多少秒
-                var second = size(parseInt(allSecond % 60));
-                //11.注入：
-                document.getElementById('one').innerHTML = day;
-                document.getElementById('two').innerHTML = hour;
-                document.getElementById('three').innerHTML = minute;
-                document.getElementById('four').innerHTML = second;
-            }, 1000);
-            //如果数>=10,则在前面补0
-            function size(num) {
-                return num < 10 & num >= 0 ? '0' + num : num;
-            }
-        })()
-        //格式化日期格式 2
-        function dateFormat(data) {
-            var date = new Date(data);
-            var YY = date.getFullYear() + '-';
-            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
-            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
-            return YY + MM + DD;
-        }
+        // (function show() {
+        //     //1.设置目的时间
+        //     var oYear = 2025
+        //     var oMonth = 0
+        //     var oDay = 1
+        //     var oHour = 0
+        //     var oMinute = 0
+        //     var oSecond = 0
+        //     var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
+        //     // console.log(dateFormat(funtureDate))
+        //     //2.设置定时器
+        //     setInterval(function () {
+        //         //3.获取现在的时间
+        //         var presentDate = new Date();
+        //         //4.获取时间戳
+        //         var funtureTime = funtureDate.getTime();
+        //         var presenTime = presentDate.getTime();
+        //         //5.获取剩余的时间戳
+        //         var allTime = funtureTime - presenTime;
+        //         //6.把毫秒转换为秒
+        //         var allSecond = parseInt(allTime / 1000);
+        //         //7.获取剩余多少天
+        //         var day = size(parseInt(allSecond / 3600 / 24));
+        //         //8.获取剩余多少小时
+        //         var hour = size(parseInt(allSecond / 3600 % 24));
+        //         //9.获取剩余多少分钟
+        //         var minute = size(parseInt(allSecond / 60 % 60));
+        //         //10.获取剩余多少秒
+        //         var second = size(parseInt(allSecond % 60));
+        //         //11.注入：
+        //         document.getElementById('one').innerHTML = day;
+        //         document.getElementById('two').innerHTML = hour;
+        //         document.getElementById('three').innerHTML = minute;
+        //         document.getElementById('four').innerHTML = second;
+        //     }, 1000);
+        //     //如果数>=10,则在前面补0
+        //     function size(num) {
+        //         return num < 10 & num >= 0 ? '0' + num : num;
+        //     }
+        // })()
+        // //格式化日期格式 2
+        // function dateFormat(data) {
+        //     var date = new Date(data);
+        //     var YY = date.getFullYear() + '-';
+        //     var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+        //     var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+        //     return YY + MM + DD;
+        // }
 
         $(function () {
             $("#canvas-11-expansion").click(function () {
@@ -149,24 +149,22 @@
         <div class="canvas-text" id="canvas-11-text">
             <div id="remainTime">
                 <div id="days">
-                    <div id="one"></div>天
+                    <div id="one">00</div>天
                 </div>
                 <div id="hours">
-                    <div id="two"></div>小时
+                    <div id="two">00</div>小时
                 </div>
                 <div id="minutes">
-                    <div id="three"></div>分钟
+                    <div id="three">00</div>分钟
                 </div>
                 <div id="seconds">
-                    <div id="four"></div>秒
+                    <div id="four">00</div>秒
                 </div>
             </div>
-            <div>完全平方年 2025，我们来了</div>
+            <div>Happy new year! 新年快乐！</div>
         </div>
     </div>
-    <div class="canvas" id="canvas-12">
-        
-    </div>
+    <div class="canvas" id="canvas-12"></div>
     <!-- <div id="cards">
         <div id="cards-carousel">
             <div class="cards" id="canvas-10">
