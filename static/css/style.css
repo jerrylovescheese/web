@@ -429,7 +429,7 @@ body {
     font-weight: bold;
     margin-left: 30px;
     margin-right: 30px;
-    margin-top: 160px;
+    margin-top: 40px;
 }
 
 #dev-cal-1>a {
@@ -626,6 +626,10 @@ nav {
     #map-text.active input {
         border-color: #333;
         color: white;
+    }
+
+    #top-bar li:hover {
+        background-color: rgb(47, 47, 47);
     }
 }
 
