@@ -627,6 +627,10 @@ nav {
         border-color: #333;
         color: white;
     }
+
+    #top-bar li:hover {
+        background-color: rgb(47, 47, 47);
+    }
 }
 
 @media (max-width: 768px) {
