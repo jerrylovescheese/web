@@ -225,7 +225,7 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -321,7 +321,6 @@ body {
 
 #content-unit {
     margin-left: 0px;
-    margin-top: 150px;
     transition: all 0.2s;
 }
 
@@ -615,8 +614,13 @@ nav {
     }
 
     #map-text,
-    #map-text.active {
-        color: #fff;
+    #map-text a {
+        color: #ffffff00 !important;
+    }
+
+    #map-text.active,
+    #map-text.active a {
+        color: #fff !important;
     }
 
     #map-text.active input {
