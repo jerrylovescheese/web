@@ -456,8 +456,8 @@ body {
 
 #copyright-info {
     font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 15px;
-    text-align: right;
+    font-size: 14px;
+    text-align: center;
     background-color: #dedede8b;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -791,24 +791,25 @@ nav {
 
 /* Make the scrollbar appear on top of the content */
 html {
-    scrollbar-width: none;
+    scrollbar-width: thin;
     /* For Firefox */
     scrollbar-color: #888 transparent;
     /* For Firefox */
 }
 
 body {
-    overflow: overlay;
-    /* For WebKit browsers, enables overlay scrollbars */
+    overflow-y: overlay;
+    /* 仅启用垂直滚动条 */
+    overflow-x: hidden;
+    /* 禁用水平滚动条 */
 }
 
 /* WebKit browsers: Scrollbar customization */
 ::-webkit-scrollbar {
-    display: none;
-    width: 8px;
-    /* Make it thin */
+    width: 5px;
+    /* 垂直滚动条宽度 */
     height: 0px;
-    /* For horizontal scrollbar */
+    /* 隐藏水平滚动条 */
 }
 
 ::-webkit-scrollbar-track {
@@ -851,8 +852,8 @@ a:hover {
     font-weight: bold;
 }
 
-@-moz-document url-prefix() {
+/* @-moz-document url-prefix() {
     div {
         scrollbar-width: none;
     }
-}
+} */
