@@ -707,7 +707,8 @@ nav {
 
     #header-unit,
     #tool,
-    #header-collapse {
+    #header-collapse,
+    #back-to-top {
         background-color: rgba(68, 68, 68, 0.85) !important;
         border: solid 1px #444 !important;
     }
