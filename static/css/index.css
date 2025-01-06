@@ -490,10 +490,6 @@
         word-break: break-all;
     }
 
-    #n-marquee-2 {
-        margin-right: 30px;
-    }
-
     #canvas-7-text,
     #canvas-7>.canvas-text-small {
         margin-left: 0 !important;
@@ -506,16 +502,6 @@
 
     #canvas-8 button {
         margin-left: 30px !important;
-    }
-
-    #namecard {
-        top: 70px !important;
-        left: 0px !important;
-    }
-
-    .n-marquee {
-        height: unset;
-        padding: 3px;
     }
 
     #canvas-11>.canvas-text {
@@ -547,14 +533,8 @@
 }
 
 @media (max-width: 430px) {
-
-    #n-marquee-1 {
-        display: none;
-    }
-
-    #n-marquee-2:hover {
-        padding-top: 10px;
-        padding-bottom: 10px;
+    .n-marquee:focus-within {
+        height: 70px !important;
     }
 
     #cards {
@@ -1184,32 +1164,28 @@
 
 #namecard {
     position: absolute;
-    top: 10px;
-    left: 130px;
-    right: 0;
+    top: 55px;
+    left: 10px;
+    right: 10px;
     display: flex;
-    justify-content: start;
+    justify-content: center;
 }
 
 .n-marquee {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
     background-color: rgb(238, 238, 238);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
-        0 2px 2px rgba(0, 0, 0, 0.11),
-        0 4px 4px rgba(0, 0, 0, 0.11),
-        0 8px 8px rgba(0, 0, 0, 0.11);
     border: solid 1px #eee;
     font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 14px;
     transition: all 0.25s;
     overflow: hidden;
-    margin-left: 10px;
 }
 
 .n-marquee:focus-within {
     width: fit-content;
+    height: 50px;
     padding-left: 15px;
     padding-right: 15px;
     display: flex;
@@ -1223,9 +1199,9 @@
 }
 
 .n-marquee i {
-    margin-left: 18px;
-    margin-top: 18px;
-    margin-bottom: 18px;
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .n-marquee:focus-within i {
@@ -1263,6 +1239,10 @@
 #namecard-text:active {
     scale: 95%;
     box-shadow: none;
+}
+
+#n-marquee-2 {
+    margin-left: 10px;
 }
 
 #canvas-7 {
