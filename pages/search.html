@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <title>Search (beta)</title>
-    <script src="../static/js/header.js"></script>
+    <script src="../static/js/header_search.js"></script>
     <script src="../static/js/include.js"></script>
     <script src="../static/js/jquery-3.7.1.js"></script>
     <script src="../static/js/progress.js"></script>
@@ -24,7 +24,7 @@
 
         @media (max-width: 425px) {
 
-            input,
+            #content-unit input,
             #update,
             #dev-cal-2,
             #___gcse_0,
@@ -45,7 +45,7 @@
             margin-right: 30px;
         } */
 
-        #search {
+        #content-unit #search {
             height: 40px;
             width: calc(100% - 70px);
             margin-left: 30px;
@@ -53,12 +53,8 @@
             font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 15px;
             border-radius: 10px;
-            border: none;
-            box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
-                0 2px 2px hsl(0deg 0% 0% / 0.075),
-                0 4px 4px hsl(0deg 0% 0% / 0.075),
-                0 8px 8px hsl(0deg 0% 0% / 0.075),
-                0 16px 16px hsl(0deg 0% 0% / 0.075);
+            border: solid 1px #eee;
+            background-color: #ededed30;
         }
 
         #results {
@@ -86,7 +82,7 @@
             <span id="en-warn-text"><i class="fas fa-warning"></i>&emsp;此网页使用了谷歌搜索引擎插件，可能无法在某些地区成功加载。</span>
         </div>
         <br> -->
-        <br>
+        <br><br><br><br><br><br><br><br><br>
         <input type="text" id="search" placeholder="Search...">
         <ul id="results">
             Search function now in beta and for English (US) only!
