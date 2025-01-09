@@ -371,6 +371,14 @@
         background-color: transparent !important;
         border: transparent !important;
     }
+
+    #canvas-14-str {
+        background-color: #333 !important;
+    }
+
+    .canvas-14-circle {
+        background-color: rgb(230, 230, 230) !important;
+    }
 }
 
 @media (prefers-color-scheme: light) {
@@ -413,14 +421,6 @@
 
     #canvas-8 {
         background-color: #fff !important;
-    }
-}
-
-@media (max-width: 768px) {
-    #bar-wrapper {
-        margin-right: 15px !important;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
     }
 }
 
@@ -548,6 +548,14 @@
 
     #real-clock {
         top: 95px !important;
+    }
+
+    #canvas-14-str {
+        left: 0 !important;
+    }
+
+    .canvas-14-circle {
+        margin-left: 2px !important;
     }
 }
 
@@ -802,8 +810,8 @@
 }
 
 .canvas {
-    width: calc(100vw - 20px);
-    height: 80vh;
+    width: 100vw;
+    height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -813,10 +821,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    border-radius: 20px;
-    border: solid 1px #eee;
-    margin-bottom: 10px;
-    margin-left: 10px;
 }
 
 #cards {
@@ -1375,6 +1379,54 @@
     border-radius: 0;
     margin-left: 0;
     margin-bottom: 0;
+}
+
+#canvas-12,
+#canvas-13 {
+    height: fit-content;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#canvas-14 {
+    height: fit-content;
+}
+
+#canvas-14-str {
+    width: 2px;
+    height: calc(100% - 80px);
+    position: absolute;
+    left: 30px;
+    top: 80px;
+    background-color: #333;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.canvas-14-breakpoint {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50vh;
+}
+
+#canvas-14-1 {
+    margin-top: 20vh;
+}
+
+.canvas-14-circle {
+    width: 10px;
+    height: 20px;
+    background-color: black;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: 32px;
+}
+
+.canvas-14-text {
+    width: calc(100vw - 90px);
+    font-family: 'Space Grotesk', 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    margin-left: 10px;
 }
 
 #canvas-11.active {
