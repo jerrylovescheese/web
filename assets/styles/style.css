@@ -223,7 +223,7 @@
 
 @media (prefers-color-scheme: dark) {
     #bar {
-        background-color: #2a2b30;
+        background-color: #363534;
     }
 
     #home {
@@ -231,7 +231,7 @@
     }
 
     #waterfall.active {
-        background-color: #2a2b30;
+        background-color: #363534;
     }
 
     #waterfall.active #bubble-1 {
@@ -243,7 +243,7 @@
     }
 }
 
-main {
+#content-unit {
     margin-top: 100px;
     margin-left: 15px;
     margin-right: 15px;
@@ -252,6 +252,7 @@ main {
 }
 
 #heading {
+    font-family: 'ITC Garamond Narrow', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 50px;
 }
 
@@ -316,10 +317,6 @@ a {
     text-align: center;
     font-weight: bold;
     font-size: 24px;
-}
-
-#content-unit {
-    margin-left: 0;
 }
 
 .apple-box {
@@ -392,7 +389,11 @@ td {
     font-size: 20px;
 }
 
-/* dubdub */
+#update {
+    font-family: 'ITC Garamond Narrow', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* apple.html */
 
 @media (max-width: 425px) {
 
@@ -465,10 +466,6 @@ td {
 
 .dubdub-info-special {
     margin-top: 0;
-}
-
-#content-unit {
-    margin-left: 0;
 }
 
 .dubdub-entries {
@@ -975,6 +972,7 @@ svg {
 #pages-container-2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
 }
 
 #pages-container-2 #text-n {
@@ -1001,6 +999,11 @@ svg {
     #text-n>b {
         display: block;
         margin-bottom: 5px;
+    }
+
+    #pages-container-2 {
+        word-break: break-all;
+        grid-template-columns: 1fr 1fr !important;
     }
 }
 
@@ -1060,4 +1063,47 @@ td {
 
 .halt-label {
     font-weight: bold;
+}
+
+/* index.html */
+
+#index-light {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(#f5f2ef, white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+@media (prefers-color-scheme: dark) {
+    #index-light {
+        background-image: linear-gradient(#363534, black) !important;
+    }
+
+    .index-good {
+        border-color: white !important;
+    }
+}
+
+.index-canvas {
+    margin-top: 100px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: lighter;
+}
+
+.index-canvas #text-n {
+    font-size: 22px;
+}
+
+.index-good {
+    width: fit-content;
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: solid 1px black;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
