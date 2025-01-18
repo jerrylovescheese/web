@@ -1,4 +1,10 @@
-from flask import Flask, render_template, abort, url_for
+"""
+    Author: Genrative AI
+    Date: 2025-01-18
+    Version: 1.0
+"""
+
+from flask import Flask, render_template, abort
 from flask_frozen import Freezer
 import os
 
@@ -25,12 +31,19 @@ def serve_page(page_name):
         abort(404)  # Return a 404 error if the page doesn't exist
 
 
-@app.context_processor
-def override_url_for():
-    return dict(url_for=lambda endpoint, **values: './' + url_for(endpoint, **values).lstrip('/'))
-
-
 freezer = Freezer(app)
+
+# Register generator for dynamic pages
+
+
+@freezer.register_generator
+def serve_page():
+    # List all files in the 'pages' directory
+    pages_dir = "pages"
+    for file_name in os.listdir(pages_dir):
+        if file_name.endswith(".html"):
+            # Pass the page name without '.html'
+            yield {"page_name": file_name[:-5]}
 
 
 if __name__ == '__main__':
