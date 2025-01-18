@@ -1,4 +1,5 @@
 from flask import Flask, render_template, abort
+from flask_frozen import Freezer
 import os
 
 app = Flask(__name__, template_folder="assets/templates")
@@ -24,6 +25,8 @@ def serve_page(page_name):
         abort(404)  # Return a 404 error if the page doesn't exist
 
 
-# Only run the Flask server if in local development environment
-if __name__ == "__main__" and os.getenv("FLASK_ENV") != "production":
-    app.run(debug=True)
+freezer = Freezer(app)
+
+
+if __name__ == '__main__':
+    freezer.freeze()
