@@ -2,4 +2,3 @@ Flask
 Frozen-Flask
 Markdown
 Pygments
-Flask-Static-Digest
