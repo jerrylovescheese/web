@@ -30,6 +30,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Set up environment
+      run: echo "FLASK_ENV=production" >> $GITHUB_ENV
+
     # Step 4: Run flask freeze
     - name: Freeze Flask App
       run: |
