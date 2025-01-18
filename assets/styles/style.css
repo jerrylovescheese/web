@@ -972,6 +972,11 @@ svg {
 
 /* contact.html */
 
+#pages-container-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 #pages-container-2 #text-n {
     display: grid;
     grid-template-columns: 1fr 1fr;
