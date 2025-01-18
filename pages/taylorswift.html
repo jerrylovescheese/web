@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Swiftiepedia</title>
+    <script src="../static/js/header.js"></script>
+    <script src="../static/js/include.js"></script>
+    <script src="../static/js/jquery-3.7.1.js"></script>
+    <script src="../static/js/progress.js"></script>
+    <script src="../static/js/loader.js"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css">
+    <link rel="shortcut icon" href="../Aug-18-2023-Favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://db.onlinewebfonts.com/c/a4ea302c99b5ba55e6778c730de81ebd?family=Neue+Haas+Grotesk+Text+Pro+55+Roman"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Big Caslon FB';
+            src: url(../../static/fonts/BigCaslonFB-Regular.woff2) format('woff2');
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: 'Big Caslon FB';
+            src: url(../../static/fonts/BigCaslonFB-Bold.woff2) format('woff2');
+            font-weight: 1000;
+        }
+
+        @media (max-width: 425px) {
+
+            #dev-cal-1,
+            #update,
+            #dev-cal-2,
+            .pages-container,
+            #taylor-swift-album-list,
+            .taylor-swift-album,
+            #en-warn {
+                margin-left: 30px !important;
+                margin-right: 30px !important;
+            }
+
+            #dev-cal-1 {
+                font-size: 50px !important;
+                margin-top: 125px;
+            }
+
+            .album {
+                width: 110px !important;
+                height: 110px !important;
+            }
+
+            .album-title {
+                font-size: 13px !important;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+
+            #pages-backdrop,
+            .pages-container,
+            #en-warn {
+                background-color: unset !important;
+            }
+        }
+
+        .scroll-indicator {
+            background-color: #eceae6;
+        }
+
+        #pages-backdrop {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #eceae6;
+            z-index: -1;
+        }
+
+        .subtitle {
+            font-weight: bold;
+            font-size: 25px !important;
+        }
+
+        .breaking {
+            color: #cc0700;
+        }
+
+        .pages-container {
+            padding: 0 !important;
+            background-color: #eceae6;
+        }
+
+        #en-warn {
+            background-color: #fff;
+        }
+
+        .pages-container>#dev-cal-2 {
+            margin-left: 30px !important;
+        }
+
+        #album-shelf {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            margin-right: 30px;
+        }
+
+        .album {
+            width: 200px;
+            height: 200px;
+            aspect-ratio: 1/1;
+            border-radius: 10px;
+            margin-left: 30px;
+            margin-bottom: 30px;
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+                0 2px 2px hsl(0deg 0% 0% / 0.075),
+                0 4px 4px hsl(0deg 0% 0% / 0.075),
+                0 8px 8px hsl(0deg 0% 0% / 0.075),
+                0 16px 16px hsl(0deg 0% 0% / 0.075);
+            transition: all 0.25s;
+            overflow: hidden;
+        }
+
+        .album:hover {
+            transform: scale(102.5%);
+        }
+
+        .album:active {
+            transform: scale(97.5%);
+        }
+
+        #album-11 {
+            background-image: url(../static/img/IMG_7163.webp);
+        }
+
+        #album-10 {
+            background-image: url(../static/img/592x592bb.webp);
+        }
+
+        #album-9 {
+            background-image: url(../static/img/592x592bb\ \(1\).webp);
+        }
+
+        #album-8 {
+            background-image: url(../static/img/592x592bb\ \(2\).webp);
+        }
+
+        #album-7 {
+            background-image: url(../static/img/592x592bb\ \(3\).webp);
+        }
+
+        #album-6 {
+            background-image: url(../static/img/592x592bb\ \(4\).webp);
+        }
+
+        #album-5 {
+            background-image: url(../static/img/592x592bb\ \(5\).webp);
+        }
+
+        #album-4 {
+            background-image: url(../static/img/592x592bb\ \(6\).webp);
+        }
+
+        #album-3 {
+            background-image: url(../static/img/592x592bb\ \(7\).webp);
+        }
+
+        #album-2 {
+            background-image: url(../static/img/592x592bb\ \(8\).webp);
+        }
+
+        #album-1 {
+            background-image: url(../static/img/592x592bb\ \(9\).webp);
+        }
+
+        .album-title {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 16px;
+            color: #fff;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            margin-left: 5px;
+            margin-right: 10px;
+            text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        #album-title-11 {
+            font-family: 'Big Caslon FB', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            letter-spacing: 2.5px;
+        }
+
+        #album-title-10 {
+            font-family: 'Neue Haas Grotesk Text Pro 55 Roman', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #album-title-9,
+        #album-title-8 {
+            font-family: 'IM Fell DW Pica', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-container"></div>
+    <include src="../layout/layout.html"></include>
+    <div class="loader-wrapper">
+        <i class="fa-solid fa-spinner fa-spin"></i>&emsp;<span id="loader-prompt">Preparing elements.</span>
+    </div>
+
+    <div id="content-unit">
+        <p id="dev-cal-1">Swiftiepedia</p>
+        <p id="update">这个页面上一次更新于2024年2月20日</p>
+
+        <div id="pages-backdrop"></div>
+
+        <br>
+        <div id="en-warn">
+            <span id="en-warn-text"><i class="fas fa-warning"></i>&emsp;此网页仅提供英文版本。&emsp;This website is available in
+                English only.</span>
+        </div>
+        <p id="dev-cal-2"><span class="subtitle" id="title-0">News</span></p>
+        <div class="pages-container">
+            <p id="dev-cal-2">
+                <span class="breaking"><b><i class="fas fa-circle-exclamation"></i>&emsp;BREAKING:</b> Taylor Swift wins
+                    Album of the Year for the FOURTH time at the 66th Grammys for <i>Midnights</i></span><br>
+                <span class="breaking"><b><i class="fas fa-circle-exclamation"></i>&emsp;BREAKING:</b> Taylor Swift
+                    becomes
+                    the first artist ever to win Grammys Album of the Year 4 times</span><br>
+                <span class="breaking"><b><i class="fas fa-circle-exclamation"></i>&emsp;BREAKING:</b> Taylor Swift
+                    announces new album during her Best Pop Vocal Album Grammys Awards acceptance speech</span><br>
+                <span class="breaking"><b><i class="fas fa-circle-exclamation"></i>&emsp;BREAKING:</b> Taylor Swift
+                    announces new album <i>The Tortured Poets Department</i> with release date April 19</span><br>
+                <span class="breaking"><b><i class="fas fa-circle-exclamation"></i>&emsp;BREAKING:</b> Taylor Swift
+                    announces new album <i>The Tortured Poets Department</i> tracklist</span>
+            </p>
+        </div>
+        <p id="dev-cal-2"><span class="subtitle" id="title-1">Albums</span></p>
+        <div class="pages-container">
+            <div id="album-shelf">
+                <a href="./subpages/ttpd.html">
+                    <div class="album" id="album-11">
+                        <span class="album-title" id="album-title-11">THE TORTURED POETS DEPARTMENT <i
+                                class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="./subpages/midnights.html">
+                    <div class="album" id="album-10">
+                        <span class="album-title" id="album-title-10">Midnights <i
+                                class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <div class="album" id="album-9">
+                    <span class="album-title" id="album-title-9">evermore</span>
+                </div>
+                <a href="./subpages/folklore.html">
+                    <div class="album" id="album-8">
+                        <span class="album-title" id="album-title-8">folklore</span>
+                    </div>
+                </a>
+                <a href="./subpages/lover.html">
+                    <div class="album" id="album-7">
+                        <span class="album-title" id="album-title-7">Lover <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <div class="album" id="album-6">
+                    <span class="album-title" id="album-title-6">reputation</span>
+                </div>
+                <a href="./subpages/1989tv.html">
+                    <div class="album" id="album-5">
+                        <span class="album-title" id="album-title-5">1989 (Taylor's Version) <i
+                                class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <div class="album" id="album-4">
+                    <span class="album-title" id="album-title-4">Red (Taylor's Version)</span>
+                </div>
+                <div class="album" id="album-3">
+                    <span class="album-title" id="album-title-3">Speak Now (Taylor's Version)</span>
+                </div>
+                <div class="album" id="album-2">
+                    <span class="album-title" id="album-title-2">Fearless (Taylor's Version)</span>
+                </div>
+                <div class="album" id="album-1">
+                    <span class="album-title" id="album-title-1">Taylor Swift</span>
+                </div>
+            </div>
+        </div>
+
+
+        <br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br>
+    </div>
+    <include src="../layout/footer.html"></include>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="../static/js/search.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>调查问卷</title>
+    <script src="../static/js/header.js"></script>
+    <script src="../static/js/include.js"></script>
+    <script src="../static/js/jquery-3.7.1.js"></script>
+    <script src="../static/js/progress.js"></script>
+    <script src="../static/js/loader.js"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css">
+    <link rel="shortcut icon" href="../Aug-18-2023-Favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+    <include src="../layout/layout.html"></include>
+    <div class="loader-wrapper">
+        <i class="fa-solid fa-spinner fa-spin"></i>&emsp;<span id="loader-prompt">Preparing elements.</span>
+    </div>
+
+    <div id="header-unit">
+        <div class="header">&emsp;<a href="../index.html"><i
+                    class="fas fa-chevron-left"></i>&emsp14;&emsp14;&emsp14;回到上一页</a>
+        </div>
+        <div id="quick-links">
+            <b>ON THIS PAGE:</b>
+            <span id="quick-link-1" class="quick-link">调查问卷及数据收集网站</span>
+        </div>
+        <div class="scroll-indicator"></div>
+    </div>
+
+    <div id="content-unit">
+
+        <p id="dev-cal-1">调查问卷</p>
+        <p id="update">这个页面上一次更新于2024年2月20日</p>
+
+        <p id="dev-cal-2">感谢参与！</p>
+        <p id="dev-cal-2">当有新调查问卷公布时，我会在这里展示。</p>
+
+
+        <br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br>
+    </div>
+    <include src="../layout/footer.html"></include>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="../static/js/search.js"></script>
+</body>
+
+</html>

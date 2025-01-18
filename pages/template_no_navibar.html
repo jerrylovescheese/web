@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>template_no_navibar</title>
+    <script src="../static/js/header.js"></script>
+    <script src="../static/js/include.js"></script>
+    <script src="../static/js/jquery-3.7.1.js"></script>
+    <script src="../static/js/loader.js"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css">
+    <link rel="shortcut icon" href="../Aug-18-2023-Favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <style>
+        @media (max-width: 768px) {
+            #bar-wrapper {
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+            }
+        }
+
+        #header-collapse {
+            display: none;
+        }
+
+        #dev-cal-1 {
+            font-size: 50px;
+            text-align: center;
+        }
+
+        #update {
+            text-align: center;
+        }
+
+        #content-unit {
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-container"></div>
+    <include src="../layout/layout.html"></include>
+    <div class="loader-wrapper">
+        <i class="fa-solid fa-spinner fa-spin"></i>&emsp;<span id="loader-prompt">Preparing elements.</span>
+    </div>
+
+    <div id="content-unit">
+
+        <p id="dev-cal-1">template_no_navibar</p>
+        <div class="pages-container">
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <include src="../layout/footer.html"></include>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="../static/js/search.js"></script>
+</body>
+
+</html>

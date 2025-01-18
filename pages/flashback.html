@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>采光间</title>
+    <script src="../static/js/header.js"></script>
+    <script src="../static/js/include.js"></script>
+    <script src="../static/js/jquery-3.7.1.js"></script>
+    <script src="../static/js/progress.js"></script>
+    <script src="../static/js/loader.js"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/fontawesome/css/all.css">
+    <link rel="shortcut icon" href="../Aug-18-2023-Favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <style>
+        @media (max-width: 425px) {
+
+            #dev-cal-1,
+            #update,
+            #dev-cal-2,
+            .picture {
+                margin-left: 30px !important;
+                margin-right: 30px !important;
+            }
+
+            #dev-cal-1 {
+                font-size: 70px;
+                margin-top: 125px;
+            }
+        }
+
+        .picture {
+            width: auto;
+            aspect-ratio: 3/4;
+            margin-left: 140px;
+            margin-right: 30px;
+            border-radius: 20px;
+            background-image: url(../static/img/Weixin\ Image_20230821163300.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-container"></div>
+    <include src="../layout/layout.html"></include>
+    <div class="loader-wrapper">
+        <i class="fa-solid fa-spinner fa-spin"></i>&emsp;<span id="loader-prompt">Preparing elements.</span>
+    </div>
+
+    <div id="header-unit">
+        <div class="header">&emsp;<a href="../index.html"><i
+                    class="fas fa-chevron-left"></i>&emsp14;&emsp14;&emsp14;回到上一页</a>
+        </div>
+        <div id="quick-links">
+            <b>ON THIS PAGE:</b>
+            <span class="quick-link" id="quick-link-1">老照片</span>
+        </div>
+        <div class="scroll-indicator"></div>
+    </div>
+
+    <div id="content-unit">
+        <p id="dev-cal-1">采光间</p>
+        <p id="dev-cal-2" style="font-size: larger; font-weight: bold;">西外南路6号</p>
+        <div class="picture" id="1"></div>
+
+
+        <br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br>
+    </div>
+    <include src="../layout/footer.html"></include>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="../static/js/search.js"></script>
+</body>
+
+</html>

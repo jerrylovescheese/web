@@ -1,0 +1,225 @@
+/*
+ * Author: Jiangyuan Li
+ * Version: 10.0
+ * Date: 2025-01-17
+ */
+
+@font-face {
+    font-family: 'ITC Garamond Narrow';
+    font-weight: 300;
+    font-style: normal;
+    src: url(../fonts/itc-garamond-std-book-narrow.otf);
+}
+
+@font-face {
+    font-family: 'ITC Garamond Narrow';
+    font-weight: 300;
+    font-style: italic;
+    src: url(../fonts/itc-garamond-std-book-narrow-italic.otf);
+}
+
+@font-face {
+    font-family: 'ITC Garamond Narrow';
+    font-weight: 1000;
+    font-style: normal;
+    src: url(../fonts/itc-garamond-std-bold-narrow.otf);
+}
+
+@font-face {
+    font-family: 'ITC Garamond Narrow';
+    font-weight: 1000;
+    font-style: italic;
+    src: url(../fonts/itc-garamond-std-bold-narrow-italic.otf);
+}
+
+@font-face {
+    font-family: 'ITC Garamond Narrow';
+    font-weight: 100;
+    font-style: normal;
+    src: url(../fonts/itc-garamond-std-light-narrow.otf);
+}
+
+@font-face {
+    font-family: 'ITC Garamond Narrow';
+    font-weight: 100;
+    font-style: italic;
+    src: url(../fonts/itc-garamond-std-light-narrow-italic.otf);
+}
+
+#bar {
+    width: fit-content;
+    height: 50px;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #fff9f3;
+    border-radius: 10px;
+    z-index: 40;
+}
+
+#lines {
+    height: 41px;
+    padding-top: 8px;
+    overflow: hidden;
+}
+
+#home {
+    height: 46px;
+    aspect-ratio: 9/5;
+    background-image: url(../images/home-button-light.svg);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center center;
+    transition: all 0.2s;
+}
+
+#home:hover {
+    background-size: 95%;
+}
+
+#home:active {
+    background-size: 85%;
+}
+
+.lines {
+    display: block;
+    font-family: 'ITC Garamond Narrow';
+    font-weight: lighter;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+#waterfall {
+    width: 100vw;
+    height: 0vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.2s cubic-bezier(.86, 0, .07, 1);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    z-index: 39;
+}
+
+#waterfall.active {
+    height: 100vh;
+    background-color: #fff9f3;
+}
+
+#bubble-1 {
+    z-index: 38;
+}
+
+#waterfall.active #bubble-1 {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: -1000px;
+    right: -1000px;
+    border-radius: 600px;
+    filter: blur(100px);
+    background-image: radial-gradient(circle at top, #fff9f3, rgb(255, 199, 58), rgb(146, 72, 40));
+    animation: bubble 5s infinite alternate;
+}
+
+#wa-table {
+    margin-top: 100px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+#wa-links {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    font-family: 'ITC Garamond Narrow';
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+#wa-table h3 {
+    margin-left: 30px;
+    font-family: 'ITC Garamond Narrow';
+    font-weight: normal;
+    font-size: 50px;
+    margin-top: 0px;
+}
+
+#wa-links a,
+#lines a {
+    text-decoration: none;
+    color: unset;
+}
+
+#wa-links ul {
+    list-style: none;
+    padding-left: 30px;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#wa-links input {
+    height: 30px;
+    font-family: 'ITC Garamond Narrow';
+    font-weight: lighter;
+    font-size: 25px;
+    border: none;
+    border-radius: 5px;
+}
+
+@keyframes bubble {
+    0% {
+        top: -1000px;
+        right: -100px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top: -100px;
+        right: -600px;
+        transform: rotate(340deg);
+    }
+}
+
+@media (max-width: 768px) {
+    #bar {
+        width: calc(100vw - 20px);
+        height: 67.5px;
+        align-items: start;
+    }
+
+    #lines {
+        height: 59.5px;
+    }
+
+    #wa-table h3 {
+        font-size: 30px;
+    }
+
+    #wa-table ul {
+        padding-left: 6px;
+        margin-top: 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #bar {
+        background-color: #2a2b30;
+    }
+
+    #home {
+        background-image: url(../images/home-button-dark.svg);
+    }
+
+    #waterfall.active {
+        background-color: #2a2b30;
+    }
+
+    #waterfall.active #bubble-1 {
+        background-image: radial-gradient(circle at top, #1a1a1a, #b86614, rgb(151, 31, 17));
+    }
+}
