@@ -34,18 +34,18 @@ jobs:
     - name: Set up environment
       run: echo "FLASK_ENV=production" >> $GITHUB_ENV
 
-    # Step 4: Run Flask app to generate static files
-    - name: Run Flask app to generate static files
+    # Step 4: Run flask freeze to generate static files
+    - name: Freeze Flask App
       run: |
         mkdir -p build
-        python app.py  # Ensure app.py generates static files in the 'build' directory
+        flask freeze  # This should generate static files in './build'
 
     # Step 5: Upload artifact for deployment
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
         name: github-pages
-        path: ./build  # Upload the 'build' folder that contains the static files
+        path: build
 
   deploy:
     runs-on: ubuntu-latest
@@ -54,7 +54,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: github-pages  # Artifact name must match
+          artifact_name: github-pages
     permissions:
       id-token: write   # Required for OpenID Connect (OIDC) authentication
       pages: write      # Required for GitHub Pages deployments
