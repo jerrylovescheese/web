@@ -1,4 +1,4 @@
-from flask import Flask, render_template, abort
+from flask import Flask, render_template, abort, url_for
 from flask_frozen import Freezer
 import os
 
@@ -23,6 +23,11 @@ def serve_page(page_name):
         return render_template("dynamic_page.html", content=content)
     else:
         abort(404)  # Return a 404 error if the page doesn't exist
+
+
+@app.context_processor
+def override_url_for():
+    return dict(url_for=lambda endpoint, **values: './' + url_for(endpoint, **values).lstrip('/'))
 
 
 freezer = Freezer(app)
