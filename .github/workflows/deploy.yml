@@ -12,6 +12,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: github-pages  # Specify the environment here
 
     steps:
     # Step 1: Checkout the repository
@@ -30,6 +31,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Set up environment
+      run: echo "FLASK_ENV=production" >> $GITHUB_ENV
+
     # Step 4: Run flask freeze
     - name: Freeze Flask App
       run: |
@@ -37,10 +41,11 @@ jobs:
         python app.py  # Generate static files in the './build' directory
 
     # Step 5: Deploy GitHub Pages
-    - name: Upload artifact for Pages
-      uses: actions/upload-pages-artifact@v1
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        path: ./build  # Specify the folder containing static files
+        folder: ./build
+        token: ${{ secrets.GITHUB_TOKEN }}
 
   deploy:
     needs: build
