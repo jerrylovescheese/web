@@ -1,9 +1,7 @@
 from flask import Flask, render_template, abort
-from flask_static_digest import FlaskStaticDigest
 import os
 
 app = Flask(__name__, template_folder="assets/templates")
-flask_static_digest = FlaskStaticDigest(app)
 
 # Serve static files from the 'assets' folder
 app.static_folder = "assets"
@@ -28,6 +26,4 @@ def serve_page(page_name):
 
 # Only run the Flask server if in local development environment
 if __name__ == "__main__" and os.getenv("FLASK_ENV") != "production":
-    flask_static_digest.init_app(app)
-    flask_static_digest.digest()
     app.run(debug=True)
