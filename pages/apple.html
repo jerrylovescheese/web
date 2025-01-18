@@ -1,1665 +1,1242 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light dark">
-    <title>关于苹果的一切</title>
-    <script src="../static/js/header.js"></script>
-    <script src="../static/js/include.js"></script>
-    <script src="../static/js/jquery-3.7.1.js"></script>
-    <script src="../static/js/progress.js"></script>
-    <script src="../static/js/loader.js"></script>
-    <script>
-        $(function () {
-            $("#apple-subtitle").click(function () {
-                $("#apple-event").toggleClass("active");
-            });
+<script>
+    $(function () {
+        $("#apple-subtitle").click(function () {
+            $("#apple-event").toggleClass("active");
         });
+    });
 
-        $(function () {
-            $("#apple-mac").click(function () {
-                $("#mac-section").toggleClass("active");
-            });
+    $(function () {
+        $("#apple-mac").click(function () {
+            $("#mac-section").toggleClass("active");
         });
+    });
 
-        $(function () {
-            $("#apple-iphone").click(function () {
-                $("#iphone-section").toggleClass("active");
-            });
+    $(function () {
+        $("#apple-iphone").click(function () {
+            $("#iphone-section").toggleClass("active");
         });
+    });
 
-        $(function () {
-            $("#apple-ipad").click(function () {
-                $("#ipad-section").toggleClass("active");
-            });
+    $(function () {
+        $("#apple-ipad").click(function () {
+            $("#ipad-section").toggleClass("active");
         });
+    });
 
-        $(function () {
-            $("#apple-wwdc").click(function () {
-                $("#wwdc-section").toggleClass("active");
-            });
+    $(function () {
+        $("#apple-wwdc").click(function () {
+            $("#wwdc-section").toggleClass("active");
         });
+    });
 
-        $(function () {
-            $("#dubdub-visionos").click(function () {
-                $("#dubdub-info-1").toggleClass("active");
-            });
+    $(function () {
+        $("#dubdub-visionos").click(function () {
+            $("#dubdub-info-1").toggleClass("active");
         });
+    });
 
-        $(function () {
-            $("#dubdub-ios").click(function () {
-                $("#dubdub-info-2").toggleClass("active");
-            });
+    $(function () {
+        $("#dubdub-ios").click(function () {
+            $("#dubdub-info-2").toggleClass("active");
         });
-    </script>
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/fontawesome/css/all.css">
-    <link rel="shortcut icon" href="../Aug-18-2023-Favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <style>
-        @media (max-width: 768px) {
-            #bar-wrapper {
-                border-bottom-left-radius: 15px;
-                border-bottom-right-radius: 15px;
-            }
-        }
-
-        @media (prefers-color-scheme: dark) {
-            td {
-                border-right-color: white !important;
-                border-bottom-color: white !important;
-            }
-
-            .apple-image-box {
-                border-color: #575757;
-            }
-        }
-
-        @media (max-width: 430px) {
-            .apple-box {
-                flex-direction: column;
-            }
-
-            .apple-image-box {
-                width: 55% !important;
-            }
-        }
-
-        #header-collapse {
-            display: none;
-        }
-
-        #dev-cal-1 {
-            font-size: 50px;
-            text-align: center;
-        }
-
-        .subtitle {
-            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            text-align: center;
-            margin-left: 30px;
-            margin-right: 30px;
-        }
-
-        #update {
-            text-align: center;
-        }
-
-        #content-unit {
-            margin-left: 0;
-        }
-
-        .apple-box {
-            display: flex;
-        }
-
-        .apple-image-box {
-            width: 30%;
-            aspect-ratio: 1/1;
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            border: solid 1px #ddd;
-            border-radius: 10px;
-            margin-left: 30px;
-            background-color: white;
-        }
-
-        #apple-image-box-1 {
-            background-image: url(../static/img/Apple-iPhone-16-Pro-hero-240909.jpg);
-        }
-
-        #apple-image-box-2 {
-            background-image: url(../static/img/Apple-iPhone-16-hero-240909.jpg);
-        }
-
-        .apple-text-box {
-            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin-left: 20px;
-        }
-
-        .apple-text-box .subtitle {
-            font-size: 20px !important;
-            text-align: left;
-        }
-
-        #apple-event,
-        #mac-section,
-        #iphone-section,
-        #ipad-section,
-        #wwdc-section {
-            display: none;
-        }
-
-        #apple-event.active,
-        #mac-section.active,
-        #iphone-section.active,
-        #ipad-section.active,
-        #wwdc-section.active {
-            display: block;
-        }
-
-        .subtitle {
-            text-align: left;
-        }
-
-        table {
-            border-top: solid 1px black;
-            border-bottom: solid 1px black;
-            font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin: 0 auto;
-        }
-
-        td {
-            border-top: solid 1px black;
-            padding: 5px;
-        }
-
-        .subtitle-pages {
-            font-size: 20px;
-        }
-
-        /* dubdub */
-
-        @media (max-width: 425px) {
-
-            #dubdub-info-1.active,
-            #dubdub-info-2.active {
-                position: relative;
-                top: -10px;
-            }
-
-            .dubdub-entries {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .dubdub-pictures {
-                width: 100% !important;
-            }
-
-            .dubdub-entries>div>.dubdub-info-special {
-                margin-left: 0px !important;
-            }
-
-            .dubdub-entries>div>#dev-cal-2 {
-                margin-left: 0px !important;
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            #dubdub-subbox {
-                background-color: #fff !important;
-            }
-
-            #dubdub-subbox:hover {
-                background-color: transparent !important;
-            }
-        }
-
-        #dubdub-dark {
-            width: 100%;
-            position: static;
-            top: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            align-items: center;
-            background: #000;
-        }
-
-        #dubdub-info-1,
-        #dubdub-info-2 {
-            display: none;
-        }
-
-        #dubdub-info-1.active,
-        #dubdub-info-2.active {
-            display: block;
-            margin-top: 0px;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-            border-top: none;
-            margin-left: 45px;
-            margin-right: 45px;
-        }
-
-        .dubdub-info-special {
-            font-family: 'Source Han Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .dubdub-info-special {
-            margin-top: 0;
-        }
-
-        #update {
-            text-align: center;
-        }
-
-        #content-unit {
-            margin-left: 0;
-        }
-
-        .dubdub-entries {
-            display: flex;
-        }
-
-        .dubdub-entries>.dubdub-entry-text {
-            width: 95vw;
-        }
-
-        .dubdub-entries>div>.dubdub-info-special {
-            margin-left: 30px;
-        }
-
-        #dubdub-quote {
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .dubdub-pictures {
-            aspect-ratio: 16/9;
-            width: 25vw;
-            border-radius: 10px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            margin-bottom: 10px;
-        }
-
-        #dubdub-pic-1 {
-            background-image: url(../../static/img/IMG_9031.webp);
-        }
-
-        #dubdub-pic-2 {
-            background-image: url(../../static/img/videoframe_1067609.webp);
-        }
-
-        #dubdub-pic-3 {
-            background-image: url(../../static/img/videoframe_1096552.webp);
-        }
-
-        #dubdub-pic-4 {
-            background-image: url(../../static/img/videoframe_1175453.webp);
-        }
-
-        #dubdub-pic-5 {
-            background-image: url(../../static/img/videoframe_1303593.webp);
-        }
-
-        #dubdub-pic-6 {
-            background-image: url(../../static/img/videoframe_1349629.webp);
-        }
-
-        #dubdub-pic-7 {
-            background-image: url(../../static/img/videoframe_1380607.webp);
-        }
-
-        #dubdub-pic-8 {
-            background-image: url(../../static/img/videoframe_1474751.webp);
-        }
-
-        #dubdub-pic-9 {
-            background-image: url(../../static/img/videoframe_1522525.webp);
-        }
-
-        #dubdub-pic-10 {
-            background-image: url(../../static/img/videoframe_1535790.webp);
-        }
-
-        #dubdub-pic-11 {
-            background-image: url(../../static/img/videoframe_1564377.webp);
-        }
-
-        #dubdub-pic-12 {
-            background-image: url(../../static/img/videoframe_1798679.webp);
-        }
-
-        #dubdub-special-style-1 {
-            margin: 0;
-            text-align: right;
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-
-        .dubdub-box {
-            margin-left: 30px;
-            margin-right: 30px;
-            margin-top: 10px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100px;
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 20px;
-            font-weight: bold;
-            transition: all 0.2s;
-        }
-
-        #dubdub-visionos {
-            background: linear-gradient(110deg, #FF6148, #E15C96 33%, #4153E0 66%, #7D7FEB);
-        }
-
-        #dubdub-ios {
-            background: linear-gradient(110deg, #CF807F, #EA6F7D 33%, #0D8EB4 66%, #0D4E4E);
-        }
-
-        #dubdub-ipados {
-            background: linear-gradient(110deg, #339AAF, #2E76DB 33%, #1B175F 66%, #6F57B4);
-        }
-
-        #dubdub-watchos {
-            background: linear-gradient(110deg, #1AB7A1, #3D2DA9 51%, #A53A9F);
-        }
-
-        #dubdub-tvos {
-            background: linear-gradient(110deg, rgb(166, 59, 29), rgb(233, 154, 57));
-        }
-
-        #dubdub-macos {
-            background: linear-gradient(110deg, #021B8B, #1E84D9 33%, #BD83A2 66%, #EF6F33);
-        }
-
-        #dubdub-ai {
-            background-image: linear-gradient(110deg, rgb(91, 176, 249), rgb(77, 152, 247), rgb(185, 116, 244), rgb(229, 102, 115), rgb(241, 163, 60));
-        }
-
-        #dubdub-subbox {
-            margin-left: 1px;
-            margin-right: 1px;
-            border-radius: 9px;
-            width: 100%;
-            line-height: 98px;
-            height: 98px;
-            background-color: #000000;
-            padding-left: 30px;
-            transition: all 0.2s;
-        }
-
-        #dubdub-subbox:hover {
-            background-color: transparent;
-        }
-
-        #dubdub-subbox>.dubdub-sub-box {
-            margin: 0;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            transition: all 0.2s;
-        }
-
-        #dubdub-sub-box-visionos {
-            background: linear-gradient(110deg, #FF6148, #E15C96 33%, #4153E0 66%, #7D7FEB);
-        }
-
-        #dubdub-sub-box-ios {
-            background: linear-gradient(110deg, #CF807F, #EA6F7D 33%, #0D8EB4 66%, #0D4E4E);
-        }
-
-        #dubdub-sub-box-ipados {
-            background: linear-gradient(110deg, #339AAF, #2E76DB 33%, #1B175F 66%, #6F57B4);
-        }
-
-        #dubdub-sub-box-watchos {
-            background: linear-gradient(110deg, #1AB7A1, #3D2DA9 51%, #A53A9F);
-        }
-
-        #dubdub-sub-box-tvos {
-            background: linear-gradient(110deg, rgb(166, 59, 29), rgb(233, 154, 57));
-        }
-
-        #dubdub-sub-box-macos {
-            background: linear-gradient(110deg, #021B8B, #1E84D9 33%, #BD83A2 66%, #EF6F33);
-        }
-
-        #dubdub-sub-box-ai {
-            background: linear-gradient(110deg, rgb(91, 176, 249), rgb(77, 152, 247), rgb(185, 116, 244), rgb(229, 102, 115), rgb(241, 163, 60));
-        }
-
-        #dubdub-subbox:hover .dubdub-sub-box {
-            color: white;
-        }
-    </style>
-</head>
-
-<body>
-    <div id="header-container"></div>
-    <include src="../layout/layout.html"></include>
-    <div class="loader-wrapper">
-        <i class="fa-solid fa-spinner fa-spin"></i>&emsp;<span id="loader-prompt">Preparing elements.</span>
+    });
+</script>
+<h3 id="heading">9:41</h3>
+<div id="content-unit">
+    <p class="subtitle">发布了什么？我们慢点说。</p>
+    <div class="apple-box">
+        <div class="apple-image-box" id="apple-image-box-1">
+        </div>
+        <div class="apple-text-box" id="text-n">
+            <p class="subtitle">iPhone 16 Pro</p>
+            <b>亮点</b>
+            <ul>
+                <li>全新的沙漠钛合金配色</li>
+                <li>A18 Pro 芯片 - 智能手机中最快的芯片</li>
+                <li>拍照按钮加持，拍照更快捷</li>
+                <li>扬声器与录音功能提升</li>
+                <li>影院级 4K120 慢动作</li>
+                <li>空间摄影支持拍摄可在 Apple Vision Pro 中查看的 3D 照片与视频</li>
+                <li>120 Hz ProMotion</li>
+                <li>iPhone 16 Pro Max 搭载 iPhone 史上最长续航</li>
+                <li>新的超瓷晶面板加持，屏幕更坚固</li>
+                <li>Apple Intelligence (明年预计登陆中国大陆)</li>
+            </ul>
+            <b>价格</b>
+            <ul>
+                <li>iPhone 16 Pro, 128 GB: RMB 7,999, $999</li>
+                <li>iPhone 16 Pro, 256 GB: RMB 8,999, $1,099</li>
+                <li>iPhone 16 Pro, 512 GB: RMB 10,999, $1,299</li>
+                <li>iPhone 16 Pro, 1 TB: RMB 12,999, $1,499</li>
+                <li>iPhone 16 Pro Max, 256 GB: RMB 9,999, $1,199</li>
+                <li>iPhone 16 Pro Max, 512 GB: RMB 11,999, $1,399</li>
+                <li>iPhone 16 Pro Max, 1 TB: RMB 12,999, $1,599</li>
+            </ul>
+            <b>购买建议</b>
+            <ul>
+                <li>iPhone 15 Pro 的用户：如果不需要 Apple Intelligence 不建议更新</li>
+                <li>iPhone 14 Pro 及更早机型的用户：可以考虑更新</li>
+            </ul>
+        </div>
     </div>
-
-    <div id="content-unit">
-
-        <p id="dev-cal-1">9:41</p>
-        <p class="subtitle">发布了什么？我们慢点说。</p>
-        <div class="apple-box">
-            <div class="apple-image-box" id="apple-image-box-1">
-            </div>
-            <div class="apple-text-box" id="dev-cal-2">
-                <p class="subtitle">iPhone 16 Pro</p>
-                <b>亮点</b>
-                <ul>
-                    <li>全新的沙漠钛合金配色</li>
-                    <li>A18 Pro 芯片 - 智能手机中最快的芯片</li>
-                    <li>拍照按钮加持，拍照更快捷</li>
-                    <li>扬声器与录音功能提升</li>
-                    <li>影院级 4K120 慢动作</li>
-                    <li>空间摄影支持拍摄可在 Apple Vision Pro 中查看的 3D 照片与视频</li>
-                    <li>120 Hz ProMotion</li>
-                    <li>iPhone 16 Pro Max 搭载 iPhone 史上最长续航</li>
-                    <li>新的超瓷晶面板加持，屏幕更坚固</li>
-                    <li>Apple Intelligence (明年预计登陆中国大陆)</li>
-                </ul>
-                <b>价格</b>
-                <ul>
-                    <li>iPhone 16 Pro, 128 GB: RMB 7,999, $999</li>
-                    <li>iPhone 16 Pro, 256 GB: RMB 8,999, $1,099</li>
-                    <li>iPhone 16 Pro, 512 GB: RMB 10,999, $1,299</li>
-                    <li>iPhone 16 Pro, 1 TB: RMB 12,999, $1,499</li>
-                    <li>iPhone 16 Pro Max, 256 GB: RMB 9,999, $1,199</li>
-                    <li>iPhone 16 Pro Max, 512 GB: RMB 11,999, $1,399</li>
-                    <li>iPhone 16 Pro Max, 1 TB: RMB 12,999, $1,599</li>
-                </ul>
-                <b>购买建议</b>
-                <ul>
-                    <li>iPhone 15 Pro 的用户：如果不需要 Apple Intelligence 不建议更新</li>
-                    <li>iPhone 14 Pro 及更早机型的用户：可以考虑更新</li>
-                </ul>
-            </div>
+    <br>
+    <div class="apple-box">
+        <div class="apple-image-box" id="apple-image-box-2">
         </div>
-        <br>
-        <div class="apple-box">
-            <div class="apple-image-box" id="apple-image-box-2">
-            </div>
-            <div class="apple-text-box" id="dev-cal-2">
-                <p class="subtitle">iPhone 16</p>
-                <b>亮点</b>
-                <ul>
-                    <li>蓝绿粉黑白，浓烈的色彩（去年没墨了他们今年给打印机换新墨盒了）</li>
-                    <li>A18 芯片 - 终于不挤牙膏了？</li>
-                    <li>拍照按钮加持，拍照更快捷</li>
-                    <li>新的双摄系统将三年前就已经推出的微距摄影技术下放，还有24MP</li>
-                    <li>操作按钮登场</li>
-                    <li>空间摄影支持拍摄可在 Apple Vision Pro 中查看的 3D 照片与视频</li>
-                    <li>新的超瓷晶面板加持，屏幕更坚固</li>
-                    <li>Apple Intelligence (明年预计登陆中国大陆)</li>
-                </ul>
-                <b>价格</b>
-                <ul>
-                    <li>iPhone 16, 128 GB: RMB 5,999, $799</li>
-                    <li>iPhone 16, 256 GB: RMB 6,999, $899</li>
-                    <li>iPhone 16, 512 GB: RMB 8,999, $1,099</li>
-                    <li>iPhone 16 Plus, 128 GB: RMB 6,999, $899</li>
-                    <li>iPhone 16 Plus, 256 GB: RMB 7,999, $999</li>
-                    <li>iPhone 16 Plus, 512 GB: RMB 9,999, $1,199</li>
-                </ul>
-                <b>购买建议</b>
-                <ul>
-                    <li>iPhone 14 及更早机型的用户：建议更新，今年基础版机型的升级力度其实是比 Pro 要大的</li>
-                    <li>iPhone 15 的用户：如果不需要 Apple Intelligence 不建议更新</li>
-                </ul>
-            </div>
+        <div class="apple-text-box" id="text-n">
+            <p class="subtitle">iPhone 16</p>
+            <b>亮点</b>
+            <ul>
+                <li>蓝绿粉黑白，浓烈的色彩（去年没墨了他们今年给打印机换新墨盒了）</li>
+                <li>A18 芯片 - 终于不挤牙膏了？</li>
+                <li>拍照按钮加持，拍照更快捷</li>
+                <li>新的双摄系统将三年前就已经推出的微距摄影技术下放，还有24MP</li>
+                <li>操作按钮登场</li>
+                <li>空间摄影支持拍摄可在 Apple Vision Pro 中查看的 3D 照片与视频</li>
+                <li>新的超瓷晶面板加持，屏幕更坚固</li>
+                <li>Apple Intelligence (明年预计登陆中国大陆)</li>
+            </ul>
+            <b>价格</b>
+            <ul>
+                <li>iPhone 16, 128 GB: RMB 5,999, $799</li>
+                <li>iPhone 16, 256 GB: RMB 6,999, $899</li>
+                <li>iPhone 16, 512 GB: RMB 8,999, $1,099</li>
+                <li>iPhone 16 Plus, 128 GB: RMB 6,999, $899</li>
+                <li>iPhone 16 Plus, 256 GB: RMB 7,999, $999</li>
+                <li>iPhone 16 Plus, 512 GB: RMB 9,999, $1,199</li>
+            </ul>
+            <b>购买建议</b>
+            <ul>
+                <li>iPhone 14 及更早机型的用户：建议更新，今年基础版机型的升级力度其实是比 Pro 要大的</li>
+                <li>iPhone 15 的用户：如果不需要 Apple Intelligence 不建议更新</li>
+            </ul>
         </div>
-        <p class="subtitle">选哪个合适？</p>
-        <p id="dev-cal-2">
-            从去年开始苹果终于对普通数字系列有点诚意了。我觉得如果没必要或者不想费钱 iPhone 16 & iPhone 16 Plus 完全够用了。
-        </p>
-        <p id="dev-cal-2">
-            另外不要购买过高的存储容量 - 很多东西都可以被清理掉，并且 iCloud 云盘 24 个月算下来肯定比加一千块钱买 128 GB 存储容量实惠。
-        </p>
-        <p id="dev-cal-2">
-            个人观点。以上图像来自<a href="https://apple.com/newsroom">Apple Newsroom</a>。归 Apple Inc. 版权所有。
-        </p>
-        <p class="subtitle">多久换一次手机比较好？</p>
-        <p id="dev-cal-2">
-            苹果年年发新的，看起来好像在挤牙膏，实际上只是在割韭菜。技术迷、有钱没地方花的或者专业爱好者可能会每年都更新。
-        </p>
-        <p id="dev-cal-2">
-            但是人家年年发不代表我们要年年买啊！iPhone 的耐用程度，一般三到四年换一次是比较合适的。
-        </p>
-        <p id="dev-cal-2">
-            个人观点。
-        </p>
+    </div>
+    <p class="subtitle">选哪个合适？</p>
+    <p id="text-n">
+        从去年开始苹果终于对普通数字系列有点诚意了。我觉得如果没必要或者不想费钱 iPhone 16 & iPhone 16 Plus 完全够用了。
+    </p>
+    <p id="text-n">
+        另外不要购买过高的存储容量 - 很多东西都可以被清理掉，并且 iCloud 云盘 24 个月算下来肯定比加一千块钱买 128 GB 存储容量实惠。
+    </p>
+    <p id="text-n">
+        个人观点。以上图像来自<a href="https://apple.com/newsroom">Apple Newsroom</a>。归 Apple Inc. 版权所有。
+    </p>
+    <p class="subtitle">多久换一次手机比较好？</p>
+    <p id="text-n">
+        苹果年年发新的，看起来好像在挤牙膏，实际上只是在割韭菜。技术迷、有钱没地方花的或者专业爱好者可能会每年都更新。
+    </p>
+    <p id="text-n">
+        但是人家年年发不代表我们要年年买啊！iPhone 的耐用程度，一般三到四年换一次是比较合适的。
+    </p>
+    <p id="text-n">
+        个人观点。
+    </p>
 
-        <p class="subtitle" id="apple-subtitle"><i class="fa-solid fa-square-caret-down"></i>&emsp;Apple 特别活动（线上）总表（英文）
+    <p class="subtitle" id="apple-subtitle">Apple 特别活动（线上）总表（英文）
+    </p>
+    <div class="pages-container" id="apple-event">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="5" style="padding: 9px;">
+                        Apple Special Events List
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Year</td>
+                    <td>Date</td>
+                    <td>Theme</td>
+                    <td>Announced</td>
+                    <td style="width: 20%;">Notes</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">2024</td>
+                    <td>September 9</td>
+                    <td><b>It's Glowtime.</b></td>
+                    <td>
+                        Apple Watch Series 10<br>
+                        Apple Watch Ultra 2 in Black Titanium<br>
+                        AirPods Max (USB-C)<br>
+                        AirPods Pro 2<br>
+                        AirPods 4<br>
+                        iPhone 16<br>
+                        iPhone 16 Plus<br>
+                        iPhone 16 Pro<br>
+                        iPhone 16 Pro Max<br>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>June 11</td>
+                    <td><b>WWDC24</b></td>
+                    <td>
+                        visionOS 2 <br>
+                        iOS 18 <br>
+                        tvOS 18 <br>
+                        watchOS 11 <br>
+                        iPadOS 18 <br>
+                        macOS 15 Sequoia<br>
+                        Apple Intelligence <br>
+                        see <a href="./subpages/dubdub.html">the WWDC page</a> for more!
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>May 7</td>
+                    <td>Let loose.</td>
+                    <td>
+                        11-inch iPad Air (M2)<br>
+                        13-inch iPad Air (M2)<br>
+                        M4<br>
+                        11-inch iPad Pro (M4)<br>
+                        13-inch iPad Pro (M4)<br>
+                        Apple Pencil Pro<br>
+                    </td>
+                    <td>
+                        Shot on iPhone, edited on Mac and iPad.<br>
+                        使用 iPhone 拍摄，使用 Mac 和 iPad 编辑。
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="3">2023</td>
+                    <td>October 30</td>
+                    <td>Scary fast.</td>
+                    <td>
+                        M3 <br>
+                        M3 Pro <br>
+                        M3 Max <br>
+                        14-inch MacBook Pro with M3 / M3 Pro / M3 Max <br>
+                        16-inch MacBook Pro with M3 Pro / M3 Max <br>
+                        24-inch iMac with M3 <br>
+                    </td>
+                    <td>This will be the first time Apple host a special event at night. This is also the first
+                        time
+                        Apple shot the entire event on iPhone.<br>
+                        这是 Apple 历史上第一次在下午举行特别活动。这也是 Apple 第一次使用 iPhone 拍摄整场活动。
+                    </td>
+                </tr>
+                <tr>
+                    <td>September 12</td>
+                    <td>Wonderlust.</td>
+                    <td>
+                        Apple Watch Series 9<br>
+                        Apple Watch Ultra 2<br>
+                        iPhone 15<br>
+                        iPhone 15 Plus<br>
+                        iPhone 15 Pro<br>
+                        iPhone 15 Pro Max<br>
+                        AirPods Pro (USB-C)<br>
+                        Carbon Neutral Progress<br>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>June 5</td>
+                    <td><b>WWDC23</b> <br>Code new worlds.</td>
+                    <td>
+                        Apple Vision Pro<br>
+                        15-inch MacBook Air<br>
+                        Mac Studio with M2 Max/Ultra<br>
+                        Mac Pro with M2 Ultra<br>
+                        iOS 17<br>
+                        iPadOS 17<br>
+                        macOS 14 Sonoma<br>
+                        watchOS 10<br>
+                        tvOS 17<br>
+                        visionOS 1<br>
+                    </td>
+                    <td>This is the first time Apple introduced a new product line since 2016, and its first
+                        step in
+                        spatial computing as well.
+                        <br>这是自 2016 年以来 Apple 首次推出全新产品线，也是其在空间计算领域迈出的第一步。
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="3">2022</td>
+                    <td>September 7</td>
+                    <td>Far out.</td>
+                    <td>
+                        Apple Watch Series 8 <br>
+                        Apple Watch Ultra <br>
+                        Apple Watch SE <br>
+                        AirPods Pro (2nd generation) <br>
+                        iPhone 14 <br>
+                        iPhone 14 Plus<br>
+                        iPhone 14 Pro<br>
+                        iPhone 14 Pro Max<br>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>June 6</td>
+                    <td><b>WWDC22</b> <br>Call to code.</td>
+                    <td>
+                        13-inch MacBook Air with M2 <br>
+                        13-inch MacBook Pro with M2 <br>
+                        iOS 16 <br>
+                        iPadOS 16 <br>
+                        tvOS 16 <br>
+                        macOS 13 Ventura<br>
+                        watchOS 9 <br>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>March 8</td>
+                    <td>Peek performance.</td>
+                    <td>
+                        iPad Air (5th generation) <br>
+                        iPhone SE (3rd generation) <br>
+                        M1 Ultra <br>
+                        Mac Studio <br>
+                        Studio Display <br>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td rowspan="4">2021</td>
+                    <td>October 18</td>
+                    <td>Unleashed.</td>
+                    <td>
+                        AirPods (3rd generation) <br>
+                        HomePod mini <br>
+                        M1 Pro <br>
+                        M1 Max <br>
+                        14-inch MacBook Pro with M1 Pro / M1 Max <br>
+                        16-inch MacBook Pro with M1 Pro / M1 Max <br>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>September 14</td>
+                    <td>California Streaming.</td>
+                    <td>
+                        iPad (9th generation) <br>
+                        iPad mini (6th generation) <br>
+                        Apple Watch Series 7 <br>
+                        iPhone 13 mini<br>
+                        iPhone 13 <br>
+                        iPhone 13 Pro<br>
+                        iPhone 13 Pro Max<br>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>June 7</td>
+                    <td><b>WWDC21</b><br>Glow and Behold.</td>
+                    <td>
+                        iOS 15 <br>
+                        iPadOS 15 <br>
+                        tvOS 15 <br>
+                        macOS 12 Monterey <br>
+                        watchOS 8 <br>
+                    </td>
+                    <td>Arguably the most boring WWDC in the history of WWDC. This is also the first time I
+                        stayed
+                        up
+                        late to watch the livestream.</td>
+                </tr>
+                <tr>
+                    <td>March 20</td>
+                    <td>Spring loaded.</td>
+                    <td>
+                        AirTags <br>
+                        Apple TV 4K (2nd generation) <br>
+                        24-inch iMac with M1 <br>
+                        11-inch iPad Pro (3rd generation) <br>
+                        12.9-inch iPad Pro (5th generation) <br>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td rowspan="4">2020</td>
+                    <td>November 10</td>
+                    <td>One more thing.</td>
+                    <td>
+                        M1 <br>
+                        13-inch MacBook Air with M1 <br>
+                        13-inch MacBook Pro with M1 <br>
+                        Mac mini with M1 <br>
+                    </td>
+                    <td>The first Apple Silicon for Mac. <br>Apple 首次推出为 Mac 自研的芯片。</td>
+                </tr>
+                <tr>
+                    <td>October 13</td>
+                    <td>Hi, Speed.</td>
+                    <td>
+                        HomePod mini <br>
+                        iPhone 12 mini <br>
+                        iPhone 12 <br>
+                        iPhone 12 Pro <br>
+                        iPhone 12 Pro Max <br>
+                    </td>
+                    <td>The first iPhone with 5G. <br>Apple 首次推出支持 5G 的手机。</td>
+                </tr>
+                <tr>
+                    <td>September 15</td>
+                    <td>Time flies.</td>
+                    <td>
+                        Apple Watch SE <br>
+                        Apple Watch Series 6 <br>
+                        iPad (8th generation) <br>
+                        iPad Air (4th generation) <br>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>June 22</td>
+                    <td><b>WWDC20</b> <br>Ready. Set. Code.</td>
+                    <td>
+                        iOS 14 <br>
+                        iPadOS 14 <br>
+                        macOS 11 <br>
+                        watchOS 7 <br>
+                        tvOS 14 <br>
+                        Mac's transition to Apple Silicon <br>
+                    </td>
+                    <td>The first online Apple Event. <br>此为 Apple 首次线上进行特别活动。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="subtitle" id="apple-mac">Mac</p>
+    <section id="mac-section">
+        <p id="text-n">
+            The Mac, short for Macintosh (its official name until 1999), is a family of personal computers designed
+            and
+            marketed by Apple Inc. The name Macintosh is a reference to a type of apple called McIntosh. The product
+            lineup
+            includes the MacBook Air and MacBook Pro laptops, and the iMac, Mac Mini, Mac Studio, and Mac Pro
+            desktops.
+            Macs
+            are sold with the macOS operating system.
         </p>
-        <div class="pages-container" id="apple-event">
+        <p id="text-n"><span class="subtitle-pages" id="title-1">Mac Lineup</span></p>
+        <ul id="text-n">
+            <li><a href="#title-2">MacBook Air</a></li>
+            <li>MacBook Pro</li>
+            <li>Mac mini</li>
+            <li>Mac Studio</li>
+            <li>iMac</li>
+            <li>Mac Pro</li>
+            <li>Displays</li>
+        </ul>
+        <p id="text-n"><span class="subtitle-pages" id="title-2">MacBook Air</span></p>
+        <p id="text-n"><span class="subtitle-pages" id="title-3">macOS Versions List</span></p>
+        <div class="pages-container">
             <table>
                 <thead>
                     <tr>
-                        <th colspan="5" style="padding: 9px;">
-                            Apple Special Events List
+                        <th colspan="3" style="padding: 9px;">
+                            macOS Versions List
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Year</td>
-                        <td>Date</td>
-                        <td>Theme</td>
-                        <td>Announced</td>
-                        <td style="width: 20%;">Notes</td>
+                        <td>Released Year</td>
+                        <td>No.</td>
+                        <td>Name</td>
                     </tr>
                     <tr>
-                        <td rowspan="3">2024</td>
-                        <td>September 9</td>
-                        <td><b>It's Glowtime.</b></td>
-                        <td>
-                            Apple Watch Series 10<br>
-                            Apple Watch Ultra 2 in Black Titanium<br>
-                            AirPods Max (USB-C)<br>
-                            AirPods Pro 2<br>
-                            AirPods 4<br>
-                            iPhone 16<br>
-                            iPhone 16 Plus<br>
-                            iPhone 16 Pro<br>
-                            iPhone 16 Pro Max<br>
-                        </td>
-                        <td></td>
+                        <td>2024</td>
+                        <td>macOS 15</td>
+                        <td>macOS Sequoia</td>
                     </tr>
                     <tr>
-                        <td>June 11</td>
-                        <td><b>WWDC24</b></td>
-                        <td>
-                            visionOS 2 <br>
-                            iOS 18 <br>
-                            tvOS 18 <br>
-                            watchOS 11 <br>
-                            iPadOS 18 <br>
-                            macOS 15 Sequoia<br>
-                            Apple Intelligence <br>
-                            see <a href="./subpages/dubdub.html">the WWDC page</a> for more!
-                        </td>
-                        <td></td>
+                        <td>2023</td>
+                        <td>macOS 14</td>
+                        <td>macOS Sonoma</td>
                     </tr>
                     <tr>
-                        <td>May 7</td>
-                        <td>Let loose.</td>
-                        <td>
-                            11-inch iPad Air (M2)<br>
-                            13-inch iPad Air (M2)<br>
-                            M4<br>
-                            11-inch iPad Pro (M4)<br>
-                            13-inch iPad Pro (M4)<br>
-                            Apple Pencil Pro<br>
-                        </td>
-                        <td>
-                            Shot on iPhone, edited on Mac and iPad.<br>
-                            使用 iPhone 拍摄，使用 Mac 和 iPad 编辑。
-                        </td>
+                        <td>2022</td>
+                        <td>macOS 13</td>
+                        <td>macOS Ventura</td>
                     </tr>
                     <tr>
-                        <td rowspan="3">2023</td>
-                        <td>October 30</td>
-                        <td>Scary fast.</td>
-                        <td>
-                            M3 <br>
-                            M3 Pro <br>
-                            M3 Max <br>
-                            14-inch MacBook Pro with M3 / M3 Pro / M3 Max <br>
-                            16-inch MacBook Pro with M3 Pro / M3 Max <br>
-                            24-inch iMac with M3 <br>
-                        </td>
-                        <td>This will be the first time Apple host a special event at night. This is also the first
-                            time
-                            Apple shot the entire event on iPhone.<br>
-                            这是 Apple 历史上第一次在下午举行特别活动。这也是 Apple 第一次使用 iPhone 拍摄整场活动。
-                        </td>
+                        <td>2021</td>
+                        <td>macOS 12</td>
+                        <td>macOS Monterey</td>
                     </tr>
                     <tr>
-                        <td>September 12</td>
-                        <td>Wonderlust.</td>
-                        <td>
-                            Apple Watch Series 9<br>
-                            Apple Watch Ultra 2<br>
-                            iPhone 15<br>
-                            iPhone 15 Plus<br>
-                            iPhone 15 Pro<br>
-                            iPhone 15 Pro Max<br>
-                            AirPods Pro (USB-C)<br>
-                            Carbon Neutral Progress<br>
-                        </td>
-                        <td></td>
+                        <td>2020</td>
+                        <td>macOS 11</td>
+                        <td>macOS Big Sur</td>
                     </tr>
                     <tr>
-                        <td>June 5</td>
-                        <td><b>WWDC23</b> <br>Code new worlds.</td>
-                        <td>
-                            Apple Vision Pro<br>
-                            15-inch MacBook Air<br>
-                            Mac Studio with M2 Max/Ultra<br>
-                            Mac Pro with M2 Ultra<br>
-                            iOS 17<br>
-                            iPadOS 17<br>
-                            macOS 14 Sonoma<br>
-                            watchOS 10<br>
-                            tvOS 17<br>
-                            visionOS 1<br>
-                        </td>
-                        <td>This is the first time Apple introduced a new product line since 2016, and its first
-                            step in
-                            spatial computing as well.
-                            <br>这是自 2016 年以来 Apple 首次推出全新产品线，也是其在空间计算领域迈出的第一步。
-                        </td>
+                        <td>2019</td>
+                        <td>macOS 10.15</td>
+                        <td>macOS Catalina</td>
                     </tr>
                     <tr>
-                        <td rowspan="3">2022</td>
-                        <td>September 7</td>
-                        <td>Far out.</td>
-                        <td>
-                            Apple Watch Series 8 <br>
-                            Apple Watch Ultra <br>
-                            Apple Watch SE <br>
-                            AirPods Pro (2nd generation) <br>
-                            iPhone 14 <br>
-                            iPhone 14 Plus<br>
-                            iPhone 14 Pro<br>
-                            iPhone 14 Pro Max<br>
-                        </td>
-                        <td></td>
+                        <td>2018</td>
+                        <td>macOS 10.14</td>
+                        <td>macOS Mojave</td>
                     </tr>
                     <tr>
-                        <td>June 6</td>
-                        <td><b>WWDC22</b> <br>Call to code.</td>
-                        <td>
-                            13-inch MacBook Air with M2 <br>
-                            13-inch MacBook Pro with M2 <br>
-                            iOS 16 <br>
-                            iPadOS 16 <br>
-                            tvOS 16 <br>
-                            macOS 13 Ventura<br>
-                            watchOS 9 <br>
-                        </td>
-                        <td></td>
+                        <td>2017</td>
+                        <td>macOS 10.13</td>
+                        <td>macOS High Sierra</td>
                     </tr>
                     <tr>
-                        <td>March 8</td>
-                        <td>Peek performance.</td>
-                        <td>
-                            iPad Air (5th generation) <br>
-                            iPhone SE (3rd generation) <br>
-                            M1 Ultra <br>
-                            Mac Studio <br>
-                            Studio Display <br>
-                        </td>
-                        <td></td>
+                        <td>2016</td>
+                        <td>macOS 10.12</td>
+                        <td>macOS Sierra</td>
                     </tr>
                     <tr>
-                        <td rowspan="4">2021</td>
-                        <td>October 18</td>
-                        <td>Unleashed.</td>
-                        <td>
-                            AirPods (3rd generation) <br>
-                            HomePod mini <br>
-                            M1 Pro <br>
-                            M1 Max <br>
-                            14-inch MacBook Pro with M1 Pro / M1 Max <br>
-                            16-inch MacBook Pro with M1 Pro / M1 Max <br>
-                        </td>
-                        <td></td>
+                        <td>2015</td>
+                        <td>OS X 10.11</td>
+                        <td>OS X El Capitan</td>
                     </tr>
                     <tr>
-                        <td>September 14</td>
-                        <td>California Streaming.</td>
-                        <td>
-                            iPad (9th generation) <br>
-                            iPad mini (6th generation) <br>
-                            Apple Watch Series 7 <br>
-                            iPhone 13 mini<br>
-                            iPhone 13 <br>
-                            iPhone 13 Pro<br>
-                            iPhone 13 Pro Max<br>
-                        </td>
-                        <td></td>
+                        <td>2014</td>
+                        <td>OS X 10.10</td>
+                        <td>OS X Yosemite</td>
                     </tr>
                     <tr>
-                        <td>June 7</td>
-                        <td><b>WWDC21</b><br>Glow and Behold.</td>
-                        <td>
-                            iOS 15 <br>
-                            iPadOS 15 <br>
-                            tvOS 15 <br>
-                            macOS 12 Monterey <br>
-                            watchOS 8 <br>
-                        </td>
-                        <td>Arguably the most boring WWDC in the history of WWDC. This is also the first time I
-                            stayed
-                            up
-                            late to watch the livestream.</td>
+                        <td>2013</td>
+                        <td>OS X 10.9</td>
+                        <td>OS X Mavericks</td>
                     </tr>
                     <tr>
-                        <td>March 20</td>
-                        <td>Spring loaded.</td>
-                        <td>
-                            AirTags <br>
-                            Apple TV 4K (2nd generation) <br>
-                            24-inch iMac with M1 <br>
-                            11-inch iPad Pro (3rd generation) <br>
-                            12.9-inch iPad Pro (5th generation) <br>
-                        </td>
-                        <td></td>
+                        <td>2012</td>
+                        <td>OS X 10.8</td>
+                        <td>OS X Mountain Lion</td>
                     </tr>
                     <tr>
-                        <td rowspan="4">2020</td>
-                        <td>November 10</td>
-                        <td>One more thing.</td>
-                        <td>
-                            M1 <br>
-                            13-inch MacBook Air with M1 <br>
-                            13-inch MacBook Pro with M1 <br>
-                            Mac mini with M1 <br>
-                        </td>
-                        <td>The first Apple Silicon for Mac. <br>Apple 首次推出为 Mac 自研的芯片。</td>
+                        <td>2011</td>
+                        <td>OS X 10.7</td>
+                        <td>OS X Lion</td>
                     </tr>
                     <tr>
-                        <td>October 13</td>
-                        <td>Hi, Speed.</td>
-                        <td>
-                            HomePod mini <br>
-                            iPhone 12 mini <br>
-                            iPhone 12 <br>
-                            iPhone 12 Pro <br>
-                            iPhone 12 Pro Max <br>
-                        </td>
-                        <td>The first iPhone with 5G. <br>Apple 首次推出支持 5G 的手机。</td>
+                        <td>2009</td>
+                        <td>OS X 10.6</td>
+                        <td>OS X Snow Leopard</td>
                     </tr>
                     <tr>
-                        <td>September 15</td>
-                        <td>Time flies.</td>
-                        <td>
-                            Apple Watch SE <br>
-                            Apple Watch Series 6 <br>
-                            iPad (8th generation) <br>
-                            iPad Air (4th generation) <br>
-                        </td>
-                        <td></td>
+                        <td>2007</td>
+                        <td>OS X 10.5</td>
+                        <td>OS X Leopard</td>
                     </tr>
                     <tr>
-                        <td>June 22</td>
-                        <td><b>WWDC20</b> <br>Ready. Set. Code.</td>
-                        <td>
-                            iOS 14 <br>
-                            iPadOS 14 <br>
-                            macOS 11 <br>
-                            watchOS 7 <br>
-                            tvOS 14 <br>
-                            Mac's transition to Apple Silicon <br>
+                        <td>2005</td>
+                        <td>OS X 10.4</td>
+                        <td>OS X Tiger</td>
+                    </tr>
+                    <tr>
+                        <td>2003</td>
+                        <td>OS X 10.3</td>
+                        <td>OS X Panther</td>
+                    </tr>
+                    <tr>
+                        <td>2002</td>
+                        <td>OS X 10.2</td>
+                        <td>OS X Jaguar</td>
+                    </tr>
+                    <tr>
+                        <td>2001</td>
+                        <td>OS X 10.1</td>
+                        <td>OS X Puma</td>
+                    </tr>
+                    <tr>
+                        <td>2001</td>
+                        <td>OS X 10.0</td>
+                        <td>OS X (Cheetah)</td>
+                    </tr>
+                    <tr>
+                        <td>1999</td>
+                        <td colspan="2">Mac OS 9</td>
+                    </tr>
+                    <tr>
+                        <td>1997</td>
+                        <td colspan="2">Mac OS 8</td>
+                    </tr>
+                    <tr>
+                        <td>1991</td>
+                        <td colspan="2">System 7</td>
+                    </tr>
+                    <tr>
+                        <td>1988</td>
+                        <td colspan="2">System 6</td>
+                    </tr>
+                    <tr>
+                        <td>1987</td>
+                        <td colspan="2">System 5*</td>
+                    </tr>
+                    <tr>
+                        <td>1987</td>
+                        <td colspan="2">System 4</td>
+                    </tr>
+                    <tr>
+                        <td>1986</td>
+                        <td colspan="2">System 3</td>
+                    </tr>
+                    <tr>
+                        <td>1985</td>
+                        <td colspan="2">System 2</td>
+                    </tr>
+                    <tr>
+                        <td>1984</td>
+                        <td colspan="2">System 1</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">
+                            *"System 5" is the name of a software bundle, not the software "System" itself.
                         </td>
-                        <td>The first online Apple Event. <br>此为 Apple 首次线上进行特别活动。</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+
+    <p class="subtitle" id="apple-iphone">iPhone</p>
+    <section id="iphone-section">
+        <p id="text-n"><span class="subtitle-pages" id="title-0">Lineup</span></p>
+
+        <ul id="text-n">
+            <li>iPhone 16</li>
+            <li>iPhone 16 Plus</li>
+            <li>iPhone 16 Pro</li>
+            <li>iPhone 16 Pro Max</li>
+            <li>iPhone 15</li>
+            <li>iPhone 15 Plus</li>
+            <li>iPhone 14</li>
+            <li>iPhone SE 3</li>
+        </ul>
+
+        <p id="text-n"><span class="subtitle-pages" id="title-1">Models List</span></p>
+        <div class="pages-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="4" style="padding: 9px;">
+                            iPhone Models List
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Released</td>
+                        <td>No.</td>
+                        <td>Slogan</td>
+                        <td>宣传语*</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">2024/09/09</td>
+                        <td>iPhone 16 Pro Max</td>
+                        <td rowspan="4">Hello, Apple Intelligence.</td>
+                        <td rowspan="4">无</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 16 Pro</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 16 Plus</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 16</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">2023/09/12</td>
+                        <td>iPhone 15 Pro Max</td>
+                        <td rowspan="2">Titanium. So strong. So light. So Pro.</td>
+                        <td rowspan="2">钛金属，坚固轻盈，Pro 得真材实料。</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 15 Pro</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 15 Plus</td>
+                        <td rowspan="2">New camera. New design. Newphoria.</td>
+                        <td rowspan="2">新主摄，新设计，开新超开心。</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 15</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">2022/09/07</td>
+                        <td>iPhone 14 Pro Max</td>
+                        <td rowspan="2">Pro. Beyond.</td>
+                        <td rowspan="2">强力出圈</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 14 Pro</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 14 Plus</td>
+                        <td rowspan="2">Wonderfull.</td>
+                        <td rowspan="2">玩大，玩超大。</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 14</td>
+                    </tr>
+                    <tr>
+                        <td>2022/03/08</td>
+                        <td>iPhone SE (3rd generation)</td>
+                        <td>Love the power. Love the price.</td>
+                        <td>重磅实力，轻松入手。</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">2021/09/14</td>
+                        <td>iPhone 13 Pro Max</td>
+                        <td rowspan="2">Oh. So. Pro.</td>
+                        <td rowspan="2">强得很</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 13 Pro</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 13</td>
+                        <td rowspan="2">Your new superpower.</td>
+                        <td rowspan="2">解锁超能力</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 13 mini</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">2020/10/13</td>
+                        <td>iPhone 12 Pro Max</td>
+                        <td rowspan="2">It's a leap year.</td>
+                        <td rowspan="2">自我再飞跃</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 12 Pro</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 12</td>
+                        <td rowspan="2">Blast past fast.</td>
+                        <td rowspan="2">一拍，即合。</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 12 mini</td>
+                    </tr>
+                    <tr>
+                        <td>2020/04/15</td>
+                        <td>iPhone SE (2nd generation)</td>
+                        <td>Lots to love. Less to spend.</td>
+                        <td>称心称手，超值入手。</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">2019/09/10</td>
+                        <td>iPhone 11 Pro Max</td>
+                        <td rowspan="2">Pro Cameras. Pro Display. Pro Performance.</td>
+                        <td rowspan="2">Pro 如其名。</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 11 Pro</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 11</td>
+                        <td>Just the right amount of everything.</td>
+                        <td>一切都刚刚好。</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">2018/09/12</td>
+                        <td>iPhone XR</td>
+                        <td>Brilliant. In every way.</td>
+                        <td>哪一面都是亮点</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone Xs Max</td>
+                        <td rowspan="2">Welcome to the big screens.</td>
+                        <td rowspan="2">大屏幕上见</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone Xs</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">2017/09/12</td>
+                        <td>iPhone X</td>
+                        <td>Say hello to the future.</td>
+                        <td>hello，未来。</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 8 Plus</td>
+                        <td rowspan="2">A new generation of iPhone</td>
+                        <td rowspan="2">新一代 iPhone</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 8</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2016/09/07</td>
+                        <td>iPhone 7 Plus</td>
+                        <td rowspan="2">This is 7.</td>
+                        <td rowspan="2">7，在此。</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 7</td>
+                    </tr>
+                    <tr>
+                        <td>2016/03/21</td>
+                        <td>iPhone SE (1st generation)</td>
+                        <td>A big step for small.</td>
+                        <td>一小步的一大步</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2015/09/09</td>
+                        <td>iPhone 6s Plus</td>
+                        <td rowspan="2">The only thing that's changed is everything.</td>
+                        <td rowspan="2">唯一的不同，是处处都不同。</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 6s</td>
+
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2014/09/09</td>
+                        <td>iPhone 6 Plus</td>
+                        <td rowspan="2">Bigger than bigger.</td>
+                        <td rowspan="2">比更大还更大 <br>（后更为“岂止于大”）</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 6</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2013/09/10</td>
+                        <td>iPhone 5s</td>
+                        <td>You're more powerful than you think. </td>
+                        <td>最超越、空前的手机</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 5c</td>
+                        <td>For the colorful</td>
+                        <td>生来多彩</td>
+                    </tr>
+                    <tr>
+                        <td>2012/09/12</td>
+                        <td>iPhone 5</td>
+                        <td>The biggest thing to happen to iPhone since iPhone.</td>
+                        <td>有史以来改变最大的 iPhone。</td>
+                    </tr>
+                    <tr>
+                        <td>2011/10/04</td>
+                        <td>iPhone 4s</td>
+                        <td>The most amazing iPhone yet</td>
+                        <td>出色的iPhone，如今更出色</td>
+                    </tr>
+                    <tr>
+                        <td>2010/06/07</td>
+                        <td>iPhone 4</td>
+                        <td>This changes everything. Again.</td>
+                        <td>再一次，改变一切。</td>
+                    </tr>
+                    <tr>
+                        <td>2009/06/08</td>
+                        <td>iPhone 3GS</td>
+                        <td>The fastest, smartest phone yet.</td>
+                        <td>N/A**</td>
+                    </tr>
+                    <tr>
+                        <td>2008/06/09</td>
+                        <td>iPhone 3G</td>
+                        <td>The iPhone you have been waiting for.</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>2007/01/09</td>
+                        <td>iPhone</td>
+                        <td>Apple reinvents the phone.</td>
+                        <td>N/A</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">*部分标点可能不正确，敬请指正。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border: none;">**从 iPhone 3GS 起，iPhone 正式进入中国市场。</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <p id="text-n"><span class="subtitle-pages" id="title-2">iOS Versions List</span></p>
+        <div class="pages-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2" style="padding: 9px;">
+                            iOS Versions List
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Released Year</td>
+                        <td>No.</td>
+                    </tr>
+                    <tr>
+                        <td>2024</td>
+                        <td>iOS 18</td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>iOS 17</td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>iOS 16</td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>iOS 15</td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>iOS 14</td>
+                    </tr>
+                    <tr>
+                        <td>2019</td>
+                        <td>iOS 13</td>
+                    </tr>
+                    <tr>
+                        <td>2018</td>
+                        <td>iOS 12</td>
+                    </tr>
+                    <tr>
+                        <td>2017</td>
+                        <td>iOS 11</td>
+                    </tr>
+                    <tr>
+                        <td>2016</td>
+                        <td>iOS 10</td>
+                    </tr>
+                    <tr>
+                        <td>2015</td>
+                        <td>iOS 9</td>
+                    </tr>
+                    <tr>
+                        <td>2014</td>
+                        <td>iOS 8</td>
+                    </tr>
+                    <tr>
+                        <td>2013</td>
+                        <td>iOS 7</td>
+                    </tr>
+                    <tr>
+                        <td>2012</td>
+                        <td>iOS 6</td>
+                    </tr>
+                    <tr>
+                        <td>2011</td>
+                        <td>iOS 5</td>
+                    </tr>
+                    <tr>
+                        <td>2010</td>
+                        <td>iOS 4</td>
+                    </tr>
+                    <tr>
+                        <td>2009</td>
+                        <td>iPhone OS 3</td>
+                    </tr>
+                    <tr>
+                        <td>2008</td>
+                        <td>iPhone OS 2</td>
+                    </tr>
+                    <tr>
+                        <td>2007</td>
+                        <td>iPhone OS 1</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <p class="subtitle" id="apple-mac"><i class="fa-solid fa-square-caret-down"></i>&emsp;Mac</p>
-        <section id="mac-section">
-            <p id="dev-cal-2">
-                The Mac, short for Macintosh (its official name until 1999), is a family of personal computers designed
-                and
-                marketed by Apple Inc. The name Macintosh is a reference to a type of apple called McIntosh. The product
-                lineup
-                includes the MacBook Air and MacBook Pro laptops, and the iMac, Mac Mini, Mac Studio, and Mac Pro
-                desktops.
-                Macs
-                are sold with the macOS operating system.
+    </section>
+
+    <p class="subtitle" id="apple-ipad">iPad</p>
+    <section id="ipad-section">
+        <p id="text-n"><span class="subtitle-pages" id="title-0">Lineup</span></p>
+        <ul id="text-n">
+            <li>iPad mini</li>
+            <li>iPad</li>
+            <li>11-inch iPad Air (M2)</li>
+            <li>13-inch iPad Air (M2)</li>
+            <li>11-inch iPad Pro (M4)</li>
+            <li>13-inch iPad Pro (M4)</li>
+        </ul>
+        <p id="text-n"><span class="subtitle-pages" id="title-1">Models List</span></p>
+
+        <p id="text-n"><span class="subtitle-pages" id="title-2">iPadOS Versions List</span></p>
+        <div class="pages-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2" style="padding: 9px;">
+                            iPadOS Versions List
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Released Year</td>
+                        <td>No.</td>
+                    </tr>
+                    <tr>
+                        <td>2024</td>
+                        <td>iPadOS 18</td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>iPadOS 17</td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>iPadOS 16</td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>iPadOS 15</td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>iPadOS 14</td>
+                    </tr>
+                    <tr>
+                        <td>2019</td>
+                        <td>iPadOS 13</td>
+                    </tr>
+                    <tr>
+                        <td>2018</td>
+                        <td>iOS 12</td>
+                    </tr>
+                    <tr>
+                        <td>2017</td>
+                        <td>iOS 11</td>
+                    </tr>
+                    <tr>
+                        <td>2016</td>
+                        <td>iOS 10</td>
+                    </tr>
+                    <tr>
+                        <td>2015</td>
+                        <td>iOS 9</td>
+                    </tr>
+                    <tr>
+                        <td>2014</td>
+                        <td>iOS 8</td>
+                    </tr>
+                    <tr>
+                        <td>2013</td>
+                        <td>iOS 7</td>
+                    </tr>
+                    <tr>
+                        <td>2012</td>
+                        <td>iOS 6</td>
+                    </tr>
+                    <tr>
+                        <td>2011</td>
+                        <td>iOS 5</td>
+                    </tr>
+                    <tr>
+                        <td>2010</td>
+                        <td>iOS 4</td>
+                    </tr>
+                    <tr>
+                        <td>1st-generation iPad shipped with</td>
+                        <td>iPhone OS 3.2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <p class="subtitle" id="apple-wwdc">WWDC</p>
+    <section id="wwdc-section">
+        <div class="pages-container">
+            <p id="text-n">
+                <span id="dubdub-quote">
+                    "We're glad you could join us for what promises to be an action packed and
+                    memorable WWDC."
+                </span><br>
             </p>
-            <p id="dev-cal-2"><span class="subtitle-pages" id="title-1">Mac Lineup</span></p>
-            <ul id="dev-cal-2">
-                <li><a href="#title-2">MacBook Air</a></li>
-                <li>MacBook Pro</li>
-                <li>Mac mini</li>
-                <li>Mac Studio</li>
-                <li>iMac</li>
-                <li>Mac Pro</li>
-                <li>Displays</li>
-            </ul>
-            <p id="dev-cal-2"><span class="subtitle-pages" id="title-2">MacBook Air</span></p>
-            <p id="dev-cal-2"><span class="subtitle-pages" id="title-3">macOS Versions List</span></p>
-            <div class="pages-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th colspan="3" style="padding: 9px;">
-                                macOS Versions List
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Released Year</td>
-                            <td>No.</td>
-                            <td>Name</td>
-                        </tr>
-                        <tr>
-                            <td>2024</td>
-                            <td>macOS 15</td>
-                            <td>macOS Sequoia</td>
-                        </tr>
-                        <tr>
-                            <td>2023</td>
-                            <td>macOS 14</td>
-                            <td>macOS Sonoma</td>
-                        </tr>
-                        <tr>
-                            <td>2022</td>
-                            <td>macOS 13</td>
-                            <td>macOS Ventura</td>
-                        </tr>
-                        <tr>
-                            <td>2021</td>
-                            <td>macOS 12</td>
-                            <td>macOS Monterey</td>
-                        </tr>
-                        <tr>
-                            <td>2020</td>
-                            <td>macOS 11</td>
-                            <td>macOS Big Sur</td>
-                        </tr>
-                        <tr>
-                            <td>2019</td>
-                            <td>macOS 10.15</td>
-                            <td>macOS Catalina</td>
-                        </tr>
-                        <tr>
-                            <td>2018</td>
-                            <td>macOS 10.14</td>
-                            <td>macOS Mojave</td>
-                        </tr>
-                        <tr>
-                            <td>2017</td>
-                            <td>macOS 10.13</td>
-                            <td>macOS High Sierra</td>
-                        </tr>
-                        <tr>
-                            <td>2016</td>
-                            <td>macOS 10.12</td>
-                            <td>macOS Sierra</td>
-                        </tr>
-                        <tr>
-                            <td>2015</td>
-                            <td>OS X 10.11</td>
-                            <td>OS X El Capitan</td>
-                        </tr>
-                        <tr>
-                            <td>2014</td>
-                            <td>OS X 10.10</td>
-                            <td>OS X Yosemite</td>
-                        </tr>
-                        <tr>
-                            <td>2013</td>
-                            <td>OS X 10.9</td>
-                            <td>OS X Mavericks</td>
-                        </tr>
-                        <tr>
-                            <td>2012</td>
-                            <td>OS X 10.8</td>
-                            <td>OS X Mountain Lion</td>
-                        </tr>
-                        <tr>
-                            <td>2011</td>
-                            <td>OS X 10.7</td>
-                            <td>OS X Lion</td>
-                        </tr>
-                        <tr>
-                            <td>2009</td>
-                            <td>OS X 10.6</td>
-                            <td>OS X Snow Leopard</td>
-                        </tr>
-                        <tr>
-                            <td>2007</td>
-                            <td>OS X 10.5</td>
-                            <td>OS X Leopard</td>
-                        </tr>
-                        <tr>
-                            <td>2005</td>
-                            <td>OS X 10.4</td>
-                            <td>OS X Tiger</td>
-                        </tr>
-                        <tr>
-                            <td>2003</td>
-                            <td>OS X 10.3</td>
-                            <td>OS X Panther</td>
-                        </tr>
-                        <tr>
-                            <td>2002</td>
-                            <td>OS X 10.2</td>
-                            <td>OS X Jaguar</td>
-                        </tr>
-                        <tr>
-                            <td>2001</td>
-                            <td>OS X 10.1</td>
-                            <td>OS X Puma</td>
-                        </tr>
-                        <tr>
-                            <td>2001</td>
-                            <td>OS X 10.0</td>
-                            <td>OS X (Cheetah)</td>
-                        </tr>
-                        <tr>
-                            <td>1999</td>
-                            <td colspan="2">Mac OS 9</td>
-                        </tr>
-                        <tr>
-                            <td>1997</td>
-                            <td colspan="2">Mac OS 8</td>
-                        </tr>
-                        <tr>
-                            <td>1991</td>
-                            <td colspan="2">System 7</td>
-                        </tr>
-                        <tr>
-                            <td>1988</td>
-                            <td colspan="2">System 6</td>
-                        </tr>
-                        <tr>
-                            <td>1987</td>
-                            <td colspan="2">System 5*</td>
-                        </tr>
-                        <tr>
-                            <td>1987</td>
-                            <td colspan="2">System 4</td>
-                        </tr>
-                        <tr>
-                            <td>1986</td>
-                            <td colspan="2">System 3</td>
-                        </tr>
-                        <tr>
-                            <td>1985</td>
-                            <td colspan="2">System 2</td>
-                        </tr>
-                        <tr>
-                            <td>1984</td>
-                            <td colspan="2">System 1</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="3">
-                                *"System 5" is the name of a software bundle, not the software "System" itself.
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
-        </section>
+            <p id="dubdub-special-style-1"> - Tim Cook opening the Keynote</p>
+        </div>
 
-        <p class="subtitle" id="apple-iphone"><i class="fa-solid fa-square-caret-down"></i>&emsp;iPhone</p>
-        <section id="iphone-section">
-            <p id="dev-cal-2"><span class="subtitle-pages" id="title-0">Lineup</span></p>
-
-            <ul id="dev-cal-2">
-                <li>iPhone 16</li>
-                <li>iPhone 16 Plus</li>
-                <li>iPhone 16 Pro</li>
-                <li>iPhone 16 Pro Max</li>
-                <li>iPhone 15</li>
-                <li>iPhone 15 Plus</li>
-                <li>iPhone 14</li>
-                <li>iPhone SE 3</li>
-            </ul>
-
-            <p id="dev-cal-2"><span class="subtitle-pages" id="title-1">Models List</span></p>
-            <div class="pages-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th colspan="4" style="padding: 9px;">
-                                iPhone Models List
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Released</td>
-                            <td>No.</td>
-                            <td>Slogan</td>
-                            <td>宣传语*</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="4">2024/09/09</td>
-                            <td>iPhone 16 Pro Max</td>
-                            <td rowspan="4">Hello, Apple Intelligence.</td>
-                            <td rowspan="4">无</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 16 Pro</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 16 Plus</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 16</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="4">2023/09/12</td>
-                            <td>iPhone 15 Pro Max</td>
-                            <td rowspan="2">Titanium. So strong. So light. So Pro.</td>
-                            <td rowspan="2">钛金属，坚固轻盈，Pro 得真材实料。</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 15 Pro</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 15 Plus</td>
-                            <td rowspan="2">New camera. New design. Newphoria.</td>
-                            <td rowspan="2">新主摄，新设计，开新超开心。</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 15</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="4">2022/09/07</td>
-                            <td>iPhone 14 Pro Max</td>
-                            <td rowspan="2">Pro. Beyond.</td>
-                            <td rowspan="2">强力出圈</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 14 Pro</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 14 Plus</td>
-                            <td rowspan="2">Wonderfull.</td>
-                            <td rowspan="2">玩大，玩超大。</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 14</td>
-                        </tr>
-                        <tr>
-                            <td>2022/03/08</td>
-                            <td>iPhone SE (3rd generation)</td>
-                            <td>Love the power. Love the price.</td>
-                            <td>重磅实力，轻松入手。</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="4">2021/09/14</td>
-                            <td>iPhone 13 Pro Max</td>
-                            <td rowspan="2">Oh. So. Pro.</td>
-                            <td rowspan="2">强得很</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 13 Pro</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 13</td>
-                            <td rowspan="2">Your new superpower.</td>
-                            <td rowspan="2">解锁超能力</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 13 mini</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="4">2020/10/13</td>
-                            <td>iPhone 12 Pro Max</td>
-                            <td rowspan="2">It's a leap year.</td>
-                            <td rowspan="2">自我再飞跃</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 12 Pro</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 12</td>
-                            <td rowspan="2">Blast past fast.</td>
-                            <td rowspan="2">一拍，即合。</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 12 mini</td>
-                        </tr>
-                        <tr>
-                            <td>2020/04/15</td>
-                            <td>iPhone SE (2nd generation)</td>
-                            <td>Lots to love. Less to spend.</td>
-                            <td>称心称手，超值入手。</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="3">2019/09/10</td>
-                            <td>iPhone 11 Pro Max</td>
-                            <td rowspan="2">Pro Cameras. Pro Display. Pro Performance.</td>
-                            <td rowspan="2">Pro 如其名。</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 11 Pro</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 11</td>
-                            <td>Just the right amount of everything.</td>
-                            <td>一切都刚刚好。</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="3">2018/09/12</td>
-                            <td>iPhone XR</td>
-                            <td>Brilliant. In every way.</td>
-                            <td>哪一面都是亮点</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone Xs Max</td>
-                            <td rowspan="2">Welcome to the big screens.</td>
-                            <td rowspan="2">大屏幕上见</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone Xs</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="3">2017/09/12</td>
-                            <td>iPhone X</td>
-                            <td>Say hello to the future.</td>
-                            <td>hello，未来。</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 8 Plus</td>
-                            <td rowspan="2">A new generation of iPhone</td>
-                            <td rowspan="2">新一代 iPhone</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 8</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">2016/09/07</td>
-                            <td>iPhone 7 Plus</td>
-                            <td rowspan="2">This is 7.</td>
-                            <td rowspan="2">7，在此。</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 7</td>
-                        </tr>
-                        <tr>
-                            <td>2016/03/21</td>
-                            <td>iPhone SE (1st generation)</td>
-                            <td>A big step for small.</td>
-                            <td>一小步的一大步</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">2015/09/09</td>
-                            <td>iPhone 6s Plus</td>
-                            <td rowspan="2">The only thing that's changed is everything.</td>
-                            <td rowspan="2">唯一的不同，是处处都不同。</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 6s</td>
-
-                        </tr>
-                        <tr>
-                            <td rowspan="2">2014/09/09</td>
-                            <td>iPhone 6 Plus</td>
-                            <td rowspan="2">Bigger than bigger.</td>
-                            <td rowspan="2">比更大还更大 <br>（后更为“岂止于大”）</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 6</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">2013/09/10</td>
-                            <td>iPhone 5s</td>
-                            <td>You're more powerful than you think. </td>
-                            <td>最超越、空前的手机</td>
-                        </tr>
-                        <tr>
-                            <td>iPhone 5c</td>
-                            <td>For the colorful</td>
-                            <td>生来多彩</td>
-                        </tr>
-                        <tr>
-                            <td>2012/09/12</td>
-                            <td>iPhone 5</td>
-                            <td>The biggest thing to happen to iPhone since iPhone.</td>
-                            <td>有史以来改变最大的 iPhone。</td>
-                        </tr>
-                        <tr>
-                            <td>2011/10/04</td>
-                            <td>iPhone 4s</td>
-                            <td>The most amazing iPhone yet</td>
-                            <td>出色的iPhone，如今更出色</td>
-                        </tr>
-                        <tr>
-                            <td>2010/06/07</td>
-                            <td>iPhone 4</td>
-                            <td>This changes everything. Again.</td>
-                            <td>再一次，改变一切。</td>
-                        </tr>
-                        <tr>
-                            <td>2009/06/08</td>
-                            <td>iPhone 3GS</td>
-                            <td>The fastest, smartest phone yet.</td>
-                            <td>N/A**</td>
-                        </tr>
-                        <tr>
-                            <td>2008/06/09</td>
-                            <td>iPhone 3G</td>
-                            <td>The iPhone you have been waiting for.</td>
-                            <td>N/A</td>
-                        </tr>
-                        <tr>
-                            <td>2007/01/09</td>
-                            <td>iPhone</td>
-                            <td>Apple reinvents the phone.</td>
-                            <td>N/A</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="4">*部分标点可能不正确，敬请指正。</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" style="border: none;">**从 iPhone 3GS 起，iPhone 正式进入中国市场。</td>
-                        </tr>
-                    </tfoot>
-                </table>
+        <div class="dubdub-box" id="dubdub-visionos">
+            <div id="dubdub-subbox">
+                <span class="dubdub-sub-box" id="dubdub-sub-box-visionos">visionOS 2</span>
             </div>
-            <p id="dev-cal-2"><span class="subtitle-pages" id="title-2">iOS Versions List</span></p>
-            <div class="pages-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th colspan="2" style="padding: 9px;">
-                                iOS Versions List
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Released Year</td>
-                            <td>No.</td>
-                        </tr>
-                        <tr>
-                            <td>2024</td>
-                            <td>iOS 18</td>
-                        </tr>
-                        <tr>
-                            <td>2023</td>
-                            <td>iOS 17</td>
-                        </tr>
-                        <tr>
-                            <td>2022</td>
-                            <td>iOS 16</td>
-                        </tr>
-                        <tr>
-                            <td>2021</td>
-                            <td>iOS 15</td>
-                        </tr>
-                        <tr>
-                            <td>2020</td>
-                            <td>iOS 14</td>
-                        </tr>
-                        <tr>
-                            <td>2019</td>
-                            <td>iOS 13</td>
-                        </tr>
-                        <tr>
-                            <td>2018</td>
-                            <td>iOS 12</td>
-                        </tr>
-                        <tr>
-                            <td>2017</td>
-                            <td>iOS 11</td>
-                        </tr>
-                        <tr>
-                            <td>2016</td>
-                            <td>iOS 10</td>
-                        </tr>
-                        <tr>
-                            <td>2015</td>
-                            <td>iOS 9</td>
-                        </tr>
-                        <tr>
-                            <td>2014</td>
-                            <td>iOS 8</td>
-                        </tr>
-                        <tr>
-                            <td>2013</td>
-                            <td>iOS 7</td>
-                        </tr>
-                        <tr>
-                            <td>2012</td>
-                            <td>iOS 6</td>
-                        </tr>
-                        <tr>
-                            <td>2011</td>
-                            <td>iOS 5</td>
-                        </tr>
-                        <tr>
-                            <td>2010</td>
-                            <td>iOS 4</td>
-                        </tr>
-                        <tr>
-                            <td>2009</td>
-                            <td>iPhone OS 3</td>
-                        </tr>
-                        <tr>
-                            <td>2008</td>
-                            <td>iPhone OS 2</td>
-                        </tr>
-                        <tr>
-                            <td>2007</td>
-                            <td>iPhone OS 1</td>
-                        </tr>
-                    </tbody>
-                </table>
+        </div>
+        <div class="pages-container" id="dubdub-info-1">
+            <p class="dubdub-info-special" id="dubdub-info-special-1">Create spatial photos from your 2D images</p>
+            <p id="text-n">
+                Now you can take existing photos from your photo library and instantly transform them into spatial
+                photos. With just a tap, your memories are brought to life with natural-looking depth and dimension.
+            </p>
+            <p class="dubdub-info-special">SharePlay for Photos</p>
+            <p id="text-n">
+                When you’re on a FaceTime call with friends and family, you can all share and interact with spatial
+                photos, videos, and panoramas at life-size scale when everybody is using Apple Vision Pro. So you
+                can
+                relive memories — wherever you are.
+            </p>
+            <p class="dubdub-info-special">New gestures for easy navigation</p>
+            <p id="text-n">
+                Use your hand to access Home View. See the date and time, control the volume, and even check the
+                battery
+                level. You can also open Control Center to get quick access to frequently used features such as
+                notifications, Mac Virtual Display, and more.
+            </p>
+            <p class="dubdub-info-special">Panoramic productivity with Mac Virtual Display</p>
+            <p id="text-n">
+                Using Mac Virtual Display is like having an expandable, ultrawide screen that wraps around you. It’s
+                the
+                equivalent of having two 4K displays sitting side by side — everything looks astoundingly sharp and
+                incredibly detailed.
+            </p>
+            <p class="dubdub-info-special">All aboard with train support</p>
+            <p id="text-n">
+                With train support in Travel Mode, you can now work privately using multiple apps during your long
+                commute. Or catch up on your favorite shows on a massive screen while immersed in a serene
+                Environment.
+            </p>
+        </div>
+        <div class="dubdub-box" id="dubdub-ios">
+            <div id="dubdub-subbox">
+                <span class="dubdub-sub-box" id="dubdub-sub-box-ios">iOS 18</span>
             </div>
-        </section>
-
-        <p class="subtitle" id="apple-ipad"><i class="fa-solid fa-square-caret-down"></i>&emsp;iPad</p>
-        <section id="ipad-section">
-            <p id="dev-cal-2"><span class="subtitle-pages" id="title-0">Lineup</span></p>
-            <ul id="dev-cal-2">
-                <li>iPad mini</li>
-                <li>iPad</li>
-                <li>11-inch iPad Air (M2)</li>
-                <li>13-inch iPad Air (M2)</li>
-                <li>11-inch iPad Pro (M4)</li>
-                <li>13-inch iPad Pro (M4)</li>
-            </ul>
-            <p id="dev-cal-2"><span class="subtitle-pages" id="title-1">Models List</span></p>
-
-            <p id="dev-cal-2"><span class="subtitle-pages" id="title-2">iPadOS Versions List</span></p>
-            <div class="pages-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th colspan="2" style="padding: 9px;">
-                                iPadOS Versions List
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Released Year</td>
-                            <td>No.</td>
-                        </tr>
-                        <tr>
-                            <td>2024</td>
-                            <td>iPadOS 18</td>
-                        </tr>
-                        <tr>
-                            <td>2023</td>
-                            <td>iPadOS 17</td>
-                        </tr>
-                        <tr>
-                            <td>2022</td>
-                            <td>iPadOS 16</td>
-                        </tr>
-                        <tr>
-                            <td>2021</td>
-                            <td>iPadOS 15</td>
-                        </tr>
-                        <tr>
-                            <td>2020</td>
-                            <td>iPadOS 14</td>
-                        </tr>
-                        <tr>
-                            <td>2019</td>
-                            <td>iPadOS 13</td>
-                        </tr>
-                        <tr>
-                            <td>2018</td>
-                            <td>iOS 12</td>
-                        </tr>
-                        <tr>
-                            <td>2017</td>
-                            <td>iOS 11</td>
-                        </tr>
-                        <tr>
-                            <td>2016</td>
-                            <td>iOS 10</td>
-                        </tr>
-                        <tr>
-                            <td>2015</td>
-                            <td>iOS 9</td>
-                        </tr>
-                        <tr>
-                            <td>2014</td>
-                            <td>iOS 8</td>
-                        </tr>
-                        <tr>
-                            <td>2013</td>
-                            <td>iOS 7</td>
-                        </tr>
-                        <tr>
-                            <td>2012</td>
-                            <td>iOS 6</td>
-                        </tr>
-                        <tr>
-                            <td>2011</td>
-                            <td>iOS 5</td>
-                        </tr>
-                        <tr>
-                            <td>2010</td>
-                            <td>iOS 4</td>
-                        </tr>
-                        <tr>
-                            <td>1st-generation iPad shipped with</td>
-                            <td>iPhone OS 3.2</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <p class="subtitle" id="apple-wwdc"><i class="fa-solid fa-square-caret-down"></i>&emsp;WWDC</p>
-        <section id="wwdc-section">
-            <div class="pages-container">
-                <p id="dev-cal-2">
-                    <span id="dubdub-quote">
-                        "We're glad you could join us for what promises to be an action packed and
-                        memorable WWDC."
-                    </span><br>
-                </p>
-                <p id="dubdub-special-style-1"> - Tim Cook opening the Keynote</p>
-            </div>
-
-            <div class="dubdub-box" id="dubdub-visionos">
-                <div id="dubdub-subbox">
-                    <span class="dubdub-sub-box" id="dubdub-sub-box-visionos">visionOS 2</span>
+        </div>
+        <div class="pages-container" id="dubdub-info-2">
+            <div class="dubdub-entries" id="dubdub-entry-1">
+                <div class="dubdub-pictures" id="dubdub-pic-1"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-1">App 图标新玩法</p>
+                    <p id="text-n">
+                        主屏幕上的 app 图标支持更多自定义方式 - 你可以把它们放在任何你想放的位置，并更改它们的颜色。
+                    </p>
                 </div>
             </div>
-            <div class="pages-container" id="dubdub-info-1">
-                <p class="dubdub-info-special" id="dubdub-info-special-1">Create spatial photos from your 2D images</p>
-                <p id="dev-cal-2">
-                    Now you can take existing photos from your photo library and instantly transform them into spatial
-                    photos. With just a tap, your memories are brought to life with natural-looking depth and dimension.
-                </p>
-                <p class="dubdub-info-special">SharePlay for Photos</p>
-                <p id="dev-cal-2">
-                    When you’re on a FaceTime call with friends and family, you can all share and interact with spatial
-                    photos, videos, and panoramas at life-size scale when everybody is using Apple Vision Pro. So you
-                    can
-                    relive memories — wherever you are.
-                </p>
-                <p class="dubdub-info-special">New gestures for easy navigation</p>
-                <p id="dev-cal-2">
-                    Use your hand to access Home View. See the date and time, control the volume, and even check the
-                    battery
-                    level. You can also open Control Center to get quick access to frequently used features such as
-                    notifications, Mac Virtual Display, and more.
-                </p>
-                <p class="dubdub-info-special">Panoramic productivity with Mac Virtual Display</p>
-                <p id="dev-cal-2">
-                    Using Mac Virtual Display is like having an expandable, ultrawide screen that wraps around you. It’s
-                    the
-                    equivalent of having two 4K displays sitting side by side — everything looks astoundingly sharp and
-                    incredibly detailed.
-                </p>
-                <p class="dubdub-info-special">All aboard with train support</p>
-                <p id="dev-cal-2">
-                    With train support in Travel Mode, you can now work privately using multiple apps during your long
-                    commute. Or catch up on your favorite shows on a massive screen while immersed in a serene
-                    Environment.
-                </p>
-            </div>
-            <div class="dubdub-box" id="dubdub-ios">
-                <div id="dubdub-subbox">
-                    <span class="dubdub-sub-box" id="dubdub-sub-box-ios">iOS 18</span>
+            <div class="dubdub-entries" id="dubdub-entry-2">
+                <div class="dubdub-pictures" id="dubdub-pic-2"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-2">控制中心焕然一新</p>
+                    <p id="text-n">
+                        控制中心有了新样貌：你可以在首页固定你喜爱的控制，就像在主屏幕上固定你喜爱的小组件一样。你没听错，控制中心现在分页了 - 固定的控制、播放的音乐、家庭 app
+                        里的控制和手机的常用开关，现在分成了四页。
+                    </p>
                 </div>
             </div>
-            <div class="pages-container" id="dubdub-info-2">
-                <div class="dubdub-entries" id="dubdub-entry-1">
-                    <div class="dubdub-pictures" id="dubdub-pic-1"></div>
-                    <div class="dubdub-entry-text">
-                        <p class="dubdub-info-special" id="dubdub-info-special-1">App 图标新玩法</p>
-                        <p id="dev-cal-2">
-                            主屏幕上的 app 图标支持更多自定义方式 - 你可以把它们放在任何你想放的位置，并更改它们的颜色。
-                        </p>
-                    </div>
-                </div>
-                <div class="dubdub-entries" id="dubdub-entry-2">
-                    <div class="dubdub-pictures" id="dubdub-pic-2"></div>
-                    <div class="dubdub-entry-text">
-                        <p class="dubdub-info-special" id="dubdub-info-special-2">控制中心焕然一新</p>
-                        <p id="dev-cal-2">
-                            控制中心有了新样貌：你可以在首页固定你喜爱的控制，就像在主屏幕上固定你喜爱的小组件一样。你没听错，控制中心现在分页了 - 固定的控制、播放的音乐、家庭 app
-                            里的控制和手机的常用开关，现在分成了四页。
-                        </p>
-                    </div>
-                </div>
-                <div class="dubdub-entries" id="dubdub-entry-3">
-                    <div class="dubdub-pictures" id="dubdub-pic-3"></div>
-                    <div class="dubdub-entry-text">
-                        <p class="dubdub-info-special" id="dubdub-info-special-3">操作按钮能干的更多了</p>
-                        <p id="dev-cal-2">
-                            控制中心 API 开放啦 - 开发者们可以自己加上自己 app 对应的控制，也可以将这些控制集成的 iPhone 15 Pro 系列的操作按钮。
-                        </p>
-                    </div>
-                </div>
-                <div class="dubdub-entries" id="dubdub-entry-4">
-                    <div class="dubdub-pictures" id="dubdub-pic-4"></div>
-                    <div class="dubdub-entry-text">
-                        <p class="dubdub-info-special" id="dubdub-info-special-4">App 可以上锁了</p>
-                        <p id="dev-cal-2">
-                            你的 app 可以上锁了 - 只需通过面容 ID 上锁/解锁你的秘密 app。你也可以在 App 资源库把 app 隐藏起来。隐藏的 app 同样需要你的解锁才能显示。
-                        </p>
-                    </div>
-                </div>
-                <div class="dubdub-entries" id="dubdub-entry-5">
-                    <div class="dubdub-pictures" id="dubdub-pic-5"></div>
-                    <div class="dubdub-entry-text">
-                        <p class="dubdub-info-special" id="dubdub-info-special-5">信息 app 有更新</p>
-                        <ul id="dev-cal-2">
-                            <li><b>点回功能支持更多回复了</b> - “HA HA”，“!!”之外，你可以用多达几百种方式表达自己的心绪。</li>
-                            <li><b>定时发送</b> - 打算一会再发？没问题。只需要按左下角的加号，翻到第二页的“定时发送”功能即可。</li>
-                            <li><b>文本框支持文字格式化了</b> - 除了常规的加粗、斜体、下划线，现在你还可以让字抖起来、缩起来、膨胀起来和飞起来。</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="dubdub-entries" id="dubdub-entry-6">
-                    <div class="dubdub-pictures" id="dubdub-pic-6"></div>
-                    <div class="dubdub-entry-text">
-                        <p class="dubdub-info-special" id="dubdub-info-special-6">Messages via satellite</p>
-                        <p id="dev-cal-2">
-                            你可以通过卫星信号发送短信。（中国大陆暂不支持）
-                        </p>
-                    </div>
-                </div>
-                <div class="dubdub-entries" id="dubdub-entry-7">
-                    <div class="dubdub-pictures" id="dubdub-pic-7"></div>
-                    <div class="dubdub-entry-text">
-                        <p class="dubdub-info-special" id="dubdub-info-special-7">邮件不再拥挤了</p>
-                        <p id="dev-cal-2">
-                            邮件 app 支持邮件分类，这样来自各大报刊和各种杂七杂八的销售部门的邮件都可以为重要信息让路了。这些邮件可以在搜索栏下面的按钮里获取。
-                        </p>
-                    </div>
-                </div>
-                <div class="dubdub-entries" id="dubdub-entry-8">
-                    <div class="dubdub-pictures" id="dubdub-pic-8"></div>
-                    <div class="dubdub-entry-text">
-                        <p class="dubdub-info-special" id="dubdub-info-special-8">地图 app</p>
-                        <p id="dev-cal-2">
-                            地图能显示等高线地形图和登山指南了（仅限美国）。
-                        </p>
-                    </div>
-                </div>
-                <div class="dubdub-entries" id="dubdub-entry-9">
-                    <div class="dubdub-pictures" id="dubdub-pic-9"></div>
-                    <div class="dubdub-entry-text">
-                        <p class="dubdub-info-special" id="dubdub-info-special-9">钱包 app</p>
-                        <ul id="dev-cal-2">
-                            <li>如果你使用 Apple Cash 服务，Tap to Cash （轻点转账）可以让你通过将对方的手机和你的手机靠近以转账。</li>
-                            <li>卡券界面更多彩了。</li>
-                            <li>你可以在卡券详情页看到更多相关信息。</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="dubdub-entries" id="dubdub-entry-10">
-                    <div class="dubdub-pictures" id="dubdub-pic-10"></div>
-                    <div class="dubdub-entry-text">
-                        <p class="dubdub-info-special" id="dubdub-info-special-10">日记 app</p>
-                        <p id="dev-cal-2">
-                            日记 app 新增添加心情，应用内搜索等功能。
-                        </p>
-                    </div>
-                </div>
-                <div class="dubdub-entries" id="dubdub-entry-11">
-                    <div class="dubdub-pictures" id="dubdub-pic-11"></div>
-                    <div class="dubdub-entry-text">
-                        <p class="dubdub-info-special" id="dubdub-info-special-11">游戏模式</p>
-                        <p id="dev-cal-2">游戏模式将后台应用进程休眠并增加蓝牙连接稳定性以提升游戏体验。</p>
-                    </div>
-                </div>
-                <div class="dubdub-entries" id="dubdub-entry-12">
-                    <div class="dubdub-pictures" id="dubdub-pic-12"></div>
-                    <div class="dubdub-entry-text">
-                        <p class="dubdub-info-special" id="dubdub-info-special-12">照片 app</p>
-                        <p id="dev-cal-2">照片 app 迎来史上最大更新，曾经 dock
-                            栏的“为你推荐”、“照片”、“相册”和“搜索”全部整合成一长页呈现于眼前。你可以点击不同的小组来查看照片详情，也可以通过轻点副标题查看相似的相册，还可以在页面底部个性化你的照片卡片。
-                        </p>
-                    </div>
+            <div class="dubdub-entries" id="dubdub-entry-3">
+                <div class="dubdub-pictures" id="dubdub-pic-3"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-3">操作按钮能干的更多了</p>
+                    <p id="text-n">
+                        控制中心 API 开放啦 - 开发者们可以自己加上自己 app 对应的控制，也可以将这些控制集成的 iPhone 15 Pro 系列的操作按钮。
+                    </p>
                 </div>
             </div>
-            <div class="dubdub-box" id="dubdub-ipados">
-                <div id="dubdub-subbox">
-                    <span class="dubdub-sub-box" id="dubdub-sub-box-ipados">iPadOS 18</span>
+            <div class="dubdub-entries" id="dubdub-entry-4">
+                <div class="dubdub-pictures" id="dubdub-pic-4"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-4">App 可以上锁了</p>
+                    <p id="text-n">
+                        你的 app 可以上锁了 - 只需通过面容 ID 上锁/解锁你的秘密 app。你也可以在 App 资源库把 app 隐藏起来。隐藏的 app 同样需要你的解锁才能显示。
+                    </p>
                 </div>
             </div>
-            <div class="dubdub-box" id="dubdub-watchos">
-                <div id="dubdub-subbox">
-                    <span class="dubdub-sub-box" id="dubdub-sub-box-watchos">watchOS 11</span>
+            <div class="dubdub-entries" id="dubdub-entry-5">
+                <div class="dubdub-pictures" id="dubdub-pic-5"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-5">信息 app 有更新</p>
+                    <ul id="text-n">
+                        <li><b>点回功能支持更多回复了</b> - “HA HA”，“!!”之外，你可以用多达几百种方式表达自己的心绪。</li>
+                        <li><b>定时发送</b> - 打算一会再发？没问题。只需要按左下角的加号，翻到第二页的“定时发送”功能即可。</li>
+                        <li><b>文本框支持文字格式化了</b> - 除了常规的加粗、斜体、下划线，现在你还可以让字抖起来、缩起来、膨胀起来和飞起来。</li>
+                    </ul>
                 </div>
             </div>
-            <div class="dubdub-box" id="dubdub-tvos">
-                <div id="dubdub-subbox">
-                    <span class="dubdub-sub-box" id="dubdub-sub-box-tvos">Audio & Home</span>
+            <div class="dubdub-entries" id="dubdub-entry-6">
+                <div class="dubdub-pictures" id="dubdub-pic-6"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-6">Messages via satellite</p>
+                    <p id="text-n">
+                        你可以通过卫星信号发送短信。（中国大陆暂不支持）
+                    </p>
                 </div>
             </div>
-            <div class="dubdub-box" id="dubdub-macos">
-                <div id="dubdub-subbox">
-                    <span class="dubdub-sub-box" id="dubdub-sub-box-macos">macOS Sequoia</span>
+            <div class="dubdub-entries" id="dubdub-entry-7">
+                <div class="dubdub-pictures" id="dubdub-pic-7"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-7">邮件不再拥挤了</p>
+                    <p id="text-n">
+                        邮件 app 支持邮件分类，这样来自各大报刊和各种杂七杂八的销售部门的邮件都可以为重要信息让路了。这些邮件可以在搜索栏下面的按钮里获取。
+                    </p>
                 </div>
             </div>
-            <div class="dubdub-box" id="dubdub-ai">
-                <div id="dubdub-subbox">
-                    <span class="dubdub-sub-box" id="dubdub-sub-box-ai">Apple Intelligence</span>
+            <div class="dubdub-entries" id="dubdub-entry-8">
+                <div class="dubdub-pictures" id="dubdub-pic-8"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-8">地图 app</p>
+                    <p id="text-n">
+                        地图能显示等高线地形图和登山指南了（仅限美国）。
+                    </p>
                 </div>
             </div>
-        </section>
-    </div>
-
-    <br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br>
-    <include src="../layout/footer.html"></include>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
-    <script src="../static/js/search.js"></script>
-</body>
-
-</html>
+            <div class="dubdub-entries" id="dubdub-entry-9">
+                <div class="dubdub-pictures" id="dubdub-pic-9"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-9">钱包 app</p>
+                    <ul id="text-n">
+                        <li>如果你使用 Apple Cash 服务，Tap to Cash （轻点转账）可以让你通过将对方的手机和你的手机靠近以转账。</li>
+                        <li>卡券界面更多彩了。</li>
+                        <li>你可以在卡券详情页看到更多相关信息。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dubdub-entries" id="dubdub-entry-10">
+                <div class="dubdub-pictures" id="dubdub-pic-10"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-10">日记 app</p>
+                    <p id="text-n">
+                        日记 app 新增添加心情，应用内搜索等功能。
+                    </p>
+                </div>
+            </div>
+            <div class="dubdub-entries" id="dubdub-entry-11">
+                <div class="dubdub-pictures" id="dubdub-pic-11"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-11">游戏模式</p>
+                    <p id="text-n">游戏模式将后台应用进程休眠并增加蓝牙连接稳定性以提升游戏体验。</p>
+                </div>
+            </div>
+            <div class="dubdub-entries" id="dubdub-entry-12">
+                <div class="dubdub-pictures" id="dubdub-pic-12"></div>
+                <div class="dubdub-entry-text">
+                    <p class="dubdub-info-special" id="dubdub-info-special-12">照片 app</p>
+                    <p id="text-n">照片 app 迎来史上最大更新，曾经 dock
+                        栏的“为你推荐”、“照片”、“相册”和“搜索”全部整合成一长页呈现于眼前。你可以点击不同的小组来查看照片详情，也可以通过轻点副标题查看相似的相册，还可以在页面底部个性化你的照片卡片。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="dubdub-box" id="dubdub-ipados">
+            <div id="dubdub-subbox">
+                <span class="dubdub-sub-box" id="dubdub-sub-box-ipados">iPadOS 18</span>
+            </div>
+        </div>
+        <div class="dubdub-box" id="dubdub-watchos">
+            <div id="dubdub-subbox">
+                <span class="dubdub-sub-box" id="dubdub-sub-box-watchos">watchOS 11</span>
+            </div>
+        </div>
+        <div class="dubdub-box" id="dubdub-tvos">
+            <div id="dubdub-subbox">
+                <span class="dubdub-sub-box" id="dubdub-sub-box-tvos">Audio & Home</span>
+            </div>
+        </div>
+        <div class="dubdub-box" id="dubdub-macos">
+            <div id="dubdub-subbox">
+                <span class="dubdub-sub-box" id="dubdub-sub-box-macos">macOS Sequoia</span>
+            </div>
+        </div>
+        <div class="dubdub-box" id="dubdub-ai">
+            <div id="dubdub-subbox">
+                <span class="dubdub-sub-box" id="dubdub-sub-box-ai">Apple Intelligence</span>
+            </div>
+        </div>
+    </section>
+</div>
