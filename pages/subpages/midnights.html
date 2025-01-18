@@ -1,113 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light dark">
-    <title>Midnights 午夜</title>
-    <script src="../../static/js/header_sub.js"></script>
-    <script src="../../static/js/include.js"></script>
-    <script src="../../static/js/jquery-3.7.1.js"></script>
-    <script src="../../static/js/progress.js"></script>
-    <script src="../../static/js/loader.js"></script>
-    <link rel="stylesheet" href="../../static/css/style.css">
-    <link rel="stylesheet" href="../../static/fontawesome/css/all.css">
-    <link rel="shortcut icon" href="../../Aug-18-2023-Favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link
-        href="https://db.onlinewebfonts.com/c/a4ea302c99b5ba55e6778c730de81ebd?family=Neue+Haas+Grotesk+Text+Pro+55+Roman"
-        rel="stylesheet">
-    <style>
-        @media (max-width: 425px) {
-
-            #dev-cal-1,
-            #update,
-            #dev-cal-2,
-            iframe {
-                margin-left: 30px !important;
-                margin-right: 30px !important;
-            }
-
-            #dev-cal-1 {
-                font-size: 70px;
-                margin-top: 125px;
-            }
-        }
-
-        body::after {
-            content: "";
-            position: absolute;
-            inset: -0.625px;
-            background: linear-gradient(30deg, rgba(0, 0, 0, 0)20%, rgb(137, 168, 186), rgb(94, 108, 141));
-            filter: blur(2.5em);
-            z-index: -1;
-        }
-
-        iframe {
-            margin-left: 30px;
-        }
-
-        .track-title {
-            font-weight: bold;
-            font-size: 25px !important;
-        }
-
-        #dev-cal-2 {
-            font-family: 'Neue Haas Grotesk Text Pro 55 Roman', sans-serif !important;
-        }
-    </style>
-</head>
-
-<body>
-    <div id="header-container"></div>
-    <include src="../../layout/layout_for_subpages.html"></include>
-    <div class="loader-wrapper">
-        <i class="fa-solid fa-spinner fa-spin"></i>&emsp;<span id="loader-prompt">Preparing elements.</span>
-    </div>
-
-    <div id="header-unit">
-        <div class="header">&emsp;<a href="../taylorswift.html"><i
-                    class="fas fa-chevron-left"></i>&emsp14;&emsp14;&emsp14;泰勒·斯威夫特</a>
-        </div>
-        <div id="quick-links">
-            <b>ON THIS PAGE:</b>
-            <span id="quick-link-1" class="quick-link"><a href="#track-0">Meet me at midnight</a></span>
-            <span id="quick-link-2" class="quick-link"><a href="#track-1">Lavender Haze</a></span>
-            <span id="quick-link-3" class="quick-link"><a href="#track-2">Maroon</a></span>
-            <span id="quick-link-4" class="quick-link"><a href="#track-3">Anti-Hero</a></span>
-            <span id="quick-link-5" class="quick-link"><a href="#track-4">Snow On The Beach (feat. Lana Del
-                    Rey)</a></span>
-            <span id="quick-link-6" class="quick-link"><a href="#track-5">You're On Your Own, Kid</a></span>
-        </div>
-        <div class="scroll-indicator"></div>
-    </div>
-
-    <div id="content-unit">
-        <p id="dev-cal-1" style="font-family: 'Neue Haas Grotesk Text Pro 55 Roman', sans-serif; font-weight: normal;">
-            Midnights</p>
+<link href="https://db.onlinewebfonts.com/c/a4ea302c99b5ba55e6778c730de81ebd?family=Neue+Haas+Grotesk+Text+Pro+55+Roman" rel="stylesheet">
+    
+<div id="content-unit" class="mdn-content">
+        <h3 id="heading" style="font-family: 'Neue Haas Grotesk Text Pro 55 Roman', sans-serif; font-weight: normal;">
+            Midnights</h3>
         <p id="update">这个页面上一次更新于2023年10月22日<br><br></p>
 
         <div id="en-warn">
             <span id="en-warn-text"><i class="fas fa-warning"></i>&emsp;此网页仅提供英文版本。&emsp;This website is available in
                 English only.</span>
         </div>
-        <p id="dev-cal-2" class="track-title"><span id="track-0">0. Meet me at midnight</span></p>
+        <p class="subtitle"><span id="track-0">0. Meet me at midnight</span></p>
         <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175"
             style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
             sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
             src="https://embed.music.apple.com/cn/album/meet-me-at-midnight/1649434004?i=1649434515"></iframe>
-        <p id="dev-cal-2">Hey Apple Music, this is Taylor Swift. <i>Midnights</i> tells the stories of 13 sleepless
+        <p id="text-n" class="mdn-text">Hey Apple Music, this is Taylor Swift. <i>Midnights</i> tells the stories of 13 sleepless
             nights
             scattered throughout my life. I hope you like it, and wherever you are, you'll meet me at midnight. <br><br>
         </p>
-        <p id="dev-cal-2" class="track-title"><span id="track-1">1. Lavender Haze</span></p>
+        <p class="subtitle"><span id="track-1">1. Lavender Haze</span></p>
         <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175"
             style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
             sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
             src="https://embed.music.apple.com/cn/album/lavender-haze/1689131527?i=1689131531"></iframe>
-        <p id="dev-cal-2">
+        <p id="text-n" class="mdn-text">
             Meet me at midnight<br>
             Ooh ooh ooh whoa<br>
             <br>
@@ -170,12 +86,12 @@
             I just wanna stay<br>
             I just wanna stay in that lavender haze
         </p>
-        <p id="dev-cal-2" class="track-title"><span id="track-2">2. Maroon</span></p>
+        <p class="subtitle"><span id="track-2">2. Maroon</span></p>
         <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175"
             style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
             sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
             src="https://embed.music.apple.com/cn/album/maroon/1689131527?i=1689131532"></iframe>
-        <p id="dev-cal-2">
+        <p id="text-n" class="mdn-text">
             When the morning came, we<br>
             Were cleaning incense off your<br>
             Vinyl shelf 'cause we lost track of time again<br>
@@ -237,12 +153,12 @@
             It was maroon<br>
             It was maroon
         </p>
-        <p id="dev-cal-2" class="track-title"><span id="track-3">3. Anti-Hero</span></p>
+        <p class="subtitle"><span id="track-3">3. Anti-Hero</span></p>
         <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175"
             style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
             sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
             src="https://embed.music.apple.com/cn/album/anti-hero/1689131527?i=1689131533"></iframe>
-        <p id="dev-cal-2">
+        <p id="text-n" class="mdn-text">
             I have this thing where I get older, but just never wiser<br>
             Midnights become my afternoons<br>
             When my depression works the graveyard shift, all of the people<br>
@@ -298,12 +214,12 @@
             I'll stare directly at the sun, but never in the mirror<br>
             It must be exhausting always rooting for the anti-hero
         </p>
-        <p id="dev-cal-2" class="track-title"><span id="track-4">4. Snow On The Beach (feat. Lana Del Rey)</span></p>
+        <p class="subtitle"><span id="track-4">4. Snow On The Beach (feat. Lana Del Rey)</span></p>
         <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175"
             style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
             sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
             src="https://embed.music.apple.com/cn/album/snow-on-the-beach-feat-more-lana-del-rey/1689131527?i=1689132080"></iframe>
-        <p id="dev-cal-2">
+        <p id="text-n" class="mdn-text">
             One night a few moons ago<br>
             I saw flecks of what could've been lights<br>
             But it might just have been you<br>
@@ -373,12 +289,12 @@
             (It's coming down, it's coming down, it's coming down, it's coming down)<br>
             (Down, it's coming down, it's coming down, it's coming down)
         </p>
-        <p id="dev-cal-2" class="track-title"><span id="track-5">5. You're On Your Own, Kid</span></p>
+        <p class="subtitle"><span id="track-5">5. You're On Your Own, Kid</span></p>
         <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175"
             style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
             sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
             src="https://embed.music.apple.com/cn/album/youre-on-your-own-kid/1689131527?i=1689131956"></iframe>
-        <p id="dev-cal-2">
+        <p id="text-n" class="mdn-text">
             Summer went away<br>
             Still the yearning stays<br>
             I play it cool with the best of them<br>

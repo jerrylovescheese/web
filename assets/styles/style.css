@@ -381,7 +381,6 @@ table {
 }
 
 td {
-    border-top: solid 1px black;
     padding: 5px;
 }
 
@@ -1106,4 +1105,234 @@ td {
     border: solid 1px black;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+/* 1989tv.html */
+
+._1989-content::after {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    background: linear-gradient(30deg, rgba(0, 0, 0, 0)20%, rgba(28, 141, 255, 0.537));
+    filter: blur(2.5em);
+    z-index: -1;
+    width: calc(100vw + 5px);
+}
+
+/* brat.html */
+
+.brat-text {
+    font-family: Arial, 'ITC Garamond Narrow', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    filter: blur(0.5px);
+}
+
+/* folklore.html */
+
+#folklore-lights {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: linear-gradient(rgba(169, 169, 169, 0.75), white 30%);
+}
+
+@media (prefers-color-scheme: dark) {
+    #folklore-lights {
+        background-image: linear-gradient(rgba(169, 169, 169, 0.75), rgb(0, 0, 0) 30%) !important;
+    }
+}
+
+.folklore-text,
+.fl-heading {
+    font-family: 'IM Fell DW Pica', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+/* lover.html */
+
+.lover-content::after {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    background: linear-gradient(30deg, rgba(0, 0, 0, 0)20%, rgba(242, 173, 196, 0.7), rgb(138, 57, 90, 0.7));
+    filter: blur(2.5em);
+    z-index: -1;
+    width: calc(100vw + 5px);
+}
+
+/* midnights.html */
+
+.mdn-content::after {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    background: linear-gradient(30deg, rgba(0, 0, 0, 0)20%, rgb(137, 168, 186), rgb(94, 108, 141));
+    filter: blur(2.5em);
+    z-index: -1;
+    width: calc(100vw + 5px);
+}
+
+.mdn-text {
+    font-family: 'Neue Haas Grotesk Text Pro 55 Roman', sans-serif !important;
+}
+
+/* ttpd-lyrics.html */
+
+@font-face {
+    font-family: 'Big Caslon FB';
+    src: url(../fonts/BigCaslonFB-Regular.woff2) format('woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Big Caslon FB';
+    src: url(../fonts/BigCaslonFB-Bold.woff2) format('woff2');
+    font-weight: 1000;
+}
+
+@font-face {
+    font-family: 'Big Caslon FB';
+    src: url(../fonts/BigCaslonFB-Italic.woff2) format('woff2');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Big Caslon FB';
+    src: url(../fonts/BigCaslonFB-BoldItalic.woff2) format('woff2');
+    font-weight: 1000;
+    font-style: italic;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    #subpages-backdrop {
+        background-color: rgb(41, 36, 33) !important;
+    }
+
+    #pages-ttpd-print {
+        background-color: #000 !important;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    #text-n {
+        color: rgb(41, 36, 33) !important;
+    }
+
+    .pages-separator {
+        background-color: rgb(41, 36, 33) !important;
+    }
+}
+
+@media print {
+    #tool {
+        display: none !important;
+    }
+
+    .pages-ttpd-break,
+    #update,
+    #pages-ttpd-print {
+        display: none;
+    }
+}
+
+#quick-links {
+    overflow-y: scroll;
+    padding-bottom: 120px;
+}
+
+#subpages-backdrop {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #eceae6;
+    z-index: -1;
+}
+
+.ttpd-content #text-n,
+.ttpd-content .subtitle {
+    font-family: 'Big Caslon FB', 'Source Han Sans', sans-serif;
+}
+
+.pages-separator {
+    height: 1px;
+    background-color: #eceae6;
+    margin-bottom: 40px;
+}
+
+#pages-ttpd-print {
+    font-family: 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
+    border: rgb(192, 192, 192) solid 1px;
+    box-shadow: none;
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+#pages-ttpd-print:active {
+    scale: 95%;
+}
+
+/* ttpd.html */
+
+.ttpd-content .pages-container {
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.ttpd-content .pages-container>#text-n {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.ttpd-content .image {
+    margin-left: 30px;
+    margin-right: 30px;
+    width: auto;
+    border-radius: 10px;
+    background-size: cover;
+    margin-bottom: 30px;
+}
+
+#ttpd-review {
+    box-shadow: 0 1px 1px rgba(236, 234, 230, 0.41),
+        0 2px 2px rgba(236, 234, 230, 0.31),
+        0 4px 4px rgba(236, 234, 230, 0.21),
+        0 8px 8px rgba(236, 234, 230, 0.11);
+    transition: all 0.2s;
+}
+
+#ttpd-review>p>a {
+    color: unset;
+}
+
+#ttpd-review:active {
+    box-shadow: none;
+    scale: 98%;
+}
+
+#ttpd-review-title {
+    font-family: 'Big Caslon FB';
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/* wicked.html */
+
+.wicked-content::after {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    background-image: radial-gradient(circle at bottom left, rgb(133, 228, 158), rgb(162, 255, 187), rgb(247, 166, 217), rgb(200, 59, 148));
+    filter: blur(2.5em);
+    z-index: -1;
+    width: calc(100vw + 5px);
 }

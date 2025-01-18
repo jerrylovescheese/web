@@ -1,1318 +1,1112 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light dark">
-    <title>The Tortured Poets Department Lyrics Book</title>
-    <script src="../../static/js/header_sub.js"></script>
-    <script src="../../static/js/include.js"></script>
-    <script src="../../static/js/jquery-3.7.1.js"></script>
-    <script src="../../static/js/progress.js"></script>
-    <script src="../../static/js/loader.js"></script>
-    <link rel="stylesheet" href="../../static/css/style.css">
-    <link rel="stylesheet" href="../../static/fontawesome/css/all.css">
-    <link rel="shortcut icon" href="../../Aug-18-2023-Favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <style>
-        @font-face {
-            font-family: 'Big Caslon FB';
-            src: url(../../static/fonts/BigCaslonFB-Regular.woff2) format('woff2');
-            font-weight: 300;
-        }
-
-        @font-face {
-            font-family: 'Big Caslon FB';
-            src: url(../../static/fonts/BigCaslonFB-Bold.woff2) format('woff2');
-            font-weight: 1000;
-        }
-
-        @font-face {
-            font-family: 'Big Caslon FB';
-            src: url(../../static/fonts/BigCaslonFB-Italic.woff2) format('woff2');
-            font-weight: 300;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Big Caslon FB';
-            src: url(../../static/fonts/BigCaslonFB-BoldItalic.woff2) format('woff2');
-            font-weight: 1000;
-            font-style: italic;
-        }
-
-        @media (max-width: 768px) {
-            #dev-cal-1 {
-                margin-top: 160px;
-            }
-
-            #header-unit {
-                background: transparent !important;
-                padding-top: 0 !important;
-            }
-
-            #quick-links {
-                padding-bottom: 10px !important;
-            }
-
-            .quick-link>a {
-                color: #000000 !important;
-            }
-
-            ::-webkit-scrollbar {
-                width: 0;
-            }
-        }
-
-        @media (prefers-color-scheme: dark) {
-
-            #subpages-backdrop,
-            #header-unit {
-                background-color: rgb(41, 36, 33) !important;
-            }
-
-            #pages-ttpd-print {
-                background-color: #000 !important;
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            #dev-cal-2 {
-                color: rgb(41, 36, 33) !important;
-            }
-
-            .pages-separator {
-                background-color: rgb(41, 36, 33) !important;
-            }
-        }
-
-        @media print {
-
-            #core-backdrop,
-            #header-unit,
-            #tool {
-                display: none !important;
-            }
-
-            .pages-ttpd-break,
-            #update,
-            #pages-ttpd-print {
-                display: none;
-            }
-        }
-
-        #quick-links {
-            overflow-y: scroll;
-            padding-bottom: 120px;
-        }
-
-        #subpages-backdrop {
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #eceae6;
-            z-index: -1;
-        }
-
-        /* #dev-cal-1 {
-            font-family: 'Big Caslon FB', sans-serif;
-            font-size: 55px;
-        } */
-
-        #dev-cal-2 {
-            font-family: 'Big Caslon FB', 'Source Han Sans', sans-serif;
-            color: #eceae6;
-        }
-
-        .pages-separator {
-            height: 1px;
-            margin-left: 30px;
-            margin-right: 30px;
-            background-color: #eceae6;
-            margin-bottom: 40px;
-        }
-
-        #pages-ttpd-print {
-            margin-left: 30px;
-            font-family: 'Big Caslon FB', 'Source Han Sans', sans-serif;
-            background-color: rgb(255, 255, 255);
-            border: rgb(192, 192, 192) solid 1px;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
-                0 2px 2px rgba(0, 0, 0, 0.11),
-                0 4px 4px rgba(0, 0, 0, 0.11),
-                0 8px 8px rgba(0, 0, 0, 0.11);
-            padding: 5px;
-            border-radius: 5px;
-            transition: all 0.2s;
-        }
-
-        #pages-ttpd-print:hover {
-            box-shadow: none;
-        }
-
-        #pages-ttpd-print:active {
-            scale: 95%;
-        }
-    </style>
-</head>
-
-<body>
-    <div id="header-container"></div>
-    <include src="../../layout/layout_for_subpages.html"></include>
-    <div class="loader-wrapper">
-        <i class="fa-solid fa-spinner fa-spin"></i>&emsp;<span id="loader-prompt">Preparing elements.</span>
-    </div>
-
-    <div id="header-unit">
-        <div class="header">&emsp;<a href=""><i class="fas fa-chevron-left"></i>&emsp14;&emsp14;&emsp14;返回上一页</a>
-        </div>
-
-        <div id="quick-links">
-            <b>ON THIS PAGE:</b>
-            <span id="quick-link-1" class="quick-link"><a href="#title-0">Prologue - “In Summation”</a></span>
-            <span id="quick-link-2" class="quick-link"><a href="#title-1">Fortnight (feat. Post Malone)</a></span>
-            <span id="quick-link-3" class="quick-link"><a href="#title-2">The Tortured Poets Department</a></span>
-            <span id="quick-link-4" class="quick-link"><a href="#title-3">My Boy Only Breaks His Favorite
-                    Toys</a></span>
-            <span id="quick-link-5" class="quick-link"><a href="#title-4">Down Bad</a></span>
-            <span id="quick-link-6" class="quick-link"><a href="#title-5">So Long, London</a></span>
-            <span id="quick-link-7" class="quick-link"><a href="#title-6">But Daddy I Love Him</a></span>
-            <span id="quick-link-8" class="quick-link"><a href="#title-7">Fresh Out the Slammer</a></span>
-            <span id="quick-link-9" class="quick-link"><a href="#title-8">Florida!!! (feat Florence + The
-                    Machine)</a></span>
-            <span id="quick-link-10" class="quick-link"><a href="#title-9">Guilty as Sin?</a></span>
-            <span id="quick-link-11" class="quick-link"><a href="#title-10">Who's Afraid of Little Old Me?</a></span>
-            <span id="quick-link-12" class="quick-link"><a href="#title-11">I Can Fix Him (No Really I Can)</a></span>
-            <span id="quick-link-13" class="quick-link"><a href="#title-12">loml</a></span>
-            <span id="quick-link-14" class="quick-link"><a href="#title-13">I Can Do It With a Broken Heart</a></span>
-            <span id="quick-link-15" class="quick-link"><a href="#title-14">The Smallest Man Who Ever Lived</a></span>
-            <span id="quick-link-16" class="quick-link"><a href="#title-15">The Alchemy</a></span>
-            <span id="quick-link-17" class="quick-link"><a href="#title-16">Clara Bow</a></span>
-        </div>
-        <div class="scroll-indicator"></div>
-    </div>
-
-    <div id="content-unit">
-        <!-- <p id="dev-cal-1">The Tortured Poets Department Lyrics Book</p> -->
-        <p id="update">Last updated Apr 22 2024<br><br></p>
-
-        <div id="subpages-backdrop"></div>
-
-        <p id="dev-cal-2" class="pages-ttpd-break"><br><br><br></p>
-
-        <p id="dev-cal-2"><i>The Tortured Poets Department Lyric Book</i></p>
-        <p id="dev-cal-2"><i>by</i> 李江源</p>
-
-        <button id="pages-ttpd-print" onclick="window.print()">Print the lyric book</button>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-0">Prologue - <i>“In Summation”</i></span></p>
-        <p id="dev-cal-2">
-            <i>At this hearing<br>
-                I stand before my fellow members<br>
-                of the Tortured Poets Department<br>
-                With a summary of my findings<br>
-                A debrief, a detailed rewinding<br>
-                For the purpose of warning<br>
-                For the sake of reminding<br>
-                As you might all unfortunately recall<br>
-                I had been struck with a case<br>
-                of a restricted humanity<br>
-                Which explains my plea here today<br>
-                of temporary insanity<br>
-                You see, the pendulum swings<br>
-                Oh, the chaos it brings<br>
-                Leads the caged beast to do<br>
-                the most curious things<br>
-                <br>
-                Lovers spend years denying what’s ill fated<br>
-                Resentment rotting away<br>
-                galaxies we created<br>
-                Stars placed and glued<br>
-                meticulously by hand<br>
-                next to the ceiling fan<br>
-                Tried wishing on comets.<br>
-                Tried dimming the shine.<br>
-                Tried to orbit his planet.<br>
-                Some stars never align.<br>
-                <br>
-                And in one conversation, I tore down the whole sky<br>
-                Spring sprung forth with dazzling freedom hues<br>
-                Then a crash from the skylight<br>
-                Bursting through<br>
-                Something old, someone hallowed,<br>
-                who told me he could be brand new<br>
-                And so I was out of the oven<br>
-                And into the microwave<br>
-                Out of the slammer and into a tidal wave<br>
-                How gallant to save the empress<br>
-                from her gilded tower<br>
-                Swinging a sword he could barely lift<br>
-                But loneliness struck at that fateful hour<br>
-                Low hanging fruit on his wine stained lips<br>
-                He never even scratched the surface<br>
-                of me.<br>
-                None of them did.<br>
-                <br>
-                “In summation, it was not a love affair!”<br>
-                I screamed while bringing my fists<br>
-                to my coffee ringed desk<br>
-                It was a mutual manic phase.<br>
-                It was self harm.<br>
-                It was house and then cardiac arrest.<br>
-                A smirk creeps onto this poet’s face<br>
-                Because it’s the worst men that I write best.<br>
-                <br>
-                And so I enter into evidence<br>
-                My tarnished coat of arms<br>
-                My muses, acquired like bruises<br>
-                My talismans and charms<br>
-                The tick, tick, tick of love bombs<br>
-                My veins of pitch black ink<br>
-                All’s fair in love and poetry<br>
-                <br>
-                Sincerely,<br>
-                The Chairman<br>
-                of The Tortured Poets Department</i>
-        </p>
-
-        <div class="pages-separator"></div>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-1">Fortnight <i>(feat Post Malone)</i></span></p>
-        <p id="dev-cal-2">
-            I was supposed to be sent away, but they forgot to come and get me<br>
-            I was a functioning alcoholic till nobody noticed my new aesthetic<br>
-            All of this to say, I hope you're okay, but you're the reason<br>
-            And no one here's to blame, but what about your quiet treason?<br>
-            <br>
-            And for a fortnight there, we were forever<br>
-            Run into you sometimes, ask about the weather<br>
-            Now you're in my backyard, turned into good neighbors<br>
-            Your wife waters flowers<br>
-            I wanna kill her<br>
-            <br>
-            All my mornings are Mondays stuck in an endless February<br>
-            I took the miracle move-on drug, the effects were temporary<br>
-            <br>
-            And I love you, it's ruining my life<br>
-            I love you, it's ruining my life<br>
-            I touched you for only a fortnight<br>
-            I touched you<br>
-            But I touched you<br>
-            <br>
-            And for a fortnight there, we were forever<br>
-            Run into you sometimes, ask about the weather<br>
-            Now you're in my backyard, turned into good neighbors<br>
-            Your wife waters flowers<br>
-            I wanna kill her<br>
-            <br>
-            And for a fortnight there, we were together<br>
-            Run into you sometimes, comment on my sweater<br>
-            Now you're at the mailbox, turned into good neighbors<br>
-            My husband is cheating<br>
-            I wanna kill him<br>
-            <br>
-            I love you, it's ruining my life<br>
-            I love you, it's ruining my life<br>
-            I touched you for only a fortnight<br>
-            I touched you<br>
-            I touched you<br>
-            <br>
-            I love you, it's ruining my life<br>
-            I love you, it's ruining my life<br>
-            I touched you for only a fortnight<br>
-            I touched you<br>
-            I touched you<br>
-            <br>
-            Thought of calling ya, but you won't pick up<br>
-            Another fortnight lost in America<br>
-            Move to Florida, buy the car you want<br>
-            But it won't start up till you touch, touch, touch me<br>
-            <br>
-            Thought of calling ya, but you won't pick up<br>
-            Another fortnight lost in America<br>
-            Move to Florida, buy the car you want<br>
-            But it won't start up till I touch, touch, touch you
-        </p>
-
-        <div class="pages-separator"></div>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-2">The Tortured Poets Department</span></p>
-        <p id="dev-cal-2">
-            You left your typewriter at my apartment<br>
-            Straight from the Tortured Poets Department<br>
-            I think some things I never say<br>
-            Like, "Who uses typewriters anyway?" But<br>
-            You're in self-sabotage mode, throwing spikes down on the road<br>
-            But I've seen this episode and still loved the show<br>
-            Who else decodes you?<br>
-            <br>
-            And who's gonna hold you like me?<br>
-            And who's gonna know you, if not me?<br>
-            I laughed in your face and said<br>
-            "You're not Dylan Thomas<br>
-            I'm not Patti Smith<br>
-            This ain't the Chelsea Hotel<br>
-            We're modern idiots"<br>
-            And who's gonna hold you like me?<br>
-            Nobody<br>
-            No-fucking-body<br>
-            Nobody<br>
-            <br>
-            You smoked then ate seven bars of chocolate<br>
-            We declared Charlie Puth should be a bigger artist<br>
-            I scratch your head, you fall asleep<br>
-            Like a tattooed golden retriever<br>
-            But you awaken with dread, pounding nails in your head<br>
-            But I've read this one where you come undone<br>
-            I chose this cyclone with you<br>
-            <br>
-            And who's gonna hold you like me? (Who's gonna hold you? Who's gonna hold you?)<br>
-            And who's gonna know you like me? (Who's gonna know you?)<br>
-            I laughed in your face and said<br>
-            "You're not Dylan Thomas<br>
-            I'm not Patti Smith<br>
-            This ain't the Chelsea Hotel<br>
-            We're modern idiots"<br>
-            And who's gonna hold you like me? (Who's gonna hold you? Who's gonna hold you?)<br>
-            No-fucking-body (Who's gonna hold you? Who's gonna hold you?)<br>
-            Nobody (Who's gonna hold you? Gonna love you? Gonna troll you?)<br>
-            Nobody<br>
-            <br>
-            Sometimes I wonder if you're gonna screw this up with me<br>
-            But you told Lucy you'd kill yourself if I ever leave<br>
-            And I had said that to Jack about you, so I felt seen<br>
-            Everyone we know understands why it's meant to be<br>
-            'Cause we're crazy<br>
-            So tell me<br>
-            Who else is gonna know me?<br>
-            At dinner, you take my ring off my middle finger and put it on the one<br>
-            People put wedding rings on, and that's the closest I've come<br>
-            To my heart exploding<br>
-            <br>
-            Who's gonna hold you?<br>
-            Me<br>
-            Who's gonna know you?<br>
-            Me<br>
-            "And you're not Dylan Thomas<br>
-            I'm not Patti Smith<br>
-            This ain't the Chelsea Hotel<br>
-            We're two idiots"<br>
-            Who's gonna hold you?<br>
-            <br>
-            Who's gonna hold you? (Who's gonna hold you?)<br>
-            Who's gonna hold you? (Who's gonna hold you?)<br>
-            Who's gonna hold you?<br>
-            Who's gonna hold you?<br>
-            Who's gonna hold you? Gonna know you? Gonna troll you?<br>
-            <br>
-            You left your typewriter at my apartment<br>
-            Straight from the Tortured Poets Department<br>
-            Who else decodes you?
-        </p>
-
-        <div class="pages-separator"></div>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-3">My Boy Only Breaks His Favorite Toys</span></p>
-        <p id="dev-cal-2">
-            Oh, here we go again<br>
-            The voices in his head<br>
-            Called the rain to end our days of wild<br>
-            The sickest army doll<br>
-            Purchased at the mall<br>
-            Rivulets descend my plastic smile<br>
-            <br>
-            But you should've seen him<br>
-            When he first got me<br>
-            <br>
-            My boy only breaks his favorite toys, toys, oh<br>
-            I'm queen of sand castles he destroys, oh, oh<br>
-            'Cause it fit too right<br>
-            Puzzle pieces in the dead of night<br>
-            I should've known it was a matter of time<br>
-            Oh, oh, my boy only breaks his favorite toys, oh, oh-oh-oh<br>
-            <br>
-            There was a litany of reasons why<br>
-            We could've played for keeps this time<br>
-            I know I'm just repeating myself<br>
-            Put me back on my shelf<br>
-            But first, pull the string<br>
-            And I'll tell you that he runs<br>
-            Because he loves me (He loves me)<br>
-            <br>
-            'Cause you should've seen him<br>
-            When he first saw me<br>
-            <br>
-            My boy only breaks his favorite toys, toys, oh<br>
-            I'm queen of sand castles he destroys, oh, oh<br>
-            'Cause I knew too much<br>
-            There was danger in the heat of my touch<br>
-            He saw forever so he smashed it up<br>
-            Oh, oh, my boy only breaks his favorite toys, oh, oh-oh-oh<br>
-            <br>
-            Once I fix me, he's gonna miss me<br>
-            Once I fix me, he's gonna miss me<br>
-            <br>
-            Just say when, I'd play again<br>
-            He was my best friend<br>
-            Down at the sandlot<br>
-            I felt more when we played pretend<br>
-            Than with all the Kens<br>
-            'Cause he took me out of my box<br>
-            Stole my tortured heart<br>
-            Left all these broken parts<br>
-            Told me I'm better off<br>
-            But I'm not<br>
-            I'm not<br>
-            I'm not
-        </p>
-
-        <div class="pages-separator"></div>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-4">Down Bad</span></p>
-        <p id="dev-cal-2">
-            Did you really beam me up?<br>
-            In a cloud of sparkling dust<br>
-            Just to do experiments on<br>
-            Tell me I was the chosen one<br>
-            Show me that this world is bigger than us<br>
-            Then sent me back where I came from<br>
-            For a moment, I knew cosmic love<br>
-            <br>
-            Now I'm down bad, crying at the gym<br>
-            Everything comes out teenage petulance<br>
-            "Fuck it if I can't have him"<br>
-            "I might just die, it would make no difference"<br>
-            Down bad, waking up in blood<br>
-            Staring at the sky, come back and pick me up<br>
-            Fuck it if I can't have us<br>
-            I might just not get up<br>
-            I might stay down bad<br>
-            <br>
-            Fuck it if I can't have him<br>
-            Down bad<br>
-            Fuck it if I can't have him<br>
-            <br>
-            Did you take all my old clothes?<br>
-            Just to leave me here naked and alone<br>
-            In a field in my same old town<br>
-            That somehow seems so hollow now<br>
-            They'll say I'm nuts if I talk about the existence of you<br>
-            For a moment, I was heaven struck<br>
-            <br>
-            Now I'm down bad, crying at the gym (Crying at the gym)<br>
-            Everything comes out teenage petulance<br>
-            "Fuck it if I can't have him" (Fuck it if I can't have him)<br>
-            "I might just die, it would make no difference"<br>
-            Down bad, waking up in blood (Waking up in blood)<br>
-            Staring at the sky, come back and pick me up<br>
-            Fuck it if I can't have us<br>
-            I might just not get up<br>
-            I might stay down bad<br>
-            <br>
-            Like I lost my twin<br>
-            Fuck it if I can't have him (Down bad)<br>
-            Down bad<br>
-            Waving at the ship<br>
-            Fuck it if I can't have him<br>
-            <br>
-            I loved your hostile takeovers<br>
-            Encounters closer and closer<br>
-            All your indecent exposures<br>
-            How dare you say that it's-<br>
-            I'll build you a fort on some planet<br>
-            Where they can all understand it<br>
-            How dare you think it's romantic<br>
-            Leaving me safe and stranded<br>
-            'Cause fuck it, I was in love<br>
-            So fuck you if I can't have us<br>
-            'Cause fuck it, I was in love<br>
-            <br>
-            Now I'm down bad, crying at the gym (Crying at the gym)<br>
-            Everything comes out teenage petulance<br>
-            "Fuck it if I can't have him" (Can't have him)<br>
-            "I might just die, it would make no difference"<br>
-            Down bad, waking up in blood (Waking up in blood)<br>
-            Staring at the sky, come back and pick me up<br>
-            Fuck it if I can't have us<br>
-            I might just not get up<br>
-            I might stay down bad<br>
-            <br>
-            Like I lost my twin<br>
-            Fuck it if I can't have him (Down bad)<br>
-            Down bad<br>
-            Waving at the ship<br>
-            Fuck it if I can't have him<br>
-            <br>
-            Like I lost my twin<br>
-            Fuck it if I can't have him<br>
-            Down bad<br>
-            Waving at the ship<br>
-            Fuck it if I can't have him
-        </p>
-
-        <div class="pages-separator"></div>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-5">So Long, London</span></p>
-        <p id="dev-cal-2">
-            So long, London (So long, London)<br>
-            So long, London (So long, London)<br>
-            So long, London (So long, London)<br>
-            <br>
-            I saw in my mind fairy lights through the mist<br>
-            I kept calm and carried the weight of the rift<br>
-            Pulled him in tighter each time he was drifting away<br>
-            My spine split from carrying us up the hill<br>
-            Wet through my clothes, weary bones caught the chill<br>
-            I stopped trying to make him laugh, stopped trying to drill the safe<br>
-            Thinking how much sad did you think I had<br>
-            Did you think I had in me?<br>
-            Oh, the tragedy<br>
-            <br>
-            So long, London<br>
-            You'll find someone<br>
-            <br>
-            I didn't opt in to be your odd man out<br>
-            I founded the club she's heard great things about<br>
-            I left all I knew, you left me at the house by the Heath<br>
-            I stopped CPR, after all, it's no use<br>
-            The spirit was gone, we would never come to<br>
-            And I'm pissed off you let me give you all that youth for free<br>
-            <br>
-            For so long, London<br>
-            Stitches undone<br>
-            Two graves, one gun<br>
-            I'll find someone<br>
-            <br>
-            And you say I abandoned the ship<br>
-            But I was going down with it<br>
-            My white-knuckle dying grip<br>
-            Holding tight to your quiet resentment<br>
-            And my friends said it isn't right to be scared<br>
-            Every day of a love affair<br>
-            Every breath feels like rarest air<br>
-            When you're not sure if he wants to be there<br>
-            So how much sad did you think I had<br>
-            Did you think I had in me?<br>
-            How much tragedy?<br>
-            Just how low did you think I'd go<br>
-            Before I'd self-implode?<br>
-            Before I'd have to go be free?<br>
-            <br>
-            You swore that you loved me, but where were the clues?<br>
-            I died on the altar waiting for the proof<br>
-            You sacrificed us to the gods of your bluest days<br>
-            And I'm just getting color back into my face<br>
-            I'm just mad as hell 'cause I loved this place<br>
-            <br>
-            For so long, London (So long, London)<br>
-            Had a good run (Had a good run)<br>
-            A moment of warm sun (Moment of warm sun)<br>
-            But I'm not the one (I'm not the one)<br>
-            <br>
-            So long, London (So long, London)<br>
-            Stitches undone (Stitches undone)<br>
-            Two graves, one gun (Two graves, one gun)<br>
-            You'll find someone (You'll find)
-        </p>
-
-        <div class="pages-separator"></div>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-6">But Daddy I Love Him</span></p>
-        <p id="dev-cal-2">
-            I forget how the West was won<br>
-            I forget if this was ever fun<br>
-            I just learned these people only raise you to cage you<br>
-            Sarahs and Hannahs in their Sunday best<br>
-            Clutching their pearls, sighing, "What a mess"<br>
-            I just learned these people try and save you<br>
-            'Cause they hate you<br>
-            <br>
-            Too high a horse<br>
-            For a simple girl to rise above it<br>
-            They slammed the door on my whole world<br>
-            The one thing I wanted<br>
-            <br>
-            Now I'm running with my dress unbuttoned<br>
-            Screaming, "But Daddy, I love him!<br>
-            I'm having his baby"<br>
-            No, I'm not, but you should see your faces<br>
-            I'm telling him to floor it through the fences<br>
-            No, I'm not coming to my senses<br>
-            I know he's crazy but he's the one I want<br>
-            <br>
-            Dutiful daughter, all my plans were laid<br>
-            Tendrils tucked into a woven braid<br>
-            Growing up precocious sometimes means not growing up at all<br>
-            He was chaos, he was revelry<br>
-            Bedroom eyes like a remedy<br>
-            Soon enough the elders had convened<br>
-            Down at the city hall<br>
-            <br>
-            "Stay away from her"<br>
-            The saboteurs protested too much<br>
-            Lord knows the words we never heard<br>
-            Just screeching tires and true love<br>
-            <br>
-            And I'm running with my dress unbuttoned<br>
-            Screaming, "But Daddy, I love him!<br>
-            I'm having his baby"<br>
-            No, I'm not, but you should see your faces<br>
-            I'm telling him to floor it through the fences<br>
-            No, I'm not coming to my senses<br>
-            I know he's crazy but he's the one I want<br>
-            <br>
-            I'll tell you something right now<br>
-            I'd rather burn my whole life down<br>
-            Than listen to one more second of all this bitching and moaning<br>
-            I'll tell you something about my good name<br>
-            It's mine alone to disgrace<br>
-            I don't cater to all these vipers dressed in empath's clothing<br>
-            <br>
-            God save the most judgmental creeps<br>
-            Who say they want what's best for me<br>
-            Sanctimoniously performing soliloquies I'll never see<br>
-            Thinking it can change the beat<br>
-            Of my heart when he touches me<br>
-            And counteract the chemistry<br>
-            And undo the destiny<br>
-            You ain't gotta pray for me<br>
-            Me and my wild boy and all this wild joy<br>
-            If all you want is gray for me<br>
-            Then it's just white noise<br>
-            And it's just my choice<br>
-            <br>
-            There's a lot of people in town that I<br>
-            Bestow upon my fakest smiles<br>
-            Scandal does funny things to pride<br>
-            But brings lovers closer<br>
-            We came back when the heat died down<br>
-            Went to my parents and they came around<br>
-            All the wine moms are still holding out<br>
-            But fuck 'em, it's over<br>
-            <br>
-            Now I'm dancing in my dress in the sun, and<br>
-            Even my daddy just loves him<br>
-            I'm his lady<br>
-            And oh my God, you should see your faces<br>
-            Time, doesn't it give some perspective?<br>
-            And no, you can't come to the wedding<br>
-            I know he's crazy, but he's the one I want<br>
-            <br>
-            I'll tell you something right now, you ain't gotta pray for me<br>
-            Me and my wild boy and all of this wild joy<br>
-            He was chaos, he was revelry<br>
-            If all you want is gray for me<br>
-            Then it's just white noise, and it's my choice<br>
-            <br>
-            Screaming, "But Daddy, I love him!<br>
-            I'm having his baby"<br>
-            No, I'm not, but you<br>
-            Should see your faces<br>
-            But oh my God, you should see your faces<br>
-            He was chaos, he was revelry
-        </p>
-
-        <div class="pages-separator"></div>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-7">Fresh Out the Slammer</span></p>
-        <p id="dev-cal-2">
-            Now, pretty baby, I'm runnin' back home to you<br>
-            Fresh out the slammer, I know who my first call will be to<br>
-            Fresh out the slammer, oh<br>
-            <br>
-            Another summer, takin' cover<br>
-            Rollin' thunder, he don't understand me<br>
-            Splintered back in winter, silent dinners, bitter<br>
-            He was with her in dreams<br>
-            Gray and blue and fights and tunnels<br>
-            Handcuffed to the spell I was under<br>
-            For just one hour of sunshine<br>
-            Years of labor, locks and ceilings<br>
-            In the shade of how he was feelin'<br>
-            But it's gonna be alright, I did my time<br>
-            <br>
-            Now, pretty baby, I'm runnin' back home to you<br>
-            Fresh out the slammer, I know who my first call will be to<br>
-            Fresh out the slammer, oh<br>
-            <br>
-            Camera flashes, welcome bashes<br>
-            Get the matches, toss the ashes off the ledge<br>
-            As I said in my letters, now that I know better<br>
-            I will never lose my baby again<br>
-            My friends tried but I wouldn't hear it<br>
-            Watched me daily disappearing<br>
-            For just one glimpse of his smile<br>
-            All those nights you kept me going<br>
-            Swirled you into all of my poems<br>
-            Now we're at the starting line, I did my time<br>
-            <br>
-            Now, pretty baby, I'm runnin'<br>
-            To the house where you still wait up and that porch light gleams<br>
-            To the one who says I'm the girl of his American Dreams<br>
-            And no matter what I've done, it wouldn't matter anyway<br>
-            Ain't no way I'm gonna screw up, now that I know what's at stake<br>
-            Here<br>
-            At the park where we used to sit on children's swings<br>
-            Wearing imaginary rings<br>
-            But it's gonna be alright, I did my time
-        </p>
-
-        <div class="pages-separator"></div>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-8">Florida!!! <i>(feat Florence + The Machine)</i></span></p>
-        <p id="dev-cal-2">
-            You can beat the heat<br>
-            If you beat the charges too<br>
-            They said I was a cheat<br>
-            I guess it must be true<br>
-            And my friends all smell like weed or little babies<br>
-            And this city reeks of driving myself crazy<br>
-            <br>
-            Little did you know, your home's really only a town you're just a guest in<br>
-            So you work your life away just to pay for a timeshare down in Destin<br>
-            <br>
-            Florida!<br>
-            Is one hell of a drug<br>
-            Florida!<br>
-            Can I use you up?<br>
-            <br>
-            And the hurricane with my name, when it came<br>
-            I got drunk and I dared it to wash me away<br>
-            Barricaded in the bathroom with a bottle of wine<br>
-            Well, me and my ghosts, we had a hell of a time<br>
-            Yes, I'm haunted, but I'm feeling just fine<br>
-            All my girls got their lace and their crimes<br>
-            And your cheating husband disappeared, well<br>
-            No one asks any questions here<br>
-            So I did my best to lay to rest<br>
-            All of the bodies that have ever been on my body<br>
-            And in my mind, they sink into the swamp<br>
-            Is that a bad thing to say in a song?<br>
-            <br>
-            Little did you know, your home's really only the town you'll get arrested<br>
-            So you pack your life away just to wait out the shitstorm back in Texas<br>
-            <br>
-            Florida!<br>
-            Is one hell of a drug<br>
-            Florida!<br>
-            Can I use you up?<br>
-            <br>
-            I need to forget, so take me to Florida<br>
-            I've got some regrets, I'll bury them in Florida<br>
-            Tell me I'm despicable, say it's unforgivable<br>
-            At least the dolls are beautiful, fuck me up, Florida!<br>
-            <br>
-            I need to forget, so take me to Florida<br>
-            I've got some regrets, I'll bury them in Florida<br>
-            Tell me I'm despicable, say it's unforgivable<br>
-            What a crash, what a rush, fuck me up, Florida!<br>
-            <br>
-            It's one hell of a drug<br>
-            It's one hell of a drug<br>
-            Love left me like this<br>
-            And I don't want to exist<br>
-            So take me to Florida<br>
-            <br>
-            Little did you know, your home's really only a town you're just a guest in<br>
-            So you work your life away just to pay for a timeshare down in Destin (Take me to Florida)<br>
-            Little did you know, your home's really only the town you'll get arrested (Take me to Florida)<br>
-            So you pack your life away just to wait out the shitstorm back in Texas (Take me to)<br>
-            <br>
-            Florida!<br>
-            Is one hell of a drug<br>
-            (Take me to) Florida!<br>
-            Can I use you up?<br>
-            Florida!<br>
-            Is one hell of a drug<br>
-            Florida!<br>
-            Go on, fuck me up
-        </p>
-
-        <div class="pages-separator"></div>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-9">Guilty as Sin?</i></span></p>
-        <p id="dev-cal-2">
-            Drowning in the Blue Nile<br>
-            He sent me "Downtown Lights"<br>
-            I hadn't heard it in a while<br>
-            My boredom's bone-deep<br>
-            This cage was once just fine<br>
-            Am I allowed to cry?<br>
-            <br>
-            I dream of cracking locks<br>
-            Throwing my life to the wolves or the ocean rocks<br>
-            Crashing into him tonight, he's a paradox<br>
-            I'm seeing visions, am I bad?<br>
-            Or mad? Or wise?<br>
-            <br>
-            What if he's written "mine" on my upper thigh only in my mind?<br>
-            One slip and falling back into the hedge maze<br>
-            Oh, what a way to die<br>
-            I keep recalling things we never did<br>
-            Messy top lip kiss, how I long for our trysts<br>
-            Without ever touching his skin<br>
-            How can I be guilty as sin?<br>
-            <br>
-            I keep these longings locked<br>
-            In lowercase, inside a vault<br>
-            Someone told me there's no such thing as bad thoughts<br>
-            Only your actions talk<br>
-            <br>
-            These fatal fantasies giving way to labored breath<br>
-            Taking all of me, we've already done it in my head<br>
-            If it's make-believe<br>
-            Why does it feel like a vow we'll both uphold somehow?<br>
-            <br>
-            What if he's written "mine" on my upper thigh only in my mind?<br>
-            One slip and falling back into the hedge maze<br>
-            Oh, what a way to die<br>
-            My bedsheets are ablaze, I've screamed his name<br>
-            Building up like waves crashing over my grave<br>
-            Without ever touching his skin<br>
-            How can I be guilty as sin?<br>
-            <br>
-            What if I roll the stone away?<br>
-            They're gonna crucify me anyway<br>
-            What if the way you hold me is actually what's holy?<br>
-            If long-suffering propriety is what they want from me<br>
-            They don't know how you've haunted me so stunningly<br>
-            I choose you and me religiously<br>
-            <br>
-            What if he's written "mine" on my upper thigh only in my mind?<br>
-            One slip and falling back into the hedge maze<br>
-            Oh, what a way to die<br>
-            I keep recalling things we never did<br>
-            Messy top lip kiss, how I long for our trysts<br>
-            Without ever touching his skin<br>
-            How can I be guilty as sin?<br>
-            <br>
-            He sent me "Downtown Lights"<br>
-            I hadn't heard it in a while<br>
-            Am I allowed to cry?
-        </p>
-
-        <div class="pages-separator"></div>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-10">Who's Afraid of Little Old Me?</i></span></p>
-        <p id="dev-cal-2">
-            The "Who's Who" of "Who's That?"<br>
-            Is poised for the attack<br>
-            But my bare hands paved their paths<br>
-            You don't get to tell me about "sad"<br>
-            <br>
-            If you wanted me dead<br>
-            You should've just said<br>
-            Nothing makes me feel more alive<br>
-            <br>
-            So I leap from the gallows, and I levitate down your street<br>
-            Crash the party like a record scratch as I scream<br>
-            "Who's afraid of little old me?"<br>
-            You should be<br>
-            <br>
-            The scandal was contained<br>
-            The bullet had just grazed<br>
-            At all costs, keep your good name<br>
-            You don't get to tell me you feel bad<br>
-            <br>
-            Is it a wonder I broke? Let's hear one more joke<br>
-            Then we could all just laugh until I cry<br>
-            <br>
-            So I leap from the gallows, and I levitate down your street<br>
-            Crash the party like a record scratch as I scream<br>
-            "Who's afraid of little old me?"<br>
-            I was tame, I was gentle till the circus life made me mean<br>
-            Don't you worry, folks, we took out all her teeth<br>
-            Who's afraid of little old me?<br>
-            Well, you should be, you should be, you should be (You should be, you should be)<br>
-            You should be, you should be, you should be (You should be, you should be)<br>
-            <br>
-            So tell me everything is not about me<br>
-            But what if it is?<br>
-            Then say they didn't do it to hurt me<br>
-            But what if they did?<br>
-            I want to snarl and show you just how disturbed this has made me<br>
-            You wouldn't last an hour in the asylum where they raised me<br>
-            So all you kids can sneak into my house, with all the cobwebs<br>
-            I'm always drunk on my own tears, isn't that what they all said?<br>
-            <br>
-            That I'll sue you if you step on my lawn<br>
-            That I'm fearsome, and I'm wretched, and I'm wrong<br>
-            Put narcotics into all of my songs<br>
-            And that's why you're still singing along<br>
-            <br>
-            So I leap from the gallows, and I levitate down your street<br>
-            Crash the party like a record scratch as I scream<br>
-            "Who's afraid of little old me?"<br>
-            I was tame, I was gentle till the circus life made me mean<br>
-            Don't you worry, folks, we took out all her teeth<br>
-            Who's afraid of little old me?<br>
-            Well, you should be, you should be, you should be (You should be, you should be)<br>
-            <br>
-            'Cause you lured me, and you hurt me, and you taught me (You should be, you should be)<br>
-            You caged me, and then you called me crazy<br>
-            I am what I am 'cause you trained me<br>
-            So who's afraid of me?<br>
-            So who's afraid of little old me?<br>
-            Who's afraid of little old me?
-        </p>
-
-        <div class="pages-separator"></div>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-11">I Can Fix Him (No Really I Can)</i></span></p>
-        <p id="dev-cal-2">
-            The smoke cloud billows out his mouth<br>
-            Like a freight train through a small town<br>
-            The jokes that he told across the bar<br>
-            Were revolting and far too loud<br>
-            <br>
-            They shake their heads, saying, "God help her" when I<br>
-            Tell 'em he's my man<br>
-            But your good Lord doesn't need to lift a finger<br>
-            I can fix him, no really I can<br>
-            And only I can<br>
-            <br>
-            The dopamine races through his brain<br>
-            On a six-lane Texas highway<br>
-            His hand, so calloused from his pistol<br>
-            Softly traces hearts on my face<br>
-            And I could see it from a mile away<br>
-            A perfect case for my certain skillset<br>
-            He had a halo of the highest grade<br>
-            He just hadn't met me yet<br>
-            <br>
-            They shake their heads, saying, "God help her" when I<br>
-            Tell 'em he's my man<br>
-            But your good Lord doesn't need to lift a finger<br>
-            I can fix him, no really I can<br>
-            And only I can<br>
-            <br>
-            Good boy, that's right<br>
-            Come close, I'll show you heaven<br>
-            If you'll be an angel all night<br>
-            Trust me, I can handle me a dangerous man<br>
-            No really I can<br>
-            <br>
-            They shook their heads, saying, "God help her" when I<br>
-            Told 'em he's my man (I told 'em he's my man)<br>
-            But your good Lord didn't need to lift a finger<br>
-            I can fix him, no really I can (No really I can)<br>
-            <br>
-            Whoa, maybe I can't
-        </p>
-
-        <div class="pages-separator"></div>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-12">loml</i></span></p>
-        <p id="dev-cal-2">
-            Who's gonna stop us from waltzing back into rekindled flames<br>
-            If we know the steps anyway?<br>
-            We embroidered the memories of the time I was away<br>
-            Stitching, "We were just kids, babe"<br>
-            I said, "I don't mind, it takes time"<br>
-            I thought I was better safe than starry-eyed<br>
-            I felt aglow like this<br>
-            Never before and never since<br>
-            <br>
-            If you know it in one glimpse, it's legendary<br>
-            You and I go from one kiss to getting married<br>
-            Still alive, killing time at the cemetery<br>
-            Never quite buried<br>
-            In your suit and tie, in the nick of time<br>
-            You lowdown boy, you standup guy, you<br>
-            Holy Ghost, you told me I'm<br>
-            The love of your life<br>
-            <br>
-            You said I'm the love of your life<br>
-            About a million times<br>
-            <br>
-            Who's gonna tell me the truth, when you blew in with the winds of fate<br>
-            And told me I reformed you?<br>
-            When your Impressionist paintings of Heaven turned out to be fakes<br>
-            Well, you took me to hell too<br>
-            And all at once, the ink bleeds<br>
-            A conman sells a fool a get-love-quick scheme<br>
-            But I felt a hole like this<br>
-            Never before and ever since<br>
-            <br>
-            If you know it in one glimpse, it's legendary<br>
-            What we thought was for all time was momentary<br>
-            Still alive, killing time at the cemetery<br>
-            Never quite buried<br>
-            You cinephile in black and white<br>
-            All those plot twists and dynamite<br>
-            Mr. Steal Your Girl, then make her cry<br>
-            You said I'm the love of your life<br>
-            <br>
-            You shit-talked me under the table, talking rings and talking cradles<br>
-            I wish I could un-recall how we almost had it all<br>
-            Dancing phantoms on the terrace, are they second-hand embarrassed<br>
-            That I can't get out of bed 'cause something counterfeit's dead?<br>
-            It was legendary<br>
-            It was momentary<br>
-            It was unnecessary, should've let it stay buried<br>
-            <br>
-            Oh, what a valiant roar<br>
-            What a bland goodbye<br>
-            The coward claimed he was a lion<br>
-            I'm combing through the braids of lies<br>
-            "I'll never leave"<br>
-            "Never mind"<br>
-            Our field of dreams, engulfed in fire<br>
-            Your arson's match, your somber eyes<br>
-            And I'll still see it until I die<br>
-            You're the loss of my life
-        </p>
-
-        <div class="pages-separator"></div>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-13">I Can Do It With a Broken Heart</i></span></p>
-        <p id="dev-cal-2">
-            I can read your mind<br>
-            "She's having the time of her life"<br>
-            There in her glittering prime<br>
-            The lights refract sequin stars<br>
-            Off her silhouette every night<br>
-            I can show you lies<br>
-            <br>
-            'Cause I'm a real tough kid<br>
-            I can handle my shit<br>
-            They said, "Babe, you gotta fake it 'til you make it"<br>
-            And I did<br>
-            Lights, camera, bitch, smile<br>
-            Even when you want to die<br>
-            He said he'd love me all his life<br>
-            But that life was too short<br>
-            Breaking down, I hit the floor<br>
-            All the pieces of me shattered<br>
-            As the crowd was chanting "More!"<br>
-            I was grinning like I'm winning<br>
-            I was hitting my marks<br>
-            'Cause I can do it with a broken heart<br>
-            <br>
-            I'm so depressed, I act like it's my birthday<br>
-            Every day<br>
-            I'm so obsessed with him, but he avoids me<br>
-            Like the plague<br>
-            I cry a lot, but I am so productive<br>
-            It's an art<br>
-            You know you're good when you can even do it with a broken heart<br>
-            <br>
-            I can hold my breath<br>
-            I've been doing it since he left<br>
-            I keep finding his things in drawers<br>
-            Crucial evidence, I didn't imagine the whole thing<br>
-            I'm sure I can pass this test<br>
-            <br>
-            'Cause I'm a real tough kid<br>
-            I can handle my shit<br>
-            They said, "Babe, you gotta fake it 'til you make it"<br>
-            And I did<br>
-            Lights, camera, bitch, smile<br>
-            In stilettos for miles<br>
-            He said he'd love me for all time<br>
-            But that time was quite short<br>
-            Breaking down, I hit the floor<br>
-            All the pieces of me shattered<br>
-            As the crowd was chanting "More!"<br>
-            I was grinning like I'm winning<br>
-            I was hitting my marks<br>
-            'Cause I can do it with a broken heart<br>
-            <br>
-            I'm so depressed, I act like it's my birthday<br>
-            Every day<br>
-            I'm so obsessed with him, but he avoids me<br>
-            Like the plague<br>
-            I cry a lot, but I am so productive<br>
-            It's an art<br>
-            You know you're good when you can even do it with a broken heart<br>
-            <br>
-            You know you're good when you can even do it with a broken heart<br>
-            You know you're good, and I'm good<br>
-            'Cause I'm miserable!<br>
-            And nobody even knows!<br>
-            Try and come for my job
-        </p>
-
-        <div class="pages-separator"></div>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-14">The Smallest Man Who Ever Lived</i></span></p>
-        <p id="dev-cal-2">
-            Was any of it true?<br>
-            Gazing at me starry-eyed<br>
-            In your Jehovah's Witness suit<br>
-            Who the fuck was that guy?<br>
-            You tried to buy some pills<br>
-            From a friend of friends of mine<br>
-            They just ghosted you<br>
-            Now you know what it feels like<br>
-            <br>
-            And I don't even want you back, I just want to know<br>
-            If rusting my sparkling summer was the goal<br>
-            And I don't miss what we had, but could someone give<br>
-            A message to the smallest man who ever lived?<br>
-            <br>
-            You hung me on your wall<br>
-            Stabbed me with your push pins<br>
-            In public, showed me off<br>
-            Then sank in stoned oblivion<br>
-            'Cause once your queen had come<br>
-            You'd treat her like an also-ran<br>
-            You didn't measure up<br>
-            In any measure of a man<br>
-            <br>
-            And I don't even want you back, I just want to know<br>
-            If rusting my sparkling summer was the goal<br>
-            And I don't miss what we had, but could someone give<br>
-            A message to the smallest man who ever lived?<br>
-            <br>
-            Were you sent by someone<br>
-            Who wanted me dead?<br>
-            Did you sleep with a gun underneath our bed?<br>
-            Were you writing a book?<br>
-            Were you a sleeper cell spy?<br>
-            In fifty years will all this be declassified?<br>
-            And you'll confess why you did it<br>
-            And I'll say, "Good riddance"<br>
-            'Cause it wasn't sexy once it wasn't forbidden<br>
-            I would've died for your sins<br>
-            Instead I just died inside<br>
-            And you deserve prison, but you won't get time<br>
-            You'll slide into inboxes and slip through the bars<br>
-            You crashed my party and your rental car<br>
-            You said normal girls were "boring"<br>
-            But you were gone by the morning<br>
-            You kicked out the stage lights, but you're still performing<br>
-            And in plain sight you hid<br>
-            But you are what you did<br>
-            And I'll forget you, but I'll never forgive<br>
-            The smallest man who ever lived
-        </p>
-
-        <div class="pages-separator"></div>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-15">The Alchemy</i></span></p>
-        <p id="dev-cal-2">
-            This happens once every few lifetimes<br>
-            These chemicals hit me like white wine<br>
-            <br>
-            What if I told you I'm back?<br>
-            The hospital was a drag<br>
-            Worst sleep that I ever had<br>
-            I circled you on a map<br>
-            I haven't come around in so long<br>
-            But I'm coming back so strong<br>
-            <br>
-            So when I<br>
-            Touch down, call the amateurs and cut 'em from the team<br>
-            Ditch the clowns, get the crown, baby, I'm the one to beat<br>
-            'Cause the sign on your heart said it's still reserved for me<br>
-            Honestly, who are we to fight the alchemy?<br>
-            <br>
-            Hey, you<br>
-            What if I told you we're cool?<br>
-            That child's play back in school is forgiven under my rule<br>
-            I haven't come around in so long<br>
-            But I'm making a comeback to where I belong<br>
-            <br>
-            So when I<br>
-            Touch down, call the amateurs and cut 'em from the team<br>
-            Ditch the clowns, get the crown, baby, I'm the one to beat<br>
-            'Cause the sign on your heart said it's still reserved for me<br>
-            Honestly, who are we to fight the alchemy?<br>
-            <br>
-            These blokes warm the benches, we been on a winning streak<br>
-            He jokes that it's heroin but this time with an "E"<br>
-            'Cause the sign on your heart said it's still reserved for me<br>
-            Honestly, who are we to fight the alchemy?<br>
-            <br>
-            Shirts off, and your friends lift you up over their heads<br>
-            Beer sticking to the floor, cheers chanted 'cause they said<br>
-            There was no chance, tryna be the greatest in the league<br>
-            Where's the trophy?<br>
-            He just comes running over to me<br>
-            <br>
-            Touch down, call the amateurs and cut 'em from the team<br>
-            Ditch the clowns, get the crown, baby, I'm the one to beat<br>
-            'Cause the sign on your heart said it's still reserved for me<br>
-            Honestly, who are we to fight the alchemy?<br>
-            <br>
-            These blokes warm the benches, we been on a winning streak<br>
-            He jokes that it's heroin but this time with an "E"<br>
-            'Cause the sign on your heart said it's still reserved for me<br>
-            Honestly, who are we to fight the alchemy?<br>
-            <br>
-            This happens once every few lifetimes<br>
-            These chemicals hit me like white wine
-        </p>
-
-        <div class="pages-separator"></div>
-
-        <p id="dev-cal-2"><span class="subtitle" id="title-16">Clara Bow</i></span></p>
-        <p id="dev-cal-2">
-            "You look like Clara Bow<br>
-            In this light, remarkable<br>
-            All your life, did you know<br>
-            You'd be picked like a rose?"<br>
-            <br>
-            "I'm not trying to exaggerate<br>
-            But I think I might die if it happened<br>
-            Die if it happened to me<br>
-            No one in my small town<br>
-            Thought I'd see the lights of Manhattan"<br>
-            <br>
-            "This town is fake, but you're the real thing<br>
-            Breath of fresh air through smoke rings<br>
-            Take the glory, give everything<br>
-            Promise to be dazzling"<br>
-            <br>
-            "You look like Stevie Nicks<br>
-            In '75, the hair and lips<br>
-            Crowd goes wild at her fingertips<br>
-            Half moonshine, a full eclipse"<br>
-            <br>
-            "I'm not trying to exaggerate<br>
-            But I think I might die if I made it<br>
-            Die if I made it<br>
-            No one in my small town<br>
-            Thought I'd meet these suits in L.A.<br>
-            They all wanna say"<br>
-            <br>
-            "This town is fake, but you're the real thing<br>
-            Breath of fresh air through smoke rings<br>
-            Take the glory, give everything<br>
-            Promise to be dazzling"<br>
-            <br>
-            "The crown is stained, but you're the real queen<br>
-            Flesh and blood amongst war machines<br>
-            You're the new God we're worshipping<br>
-            Promise to be dazzling"<br>
-            <br>
-            Beauty is a beast that roars<br>
-            Down on all fours<br>
-            Demanding, "More"<br>
-            Only when your girlish glow<br>
-            Flickers just so<br>
-            Do they let you know?<br>
-            It's hell on earth to be heavenly<br>
-            Them's the breaks, they don't come gently<br>
-            <br>
-            "You look like Taylor Swift<br>
-            In this light, we're loving it<br>
-            You've got edge she never did<br>
-            The future's bright, dazzling"
-        </p>
-
-
-        <br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br>
-    </div>
-    <include src="../../layout/footer.html"></include>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
-    <script src="../../static/js/search.js"></script>
-</body>
-
-</html>
+<div id="content-unit" class="ttpd-content">
+    <h3 id="heading">The Tortured Poets Department Lyrics Book</h3>
+    <p id="update">Last updated Apr 22 2024<br><br></p>
+
+    <div id="subpages-backdrop"></div>
+
+    <p id="text-n"><i>The Tortured Poets Department Lyric Book</i></p>
+    <p id="text-n"><i>by</i> 李江源</p>
+
+    <button id="pages-ttpd-print" onclick="window.print()">Print the lyric book</button>
+
+    <p id="text-n"><span class="subtitle" id="title-0">Prologue - <i>“In Summation”</i></span></p>
+    <p id="text-n">
+        <i>At this hearing<br>
+            I stand before my fellow members<br>
+            of the Tortured Poets Department<br>
+            With a summary of my findings<br>
+            A debrief, a detailed rewinding<br>
+            For the purpose of warning<br>
+            For the sake of reminding<br>
+            As you might all unfortunately recall<br>
+            I had been struck with a case<br>
+            of a restricted humanity<br>
+            Which explains my plea here today<br>
+            of temporary insanity<br>
+            You see, the pendulum swings<br>
+            Oh, the chaos it brings<br>
+            Leads the caged beast to do<br>
+            the most curious things<br>
+            <br>
+            Lovers spend years denying what’s ill fated<br>
+            Resentment rotting away<br>
+            galaxies we created<br>
+            Stars placed and glued<br>
+            meticulously by hand<br>
+            next to the ceiling fan<br>
+            Tried wishing on comets.<br>
+            Tried dimming the shine.<br>
+            Tried to orbit his planet.<br>
+            Some stars never align.<br>
+            <br>
+            And in one conversation, I tore down the whole sky<br>
+            Spring sprung forth with dazzling freedom hues<br>
+            Then a crash from the skylight<br>
+            Bursting through<br>
+            Something old, someone hallowed,<br>
+            who told me he could be brand new<br>
+            And so I was out of the oven<br>
+            And into the microwave<br>
+            Out of the slammer and into a tidal wave<br>
+            How gallant to save the empress<br>
+            from her gilded tower<br>
+            Swinging a sword he could barely lift<br>
+            But loneliness struck at that fateful hour<br>
+            Low hanging fruit on his wine stained lips<br>
+            He never even scratched the surface<br>
+            of me.<br>
+            None of them did.<br>
+            <br>
+            “In summation, it was not a love affair!”<br>
+            I screamed while bringing my fists<br>
+            to my coffee ringed desk<br>
+            It was a mutual manic phase.<br>
+            It was self harm.<br>
+            It was house and then cardiac arrest.<br>
+            A smirk creeps onto this poet’s face<br>
+            Because it’s the worst men that I write best.<br>
+            <br>
+            And so I enter into evidence<br>
+            My tarnished coat of arms<br>
+            My muses, acquired like bruises<br>
+            My talismans and charms<br>
+            The tick, tick, tick of love bombs<br>
+            My veins of pitch black ink<br>
+            All’s fair in love and poetry<br>
+            <br>
+            Sincerely,<br>
+            The Chairman<br>
+            of The Tortured Poets Department</i>
+    </p>
+
+    <div class="pages-separator"></div>
+
+    <p id="text-n"><span class="subtitle" id="title-1">Fortnight <i>(feat Post Malone)</i></span></p>
+    <p id="text-n">
+        I was supposed to be sent away, but they forgot to come and get me<br>
+        I was a functioning alcoholic till nobody noticed my new aesthetic<br>
+        All of this to say, I hope you're okay, but you're the reason<br>
+        And no one here's to blame, but what about your quiet treason?<br>
+        <br>
+        And for a fortnight there, we were forever<br>
+        Run into you sometimes, ask about the weather<br>
+        Now you're in my backyard, turned into good neighbors<br>
+        Your wife waters flowers<br>
+        I wanna kill her<br>
+        <br>
+        All my mornings are Mondays stuck in an endless February<br>
+        I took the miracle move-on drug, the effects were temporary<br>
+        <br>
+        And I love you, it's ruining my life<br>
+        I love you, it's ruining my life<br>
+        I touched you for only a fortnight<br>
+        I touched you<br>
+        But I touched you<br>
+        <br>
+        And for a fortnight there, we were forever<br>
+        Run into you sometimes, ask about the weather<br>
+        Now you're in my backyard, turned into good neighbors<br>
+        Your wife waters flowers<br>
+        I wanna kill her<br>
+        <br>
+        And for a fortnight there, we were together<br>
+        Run into you sometimes, comment on my sweater<br>
+        Now you're at the mailbox, turned into good neighbors<br>
+        My husband is cheating<br>
+        I wanna kill him<br>
+        <br>
+        I love you, it's ruining my life<br>
+        I love you, it's ruining my life<br>
+        I touched you for only a fortnight<br>
+        I touched you<br>
+        I touched you<br>
+        <br>
+        I love you, it's ruining my life<br>
+        I love you, it's ruining my life<br>
+        I touched you for only a fortnight<br>
+        I touched you<br>
+        I touched you<br>
+        <br>
+        Thought of calling ya, but you won't pick up<br>
+        Another fortnight lost in America<br>
+        Move to Florida, buy the car you want<br>
+        But it won't start up till you touch, touch, touch me<br>
+        <br>
+        Thought of calling ya, but you won't pick up<br>
+        Another fortnight lost in America<br>
+        Move to Florida, buy the car you want<br>
+        But it won't start up till I touch, touch, touch you
+    </p>
+
+    <div class="pages-separator"></div>
+
+    <p id="text-n"><span class="subtitle" id="title-2">The Tortured Poets Department</span></p>
+    <p id="text-n">
+        You left your typewriter at my apartment<br>
+        Straight from the Tortured Poets Department<br>
+        I think some things I never say<br>
+        Like, "Who uses typewriters anyway?" But<br>
+        You're in self-sabotage mode, throwing spikes down on the road<br>
+        But I've seen this episode and still loved the show<br>
+        Who else decodes you?<br>
+        <br>
+        And who's gonna hold you like me?<br>
+        And who's gonna know you, if not me?<br>
+        I laughed in your face and said<br>
+        "You're not Dylan Thomas<br>
+        I'm not Patti Smith<br>
+        This ain't the Chelsea Hotel<br>
+        We're modern idiots"<br>
+        And who's gonna hold you like me?<br>
+        Nobody<br>
+        No-fucking-body<br>
+        Nobody<br>
+        <br>
+        You smoked then ate seven bars of chocolate<br>
+        We declared Charlie Puth should be a bigger artist<br>
+        I scratch your head, you fall asleep<br>
+        Like a tattooed golden retriever<br>
+        But you awaken with dread, pounding nails in your head<br>
+        But I've read this one where you come undone<br>
+        I chose this cyclone with you<br>
+        <br>
+        And who's gonna hold you like me? (Who's gonna hold you? Who's gonna hold you?)<br>
+        And who's gonna know you like me? (Who's gonna know you?)<br>
+        I laughed in your face and said<br>
+        "You're not Dylan Thomas<br>
+        I'm not Patti Smith<br>
+        This ain't the Chelsea Hotel<br>
+        We're modern idiots"<br>
+        And who's gonna hold you like me? (Who's gonna hold you? Who's gonna hold you?)<br>
+        No-fucking-body (Who's gonna hold you? Who's gonna hold you?)<br>
+        Nobody (Who's gonna hold you? Gonna love you? Gonna troll you?)<br>
+        Nobody<br>
+        <br>
+        Sometimes I wonder if you're gonna screw this up with me<br>
+        But you told Lucy you'd kill yourself if I ever leave<br>
+        And I had said that to Jack about you, so I felt seen<br>
+        Everyone we know understands why it's meant to be<br>
+        'Cause we're crazy<br>
+        So tell me<br>
+        Who else is gonna know me?<br>
+        At dinner, you take my ring off my middle finger and put it on the one<br>
+        People put wedding rings on, and that's the closest I've come<br>
+        To my heart exploding<br>
+        <br>
+        Who's gonna hold you?<br>
+        Me<br>
+        Who's gonna know you?<br>
+        Me<br>
+        "And you're not Dylan Thomas<br>
+        I'm not Patti Smith<br>
+        This ain't the Chelsea Hotel<br>
+        We're two idiots"<br>
+        Who's gonna hold you?<br>
+        <br>
+        Who's gonna hold you? (Who's gonna hold you?)<br>
+        Who's gonna hold you? (Who's gonna hold you?)<br>
+        Who's gonna hold you?<br>
+        Who's gonna hold you?<br>
+        Who's gonna hold you? Gonna know you? Gonna troll you?<br>
+        <br>
+        You left your typewriter at my apartment<br>
+        Straight from the Tortured Poets Department<br>
+        Who else decodes you?
+    </p>
+
+    <div class="pages-separator"></div>
+
+    <p id="text-n"><span class="subtitle" id="title-3">My Boy Only Breaks His Favorite Toys</span></p>
+    <p id="text-n">
+        Oh, here we go again<br>
+        The voices in his head<br>
+        Called the rain to end our days of wild<br>
+        The sickest army doll<br>
+        Purchased at the mall<br>
+        Rivulets descend my plastic smile<br>
+        <br>
+        But you should've seen him<br>
+        When he first got me<br>
+        <br>
+        My boy only breaks his favorite toys, toys, oh<br>
+        I'm queen of sand castles he destroys, oh, oh<br>
+        'Cause it fit too right<br>
+        Puzzle pieces in the dead of night<br>
+        I should've known it was a matter of time<br>
+        Oh, oh, my boy only breaks his favorite toys, oh, oh-oh-oh<br>
+        <br>
+        There was a litany of reasons why<br>
+        We could've played for keeps this time<br>
+        I know I'm just repeating myself<br>
+        Put me back on my shelf<br>
+        But first, pull the string<br>
+        And I'll tell you that he runs<br>
+        Because he loves me (He loves me)<br>
+        <br>
+        'Cause you should've seen him<br>
+        When he first saw me<br>
+        <br>
+        My boy only breaks his favorite toys, toys, oh<br>
+        I'm queen of sand castles he destroys, oh, oh<br>
+        'Cause I knew too much<br>
+        There was danger in the heat of my touch<br>
+        He saw forever so he smashed it up<br>
+        Oh, oh, my boy only breaks his favorite toys, oh, oh-oh-oh<br>
+        <br>
+        Once I fix me, he's gonna miss me<br>
+        Once I fix me, he's gonna miss me<br>
+        <br>
+        Just say when, I'd play again<br>
+        He was my best friend<br>
+        Down at the sandlot<br>
+        I felt more when we played pretend<br>
+        Than with all the Kens<br>
+        'Cause he took me out of my box<br>
+        Stole my tortured heart<br>
+        Left all these broken parts<br>
+        Told me I'm better off<br>
+        But I'm not<br>
+        I'm not<br>
+        I'm not
+    </p>
+
+    <div class="pages-separator"></div>
+
+    <p id="text-n"><span class="subtitle" id="title-4">Down Bad</span></p>
+    <p id="text-n">
+        Did you really beam me up?<br>
+        In a cloud of sparkling dust<br>
+        Just to do experiments on<br>
+        Tell me I was the chosen one<br>
+        Show me that this world is bigger than us<br>
+        Then sent me back where I came from<br>
+        For a moment, I knew cosmic love<br>
+        <br>
+        Now I'm down bad, crying at the gym<br>
+        Everything comes out teenage petulance<br>
+        "Fuck it if I can't have him"<br>
+        "I might just die, it would make no difference"<br>
+        Down bad, waking up in blood<br>
+        Staring at the sky, come back and pick me up<br>
+        Fuck it if I can't have us<br>
+        I might just not get up<br>
+        I might stay down bad<br>
+        <br>
+        Fuck it if I can't have him<br>
+        Down bad<br>
+        Fuck it if I can't have him<br>
+        <br>
+        Did you take all my old clothes?<br>
+        Just to leave me here naked and alone<br>
+        In a field in my same old town<br>
+        That somehow seems so hollow now<br>
+        They'll say I'm nuts if I talk about the existence of you<br>
+        For a moment, I was heaven struck<br>
+        <br>
+        Now I'm down bad, crying at the gym (Crying at the gym)<br>
+        Everything comes out teenage petulance<br>
+        "Fuck it if I can't have him" (Fuck it if I can't have him)<br>
+        "I might just die, it would make no difference"<br>
+        Down bad, waking up in blood (Waking up in blood)<br>
+        Staring at the sky, come back and pick me up<br>
+        Fuck it if I can't have us<br>
+        I might just not get up<br>
+        I might stay down bad<br>
+        <br>
+        Like I lost my twin<br>
+        Fuck it if I can't have him (Down bad)<br>
+        Down bad<br>
+        Waving at the ship<br>
+        Fuck it if I can't have him<br>
+        <br>
+        I loved your hostile takeovers<br>
+        Encounters closer and closer<br>
+        All your indecent exposures<br>
+        How dare you say that it's-<br>
+        I'll build you a fort on some planet<br>
+        Where they can all understand it<br>
+        How dare you think it's romantic<br>
+        Leaving me safe and stranded<br>
+        'Cause fuck it, I was in love<br>
+        So fuck you if I can't have us<br>
+        'Cause fuck it, I was in love<br>
+        <br>
+        Now I'm down bad, crying at the gym (Crying at the gym)<br>
+        Everything comes out teenage petulance<br>
+        "Fuck it if I can't have him" (Can't have him)<br>
+        "I might just die, it would make no difference"<br>
+        Down bad, waking up in blood (Waking up in blood)<br>
+        Staring at the sky, come back and pick me up<br>
+        Fuck it if I can't have us<br>
+        I might just not get up<br>
+        I might stay down bad<br>
+        <br>
+        Like I lost my twin<br>
+        Fuck it if I can't have him (Down bad)<br>
+        Down bad<br>
+        Waving at the ship<br>
+        Fuck it if I can't have him<br>
+        <br>
+        Like I lost my twin<br>
+        Fuck it if I can't have him<br>
+        Down bad<br>
+        Waving at the ship<br>
+        Fuck it if I can't have him
+    </p>
+
+    <div class="pages-separator"></div>
+
+    <p id="text-n"><span class="subtitle" id="title-5">So Long, London</span></p>
+    <p id="text-n">
+        So long, London (So long, London)<br>
+        So long, London (So long, London)<br>
+        So long, London (So long, London)<br>
+        <br>
+        I saw in my mind fairy lights through the mist<br>
+        I kept calm and carried the weight of the rift<br>
+        Pulled him in tighter each time he was drifting away<br>
+        My spine split from carrying us up the hill<br>
+        Wet through my clothes, weary bones caught the chill<br>
+        I stopped trying to make him laugh, stopped trying to drill the safe<br>
+        Thinking how much sad did you think I had<br>
+        Did you think I had in me?<br>
+        Oh, the tragedy<br>
+        <br>
+        So long, London<br>
+        You'll find someone<br>
+        <br>
+        I didn't opt in to be your odd man out<br>
+        I founded the club she's heard great things about<br>
+        I left all I knew, you left me at the house by the Heath<br>
+        I stopped CPR, after all, it's no use<br>
+        The spirit was gone, we would never come to<br>
+        And I'm pissed off you let me give you all that youth for free<br>
+        <br>
+        For so long, London<br>
+        Stitches undone<br>
+        Two graves, one gun<br>
+        I'll find someone<br>
+        <br>
+        And you say I abandoned the ship<br>
+        But I was going down with it<br>
+        My white-knuckle dying grip<br>
+        Holding tight to your quiet resentment<br>
+        And my friends said it isn't right to be scared<br>
+        Every day of a love affair<br>
+        Every breath feels like rarest air<br>
+        When you're not sure if he wants to be there<br>
+        So how much sad did you think I had<br>
+        Did you think I had in me?<br>
+        How much tragedy?<br>
+        Just how low did you think I'd go<br>
+        Before I'd self-implode?<br>
+        Before I'd have to go be free?<br>
+        <br>
+        You swore that you loved me, but where were the clues?<br>
+        I died on the altar waiting for the proof<br>
+        You sacrificed us to the gods of your bluest days<br>
+        And I'm just getting color back into my face<br>
+        I'm just mad as hell 'cause I loved this place<br>
+        <br>
+        For so long, London (So long, London)<br>
+        Had a good run (Had a good run)<br>
+        A moment of warm sun (Moment of warm sun)<br>
+        But I'm not the one (I'm not the one)<br>
+        <br>
+        So long, London (So long, London)<br>
+        Stitches undone (Stitches undone)<br>
+        Two graves, one gun (Two graves, one gun)<br>
+        You'll find someone (You'll find)
+    </p>
+
+    <div class="pages-separator"></div>
+
+    <p id="text-n"><span class="subtitle" id="title-6">But Daddy I Love Him</span></p>
+    <p id="text-n">
+        I forget how the West was won<br>
+        I forget if this was ever fun<br>
+        I just learned these people only raise you to cage you<br>
+        Sarahs and Hannahs in their Sunday best<br>
+        Clutching their pearls, sighing, "What a mess"<br>
+        I just learned these people try and save you<br>
+        'Cause they hate you<br>
+        <br>
+        Too high a horse<br>
+        For a simple girl to rise above it<br>
+        They slammed the door on my whole world<br>
+        The one thing I wanted<br>
+        <br>
+        Now I'm running with my dress unbuttoned<br>
+        Screaming, "But Daddy, I love him!<br>
+        I'm having his baby"<br>
+        No, I'm not, but you should see your faces<br>
+        I'm telling him to floor it through the fences<br>
+        No, I'm not coming to my senses<br>
+        I know he's crazy but he's the one I want<br>
+        <br>
+        Dutiful daughter, all my plans were laid<br>
+        Tendrils tucked into a woven braid<br>
+        Growing up precocious sometimes means not growing up at all<br>
+        He was chaos, he was revelry<br>
+        Bedroom eyes like a remedy<br>
+        Soon enough the elders had convened<br>
+        Down at the city hall<br>
+        <br>
+        "Stay away from her"<br>
+        The saboteurs protested too much<br>
+        Lord knows the words we never heard<br>
+        Just screeching tires and true love<br>
+        <br>
+        And I'm running with my dress unbuttoned<br>
+        Screaming, "But Daddy, I love him!<br>
+        I'm having his baby"<br>
+        No, I'm not, but you should see your faces<br>
+        I'm telling him to floor it through the fences<br>
+        No, I'm not coming to my senses<br>
+        I know he's crazy but he's the one I want<br>
+        <br>
+        I'll tell you something right now<br>
+        I'd rather burn my whole life down<br>
+        Than listen to one more second of all this bitching and moaning<br>
+        I'll tell you something about my good name<br>
+        It's mine alone to disgrace<br>
+        I don't cater to all these vipers dressed in empath's clothing<br>
+        <br>
+        God save the most judgmental creeps<br>
+        Who say they want what's best for me<br>
+        Sanctimoniously performing soliloquies I'll never see<br>
+        Thinking it can change the beat<br>
+        Of my heart when he touches me<br>
+        And counteract the chemistry<br>
+        And undo the destiny<br>
+        You ain't gotta pray for me<br>
+        Me and my wild boy and all this wild joy<br>
+        If all you want is gray for me<br>
+        Then it's just white noise<br>
+        And it's just my choice<br>
+        <br>
+        There's a lot of people in town that I<br>
+        Bestow upon my fakest smiles<br>
+        Scandal does funny things to pride<br>
+        But brings lovers closer<br>
+        We came back when the heat died down<br>
+        Went to my parents and they came around<br>
+        All the wine moms are still holding out<br>
+        But fuck 'em, it's over<br>
+        <br>
+        Now I'm dancing in my dress in the sun, and<br>
+        Even my daddy just loves him<br>
+        I'm his lady<br>
+        And oh my God, you should see your faces<br>
+        Time, doesn't it give some perspective?<br>
+        And no, you can't come to the wedding<br>
+        I know he's crazy, but he's the one I want<br>
+        <br>
+        I'll tell you something right now, you ain't gotta pray for me<br>
+        Me and my wild boy and all of this wild joy<br>
+        He was chaos, he was revelry<br>
+        If all you want is gray for me<br>
+        Then it's just white noise, and it's my choice<br>
+        <br>
+        Screaming, "But Daddy, I love him!<br>
+        I'm having his baby"<br>
+        No, I'm not, but you<br>
+        Should see your faces<br>
+        But oh my God, you should see your faces<br>
+        He was chaos, he was revelry
+    </p>
+
+    <div class="pages-separator"></div>
+
+    <p id="text-n"><span class="subtitle" id="title-7">Fresh Out the Slammer</span></p>
+    <p id="text-n">
+        Now, pretty baby, I'm runnin' back home to you<br>
+        Fresh out the slammer, I know who my first call will be to<br>
+        Fresh out the slammer, oh<br>
+        <br>
+        Another summer, takin' cover<br>
+        Rollin' thunder, he don't understand me<br>
+        Splintered back in winter, silent dinners, bitter<br>
+        He was with her in dreams<br>
+        Gray and blue and fights and tunnels<br>
+        Handcuffed to the spell I was under<br>
+        For just one hour of sunshine<br>
+        Years of labor, locks and ceilings<br>
+        In the shade of how he was feelin'<br>
+        But it's gonna be alright, I did my time<br>
+        <br>
+        Now, pretty baby, I'm runnin' back home to you<br>
+        Fresh out the slammer, I know who my first call will be to<br>
+        Fresh out the slammer, oh<br>
+        <br>
+        Camera flashes, welcome bashes<br>
+        Get the matches, toss the ashes off the ledge<br>
+        As I said in my letters, now that I know better<br>
+        I will never lose my baby again<br>
+        My friends tried but I wouldn't hear it<br>
+        Watched me daily disappearing<br>
+        For just one glimpse of his smile<br>
+        All those nights you kept me going<br>
+        Swirled you into all of my poems<br>
+        Now we're at the starting line, I did my time<br>
+        <br>
+        Now, pretty baby, I'm runnin'<br>
+        To the house where you still wait up and that porch light gleams<br>
+        To the one who says I'm the girl of his American Dreams<br>
+        And no matter what I've done, it wouldn't matter anyway<br>
+        Ain't no way I'm gonna screw up, now that I know what's at stake<br>
+        Here<br>
+        At the park where we used to sit on children's swings<br>
+        Wearing imaginary rings<br>
+        But it's gonna be alright, I did my time
+    </p>
+
+    <div class="pages-separator"></div>
+
+    <p id="text-n"><span class="subtitle" id="title-8">Florida!!! <i>(feat Florence + The Machine)</i></span></p>
+    <p id="text-n">
+        You can beat the heat<br>
+        If you beat the charges too<br>
+        They said I was a cheat<br>
+        I guess it must be true<br>
+        And my friends all smell like weed or little babies<br>
+        And this city reeks of driving myself crazy<br>
+        <br>
+        Little did you know, your home's really only a town you're just a guest in<br>
+        So you work your life away just to pay for a timeshare down in Destin<br>
+        <br>
+        Florida!<br>
+        Is one hell of a drug<br>
+        Florida!<br>
+        Can I use you up?<br>
+        <br>
+        And the hurricane with my name, when it came<br>
+        I got drunk and I dared it to wash me away<br>
+        Barricaded in the bathroom with a bottle of wine<br>
+        Well, me and my ghosts, we had a hell of a time<br>
+        Yes, I'm haunted, but I'm feeling just fine<br>
+        All my girls got their lace and their crimes<br>
+        And your cheating husband disappeared, well<br>
+        No one asks any questions here<br>
+        So I did my best to lay to rest<br>
+        All of the bodies that have ever been on my body<br>
+        And in my mind, they sink into the swamp<br>
+        Is that a bad thing to say in a song?<br>
+        <br>
+        Little did you know, your home's really only the town you'll get arrested<br>
+        So you pack your life away just to wait out the shitstorm back in Texas<br>
+        <br>
+        Florida!<br>
+        Is one hell of a drug<br>
+        Florida!<br>
+        Can I use you up?<br>
+        <br>
+        I need to forget, so take me to Florida<br>
+        I've got some regrets, I'll bury them in Florida<br>
+        Tell me I'm despicable, say it's unforgivable<br>
+        At least the dolls are beautiful, fuck me up, Florida!<br>
+        <br>
+        I need to forget, so take me to Florida<br>
+        I've got some regrets, I'll bury them in Florida<br>
+        Tell me I'm despicable, say it's unforgivable<br>
+        What a crash, what a rush, fuck me up, Florida!<br>
+        <br>
+        It's one hell of a drug<br>
+        It's one hell of a drug<br>
+        Love left me like this<br>
+        And I don't want to exist<br>
+        So take me to Florida<br>
+        <br>
+        Little did you know, your home's really only a town you're just a guest in<br>
+        So you work your life away just to pay for a timeshare down in Destin (Take me to Florida)<br>
+        Little did you know, your home's really only the town you'll get arrested (Take me to Florida)<br>
+        So you pack your life away just to wait out the shitstorm back in Texas (Take me to)<br>
+        <br>
+        Florida!<br>
+        Is one hell of a drug<br>
+        (Take me to) Florida!<br>
+        Can I use you up?<br>
+        Florida!<br>
+        Is one hell of a drug<br>
+        Florida!<br>
+        Go on, fuck me up
+    </p>
+
+    <div class="pages-separator"></div>
+
+    <p id="text-n"><span class="subtitle" id="title-9">Guilty as Sin?</i></span></p>
+    <p id="text-n">
+        Drowning in the Blue Nile<br>
+        He sent me "Downtown Lights"<br>
+        I hadn't heard it in a while<br>
+        My boredom's bone-deep<br>
+        This cage was once just fine<br>
+        Am I allowed to cry?<br>
+        <br>
+        I dream of cracking locks<br>
+        Throwing my life to the wolves or the ocean rocks<br>
+        Crashing into him tonight, he's a paradox<br>
+        I'm seeing visions, am I bad?<br>
+        Or mad? Or wise?<br>
+        <br>
+        What if he's written "mine" on my upper thigh only in my mind?<br>
+        One slip and falling back into the hedge maze<br>
+        Oh, what a way to die<br>
+        I keep recalling things we never did<br>
+        Messy top lip kiss, how I long for our trysts<br>
+        Without ever touching his skin<br>
+        How can I be guilty as sin?<br>
+        <br>
+        I keep these longings locked<br>
+        In lowercase, inside a vault<br>
+        Someone told me there's no such thing as bad thoughts<br>
+        Only your actions talk<br>
+        <br>
+        These fatal fantasies giving way to labored breath<br>
+        Taking all of me, we've already done it in my head<br>
+        If it's make-believe<br>
+        Why does it feel like a vow we'll both uphold somehow?<br>
+        <br>
+        What if he's written "mine" on my upper thigh only in my mind?<br>
+        One slip and falling back into the hedge maze<br>
+        Oh, what a way to die<br>
+        My bedsheets are ablaze, I've screamed his name<br>
+        Building up like waves crashing over my grave<br>
+        Without ever touching his skin<br>
+        How can I be guilty as sin?<br>
+        <br>
+        What if I roll the stone away?<br>
+        They're gonna crucify me anyway<br>
+        What if the way you hold me is actually what's holy?<br>
+        If long-suffering propriety is what they want from me<br>
+        They don't know how you've haunted me so stunningly<br>
+        I choose you and me religiously<br>
+        <br>
+        What if he's written "mine" on my upper thigh only in my mind?<br>
+        One slip and falling back into the hedge maze<br>
+        Oh, what a way to die<br>
+        I keep recalling things we never did<br>
+        Messy top lip kiss, how I long for our trysts<br>
+        Without ever touching his skin<br>
+        How can I be guilty as sin?<br>
+        <br>
+        He sent me "Downtown Lights"<br>
+        I hadn't heard it in a while<br>
+        Am I allowed to cry?
+    </p>
+
+    <div class="pages-separator"></div>
+
+    <p id="text-n"><span class="subtitle" id="title-10">Who's Afraid of Little Old Me?</i></span></p>
+    <p id="text-n">
+        The "Who's Who" of "Who's That?"<br>
+        Is poised for the attack<br>
+        But my bare hands paved their paths<br>
+        You don't get to tell me about "sad"<br>
+        <br>
+        If you wanted me dead<br>
+        You should've just said<br>
+        Nothing makes me feel more alive<br>
+        <br>
+        So I leap from the gallows, and I levitate down your street<br>
+        Crash the party like a record scratch as I scream<br>
+        "Who's afraid of little old me?"<br>
+        You should be<br>
+        <br>
+        The scandal was contained<br>
+        The bullet had just grazed<br>
+        At all costs, keep your good name<br>
+        You don't get to tell me you feel bad<br>
+        <br>
+        Is it a wonder I broke? Let's hear one more joke<br>
+        Then we could all just laugh until I cry<br>
+        <br>
+        So I leap from the gallows, and I levitate down your street<br>
+        Crash the party like a record scratch as I scream<br>
+        "Who's afraid of little old me?"<br>
+        I was tame, I was gentle till the circus life made me mean<br>
+        Don't you worry, folks, we took out all her teeth<br>
+        Who's afraid of little old me?<br>
+        Well, you should be, you should be, you should be (You should be, you should be)<br>
+        You should be, you should be, you should be (You should be, you should be)<br>
+        <br>
+        So tell me everything is not about me<br>
+        But what if it is?<br>
+        Then say they didn't do it to hurt me<br>
+        But what if they did?<br>
+        I want to snarl and show you just how disturbed this has made me<br>
+        You wouldn't last an hour in the asylum where they raised me<br>
+        So all you kids can sneak into my house, with all the cobwebs<br>
+        I'm always drunk on my own tears, isn't that what they all said?<br>
+        <br>
+        That I'll sue you if you step on my lawn<br>
+        That I'm fearsome, and I'm wretched, and I'm wrong<br>
+        Put narcotics into all of my songs<br>
+        And that's why you're still singing along<br>
+        <br>
+        So I leap from the gallows, and I levitate down your street<br>
+        Crash the party like a record scratch as I scream<br>
+        "Who's afraid of little old me?"<br>
+        I was tame, I was gentle till the circus life made me mean<br>
+        Don't you worry, folks, we took out all her teeth<br>
+        Who's afraid of little old me?<br>
+        Well, you should be, you should be, you should be (You should be, you should be)<br>
+        <br>
+        'Cause you lured me, and you hurt me, and you taught me (You should be, you should be)<br>
+        You caged me, and then you called me crazy<br>
+        I am what I am 'cause you trained me<br>
+        So who's afraid of me?<br>
+        So who's afraid of little old me?<br>
+        Who's afraid of little old me?
+    </p>
+
+    <div class="pages-separator"></div>
+
+    <p id="text-n"><span class="subtitle" id="title-11">I Can Fix Him (No Really I Can)</i></span></p>
+    <p id="text-n">
+        The smoke cloud billows out his mouth<br>
+        Like a freight train through a small town<br>
+        The jokes that he told across the bar<br>
+        Were revolting and far too loud<br>
+        <br>
+        They shake their heads, saying, "God help her" when I<br>
+        Tell 'em he's my man<br>
+        But your good Lord doesn't need to lift a finger<br>
+        I can fix him, no really I can<br>
+        And only I can<br>
+        <br>
+        The dopamine races through his brain<br>
+        On a six-lane Texas highway<br>
+        His hand, so calloused from his pistol<br>
+        Softly traces hearts on my face<br>
+        And I could see it from a mile away<br>
+        A perfect case for my certain skillset<br>
+        He had a halo of the highest grade<br>
+        He just hadn't met me yet<br>
+        <br>
+        They shake their heads, saying, "God help her" when I<br>
+        Tell 'em he's my man<br>
+        But your good Lord doesn't need to lift a finger<br>
+        I can fix him, no really I can<br>
+        And only I can<br>
+        <br>
+        Good boy, that's right<br>
+        Come close, I'll show you heaven<br>
+        If you'll be an angel all night<br>
+        Trust me, I can handle me a dangerous man<br>
+        No really I can<br>
+        <br>
+        They shook their heads, saying, "God help her" when I<br>
+        Told 'em he's my man (I told 'em he's my man)<br>
+        But your good Lord didn't need to lift a finger<br>
+        I can fix him, no really I can (No really I can)<br>
+        <br>
+        Whoa, maybe I can't
+    </p>
+
+    <div class="pages-separator"></div>
+
+    <p id="text-n"><span class="subtitle" id="title-12">loml</i></span></p>
+    <p id="text-n">
+        Who's gonna stop us from waltzing back into rekindled flames<br>
+        If we know the steps anyway?<br>
+        We embroidered the memories of the time I was away<br>
+        Stitching, "We were just kids, babe"<br>
+        I said, "I don't mind, it takes time"<br>
+        I thought I was better safe than starry-eyed<br>
+        I felt aglow like this<br>
+        Never before and never since<br>
+        <br>
+        If you know it in one glimpse, it's legendary<br>
+        You and I go from one kiss to getting married<br>
+        Still alive, killing time at the cemetery<br>
+        Never quite buried<br>
+        In your suit and tie, in the nick of time<br>
+        You lowdown boy, you standup guy, you<br>
+        Holy Ghost, you told me I'm<br>
+        The love of your life<br>
+        <br>
+        You said I'm the love of your life<br>
+        About a million times<br>
+        <br>
+        Who's gonna tell me the truth, when you blew in with the winds of fate<br>
+        And told me I reformed you?<br>
+        When your Impressionist paintings of Heaven turned out to be fakes<br>
+        Well, you took me to hell too<br>
+        And all at once, the ink bleeds<br>
+        A conman sells a fool a get-love-quick scheme<br>
+        But I felt a hole like this<br>
+        Never before and ever since<br>
+        <br>
+        If you know it in one glimpse, it's legendary<br>
+        What we thought was for all time was momentary<br>
+        Still alive, killing time at the cemetery<br>
+        Never quite buried<br>
+        You cinephile in black and white<br>
+        All those plot twists and dynamite<br>
+        Mr. Steal Your Girl, then make her cry<br>
+        You said I'm the love of your life<br>
+        <br>
+        You shit-talked me under the table, talking rings and talking cradles<br>
+        I wish I could un-recall how we almost had it all<br>
+        Dancing phantoms on the terrace, are they second-hand embarrassed<br>
+        That I can't get out of bed 'cause something counterfeit's dead?<br>
+        It was legendary<br>
+        It was momentary<br>
+        It was unnecessary, should've let it stay buried<br>
+        <br>
+        Oh, what a valiant roar<br>
+        What a bland goodbye<br>
+        The coward claimed he was a lion<br>
+        I'm combing through the braids of lies<br>
+        "I'll never leave"<br>
+        "Never mind"<br>
+        Our field of dreams, engulfed in fire<br>
+        Your arson's match, your somber eyes<br>
+        And I'll still see it until I die<br>
+        You're the loss of my life
+    </p>
+
+    <div class="pages-separator"></div>
+
+    <p id="text-n"><span class="subtitle" id="title-13">I Can Do It With a Broken Heart</i></span></p>
+    <p id="text-n">
+        I can read your mind<br>
+        "She's having the time of her life"<br>
+        There in her glittering prime<br>
+        The lights refract sequin stars<br>
+        Off her silhouette every night<br>
+        I can show you lies<br>
+        <br>
+        'Cause I'm a real tough kid<br>
+        I can handle my shit<br>
+        They said, "Babe, you gotta fake it 'til you make it"<br>
+        And I did<br>
+        Lights, camera, bitch, smile<br>
+        Even when you want to die<br>
+        He said he'd love me all his life<br>
+        But that life was too short<br>
+        Breaking down, I hit the floor<br>
+        All the pieces of me shattered<br>
+        As the crowd was chanting "More!"<br>
+        I was grinning like I'm winning<br>
+        I was hitting my marks<br>
+        'Cause I can do it with a broken heart<br>
+        <br>
+        I'm so depressed, I act like it's my birthday<br>
+        Every day<br>
+        I'm so obsessed with him, but he avoids me<br>
+        Like the plague<br>
+        I cry a lot, but I am so productive<br>
+        It's an art<br>
+        You know you're good when you can even do it with a broken heart<br>
+        <br>
+        I can hold my breath<br>
+        I've been doing it since he left<br>
+        I keep finding his things in drawers<br>
+        Crucial evidence, I didn't imagine the whole thing<br>
+        I'm sure I can pass this test<br>
+        <br>
+        'Cause I'm a real tough kid<br>
+        I can handle my shit<br>
+        They said, "Babe, you gotta fake it 'til you make it"<br>
+        And I did<br>
+        Lights, camera, bitch, smile<br>
+        In stilettos for miles<br>
+        He said he'd love me for all time<br>
+        But that time was quite short<br>
+        Breaking down, I hit the floor<br>
+        All the pieces of me shattered<br>
+        As the crowd was chanting "More!"<br>
+        I was grinning like I'm winning<br>
+        I was hitting my marks<br>
+        'Cause I can do it with a broken heart<br>
+        <br>
+        I'm so depressed, I act like it's my birthday<br>
+        Every day<br>
+        I'm so obsessed with him, but he avoids me<br>
+        Like the plague<br>
+        I cry a lot, but I am so productive<br>
+        It's an art<br>
+        You know you're good when you can even do it with a broken heart<br>
+        <br>
+        You know you're good when you can even do it with a broken heart<br>
+        You know you're good, and I'm good<br>
+        'Cause I'm miserable!<br>
+        And nobody even knows!<br>
+        Try and come for my job
+    </p>
+
+    <div class="pages-separator"></div>
+
+    <p id="text-n"><span class="subtitle" id="title-14">The Smallest Man Who Ever Lived</i></span></p>
+    <p id="text-n">
+        Was any of it true?<br>
+        Gazing at me starry-eyed<br>
+        In your Jehovah's Witness suit<br>
+        Who the fuck was that guy?<br>
+        You tried to buy some pills<br>
+        From a friend of friends of mine<br>
+        They just ghosted you<br>
+        Now you know what it feels like<br>
+        <br>
+        And I don't even want you back, I just want to know<br>
+        If rusting my sparkling summer was the goal<br>
+        And I don't miss what we had, but could someone give<br>
+        A message to the smallest man who ever lived?<br>
+        <br>
+        You hung me on your wall<br>
+        Stabbed me with your push pins<br>
+        In public, showed me off<br>
+        Then sank in stoned oblivion<br>
+        'Cause once your queen had come<br>
+        You'd treat her like an also-ran<br>
+        You didn't measure up<br>
+        In any measure of a man<br>
+        <br>
+        And I don't even want you back, I just want to know<br>
+        If rusting my sparkling summer was the goal<br>
+        And I don't miss what we had, but could someone give<br>
+        A message to the smallest man who ever lived?<br>
+        <br>
+        Were you sent by someone<br>
+        Who wanted me dead?<br>
+        Did you sleep with a gun underneath our bed?<br>
+        Were you writing a book?<br>
+        Were you a sleeper cell spy?<br>
+        In fifty years will all this be declassified?<br>
+        And you'll confess why you did it<br>
+        And I'll say, "Good riddance"<br>
+        'Cause it wasn't sexy once it wasn't forbidden<br>
+        I would've died for your sins<br>
+        Instead I just died inside<br>
+        And you deserve prison, but you won't get time<br>
+        You'll slide into inboxes and slip through the bars<br>
+        You crashed my party and your rental car<br>
+        You said normal girls were "boring"<br>
+        But you were gone by the morning<br>
+        You kicked out the stage lights, but you're still performing<br>
+        And in plain sight you hid<br>
+        But you are what you did<br>
+        And I'll forget you, but I'll never forgive<br>
+        The smallest man who ever lived
+    </p>
+
+    <div class="pages-separator"></div>
+
+    <p id="text-n"><span class="subtitle" id="title-15">The Alchemy</i></span></p>
+    <p id="text-n">
+        This happens once every few lifetimes<br>
+        These chemicals hit me like white wine<br>
+        <br>
+        What if I told you I'm back?<br>
+        The hospital was a drag<br>
+        Worst sleep that I ever had<br>
+        I circled you on a map<br>
+        I haven't come around in so long<br>
+        But I'm coming back so strong<br>
+        <br>
+        So when I<br>
+        Touch down, call the amateurs and cut 'em from the team<br>
+        Ditch the clowns, get the crown, baby, I'm the one to beat<br>
+        'Cause the sign on your heart said it's still reserved for me<br>
+        Honestly, who are we to fight the alchemy?<br>
+        <br>
+        Hey, you<br>
+        What if I told you we're cool?<br>
+        That child's play back in school is forgiven under my rule<br>
+        I haven't come around in so long<br>
+        But I'm making a comeback to where I belong<br>
+        <br>
+        So when I<br>
+        Touch down, call the amateurs and cut 'em from the team<br>
+        Ditch the clowns, get the crown, baby, I'm the one to beat<br>
+        'Cause the sign on your heart said it's still reserved for me<br>
+        Honestly, who are we to fight the alchemy?<br>
+        <br>
+        These blokes warm the benches, we been on a winning streak<br>
+        He jokes that it's heroin but this time with an "E"<br>
+        'Cause the sign on your heart said it's still reserved for me<br>
+        Honestly, who are we to fight the alchemy?<br>
+        <br>
+        Shirts off, and your friends lift you up over their heads<br>
+        Beer sticking to the floor, cheers chanted 'cause they said<br>
+        There was no chance, tryna be the greatest in the league<br>
+        Where's the trophy?<br>
+        He just comes running over to me<br>
+        <br>
+        Touch down, call the amateurs and cut 'em from the team<br>
+        Ditch the clowns, get the crown, baby, I'm the one to beat<br>
+        'Cause the sign on your heart said it's still reserved for me<br>
+        Honestly, who are we to fight the alchemy?<br>
+        <br>
+        These blokes warm the benches, we been on a winning streak<br>
+        He jokes that it's heroin but this time with an "E"<br>
+        'Cause the sign on your heart said it's still reserved for me<br>
+        Honestly, who are we to fight the alchemy?<br>
+        <br>
+        This happens once every few lifetimes<br>
+        These chemicals hit me like white wine
+    </p>
+
+    <div class="pages-separator"></div>
+
+    <p id="text-n"><span class="subtitle" id="title-16">Clara Bow</i></span></p>
+    <p id="text-n">
+        "You look like Clara Bow<br>
+        In this light, remarkable<br>
+        All your life, did you know<br>
+        You'd be picked like a rose?"<br>
+        <br>
+        "I'm not trying to exaggerate<br>
+        But I think I might die if it happened<br>
+        Die if it happened to me<br>
+        No one in my small town<br>
+        Thought I'd see the lights of Manhattan"<br>
+        <br>
+        "This town is fake, but you're the real thing<br>
+        Breath of fresh air through smoke rings<br>
+        Take the glory, give everything<br>
+        Promise to be dazzling"<br>
+        <br>
+        "You look like Stevie Nicks<br>
+        In '75, the hair and lips<br>
+        Crowd goes wild at her fingertips<br>
+        Half moonshine, a full eclipse"<br>
+        <br>
+        "I'm not trying to exaggerate<br>
+        But I think I might die if I made it<br>
+        Die if I made it<br>
+        No one in my small town<br>
+        Thought I'd meet these suits in L.A.<br>
+        They all wanna say"<br>
+        <br>
+        "This town is fake, but you're the real thing<br>
+        Breath of fresh air through smoke rings<br>
+        Take the glory, give everything<br>
+        Promise to be dazzling"<br>
+        <br>
+        "The crown is stained, but you're the real queen<br>
+        Flesh and blood amongst war machines<br>
+        You're the new God we're worshipping<br>
+        Promise to be dazzling"<br>
+        <br>
+        Beauty is a beast that roars<br>
+        Down on all fours<br>
+        Demanding, "More"<br>
+        Only when your girlish glow<br>
+        Flickers just so<br>
+        Do they let you know?<br>
+        It's hell on earth to be heavenly<br>
+        Them's the breaks, they don't come gently<br>
+        <br>
+        "You look like Taylor Swift<br>
+        In this light, we're loving it<br>
+        You've got edge she never did<br>
+        The future's bright, dazzling"
+    </p>
+
+
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+</div>
