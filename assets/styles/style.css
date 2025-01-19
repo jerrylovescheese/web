@@ -280,6 +280,23 @@ a {
     color: unset;
 }
 
+svg {
+    height: 0.9em;
+    max-height: 1em;
+    fill: black;
+}
+
+@media (prefers-color-scheme: dark) {
+    svg {
+        fill: white;
+    }
+}
+
+footer #text-n {
+    font-weight: lighter;
+    margin-left: 15px;
+}
+
 /* about.html */
 
 #alu-stu-namecard>#text-n {
@@ -742,18 +759,6 @@ td {
     width: 100%;
 }
 
-svg {
-    height: 0.9em;
-    max-height: 1em;
-    fill: black;
-}
-
-@media (prefers-color-scheme: dark) {
-    svg {
-        fill: white;
-    }
-}
-
 .music-lyric {
     fill: white;
     margin-left: 30px;
@@ -1075,49 +1080,6 @@ td {
     font-weight: bold;
 }
 
-/* index.html */
-
-#index-light {
-    width: 100vw;
-    height: 100vh;
-    background-image: linear-gradient(#f5f2ef, white);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -2;
-}
-
-@media (prefers-color-scheme: dark) {
-    #index-light {
-        background-image: linear-gradient(#363534, black) !important;
-    }
-
-    .index-good {
-        border-color: white !important;
-    }
-}
-
-.index-canvas {
-    margin-top: 100px;
-    margin-left: 15px;
-    margin-right: 15px;
-    font-weight: lighter;
-}
-
-.index-canvas #text-n {
-    font-size: 22px;
-}
-
-.index-good {
-    width: fit-content;
-    padding: 6px;
-    padding-left: 12px;
-    padding-right: 12px;
-    border: solid 1px black;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
 /* 1989tv.html */
 
 ._1989-content::after {
@@ -1249,6 +1211,27 @@ td {
     }
 }
 
+#lyrics-return-button {
+    display: inline-block;
+    text-decoration: none;
+}
+
+#lyrics-return {
+    width: fit-content;
+    background-color: #fff;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+    background-color: white;
+    border: #eadcc1 solid 1px;
+    transition: all 0.2s;
+}
+
+#lyrics-return a {
+    text-decoration: none;
+}
+
 #quick-links {
     overflow-y: scroll;
     padding-bottom: 120px;
@@ -1278,8 +1261,8 @@ td {
 #pages-ttpd-print {
     font-family: 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
-    background-color: rgb(255, 255, 255);
-    border: rgb(192, 192, 192) solid 1px;
+    background-image: white;
+    border: #eadcc1 solid 1px;
     box-shadow: none;
     padding: 6px;
     padding-left: 12px;
@@ -1288,7 +1271,13 @@ td {
     transition: all 0.2s;
 }
 
-#pages-ttpd-print:active {
+#pages-ttpd-print:hover,
+#lyrics-return:hover {
+    background-color: #eadcc1;
+}
+
+#pages-ttpd-print:active,
+#lyrics-return:active {
     scale: 95%;
 }
 
@@ -1346,4 +1335,58 @@ td {
     filter: blur(2.5em);
     z-index: -1;
     width: calc(100vw + 5px);
+}
+
+/* index.html */
+
+#index-light {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(#f5f2ef, white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+@media (prefers-color-scheme: dark) {
+    #index-light {
+        background-image: linear-gradient(#363534, black) !important;
+    }
+
+    .index-good {
+        border-color: white !important;
+    }
+}
+
+.index-canvas {
+    margin-top: 100px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: lighter;
+}
+
+.index-canvas #text-n {
+    font-size: 22px;
+}
+
+.index-good {
+    width: fit-content;
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: solid 1px black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#index-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 430px) {
+    #index-col {
+        display: unset;
+    }
 }
