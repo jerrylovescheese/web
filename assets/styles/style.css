@@ -280,12 +280,25 @@ a {
     color: unset;
 }
 
+/* about.html */
+
+#alu-stu-namecard>#text-n {
+    display: grid;
+    grid-template-columns: 1em 0.3fr 1fr;
+}
+
+@media (max-width: 430px) {
+    #alu-stu-namecard>#text-n {
+        display: grid;
+        grid-template-columns: 1em 2.4fr 2.5fr;
+    }
+}
+
 /* apple.html */
 
 @media (prefers-color-scheme: dark) {
     td {
-        border-right-color: white !important;
-        border-bottom-color: white !important;
+        border-top-color: white !important;
     }
 
     .apple-image-box {
@@ -301,15 +314,6 @@ a {
     .apple-image-box {
         width: 55% !important;
     }
-}
-
-#header-collapse {
-    display: none;
-}
-
-#dev-cal-1 {
-    font-size: 50px;
-    text-align: center;
 }
 
 .subtitle {
@@ -381,6 +385,7 @@ table {
 }
 
 td {
+    border-top: solid 1px black;
     padding: 5px;
 }
 
@@ -738,7 +743,15 @@ td {
 }
 
 svg {
-    max-height: 30px;
+    height: 0.9em;
+    max-height: 1em;
+    fill: black;
+}
+
+@media (prefers-color-scheme: dark) {
+    svg {
+        fill: white;
+    }
 }
 
 .music-lyric {
@@ -831,6 +844,9 @@ svg {
 }
 
 @media (prefers-color-scheme: dark) {
+    #pages-container-1 {
+        background-color: black !important;
+    }
 
     #pages-backdrop,
     #en-warn {
@@ -1027,11 +1043,6 @@ svg {
     margin-left: 30px;
 }
 
-.pages-container>#text-n {
-    margin-left: 0;
-    margin-top: 0;
-}
-
 #alu-stu-namecard {
     padding-bottom: 15px;
 }
@@ -1056,7 +1067,7 @@ svg {
 
 th,
 td {
-    border-bottom: solid 1px black;
+    border-top: solid 1px black;
     padding: 5px;
 }
 
