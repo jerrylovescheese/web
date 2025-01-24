@@ -5,38 +5,9 @@
             $("#waterfall").toggleClass("active");
         });
     });
-
-    $(window).on("scroll", function () {
-        if ($(window).width() >= 430) {
-            if ($(this).scrollTop() > 0) {
-                $("#lines").css("width", "0"); // Fade out
-                $("#lines").css("opacity", "0"); // Fade out
-            } else {
-                $("#lines").css("width", "468px"); // Fade in
-                $("#lines").css("opacity", "1"); // Fade out
-            }
-        } else {
-            if ($(this).scrollTop() > 0) {
-                $("#lines").css("width", "0"); // Fade out
-                $("#bar").css("width", "82.8px"); // Fade out
-                $("#bar").css("height", "46px"); // Fade out
-                $("#lines").css("opacity", "0"); // Fade out
-            } else {
-                $("#lines").css("width", "468px"); // Fade in
-                $("#bar").css("width", "355px"); // Fade in
-                $("#bar").css("height", "67.5px"); // Fade out
-                $("#lines").css("opacity", "1"); // Fade out
-            }
-        }
-    });
 </script>
 <header id="axon">
     <div id="bar">
-        <div id="lines">
-            <span class="lines" id="lines-2"><b>Jerry Li</b> is a first-year student at University of Virginia.
-                <a href="./pages/about.html">Learn more about his cliche stories.</a></span>
-            <span class="lines">Or not. I'm not him, I don't care.</span>
-        </div>
         <div id="home" tabindex="1">
         </div>
     </div>

@@ -64,23 +64,15 @@
     width: fit-content;
     height: 50px;
     position: fixed;
-    left: 10px;
-    top: 10px;
+    left: 0;
+    top: 0;
     display: flex;
     align-items: center;
     overflow: hidden;
     background-color: #fff9f3;
-    border-radius: 10px;
+    border-bottom-right-radius: 10px;
     transition: all 0.5s cubic-bezier(1, -0.065, 0, 1.065);
     z-index: 40;
-}
-
-#lines {
-    height: 41px;
-    padding-top: 8px;
-    overflow: hidden;
-    transition: all 0.5s cubic-bezier(1, -0.065, 0, 1.065);
-    white-space: nowrap;
 }
 
 #home {
@@ -99,14 +91,6 @@
 
 #home:active {
     background-size: 85%;
-}
-
-.lines {
-    display: block;
-    font-family: 'ITC Garamond Narrow';
-    font-weight: lighter;
-    font-size: 15px;
-    margin-left: 10px;
 }
 
 #waterfall {
@@ -167,8 +151,7 @@
     margin-top: 0px;
 }
 
-#wa-links a,
-#lines a {
+#wa-links a {
     text-decoration: none;
     color: unset;
 }
@@ -250,16 +233,6 @@
 }
 
 @media (max-width: 768px) {
-    #bar {
-        width: calc(100vw - 20px);
-        height: 67.5px;
-        align-items: start;
-    }
-
-    #lines {
-        height: 59.5px;
-    }
-
     #wa-table h3 {
         font-size: 30px;
     }
@@ -267,12 +240,6 @@
     #wa-table ul {
         padding-left: 6px;
         margin-top: 0;
-    }
-}
-
-@media (max-width: 430px) {
-    #lines {
-        white-space: wrap;
     }
 }
 
