@@ -1388,6 +1388,10 @@ td {
     font-weight: lighter;
 }
 
+#index-canvas-1 a {
+    text-decoration: none;
+}
+
 .index-canvas #text-n {
     font-size: 22px;
 }
@@ -1425,4 +1429,66 @@ td {
     #index-col {
         display: unset;
     }
+}
+
+.index-button {
+    appearance: button;
+    background-color: hsl(30, 100%, 78%);
+    border: solid transparent;
+    border-radius: 10px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.index-button:after {
+    background-clip: padding-box;
+    background-color: hsl(30, 100%, 88%);
+    border: solid transparent;
+    border-radius: 10px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.index-button,
+.index-button:focus {
+    user-select: auto;
+}
+
+.index-button:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+}
+
+.index-button:disabled {
+    cursor: auto;
+}
+
+.index-button:active {
+    border-width: 4px 0 0;
+    background: none;
+}
+
+.index-button svg {
+    font-size: 0.7em;
 }
