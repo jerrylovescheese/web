@@ -1,7 +1,7 @@
 """
     Author: Generative AI
-    Date: 2025-01-18
-    Version: 1.1
+    Date: 2025-01-25
+    Version: 1.2
 """
 
 from flask import Flask, render_template, abort
@@ -25,6 +25,7 @@ def serve_page(page_name):
     if os.path.exists(page_path):
         # Read the page content here and pass it to the template
         with open(page_path, "r") as file:
+            file = open(page_path, encoding="utf8")
             content = file.read()
         return render_template("dynamic_page.html", content=content)
     else:
@@ -37,6 +38,7 @@ def serve_subpage(subpage_name):
     if os.path.exists(subpage_path):
         # Read the page content here and pass it to the template
         with open(subpage_path, "r") as file:
+            file = open(subpage_path, encoding="utf8")
             content = file.read()
         return render_template("dynamic_subpage.html", content=content)
     else:
