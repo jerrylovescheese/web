@@ -1379,6 +1379,14 @@ td {
     .index-good {
         border-color: white !important;
     }
+
+    .index-button::after {
+        background-color: hsl(0, 0%, 22%) !important;
+    }
+
+    .index-button {
+        background-color: hsl(0, 0%, 18%) !important;
+    }
 }
 
 .index-canvas {
@@ -1444,7 +1452,7 @@ td {
     margin: 0;
     outline: none;
     overflow: visible;
-    padding: 13px 16px;
+    padding: 6px 12px;
     touch-action: manipulation;
     transform: translateZ(0);
     transition: filter .2s;
@@ -1453,6 +1461,7 @@ td {
     vertical-align: middle;
     white-space: nowrap;
     width: fit-content;
+    margin-bottom: 5px;
 }
 
 .index-button:after {
