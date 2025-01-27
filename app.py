@@ -1,5 +1,5 @@
 """
-    Author: Generative AI
+    Author: Jerry Li, Generative AI
     Date: 2025-01-25
     Version: 1.2
 """
