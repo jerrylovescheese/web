@@ -16,7 +16,7 @@ jobs:
     steps:
     # Step 1: Checkout the repository
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     # Step 2: Set up Python
     - name: Set up Python
@@ -50,4 +50,4 @@ jobs:
       pages: write      # Required for GitHub Pages deployments
     steps:
     - name: Deploy to GitHub Pages
-      uses: actions/deploy-pages@v2
+      uses: actions/deploy-pages@v4
