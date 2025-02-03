@@ -37,7 +37,7 @@ jobs:
 
     # Step 5: Deploy GitHub Pages
     - name: Upload artifact for Pages
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v3
       with:
         path: ./build  # Specify the folder containing static files
 
