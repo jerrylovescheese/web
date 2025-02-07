@@ -19,157 +19,117 @@
 }
 
 @font-face {
-    font-family: 'ITC Garamond Narrow';
-    font-weight: 300;
+    font-family: 'Figtree';
     font-style: normal;
-    src: url(../fonts/itc-garamond-std-book-narrow.otf);
+    font-weight: normal;
+    src: url(../fonts/figtree-v6-latin/figtree-v6-latin-regular.woff2);
 }
 
 @font-face {
-    font-family: 'ITC Garamond Narrow';
-    font-weight: 300;
+    font-family: 'Figtree';
     font-style: italic;
-    src: url(../fonts/itc-garamond-std-book-narrow-italic.otf);
+    font-weight: normal;
+    src: url(../fonts/figtree-v6-latin/figtree-v6-latin-italic.woff2);
 }
 
 @font-face {
-    font-family: 'ITC Garamond Narrow';
-    font-weight: 1000;
+    font-family: 'Figtree';
     font-style: normal;
-    src: url(../fonts/itc-garamond-std-bold-narrow.otf);
+    font-weight: 700;
+    src: url(../fonts/figtree-v6-latin/figtree-v6-latin-700.woff2);
 }
 
 @font-face {
-    font-family: 'ITC Garamond Narrow';
-    font-weight: 1000;
+    font-family: 'Figtree';
     font-style: italic;
-    src: url(../fonts/itc-garamond-std-bold-narrow-italic.otf);
+    font-weight: 700;
+    src: url(../fonts/figtree-v6-latin/figtree-v6-latin-700italic.woff2);
 }
 
 @font-face {
-    font-family: 'ITC Garamond Narrow';
-    font-weight: 100;
+    font-family: 'Figtree';
     font-style: normal;
-    src: url(../fonts/itc-garamond-std-light-narrow.otf);
+    font-weight: 800;
+    src: url(../fonts/figtree-v6-latin/figtree-v6-latin-800.woff2);
 }
 
 @font-face {
-    font-family: 'ITC Garamond Narrow';
-    font-weight: 100;
+    font-family: 'Figtree';
     font-style: italic;
-    src: url(../fonts/itc-garamond-std-light-narrow-italic.otf);
+    font-weight: 800;
+    src: url(../fonts/figtree-v6-latin/figtree-v6-latin-800italic.woff2);
 }
 
-#bar {
-    width: fit-content;
+#xylophone {
+    width: 86px;
     height: 50px;
+    background-color: #ffffff;
     position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    align-items: center;
+    left: 15px;
+    top: 15px;
+    border-radius: 30px;
     overflow: hidden;
+    transition: all 0.35s cubic-bezier(0, 1.12, .35, 1.02);
+    z-index: 2;
+}
+
+#xylophone.active {
+    width: calc(100vw - 30px);
+    height: calc(100vh - 30px);
+    border-radius: 20px;
     background-color: #fff9f3;
-    border-bottom-right-radius: 10px;
-    transition: all 0.5s cubic-bezier(1, -0.065, 0, 1.065);
-    z-index: 40;
 }
 
 #home {
-    height: 46px;
-    aspect-ratio: 9/5;
+    width: 81px;
+    height: 45px;
+    margin-left: 2.5px;
+    margin-top: 2.5px;
     background-image: url(../images/home-button-light.svg);
-    background-repeat: no-repeat;
-    background-size: 90%;
-    background-position: center center;
+    background-size: cover;
     transition: all 0.2s;
-}
-
-#home:hover {
-    background-size: 95%;
+    position: absolute;
 }
 
 #home:active {
-    background-size: 85%;
+    scale: 90%;
+}
+
+#xylophone.active #home {
+    scale: 90%;
 }
 
 #waterfall {
-    width: 100vw;
-    height: 0vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transition: all 0.2s cubic-bezier(.86, 0, .07, 1);
-    overflow-x: hidden;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    z-index: 39;
+    width: 0;
+    height: 0;
+    margin-top: 55px;
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
 }
 
 #waterfall.active {
-    height: 100vh;
-    background-color: #fff9f3;
+    width: calc(100% - 20px);
+    height: calc(100% - 65px);
 }
 
-#bubble-1 {
-    z-index: -1;
+.wf-title {
+    font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
-#waterfall.active #bubble-1 {
-    width: 800px;
-    height: 800px;
-    position: absolute;
-    top: -1000px;
-    right: -1000px;
-    border-radius: 600px;
-    filter: blur(100px);
-    background-image: radial-gradient(circle at top, #fff9f3, rgb(255, 87, 58), rgb(146, 40, 40));
-    animation: bubble 5s infinite alternate;
-    z-index: -1;
+.wf-title-small {
+    font-size: 15px;
+    font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
 }
 
-#wa-table {
-    margin-top: 100px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    scrollbar-width: none;
-}
-
-#wa-links {
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    font-family: 'ITC Garamond Narrow';
-    font-weight: lighter;
-    font-size: 25px;
-}
-
-#wa-table h3 {
-    margin-left: 30px;
-    font-family: 'ITC Garamond Narrow';
-    font-weight: normal;
-    font-size: 50px;
-    margin-top: 0px;
-}
-
-#wa-links a {
-    text-decoration: none;
-    color: unset;
-}
-
-#wa-links ul {
+.wf-title ul {
     list-style: none;
-    padding-left: 30px;
-    padding-top: 0;
-    margin-top: 0;
-}
-
-#wa-links input {
-    height: 30px;
-    font-family: 'ITC Garamond Narrow';
-    font-weight: lighter;
-    font-size: 25px;
-    border: none;
-    border-radius: 5px;
+    font-weight: normal;
 }
 
 #back-to-top {
@@ -218,21 +178,17 @@
     }
 }
 
-@keyframes bubble {
-    0% {
-        top: -1000px;
-        right: -100px;
-        transform: rotate(0deg);
-    }
-
-    100% {
-        top: -100px;
-        right: -600px;
-        transform: rotate(340deg);
-    }
-}
-
 @media (max-width: 768px) {
+    #waterfall {
+        grid-template-columns: 1fr 1fr;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .wf-title {
+        margin-top: 10px;
+    }
+
     #wa-table h3 {
         font-size: 30px;
     }
@@ -243,17 +199,23 @@
     }
 }
 
+@media (max-width: 430px) {
+    #waterfall {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
-    #bar {
+    #xylophone {
+        background-color: black;
+    }
+
+    #xylophone.active {
         background-color: #363534;
     }
 
     #home {
         background-image: url(../images/home-button-dark.svg);
-    }
-
-    #waterfall.active {
-        background-color: #363534;
     }
 
     #waterfall.active #bubble-1 {
@@ -270,17 +232,17 @@
     margin-left: 15px;
     margin-right: 15px;
     text-align: justify;
-    font-family: 'ITC Garamond Narrow', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #heading {
-    font-family: 'ITC Garamond Narrow', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 50px;
 }
 
 #text-n {
-    font-family: 'ITC Garamond Narrow', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 18px;
+    font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
 }
 
 .pages-container {
@@ -315,8 +277,9 @@ svg {
 }
 
 #copyright-info {
-    font-family: 'ITC Garamond Narrow', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: lighter;
+    font-size: 15px;
     margin-left: 15px;
 }
 
@@ -361,7 +324,7 @@ svg {
 }
 
 .subtitle {
-    font-family: 'ITC Garamond Narrow', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     font-weight: bold;
     font-size: 24px;
@@ -392,7 +355,7 @@ svg {
 }
 
 .apple-text-box {
-    font-family: 'ITC Garamond Narrow', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-left: 20px;
 }
 
@@ -424,7 +387,7 @@ svg {
 table {
     border-top: solid 1px black;
     border-bottom: solid 1px black;
-    font-family: 'ITC Garamond Narrow', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0 auto;
 }
 
@@ -438,7 +401,7 @@ td {
 }
 
 #update {
-    font-family: 'ITC Garamond Narrow', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* apple.html */
@@ -507,7 +470,7 @@ td {
 }
 
 .dubdub-info-special {
-    font-family: 'Source Han Sans', 'ITC Garamond Narrow', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Source Han Sans', 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
     font-weight: bold;
 }
@@ -529,7 +492,7 @@ td {
 }
 
 #dubdub-quote {
-    font-family: 'ITC Garamond Narrow', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
     font-weight: bold;
 }
@@ -594,7 +557,7 @@ td {
 #dubdub-special-style-1 {
     margin: 0;
     text-align: right;
-    font-family: 'ITC Garamond Narrow', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .dubdub-box {
@@ -606,7 +569,7 @@ td {
     justify-content: center;
     align-items: center;
     height: 100px;
-    font-family: 'ITC Garamond Narrow', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
     font-weight: bold;
     transition: all 0.2s;
@@ -830,7 +793,7 @@ td {
     width: calc(100% - 70px);
     margin-left: 30px;
     padding-left: 10px;
-    font-family: 'ITC Garamond Narrow', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
     border-radius: 10px;
     border: solid 1px #eee;
@@ -839,7 +802,7 @@ td {
 
 #results {
     list-style: none;
-    font-family: 'ITC Garamond Narrow', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
 }
 
@@ -1122,7 +1085,7 @@ td {
 /* brat.html */
 
 .brat-text {
-    font-family: Arial, 'ITC Garamond Narrow', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    font-family: Arial, 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     filter: blur(0.5px);
 }
 
@@ -1381,7 +1344,7 @@ td {
 #index-light {
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(#f5f2ef, white);
+    background-image: linear-gradient(#fff9f3, white);
     position: fixed;
     top: 0;
     left: 0;
@@ -1410,7 +1373,6 @@ td {
     margin-top: 100px;
     margin-left: 15px;
     margin-right: 15px;
-    font-weight: lighter;
 }
 
 #index-canvas-1 a {
@@ -1418,7 +1380,7 @@ td {
 }
 
 .index-canvas #text-n {
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .index-good {

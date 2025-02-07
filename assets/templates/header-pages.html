@@ -2,50 +2,112 @@
 <script>
     $(function () {
         $("#home").click(function () {
+            $("#xylophone").toggleClass("active");
             $("#waterfall").toggleClass("active");
         });
     });
 </script>
-<header id="axon">
-    <div id="bar">
-        <div id="home" tabindex="1">
-        </div>
-    </div>
+
+<header id="xylophone">
+    <div id="home"></div>
     <div id="waterfall">
-        <div id="wa-table">
-            <div id="wa-links">
-                &emsp;
-                <ul>
-                    <li><a href="https://jerryly.top">home</a></li>
-                    <li><a href="#">go to top</a></li>
-                    <a href="./search.html"><input type="text" placeholder="search"></a>
-                    <li><a href="./noticeboard.html">noticeboard</a></li>
-                    <li><a href="./survey.html">survey</a></li>
-                </ul>
+        <div>
+            <div>
+                <span class="wf-title-small">Sometimes I get bored.</span>
+                <span id="text-n">... and just start to move things around and change how they look. So if you're a
+                    frequent
+                    visiter (lol no one is) I'm sorry if you are noticing bugs. They'll be fixed soon!</span>
             </div>
-            <div id="wa-links">
-                <h3>living</h3>
-                <ul>
-                    <li><a href="./christmas.html">christmas</a></li>
-                    <li><a href="./contact.html">contact</a></li>
-                    <li><a href="./flashback.html">rainbow room (under construction)</a></li>
-                    <li><a href="./friends.html">friends</a></li>
-                    <li><a href="./gallery.html">gallery</a></li>
-                    <li><a href="./homemade_giftcard.html">giftcard</a></li>
-                    <li><a href="./music.html">music</a></li>
-                </ul>
-            </div>
-            <div id="wa-links">
-                <h3>learning</h3>
-                <ul>
-                    <li><a href="./about.html">me</a></li>
-                    <li><a href="./apple.html">apple</a></li>
-                    <li><a href="./classical_ch.html">classical chinese (1)</a></li>
-                    <li><a href="./classical_ch_sh.html">classical chinese (2)</a></li>
-                    <li><a href="./develop.html">develop</a></li>
-                </ul>
+            <div>
+                <span class="wf-title-small">Jerry Li's website</span>
+                <span id="text-n">Jerry's a first-year student at University of Virginia, and he's studying Computer
+                    Science
+                    (BA). And that means... he's not doing well.</span>
             </div>
         </div>
-        <div id="bubble-1"></div>
+        <div class="wf-title">
+            art
+            <ul id="text-n">
+                <a href="./classical_ch_sh.html">
+                    <li>部编版高中语文古文合集</li>
+                </a>
+                <a href="./classical_ch.html">
+                    <li>部编版高中语文古文合集</li>
+                </a>
+                <a href="./music.html">
+                    <li>music</li>
+                </a>
+                <a href="./taylorswift.html">
+                    <li>taylor swift</li>
+                </a>
+            </ul>
+        </div>
+        <div class="wf-title">
+            technology
+            <ul id="text-n">
+                <a href="./apple.html">
+                    <li>apple</li>
+                </a>
+                <a href="./search.html">
+                    <li>search</li>
+                </a>
+                <a href="./survey.html">
+                    <li>survey</li>
+                </a>
+            </ul>
+        </div>
+        <div class="wf-title">
+            blog
+            <ul id="text-n">
+                <a href="./flashback.html">
+                    <li>flashback</li>
+                </a>
+                <a href="./friends.html">
+                    <li>friends</li>
+                </a>
+                <a href="./gallery.html">
+                    <li>gallery</li>
+                </a>
+            </ul>
+        </div>
+        <div class="wf-title">
+            rituals
+            <ul id="text-n">
+                <a href="./homemade_giftcard.html">
+                    <li>homemade giftcard</li>
+                </a>
+                <a href="./christmas.html">
+                    <li>christmas</li>
+                </a>
+            </ul>
+        </div>
+        <div class="wf-title">
+            about
+            <ul id="text-n">
+                <a href="./about.html">
+                    <li>about</li>
+                </a>
+                <a href="./noticeboard.html">
+                    <li>noticeboard</li>
+                </a>
+                <a href="./contact.html">
+                    <li>contact</li>
+                </a>
+            </ul>
+        </div>
+        <div class="wf-title">
+            external
+            <ul id="text-n">
+                <a href="https://live.jerryly.top">
+                    <li>live</li>
+                </a>
+                <a href="https://blog.jerryly.top">
+                    <li>blog</li>
+                </a>
+                <a href="https://demo.jerryly.top">
+                    <li>demo</li>
+                </a>
+            </ul>
+        </div>
     </div>
 </header>
