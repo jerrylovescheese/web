@@ -114,6 +114,21 @@
     height: calc(100% - 65px);
 }
 
+#waterfall span,
+#waterfall a,
+#waterfall div,
+#waterfall p {
+    display: none;
+    transition: all 0.2s;
+}
+
+#waterfall.active span,
+#waterfall.active a,
+#waterfall.active div,
+#waterfall.active p {
+    display: unset;
+}
+
 .wf-title {
     font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
@@ -121,10 +136,15 @@
     white-space: nowrap;
 }
 
-.wf-title-small {
-    font-size: 15px;
+.wf-title-small,
+#waterfall #text-n {
+    font-size: 16px;
     font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
+}
+
+#waterfall #text-n {
+    font-weight: normal;
 }
 
 .wf-title ul {
@@ -232,7 +252,12 @@
     margin-left: 15px;
     margin-right: 15px;
     text-align: justify;
+    transition: all 0.2s;
     font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#content-unit.active {
+    filter: blur(12px);
 }
 
 #heading {
@@ -242,7 +267,7 @@
 
 #text-n {
     font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .pages-container {
@@ -323,7 +348,8 @@ svg {
     }
 }
 
-.subtitle {
+.subtitle,
+#content-unit .small-title {
     font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     font-weight: bold;
