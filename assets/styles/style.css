@@ -152,6 +152,37 @@
     font-weight: normal;
 }
 
+#bubble-1 {
+    z-index: -1;
+}
+
+#waterfall.active #bubble-1 {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: -1000px;
+    right: -1000px;
+    border-radius: 600px;
+    filter: blur(100px);
+    background-image: radial-gradient(circle at top, #fff9f3, rgb(255, 94, 58), rgb(146, 40, 40));
+    animation: bubble 5s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes bubble {
+    0% {
+        top: -1000px;
+        right: -100px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top: -100px;
+        right: -600px;
+        transform: rotate(340deg);
+    }
+}
+
 #back-to-top {
     width: 20px;
     height: 20px;
@@ -195,6 +226,10 @@
     #back-to-top {
         background-color: rgba(68, 68, 68, 0.85) !important;
         border: solid 1px #444 !important;
+    }
+
+    #waterfall.active #bubble-1 {
+        background-image: radial-gradient(circle at top, #4b4b4b00, rgb(195, 42, 7), rgb(188, 0, 0)) !important;
     }
 }
 
