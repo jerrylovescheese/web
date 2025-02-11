@@ -1432,8 +1432,8 @@ td {
 
 .index-canvas {
     margin-top: 100px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
 #index-canvas-1 a {
@@ -1540,4 +1540,18 @@ td {
 
 .index-button svg {
     font-size: 0.7em;
+}
+
+#index-canvas-2 {
+    width: calc(100vw - 16px);
+    height: calc(100vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/IMG_1015.webp);
+    background-size: cover;
+    background-position: center bottom;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
