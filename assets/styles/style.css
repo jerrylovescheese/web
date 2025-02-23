@@ -1,7 +1,7 @@
 /*
  * Author: Jiangyuan Li
- * Version: 10.0
- * Date: 2025-01-17
+ * Version: 10.2
+ * Date: 2025-02-23
  */
 
 /* All styles */
@@ -60,128 +60,100 @@
     src: url(../fonts/figtree-v6-latin/figtree-v6-latin-800italic.woff2);
 }
 
-#xylophone {
-    width: 86px;
-    height: 50px;
-    background-color: #ffffff;
+#bartender {
+    width: 67px;
+    height: 30px;
+    padding: 8px;
+    border-radius: 10px;
     position: fixed;
-    left: 15px;
-    top: 15px;
-    border-radius: 30px;
-    overflow: hidden;
-    transition: all 0.35s cubic-bezier(0, 1.12, .35, 1.02);
+    top: 10px;
+    left: 10px;
     z-index: 2;
+    overflow: hidden;
+    transition: all 0.2s;
 }
 
-#xylophone.active {
-    width: calc(100vw - 30px);
-    height: calc(100vh - 30px);
-    border-radius: 20px;
-    background-color: #fff9f3;
+#bartender.active {
+    width: calc(100vw - 36px);
+    height: calc(100vh - 36px);
 }
 
 #home {
-    width: 81px;
-    height: 45px;
-    margin-left: 2.5px;
-    margin-top: 2.5px;
+    height: 30px;
+    aspect-ratio: 223/100;
     background-image: url(../images/home-button-light.svg);
-    background-size: 85%;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
-    transition: all 0.2s;
-    position: absolute;
 }
 
-#home:active {
-    scale: 90%;
+#more {
+    width: calc(100vw - 36px);
+    height: calc(100% - 43px);
+    margin-top: 15px;
+    overflow: hidden;
+    color: transparent;
+    scale: 95%;
+    transition: all 0.3s;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
-#xylophone.active #home {
-    scale: 90%;
+#bartender.active #more {
+    color: #000;
+    scale: 100%;
 }
 
-#waterfall {
-    width: 0;
-    height: 0;
-    margin-top: 55px;
-    margin-left: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 20px;
+#more-letter {
+    width: 80%;
+    text-align: justify;
 }
 
-#waterfall.active {
-    width: calc(100% - 20px);
-    height: calc(100% - 65px);
+#more-links {
+    width: 20%;
 }
 
-#waterfall span,
-#waterfall a,
-#waterfall div,
-#waterfall p {
-    display: none;
-    transition: all 0.2s;
-}
-
-#waterfall.active span,
-#waterfall.active a,
-#waterfall.active div,
-#waterfall.active p {
-    display: unset;
-}
-
-.wf-title {
-    font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 20px;
+.more-link {
+    font-family: 'Source Han Sans', 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
-    white-space: nowrap;
+    font-size: 30px;
 }
 
-.wf-title-small,
-#waterfall #text-n {
-    font-size: 16px;
-    font-family: 'Figtree', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.more-link a {
+    color: unset;
+    text-decoration: none;
+}
+
+.more-title {
+    font-family: 'Source Han Sans', 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
 }
 
-#waterfall #text-n {
-    font-weight: normal;
+.more-text {
+    font-family: 'Source Han Sans', 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 
-.wf-title ul {
-    list-style: none;
-    font-weight: normal;
-}
-
-#bubble-1 {
-    z-index: -1;
-}
-
-#waterfall.active #bubble-1 {
-    width: 800px;
-    height: 800px;
-    position: absolute;
-    top: -1000px;
-    right: -1000px;
-    border-radius: 600px;
-    filter: blur(100px);
-    background-image: radial-gradient(circle at top, #fff9f3, rgb(255, 94, 58), rgb(146, 40, 40));
-    animation: bubble 5s infinite alternate;
-    z-index: -1;
-}
-
-@keyframes bubble {
-    0% {
-        top: -1000px;
-        right: -100px;
-        transform: rotate(0deg);
+@media (prefers-color-scheme: dark) {
+    #home {
+        background-image: url(../images/home-button-dark.svg);
     }
 
-    100% {
-        top: -100px;
-        right: -600px;
-        transform: rotate(340deg);
+    #bartender.active #more {
+        color: #fff !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #more {
+        display: block;
+    }
+
+    #more-links,
+    #more-letter {
+        width: 100%;
+        margin-top: 15px;
     }
 }
 
@@ -294,7 +266,7 @@
 }
 
 #content-unit.active {
-    filter: blur(12px);
+    filter: blur(1em);
 }
 
 #heading {
@@ -555,7 +527,7 @@ td {
 }
 
 #dubdub-quote {
-    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Source Han Sans', 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
     font-weight: bold;
 }
@@ -620,7 +592,7 @@ td {
 #dubdub-special-style-1 {
     margin: 0;
     text-align: right;
-    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Source Han Sans', 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .dubdub-box {
@@ -632,7 +604,7 @@ td {
     justify-content: center;
     align-items: center;
     height: 100px;
-    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Source Han Sans', 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
     font-weight: bold;
     transition: all 0.2s;
@@ -1405,10 +1377,10 @@ td {
 /* index.html */
 
 #index-light {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-image: linear-gradient(#fff9f3, white);
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -2;
