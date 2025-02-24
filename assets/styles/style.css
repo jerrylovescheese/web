@@ -61,21 +61,21 @@
 }
 
 #bartender {
-    width: 67px;
-    height: 30px;
+    width: 87px;
+    height: 50px;
     padding: 8px;
-    border-radius: 10px;
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: 0;
     z-index: 2;
     overflow: hidden;
     transition: all 0.2s;
 }
 
 #bartender.active {
-    width: calc(100vw - 36px);
-    height: calc(100vh - 36px);
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(249, 249, 249, 0.5);
 }
 
 #home {
@@ -84,6 +84,8 @@
     background-image: url(../images/home-button-light.svg);
     background-size: contain;
     background-repeat: no-repeat;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #more {
@@ -110,7 +112,8 @@
 }
 
 #more-links {
-    width: 20%;
+    width: calc(20% - 10px);
+    margin-left: 10px;
 }
 
 .more-link {
@@ -142,6 +145,10 @@
 
     #bartender.active #more {
         color: #fff !important;
+    }
+
+    #bartender.active {
+        background-color: rgba(25, 25, 25, 0.5);
     }
 }
 
