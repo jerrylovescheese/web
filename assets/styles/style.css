@@ -1412,7 +1412,7 @@ td {
     appearance: button;
     background-color: hsl(30, 100%, 78%);
     border: solid transparent;
-    border-radius: 10px;
+    border-radius: 12px;
     border-width: 0 0 4px;
     box-sizing: border-box;
     color: #FFFFFF;
@@ -1437,7 +1437,7 @@ td {
     background-clip: padding-box;
     background-color: hsl(30, 100%, 88%);
     border: solid transparent;
-    border-radius: 10px;
+    border-radius: 12px;
     border-width: 0 0 4px;
     bottom: -4px;
     content: "";
