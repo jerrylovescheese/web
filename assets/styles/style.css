@@ -99,6 +99,7 @@
     display: flex;
     overflow-x: hidden;
     overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 #bartender.active #more {
