@@ -156,12 +156,18 @@
 @media (max-width: 768px) {
     #more {
         display: block;
+        width: calc(100% - 28px);
     }
 
     #more-links,
     #more-letter {
-        width: 100%;
+        width: calc(100% - 10px);
         margin-top: 15px;
+    }
+
+    #more-letter,
+    #more-text {
+        margin-left: 10px;
     }
 }
 
